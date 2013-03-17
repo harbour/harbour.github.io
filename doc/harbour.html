@@ -4138,8 +4138,8 @@ the name of the function or procedure at &lt;nLevel&gt;.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-This test will show the functions and procedures in stack.
-before executing it.
+// This test will show the functions and procedures in stack.
+// before executing it.
 PROCEDURE Main()
    LOCAL n := 1
    DO WHILE ! Empty( ProcName( n ) )
@@ -4200,8 +4200,8 @@ the name of the function or procedure at &lt;nLevel&gt;.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-This test will show the functions and procedures in stack.
-before executing it.
+// This test will show the functions and procedures in stack.
+// before executing it.
 PROCEDURE Main()
    LOCAL n := 1
    DO WHILE ! Empty( ProcName( n ) )
@@ -40678,10 +40678,11 @@ __dbStructFilter() which does exactly the same.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 LOCAL aStruct, aList, aRet
-aStruct := { { &quot;CODE&quot;,  &quot;N&quot;,  4, 0 }, ;
-             { &quot;NAME&quot;,  &quot;C&quot;, 10, 0 }, ;
-             { &quot;PHONE&quot;, &quot;C&quot;, 13, 0 }, ;
-             { &quot;IQ&quot;,    &quot;N&quot;,  3, 0 } }
+aStruct := { ;
+   { &quot;CODE&quot;,  &quot;N&quot;,  4, 0 }, ;
+   { &quot;NAME&quot;,  &quot;C&quot;, 10, 0 }, ;
+   { &quot;PHONE&quot;, &quot;C&quot;, 13, 0 }, ;
+   { &quot;IQ&quot;,    &quot;N&quot;,  3, 0 } }
 aList := { &quot;IQ&quot;, &quot;NAME&quot; }
 aRet := __FLedit( aStruct, aList )
                   // { { &quot;IQ&quot;, &quot;N&quot;, 3, 0 }, { &quot;NAME&quot;, &quot;C&quot;, 10, 0 } }
@@ -40818,10 +40819,11 @@ __dbStructFilter() which does exactly the same.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 LOCAL aStruct, aList, aRet
-aStruct := { { &quot;CODE&quot;,  &quot;N&quot;,  4, 0 }, ;
-             { &quot;NAME&quot;,  &quot;C&quot;, 10, 0 }, ;
-             { &quot;PHONE&quot;, &quot;C&quot;, 13, 0 }, ;
-             { &quot;IQ&quot;,    &quot;N&quot;,  3, 0 } }
+aStruct := { ;
+   { &quot;CODE&quot;,  &quot;N&quot;,  4, 0 }, ;
+   { &quot;NAME&quot;,  &quot;C&quot;, 10, 0 }, ;
+   { &quot;PHONE&quot;, &quot;C&quot;, 13, 0 }, ;
+   { &quot;IQ&quot;,    &quot;N&quot;,  3, 0 } }
 aList := { &quot;IQ&quot;, &quot;NAME&quot; }
 aRet := __FLedit( aStruct, aList )
                   // { { &quot;IQ&quot;, &quot;N&quot;, 3, 0 }, { &quot;NAME&quot;, &quot;C&quot;, 10, 0 } }
