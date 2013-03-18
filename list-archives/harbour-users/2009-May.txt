@@ -1,0 +1,912 @@
+From harbour-users at harbour-project.org  Thu May 21 17:43:03 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Thu May 21 17:43:08 2009
+Subject: [Harbour-users] OS Language
+Message-ID: <578c73340905211443i15952f7au50828fdd22d53155@mail.gmail.com>
+
+Hi, is there any function in Harbour to get the OS language? (english
+(en-US), portuguese (pt-BR), etc)
+
+Thanks and Regards
+CdQ
+
+-- 
+QAC (I want something comfortable !!!) - Incremental Compilation with all
+MiniGUIs versions
+QAC (Quiero Algo C?modo !!!) - Compilaci?n Incremental con todas las
+versiones de MiniGUI
+
+Download: www.CarozoDeQuilmes.com.ar
+From harbour-users at harbour-project.org  Fri May 22 02:35:22 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri May 22 02:35:27 2009
+Subject: [Harbour-users] Harbour's own RDD
+Message-ID: <695307.81561.qm@web90608.mail.mud.yahoo.com>
+
+Hi,
+
+Has anyone any info as to whether Harbour will ever develop it's own RDD able to support client/server applications. I mean, it's ok to support other RDDs like ADS but it's better to have its' very own. 
+
+Wouldn't it be good also if Harbour could open a Wishlist page to which we can channel our requests.
+
+
+
+
+
+      
+From harbour-users at harbour-project.org  Fri May 22 06:02:28 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri May 22 06:07:14 2009
+Subject: [Harbour-users] Re: Harbour's own RDD
+References: <695307.81561.qm@web90608.mail.mud.yahoo.com>
+Message-ID: <gv5tfu$aid$1@ger.gmane.org>
+
+Look at Leto db rdd by Alexander Kresin and....
+
+
+harbour-users@harbour-project.org escribió en
+mensaje <695307.81561.qm@web90608.mail.mud.yahoo.com>...
+>Hi,
+>
+>Has anyone any info as to whether Harbour will ever develop it's own RDD
+able to support client/server applications. I mean, it's ok to support other
+RDDs like ADS but it's better to have its' very own.
+>
+>Wouldn't it be good also if Harbour could open a Wishlist page to which we
+can channel our requests.
+
+
+
+From harbour-users at harbour-project.org  Fri May 22 11:31:54 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri May 22 11:32:22 2009
+Subject: [Harbour-users] Harbour's own RDD
+In-Reply-To: <695307.81561.qm@web90608.mail.mud.yahoo.com>
+References: <695307.81561.qm@web90608.mail.mud.yahoo.com>
+Message-ID: <609353e70905220831r73e9e19ldb3e688236cee979@mail.gmail.com>
+
+http://www.letodb.org/
+http://sourceforge.net/projects/letodb/
+
+In harbour comunity is present the idea of
+netrdd a layer that allow native client server
+
+a wishlist will be a good idea
+
+2009/5/22  <harbour-users@harbour-project.org>:
+> Hi,
+>
+> Has anyone any info as to whether Harbour will ever develop it's own RDD able to support client/server applications. I mean, it's ok to support other RDDs like ADS but it's better to have its' very own.
+>
+> Wouldn't it be good also if Harbour could open a Wishlist page to which we can channel our requests.
+>
+>
+>
+>
+>
+>
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+From harbour-users at harbour-project.org  Sun May 24 03:11:06 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sun May 24 03:11:32 2009
+Subject: [Harbour-users] OS Language
+In-Reply-To: <578c73340905211443i15952f7au50828fdd22d53155@mail.gmail.com>
+References: <578c73340905211443i15952f7au50828fdd22d53155@mail.gmail.com>
+Message-ID: <609353e70905240011rcec6508hacd71aa454e591b0@mail.gmail.com>
+
+HB_USERLANG()
+
+2009/5/21  <harbour-users@harbour-project.org>:
+> Hi, is there any function in Harbour to get the OS language? (english
+> (en-US), portuguese (pt-BR), etc)
+>
+> Thanks and Regards
+> CdQ
+>
+> --
+> QAC (I want something comfortable !!!) - Incremental Compilation with all
+> MiniGUIs versions
+> QAC (Quiero Algo C?modo !!!) - Compilaci?n Incremental con todas las
+> versiones de MiniGUI
+>
+> Download: www.CarozoDeQuilmes.com.ar
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+From harbour-users at harbour-project.org  Sun May 24 09:42:21 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sun May 24 09:42:28 2009
+Subject: [Harbour-users] OS Language
+In-Reply-To: <609353e70905240011rcec6508hacd71aa454e591b0@mail.gmail.com>
+References: <578c73340905211443i15952f7au50828fdd22d53155@mail.gmail.com>
+	<609353e70905240011rcec6508hacd71aa454e591b0@mail.gmail.com>
+Message-ID: <578c73340905240642r4d44f8f5sb3b6a253bb97e26f@mail.gmail.com>
+
+Thanks!!!
+CdQ
+
+On Sun, May 24, 2009 at 4:11 AM, <harbour-users@harbour-project.org> wrote:
+
+> HB_USERLANG()
+>
+> 2009/5/21  <harbour-users@harbour-project.org>:
+> > Hi, is there any function in Harbour to get the OS language? (english
+> > (en-US), portuguese (pt-BR), etc)
+> >
+> > Thanks and Regards
+> > CdQ
+> >
+> > --
+> > QAC (I want something comfortable !!!) - Incremental Compilation with all
+> > MiniGUIs versions
+> > QAC (Quiero Algo C?modo !!!) - Compilaci?n Incremental con todas las
+> > versiones de MiniGUI
+> >
+> > Download: www.CarozoDeQuilmes.com.ar
+> > _______________________________________________
+> > Harbour-users mailing list
+> > Harbour-users@harbour-project.org
+> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >
+>
+>
+>
+> --
+> Massimo Belgrano
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+QAC (I want something comfortable !!!) - Incremental Compilation with all
+MiniGUIs versions
+QAC (Quiero Algo C?modo !!!) - Compilaci?n Incremental con todas las
+versiones de MiniGUI
+
+Download: www.CarozoDeQuilmes.com.ar
+From harbour-users at harbour-project.org  Wed May 27 20:45:02 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed May 27 20:45:22 2009
+Subject: [Harbour-users] How to compile
+Message-ID: <8CBAD44AB81BE34-EE8-2441@webmail-mf13.sysops.aol.com>
+
+Newbie here. Just downloaded harbour-1.0.1-win32-mingw432.
+
+Got sample code from here:
+
+http://www.nabble.com/Mini-tutorial-MySQL-connection-td23524813.html
+
+Did this:
+
+D:\harbour-1.0.1-win32-mingw432\bin>bld mysqltest
+
+Got this:
+
+C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x48): undefined? reference to `HB_FUN_HB_ADOSETTABLE'
+C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x58): undefined? reference to `HB_FUN_HB_ADOSETENGINE'
+C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x68): undefined? reference to `HB_FUN_HB_ADOSETSERVER'
+C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x78): undefined? reference to `HB_FUN_HB_ADOSETUSER'
+C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x88): undefined? reference to `HB_FUN_HB_ADOSETPASSWORD'
+C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0xc8): undefined? reference to `HB_FUN_ADORDD'
+collect2: ld returned 1 exit status
+
+I got the follong files in the lib directory:
+??? adordd.lib
+??? hboleaut.lib
+??? usrrdd.lib
+
+I even tried compiling the included example but I still get the same error. (e.g. bld mysql3)
+
+Please help.
+
+From harbour-users at harbour-project.org  Wed May 27 21:09:11 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed May 27 21:09:17 2009
+Subject: [Harbour-users] How to compile
+In-Reply-To: <8CBAD44AB81BE34-EE8-2441@webmail-mf13.sysops.aol.com>
+References: <8CBAD44AB81BE34-EE8-2441@webmail-mf13.sysops.aol.com>
+Message-ID: <133778360905271809h2f59051drd036b1a35f7da517@mail.gmail.com>
+
+Why not try a more simple program ?
+
+this need a library
+
+and try using:    hbmk2 myprg.prg
+
+Bruno
+
+2009/5/27 <harbour-users@harbour-project.org>
+
+> Newbie here. Just downloaded harbour-1.0.1-win32-mingw432.
+>
+> Got sample code from here:
+>
+> http://www.nabble.com/Mini-tutorial-MySQL-connection-td23524813.html
+>
+> Did this:
+>
+> D:\harbour-1.0.1-win32-mingw432\bin>bld mysqltest
+>
+> Got this:
+>
+> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x48):
+> undefined? reference to `HB_FUN_HB_ADOSETTABLE'
+> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x58):
+> undefined? reference to `HB_FUN_HB_ADOSETENGINE'
+> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x68):
+> undefined? reference to `HB_FUN_HB_ADOSETSERVER'
+> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x78):
+> undefined? reference to `HB_FUN_HB_ADOSETUSER'
+> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x88):
+> undefined? reference to `HB_FUN_HB_ADOSETPASSWORD'
+> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0xc8):
+> undefined? reference to `HB_FUN_ADORDD'
+> collect2: ld returned 1 exit status
+>
+> I got the follong files in the lib directory:
+> ??? adordd.lib
+> ??? hboleaut.lib
+> ??? usrrdd.lib
+>
+> I even tried compiling the included example but I still get the same error.
+> (e.g. bld mysql3)
+>
+> Please help.
+>
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From harbour-users at harbour-project.org  Wed May 27 21:10:54 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed May 27 21:11:00 2009
+Subject: [Harbour-users] How to compile
+In-Reply-To: <133778360905271809h2f59051drd036b1a35f7da517@mail.gmail.com>
+References: <8CBAD44AB81BE34-EE8-2441@webmail-mf13.sysops.aol.com>
+	<133778360905271809h2f59051drd036b1a35f7da517@mail.gmail.com>
+Message-ID: <133778360905271810x41204cd3j9b39038c54fc508@mail.gmail.com>
+
+Sorry try with hbmk myprg.prg   ( hbmk2 exists in SVN harbour version)
+
+
+Bruno
+
+2009/5/27 Bruno Luciani <bruno.luciani@gmail.com>
+
+> Why not try a more simple program ?
+>
+> this need a library
+>
+> and try using:    hbmk2 myprg.prg
+>
+> Bruno
+>
+> 2009/5/27 <harbour-users@harbour-project.org>
+>
+> Newbie here. Just downloaded harbour-1.0.1-win32-mingw432.
+>>
+>> Got sample code from here:
+>>
+>> http://www.nabble.com/Mini-tutorial-MySQL-connection-td23524813.html
+>>
+>> Did this:
+>>
+>> D:\harbour-1.0.1-win32-mingw432\bin>bld mysqltest
+>>
+>> Got this:
+>>
+>> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x48):
+>> undefined? reference to `HB_FUN_HB_ADOSETTABLE'
+>> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x58):
+>> undefined? reference to `HB_FUN_HB_ADOSETENGINE'
+>> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x68):
+>> undefined? reference to `HB_FUN_HB_ADOSETSERVER'
+>> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x78):
+>> undefined? reference to `HB_FUN_HB_ADOSETUSER'
+>> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x88):
+>> undefined? reference to `HB_FUN_HB_ADOSETPASSWORD'
+>> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0xc8):
+>> undefined? reference to `HB_FUN_ADORDD'
+>> collect2: ld returned 1 exit status
+>>
+>> I got the follong files in the lib directory:
+>> ??? adordd.lib
+>> ??? hboleaut.lib
+>> ??? usrrdd.lib
+>>
+>> I even tried compiling the included example but I still get the same
+>> error. (e.g. bld mysql3)
+>>
+>> Please help.
+>>
+>> _______________________________________________
+>> Harbour-users mailing list
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>
+>
+From harbour-users at harbour-project.org  Wed May 27 21:16:17 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed May 27 21:16:40 2009
+Subject: [Harbour-users] How to compile
+In-Reply-To: <133778360905271810x41204cd3j9b39038c54fc508@mail.gmail.com>
+References: <8CBAD44AB81BE34-EE8-2441@webmail-mf13.sysops.aol.com><133778360905271809h2f59051drd036b1a35f7da517@mail.gmail.com>
+	<133778360905271810x41204cd3j9b39038c54fc508@mail.gmail.com>
+Message-ID: <8CBAD49097FD64C-EE8-25D3@webmail-mf13.sysops.aol.com>
+
+
+ How do i get hbmk2 from SVN harbour version? I'm trying to connect to a mysql server with the prospect of using harbour as batch processor for transactions. I hope you would be patient with me.
+
+
+ 
+
+
+ 
+
+-----Original Message-----
+From: harbour-users@harbour-project.org
+To: Users of the Harbour compiler <harbour-users@harbour-project.org>
+Sent: Thu, 28 May 2009 9:10 am
+Subject: Re: [Harbour-users] How to compile
+
+
+
+
+
+
+
+
+
+
+Sorry try with hbmk myprg.prg   ( hbmk2 exists in SVN harbour version)
+
+
+Bruno
+
+2009/5/27 Bruno Luciani <bruno.luciani@gmail.com>
+
+> Why not try a more simple program ?
+>
+> this need a library
+>
+> and try using:    hbmk2 myprg.prg
+>
+> Bruno
+>
+> 2009/5/27 <harbour-users@harbour-project.org>
+>
+> Newbie here. Just downloaded harbour-1.0.1-win32-mingw432.
+>>
+>> Got sample code from here:
+>>
+>> http://www.nabble.com/Mini-tutorial-MySQL-connection-td23524813.html
+>>
+>> Did this:
+>>
+>> D:\harbour-1.0.1-win32-mingw432\bin>bld mysqltest
+>>
+>> Got this:
+>>
+>> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x48):
+>> undefined? reference to `HB_FUN_HB_ADOSETTABLE'
+>> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x58):
+>> undefined? reference to `HB_FUN_HB_ADOSETENGINE'
+>> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x68):
+>> undefined? reference to `HB_FUN_HB_ADOSETSERVER'
+>> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x78):
+>> undefined? reference to `HB_FUN_HB_ADOSETUSER'
+>> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x88):
+>> undefined? reference to `HB_FUN_HB_ADOSETPASSWORD'
+>> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0xc8):
+>> undefined? reference to `HB_FUN_ADORDD'
+>> collect2: ld returned 1 exit status
+>>
+>> I got the follong files in the lib directory:
+>> ??? adordd.lib
+>> ??? hboleaut.lib
+>> ??? usrrdd.lib
+>>
+>> I even tried compiling the included example but I still get the same
+>> error. (e.g. bld mysql3)
+>>
+>> Please help.
+>>
+>> _______________________________________________
+>> Harbour-users mailing list
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>
+>
+_______________________________________________
+Harbour-users mailing list
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+
+
+ 
+
+From harbour-users at harbour-project.org  Wed May 27 21:31:14 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed May 27 21:31:20 2009
+Subject: [Harbour-users] How to compile
+In-Reply-To: <8CBAD49097FD64C-EE8-25D3@webmail-mf13.sysops.aol.com>
+References: <8CBAD44AB81BE34-EE8-2441@webmail-mf13.sysops.aol.com>
+	<133778360905271809h2f59051drd036b1a35f7da517@mail.gmail.com>
+	<133778360905271810x41204cd3j9b39038c54fc508@mail.gmail.com>
+	<8CBAD49097FD64C-EE8-25D3@webmail-mf13.sysops.aol.com>
+Message-ID: <133778360905271831j1493d63dy41e0bc45004b9a0f@mail.gmail.com>
+
+Ok , I am learning like you
+
+You need to get all Harbour Stuff , including hbmk2 , but think that is no
+stable
+
+Hbmk2 is not your solution to use mysql , only a better way to compile
+easily
+
+hbmk2 permit to you to compile multiple prg and link the needed library
+
+you need to link hbmysql lib in your sample
+
+I don' t remember if hbmk have this feature , but try:    hbmk sample.prg
+-lhbmysql
+
+
+Bruno
+
+
+2009/5/27 <harbour-users@harbour-project.org>
+
+>
+>  How do i get hbmk2 from SVN harbour version? I'm trying to connect to a
+> mysql server with the prospect of using harbour as batch processor for
+> transactions. I hope you would be patient with me.
+>
+>
+>
+>
+>
+>
+>
+> -----Original Message-----
+> From: harbour-users@harbour-project.org
+> To: Users of the Harbour compiler <harbour-users@harbour-project.org>
+> Sent: Thu, 28 May 2009 9:10 am
+> Subject: Re: [Harbour-users] How to compile
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> Sorry try with hbmk myprg.prg   ( hbmk2 exists in SVN harbour version)
+>
+>
+> Bruno
+>
+> 2009/5/27 Bruno Luciani <bruno.luciani@gmail.com>
+>
+> > Why not try a more simple program ?
+> >
+> > this need a library
+> >
+> > and try using:    hbmk2 myprg.prg
+> >
+> > Bruno
+> >
+> > 2009/5/27 <harbour-users@harbour-project.org>
+> >
+> > Newbie here. Just downloaded harbour-1.0.1-win32-mingw432.
+> >>
+> >> Got sample code from here:
+> >>
+> >> http://www.nabble.com/Mini-tutorial-MySQL-connection-td23524813.html
+> >>
+> >> Did this:
+> >>
+> >> D:\harbour-1.0.1-win32-mingw432\bin>bld mysqltest
+> >>
+> >> Got this:
+> >>
+> >> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x48):
+> >> undefined? reference to `HB_FUN_HB_ADOSETTABLE'
+> >> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x58):
+> >> undefined? reference to `HB_FUN_HB_ADOSETENGINE'
+> >> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x68):
+> >> undefined? reference to `HB_FUN_HB_ADOSETSERVER'
+> >> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x78):
+> >> undefined? reference to `HB_FUN_HB_ADOSETUSER'
+> >> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x88):
+> >> undefined? reference to `HB_FUN_HB_ADOSETPASSWORD'
+> >> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0xc8):
+> >> undefined? reference to `HB_FUN_ADORDD'
+> >> collect2: ld returned 1 exit status
+> >>
+> >> I got the follong files in the lib directory:
+> >> ??? adordd.lib
+> >> ??? hboleaut.lib
+> >> ??? usrrdd.lib
+> >>
+> >> I even tried compiling the included example but I still get the same
+> >> error. (e.g. bld mysql3)
+> >>
+> >> Please help.
+> >>
+> >> _______________________________________________
+> >> Harbour-users mailing list
+> >> Harbour-users@harbour-project.org
+> >> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >>
+> >
+> >
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>
+>
+>
+>
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From harbour-users at harbour-project.org  Wed May 27 21:35:49 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed May 27 21:35:56 2009
+Subject: [Harbour-users] How to compile
+In-Reply-To: <8CBAD49097FD64C-EE8-25D3@webmail-mf13.sysops.aol.com>
+References: <8CBAD44AB81BE34-EE8-2441@webmail-mf13.sysops.aol.com>
+	<133778360905271809h2f59051drd036b1a35f7da517@mail.gmail.com>
+	<133778360905271810x41204cd3j9b39038c54fc508@mail.gmail.com>
+	<8CBAD49097FD64C-EE8-25D3@webmail-mf13.sysops.aol.com>
+Message-ID: <133778360905271835o17790a47u9a0ccca9ba202ab1@mail.gmail.com>
+
+Take a look to
+
+http://www.harbour-project.org/
+
+http://www.harbour-project.org/samples.html
+
+Bruno
+
+2009/5/27 <harbour-users@harbour-project.org>
+
+>
+>  How do i get hbmk2 from SVN harbour version? I'm trying to connect to a
+> mysql server with the prospect of using harbour as batch processor for
+> transactions. I hope you would be patient with me.
+>
+>
+>
+>
+>
+>
+>
+> -----Original Message-----
+> From: harbour-users@harbour-project.org
+> To: Users of the Harbour compiler <harbour-users@harbour-project.org>
+> Sent: Thu, 28 May 2009 9:10 am
+> Subject: Re: [Harbour-users] How to compile
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> Sorry try with hbmk myprg.prg   ( hbmk2 exists in SVN harbour version)
+>
+>
+> Bruno
+>
+> 2009/5/27 Bruno Luciani <bruno.luciani@gmail.com>
+>
+> > Why not try a more simple program ?
+> >
+> > this need a library
+> >
+> > and try using:    hbmk2 myprg.prg
+> >
+> > Bruno
+> >
+> > 2009/5/27 <harbour-users@harbour-project.org>
+> >
+> > Newbie here. Just downloaded harbour-1.0.1-win32-mingw432.
+> >>
+> >> Got sample code from here:
+> >>
+> >> http://www.nabble.com/Mini-tutorial-MySQL-connection-td23524813.html
+> >>
+> >> Did this:
+> >>
+> >> D:\harbour-1.0.1-win32-mingw432\bin>bld mysqltest
+> >>
+> >> Got this:
+> >>
+> >> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x48):
+> >> undefined? reference to `HB_FUN_HB_ADOSETTABLE'
+> >> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x58):
+> >> undefined? reference to `HB_FUN_HB_ADOSETENGINE'
+> >> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x68):
+> >> undefined? reference to `HB_FUN_HB_ADOSETSERVER'
+> >> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x78):
+> >> undefined? reference to `HB_FUN_HB_ADOSETUSER'
+> >> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0x88):
+> >> undefined? reference to `HB_FUN_HB_ADOSETPASSWORD'
+> >> C:\DOCUME~1\A1\LOCALS~1\Temp/ccQVus8n.o:mysqltest.c:(.data+0xc8):
+> >> undefined? reference to `HB_FUN_ADORDD'
+> >> collect2: ld returned 1 exit status
+> >>
+> >> I got the follong files in the lib directory:
+> >> ??? adordd.lib
+> >> ??? hboleaut.lib
+> >> ??? usrrdd.lib
+> >>
+> >> I even tried compiling the included example but I still get the same
+> >> error. (e.g. bld mysql3)
+> >>
+> >> Please help.
+> >>
+> >> _______________________________________________
+> >> Harbour-users mailing list
+> >> Harbour-users@harbour-project.org
+> >> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >>
+> >
+> >
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>
+>
+>
+>
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From harbour-users at harbour-project.org  Wed May 27 22:50:59 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed May 27 22:51:22 2009
+Subject: [Harbour-users] How to compile
+In-Reply-To: <133778360905271831j1493d63dy41e0bc45004b9a0f@mail.gmail.com>
+References: <8CBAD44AB81BE34-EE8-2441@webmail-mf13.sysops.aol.com><133778360905271809h2f59051drd036b1a35f7da517@mail.gmail.com><133778360905271810x41204cd3j9b39038c54fc508@mail.gmail.com><8CBAD49097FD64C-EE8-25D3@webmail-mf13.sysops.aol.com>
+	<133778360905271831j1493d63dy41e0bc45004b9a0f@mail.gmail.com>
+Message-ID: <8CBAD56440956F4-EE8-2A59@webmail-mf13.sysops.aol.com>
+
+
+ Did this:
+
+hbmake mysqltest -lhbmysql
+
+
+ 
+got a screenfull of info:
+
+3rd Party RDD only have the following options: None, RDDADS,Mediator,Apollo
+
+
+ 
+By the my platform is Window XP.
+
+
+-----Original Message-----
+From: harbour-users@harbour-project.org
+To: Users of the Harbour compiler <harbour-users@harbour-project.org>
+Sent: Thu, 28 May 2009 9:31 am
+Subject: Re: [Harbour-users] How to compile
+
+
+
+
+
+
+
+
+
+
+Ok , I am learning like you
+
+You need to get all Harbour Stuff , including hbmk2 , but think that is no
+stable
+
+Hbmk2 is not your solution to use mysql , only a better way to compile
+easily
+
+hbmk2 permit to you to compile multiple prg and link the needed library
+
+you need to link hbmysql lib in your sample
+
+I don' t remember if hbmk have this feature , but try:    hbmk sample.prg
+-lhbmysql
+
+
+Bruno
+
+
+
+
+ 
+
+From harbour-users at harbour-project.org  Wed May 27 23:10:33 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed May 27 23:10:40 2009
+Subject: [Harbour-users] How to compile
+In-Reply-To: <8CBAD56440956F4-EE8-2A59@webmail-mf13.sysops.aol.com>
+References: <8CBAD44AB81BE34-EE8-2441@webmail-mf13.sysops.aol.com>
+	<133778360905271809h2f59051drd036b1a35f7da517@mail.gmail.com>
+	<133778360905271810x41204cd3j9b39038c54fc508@mail.gmail.com>
+	<8CBAD49097FD64C-EE8-25D3@webmail-mf13.sysops.aol.com>
+	<133778360905271831j1493d63dy41e0bc45004b9a0f@mail.gmail.com>
+	<8CBAD56440956F4-EE8-2A59@webmail-mf13.sysops.aol.com>
+Message-ID: <133778360905272010jb5e03dbk53dd36f87ed4f0b6@mail.gmail.com>
+
+Could you send the prg to me ?
+or post it in the mail ?
+
+Bruno
+
+2009/5/27 <harbour-users@harbour-project.org>
+
+>
+>  Did this:
+>
+> hbmake mysqltest -lhbmysql
+>
+>
+>
+> got a screenfull of info:
+>
+> 3rd Party RDD only have the following options: None, RDDADS,Mediator,Apollo
+>
+>
+>
+> By the my platform is Window XP.
+>
+>
+> -----Original Message-----
+> From: harbour-users@harbour-project.org
+> To: Users of the Harbour compiler <harbour-users@harbour-project.org>
+> Sent: Thu, 28 May 2009 9:31 am
+> Subject: Re: [Harbour-users] How to compile
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> Ok , I am learning like you
+>
+> You need to get all Harbour Stuff , including hbmk2 , but think that is no
+> stable
+>
+> Hbmk2 is not your solution to use mysql , only a better way to compile
+> easily
+>
+> hbmk2 permit to you to compile multiple prg and link the needed library
+>
+> you need to link hbmysql lib in your sample
+>
+> I don' t remember if hbmk have this feature , but try:    hbmk sample.prg
+> -lhbmysql
+>
+>
+> Bruno
+>
+>
+>
+>
+>
+>
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From harbour-users at harbour-project.org  Wed May 27 23:14:03 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed May 27 23:14:43 2009
+Subject: [Harbour-users] How to compile
+In-Reply-To: <133778360905272010jb5e03dbk53dd36f87ed4f0b6@mail.gmail.com>
+References: <8CBAD44AB81BE34-EE8-2441@webmail-mf13.sysops.aol.com><133778360905271809h2f59051drd036b1a35f7da517@mail.gmail.com><133778360905271810x41204cd3j9b39038c54fc508@mail.gmail.com><8CBAD49097FD64C-EE8-25D3@webmail-mf13.sysops.aol.com><133778360905271831j1493d63dy41e0bc45004b9a0f@mail.gmail.com><8CBAD56440956F4-EE8-2A59@webmail-mf13.sysops.aol.com>
+	<133778360905272010jb5e03dbk53dd36f87ed4f0b6@mail.gmail.com>
+Message-ID: <8CBAD597CFE73AC-EE8-2B37@webmail-mf13.sysops.aol.com>
+
+
+ #include "adordd.ch"
+
+REQUEST ADORDD
+
+function Main()
+?? clear screen
+?? setmode(25,80)
+?? USE payroll VIA "ADORDD" TABLE "dtr" MYSQL FROM "experience" USER "root" PASSWORD "password"
+?? dbedit()
+?? USE
+?? clear screen
+return nil
+
+
+ 
+
+
+ 
+
+-----Original Message-----
+From: harbour-users@harbour-project.org
+To: Users of the Harbour compiler <harbour-users@harbour-project.org>
+Sent: Thu, 28 May 2009 11:10 am
+Subject: Re: [Harbour-users] How to compile
+
+
+
+
+
+
+
+
+
+
+Could you send the prg to me ?
+or post it in the mail ?
+
+Bruno
+
+2009/5/27 <harbour-users@harbour-project.org>
+
+
+
+
+ 
+
+From harbour-users at harbour-project.org  Thu May 28 21:33:47 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Thu May 28 21:34:46 2009
+Subject: [Harbour-users] ODBC on MSWindows
+Message-ID: <8CBAE14A57C616D-FBC-2B92@WEBMAIL-DY33.sysops.aol.com>
+
+Does Harbour support ODBC RDD on MSWindows? I like to give it a try if it's available. I'm having trouble compiling/linking ADORDD. I'm trying to connect to MySQL. If I can successfuly connect to MySQL then I will use harbour to replace our existing batch transaction processor written in php.
+
+Regards.
+

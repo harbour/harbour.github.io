@@ -1,0 +1,4475 @@
+From anezch at gmail.com  Wed Mar  3 05:03:30 2010
+From: anezch at gmail.com (Agustianes Umbara Suwardi)
+Date: Wed Mar  3 05:03:42 2010
+Subject: [Harbour-users] Set Exclusive on CIFS mounted files
+Message-ID: <4B8E33F2.1010408@gmail.com>
+
+Hi all,
+
+Has anyone tried to exclusive-use on CIFS mounted files with Harbour? I 
+have a CIFS mount point:
+mount -t cifs -o 
+rw,sync,user=ptiuser,password=secret,uid=1000,gid=1000,noperms,directio 
+//192.168.20.1/ptiuser/dbf /mnt/dbf
+
+As a test, I run on computer A a foxpro (under dosemu) script that use a 
+dbf as exclusive. Then on my computer I write a harbour app that use the 
+same file exclusively. The result is both computer can use the file in 
+the same time!
+
+The second test, on my computer I use the file exclusively under foxpro 
+(on dosemu). And the set exclusive command takes effect, the file is 
+used exclusively.
+
+Is it a bug on harbour, or I'm passing the wrong mount parameters?
+
+Regards,
+Agustianes U. S.
+From druzus at acn.waw.pl  Wed Mar  3 05:32:07 2010
+From: druzus at acn.waw.pl (=?utf-8?Q?Przemys=C5=82aw?= Czerpak)
+Date: Wed Mar  3 05:32:15 2010
+Subject: [Harbour-users] Set Exclusive on CIFS mounted files
+In-Reply-To: <4B8E33F2.1010408@gmail.com>
+References: <4B8E33F2.1010408@gmail.com>
+Message-ID: <20100303103207.GA17541@linux-4bod.home.aster.pl>
+
+On Wed, 03 Mar 2010, Agustianes Umbara Suwardi wrote:
+
+Hi,
+
+> Has anyone tried to exclusive-use on CIFS mounted files with
+> Harbour? I have a CIFS mount point:
+> mount -t cifs -o rw,sync,user=ptiuser,password=secret,uid=1000,gid=1000,noperms,directio
+> //192.168.20.1/ptiuser/dbf /mnt/dbf
+> 
+> As a test, I run on computer A a foxpro (under dosemu) script that
+> use a dbf as exclusive. Then on my computer I write a harbour app
+> that use the same file exclusively. The result is both computer can
+> use the file in the same time!
+
+Your problem has nothing to CIFS volumes.
+
+In POSIX systems like Linux DOS DENY flags (EXCLUSIVE mode) do not exist.
+DOSEMU emulates them only and such emulation is visible and respected only
+by programs executed in DOSEMU. The exception is when inside DOSEMU you
+are running network client which connects to file server directly instead
+of using LREDIR volumes. In such case DOSEMU sends information about the
+DOS DENY flags to file server which can manage them and synchronize other
+clients.
+
+> The second test, on my computer I use the file exclusively under
+> foxpro (on dosemu). And the set exclusive command takes effect, the
+> file is used exclusively.
+> Is it a bug on harbour, or I'm passing the wrong mount parameters?
+
+It's not a bug. Read above. You are simply making sth what cannot work
+with programs executed outside DOSEMU.
+
+best regards,
+Przemek
+From anezch at gmail.com  Wed Mar  3 19:35:27 2010
+From: anezch at gmail.com (Agustianes Umbara Suwardi)
+Date: Wed Mar  3 19:35:42 2010
+Subject: [Harbour-users] Set Exclusive on CIFS mounted files
+In-Reply-To: <20100303103207.GA17541@linux-4bod.home.aster.pl>
+References: <4B8E33F2.1010408@gmail.com>
+	<20100303103207.GA17541@linux-4bod.home.aster.pl>
+Message-ID: <4B8F004F.1040803@gmail.com>
+
+On 03/03/2010 05:32 PM, Przemys?aw Czerpak wrote:
+> On Wed, 03 Mar 2010, Agustianes Umbara Suwardi wrote:
+>
+> Hi,
+>
+>    
+>> Has anyone tried to exclusive-use on CIFS mounted files with
+>> Harbour? I have a CIFS mount point:
+>> mount -t cifs -o rw,sync,user=ptiuser,password=secret,uid=1000,gid=1000,noperms,directio
+>> //192.168.20.1/ptiuser/dbf /mnt/dbf
+>>
+>> As a test, I run on computer A a foxpro (under dosemu) script that
+>> use a dbf as exclusive. Then on my computer I write a harbour app
+>> that use the same file exclusively. The result is both computer can
+>> use the file in the same time!
+>>      
+> Your problem has nothing to CIFS volumes.
+>
+> In POSIX systems like Linux DOS DENY flags (EXCLUSIVE mode) do not exist.
+> DOSEMU emulates them only and such emulation is visible and respected only
+> by programs executed in DOSEMU. The exception is when inside DOSEMU you
+> are running network client which connects to file server directly instead
+> of using LREDIR volumes. In such case DOSEMU sends information about the
+> DOS DENY flags to file server which can manage them and synchronize other
+> clients.
+>
+>    
+>> The second test, on my computer I use the file exclusively under
+>> foxpro (on dosemu). And the set exclusive command takes effect, the
+>> file is used exclusively.
+>> Is it a bug on harbour, or I'm passing the wrong mount parameters?
+>>      
+> It's not a bug. Read above. You are simply making sth what cannot work
+> with programs executed outside DOSEMU.
+>
+> best regards,
+> Przemek
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>    
+
+Hi Przemek,
+
+Thank you for your reply. So, is there any way I can make set exclusive 
+work under Linux?
+
+Best regards,
+Agustianes U. S.
+From alcisoft at arrakis.es  Thu Mar  4 06:33:25 2010
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Thu Mar  4 06:46:24 2010
+Subject: [Harbour-users] How to refresh application GtWvg ?
+Message-ID: <hmo6ho$moo$1@dough.gmane.org>
+
+As subject,
+
+Using GtWvg, this test
+
+SELECT Test
+GO TOP
+DO WHILE !Eof()
+   ? FieldGet(1)
+   SKIP
+ENDDO
+
+That don't refresh window application and Windows says "this application
+dont´t answer" (Windows Spanish)...
+How to refresh applicacion using GtWvg GT driver ?
+
+Regards
+
+
+
+
+From amigosam at adinet.com.uy  Thu Mar  4 09:35:21 2010
+From: amigosam at adinet.com.uy (Angel Pais)
+Date: Thu Mar  4 09:35:39 2010
+Subject: [Harbour-users] Re: How to refresh application GtWvg ?
+In-Reply-To: <hmo6ho$moo$1@dough.gmane.org>
+References: <hmo6ho$moo$1@dough.gmane.org>
+Message-ID: <hmogen$tv4$1@dough.gmane.org>
+
+El 04/03/2010 9:33, Antonio Martinez escribi?:
+> As subject,
+>
+> Using GtWvg, this test
+>
+> SELECT Test
+> GO TOP
+> DO WHILE !Eof()
+>     ? FieldGet(1)
+>     SKIP
+> ENDDO
+>
+> That don't refresh window application and Windows says "this application
+> dont?t answer" (Windows Spanish)...
+> How to refresh applicacion using GtWvg GT driver ?
+>
+> Regards
+
+
+That's an infinite loop without iddle states
+How do you expect the app to respond to anything ?
+
+
+
+From alcisoft at arrakis.es  Thu Mar  4 10:27:30 2010
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Thu Mar  4 10:31:56 2010
+Subject: [Harbour-users] Re: How to refresh application GtWvg ?
+References: <hmo6ho$moo$1@dough.gmane.org> <hmogen$tv4$1@dough.gmane.org>
+Message-ID: <hmojob$c42$1@dough.gmane.org>
+
+Angel,
+
+>That's an infinite loop without iddle states
+>How do you expect the app to respond to anything ?
+
+[BAD ENGLISH]
+I have tons of code with thats loops !
+I will like something as thread that only refresh event loop ?
+
+
+[MEDIOCRE SPANISH]
+Tengo mucho codigo con esos bucles y no me gustaria tener que repasarlos
+todos !
+Me gustaria que existiese algo como un thread (startthread) que refrescara
+el bucle de eventos ?
+
+Saludos
+
+
+
+From bedipritpal at hotmail.com  Thu Mar  4 11:21:51 2010
+From: bedipritpal at hotmail.com (Pritpal Bedi)
+Date: Thu Mar  4 11:21:57 2010
+Subject: [Harbour-users] Re: How to refresh application GtWvg ?
+In-Reply-To: <hmojob$c42$1@dough.gmane.org>
+References: <hmo6ho$moo$1@dough.gmane.org>
+	<hmogen$tv4$1@dough.gmane.org>,<hmojob$c42$1@dough.gmane.org>
+Message-ID: <SNT123-W296D539BB2C31B1A2DCE0FA7390@phx.gbl>
+
+
+Hi
+
+
+> I have tons of code with thats loops !
+> I will like something as thread that only refresh event loop ?
+
+
+You are exposing a common problem with Clipper programming.
+
+There is no way to refresh the GT unless Przemek introduces
+
+passive threads doing this job.
+
+ 
+
+Until then, call inkey() in the loop.
+
+
+Regards
+ 
+Pritpal Bedi, a student of software analysis and design
+http://www.vouch.in  | Vouch, the software that GROWS with you
+http://www.vouch32.com  |  Home of Vouch32 ActiveX Server
+http://www.vouchcac.com/vouch32/vouch32.htm   |   A Free Windows Extended
+Utilities Library for Clipper, Xbase++ and (x)Harbour
+http://www.help.vouch.info | Online Vouch Help
+http://www.harbour.vouch.info | Online Harbour Help
+
+
+
+
+ 		 	   		  
+_________________________________________________________________
+Hotmail: Trusted email with powerful SPAM protection.
+http://clk.atdmt.com/GBL/go/201469227/direct/01/
+From druzus at acn.waw.pl  Thu Mar  4 11:53:06 2010
+From: druzus at acn.waw.pl (=?utf-8?Q?Przemys=C5=82aw?= Czerpak)
+Date: Thu Mar  4 11:53:15 2010
+Subject: [Harbour-users] Re: How to refresh application GtWvg ?
+In-Reply-To: <SNT123-W296D539BB2C31B1A2DCE0FA7390@phx.gbl>
+References: <hmo6ho$moo$1@dough.gmane.org> <hmogen$tv4$1@dough.gmane.org>
+	<hmojob$c42$1@dough.gmane.org>
+	<SNT123-W296D539BB2C31B1A2DCE0FA7390@phx.gbl>
+Message-ID: <20100304165306.GA19288@linux-4bod.home.aster.pl>
+
+On Thu, 04 Mar 2010, Pritpal Bedi wrote:
+
+Hi,
+
+> You are exposing a common problem with Clipper programming.
+> There is no way to refresh the GT unless Przemek introduces
+> passive threads doing this job.
+
+I cannot do that.
+In the moment when you added HB_GTI_NOTIFIERBLOCK you effectively
+blocked the possibilities of serving window loop by non HVM thread
+so first this feature has to be removed 
+
+best regards,
+Przemek
+From alcisoft at arrakis.es  Thu Mar  4 11:42:46 2010
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Thu Mar  4 12:15:48 2010
+Subject: [Harbour-users] Re: Re: How to refresh application GtWvg ?
+References: <hmo6ho$moo$1@dough.gmane.org><hmogen$tv4$1@dough.gmane.org>,
+	<hmojob$c42$1@dough.gmane.org>
+	<SNT123-W296D539BB2C31B1A2DCE0FA7390@phx.gbl>
+Message-ID: <hmopqs$777$1@dough.gmane.org>
+
+Pritpal,
+
+>You are exposing a common problem with Clipper programming.
+>There is no way to refresh the GT unless Przemek introduces
+>passive threads doing this job.
+Thank you very much for your answer !
+
+>Until then, call inkey() in the loop.
+
+I will do it !
+
+
+Regards
+
+Pritpal Bedi, a student of software analysis and design
+http://www.vouch.in  | Vouch, the software that GROWS with you
+http://www.vouch32.com  |  Home of Vouch32 ActiveX Server
+http://www.vouchcac.com/vouch32/vouch32.htm   |   A Free Windows Extended
+Utilities Library for Clipper, Xbase++ and (x)Harbour
+http://www.help.vouch.info | Online Vouch Help
+http://www.harbour.vouch.info | Online Harbour Help
+
+
+
+
+
+_________________________________________________________________
+Hotmail: Trusted email with powerful SPAM protection.
+http://clk.atdmt.com/GBL/go/201469227/direct/01/=
+
+
+
+From bedipritpal at hotmail.com  Thu Mar  4 14:37:08 2010
+From: bedipritpal at hotmail.com (Pritpal Bedi)
+Date: Thu Mar  4 14:37:49 2010
+Subject: [Harbour-users] Re: How to refresh application GtWvg ?
+In-Reply-To: <20100304165306.GA19288@linux-4bod.home.aster.pl>
+References: <hmo6ho$moo$1@dough.gmane.org>
+	<hmogen$tv4$1@dough.gmane.org>, <hmojob$c42$1@dough.gmane.org>,
+	<SNT123-W296D539BB2C31B1A2DCE0FA7390@phx.gbl>,
+	<20100304165306.GA19288@linux-4bod.home.aster.pl>
+Message-ID: <SNT123-W8C848C025759927A3EDD0A7390@phx.gbl>
+
+
+Hello Przemek
+
+
+> I cannot do that.
+> In the moment when you added HB_GTI_NOTIFIERBLOCK you effectively
+> blocked the possibilities of serving window loop by non HVM thread
+> so first this feature has to be removed 
+
+
+I did not know that at all. And probably I do not know much about GT internals.
+
+ 
+
+Can you kindly update me how a passive thread will work and why 
+
+HB_GTI_NOTIFIERBLOCK is a show-stopper to achieve this?
+
+ 
+
+May be we get a solution for both.
+
+ 
+
+Regards
+
+Pritpal Bedi
+ 		 	   		  
+_________________________________________________________________
+Your E-mail and More On-the-Go. Get Windows Live Hotmail Free.
+http://clk.atdmt.com/GBL/go/201469229/direct/01/
+From druzus at acn.waw.pl  Thu Mar  4 15:28:16 2010
+From: druzus at acn.waw.pl (=?utf-8?Q?Przemys=C5=82aw?= Czerpak)
+Date: Thu Mar  4 15:28:24 2010
+Subject: [Harbour-users] Re: How to refresh application GtWvg ?
+In-Reply-To: <SNT123-W8C848C025759927A3EDD0A7390@phx.gbl>
+References: <hmo6ho$moo$1@dough.gmane.org> <hmogen$tv4$1@dough.gmane.org>
+	<hmojob$c42$1@dough.gmane.org>
+	<SNT123-W296D539BB2C31B1A2DCE0FA7390@phx.gbl>
+	<20100304165306.GA19288@linux-4bod.home.aster.pl>
+	<SNT123-W8C848C025759927A3EDD0A7390@phx.gbl>
+Message-ID: <20100304202816.GA16170@linux-4bod.home.aster.pl>
+
+On Thu, 04 Mar 2010, Pritpal Bedi wrote:
+
+Hi,
+
+> > I cannot do that.
+> > In the moment when you added HB_GTI_NOTIFIERBLOCK you effectively
+> > blocked the possibilities of serving window loop by non HVM thread
+> > so first this feature has to be removed 
+> I did not know that at all. And probably I do not know much about GT
+> internals.
+> Can you kindly update me how a passive thread will work and why 
+> HB_GTI_NOTIFIERBLOCK is a show-stopper to achieve this?
+
+HB_GTI_NOTIFIERBLOCK introduces PRG code executed from window
+message loop. It means that we cannot create non HVM thread
+to create windows and process this window messages because such
+thread cannot activate PRG code.
+
+We can quite easy create non HVM thread inside GTWVT which will
+create windows and process all it's messages taking data to display
+for GT buffers and putting input events to keyboard/mouse queue.
+We will need only simply mutex to synchronize access to GT structure.
+Such worker threads resolves also possible deadlocks which can appear
+in MT MS-Win GUI applications what should greatly helps users which
+are not very familiar with concurrent programing and MS-Windows API
+restrictions.
+But the problem appears when we have HB_GTI_NOTIFIERBLOCK because
+non HVM thread cannot execute PRG code. In MT mode we can create
+separate HVM thread to execute it but it will work in different way
+then current code so it will be necessary to define new conditions
+how such feature should work of course it will not work in ST
+applications.
+
+best regards,
+Przemek
+From alcisoft at arrakis.es  Thu Mar  4 16:24:00 2010
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Thu Mar  4 20:45:49 2010
+Subject: [Harbour-users] Re: RE: Re: How to refresh application GtWvg ?
+References: <hmo6ho$moo$1@dough.gmane.org>
+	<hmogen$tv4$1@dough.gmane.org><hmojob$c42$1@dough.gmane.org><SNT123-W296D539BB2C31B1A2DCE0FA7390@phx.gbl>
+	<20100304165306.GA19288@linux-4bod.home.aster.pl>
+Message-ID: <hmp8ko$rcq$1@dough.gmane.org>
+
+A question to all:
+
+why pure console windows application not freezes during for examples
+skipping records loops ?
+
+Regards
+
+
+Przemyslaw Czerpak escribiÃ³ en mensaje
+<20100304165306.GA19288@linux-4bod.home.aster.pl>...
+>On Thu, 04 Mar 2010, Pritpal Bedi wrote:
+>
+>Hi,
+>
+>> You are exposing a common problem with Clipper programming.
+>> There is no way to refresh the GT unless Przemek introduces
+>> passive threads doing this job.
+>
+>I cannot do that.
+>In the moment when you added HB_GTI_NOTIFIERBLOCK you effectively
+>blocked the possibilities of serving window loop by non HVM thread
+>so first this feature has to be removed
+>
+>best regards,
+>Przemek
+
+
+
+From mwawresz at gmail.com  Fri Mar  5 02:05:20 2010
+From: mwawresz at gmail.com (Mariusz Wawreszuk)
+Date: Fri Mar  5 02:05:29 2010
+Subject: [Harbour-users] Re: RE: Re: How to refresh application GtWvg ?
+In-Reply-To: <hmp8ko$rcq$1@dough.gmane.org>
+References: <hmo6ho$moo$1@dough.gmane.org> <hmogen$tv4$1@dough.gmane.org>
+	<hmojob$c42$1@dough.gmane.org>
+	<SNT123-W296D539BB2C31B1A2DCE0FA7390@phx.gbl>
+	<20100304165306.GA19288@linux-4bod.home.aster.pl>
+	<hmp8ko$rcq$1@dough.gmane.org>
+Message-ID: <3fcd70ab1003042305i1c310d2t81e0d6b977245115@mail.gmail.com>
+
+> A question to all:
+>
+> why pure console windows application not freezes during for examples
+> skipping records loops ?
+>
+
+What do you mean by "freezes"? A console application is started up in
+a separated thread and doesn't affect on other applications.
+
+best regards,
+Mariusz
+
+
+> Przemyslaw Czerpak escribi? en mensaje
+> <20100304165306.GA19288@linux-4bod.home.aster.pl>...
+>>On Thu, 04 Mar 2010, Pritpal Bedi wrote:
+>>
+>>Hi,
+>>
+>>> You are exposing a common problem with Clipper programming.
+>>> There is no way to refresh the GT unless Przemek introduces
+>>> passive threads doing this job.
+>>
+>>I cannot do that.
+>>In the moment when you added HB_GTI_NOTIFIERBLOCK you effectively
+>>blocked the possibilities of serving window loop by non HVM thread
+>>so first this feature has to be removed
+>>
+>>best regards,
+>>Przemek
+>
+>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From alcisoft at arrakis.es  Fri Mar  5 05:33:47 2010
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Fri Mar  5 05:38:16 2010
+Subject: [Harbour-users] Re: Re: RE: Re: How to refresh application GtWvg ?
+References: <hmo6ho$moo$1@dough.gmane.org>
+	<hmogen$tv4$1@dough.gmane.org><hmojob$c42$1@dough.gmane.org><SNT123-W296D539BB2C31B1A2DCE0FA7390@phx.gbl><20100304165306.GA19288@linux-4bod.home.aster.pl><hmp8ko$rcq$1@dough.gmane.org>
+	<3fcd70ab1003042305i1c310d2t81e0d6b977245115@mail.gmail.com>
+Message-ID: <hmqmtg$5u0$1@dough.gmane.org>
+
+Mariusz,
+
+During skipping records loops, in skipping records loops, the console window
+refresh, at least it can paint self.
+In windows (GTWVWG) window, during the same loops, the window not refresh
+and the image is broken.
+
+Sorry my poor english
+
+Mariusz Wawreszuk escribió en mensaje
+<3fcd70ab1003042305i1c310d2t81e0d6b977245115@mail.gmail.com>...
+> A question to all:
+>
+> why pure console windows application not freezes during for examples
+> skipping records loops ?
+>
+
+What do you mean by "freezes"? A console application is started up in
+a separated thread and doesn't affect on other applications.
+
+best regards,
+Mariusz
+
+
+> Przemyslaw Czerpak escribió en mensaje
+>
+<20100304165306.GA19288@linux-4bod.home.aster.pl>..
+.
+>>On Thu, 04 Mar 2010, Pritpal Bedi wrote:
+>>
+>>Hi,
+>>
+>>> You are exposing a common problem with Clipper programming.
+>>> There is no way to refresh the GT unless Przemek introduces
+>>> passive threads doing this job.
+>>
+>>I cannot do that.
+>>In the moment when you added HB_GTI_NOTIFIERBLOCK you effectively
+>>blocked the possibilities of serving window loop by non HVM thread
+>>so first this feature has to be removed
+>>
+>>best regards,
+>>Przemek
+>
+>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+From mbelgrano at deltain.it  Fri Mar  5 06:22:22 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Fri Mar  5 06:22:53 2010
+Subject: [Harbour-users] Re: Re: RE: Re: How to refresh application GtWvg 
+	?
+In-Reply-To: <hmqmtg$5u0$1@dough.gmane.org>
+References: <hmo6ho$moo$1@dough.gmane.org> <hmogen$tv4$1@dough.gmane.org> 
+	<hmojob$c42$1@dough.gmane.org>
+	<SNT123-W296D539BB2C31B1A2DCE0FA7390@phx.gbl> 
+	<20100304165306.GA19288@linux-4bod.home.aster.pl>
+	<hmp8ko$rcq$1@dough.gmane.org> 
+	<3fcd70ab1003042305i1c310d2t81e0d6b977245115@mail.gmail.com> 
+	<hmqmtg$5u0$1@dough.gmane.org>
+Message-ID: <609353e71003050322y7dd905fbw4f9e2231815d667@mail.gmail.com>
+
+Can you post a sample?
+I not have similar problem in my gtwvg application , maj be a save/restore
+problem ?
+
+2010/3/5 Antonio Martinez <alcisoft@arrakis.es>
+
+> Mariusz,
+>
+> During skipping records loops, in skipping records loops, the console
+> window
+> refresh, at least it can paint self.
+> In windows (GTWVWG) window, during the same loops, the window not refresh
+> and the image is broken.
+>
+> Sorry my poor english
+>
+>
+-- 
+Massimo Belgrano
+From alcisoft at arrakis.es  Fri Mar  5 10:37:52 2010
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Fri Mar  5 10:42:37 2010
+Subject: [Harbour-users] Re: Re: Re: RE: Re: How to refresh application
+	GtWvg ?
+References: <hmo6ho$moo$1@dough.gmane.org> <hmogen$tv4$1@dough.gmane.org>
+	<hmojob$c42$1@dough.gmane.org><SNT123-W296D539BB2C31B1A2DCE0FA7390@phx.gbl>
+	<20100304165306.GA19288@linux-4bod.home.aster.pl><hmp8ko$rcq$1@dough.gmane.org>
+	<3fcd70ab1003042305i1c310d2t81e0d6b977245115@mail.gmail.com>
+	<hmqmtg$5u0$1@dough.gmane.org>
+	<609353e71003050322y7dd905fbw4f9e2231815d667@mail.gmail.com>
+Message-ID: <hmr8oh$8mk$1@dough.gmane.org>
+
+Look at my last message of sorry!!
+
+Massimo Belgrano escribió en mensaje
+<609353e71003050322y7dd905fbw4f9e2231815d667@mail.gmail.com>...
+>Can you post a sample?
+>I not have similar problem in my gtwvg application , maj be a save/restore
+>problem ?
+>
+>2010/3/5 Antonio Martinez
+<alcisoft@arrakis.es>
+>
+>> Mariusz,
+>>
+>> During skipping records loops, in skipping records loops, the console
+>> window
+>> refresh, at least it can paint self.
+>> In windows (GTWVWG) window, during the same loops, the window not refresh
+>> and the image is broken.
+>>
+>> Sorry my poor english
+>>
+>>
+>--
+>Massimo Belgrano
+
+
+
+From alcisoft at arrakis.es  Fri Mar  5 10:44:07 2010
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Fri Mar  5 10:49:07 2010
+Subject: [Harbour-users] Re: How to refresh application GtWvg ?
+References: <hmo6ho$moo$1@dough.gmane.org>
+Message-ID: <hmr93b$a3b$1@dough.gmane.org>
+
+To all in this thread:
+
+I'm sorry VERY MUCH... my fouls !!!
+
+When I saw GTWvg its wrong...
+I think was the same running aspect than GTWvw (xHarbour)
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+And I test GTWvg and:
+-Not frozen main window
+-Not says "this application dont´t answer" (Windows Spanish)...
+
+GTWvg really it's BIG ok (thank you for his developments)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+Newly I'm sorry for your spared time !!
+
+Regards
+
+
+
+
+
+Antonio Martinez escribió en mensaje ...
+>As subject,
+>
+>Using GtWvg, this test
+>
+>SELECT Test
+>GO TOP
+>DO WHILE !Eof()
+>   ? FieldGet(1)
+>   SKIP
+>ENDDO
+>
+>That don't refresh window application and Windows says "this application
+>dont´t answer" (Windows Spanish)...
+>How to refresh applicacion using GtWvg GT driver ?
+>
+>Regards
+
+
+
+From jerryfinuliar at operamail.com  Tue Mar  9 02:01:42 2010
+From: jerryfinuliar at operamail.com (Jerry Finuliar)
+Date: Tue Mar  9 02:01:51 2010
+Subject: [Harbour-users] HBMK2
+Message-ID: <20100309070143.0F41C44B6D@ws5-1.us4.outblaze.com>
+
+Hi,
+
+Is there a guide to transform gcc makefiles to hbmk2?
+
+Thanks
+Jerry
+
+-- 
+_______________________________________________
+Surf the Web in a faster, safer and easier way:
+Download Opera 9 at http://www.opera.com
+
+Powered by Outblaze
+From mbelgrano at deltain.it  Tue Mar  9 08:26:06 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Tue Mar  9 08:28:21 2010
+Subject: [Harbour-users] HBMK2
+In-Reply-To: <20100309070143.0F41C44B6D@ws5-1.us4.outblaze.com>
+References: <20100309070143.0F41C44B6D@ws5-1.us4.outblaze.com>
+Message-ID: <609353e71003090526p5329af9dqb4bab432f8e9d187@mail.gmail.com>
+
+hbmk2
+use a simple structure who is his command line
+http://harbourlanguage.blogspot.com/search/label/hbmk2
+
+
+
+2010/3/9 Jerry Finuliar <jerryfinuliar@operamail.com>:
+> Hi,
+>
+> Is there a guide to transform gcc makefiles to hbmk2?
+>
+> Thanks
+> Jerry
+>
+
+
+
+-- 
+Massimo Belgrano
+From jerryfinuliar at operamail.com  Wed Mar 10 20:54:50 2010
+From: jerryfinuliar at operamail.com (Jerry Finuliar)
+Date: Wed Mar 10 20:54:59 2010
+Subject: [Harbour-users] DBF exclusive mode?
+Message-ID: <20100311015450.882347BF7B@ws5-10.us4.outblaze.com>
+
+Hi,
+
+Is there a function to determine the usage(shared/exclusive)
+of a dbf?
+
+Thanks,
+Jerry
+
+-- 
+_______________________________________________
+Surf the Web in a faster, safer and easier way:
+Download Opera 9 at http://www.opera.com
+
+Powered by Outblaze
+From druzus at acn.waw.pl  Wed Mar 10 21:03:26 2010
+From: druzus at acn.waw.pl (=?utf-8?Q?Przemys=C5=82aw?= Czerpak)
+Date: Wed Mar 10 21:03:34 2010
+Subject: [Harbour-users] DBF exclusive mode?
+In-Reply-To: <20100311015450.882347BF7B@ws5-10.us4.outblaze.com>
+References: <20100311015450.882347BF7B@ws5-10.us4.outblaze.com>
+Message-ID: <20100311020326.GA13462@linux-4bod.home.aster.pl>
+
+On Thu, 11 Mar 2010, Jerry Finuliar wrote:
+
+Hi,
+
+> Is there a function to determine the usage(shared/exclusive)
+> of a dbf?
+
+   ? "table", alias(), "open in", ;
+     iif( dbInfo( DBI_SHARED ), "shared", "exclusive" ) + " mode"
+
+best regards,
+Przemek
+From jerryfinuliar at operamail.com  Wed Mar 10 21:07:18 2010
+From: jerryfinuliar at operamail.com (Jerry Finuliar)
+Date: Wed Mar 10 21:07:25 2010
+Subject: [Harbour-users] DBF exclusive mode?
+Message-ID: <20100311020718.76178CC18B@ws5-11.us4.outblaze.com>
+
+Hi,
+
+   ? "table", alias(), "open in", ;
+     iif( dbInfo( DBI_SHARED ), "shared", "exclusive" ) + " mode"
+
+Thanks Przemek
+
+-- 
+_______________________________________________
+Surf the Web in a faster, safer and easier way:
+Download Opera 9 at http://www.opera.com
+
+Powered by Outblaze
+From jerryfinuliar at operamail.com  Thu Mar 11 00:49:51 2010
+From: jerryfinuliar at operamail.com (Jerry Finuliar)
+Date: Thu Mar 11 00:50:05 2010
+Subject: [Harbour-users] Cancel DBCREATEINDEX?
+Message-ID: <20100311054951.3A3A644B6D@ws5-1.us4.outblaze.com>
+
+Hi,
+
+Is there a way to cancel DBCREATEINDEX?
+
+Thanks,
+Jerry
+
+-- 
+_______________________________________________
+Surf the Web in a faster, safer and easier way:
+Download Opera 9 at http://www.opera.com
+
+Powered by Outblaze
+From mbelgrano at deltain.it  Thu Mar 11 02:41:51 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Thu Mar 11 02:42:20 2010
+Subject: [Harbour-users] Cancel DBCREATEINDEX?
+In-Reply-To: <20100311054951.3A3A644B6D@ws5-1.us4.outblaze.com>
+References: <20100311054951.3A3A644B6D@ws5-1.us4.outblaze.com>
+Message-ID: <609353e71003102341r67e60015n49741666ee3bec33@mail.gmail.com>
+
+delete index file
+
+2010/3/11 Jerry Finuliar <jerryfinuliar@operamail.com>
+
+> Hi,
+>
+> Is there a way to cancel DBCREATEINDEX?
+>
+> Thanks,
+> Jerry
+>
+> --
+> _______________________________________________
+> Surf the Web in a faster, safer and easier way:
+> Download Opera 9 at http://www.opera.com
+>
+> Powered by Outblaze
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+From alcisoft at arrakis.es  Thu Mar 11 07:44:28 2010
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Thu Mar 11 07:49:02 2010
+Subject: [Harbour-users] A list of corrupted dbf (Clipper program)
+Message-ID: <hnaor0$k1e$1@dough.gmane.org>
+
+Hi,
+
+Something idea about source corruption, reading currupted records ?
+
+Regards
+
+
+begin 666 Corrupto.zip
+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
+G@0````!#3U)255!43RY46%102P4&``````$``0`Z````2"4`````
+`
+end
+
+
+From don.lowenstein at laapc.com  Thu Mar 11 11:26:33 2010
+From: don.lowenstein at laapc.com (Don Lowenstein)
+Date: Thu Mar 11 11:26:56 2010
+Subject: [Harbour-users] Cancel DBCREATEINDEX?
+In-Reply-To: <20100311054951.3A3A644B6D@ws5-1.us4.outblaze.com>
+References: <20100311054951.3A3A644B6D@ws5-1.us4.outblaze.com>
+Message-ID: <009b01cac137$9d747ea0$d85d7be0$@lowenstein@laapc.com>
+
+Do your Indexing with a "while" condition, which is tied to a dialog and
+button.
+
+Initial lClicked := .f. 
+If the button is clicked, action will set a static variable to lClicked :=
+.t.
+
+On the index command, use the while condition to see if lClicked is still
+false, or set to .t. - at which point you can confirm the cancel request.
+
+
+-----Original Message-----
+From: harbour-users-bounces@harbour-project.org
+[mailto:harbour-users-bounces@harbour-project.org] On Behalf Of Jerry
+Finuliar
+Sent: Wednesday, March 10, 2010 11:50 PM
+To: harbour-users@harbour-project.org
+Subject: [Harbour-users] Cancel DBCREATEINDEX?
+
+Hi,
+
+Is there a way to cancel DBCREATEINDEX?
+
+Thanks,
+Jerry
+
+-- 
+_______________________________________________
+Surf the Web in a faster, safer and easier way:
+Download Opera 9 at http://www.opera.com
+
+Powered by Outblaze
+_______________________________________________
+Harbour-users mailing list (attachment size limit: 40KB)
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+From jlcapel2 at gmail.com  Sun Mar 14 04:22:44 2010
+From: jlcapel2 at gmail.com (=?ISO-8859-1?Q?Jos=E9_Luis_Capel?=)
+Date: Sun Mar 14 04:22:52 2010
+Subject: [Harbour-users] Error building harbour for msvc 2008 ce
+Message-ID: <ab2a7b4c1003140022x274de5e8o4cca22081dbb7641@mail.gmail.com>
+
+Hi all,
+
+After yesterday's cvs I created harbour for MSVC 2008 (32bits).
+
+Then I tried to create harbour libs for msvc 2008 ce but I have these
+errors:
+
+cl.exe   -I. -I../../../../../include -nologo -D_M_ARM -DARM -TP -W4 -wd4127
+-Od
+ -Os -Gy -EHsc- -DHB_LEGACY_TYPES_OFF  -DUNICODE -DUNDER_CE  -Fohbffind.obj
+-c .
+./../../hbffind.c
+hbffind.c
+C:\Program Files (x86)\Windows Mobile 5.0 SDK
+R2\PocketPC\Include\Armv4i\winnt.h
+(384) : warning C4201: se ha utilizado una extensi?n no est?ndar :
+struct/union
+sin especificar
+C:\Program Files (x86)\Windows Mobile 5.0 SDK
+R2\PocketPC\Include\Armv4i\winnt.h
+(403) : warning C4201: se ha utilizado una extensi?n no est?ndar :
+struct/union
+sin especificar
+C:\Program Files (x86)\Windows Mobile 5.0 SDK
+R2\PocketPC\Include\Armv4i\winnt.h
+(2976) : error C2146: error de sintaxis : falta ';' delante del
+identificador 'C
+ontextRecord'
+C:\Program Files (x86)\Windows Mobile 5.0 SDK
+R2\PocketPC\Include\Armv4i\winnt.h
+(2976) : error C4430: falta el especificador de tipo; se presupone int.
+Nota: C+
++ no admite default-int
+C:\Program Files (x86)\Windows Mobile 5.0 SDK
+R2\PocketPC\Include\Armv4i\winnt.h
+(2976) : error C4430: falta el especificador de tipo; se presupone int.
+Nota: C+
++ no admite default-int
+
+(and more)
+
+These are the sets I use:
+
+
+call "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\vcvarsall.bat"
+
+set INCLUDE=C:\Program Files (x86)\Microsoft Visual Studio
+9.0\VC\ce\include;C:\Program Files (x86)\Windows Mobile 5.0 SDK
+R2\PocketPC\Include\Armv4i
+set LIB=C:\Program Files (x86)\Microsoft Visual Studio
+9.0\VC\ce\lib\armv4i;C:\Program Files (x86)\Windows Mobile 5.0 SDK
+R2\PocketPC\Lib\ARMV4I
+set PATH=e:\programacion_ant\hb_mvsc\bin;C:\Program Files (x86)\Microsoft
+Visual Studio 9.0\VC\ce\bin\x86_arm;C:\Program Files (x86)\Microsoft Visual
+Studio 8\Common7\IDE;%PATH%
+
+SET HB_INSTALL_PREFIX=e:\programacion_ant\hb_msvcce
+SET HB_CONTRIBLIBS=no
+SET HB_CONTRIB_ADDONS=no
+SET HB_EXTERNALLIBS=no
+
+
+and then
+
+win-make clean install
+
+Can some one give some guidelines of how to solve this problem?
+
+Many thanks,
+Jos? Luis Capel
+From eyelagui at gmail.com  Sun Mar 14 14:42:14 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Sun Mar 14 14:42:21 2010
+Subject: [Harbour-users] GUI programming.
+Message-ID: <4B9D2E06.7020208@gmail.com>
+
+Hello, i'm looking for some advice now.
+
+I'm an old fashion clipper programmer but now i need to make a graphical 
+user interfase program.
+I have no experience on OOP, but i know i have to learn and that's out 
+off discussion but i would like to avoid entering that way for now since 
+i'm in kind of a hurry.
+
+I'm looking for the easiest way to make a GUI program, but i don't know 
+where to start looking.
+
+I have seen in the past a library that converted a console program to 
+GUI only by adding some lines to the code but i don't remember the name 
+of that tool.
+This would be i guess the ideal way so i can keep making my old 
+"clipper" programs and convert the already done ones.
+
+Well i hope some answers to start moving, thanks in advance people.
+
+From mwawresz at gmail.com  Sun Mar 14 15:13:43 2010
+From: mwawresz at gmail.com (Mariusz Wawreszuk)
+Date: Sun Mar 14 15:13:52 2010
+Subject: [Harbour-users] GUI programming.
+In-Reply-To: <4B9D2E06.7020208@gmail.com>
+References: <4B9D2E06.7020208@gmail.com>
+Message-ID: <3fcd70ab1003141213k4a78f2b0r983061b8f2a55e64@mail.gmail.com>
+
+Richard,
+If you are looking for free software I think HMG system is good
+choice. Start at http://sites.google.com/site/harbourminigui
+
+Regards
+Mariusz
+
+2010/3/14 Richard Acosta <eyelagui@gmail.com>:
+> Hello, i'm looking for some advice now.
+>
+> I'm an old fashion clipper programmer but now i need to make a graphical
+> user interfase program.
+> I have no experience on OOP, but i know i have to learn and that's out off
+> discussion but i would like to avoid entering that way for now since i'm in
+> kind of a hurry.
+>
+> I'm looking for the easiest way to make a GUI program, but i don't know
+> where to start looking.
+>
+> I have seen in the past a library that converted a console program to GUI
+> only by adding some lines to the code but i don't remember the name of that
+> tool.
+> This would be i guess the ideal way so i can keep making my old "clipper"
+> programs and convert the already done ones.
+>
+> Well i hope some answers to start moving, thanks in advance people.
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+  /|/| _ _ '   __  (   /_    _ _  __    /
+ /   |(// /(/_) /_ |/|/(/((// (-_) /_(//(
+----------- mwawresz@gmail.com-----------
+From bedipritpal at hotmail.com  Sun Mar 14 16:35:42 2010
+From: bedipritpal at hotmail.com (Pritpal Bedi)
+Date: Sun Mar 14 16:35:49 2010
+Subject: [Harbour-users] GUI programming.
+In-Reply-To: <4B9D2E06.7020208@gmail.com>
+References: <4B9D2E06.7020208@gmail.com>
+Message-ID: <SNT123-W598F803A219AE60EC52266A72F0@phx.gbl>
+
+
+Hi
+
+ 
+
+
+
+> I have seen in the past a library that converted a console program to 
+> GUI only by adding some lines to the code but i don't remember the name 
+> of that tool.
+> This would be i guess the ideal way so i can keep making my old 
+> "clipper" programs and convert the already done ones.
+
+
+Probably you are talking about GTWVG.
+
+Yes, this is the fastest and easiest way to port Clipper code with 
+
+minimal of changes. But again, it is not a pure GUI, though you can 
+
+present your existing applications with a GUI look and feel.
+
+For pure GUI approach, you will need to learn a lot, a steap 
+
+learning curve.
+
+ 
+> I'm looking for the easiest way to make a GUI program, but i don't know 
+> where to start looking.
+ 
+Well, first you must be sure of your long-term goals:
+
+   1. You want only one platform,
+
+   2. Your application be able to different OS's with the same look and feel.
+
+ 
+
+If you opt for #1, and you are contended with Windows only, then you have 
+
+many options, listed below without any particular order ( I do not use either of them ):
+
+   VXH
+
+   Xailer
+
+   FIVEWIN
+
+   HMG ( though not a pure OOP code )
+
+   HWGUI 
+
+Some of above may be portable to other OS, not sure.
+
+ 
+
+If you opt for #2, then 
+
+   you are encouraged to look into hbQT, hbXBP libraries. A first hand application 
+
+   is also there to help you understand the approach and the way you can take use of 
+
+   the libraries, hbIDE ( Harbour's Integrated Development Environment ).
+
+ 
+
+Regards
+
+
+Pritpal Bedi, a student of software analysis and design
+http://www.vouch.in  | Vouch, the software that GROWS with you
+http://www.vouch32.com  |  Home of Vouch32 ActiveX Server
+http://www.vouchcac.com/vouch32/vouch32.htm   |   A Free Windows Extended
+Utilities Library for Clipper, Xbase++ and (x)Harbour
+http://www.help.vouch.info | Online Vouch Help
+http://www.harbour.vouch.info | Online Harbour Help
+
+
+
+ 		 	   		  
+_________________________________________________________________
+The New Busy is not the old busy. Search, chat and e-mail from your inbox.
+http://www.windowslive.com/campaign/thenewbusy?ocid=PID27925::T:WLMTAGL:ON:WL:en-US:WM_HMP:032010_3
+From don.lowenstein at laapc.com  Sun Mar 14 23:15:04 2010
+From: don.lowenstein at laapc.com (Don Lowenstein)
+Date: Sun Mar 14 23:15:25 2010
+Subject: [Harbour-users] GUI programming.
+In-Reply-To: <4B9D2E06.7020208@gmail.com>
+References: <4B9D2E06.7020208@gmail.com>
+Message-ID: <000001cac3ed$b53e39a0$1fbaace0$@lowenstein@laapc.com>
+
+Fivewin
+
+www.fivetechsoft.com
+
+I've used it for many years - great support.
+
+-----Original Message-----
+From: harbour-users-bounces@harbour-project.org
+[mailto:harbour-users-bounces@harbour-project.org] On Behalf Of Richard
+Acosta
+Sent: Sunday, March 14, 2010 1:42 PM
+To: Lista Harbour
+Subject: [Harbour-users] GUI programming.
+
+Hello, i'm looking for some advice now.
+
+I'm an old fashion clipper programmer but now i need to make a graphical 
+user interfase program.
+I have no experience on OOP, but i know i have to learn and that's out 
+off discussion but i would like to avoid entering that way for now since 
+i'm in kind of a hurry.
+
+I'm looking for the easiest way to make a GUI program, but i don't know 
+where to start looking.
+
+I have seen in the past a library that converted a console program to 
+GUI only by adding some lines to the code but i don't remember the name 
+of that tool.
+This would be i guess the ideal way so i can keep making my old 
+"clipper" programs and convert the already done ones.
+
+Well i hope some answers to start moving, thanks in advance people.
+
+_______________________________________________
+Harbour-users mailing list (attachment size limit: 40KB)
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+From pete_westg at yahoo.gr  Mon Mar 15 12:07:15 2010
+From: pete_westg at yahoo.gr (pete_westg)
+Date: Mon Mar 15 12:07:41 2010
+Subject: [Harbour-users] Re: GUI programming.
+In-Reply-To: <SNT123-W598F803A219AE60EC52266A72F0@phx.gbl>
+References: <4B9D2E06.7020208@gmail.com>
+	<SNT123-W598F803A219AE60EC52266A72F0@phx.gbl>
+Message-ID: <hnllvh$lt9$1@dough.gmane.org>
+
+???? 14/03/2010 22:35, O/H Pritpal Bedi ??????:
+
+>
+>     HMG ( though not a pure OOP code )
+>
+
+Now, is it bad or good? (to not be pure OOP).
+I 'd say it's good, especially for an old fashion clipper programmer 
+like the OP (as he has declared himself) and like me.
+
+In my opinion, HMG (both, official:http://www.hmgforum.com/site and 
+extended: http://hmgextended.com/files/CONTRIB/hmg-1.8-81-setup.zip 
+releases) is the most clipper-programmer friendly GUI and perhaps the 
+most successful of all. They're in a good, I'd say mature level with 
+active user bases and very helpful support by developers. The only (and 
+i must admit major), drawback is that it is a windows only oriented 
+solution.
+
+A very good and clean choice is also HwGUI but unfortunately the 
+development of this project seems to be stalled.
+
+The others (VXH, Xailer, FiveWin) AFAIK are closed code commercial 
+products and thus not so close to the Harbour's spirit and tradition.
+But that's a matter of choice, of course.
+
+
+regards,
+
+---
+Pete
+
+From pbruccoleri at adinet.com.uy  Mon Mar 15 11:10:52 2010
+From: pbruccoleri at adinet.com.uy (Paola Bruccoleri)
+Date: Mon Mar 15 12:11:00 2010
+Subject: [Harbour-users] Re: GUI programming.
+In-Reply-To: <hnllvh$lt9$1@dough.gmane.org>
+References: <4B9D2E06.7020208@gmail.com>	<SNT123-W598F803A219AE60EC52266A72F0@phx.gbl>
+	<hnllvh$lt9$1@dough.gmane.org>
+Message-ID: <4B9E4DFC.3080709@adinet.com.uy>
+
+pete_westg escribi?:
+> ???? 14/03/2010 22:35, O/H Pritpal Bedi ??????:
+>
+>>
+>>     HMG ( though not a pure OOP code )
+>>
+>
+> Now, is it bad or good? (to not be pure OOP).
+> I 'd say it's good, especially for an old fashion clipper programmer 
+> like the OP (as he has declared himself) and like me.
+>
+> In my opinion, HMG (both, official:http://www.hmgforum.com/site and 
+> extended: http://hmgextended.com/files/CONTRIB/hmg-1.8-81-setup.zip 
+> releases) is the most clipper-programmer friendly GUI and perhaps the 
+> most successful of all. They're in a good, I'd say mature level with 
+> active user bases and very helpful support by developers. The only 
+> (and i must admit major), drawback is that it is a windows only 
+> oriented solution.
+>
+> A very good and clean choice is also HwGUI but unfortunately the 
+> development of this project seems to be stalled.
+>
+> The others (VXH, Xailer, FiveWin) AFAIK are closed code commercial 
+> products and thus not so close to the Harbour's spirit and tradition.
+> But that's a matter of choice, of course.
+> regards,
+> Pete
+Hello Pete..
+do you know ooHG? it is a pure OOP GUI and the licence is the same that 
+harbour
+
+byeeeeeeeee
+
+
+From pete_westg at yahoo.gr  Mon Mar 15 13:05:13 2010
+From: pete_westg at yahoo.gr (pete_westg)
+Date: Mon Mar 15 13:06:31 2010
+Subject: [Harbour-users] Re: GUI programming.
+In-Reply-To: <4B9E4DFC.3080709@adinet.com.uy>
+References: <4B9D2E06.7020208@gmail.com>	<SNT123-W598F803A219AE60EC52266A72F0@phx.gbl>	<hnllvh$lt9$1@dough.gmane.org>
+	<4B9E4DFC.3080709@adinet.com.uy>
+Message-ID: <hnlpc7$4uj$1@dough.gmane.org>
+
+???? 15/03/2010 17:10, O/H Paola Bruccoleri ??????:
+
+> Hello Pete..
+> do you know ooHG? it is a pure OOP GUI and the licence is the same that
+> harbour
+>
+> byeeeeeeeee
+
+Hi Paola,
+Yes, I am aware of ooHG. Interesting project and good product also.
+But to be honest I am not an eager supporter of the OOP model. Actually 
+I keep many doubts about object programming paradigm, since I don't 
+believe is better than other models like procedural programming for 
+example. I know, OOP is established as main stream programming style but 
+I don't think that they're proved all the benefits that it is supposed 
+that it has.
+
+regards,
+
+---
+Pete
+
+From mbelgrano at deltain.it  Mon Mar 15 13:30:48 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Mon Mar 15 13:31:17 2010
+Subject: [Harbour-users] GUI programming.
+In-Reply-To: <SNT123-W598F803A219AE60EC52266A72F0@phx.gbl>
+References: <4B9D2E06.7020208@gmail.com>
+	<SNT123-W598F803A219AE60EC52266A72F0@phx.gbl>
+Message-ID: <609353e71003151030v65e0a8d8y4f3960e38181dc49@mail.gmail.com>
+
+imo you are refering to gtwvw
+(http://www.gfoeurope.it/public/File/Edgecore/Skype%20Phone.pdf)
+Now gtwvw is present in harbour as old example
+I suggest you use gtwvg is very similar
+Gtwvw way will use your code
+
+2010/3/14 Pritpal Bedi <bedipritpal@hotmail.com>:
+>
+> Hi
+>
+>> I have seen in the past a library that converted a console program to
+>> GUI only by adding some lines to the code but i don't remember the name
+>> of that tool.
+>> This would be i guess the ideal way so i can keep making my old
+>> "clipper" programs and convert the already done ones.
+>
+>
+> Probably you are talking about GTWVG.
+>
+> Yes, this is the fastest and easiest way to port Clipper code with
+>
+> minimal of changes. But again, it is not a pure GUI, though you can
+>
+> present your existing applications with a GUI look and feel.
+>
+> For pure GUI approach, you will need to learn a lot, a steap
+>
+> learning curve.
+
+
+-- 
+Massimo Belgrano
+From roberbox at gmail.com  Tue Mar 16 09:12:22 2010
+From: roberbox at gmail.com (Roberto Lopez)
+Date: Tue Mar 16 09:12:44 2010
+Subject: [Harbour-users] Re: GUI programming.
+In-Reply-To: <hnlpc7$4uj$1@dough.gmane.org>
+References: <4B9D2E06.7020208@gmail.com>	<SNT123-W598F803A219AE60EC52266A72F0@phx.gbl>	<hnllvh$lt9$1@dough.gmane.org>	<4B9E4DFC.3080709@adinet.com.uy>
+	<hnlpc7$4uj$1@dough.gmane.org>
+Message-ID: <4B9F83B6.3020603@gmail.com>
+
+pete_westg wrote:
+
+<...>
+> I know, OOP is established as main stream programming style but 
+<...>
+
+This is true, but not fully true :)
+
+Think on Visual Basic.
+
+It become the most popular programming language in the world in 90's, 
+but it do not allowed class creation until version 4.0.
+
+Besides that, most of the programs created with VB that I've seen, do 
+not use classes.
+
+Users simply create forms with the designer and refers to the objects 
+visually created, in a simple, straight (non-true OOP) way (ie: 
+form1.button1.SetFocus).
+
+This behavior is consistent with xBase spirit.
+
+dBase III+ and its succesors had simplified the things for the users.
+
+Sadly, sometime in the way to evolution, Clipper suffered the influence 
+of some products 'in fashion' by the end of 80's (SmallTalk, C++, 
+Pascal, etc.) and become more complicated and low level that in previous 
+versions.
+
+By the other hand, FoxPro evolved to VFP that used the VB model and was 
+very successfull (despite MS policies about it :) ).
+
+Now, the idea of an easy to use, user friendly and smart OOP still alive 
+and is very succefull in the Ruby programming language.
+
+
+The Ruby creator (Yukihiro Matsumoto) had said this, about his language:
+
+"Often people, especially computer engineers, focus on the machines. 
+They think, "By doing this, the machine will run faster. By doing this, 
+the machine will run more effectively. By doing this, the machine will 
+something something something." They are focusing on machines. But in 
+fact we need to focus on humans, on how humans care about doing 
+programming or operating the application of the machines. We are the 
+masters. They are the slaves."
+
+An important part of the mainstream is occuped by VB and Ruby today.
+
+I'm fully sure that sooner or later this concept will prevail and that 
+bussiness/database programmers will not feel obligated to use low level 
+tools anymore.
+
+ > I don't think that they're proved all the benefits that it is supposed
+ > that it has.
+
+I fully agree, of course :)
+
+Regards,
+
+Roberto.
+
+
+From mbelgrano at deltain.it  Tue Mar 16 10:07:36 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Tue Mar 16 10:08:05 2010
+Subject: [Harbour-users] Re: GUI programming.
+In-Reply-To: <4B9F83B6.3020603@gmail.com>
+References: <4B9D2E06.7020208@gmail.com>
+	<SNT123-W598F803A219AE60EC52266A72F0@phx.gbl> 
+	<hnllvh$lt9$1@dough.gmane.org> <4B9E4DFC.3080709@adinet.com.uy> 
+	<hnlpc7$4uj$1@dough.gmane.org> <4B9F83B6.3020603@gmail.com>
+Message-ID: <609353e71003160707i6f4131d9o1af40217ccf8cfdb@mail.gmail.com>
+
+Hi Roberto
+Ruby have 11 position in language from tiobe ranking
+http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html
+Follow is good trend of Ruby
+http://www.tiobe.com/index.php/paperinfo/tpci/Ruby.html
+
+The better choice for business/database programmers are :
+Harbour, because in 4gl spirit include data manipulation in token of
+language and not only in class
+Rubi as easy dynamic, interpreted ,language that integrated with a
+framework like rail and SQL Module will done works
+Delphi .or Vb.net way but with an Client server database like Ms sql
+server or Postgress
+Microsoft access (that with 2010 version will allow true web
+application), and will be a highly productive platform where develop
+Other choice can be Oracle Form,Powerbuilder, PeopleTools and
+SiebelTool or at least 4 dimension or filemaker
+The true advantage in software Development is not OOP but sql
+languages that allow write easy program also if a good class is easy
+to use like demonstrated by vb paradigm
+
+2010/3/16 Roberto Lopez <roberbox@gmail.com>:
+> pete_westg wrote:
+>
+> <...>
+>>
+>> I know, OOP is established as main stream programming style but
+>
+> <...>
+>
+> This is true, but not fully true :)
+>
+> Think on Visual Basic.
+>
+> It become the most popular programming language in the world in 90's, but it
+> do not allowed class creation until version 4.0.
+>
+> Besides that, most of the programs created with VB that I've seen, do not
+> use classes.
+>
+> Users simply create forms with the designer and refers to the objects
+> visually created, in a simple, straight (non-true OOP) way (ie:
+> form1.button1.SetFocus).
+>
+> This behavior is consistent with xBase spirit.
+>
+> dBase III+ and its succesors had simplified the things for the users.
+>
+> Sadly, sometime in the way to evolution, Clipper suffered the influence of
+> some products 'in fashion' by the end of 80's (SmallTalk, C++, Pascal, etc.)
+> and become more complicated and low level that in previous versions.
+>
+> By the other hand, FoxPro evolved to VFP that used the VB model and was very
+> successfull (despite MS policies about it :) ).
+>
+> Now, the idea of an easy to use, user friendly and smart OOP still alive and
+> is very succefull in the Ruby programming language.
+>
+>
+> The Ruby creator (Yukihiro Matsumoto) had said this, about his language:
+>
+> "Often people, especially computer engineers, focus on the machines. They
+> think, "By doing this, the machine will run faster. By doing this, the
+> machine will run more effectively. By doing this, the machine will something
+> something something." They are focusing on machines. But in fact we need to
+> focus on humans, on how humans care about doing programming or operating the
+> application of the machines. We are the masters. They are the slaves."
+>
+> An important part of the mainstream is occuped by VB and Ruby today.
+>
+> I'm fully sure that sooner or later this concept will prevail and that
+> bussiness/database programmers will not feel obligated to use low level
+> tools anymore.
+>
+>> I don't think that they're proved all the benefits that it is supposed
+>> that it has.
+>
+> I fully agree, of course :)
+>
+> Regards,
+>
+> Roberto.
+>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+From jasim.ab at gmail.com  Tue Mar 16 12:16:00 2010
+From: jasim.ab at gmail.com (Jasim A Basheer)
+Date: Tue Mar 16 12:23:51 2010
+Subject: [Harbour-users] Re: GUI programming.
+In-Reply-To: <609353e71003160707i6f4131d9o1af40217ccf8cfdb@mail.gmail.com>
+References: <4B9D2E06.7020208@gmail.com>
+	<SNT123-W598F803A219AE60EC52266A72F0@phx.gbl>
+	<hnllvh$lt9$1@dough.gmane.org> <4B9E4DFC.3080709@adinet.com.uy>
+	<hnlpc7$4uj$1@dough.gmane.org> <4B9F83B6.3020603@gmail.com>
+	<609353e71003160707i6f4131d9o1af40217ccf8cfdb@mail.gmail.com>
+Message-ID: <ce56c7c01003160916g53719123m4feea3d9ad0c56d5@mail.gmail.com>
+
+> The true advantage in software Development is not OOP but sql
+> languages that allow write easy program also if a good class is easy
+> to use like demonstrated by vb paradigm
+>
+The growing popularity of ORMs are an example. New generation
+languages (Python, Ruby etc. and even Java) have shifted focus to
+using ORMs rather than SQL directly. Now instead of explicit SQL
+statements, ActiveRecord (Ruby's Object Relational Mapper) uses
+something like
+
+emp=Employee.new
+emp.name = "Emp1"
+emp.basic = 4500
+emp.designation = "Programmer"
+emp.save
+
+This syntax closely resembles the tight integration between the
+language and database for the xBase languages. A comparable Clipper
+syntax was
+
+Employee->name = "Emp1"
+
+The advantage of ORM is that programmers can write database code that
+are not specific to the back-end engine. This is also strikingly
+similar to the Clipper concept of RDDs.
+
+Ruby, Python and Javascript do not force the entire OOP boilerplate -
+unlike the SmallTalk based languages like Java and C++. Ruby and
+JavaScript are considered 'Object Based' rather than 'Object Oriented'
+and allows the programmer to write procedural and object oriented code
+with same ease.
+
+> > Sadly, sometime in the way to evolution, Clipper suffered the influence of
+> > some products 'in fashion' by the end of 80's (SmallTalk, C++, Pascal, etc.)
+> > and become more complicated and low level that in previous versions.
+Robert, IMHO Clipper also was more in the object based spirit and its
+object orientation was not at all a drastic change. The learning curve
+was pretty small and programmers used to the old procedural style
+could easily adopt to the object notations.
+
+> 2010/3/16 Roberto Lopez <roberbox@gmail.com>:
+> > pete_westg wrote:
+> >
+> > <...>
+> >>
+> >> I know, OOP is established as main stream programming style but
+> >
+> > <...>
+> >
+> > This is true, but not fully true :)
+> >
+> > Think on Visual Basic.
+> >
+> > It become the most popular programming language in the world in 90's, but it
+> > do not allowed class creation until version 4.0.
+> >
+> > Besides that, most of the programs created with VB that I've seen, do not
+> > use classes.
+> >
+> > Users simply create forms with the designer and refers to the objects
+> > visually created, in a simple, straight (non-true OOP) way (ie:
+> > form1.button1.SetFocus).
+> >
+> > This behavior is consistent with xBase spirit.
+> >
+> > dBase III+ and its succesors had simplified the things for the users.
+> >
+> > Sadly, sometime in the way to evolution, Clipper suffered the influence of
+> > some products 'in fashion' by the end of 80's (SmallTalk, C++, Pascal, etc.)
+> > and become more complicated and low level that in previous versions.
+> >
+> > By the other hand, FoxPro evolved to VFP that used the VB model and was very
+> > successfull (despite MS policies about it :) ).
+> >
+> > Now, the idea of an easy to use, user friendly and smart OOP still alive and
+> > is very succefull in the Ruby programming language.
+> >
+> >
+> > The Ruby creator (Yukihiro Matsumoto) had said this, about his language:
+> >
+> > "Often people, especially computer engineers, focus on the machines. They
+> > think, "By doing this, the machine will run faster. By doing this, the
+> > machine will run more effectively. By doing this, the machine will something
+> > something something." They are focusing on machines. But in fact we need to
+> > focus on humans, on how humans care about doing programming or operating the
+> > application of the machines. We are the masters. They are the slaves."
+> >
+> > An important part of the mainstream is occuped by VB and Ruby today.
+> >
+> > I'm fully sure that sooner or later this concept will prevail and that
+> > bussiness/database programmers will not feel obligated to use low level
+> > tools anymore.
+> >
+> >> I don't think that they're proved all the benefits that it is supposed
+> >> that it has.
+> >
+> > I fully agree, of course :)
+> >
+> > Regards,
+> >
+> > Roberto.
+> >
+> >
+> > _______________________________________________
+> > Harbour-users mailing list (attachment size limit: 40KB)
+> > Harbour-users@harbour-project.org
+> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >
+>
+>
+>
+> --
+> Massimo Belgrano
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+From teo at windtelsoft.com  Tue Mar 16 13:35:43 2010
+From: teo at windtelsoft.com (Teo Fonrouge)
+Date: Tue Mar 16 13:35:54 2010
+Subject: [Harbour-users] Re: GUI programming.
+In-Reply-To: <ce56c7c01003160916g53719123m4feea3d9ad0c56d5@mail.gmail.com>
+References: <4B9D2E06.7020208@gmail.com>
+	<SNT123-W598F803A219AE60EC52266A72F0@phx.gbl>
+	<hnllvh$lt9$1@dough.gmane.org> <4B9E4DFC.3080709@adinet.com.uy>
+	<hnlpc7$4uj$1@dough.gmane.org> <4B9F83B6.3020603@gmail.com>
+	<609353e71003160707i6f4131d9o1af40217ccf8cfdb@mail.gmail.com>
+	<ce56c7c01003160916g53719123m4feea3d9ad0c56d5@mail.gmail.com>
+Message-ID: <7AC40E23-7032-4680-90A9-7289B95AAE04@windtelsoft.com>
+
+Hello Jasim,
+
+On Mar 16, 2010, at 10:16 AM, Jasim A Basheer wrote:
+
+>> The true advantage in software Development is not OOP but sql
+>> languages that allow write easy program also if a good class is easy
+>> to use like demonstrated by vb paradigm
+>> 
+> The growing popularity of ORMs are an example. New generation
+> languages (Python, Ruby etc. and even Java) have shifted focus to
+> using ORMs rather than SQL directly. Now instead of explicit SQL
+> statements, ActiveRecord (Ruby's Object Relational Mapper) uses
+> something like
+> 
+> emp=Employee.new
+> emp.name = "Emp1"
+> emp.basic = 4500
+> emp.designation = "Programmer"
+> emp.save
+
+Do you have some experience with using the ORM (or OODBMS)  model ?
+By using what programming languages ?
+
+I like the ORM based approach, even I've used in the past an comercial
+product (CACHE by Intersystems), but now I have an Harbour based
+approach. And currently I'm developing some of my new projects with
+Harbour and this approach (that is more closer to the OODBMS model)
+to deal with complex data structures and relations between.
+
+[snip]
+
+
+best regards,
+
+Teo
+
+From mbelgrano at deltain.it  Tue Mar 16 13:50:14 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Tue Mar 16 13:50:42 2010
+Subject: [Harbour-users] Re: GUI programming.
+In-Reply-To: <ce56c7c01003160916g53719123m4feea3d9ad0c56d5@mail.gmail.com>
+References: <4B9D2E06.7020208@gmail.com>
+	<SNT123-W598F803A219AE60EC52266A72F0@phx.gbl> 
+	<hnllvh$lt9$1@dough.gmane.org> <4B9E4DFC.3080709@adinet.com.uy> 
+	<hnlpc7$4uj$1@dough.gmane.org> <4B9F83B6.3020603@gmail.com> 
+	<609353e71003160707i6f4131d9o1af40217ccf8cfdb@mail.gmail.com> 
+	<ce56c7c01003160916g53719123m4feea3d9ad0c56d5@mail.gmail.com>
+Message-ID: <609353e71003161050g58fd3cd8lb763e343eaf56809@mail.gmail.com>
+
+I am very intrested from ORM path because i think that is natural
+evolution of rdd
+googleing i have  find
+ Quickdb  http://code.google.com/p/quickdb/
+ QtPersistence is a project to create an ORM and persistence library
+for Qt Users. (Active Record and Data Mapper Ruby ) ORM projects.
+ Linq by microsoft as powerfull orm mapper
+
+Can you point me usefull link about orm?
+Do you think that a ORM implementation is possible in harbour?
+Can I invite you partecipate to harbour developer mailing list
+
+2010/3/16 Jasim A Basheer <jasim.ab@gmail.com>:
+>> The true advantage in software Development is not OOP but sql
+>> languages that allow write easy program also if a good class is easy
+>> to use like demonstrated by vb paradigm
+>>
+> The growing popularity of ORMs are an example. New generation
+> languages (Python, Ruby etc. and even Java) have shifted focus to
+> using ORMs rather than SQL directly. Now instead of explicit SQL
+> statements, ActiveRecord (Ruby's Object Relational Mapper) uses
+> something like
+>
+> emp=Employee.new
+> emp.name = "Emp1"
+> emp.basic = 4500
+> emp.designation = "Programmer"
+> emp.save
+>
+> This syntax closely resembles the tight integration between the
+> language and database for the xBase languages. A comparable Clipper
+> syntax was
+>
+> Employee->name = "Emp1"
+>
+> The advantage of ORM is that programmers can write database code that
+> are not specific to the back-end engine. This is also strikingly
+> similar to the Clipper concept of RDDs.
+>
+> Ruby, Python and Javascript do not force the entire OOP boilerplate -
+> unlike the SmallTalk based languages like Java and C++. Ruby and
+> JavaScript are considered 'Object Based' rather than 'Object Oriented'
+> and allows the programmer to write procedural and object oriented code
+> with same ease.
+>
+>> > Sadly, sometime in the way to evolution, Clipper suffered the influence of
+>> > some products 'in fashion' by the end of 80's (SmallTalk, C++, Pascal, etc.)
+>> > and become more complicated and low level that in previous versions.
+> Robert, IMHO Clipper also was more in the object based spirit and its
+> object orientation was not at all a drastic change. The learning curve
+> was pretty small and programmers used to the old procedural style
+> could easily adopt to the object notations.
+>
+>> 2010/3/16 Roberto Lopez <roberbox@gmail.com>:
+>> > pete_westg wrote:
+>> >
+>> > <...>
+>> >>
+>> >> I know, OOP is established as main stream programming style but
+>> >
+>> > <...>
+>> >
+>> > This is true, but not fully true :)
+>> >
+>> > Think on Visual Basic.
+>> >
+>> > It become the most popular programming language in the world in 90's, but it
+>> > do not allowed class creation until version 4.0.
+>> >
+>> > Besides that, most of the programs created with VB that I've seen, do not
+>> > use classes.
+>> >
+>> > Users simply create forms with the designer and refers to the objects
+>> > visually created, in a simple, straight (non-true OOP) way (ie:
+>> > form1.button1.SetFocus).
+>> >
+>> > This behavior is consistent with xBase spirit.
+>> >
+>> > dBase III+ and its succesors had simplified the things for the users.
+>> >
+>> > Sadly, sometime in the way to evolution, Clipper suffered the influence of
+>> > some products 'in fashion' by the end of 80's (SmallTalk, C++, Pascal, etc.)
+>> > and become more complicated and low level that in previous versions.
+>> >
+>> > By the other hand, FoxPro evolved to VFP that used the VB model and was very
+>> > successfull (despite MS policies about it :) ).
+>> >
+>> > Now, the idea of an easy to use, user friendly and smart OOP still alive and
+>> > is very succefull in the Ruby programming language.
+>> >
+>> >
+>> > The Ruby creator (Yukihiro Matsumoto) had said this, about his language:
+>> >
+>> > "Often people, especially computer engineers, focus on the machines. They
+>> > think, "By doing this, the machine will run faster. By doing this, the
+>> > machine will run more effectively. By doing this, the machine will something
+>> > something something." They are focusing on machines. But in fact we need to
+>> > focus on humans, on how humans care about doing programming or operating the
+>> > application of the machines. We are the masters. They are the slaves."
+>> >
+>> > An important part of the mainstream is occuped by VB and Ruby today.
+>> >
+>> > I'm fully sure that sooner or later this concept will prevail and that
+>> > bussiness/database programmers will not feel obligated to use low level
+>> > tools anymore.
+>> >
+>> >> I don't think that they're proved all the benefits that it is supposed
+>> >> that it has.
+>> >
+>> > I fully agree, of course :)
+>> >
+>> > Regards,
+>> >
+>> > Roberto.
+>> >
+>> >
+>> > _______________________________________________
+>> > Harbour-users mailing list (attachment size limit: 40KB)
+>> > Harbour-users@harbour-project.org
+>> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>> >
+>>
+>>
+>>
+>> --
+>> Massimo Belgrano
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+From roberbox at gmail.com  Tue Mar 16 14:48:21 2010
+From: roberbox at gmail.com (Roberto Lopez)
+Date: Tue Mar 16 14:48:34 2010
+Subject: [Harbour-users] Re: GUI programming.
+In-Reply-To: <ce56c7c01003160916g53719123m4feea3d9ad0c56d5@mail.gmail.com>
+References: <4B9D2E06.7020208@gmail.com>	<SNT123-W598F803A219AE60EC52266A72F0@phx.gbl>	<hnllvh$lt9$1@dough.gmane.org>
+	<4B9E4DFC.3080709@adinet.com.uy>	<hnlpc7$4uj$1@dough.gmane.org>
+	<4B9F83B6.3020603@gmail.com>	<609353e71003160707i6f4131d9o1af40217ccf8cfdb@mail.gmail.com>
+	<ce56c7c01003160916g53719123m4feea3d9ad0c56d5@mail.gmail.com>
+Message-ID: <4B9FD275.1000001@gmail.com>
+
+Jasim A Basheer wrote:
+
+> Robert, IMHO Clipper also was more in the object based spirit and its
+> object orientation was not at all a drastic change. The learning curve
+> was pretty small and programmers used to the old procedural style
+> could easily adopt to the object notations.
+
+I personally believe that FoxPro evolution path was, by far, much more 
+inline with the original xBase philosophy.
+
+I've prefered that Clipper evolve in such way too.
+
+Regards,
+
+Roberto.
+From jasim.ab at gmail.com  Tue Mar 16 15:40:32 2010
+From: jasim.ab at gmail.com (Jasim A Basheer)
+Date: Tue Mar 16 15:41:10 2010
+Subject: [Harbour-users] Re: GUI programming.
+In-Reply-To: <4B9FD275.1000001@gmail.com>
+References: <4B9D2E06.7020208@gmail.com>
+	<SNT123-W598F803A219AE60EC52266A72F0@phx.gbl>
+	<hnllvh$lt9$1@dough.gmane.org> <4B9E4DFC.3080709@adinet.com.uy>
+	<hnlpc7$4uj$1@dough.gmane.org> <4B9F83B6.3020603@gmail.com>
+	<609353e71003160707i6f4131d9o1af40217ccf8cfdb@mail.gmail.com>
+	<ce56c7c01003160916g53719123m4feea3d9ad0c56d5@mail.gmail.com>
+	<4B9FD275.1000001@gmail.com>
+Message-ID: <ce56c7c01003161240u25b955c2ofca6452b15a3dcfc@mail.gmail.com>
+
+The last I'd used was FoxPro 2.6 for DOS. I guess I don't know enough
+to contrast. It'd be great if you could elaborate a little on it.
+
+Best Regards,
+Jasim.
+
+On Wed, Mar 17, 2010 at 12:18 AM, Roberto Lopez <roberbox@gmail.com> wrote:
+> Jasim A Basheer wrote:
+>
+>> Robert, IMHO Clipper also was more in the object based spirit and its
+>> object orientation was not at all a drastic change. The learning curve
+>> was pretty small and programmers used to the old procedural style
+>> could easily adopt to the object notations.
+>
+> I personally believe that FoxPro evolution path was, by far, much more
+> inline with the original xBase philosophy.
+>
+> I've prefered that Clipper evolve in such way too.
+>
+
+> Regards,
+>
+> Roberto.
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From jasim.ab at gmail.com  Tue Mar 16 15:51:22 2010
+From: jasim.ab at gmail.com (Jasim A Basheer)
+Date: Tue Mar 16 15:51:30 2010
+Subject: [Harbour-users] Re: GUI programming.
+In-Reply-To: <609353e71003161050g58fd3cd8lb763e343eaf56809@mail.gmail.com>
+References: <4B9D2E06.7020208@gmail.com>
+	<SNT123-W598F803A219AE60EC52266A72F0@phx.gbl>
+	<hnllvh$lt9$1@dough.gmane.org> <4B9E4DFC.3080709@adinet.com.uy>
+	<hnlpc7$4uj$1@dough.gmane.org> <4B9F83B6.3020603@gmail.com>
+	<609353e71003160707i6f4131d9o1af40217ccf8cfdb@mail.gmail.com>
+	<ce56c7c01003160916g53719123m4feea3d9ad0c56d5@mail.gmail.com>
+	<609353e71003161050g58fd3cd8lb763e343eaf56809@mail.gmail.com>
+Message-ID: <ce56c7c01003161251t736ea293pe9b5a572fd4f0ca1@mail.gmail.com>
+
+Massimo,
+
+ORMs usually enable us to declare multiple objects, which might have
+the data for different records in a single table. This could be
+implemented easily on top of an SQL based database. But for native
+engines like DBFCDX, we'll need to have a unique ID field for every
+table to quickly commit the various record objects already loaded into
+memory.
+
+I am not much into Harbour development, however I'll try to contribute
+if an ORM implementation is in the pipeline.
+
+On Tue, Mar 16, 2010 at 11:20 PM, Massimo Belgrano <mbelgrano@deltain.it> wrote:
+> I am very intrested from ORM path because i think that is natural
+> evolution of rdd
+> googleing i have ?find
+> ?Quickdb ?http://code.google.com/p/quickdb/
+> ?QtPersistence is a project to create an ORM and persistence library
+> for Qt Users. (Active Record and Data Mapper Ruby ) ORM projects.
+> ?Linq by microsoft as powerfull orm mapper
+>
+> Can you point me usefull link about orm?
+> Do you think that a ORM implementation is possible in harbour?
+> Can I invite you partecipate to harbour developer mailing list
+>
+> 2010/3/16 Jasim A Basheer <jasim.ab@gmail.com>:
+>>> The true advantage in software Development is not OOP but sql
+>>> languages that allow write easy program also if a good class is easy
+>>> to use like demonstrated by vb paradigm
+>>>
+>> The growing popularity of ORMs are an example. New generation
+>> languages (Python, Ruby etc. and even Java) have shifted focus to
+>> using ORMs rather than SQL directly. Now instead of explicit SQL
+>> statements, ActiveRecord (Ruby's Object Relational Mapper) uses
+>> something like
+>>
+>> emp=Employee.new
+>> emp.name = "Emp1"
+>> emp.basic = 4500
+>> emp.designation = "Programmer"
+>> emp.save
+>>
+>> This syntax closely resembles the tight integration between the
+>> language and database for the xBase languages. A comparable Clipper
+>> syntax was
+>>
+>> Employee->name = "Emp1"
+>>
+>> The advantage of ORM is that programmers can write database code that
+>> are not specific to the back-end engine. This is also strikingly
+>> similar to the Clipper concept of RDDs.
+>>
+>> Ruby, Python and Javascript do not force the entire OOP boilerplate -
+>> unlike the SmallTalk based languages like Java and C++. Ruby and
+>> JavaScript are considered 'Object Based' rather than 'Object Oriented'
+>> and allows the programmer to write procedural and object oriented code
+>> with same ease.
+>>
+>>> > Sadly, sometime in the way to evolution, Clipper suffered the influence of
+>>> > some products 'in fashion' by the end of 80's (SmallTalk, C++, Pascal, etc.)
+>>> > and become more complicated and low level that in previous versions.
+>> Robert, IMHO Clipper also was more in the object based spirit and its
+>> object orientation was not at all a drastic change. The learning curve
+>> was pretty small and programmers used to the old procedural style
+>> could easily adopt to the object notations.
+>>
+>>> 2010/3/16 Roberto Lopez <roberbox@gmail.com>:
+>>> > pete_westg wrote:
+>>> >
+>>> > <...>
+>>> >>
+>>> >> I know, OOP is established as main stream programming style but
+>>> >
+>>> > <...>
+>>> >
+>>> > This is true, but not fully true :)
+>>> >
+>>> > Think on Visual Basic.
+>>> >
+>>> > It become the most popular programming language in the world in 90's, but it
+>>> > do not allowed class creation until version 4.0.
+>>> >
+>>> > Besides that, most of the programs created with VB that I've seen, do not
+>>> > use classes.
+>>> >
+>>> > Users simply create forms with the designer and refers to the objects
+>>> > visually created, in a simple, straight (non-true OOP) way (ie:
+>>> > form1.button1.SetFocus).
+>>> >
+>>> > This behavior is consistent with xBase spirit.
+>>> >
+>>> > dBase III+ and its succesors had simplified the things for the users.
+>>> >
+>>> > Sadly, sometime in the way to evolution, Clipper suffered the influence of
+>>> > some products 'in fashion' by the end of 80's (SmallTalk, C++, Pascal, etc.)
+>>> > and become more complicated and low level that in previous versions.
+>>> >
+>>> > By the other hand, FoxPro evolved to VFP that used the VB model and was very
+>>> > successfull (despite MS policies about it :) ).
+>>> >
+>>> > Now, the idea of an easy to use, user friendly and smart OOP still alive and
+>>> > is very succefull in the Ruby programming language.
+>>> >
+>>> >
+>>> > The Ruby creator (Yukihiro Matsumoto) had said this, about his language:
+>>> >
+>>> > "Often people, especially computer engineers, focus on the machines. They
+>>> > think, "By doing this, the machine will run faster. By doing this, the
+>>> > machine will run more effectively. By doing this, the machine will something
+>>> > something something." They are focusing on machines. But in fact we need to
+>>> > focus on humans, on how humans care about doing programming or operating the
+>>> > application of the machines. We are the masters. They are the slaves."
+>>> >
+>>> > An important part of the mainstream is occuped by VB and Ruby today.
+>>> >
+>>> > I'm fully sure that sooner or later this concept will prevail and that
+>>> > bussiness/database programmers will not feel obligated to use low level
+>>> > tools anymore.
+>>> >
+>>> >> I don't think that they're proved all the benefits that it is supposed
+>>> >> that it has.
+>>> >
+>>> > I fully agree, of course :)
+>>> >
+>>> > Regards,
+>>> >
+>>> > Roberto.
+>>> >
+>>> >
+>>> > _______________________________________________
+>>> > Harbour-users mailing list (attachment size limit: 40KB)
+>>> > Harbour-users@harbour-project.org
+>>> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>> >
+>>>
+>>>
+>>>
+>>> --
+>>> Massimo Belgrano
+>>> _______________________________________________
+>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>
+>
+>
+> --
+> Massimo Belgrano
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From jasim.ab at gmail.com  Tue Mar 16 15:52:50 2010
+From: jasim.ab at gmail.com (Jasim A Basheer)
+Date: Tue Mar 16 15:53:29 2010
+Subject: [Harbour-users] Re: GUI programming.
+In-Reply-To: <7AC40E23-7032-4680-90A9-7289B95AAE04@windtelsoft.com>
+References: <4B9D2E06.7020208@gmail.com>
+	<SNT123-W598F803A219AE60EC52266A72F0@phx.gbl>
+	<hnllvh$lt9$1@dough.gmane.org> <4B9E4DFC.3080709@adinet.com.uy>
+	<hnlpc7$4uj$1@dough.gmane.org> <4B9F83B6.3020603@gmail.com>
+	<609353e71003160707i6f4131d9o1af40217ccf8cfdb@mail.gmail.com>
+	<ce56c7c01003160916g53719123m4feea3d9ad0c56d5@mail.gmail.com>
+	<7AC40E23-7032-4680-90A9-7289B95AAE04@windtelsoft.com>
+Message-ID: <ce56c7c01003161252m57dfcdbcj44d5c16d3b5c52b7@mail.gmail.com>
+
+Hi Teo,
+
+I don't have any experience with OODBMS but I've been using the
+ActiveRecords ORM in Ruby for sometime. Some of the few advantages I
+found were:
+
+* In the explict SQL method, we first generate an SQL statement and
+concatenate the required values into it. something like:
+	sql="select * from employee where basic > " + str(min_basic)
+
+In this approach, we'll have to take care of SQL Injection and also
+convert to and from our native data type. We've to remember to add
+single quotes to string values,  format dates into the format of
+whatever database we're using etc etc. However an ORM abstracts away
+all these complexities and we can use our native data types
+seamlessly.
+
+* A database record can be persisted into memory easily - like in
+xBase. Once we declare an object to represent a record in our table,
+we can use the columns similar in Clipper to accessing fields from a
+workarea.
+
+Ruby ActiveRecord code:
+        emp=Employee.find(20)       // Loads the record with id 20
+into the emp object.
+	print emp.name				// In Clipper: Use Employee index emp_id; seek 20;
+qout(Employee->name)
+	print emp.basic
+
+* Latest version of ActiveRecord (Rails 3) presents an intuitive way
+of representing conditions. You may read about it in the 'New API'
+section at http://m.onkey.org/2010/1/22/active-record-query-interface.
+An advanced discussion is at http://github.com/rails/arel
+
+
+On Tue, Mar 16, 2010 at 11:05 PM, Teo Fonrouge <teo@windtelsoft.com> wrote:
+> Hello Jasim,
+>
+> On Mar 16, 2010, at 10:16 AM, Jasim A Basheer wrote:
+>
+>>> The true advantage in software Development is not OOP but sql
+>>> languages that allow write easy program also if a good class is easy
+>>> to use like demonstrated by vb paradigm
+>>>
+>> The growing popularity of ORMs are an example. New generation
+>> languages (Python, Ruby etc. and even Java) have shifted focus to
+>> using ORMs rather than SQL directly. Now instead of explicit SQL
+>> statements, ActiveRecord (Ruby's Object Relational Mapper) uses
+>> something like
+>>
+>> emp=Employee.new
+>> emp.name = "Emp1"
+>> emp.basic = 4500
+>> emp.designation = "Programmer"
+>> emp.save
+>
+> Do you have some experience with using the ORM (or OODBMS) ?model ?
+> By using what programming languages ?
+>
+> I like the ORM based approach, even I've used in the past an comercial
+> product (CACHE by Intersystems), but now I have an Harbour based
+> approach. And currently I'm developing some of my new projects with
+> Harbour and this approach (that is more closer to the OODBMS model)
+> to deal with complex data structures and relations between.
+>
+> [snip]
+>
+>
+> best regards,
+>
+> Teo
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From daniel at base4.com.br  Tue Mar 16 16:52:03 2010
+From: daniel at base4.com.br (=?ISO-8859-1?Q?Daniel_Gon=E7alves?=)
+Date: Tue Mar 16 16:52:11 2010
+Subject: [Harbour-users] Re: GUI programming.
+In-Reply-To: <609353e71003161050g58fd3cd8lb763e343eaf56809@mail.gmail.com>
+References: <4B9D2E06.7020208@gmail.com>
+	<SNT123-W598F803A219AE60EC52266A72F0@phx.gbl>
+	<hnllvh$lt9$1@dough.gmane.org> <4B9E4DFC.3080709@adinet.com.uy>
+	<hnlpc7$4uj$1@dough.gmane.org> <4B9F83B6.3020603@gmail.com>
+	<609353e71003160707i6f4131d9o1af40217ccf8cfdb@mail.gmail.com>
+	<ce56c7c01003160916g53719123m4feea3d9ad0c56d5@mail.gmail.com>
+	<609353e71003161050g58fd3cd8lb763e343eaf56809@mail.gmail.com>
+Message-ID: <72b117651003161352m23096aebmce068245c79ff8a@mail.gmail.com>
+
+@Massimo Belgrano
+
+I have this link [1] I used when I'm developing a Java project using
+Hibernate [2]. I used some other materials I studied for a seminar I
+presented on ORM topic, in the college. Django [3][4] (a Python web
+framework) uses a more "lightweight" aproach for object-relational
+mapping. Python also have SQLAlchemy [5] wich is largely used. The
+topic is complex [6] and need a deep dive into the details. It isn't
+like to assign a value to an object that represents a database. Many
+patterns [7] are applied in order to get the best results for
+performance and liability.
+
+[1] http://www.agiledata.org/essays/mappingObjects.html
+[2] https://www.hibernate.org/
+[3] http://docs.djangoproject.com/en/dev/topics/db/models/#topics-db-models
+[4] http://docs.djangoproject.com/en/dev/topics/db/queries/
+[5] http://www.sqlalchemy.org/
+[6] http://www.codinghorror.com/blog/2006/06/object-relational-mapping-is-the-vietnam-of-computer-science.html
+[7] http://en.wikipedia.org/wiki/Design_pattern_%28computer_science%29
+
+-- 
+Daniel Gon?alves
+Base4 Sistemas Ltda.
+[www.base4.com.br]
+[twitter.com/spanazzi]
+From mbelgrano at deltain.it  Tue Mar 16 17:26:07 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Tue Mar 16 17:26:35 2010
+Subject: [Harbour-users] Re: GUI programming.
+In-Reply-To: <72b117651003161352m23096aebmce068245c79ff8a@mail.gmail.com>
+References: <4B9D2E06.7020208@gmail.com>
+	<SNT123-W598F803A219AE60EC52266A72F0@phx.gbl> 
+	<hnllvh$lt9$1@dough.gmane.org> <4B9E4DFC.3080709@adinet.com.uy> 
+	<hnlpc7$4uj$1@dough.gmane.org> <4B9F83B6.3020603@gmail.com> 
+	<609353e71003160707i6f4131d9o1af40217ccf8cfdb@mail.gmail.com> 
+	<ce56c7c01003160916g53719123m4feea3d9ad0c56d5@mail.gmail.com> 
+	<609353e71003161050g58fd3cd8lb763e343eaf56809@mail.gmail.com> 
+	<72b117651003161352m23096aebmce068245c79ff8a@mail.gmail.com>
+Message-ID: <609353e71003161426w56642640j5254caaed28665a7@mail.gmail.com>
+
+I invite try continue this discussion on developer mailing list
+http://www.harbour-project.org/mailing.html
+
+2010/3/16 Daniel Gon?alves <daniel@base4.com.br>:
+> @Massimo Belgrano
+>
+> I have this link [1] I used when I'm developing a Java project using
+> Hibernate [2]. I used some other materials I studied for a seminar I
+> presented on ORM topic, in the college. Django [3][4] (a Python web
+> framework) uses a more "lightweight" aproach for object-relational
+> mapping. Python also have SQLAlchemy [5] wich is largely used. The
+> topic is complex [6] and need a deep dive into the details. It isn't
+> like to assign a value to an object that represents a database. Many
+> patterns [7] are applied in order to get the best results for
+> performance and liability.
+>
+> [1] http://www.agiledata.org/essays/mappingObjects.html
+> [2] https://www.hibernate.org/
+> [3] http://docs.djangoproject.com/en/dev/topics/db/models/#topics-db-models
+> [4] http://docs.djangoproject.com/en/dev/topics/db/queries/
+> [5] http://www.sqlalchemy.org/
+> [6] http://www.codinghorror.com/blog/2006/06/object-relational-mapping-is-the-vietnam-of-computer-science.html
+> [7] http://en.wikipedia.org/wiki/Design_pattern_%28computer_science%29
+>
+> --
+> Daniel Gon?alves
+> Base4 Sistemas Ltda.
+> [www.base4.com.br]
+> [twitter.com/spanazzi]
+> _______________________________________________
+
+
+-- 
+Massimo Belgrano
+From bedipritpal at hotmail.com  Tue Mar 16 17:51:28 2010
+From: bedipritpal at hotmail.com (Pritpal Bedi)
+Date: Tue Mar 16 17:51:35 2010
+Subject: [Harbour-users] Re: GUI programming.
+In-Reply-To: <7AC40E23-7032-4680-90A9-7289B95AAE04@windtelsoft.com>
+References: <4B9D2E06.7020208@gmail.com>,
+	<SNT123-W598F803A219AE60EC52266A72F0@phx.gbl>,
+	<hnllvh$lt9$1@dough.gmane.org>
+	<4B9E4DFC.3080709@adinet.com.uy>,<hnlpc7$4uj$1@dough.gmane.org>
+	<4B9F83B6.3020603@gmail.com>,
+	<609353e71003160707i6f4131d9o1af40217ccf8cfdb@mail.gmail.com>,
+	<ce56c7c01003160916g53719123m4feea3d9ad0c56d5@mail.gmail.com>,
+	<7AC40E23-7032-4680-90A9-7289B95AAE04@windtelsoft.com>
+Message-ID: <SNT123-W657F66E9B8ECAA7DE7B9CAA72D0@phx.gbl>
+
+
+Hi Teo
+
+
+> I like the ORM based approach, even I've used in the past an comercial
+> product (CACHE by Intersystems), but now I have an Harbour based
+
+
+ 
+
+It is heartening that someone else from Harbour world has 
+
+experience with CACHE.
+
+ 
+
+Last year I announced the general availability of 
+
+cacheRDD - http://cacherdd.vouch.info/ but then withdraw it 
+
+due to certain reasons.
+
+ 
+
+BTW this is an excellant database, though a costly affair.
+
+
+Regards
+ 
+Pritpal Bedi, a student of software analysis and design
+http://www.vouch.in  | Vouch, the software that GROWS with you
+http://www.vouch32.com  |  Home of Vouch32 ActiveX Server
+http://www.vouchcac.com/vouch32/vouch32.htm   |   A Free Windows Extended
+Utilities Library for Clipper, Xbase++ and (x)Harbour
+http://www.help.vouch.info | Online Vouch Help
+http://www.harbour.vouch.info | Online Harbour Help
+
+
+ 
+ 		 	   		  
+_________________________________________________________________
+Hotmail has tools for the New Busy. Search, chat and e-mail from your inbox.
+http://www.windowslive.com/campaign/thenewbusy?ocid=PID27925::T:WLMTAGL:ON:WL:en-US:WM_HMP:032010_1
+From dougf at people.net.au  Tue Mar 16 18:56:58 2010
+From: dougf at people.net.au (dougf@people.net.au)
+Date: Tue Mar 16 18:56:14 2010
+Subject: [Harbour-users] ORMs (from "thread" GUI programming)
+Message-ID: <4664.1268780218@people.net.au>
+
+ Hi all
+
+ Its nice to see that a discussion that started out with some highly
+questionable
+ assertions about OOP has turned right around to a discussion of ORMs
+which 
+ essentially extend the OOP concept.
+
+ Harbour doesn't force OOP on anyone, but I suspect most savvy xBase
+coders head 
+ that way.? Even those that write procedural code are using some objects,
+ hidden from them by the preprocessor.? Beginners soon realise that they
+are
+ writing code that pretty much does something similar to what they have
+done
+ before.? At first they may use the "cut and paste" approach.? Most then
+come to 
+ realise that this approach is not ideal because
+
+ 1. Its easy to miss bits of code that need to be altered
+
+ 2. To change "standard behaviour" you have to change code in many places
+
+ So most of us ended up with a whole series of "utility functions" which
+ identified (as parameters) those things that changed from invocation to
+ invocation and meant that standard behaviour could be changed by altering
+a
+ single piece of code.
+
+ OOP basically extends this in a more powerful and consistent way.
+
+ But if you don't like writing "standard" Harbour OOP code that might look
+like
+
+ obj_MyWindow := TWindow():New( 500, 300, "Sample Window" )
+
+ you can use the preprocessor and write something like
+
+ CREATE WINDOW myWindow TITLE "Sample Window" SIZE 500, 300
+
+ all it takes is a preprocessor directive like
+
+ #xcommand CREATE WINDOW  TITLE  SIZE ,  => ;
+  := TWindow():New( , ,  )
+
+ That is one of the fundamental beauties of xBase.
+
+ I would also note that the popularity of VB is due to Microsoft's
+marketing power and the fact
+ that many of us are effectively forced to use it (or its sibling VBA) to
+automate office type tasks.
+ If you judged languages by their popularity you wouldn't be using Harbour
+despite the fact
+ that its so wonderful a language.
+
+ Now onto the interesting part - ORMs.
+
+ These should fit very neatly into Harbour.? Take an "example" from a 
+ previous post:
+
+ emp=Employee.new
+ emp.name = "Emp1"
+ emp.basic = 4500
+ emp.designation = "Programmer"
+ emp.save
+
+ Harbour equivalents are easy:
+
+ obj_Employee := TEmployee():New()
+ WITH OBJECT obj_Employee
+ ? :Name := "Emp1"
+ ? :Basic := 4500
+ ? :Designation := "Programmer"
+ ? :Save()
+ END
+
+ Of course there are many alternatives (depending in part on the TEmployee
+class) such as
+
+ obj_Employee := TEmployeeNew( "Emp1", 4500, "Programmer" )
+ obj_Employee:Save()
+
+ Or with suitable preprocessor directive for those that like the object
+orientation hidden
+
+ CREATE EMPLOYEE ThisEmployee
+ ThisEmployee:Name := "Emp1"
+ ThisEmployee:Basic := 4500
+ ThisEmployee:Designation := Programmer
+ SAVE EMPLOYEE ThisEmployee
+
+ Obviously we have to define the TEmployee Class which would inherit from
+a class that
+ "understands" how to read / write etc but not the particular details of
+an employee record,
+ something like:
+
+ CLASS TEmployee FROM TSingleRecord
+
+ ? DATA Name
+ ? DATA Basic
+ ? DATA Designation
+ ? // etc
+
+ ENDCLASS
+
+ Methods like Save() would be inherited from TSingleRecord as might its
+oid (object 
+ identifier / primary key )
+
+ CLASS TSingleRecord
+
+ ? DATA oid
+ ? // etc
+
+ ? METHOD Save()
+ ? // etc
+
+ ENDCLASS
+
+ This is very much along the lines of the approach I use combined with a
+client-server data 
+ base back end I wrote for my own use.? A record is returned as a
+two-dimensional array that
+ can be used to directly update the front end object.? The array is
+serialsed and transmitted
+ using IP sockets.? Properties are directly updated using
+__ObjSetValueList().? This type of
+ approach would seem ideal for an ORM in my opinion.
+
+ Regards
+ xProgrammer
+
+ 
+From teo at windtelsoft.com  Tue Mar 16 20:31:08 2010
+From: teo at windtelsoft.com (Teo Fonrouge)
+Date: Tue Mar 16 20:31:28 2010
+Subject: [Harbour-users] ORMs (from "thread" GUI programming)
+In-Reply-To: <4664.1268780218@people.net.au>
+References: <4664.1268780218@people.net.au>
+Message-ID: <7254DCFF-6BC6-439E-8840-D1BA31833EB4@windtelsoft.com>
+
+Hello xProgrammer,
+
+
+On Mar 16, 2010, at 4:56 PM, dougf@people.net.au wrote:
+
+> Hi all
+> 
+> Its nice to see that a discussion that started out with some highly
+> questionable
+> assertions about OOP has turned right around to a discussion of ORMs
+> which 
+> essentially extend the OOP concept.
+> 
+> Harbour doesn't force OOP on anyone, but I suspect most savvy xBase
+> coders head 
+> that way.  Even those that write procedural code are using some objects,
+> hidden from them by the preprocessor.  Beginners soon realise that they
+> are
+> writing code that pretty much does something similar to what they have
+> done
+> before.  At first they may use the "cut and paste" approach.  Most then
+> come to 
+> realise that this approach is not ideal because
+> 
+> 1. Its easy to miss bits of code that need to be altered
+> 
+> 2. To change "standard behaviour" you have to change code in many places
+> 
+> So most of us ended up with a whole series of "utility functions" which
+> identified (as parameters) those things that changed from invocation to
+> invocation and meant that standard behaviour could be changed by altering
+> a
+> single piece of code.
+> 
+> OOP basically extends this in a more powerful and consistent way.
+> 
+> But if you don't like writing "standard" Harbour OOP code that might look
+> like
+> 
+> obj_MyWindow := TWindow():New( 500, 300, "Sample Window" )
+> 
+> you can use the preprocessor and write something like
+> 
+> CREATE WINDOW myWindow TITLE "Sample Window" SIZE 500, 300
+> 
+> all it takes is a preprocessor directive like
+> 
+> #xcommand CREATE WINDOW  TITLE  SIZE ,  => ;
+>  := TWindow():New( , ,  )
+> 
+> That is one of the fundamental beauties of xBase.
+> 
+> I would also note that the popularity of VB is due to Microsoft's
+> marketing power and the fact
+> that many of us are effectively forced to use it (or its sibling VBA) to
+> automate office type tasks.
+> If you judged languages by their popularity you wouldn't be using Harbour
+> despite the fact
+> that its so wonderful a language.
+> 
+> Now onto the interesting part - ORMs.
+> 
+> These should fit very neatly into Harbour.  Take an "example" from a 
+> previous post:
+> 
+> emp=Employee.new
+> emp.name = "Emp1"
+> emp.basic = 4500
+> emp.designation = "Programmer"
+> emp.save
+> 
+> Harbour equivalents are easy:
+> 
+> obj_Employee := TEmployee():New()
+> WITH OBJECT obj_Employee
+>   :Name := "Emp1"
+>   :Basic := 4500
+>   :Designation := "Programmer"
+>   :Save()
+> END
+> 
+> Of course there are many alternatives (depending in part on the TEmployee
+> class) such as
+> 
+> obj_Employee := TEmployeeNew( "Emp1", 4500, "Programmer" )
+> obj_Employee:Save()
+> 
+> Or with suitable preprocessor directive for those that like the object
+> orientation hidden
+> 
+> CREATE EMPLOYEE ThisEmployee
+> ThisEmployee:Name := "Emp1"
+> ThisEmployee:Basic := 4500
+> ThisEmployee:Designation := Programmer
+> SAVE EMPLOYEE ThisEmployee
+> 
+> Obviously we have to define the TEmployee Class which would inherit from
+> a class that
+> "understands" how to read / write etc but not the particular details of
+> an employee record,
+> something like:
+> 
+> CLASS TEmployee FROM TSingleRecord
+> 
+>   DATA Name
+>   DATA Basic
+>   DATA Designation
+>   // etc
+> 
+> ENDCLASS
+> 
+> Methods like Save() would be inherited from TSingleRecord as might its
+> oid (object 
+> identifier / primary key )
+
+Exactly.
+
+> 
+> CLASS TSingleRecord
+> 
+>   DATA oid
+>   // etc
+> 
+>   METHOD Save()
+>   // etc
+> 
+> ENDCLASS
+> 
+> This is very much along the lines of the approach I use combined with a
+> client-server data 
+> base back end I wrote for my own use.  A record is returned as a
+> two-dimensional array that
+> can be used to directly update the front end object.  The array is
+> serialsed and transmitted
+> using IP sockets.  Properties are directly updated using
+> __ObjSetValueList().  This type of
+> approach would seem ideal for an ORM in my opinion.
+
+I'll add that to fulfill this approach, we need to have at least:
+
+  * Abstraction
+  * Inheritance
+  * Polymorphism
+
+e.g., The following sample creates  three new databases:
+  TEmployer 
+  TPerson
+  TEmployee
+
+fills the databases with some values and then prints it out:
+
+<prg>
+/* Contains the Employer's database */
+CLASS TEmployer FROM TTable
+  DATA tableName INIT "employer" // the physical file data base
+  DEFINE FIELDS  // Load the Field's information
+ENDCLASS
+
+BEGIN FIELDS CLASS TEmployer
+
+  /* the primary key database */
+  ADD PRIMARYKEY FIELD "Employer" AUTOINCREMENTAL
+	
+  ADD STRING FIELD "FirstName" SIZE 100
+
+  ADD STRING FIELD "LastName" SIZE 100
+	
+  ADD STRING "Phone" SIZE 40
+
+  /* creates a TEmployees table whos MasterSource
+     is this database (TEmployer) */
+  ADD OBJECT FIELD "Employees" CLASS "TEmployee"
+
+END FIELDS
+
+/* Contains the Person's database */
+CLASS TPerson FROM TTable
+  DATA tableName INIT "persemp" // the physical file data base
+
+  DEFINE FIELDS // Load the Field's information
+	
+  /* calculated fields */
+  CALCFIELD Age INLINE Years( ::Field_Birth )
+  CALCFIELD FullName INLINE RTrim( ::Field_LastName ) + ", " + RTrim( ::Field_FirstName )
+	
+ENDCLASS
+
+BEGIN FIELDS CLASS TPerson
+
+  /* the primary key database */
+  ADD PRIMARYKEY FIELD "Person" AUTOINCREMENTAL
+
+  ADD STRING FIELD "FirstName" SIZE 40
+
+  ADD DATE FIELD "Birth" ;
+    VALID {|d| Year( d ) > 1850 } /* validation for field */
+
+  ADD STRING FIELD "Genre" ;
+    VALID {|g| g $ "FM" } /* validation for field */
+
+END FIELDS
+
+/* Contains the Employee's database */
+CLASS TEmployee FROM TPerson
+  DEFINE FIELDS // Load the Field's information
+  CALCFIELD Age INLINE Years( ::Field_HiredOn )
+ENDCLASS
+
+BEGIN FIELDS CLASS TEmployee
+
+  /* the master key database */
+  ADD OBJECT FIELD "Employer" CLASS "TEmployer" MASTERKEY
+
+  ADD FLOAT FIELD "Salary" ;
+    VALID {|s| s >= 0 } /* validation for field */
+		
+  ADD DATE FIELD "HiredOn" ;
+    VALID {|d| Year( d ) > 1850 } /* validation for field */
+
+  /* the primary key database */
+  ADD PRIMARYKEY FIELD "Person"
+		
+END FIELDS
+
+
+FUNCTION Main()
+
+  emp := TEmployer():New()
+  
+  /* adds a new TEmployer record */
+  emp:NewRecord()
+  
+  emp:Field_Name := "US ROBOTICS"
+  emp:Field_Phone := "1 555 555555"
+  
+  /* adds a new TEmployee record */
+  emp:Field_Employees:NewRecord()
+
+  emp:Field_Employees:Field_FirstName := "John"
+  emp:Field_Employees:Field_LastName := "A"
+  emp:Field_Employees:Field_Birth := "1/1/1970"
+  emp:Field_Employees:Field_HiredOn := "1/1/2000"
+  emp:Field_Employees:Field_Genre := "M"
+  emp:Field_Employees:Field_Salary := 80000
+
+  emp:Field_Employees:Post()
+  
+
+  pers := TPerson():New()
+  
+  /* adds a new TPerson record */
+  pers:NewRecord()
+
+  pers:Field_FirstName := "Jane"
+  pers:Field_LastName := "B"
+  pers:Field_Birth := "1/1/1980"
+  pers:Field_Genre := "F"
+
+  pers:Post()
+  
+  /* adds the previous TPerson record to TEmployer */
+  emp:Field_Employees:NewRecordFrom( pers )
+
+  emp:Field_Employees:Field_Salary := 80000
+  emp:Field_Employees:Field_HiredOn := "1/1/2000"
+
+  emp:Field_Employees:Post()
+
+  /* prints the whole TEmployer database with his employees */
+  WHILE !emp:Eof()
+    ? "Employer: ", emp:Field_Name, emp:Field_Phone
+      WHILE !emp:Field_Employees:Eof()
+        ? "  Employee:"
+        ? "     Genre:", emp:Field_Employees:Field_Genre
+        ? "  FullName:", emp:Field_Employees:Field_FullName
+        ? "       Age:", emp:Field_Employees:Field_Age
+        ? "    Salary:", emp:Field_Employees:Field_Salary
+        emp:Field_Employees:Skip()
+      ENDDO
+    emp:Skip()
+  ENDDO
+
+RETURN NIL
+</prg>
+
+
+best regards,
+
+Teo
+
+
+From roberbox at gmail.com  Tue Mar 16 20:49:26 2010
+From: roberbox at gmail.com (Roberto Lopez)
+Date: Tue Mar 16 20:50:09 2010
+Subject: [Harbour-users] ORMs (from "thread" GUI programming)
+In-Reply-To: <4664.1268780218@people.net.au>
+References: <4664.1268780218@people.net.au>
+Message-ID: <4BA02716.4040906@gmail.com>
+
+xProgrammer wrote:
+
+<...>
+>  If you judged languages by their popularity you wouldn't be using Harbour
+> despite the fact
+>  that its so wonderful a language.
+
+xProgrammer,
+
+If you read carefully my post, you'll note that I'M NOT judging VB by 
+its popularity (that is only a side note about it).
+
+<...>
+ > I would also note that the popularity of VB is due to Microsoft's
+ > marketing power
+<...>
+
+I'm not questioning MS marketing power, but, as you surely know, they 
+failed many, many times trying to impose products and technologies, 
+simply because those were not good enough.
+
+IMHO, VB succedeed because it was (at least until 6.0 version) a great 
+development tool.
+
+Regarding Harbour, if you feel that I'm attacking it (through my 
+opinions about Clipper), that was not my intention.
+
+I loved dBase, I loved Fox and I loved Clipper too (despite some things:)).
+
+I'm here because Harbour is great. Whitout a doubt, it is the best 
+choice for whose that (like me) love xBase.
+
+Finally, regarding OOP, I guess that we must open our minds to new ideas 
+and programming paradigms.
+
+To write an operating system service is a very different task that 
+creating a simple database application.
+
+IMHO, should be obvious for someone, that an unique programming 
+model/paradigm, could be not able to suit the programmers needs for all 
+situations.
+
+Fortunately, many modern languages developers understand this.
+
+
+Regards,
+
+Roberto.
+From karweru at yahoo.com  Wed Mar 17 02:55:57 2010
+From: karweru at yahoo.com (Gilbert Karweru)
+Date: Wed Mar 17 02:56:05 2010
+Subject: [Harbour-users] ORMs (from "thread" GUI programming)
+In-Reply-To: <4664.1268780218@people.net.au>
+References: <4664.1268780218@people.net.au>
+Message-ID: <482631.67250.qm@web111712.mail.gq1.yahoo.com>
+
+Hi Doug,
+
+".......................This is very much along the lines of the approach I use combined with a
+client-server data base back end I wrote for my own use.  A record is returned 
+as a
+two-dimensional array thatcan be used to directly update 
+the front end object.  The array is
+serialsed and transmitted using IP sockets.................... " 
+
+I find this very interesting. Any pointers as to how you've actualised a client/server implementation?
+
+Regards,
+Gilbert.
+
+
+
+
+
+________________________________
+From: "dougf@people.net.au" <dougf@people.net.au>
+To: harbour-users@harbour-project.org
+Sent: Wed, March 17, 2010 1:56:58 AM
+Subject: [Harbour-users] ORMs (from "thread" GUI programming)
+
+Hi all
+
+Its nice to see that a discussion that started out with some highly
+questionable
+assertions about OOP has turned right around to a discussion of ORMs
+which 
+essentially extend the OOP concept.
+
+Harbour doesn't force OOP on anyone, but I suspect most savvy xBase
+coders head 
+that way.  Even those that write procedural code are using some objects,
+hidden from them by the preprocessor.  Beginners soon realise that they
+are
+writing code that pretty much does something similar to what they have
+done
+before.  At first they may use the "cut and paste" approach.  Most then
+come to 
+realise that this approach is not ideal because
+
+1. Its easy to miss bits of code that need to be altered
+
+2. To change "standard behaviour" you have to change code in many places
+
+So most of us ended up with a whole series of "utility functions" which
+identified (as parameters) those things that changed from invocation to
+invocation and meant that standard behaviour could be changed by altering
+a
+single piece of code.
+
+OOP basically extends this in a more powerful and consistent way.
+
+But if you don't like writing "standard" Harbour OOP code that might look
+like
+
+obj_MyWindow := TWindow():New( 500, 300, "Sample Window" )
+
+you can use the preprocessor and write something like
+
+CREATE WINDOW myWindow TITLE "Sample Window" SIZE 500, 300
+
+all it takes is a preprocessor directive like
+
+#xcommand CREATE WINDOW  TITLE  SIZE ,  => ;
+  := TWindow():New( , ,  )
+
+That is one of the fundamental beauties of xBase.
+
+I would also note that the popularity of VB is due to Microsoft's
+marketing power and the fact
+that many of us are effectively forced to use it (or its sibling VBA) to
+automate office type tasks.
+If you judged languages by their popularity you wouldn't be using Harbour
+despite the fact
+that its so wonderful a language.
+
+Now onto the interesting part - ORMs.
+
+These should fit very neatly into Harbour.  Take an "example" from a 
+previous post:
+
+emp=Employee.new
+emp.name = "Emp1"
+emp.basic = 4500
+emp.designation = "Programmer"
+emp.save
+
+Harbour equivalents are easy:
+
+obj_Employee := TEmployee():New()
+WITH OBJECT obj_Employee
+  :Name := "Emp1"
+  :Basic := 4500
+  :Designation := "Programmer"
+  :Save()
+END
+
+Of course there are many alternatives (depending in part on the TEmployee
+class) such as
+
+obj_Employee := TEmployeeNew( "Emp1", 4500, "Programmer" )
+obj_Employee:Save()
+
+Or with suitable preprocessor directive for those that like the object
+orientation hidden
+
+CREATE EMPLOYEE ThisEmployee
+ThisEmployee:Name := "Emp1"
+ThisEmployee:Basic := 4500
+ThisEmployee:Designation := Programmer
+SAVE EMPLOYEE ThisEmployee
+
+Obviously we have to define the TEmployee Class which would inherit from
+a class that
+"understands" how to read / write etc but not the particular details of
+an employee record,
+something like:
+
+CLASS TEmployee FROM TSingleRecord
+
+  DATA Name
+  DATA Basic
+  DATA Designation
+  // etc
+
+ENDCLASS
+
+Methods like Save() would be inherited from TSingleRecord as might its
+oid (object 
+identifier / primary key )
+
+CLASS TSingleRecord
+
+  DATA oid
+  // etc
+
+  METHOD Save()
+  // etc
+
+ENDCLASS
+
+This is very much along the lines of the approach I use combined with a
+client-server data 
+base back end I wrote for my own use.  A record is returned as a
+two-dimensional array that
+can be used to directly update the front end object.  The array is
+serialsed and transmitted
+using IP sockets.  Properties are directly updated using
+__ObjSetValueList().  This type of
+approach would seem ideal for an ORM in my opinion.
+
+Regards
+xProgrammer
+
+
+_______________________________________________
+Harbour-users mailing list (attachment size limit: 40KB)
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+
+
+      
+From pete_westg at yahoo.gr  Wed Mar 17 04:56:03 2010
+From: pete_westg at yahoo.gr (pete_westg)
+Date: Wed Mar 17 04:56:27 2010
+Subject: [Harbour-users] Re: ORMs (from "thread" GUI programming)
+In-Reply-To: <4664.1268780218@people.net.au>
+References: <4664.1268780218@people.net.au>
+Message-ID: <hnq5f2$dc9$1@dough.gmane.org>
+
+???? 17/03/2010 00:56, O/H dougf@people.net.au 
+??????:
+ >   Hi all
+ >
+ >   Its nice to see that a discussion that started out with some highly
+ > questionable
+ >   assertions about OOP has turned right around to a discussion of ORMs
+ > which
+ >   essentially extend the OOP concept.
+<snip>
+
+Interesting (I mean it) lesson on OOP basics.
+What I' d have to point out, from an old clipper-programmer's POV,
+is that OOP introduces a *structured complexity* which in some/many 
+cases is unnecessary, wasteful in resources, and infrastructure/learning 
+demanding.
+(not to mention those tongue-tie, virus-like "T"s that dominates the 
+classes name-space for absolutely useless reasons denoting an immanent 
+adoration to stereotypes, which is one of the unwelcome features of OOP 
+model. But again, maybe I'm wrong since i am not a theorist of 
+programming art. That said, i feel just fully covered by Roberto Lopez 
+phrase that  "regarding OOP, I guess that we must open our minds to new 
+ideas and programming paradigms. To write an operating system service is 
+a very different task that creating a simple database application.
+IMHO, should be obvious for someone, that an unique programming 
+model/paradigm, could be not able to suit the programmers needs for all 
+situations."
+
+regards,
+
+---
+Pete
+
+From dougf at people.net.au  Wed Mar 17 07:29:28 2010
+From: dougf at people.net.au (dougf@people.net.au)
+Date: Wed Mar 17 07:28:44 2010
+Subject: [Harbour-users] Re: ORMs
+Message-ID: <4713.1268825368@people.net.au>
+
+ I agree with Teo but with one proviso and that is that the client classes
+should be largely table agnostic.? By that I mean that:
+
+ creating say an object of class Person nothing is happening at the data
+base level.? That will only happen when we choose to Write() [In my case
+write is a method that handles both insert and update but that's just a
+personal preference.]
+
+ In practice I typically only need one such class but have a Blank()
+method - possibly not the best of names since while most fields will be
+set to blank in a typical situation some fields will have default or even
+mandatory contents.? [My Blank() method is partt of the front end class.]
+
+ The front end wouldn't therefore have a TTable Class, although the back
+end might. [My current approach has a TQuery class as well as DataItem
+class amongst others but no TTable class in the back end.]
+
+ I also note that I would have multiple front end classes eg a TPersonList
+Class as well as a TPersonClass (both of which hold data) then
+"presentation layer" classes for desplaying that data (TPersonListScreen,
+TpersonViewRditScreen) as well as classes relating to acquiring input for
+those searches (eg TPersonSearchBySurname, TPersonSearchByDOB,
+TPersonSearchByKey).? That sort of evolved as being the neatest IMO but I
+understand (retrospectively) that it represents pretty much the pure OOP
+approach (not that I am a great believer in theory).
+
+ I guess that shows the remnants of the "three layer architecture" that
+Microsoft was pushing some years back.
+
+ Just my thoughts
+
+ Regards
+ xProgrammer
+ 
+From dougf at people.net.au  Wed Mar 17 15:19:32 2010
+From: dougf at people.net.au (dougf@people.net.au)
+Date: Wed Mar 17 15:18:47 2010
+Subject: [Harbour-users] Re: OOP, ORMs etc
+Message-ID: <4906.1268853572@people.net.au>
+
+ Hi all
+
+ Loving this discussion!
+
+ I'm an old programmer who wrote procedural code for many years and paid
+scant regard to OOP when the theoreticians started to push it.? Now I'm a
+bit of a convert.? That happened through a rather ambitious project from
+the pre .Net days that built web pages that behaved like traditional
+programmes "on the fly" and did some of the things that I understand .Net
+does well before Microsoft got around to it.? It is still used to this
+day.? The point is that when I looked at the structure of the data base
+that I had to build to hold the specification of the application what I
+had seemed to correspond pretty much to the language of OOP.
+
+ Up until then I had used OOP a bit (when forced to pretty much) but that
+experience opened ny eyes a bit.? I still didn't write much OOP type code
+until I discovered Harbour.? Even then it took a while as I started off
+where I had left Clipper coding probably 10 years before.? But once I got
+the hang of it again and saw how beautifully it fitted into the xBase
+language and how you could hide the details if you so desired, I find
+myself even thinking in terms of objects / classes etc most of the time.
+
+ If OOP isn't suitable for your application then don't use it and forget
+the theorists BUT please remember that if OOP approach is making things
+more complex, slower etc it MAY not be that OOP is unsuitable, but rather
+that your application of OOP may be sub optimal.
+
+ I would love to share the architecture of my client-server data base back
+end (written in Harbour) and / or code but I have to drive kids to school
+just at the moment.
+
+ Regards to all
+ xProgrammer
+
+ BTW I love cBase, OOP and client-server architecture, am not fond of SQL
+and loathe UML
+ 
+From jasim.ab at gmail.com  Wed Mar 17 16:10:14 2010
+From: jasim.ab at gmail.com (Jasim A Basheer)
+Date: Wed Mar 17 16:10:23 2010
+Subject: [Harbour-users] Re: OOP, ORMs etc
+In-Reply-To: <4906.1268853572@people.net.au>
+References: <4906.1268853572@people.net.au>
+Message-ID: <ce56c7c01003171310sc37e244v9781604b476f9e7c@mail.gmail.com>
+
+On Thu, Mar 18, 2010 at 12:49 AM,  <dougf@people.net.au> wrote:
+> ?Hi all
+>
+> ?Loving this discussion!
+>
+> ?I'm an old programmer who wrote procedural code for many years and paid
+> scant regard to OOP when the theoreticians started to push it.? Now I'm a
+> bit of a convert.? That happened through a rather ambitious project from
+> the pre .Net days that built web pages that behaved like traditional
+> programmes "on the fly" and did some of the things that I understand .Net
+> does well before Microsoft got around to it.? It is still used to this
+> day.? The point is that when I looked at the structure of the data base
+> that I had to build to hold the specification of the application what I
+> had seemed to correspond pretty much to the language of OOP.
+>
+> ?Up until then I had used OOP a bit (when forced to pretty much) but that
+> experience opened ny eyes a bit.? I still didn't write much OOP type code
+> until I discovered Harbour.? Even then it took a while as I started off
+> where I had left Clipper coding probably 10 years before.? But once I got
+> the hang of it again and saw how beautifully it fitted into the xBase
+> language and how you could hide the details if you so desired, I find
+> myself even thinking in terms of objects / classes etc most of the time.
+
+Adding a few thoughts:
+
+OOP has been widely portrayed as an overkill for writing code that
+simply gets things done. All the 'inheritance', 'abstraction',
+'polymorphism' kind of buzzwords did a lot of harm to the perception
+regarding OOP. And most of it is thanks to C++ and Java. Here is an
+interesting take on the origin of C++:
+http://artlung.com/smorgasborg/Invention_of_Cplusplus.shtml
+
+However, the new generation scripting languages like Python, Ruby and
+JavaScript (and to a great extent VB 3 till VB 6) have taken some of
+the best practical aspects from OOP and threw away the rest. I'm very
+happy to program in these languages without worrying about 'friend'
+functions or 'pure virtual methods' (!). When talking about OOP in
+Harbour, I hope to see an adoption that resembles the pragmatism of
+the scripting languages than the hard theoretical OOP like in C++.
+
+One of the posts mentioned the namings of class variables - TWindow,
+TForm, TWindow::TForm etc:
+> (not to mention those tongue-tie, virus-like "T"s that dominates the classes name-space for absolutely useless reasons
+> denoting an immanent adoration to stereotypes, which is one of the unwelcome features of OOP model.
+
+I agree with Pete very much. I think we've rooted ourselves firmly in
+the Clipper-style OOP notations like TBrowse, TBColumnNew etc. and
+have sincerely followed that path. However, except for the enterprisy
+languages (C++, Java, C# etc.), the new agile languages all favour
+using lower case for denoting classes and variables. This could add a
+lot to the readabilty of the code (IMHO) YMMV.
+
+> ?If OOP isn't suitable for your application then don't use it and forget
+> the theorists BUT please remember that if OOP approach is making things
+> more complex, slower etc it MAY not be that OOP is unsuitable, but rather
+> that your application of OOP may be sub optimal.
+>
+Exactly!
+
+> ?I would love to share the architecture of my client-server data base back
+> end (written in Harbour) and / or code but I have to drive kids to school
+> just at the moment.
+>
+We will be looking forward to that.
+
+> ?Regards to all
+> ?xProgrammer
+>
+> ?BTW I love cBase, OOP and client-server architecture, am not fond of SQL
+> and loathe UML
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From jasim.ab at gmail.com  Wed Mar 17 16:15:34 2010
+From: jasim.ab at gmail.com (Jasim A Basheer)
+Date: Wed Mar 17 16:15:41 2010
+Subject: [Harbour-users] Re: ORMs
+In-Reply-To: <4713.1268825368@people.net.au>
+References: <4713.1268825368@people.net.au>
+Message-ID: <ce56c7c01003171315v7c2ef84aj17c873c1ec6553c1@mail.gmail.com>
+
+On Wed, Mar 17, 2010 at 4:59 PM,  <dougf@people.net.au> wrote:
+> ?I agree with Teo but with one proviso and that is that the client classes
+> should be largely table agnostic.? By that I mean that:
+>
+> ?creating say an object of class Person nothing is happening at the data
+> base level.? That will only happen when we choose to Write() [In my case
+> write is a method that handles both insert and update but that's just a
+> personal preference.]
+>
+> ?In practice I typically only need one such class but have a Blank()
+> method - possibly not the best of names since while most fields will be
+> set to blank in a typical situation some fields will have default or even
+> mandatory contents.? [My Blank() method is partt of the front end class.]
+>
+> ?The front end wouldn't therefore have a TTable Class, although the back
+> end might. [My current approach has a TQuery class as well as DataItem
+> class amongst others but no TTable class in the back end.]
+>
+> ?I also note that I would have multiple front end classes eg a TPersonList
+> Class as well as a TPersonClass (both of which hold data) then
+> "presentation layer" classes for desplaying that data (TPersonListScreen,
+> TpersonViewRditScreen) as well as classes relating to acquiring input for
+> those searches (eg TPersonSearchBySurname, TPersonSearchByDOB,
+> TPersonSearchByKey).? That sort of evolved as being the neatest IMO but I
+> understand (retrospectively) that it represents pretty much the pure OOP
+> approach (not that I am a great believer in theory).
+>
+
+> ?I guess that shows the remnants of the "three layer architecture" that
+> Microsoft was pushing some years back.
+>
+If I'm not mistaken, you mean the Model-View-Controller paradigm (MVC
+for short). It seems you've successfully baked your very own MVC. For
+the Web, MVC has caught on like fire and I've personally found it to
+be a great modular architecture.
+
+> ?Just my thoughts
+>
+> ?Regards
+> ?xProgrammer
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From dougf at people.net.au  Wed Mar 17 21:39:35 2010
+From: dougf at people.net.au (dougf@people.net.au)
+Date: Wed Mar 17 21:38:52 2010
+Subject: [Harbour-users] Re: OOP ORMs etc
+Message-ID: <5717.1268876375@people.net.au>
+
+ Hi all
+
+ Re the naming of classes:
+
+ Prefixing class names with a T I think originates with Borland
+products.? The main reason I adopted it was that at one point in time at
+least Harbour treated it as an error if your source file and class had the
+same name.? That is you couldn't have a file named patient.prg containing
+a class patient.? One solution was to name the source file
+patient_class.prg but in the end I adopted the T prefix for the class name
+instead.? It's probably not still an issue with Harbour - I just haven't
+checked - but the habit has stuck.
+
+ As for readability I personally find MedicalPractice easier to "read"
+than medicalpractice so thats how I name them (actually I use a prefix so
+an object would be obj_MedicalPractice.? Of course xBase folds everything
+to upper case anyhow so people can share classes and adopt their own
+conventions.
+
+ I know my prefixes are longer ( I use obj_ whereas I guess "the norm" -
+if there is one - would be just o.? So I would have obj_Person rather
+than oPerson or if you don't like capitalisation I guess operson or drop
+the prefix and just have person.? Again the latter might be a tad
+confusing if that is also the name of your class.? I like to use a wide
+range of prefixes - for example I will usr fh_ for a file handle (a
+specilaised form of int_), dlg_ for a dialog (a specialised form of obj_)
+etc
+
+ I'm not tyrying to push my way of doing things (which has changed over
+the years so my older code doesn't match the new style) but rather just
+explain the reasons I have reached the style I use now. 
+
+ Re the structure of my client-server data base back end (presumably much
+in common with a client server ORM)
+
+ Will take a number of posts to explain.? Data (for a single item) is
+transmitted as a two dimensional array contained in a wrapper array.
+
+ Looking at the inner two dimensional array first.
+
+ Assume I have a class as follows:
+
+ CLASS Person
+
+ ? DATA FamilyName
+ ? DATA GivenName
+ ? DATA Gender
+ ? DATA DOB
+
+ ENDCLASS
+
+ Now if I have an array as follows:
+
+ arr_MyData := { { "FamilyName", "Citizen" }, { "GivenName", "Joe" }, {
+"Gender", "M" },? { "DOB", "19601231" } }
+
+ I can set all the properties of an object of class Person? with
+
+ __ObjSetValueList( self, arr_MyData )
+
+ [I have assumed that code is in a member function of class Person if not
+then assuming we have obj_ThisPerson you would have
+
+ __ObjSetValueList( obj_ThisPerson, arr_MyData ) ]
+
+ That is the basic mechanism my code uses.
+
+ However we have to allow for the back end encountering a problem so I
+wrap this array up? as the second element of an array, the first element
+of which is an array containing success and / or failure information.? So
+the back end can flag success, a problem that might make retrying
+worthwhile or one that is unrecoverable.? And I allow for a series of
+error messages / warnings.
+
+ This wrapper array is built on the back end, then the function
+HB_Serialize() is used to convert to a binary string which is then
+transmitted to the client using IP sockets where assuming success is
+indicated the data array is recreated using HB_Deserialize() and used to
+update the properties of the object as per the above discussion.
+
+ This approach has proved to be robust and can be used with front and back
+end on a single machine or a cross a network or VPN.
+
+ My back end "knows" that the contents of field PN_SURNAME should be
+returned paired with the expected property name "FamilyName" .
+
+ I can share how that works in a further post if anyone is interested.
+
+ Regards to all
+ xProgrammer
+ 
+From dougf at people.net.au  Thu Mar 18 15:35:43 2010
+From: dougf at people.net.au (dougf@people.net.au)
+Date: Thu Mar 18 15:34:59 2010
+Subject: [Harbour-users] Re: Mangled Posts
+Message-ID: <8540.1268940943@people.net.au>
+
+ Hi all
+
+ For some reason my posts are getting mangled in the daily digests and I'm
+not sure why.
+
+ If anyone knows what the problem may be please let me know.
+
+ They seem OK if you get individual emails rather than a daily summary.
+
+ If you do get the daily summary plrase accept my apologies
+
+ Regards
+ xProgrammer
+
+ 
+From pete_westg at yahoo.gr  Fri Mar 19 05:58:45 2010
+From: pete_westg at yahoo.gr (pete_westg)
+Date: Fri Mar 19 05:59:17 2010
+Subject: [Harbour-users] Re: Mangled Posts
+In-Reply-To: <8540.1268940943@people.net.au>
+References: <8540.1268940943@people.net.au>
+Message-ID: <hnvhsn$l6c$1@dough.gmane.org>
+
+???? 18/03/2010 21:35, O/H dougf@people.net.au 
+??????:
+>   Hi all
+>
+>   For some reason my posts are getting mangled in the daily digests and I'm
+> not sure why.
+>
+
+Hi xProgrammer,
+
+I'm not sure what you mean by "getting mangled". I do read harbour.user 
+mailing list through my e-mail client (thunderbird). I'm also receiving 
+a daily-digest in my yahoo.mail account. In both, all posts (yours 
+included) seem to be ok. The only "problem" i have noticed so far, in 
+the digest version, is that in your posts show up in some places "odd" 
+characters which, i suppose, are tab characters (perhaps not correctly 
+decoded?) but this little-to-none effect has to your text regarding 
+readability.
+
+(By the way, I (and it's not only me, i think) find much interesting 
+your posts about your client-server implementation.)
+
+regards,
+
+---
+Pete
+
+From eyelagui at gmail.com  Tue Mar 23 10:55:14 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Tue Mar 23 10:55:16 2010
+Subject: [Harbour-users] Libs to compile.
+Message-ID: <4BA8D652.7070801@gmail.com>
+
+Hello, i'm trying to compile the simplest application using harbour 2.0 
+and Borland c++ 5.5, but i have the following message:
+
+Borland C++ 5.5.1 for Win32 Copyright (c) 1993, 2000 Borland
+version.c:
+Turbo Incremental Link 5.00 Copyright (c) 1997, 2000 Borland
+Error: Unresolved external '_hb_sxDeCrypt' referenced from 
+D:\HARBOUR\LIB\B32\HBRDD.LIB|dbf1
+Error: Unresolved external '_hb_sxPtoD' referenced from 
+D:\HARBOUR\LIB\B32\HBRDD.LIB|dbf1
+Error: Unresolved external '_hb_sxEnCrypt' referenced from 
+D:\HARBOUR\LIB\B32\HBRDD.LIB|dbf1
+Error: Unresolved external '_hb_sxDtoP' referenced from 
+D:\HARBOUR\LIB\B32\HBRDD.LIB|dbf1
+
+This program was compiled in the past using Harbour, but it seems that 
+some changes had been done at .lib level.
+So, what libs should i use as a minimum, or at least which one do i have 
+to add now to avoid this error?
+And also; where can i check wich libs contain wich functions so i have 
+not ask in the future?
+
+Thanks.
+From alcisoft at arrakis.es  Tue Mar 23 12:02:19 2010
+From: alcisoft at arrakis.es (A.Martínez)
+Date: Tue Mar 23 12:43:17 2010
+Subject: [Harbour-users] Dbf with a phantom record
+Message-ID: <hoar27$jto$1@dough.gmane.org>
+
+Hi,
+
+This (attachment) .dbf has 2 records...
+
+Clipper show 1 record
+Excel    show  1 record
+
+Harbour 2.0.0 show 2 records
+xHarbour 1.0.0 show 2 records
+
+why that is not mismatch ?
+
+Regards
+
+
+
+
+begin 666 SALPPR.zip
+M4$L#!!0``@`(`..C+R2>ECRWN ```,D!```*````4T%,4%!2+D1"1IV-,0^"
+M,!"%2UQT<'!Q8+I1Q<G!O2"#B98F_0-6J4D)M::%'^ _]R21$,6$^)9[=U_N
+MO=$IF >$D <QI$\L.^[9KK')A 3I&$W0X<F!MGR&?//!LUBT/.GA4Q"RY-P!
+MB,HM6&UP7<-V&0%U%?H(,I<WDVN%$SI*?:5 0FG!J,*ZE\E5(8WUX"TN=[S=
+MFL3W1\BH$YS_4\8QS&OP"HS-]55?)*@2^T ZI\\2OK5B-!Y4QN+Z1^EPA4]0
+M2P$"% `4``(`" #CHR\DGI8\M[@```#)`0``"@`````````!`" `````````
+@4T%,4%!2+D1"1E!+!08``````0`!`#@```#@````````
+`
+end
+
+
+From dougf at people.net.au  Tue Mar 23 18:25:29 2010
+From: dougf at people.net.au (dougf@people.net.au)
+Date: Tue Mar 23 18:24:48 2010
+Subject: [Harbour-users] Suggest we consolidate discussions concerning ORM
+	concept
+Message-ID: <20637.1269383129@people.net.au>
+
+ Hi all
+
+ This topic seems to have separate discussions going on in the harbour and
+harbour-users lists and the two seem rather disconnected.? I suggest that
+we might all get a lot further if we consolidate the discussion into one
+of the two lists.? At this stage the most important questions probably
+relate to what users may or may not want, so on that basis I would suggest
+the harbour-users list but I would be happy either way.
+
+ If we were to develop an "ORM" or "OODBMS" or whatever you want to call
+such a thing it shouldn't require any change to the xBase language as
+currently implemented.
+
+ I am no software theorist but I have played with an OO database - is that
+an ORM? - and in my opinion such an approach does provide advantages over
+what is already implemented in the xBase language.? These presumably
+include:
+
+ application client receives data in a more readily usable format
+ "scatter gather" (I think that is what people call it) happens
+automatically
+ automate much of the process of persistence (eg object id / primary key
+allocation)
+ application can make a single request to persist an object that contains
+other objects (cf multiple SQL statements if using an SQL based data
+server)
+ depending on how the server stores the data more flexibility in the
+structure of what you store
+
+ Regards
+ Doug
+ 
+From eyelagui at gmail.com  Tue Mar 23 23:56:26 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Tue Mar 23 23:56:34 2010
+Subject: [Harbour-users] HWGUI+Harbour 2
+Message-ID: <4BA98D6A.8060906@gmail.com>
+
+Does hwgui 2.17 works with Harbour 2? or should i go back to Harbour 1.xx.
+
+I'm trying to compile it now but it gives a lot of errors. I have done 
+it successfully in the past, but it was a couple years ago and i'm using 
+the exact same config. except for harbour version.
+
+Thanks in advance.
+From alcisoft at arrakis.es  Wed Mar 24 09:05:09 2010
+From: alcisoft at arrakis.es (A.Martínez)
+Date: Wed Mar 24 09:10:29 2010
+Subject: [Harbour-users] SET PRINTER TO
+Message-ID: <hod2va$q7o$1@dough.gmane.org>
+
+Hi,
+
+This sample shows:
+Harbour 2.0.0 -  LPT1
+Clipper and xHarbour 1.0.0 - PRN
+
+Why is not mismatching ?
+
+
+FUNCTION Main()
+
+? Set(24)              // SET PRINTER TO command
+
+RETURN NIL
+
+
+
+
+
+From eyelagui at gmail.com  Wed Mar 24 10:44:14 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Wed Mar 24 10:44:17 2010
+Subject: [Harbour-users] Messages not getting to list?
+In-Reply-To: <hod2va$q7o$1@dough.gmane.org>
+References: <hod2va$q7o$1@dough.gmane.org>
+Message-ID: <4BAA253E.4070405@gmail.com>
+
+I have sent in the past 3 or 4 days a couple of messages but i dont see 
+them on the list, neither i had anu kind of answer.
+
+?Anything wrong?
+
+I'm writing from this account to this recipient: 
+harbour-users@harbour-project.org.
+
+
+
+El 24/03/2010 10:05 a.m., A.Mart?nez escribi?:
+> Hi,
+>
+> This sample shows:
+> Harbour 2.0.0 -  LPT1
+> Clipper and xHarbour 1.0.0 - PRN
+>
+> Why is not mismatching ?
+>
+>
+> FUNCTION Main()
+>
+> ? Set(24)              // SET PRINTER TO command
+>
+> RETURN NIL
+>
+>
+>
+>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>    
+From mbelgrano at deltain.it  Wed Mar 24 11:08:47 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Wed Mar 24 11:09:15 2010
+Subject: [Harbour-users] Messages not getting to list?
+In-Reply-To: <4BAA253E.4070405@gmail.com>
+References: <hod2va$q7o$1@dough.gmane.org> <4BAA253E.4070405@gmail.com>
+Message-ID: <609353e71003240808p5a70b06du65e675af56341d96@mail.gmail.com>
+
+PRN and LPT1 are device in their os
+
+follow is a clarification on developer mailing list
+> FUNC MAIN()
+>   ? set(24) // Clipper is "", Harbour is LPT1
+>   set printer to ("junk.txt")
+>   ? set(24) // junk.txt
+>   set printer to
+>   ? set(24) // s/b "", but set to LPT1 again
+> RETURN
+
+It's platform dependent issue.
+In DOS programs handler 5 is open for each application and points
+to "PRN" device.
+This is only DOS behavior which does not exist in all other OS-es
+which do not give process any special 5 handler and you have to
+open connection to given device. In Windows builds we explicitly
+set device name to "LPT1" but in *nix builds is "|lpr" what means
+PIPE to lpr process.
+
+best regards,
+Przemek
+
+
+
+2010/3/24 Richard Acosta <eyelagui@gmail.com>:
+> I have sent in the past 3 or 4 days a couple of messages but i dont see them
+> on the list, neither i had anu kind of answer.
+>
+> ?Anything wrong?
+>
+> I'm writing from this account to this recipient:
+> harbour-users@harbour-project.org.
+>
+>
+>
+> El 24/03/2010 10:05 a.m., A.Mart?nez escribi?:
+>>
+>> Hi,
+>>
+>> This sample shows:
+>> Harbour 2.0.0 - ?LPT1
+>> Clipper and xHarbour 1.0.0 - PRN
+>>
+>> Why is not mismatching ?
+>>
+>>
+>> FUNCTION Main()
+>>
+>> ? Set(24) ? ? ? ? ? ? ?// SET PRINTER TO command
+>>
+>> RETURN NIL
+>>
+>>
+>>
+>>
+>>
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+From alcisoft at arrakis.es  Wed Mar 24 14:13:54 2010
+From: alcisoft at arrakis.es (A.Martínez)
+Date: Wed Mar 24 14:19:00 2010
+Subject: [Harbour-users] Re: Messages not getting to list?
+References: <hod2va$q7o$1@dough.gmane.org> <4BAA253E.4070405@gmail.com>
+	<609353e71003240808p5a70b06du65e675af56341d96@mail.gmail.com>
+Message-ID: <hodl1l$7d8$1@dough.gmane.org>
+
+Massimo,
+
+Ok, but and if computer has not LPT1 port ?
+
+Perhaps, at least for Windows, when there isn't LPT1 port default device
+should GetDefaultPrinter()..
+Perhaps, too, we should can set device default for SET PRINTER TO...
+
+ Thank you very much !
+
+regards
+
+
+
+Massimo Belgrano escribió en mensaje
+<609353e71003240808p5a70b06du65e675af56341d96@mail.gmail.com>...
+PRN and LPT1 are device in their os
+
+follow is a clarification on developer mailing list
+> FUNC MAIN()
+>   ? set(24) // Clipper is "", Harbour is LPT1
+>   set printer to ("junk.txt")
+>   ? set(24) // junk.txt
+>   set printer to
+>   ? set(24) // s/b "", but set to LPT1 again
+> RETURN
+
+It's platform dependent issue.
+In DOS programs handler 5 is open for each application and points
+to "PRN" device.
+This is only DOS behavior which does not exist in all other OS-es
+which do not give process any special 5 handler and you have to
+open connection to given device. In Windows builds we explicitly
+set device name to "LPT1" but in *nix builds is "|lpr" what means
+PIPE to lpr process.
+
+best regards,
+Przemek
+
+
+
+2010/3/24 Richard Acosta <eyelagui@gmail.com>:
+> I have sent in the past 3 or 4 days a couple of messages but i dont see
+them
+> on the list, neither i had anu kind of answer.
+>
+> ¿Anything wrong?
+>
+> I'm writing from this account to this recipient:
+> harbour-users@harbour-project.org.
+>
+>
+>
+> El 24/03/2010 10:05 a.m., A.Martínez escribió:
+>>
+>> Hi,
+>>
+>> This sample shows:
+>> Harbour 2.0.0 - LPT1
+>> Clipper and xHarbour 1.0.0 - PRN
+>>
+>> Why is not mismatching ?
+>>
+>>
+>> FUNCTION Main()
+>>
+>> ? Set(24) // SET PRINTER TO command
+>>
+>> RETURN NIL
+>>
+>>
+>>
+>>
+>>
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+--
+Massimo Belgrano
+
+
+
+From alcisoft at arrakis.es  Thu Mar 25 17:29:50 2010
+From: alcisoft at arrakis.es (A.Martínez)
+Date: Thu Mar 25 17:34:50 2010
+Subject: [Harbour-users] anything about set printer to
+Message-ID: <hogksv$cli$1@dough.gmane.org>
+
+Hi,
+
+Is now possible :
+
+SET PRINT ON
+SET PRINTER TO (GetDefaultPrinter()
+
+@ 1, 10 SAY "I am compatible with Clipper and xHarbour"
+
+SET PRINTER TO
+SET DEVICE TO SCREEN
+
+
+Vikthor wrote >>>>>>>>>>>>>>>>>>
+Hi All,
+Above extension works in xhb but is not supported
+in Harbour. Actually for good reason, so my intent
+is not to propose it for inclusion, but I still wonder
+what is the easiest way (least code change) to achieve
+the same result in Harbour.
+[ NOTICE: This feature can only work if printer
+controls codes match those supported by the printer,
+and it's easily possible the printer doesn't support
+raw input _at all_. Plus it makes SET PRINTER TO
+incompatible. ]
+---
+SET PRINTER TO ( win_PrinterGetDefault() )
+...
+SET PRINTER TO
+---
+is equivalent to something like this in Harbour:
+--- [untested]
+LOCAL cTempName
+FClose( hb_FTempCreateEx( @cTempName ) )
+SET PRINTER TO ( cTempName )
+...
+SET PRINTER TO
+win_PrintFileRaw( win_PrinterGetDefault(), cTempName )
+FErase( cTempName )
+---
+Anyhow, this is my suggestion to xhb users wanting
+to switch to Harbour. If you know a better way, pls
+speak up.
+Brgds,
+Viktor
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+Regards
+
+
+
+From anezch at gmail.com  Mon Mar 29 23:34:32 2010
+From: anezch at gmail.com (Agustianes Umbara Suwardi)
+Date: Mon Mar 29 23:34:44 2010
+Subject: [Harbour-users] Error Logging
+Message-ID: <4BB17148.3040304@gmail.com>
+
+Dear All,
+
+I have a program that opens several windows with WOpen(). But when an 
+error occurs, I can't trace the program caused the error because the 
+error message is written to the window, and just after the error popup 
+closed, the windows are also closed. How can I change this behaviour, 
+e.g. to write the error trace message to a log file.
+
+I once had a program that when an error occured, it wrote to a file 
+hb_out.log or something. But I can't find how to get it in my new 
+program. I'm using Harbour 2.0 on Linux and GCC.
+
+Thank you,
+Agustianes.
+From eyelagui at gmail.com  Tue Mar 30 12:32:07 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Tue Mar 30 12:40:02 2010
+Subject: [Harbour-users] Documentation
+Message-ID: <4BB22787.5080109@gmail.com>
+
+I would like to get some documentation about graphical user interface 
+programming on Harbour.
+
+I can't find anything about gtwvg and would like to start on GUI, but 
+i'm stuck. I've read a lot about using that library for programming gui 
+applications, but absolutely nothing about how to.
+From eyelagui at gmail.com  Tue Mar 30 14:23:12 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Tue Mar 30 14:23:12 2010
+Subject: [Harbour-users] Finally!, but console opening when executing app.
+	harbour+hwgui
+Message-ID: <4BB24190.4050400@gmail.com>
+
+I finally achieve to compile hwgui, so i also achieved to compile my old 
+app using it.
+But now i have a console window opened at the same time the GUI application.
+My app compiled about 2 years ago, using the same procedure and 
+libs(changed names since then) does not open any console window.
+
+sample: http://s3.subirimagenes.com:81/imagen/previo/thump_4289108ejemo.png
+
+I think i have read something about gt libs is that right? but i cant 
+find it now.
+Should i use anything special? should i not use something?
+
+Thanks in advance.
+I'm using the following libs:
+
+hwgui.lib +
+procmisc.lib +
+hbxml.lib +
+hwg_qhtm.lib +
+hbrtl.lib +
+hbvm.lib +
+gtwin.lib +
+gtgui.lib +
+hblang.lib +
+hbmacro.lib +
+hbrdd.lib +
+rddntx.lib +
+rddcdx.lib +
+rddfpt.lib +
+hbcommon.lib +
+hbdebug.lib +
+hbpp.lib +
+hbsix.lib +
+From itamarlins at gmail.com  Tue Mar 30 15:11:39 2010
+From: itamarlins at gmail.com (Itamar Lins)
+Date: Tue Mar 30 15:50:21 2010
+Subject: [Harbour-users] Re: Finally!,
+	but console opening when executing app. harbour+hwgui
+In-Reply-To: <4BB24190.4050400@gmail.com>
+References: <4BB24190.4050400@gmail.com>
+Message-ID: <hotid6$5n8$1@dough.gmane.org>
+
+ANNOUNCE HB_GTSYS
+REQUEST HB_GT_GUI_DEFAULT
+REQUEST HB_GT_WIN
+Function main
+...
+
+With myfile.hbp -gui
+
+Best regards,
+Itamar M. Lins Jr.
+
+Em 30/3/2010 15:23, Richard Acosta escreveu:
+> I finally achieve to compile hwgui, so i also achieved to compile my old
+> app using it.
+> But now i have a console window opened at the same time the GUI
+> application.
+> My app compiled about 2 years ago, using the same procedure and
+> libs(changed names since then) does not open any console window.
+>
+> sample: http://s3.subirimagenes.com:81/imagen/previo/thump_4289108ejemo.png
+>
+> I think i have read something about gt libs is that right? but i cant
+> find it now.
+> Should i use anything special? should i not use something?
+>
+> Thanks in advance.
+> I'm using the following libs:
+>
+> hwgui.lib +
+> procmisc.lib +
+> hbxml.lib +
+> hwg_qhtm.lib +
+> hbrtl.lib +
+> hbvm.lib +
+> gtwin.lib +
+> gtgui.lib +
+> hblang.lib +
+> hbmacro.lib +
+> hbrdd.lib +
+> rddntx.lib +
+> rddcdx.lib +
+> rddfpt.lib +
+> hbcommon.lib +
+> hbdebug.lib +
+> hbpp.lib +
+> hbsix.lib +
+
+
+From bedipritpal at hotmail.com  Tue Mar 30 16:28:52 2010
+From: bedipritpal at hotmail.com (Pritpal Bedi)
+Date: Tue Mar 30 16:28:59 2010
+Subject: [Harbour-users] Documentation
+In-Reply-To: <4BB22787.5080109@gmail.com>
+References: <4BB22787.5080109@gmail.com>
+Message-ID: <SNT123-W129B4E8B97AE36467F073FA71F0@phx.gbl>
+
+
+Hi
+
+ 
+
+> I would like to get some documentation about graphical user interface 
+> programming on Harbour.
+> 
+> I can't find anything about gtwvg and would like to start on GUI, but 
+> i'm stuck. I've read a lot about using that library for programming gui 
+> applications, but absolutely nothing about how to.
+
+
+I did not wrote any documentation on GTWVG, the only source 
+
+on this topic is contrib/gtwvg/tests/demowvg.prg. It has everything
+
+you need to start experimenting.
+
+Regards
+ 
+Pritpal Bedi, a student of software analysis and design
+http://www.vouch.in  | Vouch, the software that GROWS with you
+http://www.vouch32.com  |  Home of Vouch32 ActiveX Server
+http://www.vouchcac.com/vouch32/vouch32.htm   |   A Free Windows Extended
+Utilities Library for Clipper, Xbase++ and (x)Harbour
+http://www.help.vouch.info | Online Vouch Help
+http://www.harbour.vouch.info | Online Harbour Help
+
+
+
+
+
+ 		 	   		  
+_________________________________________________________________
+Hotmail is redefining busy with tools for the New Busy. Get more from your inbox.
+http://www.windowslive.com/campaign/thenewbusy?ocid=PID27925::T:WLMTAGL:ON:WL:en-US:WM_HMP:032010_2
+From eyelagui at gmail.com  Wed Mar 31 01:11:59 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Wed Mar 31 01:11:59 2010
+Subject: [Harbour-users] Documentation
+In-Reply-To: <SNT123-W129B4E8B97AE36467F073FA71F0@phx.gbl>
+References: <4BB22787.5080109@gmail.com>
+	<SNT123-W129B4E8B97AE36467F073FA71F0@phx.gbl>
+Message-ID: <4BB2D99F.9080401@gmail.com>
+
+thanks for your answer.
+
+The thing is, i'm bad at test & error, if there's nothing else i?ll go 
+for it, but thanks again.
+
+
+El 30/03/2010 05:28 p.m., Pritpal Bedi escribi?:
+> Hi
+>
+>
+>
+>    
+>> I would like to get some documentation about graphical user interface
+>> programming on Harbour.
+>>
+>> I can't find anything about gtwvg and would like to start on GUI, but
+>> i'm stuck. I've read a lot about using that library for programming gui
+>> applications, but absolutely nothing about how to.
+>>      
+>
+> I did not wrote any documentation on GTWVG, the only source
+>
+> on this topic is contrib/gtwvg/tests/demowvg.prg. It has everything
+>
+> you need to start experimenting.
+>
+> Regards
+>
+> Pritpal Bedi, a student of software analysis and design
+> http://www.vouch.in  | Vouch, the software that GROWS with you
+> http://www.vouch32.com  |  Home of Vouch32 ActiveX Server
+> http://www.vouchcac.com/vouch32/vouch32.htm   |   A Free Windows Extended
+> Utilities Library for Clipper, Xbase++ and (x)Harbour
+> http://www.help.vouch.info | Online Vouch Help
+> http://www.harbour.vouch.info | Online Harbour Help
+>
+>
+>
+>
+>
+>   		 	   		
+> _________________________________________________________________
+> Hotmail is redefining busy with tools for the New Busy. Get more from your inbox.
+> http://www.windowslive.com/campaign/thenewbusy?ocid=PID27925::T:WLMTAGL:ON:WL:en-US:WM_HMP:032010_2_______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>    
+
+From eyelagui at gmail.com  Wed Mar 31 01:15:21 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Wed Mar 31 01:15:17 2010
+Subject: [Harbour-users] Re: Finally!, but console opening when executing
+	app. harbour+hwgui
+In-Reply-To: <hotid6$5n8$1@dough.gmane.org>
+References: <4BB24190.4050400@gmail.com> <hotid6$5n8$1@dough.gmane.org>
+Message-ID: <4BB2DA69.3060602@gmail.com>
+
+Thanks a lot.... !!!.
+
+El 30/03/2010 04:11 p.m., Itamar Lins escribi?:
+> ANNOUNCE HB_GTSYS
+> REQUEST HB_GT_GUI_DEFAULT
+> REQUEST HB_GT_WIN 
+From eyelagui at gmail.com  Wed Mar 31 01:31:51 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Wed Mar 31 01:31:50 2010
+Subject: [Harbour-users] Re: Finally!, but console opening when executing
+	app. harbour+hwgui
+In-Reply-To: <hotid6$5n8$1@dough.gmane.org>
+References: <4BB24190.4050400@gmail.com> <hotid6$5n8$1@dough.gmane.org>
+Message-ID: <4BB2DE47.9030703@gmail.com>
+
+Thanks again, but now some windows (mdichild) have black background. ?is 
+still me?
+
+
+
+El 30/03/2010 04:11 p.m., Itamar Lins escribi?:
+> ANNOUNCE HB_GTSYS
+> REQUEST HB_GT_GUI_DEFAULT
+> REQUEST HB_GT_WIN
+> Function main
+> ...
+>
+> With myfile.hbp -gui
+>
+> Best regards,
+> Itamar M. Lins Jr.
+>
+> Em 30/3/2010 15:23, Richard Acosta escreveu:
+>> I finally achieve to compile hwgui, so i also achieved to compile my old
+>> app using it.
+>> But now i have a console window opened at the same time the GUI
+>> application.
+>> My app compiled about 2 years ago, using the same procedure and
+>> libs(changed names since then) does not open any console window.
+>>
+>> sample: 
+>> http://s3.subirimagenes.com:81/imagen/previo/thump_4289108ejemo.png
+>>
+>> I think i have read something about gt libs is that right? but i cant
+>> find it now.
+>> Should i use anything special? should i not use something?
+>>
+>> Thanks in advance.
+>> I'm using the following libs:
+>>
+>> hwgui.lib +
+>> procmisc.lib +
+>> hbxml.lib +
+>> hwg_qhtm.lib +
+>> hbrtl.lib +
+>> hbvm.lib +
+>> gtwin.lib +
+>> gtgui.lib +
+>> hblang.lib +
+>> hbmacro.lib +
+>> hbrdd.lib +
+>> rddntx.lib +
+>> rddcdx.lib +
+>> rddfpt.lib +
+>> hbcommon.lib +
+>> hbdebug.lib +
+>> hbpp.lib +
+>> hbsix.lib +
+>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+From itamarlins at gmail.com  Wed Mar 31 19:09:33 2010
+From: itamarlins at gmail.com (Itamar M. Lins Jr. Lins)
+Date: Wed Mar 31 19:09:41 2010
+Subject: [Harbour-users] Re: Finally!, but console opening when executing 
+	app. harbour+hwgui
+In-Reply-To: <4BB2DE47.9030703@gmail.com>
+References: <4BB24190.4050400@gmail.com> <hotid6$5n8$1@dough.gmane.org>
+	<4BB2DE47.9030703@gmail.com>
+Message-ID: <j2g89c0927b1003311609r3de9498bg185c0e28cb39a026@mail.gmail.com>
+
+Hi!
+Please submit you ask to the group:
+http://br.groups.yahoo.com/group/hwguibr/
+
+Can ask in English or Spanish if you want.
+
+Best regards,
+Itamar M. Lins Jr.
+
+2010/3/31 Richard Acosta <eyelagui@gmail.com>
+
+> Thanks again, but now some windows (mdichild) have black background. ?is
+> still me?
+>
+>
+>
+>
+> El 30/03/2010 04:11 p.m., Itamar Lins escribi?:
+>
+>> ANNOUNCE HB_GTSYS
+>>
+>> REQUEST HB_GT_GUI_DEFAULT
+>> REQUEST HB_GT_WIN
+>> Function main
+>> ...
+>>
+>> With myfile.hbp -gui
+>>
+>> Best regards,
+>> Itamar M. Lins Jr.
+>>
+>> Em 30/3/2010 15:23, Richard Acosta escreveu:
+>>
+>>> I finally achieve to compile hwgui, so i also achieved to compile my old
+>>> app using it.
+>>> But now i have a console window opened at the same time the GUI
+>>> application.
+>>> My app compiled about 2 years ago, using the same procedure and
+>>> libs(changed names since then) does not open any console window.
+>>>
+>>> sample:
+>>> http://s3.subirimagenes.com:81/imagen/previo/thump_4289108ejemo.png
+>>>
+>>> I think i have read something about gt libs is that right? but i cant
+>>> find it now.
+>>> Should i use anything special? should i not use something?
+>>>
+>>> Thanks in advance.
+>>> I'm using the following libs:
+>>>
+>>> hwgui.lib +
+>>> procmisc.lib +
+>>> hbxml.lib +
+>>> hwg_qhtm.lib +
+>>> hbrtl.lib +
+>>> hbvm.lib +
+>>> gtwin.lib +
+>>> gtgui.lib +
+>>> hblang.lib +
+>>> hbmacro.lib +
+>>> hbrdd.lib +
+>>> rddntx.lib +
+>>> rddcdx.lib +
+>>> rddfpt.lib +
+>>> hbcommon.lib +
+>>> hbdebug.lib +
+>>> hbpp.lib +
+>>> hbsix.lib +
+>>>
+>>
+>>
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>

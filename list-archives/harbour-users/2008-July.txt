@@ -1,0 +1,75 @@
+From harbour-users at harbour-project.org  Wed Jul 23 20:15:05 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Tue Jul 22 18:13:34 2008
+Subject: [Harbour-users] Newbie Questions
+Message-ID: <003001c8ed22$55a692b0$1200a8c0@PORTATIL3>
+
+Hi all:
+
+I?m new at the Harbour, downloaded the latest build (1.0.0).
+Now, I want to create some small Windows32 exe, but I really don?t get it...
+
+For now, I found a BAT called BLD, which generates .c output and then its 
+supposed to link with MSVC to create the exe.
+
+LINK persistantly fails with a LNK1107 error.
+
+I feel I make some mistake on the compiler o link parameters.  Can anybody 
+tell me which are the correct parameters / switches for Harbour compiler and 
+link?
+
+TIA, Jan Sperling
+
+From harbour-users at harbour-project.org  Wed Jul 23 03:55:55 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed Jul 23 03:56:02 2008
+Subject: [Harbour-users] Newbie Questions
+In-Reply-To: <003001c8ed22$55a692b0$1200a8c0@PORTATIL3>
+References: <003001c8ed22$55a692b0$1200a8c0@PORTATIL3>
+Message-ID: <AFB948164110ED43B5EB849E8DEEF03815EE7D@SRV02.deltain.net>
+
+Use bld_b32 for BCC
+You can find more sample compiled using it.
+
+
+-----Original Message-----
+From: harbour-users-bounces@harbour-project.org [mailto:harbour-users-bounces@harbour-project.org] On Behalf Of harbour-users@harbour-project.org
+Sent: Thursday, July 24, 2008 2:15 AM
+To: harbour-users@harbour-project.org
+Subject: [Harbour-users] Newbie Questions
+
+Hi all:
+
+I?m new at the Harbour, downloaded the latest build (1.0.0).
+Now, I want to create some small Windows32 exe, but I really don?t get it...
+
+For now, I found a BAT called BLD, which generates .c output and then its 
+supposed to link with MSVC to create the exe.
+
+LINK persistantly fails with a LNK1107 error.
+
+I feel I make some mistake on the compiler o link parameters.  Can anybody 
+tell me which are the correct parameters / switches for Harbour compiler and 
+link?
+
+TIA, Jan Sperling
+
+_______________________________________________
+Harbour-users mailing list
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+From harbour-users at harbour-project.org  Wed Jul 23 14:01:25 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed Jul 23 14:01:30 2008
+Subject: [Harbour-users] Creating my own library
+Message-ID: <f5ce776c0807231101v316b17c8yb889409768e5d0a4@mail.gmail.com>
+
+Hello
+I am an old clipper programmer, but a new user of harbour.
+I made a lot of small library with clipper (.lib files), how can i make the
+same library (.lib files) for harbour under win32 and bcc32 compiler?
+Thers some specific paramaters?  i must use the old lib.exe? Can tell me
+how  proceed?
+How can i made the same library files under linux ubuntu?
+Thank You
+Ottaviano Ministrini

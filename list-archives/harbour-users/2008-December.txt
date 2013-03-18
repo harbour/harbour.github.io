@@ -1,0 +1,349 @@
+From harbour-users at harbour-project.org  Mon Dec  1 15:23:13 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Dec  1 15:23:17 2008
+Subject: [Harbour-users] hb_openprocess() and hb_processvalue()
+Message-ID: <89c0927b0812011223h67af4f9ey6ffd6e158c7cd54e@mail.gmail.com>
+
+Hi!
+In the Hwgui a programers add this new function, but no compatible with
+Harbour.
+Can anybody add this function into xhb.lib ?
+
+TIA,
+Itamar M. Lins Jr.
+
+
+FUNCTION WAITRUN( cRun )
+Local hIn, hOut, nRet, hProc
+   // "Launching process", cProc
+   hProc := HB_OpenProcess( cRun , @hIn, @hOut, @hOut )
+
+   // "Reading output"
+   // "Waiting for process termination"
+   nRet := HB_ProcessValue( hProc )
+
+   FClose( hProc )
+   FClose( hIn )
+   FClose( hOut )
+
+   Return nRet
+
+// This example implements a parent process launching a child process
+// (it is shown in the next example).
+
+   PROCEDURE Main()
+      LOCAL cData  := "Hello World"
+      LOCAL cEXE   := "ChildProc.exe"
+      LOCAL nBytes, nChild, nError, nStdIN, nStdOUT, nStdERR
+
+      CLS
+      ? "Opening child process:", cEXE
+
+      nChild := HB_OpenProcess( cEXE, @nStdIN, @nStdOUT, @nStdERR )
+
+      IF nChild < 0
+         ? "Error:", FError()
+         QUIT
+      ENDIF
+
+      ? "Sending data         :", FWrite( nStdIN, cData )
+
+      ? "Receiving data       : "
+      cData := Space( 1000 )
+      nBytes := Fread( nStdOUT, @cData, Len(cData) )
+      ?? Left( cData, nBytes )
+
+      ? "Reading errors       : "
+      cData := Space( 1000 )
+      nBytes := Fread( nStdERR, @cData, Len(cData) )
+      ?? Left( cData, nBytes )
+
+      ? "Waiting for end      :", HB_ProcessValue( nChild )
+
+      FClose( nChild )
+      FClose( nStdIN )
+      FClose( nStdOUT )
+      FClose( nStdERR )
+   RETURN
+From harbour-users at harbour-project.org  Thu Dec  4 12:02:10 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Thu Dec  4 12:02:15 2008
+Subject: [Harbour-users] Please join to Harbour group on facebook!
+Message-ID: <609353e70812040902g38062ffbo45e9f0d0bbf0a96b@mail.gmail.com>
+
+Now is created an harbour group on facebook
+http://www.facebook.com/groups/edit.php?customize&gid=48795263775#/group.php?gid=48795263775
+
+This is a usergroup for people who apreciate Harbour & Clipper
+Harbour is a modern, fast, open source, computer programming language.
+It is a Clipper-compatible compiler which is cross-platform
+
+I invite everybody post as photo screenshot of application made with
+harbour!
+Post library used and little description of application
+So we have a big collection of this works
+
+-- 
+Massimo Belgrano
+From harbour-users at harbour-project.org  Fri Dec  5 14:24:16 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Dec  5 14:24:26 2008
+Subject: [Harbour-users] FreeBSD Port (Was:  "New" User - Intro)
+In-Reply-To: <alpine.LNX.2.00.0811102026490.18283@Damaris.RawFedDogs.net>
+References: <alpine.LNX.2.00.0811102026490.18283@Damaris.RawFedDogs.net>
+Message-ID: <alpine.LNX.2.00.0812051300330.29569@Blaidd-Drwg.RawFedDogs.net>
+
+Clipper Fans,
+
+On Mon, 10 Nov 2008, Kevin Monceaux wrote:
+
+> P.S.  If anyone here is the FreeBSD harbour port maintainer or has 
+> contact with him/her, the version of Harbour in the FreeBSD ports tree 
+> is 0.44.0. It looks like it might be time for an update.
+
+Well, this seemed like a good excuse to expand my knowledge.  I hadn't 
+tried to do anything more adventurous to a FreeBSD port then adding a 
+patch, etc.  After some tinkering I now have a Harbour 1.0.1 FreeBSD port 
+that's working well enough for my needs.  With a little more polishing I 
+might even be brave enough to try submitting it to FreeBSD.  :-)
+
+Whoever created the 0.44.0 port added an additional Makefile and script. 
+The port's Makefile executed the added Makefile, which in turn called the 
+added script.  That script set several Harbour environment variables to 
+control the build, changed to the source dir, and finally executed 
+Harbour's Makefile, via gmake.  I've stripped out the unneeded layers of 
+confusion and set all the environment variables in the port's Makefile.
+
+So, anyway, I have a few questions to aid in the polishing.  Has the 
+Harbour development team ever considered using a ./configure script 
+instead of various environment variables?  It would greatly simplify 
+creating Harbour packages on source based, and a few binary based, Linux 
+distros, not to mention FreeBSD, etc.  Most distros with automated build 
+systems prefer building via:
+
+    ./configure -> make -> make install
+
+Where can I find documentation on all the environment variables available 
+to control building Harbour?  I found some in make_gcc.mak but it doesn't 
+appear to be a complete list.  HB_WITHOUT_X11, for example, isn't 
+documented there.
+
+The various *.txt files under doc and the Makefiles under doc appear to be 
+out of sync.  Some docs get omitted if I set HB_DOC_INSTALL.  Is there an
+environment variable to enable installing the man pages?  I don't even see 
+a Makefile in doc/man.  For the moment I'm just installing the docs and 
+man pages via the port's Makefile.
+
+
+
+Kevin
+http://www.RawFedDogs.net
+http://www.WacoAgilityGroup.org
+Bruceville, TX
+
+Si hoc legere scis nimium eruditionis habes.
+Longum iter est per praecepta, breve et efficax per exempla!!!
+
+From harbour-users at harbour-project.org  Fri Dec  5 20:12:54 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Dec  5 20:13:09 2008
+Subject: [Harbour-users] OutStd() Pipe Question
+Message-ID: <alpine.LNX.2.00.0812051845250.29569@Blaidd-Drwg.RawFedDogs.net>
+
+Clipper Fans,
+
+Is there any special compile/link flags one needs to use or 
+commands/functions one needs to call within a program who's output is 
+intended to be piped to another program?  I'm experiencing some odd 
+behavior trying to pipe program output to less, grep, etc.  For example, 
+with the following program:
+
+Function Main()
+
+Local i
+
+For i = 1 to 500
+     OutStd("Line:  ", str(i), HB_OSNewLine()) 
+Next
+
+Return
+
+If I compile/link with hbcmp/hblnk then run the program on a Gentoo Linux 
+box and pipe it's output to less, it displays one screen full of the 
+output and less exits.  With my current rxvt-unicode font settings it's 
+displaying the first 35 lines of output.  On FreeBSD it displays the same 
+number of lines, but with a stair-step effect.  I also tried the same 
+program on the Gentoo box on a virtual console.  It also displayed one 
+screen full of output, in that case through line 24, then less exited. 
+With other programs I'm seeing similar strangeness such as only displaying 
+half a screen worth of the output in some cases.  In other cases the 
+output looks normal and less works correctly until I page all the way down 
+to the last line of output then less stops interpreting the cursor 
+movement keys correctly.
+
+
+
+P.S.  Is there a problem with this mailing list's settings?  All messages 
+from the list have Harbour-Users@Harbour-Project.org in their From header 
+instead of the original poster's address.
+
+
+
+Kevin
+http://www.RawFedDogs.net
+http://www.WacoAgilityGroup.org
+Bruceville, TX
+
+Si hoc legere scis nimium eruditionis habes.
+Longum iter est per praecepta, breve et efficax per exempla!!!
+
+From harbour-users at harbour-project.org  Fri Dec 12 14:48:51 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Dec 12 14:48:55 2008
+Subject: [Harbour-users] GTWVG ERROR
+Message-ID: <89c0927b0812121148j76a33263n3a95ddc3e34b07f3@mail.gmail.com>
+
+ * $Id: ChangeLog 9977 2008-12-12 18:14:26Z vouchcac $
+MAKE Version 5.2  Copyright (c) 1987, 2000 Borland
+ ..\..\bin\b32\harbour.exe -i..\..\include -n -q0 -w3 -es2 -km -l
+-oobj\b32\\ .\wvgwnd.prg
+
+.\wvgwnd.prg(451) Warning W0001  Ambiguous reference 'ASIZE'
+
+.\wvgwnd.prg(452) Warning W0001  Ambiguous reference 'ASIZE'
+
+.\wvgwnd.prg(559) Warning W0001  Ambiguous reference 'COLFFONT'
+
+** error 1 ** deleting obj\b32\wvgwnd.obj
+
+Thanks!
+Itamar M. Lins Jr.
+From harbour-users at harbour-project.org  Sat Dec 13 05:18:28 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sat Dec 13 05:18:32 2008
+Subject: [Harbour-users] GTWVG ERROR
+In-Reply-To: <89c0927b0812121148j76a33263n3a95ddc3e34b07f3@mail.gmail.com>
+References: <89c0927b0812121148j76a33263n3a95ddc3e34b07f3@mail.gmail.com>
+Message-ID: <609353e70812130218y7413967dg691953d3ea04eb99@mail.gmail.com>
+
+Now seem work fine
+Reload svn and retry
+
+2008/12/12 <harbour-users@harbour-project.org>
+
+>  * $Id: ChangeLog 9977 2008-12-12 18:14:26Z vouchcac $
+> MAKE Version 5.2  Copyright (c) 1987, 2000 Borland
+>  ..\..\bin\b32\harbour.exe -i..\..\include -n -q0 -w3 -es2 -km -l
+> -oobj\b32\\ .\wvgwnd.prg
+>
+> .\wvgwnd.prg(451) Warning W0001  Ambiguous reference 'ASIZE'
+>
+> .\wvgwnd.prg(452) Warning W0001  Ambiguous reference 'ASIZE'
+>
+> .\wvgwnd.prg(559) Warning W0001  Ambiguous reference 'COLFFONT'
+>
+> ** error 1 ** deleting obj\b32\wvgwnd.obj
+>
+> Thanks!
+> Itamar M. Lins Jr.
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From harbour-users at harbour-project.org  Mon Dec 15 07:16:29 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Dec 15 07:16:32 2008
+Subject: [Harbour-users] Prompt with color flag = error
+Message-ID: <89c0927b0812150416q47eeb2actdb9d5d68a7a17a7c@mail.gmail.com>
+
+Hi!
+
+With xHarbour works fine but show error with Harbour. :-(
+
+
+@ 05,20 prompt 'Codigo da Mercadoria' color 'n/w'
+@ 06,20 prompt 'Descricao do Produto' color 'n/w'
+
+E0030 Syntax error: syntax error at '@'
+
+
+Tks!
+Itamar M. Lins Jr.
+From harbour-users at harbour-project.org  Mon Dec 15 08:47:08 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Dec 15 08:47:13 2008
+Subject: [Harbour-users] RadioButton function not found.
+Message-ID: <89c0927b0812150547t7b075a31s4cdb6c512cfc9728@mail.gmail.com>
+
+Local aItems:=[2]
+
+SET EVENTMASK TO INKEY_ALL
+
+aitems[1] := RadioButton( 11,31,"&Alfabetica")
+aitems[2] := RadioButton( 12,31,"&Numero")
+@ 10,30 clear to 13,46
+@ 10,30,13,46 get citem radiogroup aitems color 'w/b+,r/b,g/b+' MESSAGE
+"Escolha Uma Opcao"
+read msg AT maxrow(), 0, maxcol()+12 MSG Color "n/gb"
+
+Unresolved external _HB_FUN_RADIOBUTTON referenced from ...
+
+
+Tks!
+Itamar M. Lins Jr.
+From harbour-users at harbour-project.org  Tue Dec 30 11:11:29 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Tue Dec 30 11:11:33 2008
+Subject: [Harbour-users] Happy New Year
+Message-ID: <609353e70812300811m5dac0351t39e3985611af3dbc@mail.gmail.com>
+
+*                                                                _
+ _   _                     _    _             _  _             | |
+/|   |\                    |\   |\            /  |\            |_|
+ |___|  _   _    _         | \  |  _         /   |  _   _  ,_   _
+ |   | / | | \  | \  / |   |  \ | /_\ / / |  \___|//_\ / | | ` / \
+\|   |/\_|/|_/_/|_/_/\_|  \|   \| \__/\_\_|     /| \__/\_|/|   \_/
+     '     |    |     /|        `              ( |
+           |    |     \|                        \|
+                                                 . `:
+                                                : : .
+                                                 : .
+                                                [""]
+                                                |  |
+                                                |  |
+                                                |  |
+                                       :       .'--`.
+                   _..-~-.._         : .:     /`.__.'\
+                 .'         `.      :    .   /        \
+               .'  .-'''''-.  `.   ,-'``'-. ;          ;
+              /  ,'   XII   `.  \  |`-..-'| |   ,--.   |
+             /  /     /|\     \  \ | .   :| |_.','`.`._|
+             | ;       |       ; | | . :  | |--'2009`--|
+             | |IX     o    III| | |`-..-'| ||   | | | |
+             | ;               ; | \::::::/ ||)|/|)|)|\|
+             |  \             /  |  `::::'  |._ ~**~ _.|
+       ------|   `.   V I   ,'   |----)(----|  `-..-'  |-------
+        _____j     `-.....-'     |    )(    |          |,--.
+   ____/ /  /\\ ,-._.--------.-.-' ,-')('-. |          |\`;/
+.-()___  :  |`.!,-'`'/`-._  (___) (  '  `  )`-._    _.-'|;,|
+`-,    \_\__\`,-'>-.,-._           `-....-'     ````    `--'  hjw
+  `-._       (`- `-._`-.`
+
+*
+
+
+
+-- 
+Massimo Belgrano
+From harbour-users at harbour-project.org  Tue Dec 30 11:35:05 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Tue Dec 30 11:35:08 2008
+Subject: [Harbour-users] Happy New Year
+In-Reply-To: <609353e70812300811m5dac0351t39e3985611af3dbc@mail.gmail.com>
+References: <609353e70812300811m5dac0351t39e3985611af3dbc@mail.gmail.com>
+Message-ID: <edff235e0812300835q72000f3aw21f5c50721bde628@mail.gmail.com>
+
+Also to You !
+
+Adam

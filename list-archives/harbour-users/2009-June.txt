@@ -1,0 +1,17 @@
+From harbour-users at harbour-project.org  Sun Jun 14 14:20:48 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Tue Jun 16 01:55:53 2009
+Subject: [Harbour-users] FindWindow and Harbour console app
+Message-ID: <4FAFE91F22A04CC9A678FCE56CECA56E@VLADO>
+
+Hi 
+
+I wish in Harbor console APP
+
+prevent the repeatedly bootstrap.
+
+For this have used the procedure from MINIGUI 
+
+but there is the function FindWindow,
+
+Have Harbour that function or procedure.

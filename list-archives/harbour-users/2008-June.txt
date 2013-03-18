@@ -1,0 +1,613 @@
+From harbour-users at harbour-project.org  Sat Jun  7 05:51:06 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sat Jun  7 05:51:14 2008
+Subject: [Harbour-users] Welcome
+Message-ID: <AFB948164110ED43B5EB849E8DEEF03815ECE0@SRV02.deltain.net>
+
+Welcome in Harbour user mailing list
+
+Massimo Belgrano
+
+From harbour-users at harbour-project.org  Sun Jun  8 22:16:51 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sun Jun  8 22:16:58 2008
+Subject: [Harbour-users] compiling apps on linux (fedora) - linker
+Message-ID: <484C9293.4010404@duplication.ca>
+
+Hi,
+
+I have installed harbour RC1 on a Fedora 6 system. I compiled harbour OK. Now I am trying 
+to compile some programs.
+
+For example I go to contrib/examples/misc. There is a Makefile but I have no idea how to 
+run any make utility on it. Is there some way to use these Makefiles?
+
+So I run:
+
+  hbmake -ex guess.gc
+
+hbmake runs and I have the object files but there is no executable file anywhere.  I guess 
+the linker is not being called. So what is the next step to run the linker?
+
+Thanks
+George
+
+
+From harbour-users at harbour-project.org  Mon Jun  9 09:23:02 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Jun  9 09:23:08 2008
+Subject: [Harbour-users] compiling apps on linux (fedora) - linker
+In-Reply-To: <484C9293.4010404@duplication.ca>
+References: <484C9293.4010404@duplication.ca>
+Message-ID: <AFB948164110ED43B5EB849E8DEEF03815ECFB@SRV02.deltain.net>
+
+I am not a linux user but make system for linux is done by Hbmk, hblnk,
+hbcc
+I request in developer list if same linux user will be help you
+
+-----Original Message-----
+From: harbour-users-bounces@harbour-project.org
+[mailto:harbour-users-bounces@harbour-project.org] On Behalf Of
+harbour-users@harbour-project.org
+Sent: Monday, June 09, 2008 4:17 AM
+To: harbour-users@harbour-project.org
+Subject: [Harbour-users] compiling apps on linux (fedora) - linker
+
+Hi,
+
+I have installed harbour RC1 on a Fedora 6 system. I compiled harbour
+OK. Now I am trying 
+to compile some programs.
+
+For example I go to contrib/examples/misc. There is a Makefile but I
+have no idea how to 
+run any make utility on it. Is there some way to use these Makefiles?
+
+So I run:
+
+  hbmake -ex guess.gc
+
+hbmake runs and I have the object files but there is no executable file
+anywhere.  I guess 
+the linker is not being called. So what is the next step to run the
+linker?
+
+Thanks
+George
+
+
+_______________________________________________
+Harbour-users mailing list
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+From harbour-users at harbour-project.org  Mon Jun  9 09:31:33 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Jun  9 09:31:36 2008
+Subject: [Harbour-users] About make in Linux
+Message-ID: <edff235e0806090631q22d02c7v382e8eb7c5f0dc59@mail.gmail.com>
+
+Please look at my page :
+http://www.abix.info.pl/kompilator-harbour,56.html
+
+You will find there some info about how to "make" with harbour.
+
+Best Regards,
+Adam
+From harbour-users at harbour-project.org  Mon Jun  9 09:35:18 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Jun  9 09:35:27 2008
+Subject: [Harbour-users] About make in Linux
+In-Reply-To: <edff235e0806090631q22d02c7v382e8eb7c5f0dc59@mail.gmail.com>
+References: <edff235e0806090631q22d02c7v382e8eb7c5f0dc59@mail.gmail.com>
+Message-ID: <AFB948164110ED43B5EB849E8DEEF03815ECFE@SRV02.deltain.net>
+
+Have you also a english version for harbour web site?
+
+-----Original Message-----
+From: harbour-users-bounces@harbour-project.org
+[mailto:harbour-users-bounces@harbour-project.org] On Behalf Of
+harbour-users@harbour-project.org
+Sent: Monday, June 09, 2008 3:32 PM
+To: harbour-users@harbour-project.org
+Subject: [Harbour-users] About make in Linux
+
+Please look at my page :
+http://www.abix.info.pl/kompilator-harbour,56.html
+
+You will find there some info about how to "make" with harbour.
+
+Best Regards,
+Adam
+_______________________________________________
+Harbour-users mailing list
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+From harbour-users at harbour-project.org  Mon Jun  9 09:59:53 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Jun  9 09:59:57 2008
+Subject: [Harbour-users] About make in Linux
+In-Reply-To: <AFB948164110ED43B5EB849E8DEEF03815ECFE@SRV02.deltain.net>
+References: <edff235e0806090631q22d02c7v382e8eb7c5f0dc59@mail.gmail.com>
+	<AFB948164110ED43B5EB849E8DEEF03815ECFE@SRV02.deltain.net>
+Message-ID: <edff235e0806090659k666ffd8ate7306bfe1df3171d@mail.gmail.com>
+
+No, I don't have it, but howto's are in english.
+Adam
+
+2008/6/9 <harbour-users@harbour-project.org>:
+
+> Have you also a english version for harbour web site?
+>
+> -----Original Message-----
+> From: harbour-users-bounces@harbour-project.org
+> [mailto:harbour-users-bounces@harbour-project.org] On Behalf Of
+> harbour-users@harbour-project.org
+> Sent: Monday, June 09, 2008 3:32 PM
+> To: harbour-users@harbour-project.org
+> Subject: [Harbour-users] About make in Linux
+>
+> Please look at my page :
+> http://www.abix.info.pl/kompilator-harbour,56.html
+>
+> You will find there some info about how to "make" with harbour.
+>
+> Best Regards,
+> Adam
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From harbour-users at harbour-project.org  Mon Jun  9 10:16:57 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Jun  9 10:17:03 2008
+Subject: [Harbour-users] About make in Linux
+In-Reply-To: <edff235e0806090659k666ffd8ate7306bfe1df3171d@mail.gmail.com>
+References: <edff235e0806090631q22d02c7v382e8eb7c5f0dc59@mail.gmail.com><AFB948164110ED43B5EB849E8DEEF03815ECFE@SRV02.deltain.net>
+	<edff235e0806090659k666ffd8ate7306bfe1df3171d@mail.gmail.com>
+Message-ID: <AFB948164110ED43B5EB849E8DEEF03815ED01@SRV02.deltain.net>
+
+Ops sorry i don't open link
+
+-----Original Message-----
+From: harbour-users-bounces@harbour-project.org
+[mailto:harbour-users-bounces@harbour-project.org] On Behalf Of
+harbour-users@harbour-project.org
+Sent: Monday, June 09, 2008 4:00 PM
+To: Users of the Harbour compiler
+Subject: Re: [Harbour-users] About make in Linux
+
+No, I don't have it, but howto's are in english.
+Adam
+
+2008/6/9 <harbour-users@harbour-project.org>:
+
+> Have you also a english version for harbour web site?
+>
+> -----Original Message-----
+> From: harbour-users-bounces@harbour-project.org
+> [mailto:harbour-users-bounces@harbour-project.org] On Behalf Of
+> harbour-users@harbour-project.org
+> Sent: Monday, June 09, 2008 3:32 PM
+> To: harbour-users@harbour-project.org
+> Subject: [Harbour-users] About make in Linux
+>
+> Please look at my page :
+> http://www.abix.info.pl/kompilator-harbour,56.html
+>
+> You will find there some info about how to "make" with harbour.
+>
+> Best Regards,
+> Adam
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+_______________________________________________
+Harbour-users mailing list
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+From harbour-users at harbour-project.org  Mon Jun  9 21:28:57 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Jun  9 21:29:07 2008
+Subject: [Harbour-users] compiling apps on linux (fedora) - linker
+In-Reply-To: <AFB948164110ED43B5EB849E8DEEF03815ECFB@SRV02.deltain.net>
+References: <484C9293.4010404@duplication.ca>
+	<AFB948164110ED43B5EB849E8DEEF03815ECFB@SRV02.deltain.net>
+Message-ID: <484DD8D9.9060200@duplication.ca>
+
+I do not find any of these utilities like hblnk in my harbour RC1 installation.  Am I 
+supposed to find them? Maybe I installed the wrong way? All I did to install was run 
+make_gcc.sh.
+
+I am able to run simple programs by hbrun. And I can run simple programs using the 
+#!/usr/bin/hbrun as the first line of the prg.
+
+I found an old version of hb-build (hblnk) in my backups and installed it but nothing 
+happens when I run it.
+
+Main question is: Am I supposed to find hb-build/hblnk in the current RC1, or is there a 
+new way to build using the config files?
+
+Thanks
+
+George
+
+
+
+
+
+harbour-users@harbour-project.org wrote:
+> I am not a linux user but make system for linux is done by Hbmk, hblnk,
+> hbcc
+> I request in developer list if same linux user will be help you
+> 
+> -----Original Message-----
+> From: harbour-users-bounces@harbour-project.org
+> [mailto:harbour-users-bounces@harbour-project.org] On Behalf Of
+> harbour-users@harbour-project.org
+> Sent: Monday, June 09, 2008 4:17 AM
+> To: harbour-users@harbour-project.org
+> Subject: [Harbour-users] compiling apps on linux (fedora) - linker
+> 
+> Hi,
+> 
+> I have installed harbour RC1 on a Fedora 6 system. I compiled harbour
+> OK. Now I am trying 
+> to compile some programs.
+> 
+> For example I go to contrib/examples/misc. There is a Makefile but I
+> have no idea how to 
+> run any make utility on it. Is there some way to use these Makefiles?
+> 
+> So I run:
+> 
+>   hbmake -ex guess.gc
+> 
+> hbmake runs and I have the object files but there is no executable file
+> anywhere.  I guess 
+> the linker is not being called. So what is the next step to run the
+> linker?
+> 
+> Thanks
+> George
+> 
+> 
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> 
+
+From harbour-users at harbour-project.org  Tue Jun 10 12:16:31 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Tue Jun 10 12:16:36 2008
+Subject: [Harbour-users] compiling apps on linux (fedora) - linker
+In-Reply-To: <484DD8D9.9060200@duplication.ca>
+References: <484C9293.4010404@duplication.ca>
+	<AFB948164110ED43B5EB849E8DEEF03815ECFB@SRV02.deltain.net>
+	<484DD8D9.9060200@duplication.ca>
+Message-ID: <edff235e0806100916p5343b3bfj72ad383497755e22@mail.gmail.com>
+
+2008/6/10 <harbour-users@harbour-project.org>:
+>
+> I do not find any of these utilities like hblnk in my harbour RC1 installation.  Am I supposed to find them? Maybe I installed the wrong way? All I did to install was run make_gcc.sh.
+
+George,
+
+1st of all, get ALL RPMs from my web site.
+
+adasiek@abix-acer:~/RPM/RPMS/i586> ll
+razem 4324
+-rw-r--r-- 1 adasiek users 1470409 VI  5 19:08 harbour-1.0.0-RC1.i586.rpm
+-rw-r--r-- 1 adasiek users  431895 VI  5 19:08
+harbour-contrib-1.0.0-RC1.i586.rpm
+-rw-r--r-- 1 adasiek users 1221749 VI  5 19:08 harbour-lib-1.0.0-RC1.i586.rpm
+-rw-r--r-- 1 adasiek users 1264414 VI  5 19:08 harbour-static-1.0.0-RC1.i586.rpm
+
+
+
+Then, install them as user root using rpm -ivh * command.
+Then, you should have in /usr/bin :
+adasiek@abix-acer:/usr/bin> ll hb*
+-rwxr-xr-x 1 root root  13012 VI  5 19:08 hb-build
+lrwxrwxrwx 1 root root      8 VI  5 20:15 hbcc -> hb-build
+lrwxrwxrwx 1 root root      8 VI  5 20:15 hbcmp -> hb-build
+-rwxr-xr-x 1 root root 161284 IX  1  2007 hbdoc
+-rwxr-xr-x 1 root root 121344 VI  5 19:08 hbdot
+lrwxrwxrwx 1 root root      8 VI  5 20:15 hblnk -> hb-build
+-rwxr-xr-x 1 root root 156708 VI  5 19:08 hbmake
+lrwxrwxrwx 1 root root      8 VI  5 20:15 hbmk -> hb-build
+-rwxr-xr-x 1 root root   4077 VI  5 19:08 hb-mkslib
+-rwxr-xr-x 1 root root 106863 VI  5 19:08 hbpp
+-rwxr-xr-x 1 root root 116848 VI  5 19:08 hbrun
+-rwxr-xr-x 1 root root 318680 IX  1  2007 hbtest
+-rwxr-xr-x 1 root root  14506 IX  1  2007 hbverfix
+
+These scripts are in harbour-1.0.0-RC1.i586.rpm.
+Thats all.
+
+Best regards
+Adam
+From harbour-users at harbour-project.org  Tue Jun 10 13:11:53 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Tue Jun 10 13:11:57 2008
+Subject: [Harbour-users] compiling apps on linux (fedora) - linker
+In-Reply-To: <484DD8D9.9060200@duplication.ca>
+References: <484C9293.4010404@duplication.ca>
+	<AFB948164110ED43B5EB849E8DEEF03815ECFB@SRV02.deltain.net>
+	<484DD8D9.9060200@duplication.ca>
+Message-ID: <edff235e0806101011k27ff871fh9865919685c2459f@mail.gmail.com>
+
+2008/6/10  <harbour-users@harbour-project.org>:
+> I do not find any of these utilities like hblnk in my harbour RC1
+> installation.  Am I supposed to find them? Maybe I installed the wrong way?
+> All I did to install was run make_gcc.sh.
+
+My Web page with RPMs Harbour RC1 :
+http://www.abix.info.pl/kompilator-harbour,56.html
+
+Adam
+From harbour-users at harbour-project.org  Wed Jun 11 20:27:48 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed Jun 11 20:28:03 2008
+Subject: [Harbour-users] compiling apps on linux (fedora) - linker
+In-Reply-To: <edff235e0806100916p5343b3bfj72ad383497755e22@mail.gmail.com>
+References: <484C9293.4010404@duplication.ca>	<AFB948164110ED43B5EB849E8DEEF03815ECFB@SRV02.deltain.net>	<484DD8D9.9060200@duplication.ca>
+	<edff235e0806100916p5343b3bfj72ad383497755e22@mail.gmail.com>
+Message-ID: <48506D84.2000105@duplication.ca>
+
+Hi Adam,
+
+Thanks for the tip to use rpm. I wanted to try to compile it myself and finally succeeded. 
+For users who may be interested, here is how I was able to compile from source.
+
+Trying make_rpm.sh I had an error about "invalid option -ta". I found a bunch of rpm 
+development tools that had to be upgraded or installed.
+
+Also at some point I had an error about invalid character "-" so I removed it in 
+harbour.spec line 0.9.9-RC1...
+
+Then make fails at hbmake. Needs some X11 libs. Installed libX11...
+
+I found I had old harbour rpms installed so I had to find and delete them:
+
+rpm -qa | grep harbour
+rpm -e harbour.....
+
+Then from /usr/source/redhat/RPMS/i386 it works: rpm -ivh *
+
+And now I can compile and link simple programs using hbmk.
+
+So I go on to a more complex example like contrib/examples/pe and it doesn't work. 
+editorlo.c is not compiling. No big deal, I just go on to my own needs.
+
+Now I can compile and link a CGI program I wrote for my online store shipping calculator. 
+Now I get shipping rates in milliseconds instead of waiting for many seconds for UPS or 
+canadapost servers to answer.
+
+Thanks to the harbour developers for working on this great harbour compiler.
+
+George
+
+
+
+
+harbour-users@harbour-project.org wrote:
+> 2008/6/10 <harbour-users@harbour-project.org>:
+>> I do not find any of these utilities like hblnk in my harbour RC1 installation.  Am I supposed to find them? Maybe I installed the wrong way? All I did to install was run make_gcc.sh.
+> 
+> George,
+> 
+> 1st of all, get ALL RPMs from my web site.
+> 
+> adasiek@abix-acer:~/RPM/RPMS/i586> ll
+> razem 4324
+> -rw-r--r-- 1 adasiek users 1470409 VI  5 19:08 harbour-1.0.0-RC1.i586.rpm
+> -rw-r--r-- 1 adasiek users  431895 VI  5 19:08
+> harbour-contrib-1.0.0-RC1.i586.rpm
+> -rw-r--r-- 1 adasiek users 1221749 VI  5 19:08 harbour-lib-1.0.0-RC1.i586.rpm
+> -rw-r--r-- 1 adasiek users 1264414 VI  5 19:08 harbour-static-1.0.0-RC1.i586.rpm
+> 
+> 
+> 
+> Then, install them as user root using rpm -ivh * command.
+> Then, you should have in /usr/bin :
+> adasiek@abix-acer:/usr/bin> ll hb*
+> -rwxr-xr-x 1 root root  13012 VI  5 19:08 hb-build
+> lrwxrwxrwx 1 root root      8 VI  5 20:15 hbcc -> hb-build
+> lrwxrwxrwx 1 root root      8 VI  5 20:15 hbcmp -> hb-build
+> -rwxr-xr-x 1 root root 161284 IX  1  2007 hbdoc
+> -rwxr-xr-x 1 root root 121344 VI  5 19:08 hbdot
+> lrwxrwxrwx 1 root root      8 VI  5 20:15 hblnk -> hb-build
+> -rwxr-xr-x 1 root root 156708 VI  5 19:08 hbmake
+> lrwxrwxrwx 1 root root      8 VI  5 20:15 hbmk -> hb-build
+> -rwxr-xr-x 1 root root   4077 VI  5 19:08 hb-mkslib
+> -rwxr-xr-x 1 root root 106863 VI  5 19:08 hbpp
+> -rwxr-xr-x 1 root root 116848 VI  5 19:08 hbrun
+> -rwxr-xr-x 1 root root 318680 IX  1  2007 hbtest
+> -rwxr-xr-x 1 root root  14506 IX  1  2007 hbverfix
+> 
+> These scripts are in harbour-1.0.0-RC1.i586.rpm.
+> Thats all.
+> 
+> Best regards
+> Adam
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> 
+
+From harbour-users at harbour-project.org  Thu Jun 12 03:19:00 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Thu Jun 12 03:19:03 2008
+Subject: [Harbour-users] compiling apps on linux (fedora) - linker
+In-Reply-To: <48506D84.2000105@duplication.ca>
+References: <484C9293.4010404@duplication.ca>
+	<AFB948164110ED43B5EB849E8DEEF03815ECFB@SRV02.deltain.net>
+	<484DD8D9.9060200@duplication.ca>
+	<edff235e0806100916p5343b3bfj72ad383497755e22@mail.gmail.com>
+	<48506D84.2000105@duplication.ca>
+Message-ID: <edff235e0806120019l53b43f8cqb76b42fec2106873@mail.gmail.com>
+
+2008/6/12  <harbour-users@harbour-project.org>:
+> Hi Adam,
+>
+> Thanks for the tip to use rpm. I wanted to try to compile it myself and
+> finally succeeded. For users who may be interested, here is how I was able
+> to compile from source.
+there is a file xhbgtmk.sh for it (I can send it to you via Skype
+skype://abix_adamj ). This is a script for getting SVN branch devel
+and make all RPMs neccesary for your distro.
+Please check the svn, ncurses-devel, slang, slang-devel are installed
+on your Fedora .. or make split to openSUSE ;-)
+>
+> Trying make_rpm.sh I had an error about "invalid option -ta". I found a
+> bunch of rpm development tools that had to be upgraded or installed.
+Yes, rpm has a bug, and thats all. But for me in openSUSE everything works well.
+>
+> Also at some point I had an error about invalid character "-" so I removed
+> it in harbour.spec line 0.9.9-RC1...
+In last SVN Rev. ID 8637 I have it is corrected to :
+%define name     harbour
+%define dname    Harbour
+%define version  1.0.0
+%define releasen RC1
+%define hb_pref  hb
+
+>
+> Then make fails at hbmake. Needs some X11 libs. Installed libX11...
+
+And probably you will need some more ....
+
+Adam
+From harbour-users at harbour-project.org  Mon Jun 30 04:31:15 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Jun 30 04:31:25 2008
+Subject: [Harbour-users] French Collation error 
+Message-ID: <2A388B83CAF14C27A6A9C1CC3FE6D803@BadouPortable>
+
+Hello Harbour Developers,
+
+I use since yesterday the last upgrade of FWH.
+Compile with Harbour and Borland.
+
+In the french language, we have many
+possibles signs on letters : a "e" can also be "?",
+or "?", or "?", or others... This is not simple
+to learn French because this (and not only).
+
+The french collation provided by C.A. Nantucket Clipper
+is useful for the Clipper function named UPPER().
+
+With Clipper :
+UPPER("?") = "E"
+UPPER("?") = "A"
+
+This work perfectly with Fivewin for Clipper,
+because UPPER() is a Clipper function.
+
+But this not work with Harbour.
+Is existing a way to correct this ?
+I not use ADS for the moment in my tests.
+
+Note : with these command lines, there is no change :
+
+REQUEST HB_LANG_FR
+REQUEST HB_CODEPAGE_FR
+
+HB_LangSelect("FR")
+HB_SetCodePage("FR")
+SET(_SET_LANGUAGE, "FR")
+
+Thank for your help.
+
+From harbour-users at harbour-project.org  Mon Jun 30 05:22:06 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Jun 30 05:22:10 2008
+Subject: R: [Harbour-users] French Collation error 
+References: <2A388B83CAF14C27A6A9C1CC3FE6D803@BadouPortable>
+Message-ID: <AFB948164110ED43B5EB849E8DEEF0380375FB@SRV02.deltain.net>
+
+I don't use french codepage but afaik in harboru is same
+
+codepage French is 850 
+request simbol HB_CODEPAGE_FR 
+codepage id "FR" 
+
+Can isolate a sample where work in clipper and not in harbour
+
+   REQUEST HB_CODEPAGE_FR
+   PROC MAIN
+      HB_SetCodePage( "FR" )
+      ? HB_SetCodePage()               // result: FR
+      ? upper("?") 
+      ? upper("?")   
+      ?  "?") > "?")   
+   RETURN
+
+Massimo Belgrano
+
+
+
+
+-----Messaggio originale-----
+Da: harbour-users-bounces@harbour-project.org per conto di harbour-users@harbour-project.org
+Inviato: lun 30/06/2008 10.31
+A: harbour-users@harbour-project.org
+Oggetto: [Harbour-users] French Collation error 
+ 
+Hello Harbour Developers,
+
+I use since yesterday the last upgrade of FWH.
+Compile with Harbour and Borland.
+
+In the french language, we have many
+possibles signs on letters : a "e" can also be "?",
+or "?", or "?", or others... This is not simple
+to learn French because this (and not only).
+
+The french collation provided by C.A. Nantucket Clipper
+is useful for the Clipper function named UPPER().
+
+With Clipper :
+UPPER("?") = "E"
+UPPER("?") = "A"
+
+This work perfectly with Fivewin for Clipper,
+because UPPER() is a Clipper function.
+
+But this not work with Harbour.
+Is existing a way to correct this ?
+I not use ADS for the moment in my tests.
+
+Note : with these command lines, there is no change :
+
+REQUEST HB_LANG_FR
+REQUEST HB_CODEPAGE_FR
+
+HB_LangSelect("FR")
+HB_SetCodePage("FR")
+SET(_SET_LANGUAGE, "FR")
+
+Thank for your help.
+
+_______________________________________________
+Harbour-users mailing list
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+

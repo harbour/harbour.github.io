@@ -1,0 +1,503 @@
+From harbour-users at harbour-project.org  Sun Feb  1 07:08:39 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sun Feb  1 07:08:42 2009
+Subject: [Harbour-users] ActiveX
+In-Reply-To: <133778360901311427ub3c32c0lf661282a9cc8a9df@mail.gmail.com>
+References: <133778360901311427ub3c32c0lf661282a9cc8a9df@mail.gmail.com>
+Message-ID: <609353e70902010408u10639093y5163736e5789220f@mail.gmail.com>
+
+In a contrib you found gtwvg who have a class compatible with xbase++ syntax
+for activex  i suggest see and
+compile: C:\harbour\contrib\gtwvg\tests\demowvg.prg
+
+
+
+Function Main()
+  Local hThread := hb_threadStart( {|| MyCrystalViewer() } )
+
+ do while .t.
+    if inkey() == 27
+      exit
+    endif
+ enddo
+
+  hb_threadJoin( hThread )
+
+  Return nil
+
+Function MyCrystalViewer()
+  LOCAL oCrystal := CREATEOBJECT( "CrystalRuntime.Application" )
+  LOCAL oReport  := oCrystal:OpenReport( "PROVA.RPT" )
+  LOCAL oDlg, oActvX
+
+  oDlg := WvgDialog():New():Create( , ,  { 20,20 }, { 600,400 }, , .t. )
+
+  oActvX:= WvgActiveXControl():New( oDlg:drawingArea )
+  oActvX:CLSID := "CRViewer9.CRViewer"
+  oActvX:create( , , {0,0}, oDlg:currentSize(), .t. )
+  oActvX:ReportSource := oReport
+  oActvX:Do( "ViewReport" )          // I do not know how it must behave
+  oActvX:resize := {||  oActvX:setPosAndSize( {0,0}, oDlg:currentSize(),
+.t. ) }
+
+  do while .t.
+     if inkey() == 27
+        exit
+     endif
+  enddo
+
+  oDlg:destroy()
+  Return nil
+
+It is direct on keyboard, please correct any mistakes in typing.
+
+
+2009/1/31 <harbour-users@harbour-project.org>
+
+> Anybody knows if exists in harbour
+> any kind of activex support ?
+>
+>
+> Bruno
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+
+Albo Nazionale Informatici Professionisti 2620
+Socio 2843 Associazione Informatici prof.
+
+Analisi e sviluppo software per Lan e Web
+Consulenza informatica - Formazione
+Delta Informatica S.r.l.  http://www.deltain.it
+Via Torelli,31 - 28100 Novara - Tel: 0321/30281
+From harbour-users at harbour-project.org  Sun Feb  1 08:27:35 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sun Feb  1 08:27:39 2009
+Subject: [Harbour-users] ActiveX
+In-Reply-To: <609353e70902010408u10639093y5163736e5789220f@mail.gmail.com>
+References: <133778360901311427ub3c32c0lf661282a9cc8a9df@mail.gmail.com>
+	<609353e70902010408u10639093y5163736e5789220f@mail.gmail.com>
+Message-ID: <133778360902010527l64d61c25o99bd8d268fe00f6b@mail.gmail.com>
+
+Thanks Massimo , I will a try  this sample
+
+Bruno
+
+2009/2/1 <harbour-users@harbour-project.org>
+
+> In a contrib you found gtwvg who have a class compatible with xbase++
+> syntax
+> for activex  i suggest see and
+> compile: C:\harbour\contrib\gtwvg\tests\demowvg.prg
+>
+>
+>
+> Function Main()
+>  Local hThread := hb_threadStart( {|| MyCrystalViewer() } )
+>
+>  do while .t.
+>    if inkey() == 27
+>      exit
+>    endif
+>  enddo
+>
+>  hb_threadJoin( hThread )
+>
+>  Return nil
+>
+> Function MyCrystalViewer()
+>  LOCAL oCrystal := CREATEOBJECT( "CrystalRuntime.Application" )
+>  LOCAL oReport  := oCrystal:OpenReport( "PROVA.RPT" )
+>  LOCAL oDlg, oActvX
+>
+>  oDlg := WvgDialog():New():Create( , ,  { 20,20 }, { 600,400 }, , .t. )
+>
+>  oActvX:= WvgActiveXControl():New( oDlg:drawingArea )
+>  oActvX:CLSID := "CRViewer9.CRViewer"
+>  oActvX:create( , , {0,0}, oDlg:currentSize(), .t. )
+>  oActvX:ReportSource := oReport
+>  oActvX:Do( "ViewReport" )          // I do not know how it must behave
+>  oActvX:resize := {||  oActvX:setPosAndSize( {0,0}, oDlg:currentSize(),
+> .t. ) }
+>
+>  do while .t.
+>     if inkey() == 27
+>        exit
+>     endif
+>  enddo
+>
+>  oDlg:destroy()
+>  Return nil
+>
+> It is direct on keyboard, please correct any mistakes in typing.
+>
+>
+> 2009/1/31 <harbour-users@harbour-project.org>
+>
+> > Anybody knows if exists in harbour
+> > any kind of activex support ?
+> >
+> >
+> > Bruno
+> > _______________________________________________
+> > Harbour-users mailing list
+> > Harbour-users@harbour-project.org
+> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >
+>
+>
+>
+> --
+> Massimo Belgrano
+>
+> Albo Nazionale Informatici Professionisti 2620
+> Socio 2843 Associazione Informatici prof.
+>
+> Analisi e sviluppo software per Lan e Web
+> Consulenza informatica - Formazione
+> Delta Informatica S.r.l.  http://www.deltain.it
+> Via Torelli,31 - 28100 Novara - Tel: 0321/30281
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From harbour-users at harbour-project.org  Mon Feb  2 09:24:55 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Feb  2 09:24:58 2009
+Subject: [Harbour-users] Debug
+Message-ID: <89c0927b0902020624l3cba2851ye6d97572e9734021@mail.gmail.com>
+
+Hi!
+
+How to debug mode with HWGUI ?
+Is possible ?
+
+TIA,
+Itamar M. Lins Jr.
+From harbour-users at harbour-project.org  Mon Feb  2 10:34:51 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Feb  2 10:34:53 2009
+Subject: [Harbour-users] Debug
+In-Reply-To: <89c0927b0902020624l3cba2851ye6d97572e9734021@mail.gmail.com>
+References: <89c0927b0902020624l3cba2851ye6d97572e9734021@mail.gmail.com>
+Message-ID: <609353e70902020734x3b7a3ff6mc292ca3c8709b115@mail.gmail.com>
+
+*add debug*.lib  and in your keyboard/source altd()
+
+2009/2/2 <harbour-users@harbour-project.org>
+
+> Hi!
+>
+> How to debug mode with HWGUI ?
+> Is possible ?
+>
+> TIA,
+> Itamar M. Lins Jr.
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+From harbour-users at harbour-project.org  Fri Feb 13 11:23:20 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Feb 13 11:23:24 2009
+Subject: [Harbour-users] superlib
+Message-ID: <133778360902130823u66a74a43g397def08bceba358@mail.gmail.com>
+
+Is superlib ported to harbour ?
+
+Thanks
+
+Bruno
+From harbour-users at harbour-project.org  Fri Feb 13 15:23:40 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Feb 13 15:23:44 2009
+Subject: [Harbour-users] superlib
+In-Reply-To: <133778360902130823u66a74a43g397def08bceba358@mail.gmail.com>
+References: <133778360902130823u66a74a43g397def08bceba358@mail.gmail.com>
+Message-ID: <609353e70902131223k3e1f5a55r6f008cb6592c5c10@mail.gmail.com>
+
+You will need the source code and recompile it with Harbour to be able to
+use it.
+
+2009/2/13 <harbour-users@harbour-project.org>
+
+> Is superlib ported to harbour ?
+>
+> Thanks
+>
+> Bruno
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+
+Albo Nazionale Informatici Professionisti 2620
+Socio 2843 Associazione Informatici prof.
+
+Analisi e sviluppo software per Lan e Web
+Consulenza informatica - Formazione
+Delta Informatica S.r.l.  http://www.deltain.it
+Via Torelli,31 - 28100 Novara - Tel: 0321/30281
+From harbour-users at harbour-project.org  Tue Feb 17 13:24:50 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Tue Feb 17 13:24:54 2009
+Subject: [Harbour-users] Sending an Email From Harbour
+Message-ID: <968611.48359.qm@web50603.mail.re2.yahoo.com>
+
+Hello,
+
+It is wonderful to be back working on the best computer language ever made!
+
+How can I send an email from a Harbour application?
+
+Thanks,
+
+Michael
+From harbour-users at harbour-project.org  Tue Feb 17 20:44:55 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Tue Feb 17 20:44:58 2009
+Subject: [Harbour-users] Sending an Email From Harbour
+In-Reply-To: <968611.48359.qm@web50603.mail.re2.yahoo.com>
+References: <968611.48359.qm@web50603.mail.re2.yahoo.com>
+Message-ID: <609353e70902171744v195f3c29q79723a9f9850ce17@mail.gmail.com>
+
+Welcome aboard Michael
+see at harbour/contrib/hbtip/sendmail.prg
+
+
+2009/2/17  <harbour-users@harbour-project.org>:
+> Hello,
+>
+> It is wonderful to be back working on the best computer language ever made!
+>
+> How can I send an email from a Harbour application?
+>
+> Thanks,
+>
+> Michael
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+
+Albo Nazionale Informatici Professionisti 2620
+Socio 2843 Associazione Informatici prof.
+
+Analisi e sviluppo software per Lan e Web
+Consulenza informatica - Formazione
+Delta Informatica S.r.l.  http://www.deltain.it
+Via Torelli,31 - 28100 Novara - Tel: 0321/30281
+From harbour-users at harbour-project.org  Wed Feb 18 06:15:32 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Feb 20 23:53:52 2009
+Subject: [Harbour-users] Max number of open files in WIN XP/Vista/2000
+	environment
+Message-ID: <884051.34428.qm@web30706.mail.mud.yahoo.com>
+
+
+How Harbour handles that? Where can I increase "default" value (if exists)
+Is this harbour related or OS related?
+
+regards,  Mitja
+
+
+
+      
+From harbour-users at harbour-project.org  Sat Feb 21 04:36:27 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sat Feb 21 04:36:37 2009
+Subject: [Harbour-users] Max number of open files in WIN XP/Vista/2000
+	environment
+In-Reply-To: <884051.34428.qm@web30706.mail.mud.yahoo.com>
+References: <884051.34428.qm@web30706.mail.mud.yahoo.com>
+Message-ID: <499FCB1B.9080701@fsgiudice.com>
+
+Hi Mitja,
+AFAIR harbour doesn't has limits, it's only OS related.
+
+Best regards
+
+Francesco
+
+Il 18/02/2009 12.15, harbour-users@harbour-project.org ha scritto:
+> How Harbour handles that? Where can I increase "default" value (if exists)
+> Is this harbour related or OS related?
+> 
+> regards,  Mitja
+> 
+> 
+> 
+>       
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+From harbour-users at harbour-project.org  Sat Feb 21 16:10:21 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sat Feb 21 16:10:30 2009
+Subject: [Harbour-users] Max number of open files in WIN
+	XP/Vista/2000environment
+In-Reply-To: <499FCB1B.9080701@fsgiudice.com>
+References: <884051.34428.qm@web30706.mail.mud.yahoo.com>
+	<499FCB1B.9080701@fsgiudice.com>
+Message-ID: <146E7BE908A64BAB9C694746AD741436@BadouPortable>
+
+Hello,
+
+Under Windows you can use API Windows SetHandleCount( 
+nNumberOfFilesYouWant )
+
+Best regards
+
+Badara
+
+----- Original Message ----- 
+From: <harbour-users@harbour-project.org>
+To: "Users of the Harbour compiler" <harbour-users@harbour-project.org>
+Sent: Saturday, February 21, 2009 10:36 AM
+Subject: Re: [Harbour-users] Max number of open files in WIN 
+XP/Vista/2000environment
+
+
+> Hi Mitja,
+> AFAIR harbour doesn't has limits, it's only OS related.
+>
+> Best regards
+>
+> Francesco
+>
+> Il 18/02/2009 12.15, harbour-users@harbour-project.org ha scritto:
+>> How Harbour handles that? Where can I increase "default" value (if 
+>> exists)
+>> Is this harbour related or OS related?
+>>
+>> regards,  Mitja
+>>
+>>
+>>
+>>       _______________________________________________
+>> Harbour-users mailing list
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users 
+
+From harbour-users at harbour-project.org  Fri Feb 27 03:24:03 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Feb 27 03:24:48 2009
+Subject: [Harbour-users] Harbour + PellesC
+Message-ID: <49A7A323.4060301@polly.com.ua>
+
+Hi!
+
+I'm trying compile Harbour with pellesC.
+I'm set envvars in make_gnu.bat HB_ARCHITECTURE=win and 
+HB_COMPILER=pocc, but this is not enough. How i can compile Harbour with 
+Pellesc?
+
+Thanks,
+Alexey Myronenko
+From harbour-users at harbour-project.org  Fri Feb 27 13:22:37 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Feb 27 13:22:41 2009
+Subject: [Harbour-users] New make for Hwgui.
+Message-ID: <89c0927b0902271022w5d89b087ib4a14a7df5b69d0d@mail.gmail.com>
+
+Hi!
+
+Now with new make(gnu) not possible compiling Hwgui because no exist
+(gnu)make file for Hwgui.
+Please someone from the devel list can create new Make file for Hwgui ?
+
+TIA,
+Itamar M. Lins Jr.
+From harbour-users at harbour-project.org  Fri Feb 27 13:47:15 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Feb 27 13:47:20 2009
+Subject: [Harbour-users] Harbour + PellesC
+In-Reply-To: <49A7A323.4060301@polly.com.ua>
+References: <49A7A323.4060301@polly.com.ua>
+Message-ID: <89c0927b0902271047q524b00f5o945511ea13e38924@mail.gmail.com>
+
+Hi!
+read new INSTALL file SVN repositore.
+
+TIA,
+Itamar M. Lins Jr.
+
+2009/2/27 <harbour-users@harbour-project.org>
+
+> Hi!
+>
+> I'm trying compile Harbour with pellesC.
+> I'm set envvars in make_gnu.bat HB_ARCHITECTURE=win and HB_COMPILER=pocc,
+> but this is not enough. How i can compile Harbour with Pellesc?
+>
+> Thanks,
+> Alexey Myronenko
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From harbour-users at harbour-project.org  Fri Feb 27 18:50:57 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Feb 27 18:51:01 2009
+Subject: [Harbour-users] New make for Hwgui.
+In-Reply-To: <89c0927b0902271022w5d89b087ib4a14a7df5b69d0d@mail.gmail.com>
+References: <89c0927b0902271022w5d89b087ib4a14a7df5b69d0d@mail.gmail.com>
+Message-ID: <609353e70902271550k4a7c7a9ag746a6a8e57479ae2@mail.gmail.com>
+
+Have you tried made your request to hwgui developer?The GNU package
+referenced in a previous mail contains a make utility called mingw32-make.exe
+and not justmake.exe
+I have you try with copy  mingw32-make.exe  to  make.exe?
+
+
+
+2009/2/27 <harbour-users@harbour-project.org>
+
+> Hi!
+>
+> Now with new make(gnu) not possible compiling Hwgui because no exist
+> (gnu)make file for Hwgui.
+> Please someone from the devel list can create new Make file for Hwgui ?
+>
+> TIA,
+> Itamar M. Lins Jr.
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+-- 
+Massimo Belgrano

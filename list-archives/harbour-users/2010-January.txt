@@ -1,0 +1,5234 @@
+From lucasdebeltran at gmail.com  Tue Jan  5 20:40:21 2010
+From: lucasdebeltran at gmail.com (=?ISO-8859-1?Q?Lucas_De_Beltr=E1n?=)
+Date: Tue Jan  5 20:40:29 2010
+Subject: [Harbour-users] Harbour 2.0 released
+In-Reply-To: <609353e70912240444l44d26054rb36e1b1ad80d8cb@mail.gmail.com>
+References: <609353e70912240412h23fa6051vf74880bec98358a1@mail.gmail.com>
+	<eb96f4980912240432u58748b84m3deb87ebeed230fe@mail.gmail.com>
+	<609353e70912240444l44d26054rb36e1b1ad80d8cb@mail.gmail.com>
+Message-ID: <eb96f4981001051740i33a73897n9d49cd6974b7e7e7@mail.gmail.com>
+
+Hi,
+
+Thanks for the reply.
+
+But in the sample I see Access not a sql using IP address.
+
+Does it support connecting to MySQL server via internet?
+
+thanks
+
+2009/12/24 Massimo Belgrano <mbelgrano@deltain.it>
+
+> Yes
+>
+> C:\hb20\contrib\rddsql\sddodbc\tests
+>
+> /*
+>  * $Id: test1.prg 12948 2009-11-20 12:45:41Z vszakats $
+>  */
+>
+> #include "hbrddsql.ch"
+>
+> REQUEST SDDODBC, SQLMIX
+>
+> PROC main()
+>   RDDSETDEFAULT( "SQLMIX" )
+>   SET( _SET_DATEFORMAT, "yyyy-mm-dd" )
+>   ? "Connect:", RDDINFO( RDDI_CONNECT, { "ODBC", "DBQ="  +
+> hb_DirBase() + "\..\..\..\hbodbc\tests\test.mdb;Driver={Microsoft
+> Access Driver (*.mdb)}" } )
+>   ? "Use:", DBUSEAREA( .T.,, "select * from test", "test" )
+>   ? "Alias:", ALIAS()
+>   ? "DB struct:", HB_VALTOEXP( DBSTRUCT() )
+>   INKEY( 0 )
+>   BROWSE()
+>
+>   INDEX ON FIELD->SALARY TO salary
+>   DBGOTOP()
+>   BROWSE()
+>   DBCLOSEAREA()
+> RETURN
+>
+>
+> 2009/12/24 Lucas De Beltr?n <lucasdebeltran@gmail.com>:
+> > Thank?s a lot!!.
+> >
+> > Does it support a SQL RDD to handle SQL DB as dbfs?. For example select
+> > ("aa"), dbskip() append blank, etc?
+> >
+>
+>
+> --
+> Massimo Belgrano
+>
+> I
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From lucasdebeltran at gmail.com  Tue Jan  5 20:45:03 2010
+From: lucasdebeltran at gmail.com (=?ISO-8859-1?Q?Lucas_De_Beltr=E1n?=)
+Date: Tue Jan  5 20:45:10 2010
+Subject: [Harbour-users] Re: VIA Nemo
+In-Reply-To: <hgvngk$5uq$1@ger.gmane.org>
+References: <eb96f4980912240434y22fe6309yc82dceb72e2844c6@mail.gmail.com>
+	<hgvngk$5uq$1@ger.gmane.org>
+Message-ID: <eb96f4981001051745h1b49c84mf187ef812106fa0d@mail.gmail.com>
+
+Much ado about nothing...
+
+Does Habrour developer team plan to have a GUI for Windows/Linux and MAC?
+
+2009/12/24 Angel Pais <amigosam@adinet.com.uy>
+
+> Lucas De Beltr?n escribi?:
+>
+> Hi,
+>>
+>> Does anyone know what happend with this proyect?. The web is dead...
+>>
+>
+> Don't bet all your money on it...
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From amigosam at adinet.com.uy  Tue Jan  5 20:56:56 2010
+From: amigosam at adinet.com.uy (Angel Pais)
+Date: Tue Jan  5 20:57:23 2010
+Subject: [Harbour-users] Re: VIA Nemo
+In-Reply-To: <eb96f4981001051745h1b49c84mf187ef812106fa0d@mail.gmail.com>
+References: <eb96f4980912240434y22fe6309yc82dceb72e2844c6@mail.gmail.com>	<hgvngk$5uq$1@ger.gmane.org>
+	<eb96f4981001051745h1b49c84mf187ef812106fa0d@mail.gmail.com>
+Message-ID: <hi0ql4$t0p$1@ger.gmane.org>
+
+Lucas De Beltr?n escribi?:
+> Much ado about nothing...
+> 
+> Does Habrour developer team plan to have a GUI for Windows/Linux and MAC?
+> 
+
+See hbide in contribs.
+It's multiplatform and based on QT Gui Library.
+Still in development but very promising !
+
+Regards
+Angel
+
+From anezch at gmail.com  Tue Jan  5 21:28:05 2010
+From: anezch at gmail.com (Agustianes Umbara Suwardi)
+Date: Tue Jan  5 21:28:17 2010
+Subject: [Harbour-users] Harbour 2.0 released
+In-Reply-To: <609353e70912240412h23fa6051vf74880bec98358a1@mail.gmail.com>
+References: <609353e70912240412h23fa6051vf74880bec98358a1@mail.gmail.com>
+Message-ID: <1262744885.3866.2.camel@anezch-desktop>
+
+When will Ubuntu Linux binaries provided? I see there are Mandriva
+binaries for version 2.0.0 but none for Ubuntu. Or maybe I should
+consider compiling the source instead?
+
+
+On Thu, 2009-12-24 at 13:12 +0100, Massimo Belgrano wrote:
+> Hi All,
+> 
+> I'm glad to announce that after a very heavy 16 months
+> of development, the final, stable version 2.0.0 is finally
+> released.
+> http://sourceforge.net/projects/harbour-project/files/
+> 
+> Mary Christmas to everyone
+> 
+> Belgrano Massimo
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+From bruno.luciani at gmail.com  Tue Jan  5 21:50:22 2010
+From: bruno.luciani at gmail.com (Bruno Luciani)
+Date: Tue Jan  5 21:50:31 2010
+Subject: [Harbour-users] Harbour 2.0 released
+In-Reply-To: <1262744885.3866.2.camel@anezch-desktop>
+References: <609353e70912240412h23fa6051vf74880bec98358a1@mail.gmail.com>
+	<1262744885.3866.2.camel@anezch-desktop>
+Message-ID: <133778361001051850v7c170a36w3a1c61edc2a969fb@mail.gmail.com>
+
+This is my personal version for ubuntu 9.10 includes almost all contrib
+compiled too
+If you like  try
+
+http://www.megafileupload.com/en/file/174263/harbour-2-0-0-1-i386-deb.html
+
+
+
+Checksums-Sha1:
+
+f1558c5a0e1807e3c5fcb664c4c1c8c6dff1160c 12935296 harbour_2.0.0-1_i386.deb
+Checksums-Sha256:
+ fb8a8d128a6373c902bceab4195602d9a6c3abb99456c0752b83cfff66f5f1ed 12935296
+harbour_2.0.0-1_i386.deb
+Files:
+ e2962579973a19eff7ca727afff3429e 12935296 devel optional
+harbour_2.0.0-1_i386.deb
+
+Regards
+
+Bruno Luciani
+
+
+2010/1/5 Agustianes Umbara Suwardi <anezch@gmail.com>
+
+> When will Ubuntu Linux binaries provided? I see there are Mandriva
+> binaries for version 2.0.0 but none for Ubuntu. Or maybe I should
+> consider compiling the source instead?
+>
+>
+> On Thu, 2009-12-24 at 13:12 +0100, Massimo Belgrano wrote:
+> > Hi All,
+> >
+> > I'm glad to announce that after a very heavy 16 months
+> > of development, the final, stable version 2.0.0 is finally
+> > released.
+> > http://sourceforge.net/projects/harbour-project/files/
+> >
+> > Mary Christmas to everyone
+> >
+> > Belgrano Massimo
+> > _______________________________________________
+> > Harbour-users mailing list (attachment size limit: 40KB)
+> > Harbour-users@harbour-project.org
+> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From bruno.luciani at gmail.com  Tue Jan  5 21:53:46 2010
+From: bruno.luciani at gmail.com (Bruno Luciani)
+Date: Tue Jan  5 21:53:56 2010
+Subject: [Harbour-users] Harbour 2.0 released
+In-Reply-To: <1262744885.3866.2.camel@anezch-desktop>
+References: <609353e70912240412h23fa6051vf74880bec98358a1@mail.gmail.com>
+	<1262744885.3866.2.camel@anezch-desktop>
+Message-ID: <133778361001051853r5dd59ec1r7934a99975d7757d@mail.gmail.com>
+
+Sorry this is the correct Link , Remember is my personal Version compiled
+from source
+
+NOT AN OFICIAL RELEASE
+
+This release includes almost all linux compatible contrib library's
+
+Checksums-Sha1:
+
+339c4200457f8b0991c9426bff800edab28dca19 12982728 harbour_2.0.0-1_i386.deb
+Checksums-Sha256:
+ 3e0f450ac6a8d794f6e6935d1350b796d1ab075dde53d0d33b6316cc8f53fc0e 12982728
+harbour_2.0.0-1_i386.deb
+Files:
+ 89be6a5da3c4e39bb58a9eb26f27bf87 12982728 devel optional
+harbour_2.0.0-1_i386.deb
+
+Download Link
+
+http://uploading.com/files/bbab4f15/harbour_2.0.0-1_i386.deb/
+
+List of library's included in Package
+
+/libgtalleg.a
+/libgtallegs.a
+/libgtcgi.a
+/libgtcrs.a
+/libgtpca.a
+/libgtsln.a
+/libgtstd.a
+/libgttrm.a
+/libgtxwc.a
+/libharbour.so
+/libharbour-2.0.0.so
+/libharbourmt.so
+/libharbourmt-2.0.0.so
+/libhbbmcdx.a
+/libhbbtree.a
+/libhbcairo.a
+/libhbclipsm.a
+/libhbcommon.a
+/libhbcpage.a
+/libhbcplr.a
+/libhbct.a
+/libhbcurl.a
+/libhbdebug.a
+/libhbextern.a
+/libhbfbird.a
+/libhbgd.a
+/libhbgt.a
+/libhbhpdf.a
+/libhbhsx.a
+/libhblang.a
+/libhbmacro.a
+/libhbmemio.a
+/libhbmisc.a
+/libhbmysql.a
+/libhbmzip.a
+/libhbnetio.a
+/libhbnf.a
+/libhbnortl.a
+/libhbnulrdd.a
+/libhbodbc.a
+/libhbpcre.a
+/libhbpgsql.a
+/libhbpp.a
+/libhbqt.a
+/libhbqtcore.a
+/libhbqtgui.a
+/libhbqtnetwork.a
+/libhbrdd.a
+/libhbrtl.a
+/libhbsix.a
+/libhbsms.a
+/libhbsqlit3.a
+/libhbssl.a
+/libhbtip.a
+/libhbtipssl.a
+/libhbtpathy.a
+/libhbuddall.a
+/libhbusrrdd.a
+/libhbvm.a
+/libhbvmmt.a
+/libhbxbp.a
+/libhbziparc.a
+/liblibhpdf.a
+/librddads.a
+/librddcdx.a
+/librddfpt.a
+/librddnsx.a
+/librddntx.a
+/librddsql.a
+/libsddfb.a
+/libsddmy.a
+/libsddodbc.a
+/libsddpg.a
+/libsqlite3.a
+/libxhb.a
+/libxpp.a
+
+
+2010/1/5 Agustianes Umbara Suwardi <anezch@gmail.com>
+
+> When will Ubuntu Linux binaries provided? I see there are Mandriva
+> binaries for version 2.0.0 but none for Ubuntu. Or maybe I should
+> consider compiling the source instead?
+>
+>
+> On Thu, 2009-12-24 at 13:12 +0100, Massimo Belgrano wrote:
+> > Hi All,
+> >
+> > I'm glad to announce that after a very heavy 16 months
+> > of development, the final, stable version 2.0.0 is finally
+> > released.
+> > http://sourceforge.net/projects/harbour-project/files/
+> >
+> > Mary Christmas to everyone
+> >
+> > Belgrano Massimo
+> > _______________________________________________
+> > Harbour-users mailing list (attachment size limit: 40KB)
+> > Harbour-users@harbour-project.org
+> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From anezch at gmail.com  Tue Jan  5 22:02:39 2010
+From: anezch at gmail.com (Agustianes Umbara Suwardi)
+Date: Tue Jan  5 22:02:55 2010
+Subject: [Harbour-users] Harbour 2.0 released
+In-Reply-To: <133778361001051853r5dd59ec1r7934a99975d7757d@mail.gmail.com>
+References: <609353e70912240412h23fa6051vf74880bec98358a1@mail.gmail.com>
+	<1262744885.3866.2.camel@anezch-desktop>
+	<133778361001051853r5dd59ec1r7934a99975d7757d@mail.gmail.com>
+Message-ID: <1262746959.3866.18.camel@anezch-desktop>
+
+Thanks, Bruno! I'm downloading it now :)
+
+Regards,
+Agustianes U.S.
+
+On Tue, 2010-01-05 at 23:53 -0300, Bruno Luciani wrote:
+> Sorry this is the correct Link , Remember is my personal Version compiled
+> from source
+> 
+> NOT AN OFICIAL RELEASE
+> 
+> This release includes almost all linux compatible contrib library's
+> 
+> Checksums-Sha1:
+> 
+> 339c4200457f8b0991c9426bff800edab28dca19 12982728 harbour_2.0.0-1_i386.deb
+> Checksums-Sha256:
+>  3e0f450ac6a8d794f6e6935d1350b796d1ab075dde53d0d33b6316cc8f53fc0e 12982728
+> harbour_2.0.0-1_i386.deb
+> Files:
+>  89be6a5da3c4e39bb58a9eb26f27bf87 12982728 devel optional
+> harbour_2.0.0-1_i386.deb
+> 
+> Download Link
+> 
+> http://uploading.com/files/bbab4f15/harbour_2.0.0-1_i386.deb/
+> 
+> List of library's included in Package
+> 
+> /libgtalleg.a
+> /libgtallegs.a
+> /libgtcgi.a
+> /libgtcrs.a
+> /libgtpca.a
+> /libgtsln.a
+> /libgtstd.a
+> /libgttrm.a
+> /libgtxwc.a
+> /libharbour.so
+> /libharbour-2.0.0.so
+> /libharbourmt.so
+> /libharbourmt-2.0.0.so
+> /libhbbmcdx.a
+> /libhbbtree.a
+> /libhbcairo.a
+> /libhbclipsm.a
+> /libhbcommon.a
+> /libhbcpage.a
+> /libhbcplr.a
+> /libhbct.a
+> /libhbcurl.a
+> /libhbdebug.a
+> /libhbextern.a
+> /libhbfbird.a
+> /libhbgd.a
+> /libhbgt.a
+> /libhbhpdf.a
+> /libhbhsx.a
+> /libhblang.a
+> /libhbmacro.a
+> /libhbmemio.a
+> /libhbmisc.a
+> /libhbmysql.a
+> /libhbmzip.a
+> /libhbnetio.a
+> /libhbnf.a
+> /libhbnortl.a
+> /libhbnulrdd.a
+> /libhbodbc.a
+> /libhbpcre.a
+> /libhbpgsql.a
+> /libhbpp.a
+> /libhbqt.a
+> /libhbqtcore.a
+> /libhbqtgui.a
+> /libhbqtnetwork.a
+> /libhbrdd.a
+> /libhbrtl.a
+> /libhbsix.a
+> /libhbsms.a
+> /libhbsqlit3.a
+> /libhbssl.a
+> /libhbtip.a
+> /libhbtipssl.a
+> /libhbtpathy.a
+> /libhbuddall.a
+> /libhbusrrdd.a
+> /libhbvm.a
+> /libhbvmmt.a
+> /libhbxbp.a
+> /libhbziparc.a
+> /liblibhpdf.a
+> /librddads.a
+> /librddcdx.a
+> /librddfpt.a
+> /librddnsx.a
+> /librddntx.a
+> /librddsql.a
+> /libsddfb.a
+> /libsddmy.a
+> /libsddodbc.a
+> /libsddpg.a
+> /libsqlite3.a
+> /libxhb.a
+> /libxpp.a
+> 
+> 
+> 2010/1/5 Agustianes Umbara Suwardi <anezch@gmail.com>
+> 
+> > When will Ubuntu Linux binaries provided? I see there are Mandriva
+> > binaries for version 2.0.0 but none for Ubuntu. Or maybe I should
+> > consider compiling the source instead?
+> >
+> >
+> > On Thu, 2009-12-24 at 13:12 +0100, Massimo Belgrano wrote:
+> > > Hi All,
+> > >
+> > > I'm glad to announce that after a very heavy 16 months
+> > > of development, the final, stable version 2.0.0 is finally
+> > > released.
+> > > http://sourceforge.net/projects/harbour-project/files/
+> > >
+> > > Mary Christmas to everyone
+> > >
+> > > Belgrano Massimo
+> > > _______________________________________________
+> > > Harbour-users mailing list (attachment size limit: 40KB)
+> > > Harbour-users@harbour-project.org
+> > > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >
+> > _______________________________________________
+> > Harbour-users mailing list (attachment size limit: 40KB)
+> > Harbour-users@harbour-project.org
+> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+From f.klein at winposware.com  Wed Jan 13 14:51:19 2010
+From: f.klein at winposware.com (frans Klein)
+Date: Wed Jan 13 14:51:28 2010
+Subject: [Harbour-users] harbour COM ports tools
+Message-ID: <1FF498E68B8343219450E9A71D5C2354@AZ.local>
+
+Hi to all,
+
+ 
+
+I have just started using harbour to convert my clipper application: It is a
+great success!
+
+ 
+
+Super performance, very very compatible, very very reliable, I am really
+astonished!
+
+ 
+
+I am however still missing one element: tools to communicate with COM ports
+(write and read).
+
+ 
+
+Does anyone known were I could find these tools?
+
+ 
+
+Thanks,
+
+ 
+
+Frans
+
+ 
+
+From info at fsgiudice.com  Wed Jan 13 19:41:33 2010
+From: info at fsgiudice.com (Francesco Saverio Giudice)
+Date: Wed Jan 13 19:41:46 2010
+Subject: [Harbour-users] harbour COM ports tools
+In-Reply-To: <1FF498E68B8343219450E9A71D5C2354@AZ.local>
+References: <1FF498E68B8343219450E9A71D5C2354@AZ.local>
+Message-ID: <4B4E683D.2030804@fsgiudice.com>
+
+Hi Frans,
+
+look at SVN\contrib\hbwin\tests\testcom1.prg and 
+SVN\contrib\hbwin\tests\testcom2.prg
+
+Best Regards,
+Francesco
+
+frans Klein ha scritto:
+> Hi to all,
+> 
+>  
+> 
+> I have just started using harbour to convert my clipper application: It is a
+> great success!
+> 
+>  
+> 
+> Super performance, very very compatible, very very reliable, I am really
+> astonished!
+> 
+>  
+> 
+> I am however still missing one element: tools to communicate with COM ports
+> (write and read).
+> 
+>  
+> 
+> Does anyone known were I could find these tools?
+> 
+>  
+> 
+> Thanks,
+> 
+>  
+> 
+> Frans
+> 
+>  
+> 
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+From gruncic at gmail.com  Sun Jan 17 07:01:13 2010
+From: gruncic at gmail.com (Zvonimir Gruncic)
+Date: Sun Jan 17 07:01:22 2010
+Subject: [Harbour-users] program frozen
+Message-ID: <b811782a1001170401x393de41aj61eb3268de55a14e@mail.gmail.com>
+
+When run harbour 1.0.1 compiled program from windows XP sp2 on data server
+with win 98 SE
+on some tasks (probably with disk i/o ... ) program frozen PC.
+On other mashine with Win vista  all is ok.
+From mbelgrano at deltain.it  Sun Jan 17 07:19:08 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Sun Jan 17 07:19:35 2010
+Subject: [Harbour-users] program frozen
+In-Reply-To: <b811782a1001170401x393de41aj61eb3268de55a14e@mail.gmail.com>
+References: <b811782a1001170401x393de41aj61eb3268de55a14e@mail.gmail.com>
+Message-ID: <609353e71001170419p175f99dfv18c2f866140c1a73@mail.gmail.com>
+
+can you describe, c compiler, how you share/ map on your win98 data server
+
+can you try with last harbour 2.0 version?
+http://sourceforge.net/projects/harbour-project/files/
+
+2010/1/17 Zvonimir Gruncic <gruncic@gmail.com>:
+> When run harbour 1.0.1 compiled program from windows XP sp2 on data server
+> with win 98 SE
+> on some tasks (probably with disk i/o ... ) program frozen PC.
+> On other mashine with Win vista ?all is ok.
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+From amigosam at adinet.com.uy  Sun Jan 17 11:51:26 2010
+From: amigosam at adinet.com.uy (Angel Pais)
+Date: Sun Jan 17 11:51:54 2010
+Subject: [Harbour-users] Re: program frozen
+In-Reply-To: <b811782a1001170401x393de41aj61eb3268de55a14e@mail.gmail.com>
+References: <b811782a1001170401x393de41aj61eb3268de55a14e@mail.gmail.com>
+Message-ID: <hivf68$i6d$1@ger.gmane.org>
+
+Zvonimir Gruncic escribi?:
+> When run harbour 1.0.1 compiled program from windows XP sp2 on data server
+> with win 98 SE
+> on some tasks (probably with disk i/o ... ) program frozen PC.
+> On other mashine with Win vista  all is ok.
+
+You shouldn't use an older windows version to serve data to a new one !
+Until nows the best windows file server I know is LINUX/SAMBA 
+combination with oplocks disabled.
+
+Regards
+Angel
+
+From gruncic at gmail.com  Sun Jan 17 13:20:47 2010
+From: gruncic at gmail.com (Zvonimir Gruncic)
+Date: Sun Jan 17 13:20:55 2010
+Subject: [Harbour-users] program frozen
+Message-ID: <b811782a1001171020wde9a29er4d74d5489480e793@mail.gmail.com>
+
+>From Win xp sp2  disk is maped as G: disk. I used BCC55 compiler.
+
+Program read and  write some data . If I try to insert data in table program
+stop
+and PC frozen.
+
+ I can't try with 2.0 version because I dont undesten new hbmk2
+program.
+Vista works ok !!
+From mbelgrano at deltain.it  Sun Jan 17 13:28:44 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Sun Jan 17 13:29:15 2010
+Subject: [Harbour-users] program frozen
+In-Reply-To: <b811782a1001171020wde9a29er4d74d5489480e793@mail.gmail.com>
+References: <b811782a1001171020wde9a29er4d74d5489480e793@mail.gmail.com>
+Message-ID: <609353e71001171028y5022e3fdr7459247f19bc5e98@mail.gmail.com>
+
+Using hbmk2
+
+
+hbmk2 is a Tool that allow compile sample and large project
+basic use of this tools is
+hbmk2 ac_test
+hbmk2 ac_test.prg
+After this command you have ac_test.exe created
+You can also immediaply execute simple using
+hbmk2 ac_test -run
+
+Hbmk2 is indipendent from Platform and Compiler that you use
+
+Please also try the recommended way with hbmk2, it does
+a similar job to your manual Makefile, but it's portable, works
+for all future test programs and just one line.
+
+If hbmk2 doesn't work for you for some reason, post your -trace output
+
+How compile several. PRG & lib?
+
+hbmk2 test1 test2 testn -lmylib1 -lmylib2 -lmylibn
+hbmk2 test1.prg test2.prg testn.prg mylib1.lib mylib2.lib mylibn.lib
+
+How create a lib?
+
+hbmk2 myprg1.PRG myprg2.prg myrc.rc  -b -m  -hblib -omiolib.lib
+
+How have additional information?
+
+hbmk2 test1 test2 testn -lmylib1 -lmylib2 -lmylibn
+hbmk2 ac_test -info -trace
+
+How disample compile incremental?
+
+hbmk2 test1 test2 testn -lmylib1 -lmylib2 -lmylibn -rebuild
+ default os enable incremental build mode   , so only modified part of
+your project will be recompiled
+ -rebuild flag allow
+How use a config library file (hbc)?
+
+hbc contain the library used from the project
+typically exist a template for each library for include all neccessary
+references
+se for eaxample
+/harbour/contrib/hbxbp/hbxbp.hbc
+Yoy can use use hbc adding to  hbmk2 command line
+use inside a hpb adding a line with path where hbc reside
+
+
+#
+# $Id: hbxbp.hbc 11447 2009-06-20 02:41:38Z vszakats $
+#
+
+incpaths=.
+
+libs=hbxbp
+libs=../hbqt/hbqt.hbc
+How used a Project file (hbp)?
+
+you can simply use
+hbmk2 hbide.hbp
+hbp contain all command contained in command line
+#
+# $Id: hbide.hbp 13463 2010-01-04 10:15:18Z vouchcac $
+#
+
+../hbxbp/hbxbp.hbc
+
+-inc
+
+-w3 -es2 -gc3
+
+-ohbide
+
+# Trick to make it link using default Harbour builds
+-ldflag={msvc}-nodefaultlib:msvcrt.lib
+-ldflag={msvc}-defaultlib:libcmt.lib
+
+hbide.prg
+ideobject.prg
+idestylesheets.prg
+idetags.prg
+idemisc.prg
+ideactions.prg
+ideeditor.prg
+idefindreplace.prg
+idedocks.prg
+idesaveload.prg
+iderequests.prg
+idethemes.prg
+ideprojmanager.prg
+
+ideparseexpr.c
+
+What is hb.mk?
+
+Is a default setting applied to all source compiled in this directory
+How obain help?
+
+hbmk2 - help
+
+Harbour Make (hbmk2) 2.0.1dev (Rev. 13476)
+Copyright (c) 1999-2010, Viktor Szakats
+http://www.harbour-project.org/
+Translation (it-IT): (add your name here)
+
+Syntax:
+
+  hbmk2 [options] [<script[s]>]
+<src[s][.prg|.c|.obj|.o|.rc|.res|.po|.pot|.hbl|@.clp|.d]>
+
+Options:
+  -o<outname>        output file name
+  -l<libname>        link with <libname> library. <libname> should be without
+                     path, extension and 'lib' prefix (unless part of libname).
+  -L<libpath>        additional path to search for libraries
+  -i<p>|-incpath=<p> additional path to search for headers
+  -static|-shared    link with static/shared libs
+  -mt|-st            link with multi/single-thread VM
+  -gt<name>          link with GT<name> GT driver, can be repeated to link with
+                     more GTs. First one will be the default at runtime
+  -hblib             create static library
+  -hbdyn             create dynamic library
+
+  -gui|-std          create GUI/console executable
+  -main=<mainfunc>   override the name of starting function/procedure
+  -fullstatic        link with all static libs
+  -[full|fix]shared  create shared Harbour binaries without/with absolute dir
+                     reference to Harbour library (default: 'fullshared' when
+                     Harbour is installed on system location, 'fixshared'
+                     otherwise) (fix/full option in *nix only)
+  -nulrdd[-]         link with nulrdd
+  -[no]debug         add/exclude C compiler debug info. For Harbour level
+                     debug, use Harbour option -b as usual
+  -[no]optim         toggle C compiler optimizations (default: on)
+  -[no]cpp[=def]     force C/C++ mode or reset to default
+  -[no]map           create (or not) a map file
+  -[no]implib        create (or not) an import library (in -hbdyn mode)
+  -[no]strip         strip (no strip) binaries
+  -[no]trace         show commands executed
+  -[no]beep          enable (or disable) single beep on successful exit, double
+                     beep on failure
+  -[no]ignore        ignore errors when running compiler tools (default: off)
+  -nohblib[-]        do not use static core Harbour libraries when linking
+  -nolibgrouping[-]  disable library grouping on gcc based compilers
+  -nomiscsyslib[-]   don't add extra list of system libraries to default
+                     library list
+  -traceonly         show commands to be executed, but don't execute them
+  -[no]warn[=lev]    set C compiler warning level
+                     <lev> can be: yes, no, def (default: yes)
+  -[no]compr[=lev]   compress executable/dynamic lib (needs UPX)
+                     <lev> can be: min, max, def
+  -[no]run           run/don't run output executable
+  -vcshead=<file>    generate .ch header file with local repository
+                     information. SVN, CVS, Git, Mercurial, Bazaar and Fossil
+                     are currently supported. Generated header will define
+                     macro _HBMK_VCS_TYPE_ with the name of detected VCS and
+                     _HBMK_VCS_ID_ with the unique ID of local repository
+  -tshead=<file>     generate .ch header file with timestamp information.
+                     Generated header will define macros _HBMK_BUILD_DATE_,
+                     _HBMK_BUILD_TIME_, _HBMK_BUILD_TIMESTAMP_ with the
+                     date/time of build
+  -icon=<file>       set <file> as application icon. <file> should be a
+                     supported format on the target platform (experimental)
+  -instpath=<path>   copy target to <path>. if <path> is a directory, it should
+                     end with path separator. can be specified multiple times
+  -nohbc             do not process .hbc files in current directory
+  -stop              stop without doing anything
+  -echo=<text>       echo text on screen
+
+  -bldf[-]           inherit all/no (default) flags from Harbour build
+  -bldf=[p][c][l]    inherit .prg/.c/linker flags (or none) from Harbour build
+  -inctrypath=<p>    additional path to autodetect .c header locations
+  -prgflag=<f>       pass flag to Harbour
+  -cflag=<f>         pass flag to C compiler
+  -resflag=<f>       pass flag to resource compiler (Windows only)
+  -ldflag=<f>        pass flag to linker (executable)
+  -aflag=<f>         pass flag to linker (static library)
+  -dflag=<f>         pass flag to linker (dynamic library)
+  -runflag=<f>       pass flag to output executable when -run option is used
+  -jobs=<n>          start n compilation threads (multiprocess platforms only)
+  -inc               enable incremental build mode
+  -[no]head[=<m>]    control source header parsing (in incremental build mode)
+                     <m> can be: native, full, partial (default), off
+  -rebuild           rebuild all (in incremental build mode)
+  -clean             clean (in incremental build mode)
+  -workdir=<dir>     working directory for incremental build mode
+                     (default: .hbmk/plat/comp)
+
+  -hbl[=<output>]    output .hbl filename. %{hb_lng} macro is accepted in
+                     filename
+  -lng=<languages>   list of languages to be replaced in %{hb_lng} macros in
+                     .pot/.po filenames and output .hbl/.po filenames. Comma
+                     separared list:
+                     -lng=en-EN,hu-HU,de
+  -po=<output>       create/update .po file from source. Merge it with previous
+                     .po file of the same name
+  -[no]minipo        don't (or do) add Harbour version number and source file
+                     reference to .po (default: add them)
+  -rebuildpo         recreate .po file, thus removing all obsolete entries in
+                     it
+
+  -target=<script>   specify a new build target. <script> can be .prg (or no
+                     extension) or .hbm file (available on command line only)
+  -target            marks beginning of options belonging to a new build target
+                     (available on command line only)
+  -alltarget         marks beginning of common options belonging to all targets
+                     (available on command line only)
+
+  -hbrun             run target
+  -hbraw             stop after running Harbour compiler
+  -hbcmp|-clipper    stop after creating the object files
+                     create link/copy hbmk2 to hbcmp/clipper for the same
+                     effect
+  -hbcc              stop after creating the object files and accept raw C
+                     flags
+                     create link/copy hbmk2 to hbcc for the same effect
+  -hblnk             accept raw linker flags
+  -hb10              enable Harbour 1.0.x compatibility mode (experimental)
+  -xhb               enable xhb mode (experimental)
+  -hbc               enable pure C mode (experimental)
+  -exospace          emulate Clipper compatible linker behavior
+                     create link/copy hbmk2 to rtlink/blinker/exospace for the
+                     same effect
+
+  -hbmake=<file>     convert hbmake project file to .hbp file (experimental)
+  -xbp=<file>        convert .xbp (xbuild) project file to .hbp file
+                     (experimental)
+  -xhp=<file>        convert .xhp (xMate) project file to .hbp file
+                     (experimental)
+
+  --hbdirbin         output Harbour binary directory
+  --hbdirdyn         output Harbour dynamic library directory
+  --hbdirlib         output Harbour static library directory
+  --hbdirinc         output Harbour header directory
+
+  -plat[form]=<plat> select target platform.
+  -comp[iler]=<comp> select C compiler.
+                     Special value:
+                      - bld: use original build settings (default on *nix)
+  -build=<name>      use a specific build name
+  -lang=<lang>       override default language. Similar to HB_LANG envvar.
+  --version          display version header only
+  -pause             force waiting for a key on exit in case of failure (with
+                     alternate GTs only)
+  -info              turn on informational messages
+  -quiet             suppress all screen messages
+
+Notes:
+  - <script> can be <@script> (.hbm format), <script.hbm>, <script.hbp> (marks
+    a new target) or <script.hbc>.
+  - Multiple -l, -L and <script> parameters are accepted.
+  - Regular Harbour compiler options are also accepted.
+  - hbmk.cfg option file in hbmk2 directory is always processed if it exists.
+    On *nix platforms ~/.harbour, /etc/harbour, <base>/etc/harbour, <base>/etc
+    are checked (in that order) before the hbmk2 directory. The file format is
+    the same as .hbc.
+  - hbmk.hbm make script in current directory is always processed if it exists.
+  - .hbc config files in current dir are automatically processed.
+  - .hbc options (they should come in separate lines): libs=[<libname[s]>],
+    hbcs=[<.hbc file[s]>], gt=[gtname], syslibs=[<libname[s]>],
+    prgflags=[Harbour flags], cflags=[C compiler flags], resflags=[resource
+    compiler flags], ldflags=[linker flags], libpaths=[paths], sources=[source
+    files], incpaths=[paths], inctrypaths=[paths], instpaths=[paths],
+    gui|mt|shared|nulrdd|debug|opt|map|implib|strip|run|inc=[yes|no],
+    cpp=[yes|no|def], warn=[yes|no|def], compr=[yes|no|def|min|max],
+    head=[off|partial|full|native], skip=[yes|no], echo=<text>
+    Lines starting with '#' char are ignored
+  - Platform filters are accepted in each .hbc line and with several options.
+    Filter format: {[!][<plat>|<comp>|<keyword>]}. Filters can be combined
+    using '&', '|' operators and grouped by parantheses. Ex.: {win}, {gcc},
+    {linux|darwin}, {win&!pocc}, {(win|linux)&!watcom}, {unix&mt&gui},
+    -cflag={win}-DMYDEF, -stop{dos}, -stop{!allwin},
+    {allpocc|allgcc|allmingw|unix}, {allmsvc}, {x86|x86_64|ia64|arm},
+    {debug|nodebug|gui|std|mt|st|xhb}
+  - Certain .hbc lines (libs=, hbcs=, prgflags=, cflags=, ldflags=, libpaths=,
+    inctrypaths=, instpaths=, echo=) and corresponding command line parameters
+    will accept macros: ${hb_root}, ${hb_dir}, ${hb_name}, ${hb_plat},
+    ${hb_comp}, ${hb_build}, ${hb_cpu}, ${hb_bin}, ${hb_lib}, ${hb_dyn},
+    ${hb_inc}, ${<envvar>}. libpaths= also accepts %{hb_name} which translates
+    to the name of the .hbc file under search.
+  - Options accepting macros also support command substitution. Enclose command
+    inside ``, and, if the command contains space, also enclose in double
+    quotes. F.e. "-cflag=`wx-config --cflags`", or
+    ldflags={unix&gcc}"`wx-config --libs`".
+  - Defaults and feature support vary by platform/compiler.
+  - Options can also be specified in environment variable HBMK_OPTIONS
+
+Supported <comp> values for each supported <plat> value:
+  - linux  : gcc, clang, icc, watcom, sunpro, open64
+  - darwin : gcc, clang, icc
+  - win    : mingw, msvc, bcc, watcom, icc, pocc, cygwin, xcc,
+  -          mingw64, msvc64, msvcia64, iccia64, pocc64
+  - wce    : mingwarm, mingw, msvcarm, poccarm
+  - os2    : gcc, gccomf, watcom
+  - dos    : djgpp, watcom
+  - bsd    : gcc
+  - hpux   : gcc
+  - beos   : gcc
+  - sunos  : gcc, sunpro
+
+
+
+
+2010/1/17 Zvonimir Gruncic <gruncic@gmail.com>:
+> >From Win xp sp2 ?disk is maped as G: disk. I used BCC55 compiler.
+>
+> Program read and ?write some data . If I try to insert data in table program
+> stop
+> and PC frozen.
+>
+> ?I can't try with 2.0 version because I dont undesten new hbmk2
+> program.
+> Vista works ok !!
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+
+Iscritto all'albo dei CTU presso il Tribunale di Novara per materia Informatica
+Delta Informatica S.r.l. (http://www.deltain.it/) (+39 0321 455962)
+Analisi e sviluppo software per Lan e Web -  Consulenza informatica - Formazione
+From gruncic at gmail.com  Sun Jan 17 13:51:36 2010
+From: gruncic at gmail.com (Zvonimir Gruncic)
+Date: Sun Jan 17 13:51:43 2010
+Subject: [Harbour-users] program frozen
+Message-ID: <b811782a1001171051k70002c0aw29d7d777fbe84a@mail.gmail.com>
+
+Hi ,
+
+Is this XP - > Win98 SE compatibility problem. Maybe SP3 for XP can resolve
+problem.?
+From anezch at gmail.com  Mon Jan 18 05:12:43 2010
+From: anezch at gmail.com (Agustianes Umbara Suwardi)
+Date: Mon Jan 18 05:12:56 2010
+Subject: [Harbour-users] Re: program frozen
+In-Reply-To: <hivf68$i6d$1@ger.gmane.org>
+References: <b811782a1001170401x393de41aj61eb3268de55a14e@mail.gmail.com>
+	<hivf68$i6d$1@ger.gmane.org>
+Message-ID: <4B54341B.9090109@gmail.com>
+
+On 01/17/2010 11:51 PM, Angel Pais wrote:
+> Zvonimir Gruncic escribi?:
+>> When run harbour 1.0.1 compiled program from windows XP sp2 on data 
+>> server
+>> with win 98 SE
+>> on some tasks (probably with disk i/o ... ) program frozen PC.
+>> On other mashine with Win vista  all is ok.
+>
+> You shouldn't use an older windows version to serve data to a new one !
+> Until nows the best windows file server I know is LINUX/SAMBA 
+> combination with oplocks disabled.
+>
+> Regards
+> Angel
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+Hi, Angel. How to configure Linux Samba to disable oplocks?
+
+Regards,
+Agustianes
+From mbelgrano at deltain.it  Mon Jan 18 05:38:28 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Mon Jan 18 05:38:56 2010
+Subject: [Harbour-users] Re: program frozen
+In-Reply-To: <4B54341B.9090109@gmail.com>
+References: <b811782a1001170401x393de41aj61eb3268de55a14e@mail.gmail.com> 
+	<hivf68$i6d$1@ger.gmane.org> <4B54341B.9090109@gmail.com>
+Message-ID: <609353e71001180238i4b644783g5dbbb6921df60f1d@mail.gmail.com>
+
+found in google
+http://www.linuxtopia.org/online_books/network_administration_guides/samba_reference_guide/24_locking_08.html
+<http://www.linuxtopia.org/online_books/network_administration_guides/samba_reference_guide/24_locking_08.html>
+
+Hi, Angel. How to configure Linux Samba to disable oplocks?
+>
+> Regards,
+> Agustianes
+> --
+>
+Massimo Belgrano
+From eyelagui at adinet.com.uy  Mon Jan 18 07:21:16 2010
+From: eyelagui at adinet.com.uy (Richard)
+Date: Mon Jan 18 07:21:24 2010
+Subject: [Harbour-users] program frozen
+In-Reply-To: <b811782a1001171051k70002c0aw29d7d777fbe84a@mail.gmail.com>
+References: <b811782a1001171051k70002c0aw29d7d777fbe84a@mail.gmail.com>
+Message-ID: <4B54523C.2010001@adinet.com.uy>
+
+SP3 does not resolve this kind of issues, is more a security related 
+patch and gives more annoyances than solutions.
+
+
+
+Zvonimir Gruncic escribi?:
+> Hi ,
+>
+> Is this XP - > Win98 SE compatibility problem. Maybe SP3 for XP can resolve
+> problem.?
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>   
+
+
+From f.klein at winposware.com  Mon Jan 18 10:43:48 2010
+From: f.klein at winposware.com (frans Klein)
+Date: Mon Jan 18 10:43:56 2010
+Subject: [Harbour-users] How to handle DOS BOX close
+Message-ID: <6877240E10EE4B4E9B9C67AC7C344C8B@AZ.local>
+
+Hi to all,
+
+ 
+
+USING WINDOWS XP, I have noticed that the INKEY () function will return a
+256 value when a dos box running a harbour dos application is closed by a
+click on the CLOSE button (upper right of the window).
+
+This is very easy. It allows managing quitting the program.
+
+ 
+
+On VISTA and WINDOWS 7, this behaviour does not seem to exist.
+
+ 
+
+Is there a way to detect in the DOS program if the Close (X) button is
+clicked ? 
+
+ 
+
+Thanks a lot, 
+
+ 
+
+Frans.
+
+PS : is this the right way to submit these kind of questions ?
+
+ 
+
+From alcisoft at arrakis.es  Mon Jan 18 12:44:42 2010
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Mon Jan 18 12:47:56 2010
+Subject: [Harbour-users] Re: How to handle DOS BOX close
+References: <6877240E10EE4B4E9B9C67AC7C344C8B@AZ.local>
+Message-ID: <hj26rb$lfm$1@ger.gmane.org>
+
+Lo mejor es desactivar el boton de salida.... en el grupo de usuarios de
+xharbour en portuguese creo que reynaldo puso como desactivar el boton X de
+la application box
+
+
+frans Klein escribió en mensaje
+<6877240E10EE4B4E9B9C67AC7C344C8B@AZ.local>...
+>Hi to all,
+>
+>
+>
+>USING WINDOWS XP, I have noticed that the INKEY () function will return a
+>256 value when a dos box running a harbour dos application is closed by a
+>click on the CLOSE button (upper right of the window).
+>
+>This is very easy. It allows managing quitting the program.
+>
+>
+>
+>On VISTA and WINDOWS 7, this behaviour does not seem to exist.
+>
+>
+>
+>Is there a way to detect in the DOS program if the Close (X) button is
+>clicked ?
+>
+>
+>
+>Thanks a lot,
+>
+>
+>
+>Frans.
+>
+>PS : is this the right way to submit these kind of questions ?
+
+
+
+From tech_know at sympatico.ca  Mon Jan 18 16:39:48 2010
+From: tech_know at sympatico.ca (RANDY OLEKSIW)
+Date: Mon Jan 18 16:39:56 2010
+Subject: [Harbour-users] SQLite & Firebird Database
+Message-ID: <BAY108-W26A59324458420BAAB98F4E9660@phx.gbl>
+
+
+I am looking for a simple example of how to integerate SQlite and/or Firebird into my code.
+
+ 
+
+I have coverted over to harbour and now I want to replace the database to SQlite and/or Firebird.
+
+ 
+
+Any suggestions on how to make the job easier would be greatly appreciated
+ 		 	   		  
+From smujohnson at gmail.com  Wed Jan 20 22:16:20 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Wed Jan 20 22:16:27 2010
+Subject: [Harbour-users] Question for FAQ: "How to compile a hello world
+	program?"
+Message-ID: <674e4ddd1001201916k498b455w456244c4683a51c0@mail.gmail.com>
+
+Hi.
+
+I have installed Harbour on my Windows 64 machine... but have absolutely no
+clue how to use this.  It just installed, and I have a tree with a bunch of
+executables.
+
+If I wanted to write a hello world program (which I have done), what steps
+must I take to actually be able to use Harbour as intended... ie, make a
+hello.exe file?
+
+I am surprised that nowhere in the FAQ is this question answered, or even
+addressed.  I feel like I missed the school day when "how to generate,
+compile, link, and make .exe" discussions were held.
+
+I tried to experiment, and ran C:\>harbour hello.prg.  Now I have a C file
+generated... I don't understand in a harbour context what I'm susposed to do
+with this.  Obviously it won't compile without a few arguments to MinGW or
+gcc.   Since I couldn't find any hints or explanations,  I tried compiling
+it on my Linux machine as it has gcc setup easily, and it complains about
+missing headers, which I kind of guessed would happen.  So, maybe the most
+obvious question of all for the FAQ:  "I installed Harbour.  How do I make
+an .exe from a helloworld.prg file?"  or something to that effect.
+
+Am I simply missing a simple batch file that will just do all this linking
+work for me, so that hello.prg turns into an .exe without any fuss or
+frustration?  Could someone please kindly explain what I am missing?  Since
+old DOS apps like Turbo C or Pascal, or Microsoft Basic let you do this
+without the slightest thought, is this not already done with Harbour?
+
+Many thanks in advice!
+
+PS:  I have seen that it can be made into an exe, as the screenshot showing
+a Hello World working made it clear, yet the advice on "how to compile" only
+lists Linux as a simple guide.  *sad face*
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From Kevin at RawFedDogs.net  Wed Jan 20 22:44:51 2010
+From: Kevin at RawFedDogs.net (Kevin Monceaux)
+Date: Wed Jan 20 22:45:07 2010
+Subject: [Harbour-users] Question for FAQ: "How to compile a hello
+	world program?"
+In-Reply-To: <674e4ddd1001201916k498b455w456244c4683a51c0@mail.gmail.com>
+References: <674e4ddd1001201916k498b455w456244c4683a51c0@mail.gmail.com>
+Message-ID: <20100121034451.GA20744@RawFedDogs.net>
+
+Smu,
+
+On Wed, Jan 20, 2010 at 07:16:20PM -0800, smu johnson wrote:
+
+> If I wanted to write a hello world program (which I have done), what steps
+> must I take to actually be able to use Harbour as intended... ie, make a
+> hello.exe file?
+
+I had to look at one of my project's make files to jog my memory, and I
+might be doing things the hard way, but I use something like:
+
+hbcmp -n1 hello.prg
+
+hblnk hello.o
+
+Like some domestic help I don't do Windows.  I know the above works on
+a Linux box.  For Windows it should be at least similar, perhaps the same.
+
+
+
+-- 
+
+Kevin
+http://www.RawFedDogs.net
+http://www.WacoAgilityGroup.org
+Bruceville, TX
+
+What's the definition of a legacy system?  One that works! 
+Si hoc legere scis nimium eruditionis habes.
+Longum iter est per praecepta, breve et efficax per exempla!!!
+
+From amigosam at adinet.com.uy  Thu Jan 21 00:39:44 2010
+From: amigosam at adinet.com.uy (Angel Pais)
+Date: Thu Jan 21 00:40:15 2010
+Subject: [Harbour-users] Re: Question for FAQ: "How to compile a hello world
+	program?"
+In-Reply-To: <674e4ddd1001201916k498b455w456244c4683a51c0@mail.gmail.com>
+References: <674e4ddd1001201916k498b455w456244c4683a51c0@mail.gmail.com>
+Message-ID: <hj8pas$k1u$1@ger.gmane.org>
+
+harbour has it's own make tool
+
+hbmk2 hello.prg   makes all the way    .prg -> .c -> .o -> .exe
+
+From mbelgrano at deltain.it  Thu Jan 21 02:08:05 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Thu Jan 21 02:08:34 2010
+Subject: [Harbour-users] Question for FAQ: "How to compile a hello world 
+	program?"
+In-Reply-To: <674e4ddd1001201916k498b455w456244c4683a51c0@mail.gmail.com>
+References: <674e4ddd1001201916k498b455w456244c4683a51c0@mail.gmail.com>
+Message-ID: <609353e71001202308u6aabfc1ah8ceb02cc33aafd95@mail.gmail.com>
+
+Using hbmk2
+
+
+hbmk2 is a Tool that allow compile sample and large project
+basic use of this tools is
+hbmk2 ac_test
+hbmk2 ac_test.prg
+After this command you have ac_test.exe created
+You can also immediaply execute simple using
+hbmk2 ac_test -run
+
+Hbmk2 is indipendent from Platform and Compiler that you use
+
+Please also try the recommended way with hbmk2, it does
+a similar job to your manual Makefile, but it's portable, works
+for all future test programs and just one line.
+
+If hbmk2 doesn't work for you for some reason, post your -trace output
+
+How compile several. PRG & lib?
+
+hbmk2 test1 test2 testn -lmylib1 -lmylib2 -lmylibn
+hbmk2 test1.prg test2.prg testn.prg mylib1.lib mylib2.lib mylibn.lib
+
+How create a lib?
+
+hbmk2 myprg1.PRG myprg2.prg myrc.rc  -b -m  -hblib -omiolib.lib
+
+How have additional information?
+
+hbmk2 test1 test2 testn -lmylib1 -lmylib2 -lmylibn
+hbmk2 ac_test -info -trace
+
+How disample compile incremental?
+
+hbmk2 test1 test2 testn -lmylib1 -lmylib2 -lmylibn -rebuild
+ default os enable incremental build mode   , so only modified part of
+your project will be recompiled
+ -rebuild flag allow
+How use a config library file (hbc)?
+
+hbc contain the library used from the project
+typically exist a template for each library for include all neccessary
+references
+se for eaxample
+/harbour/contrib/hbxbp/hbxbp.hbc
+Yoy can use use hbc adding to  hbmk2 command line
+use inside a hpb adding a line with path where hbc reside
+
+
+#
+# $Id: hbxbp.hbc 11447 2009-06-20 02:41:38Z vszakats $
+#
+
+incpaths=.
+
+libs=hbxbp
+libs=../hbqt/hbqt.hbc
+How used a Project file (hbp)?
+
+you can simply use
+hbmk2 hbide.hbp
+hbp contain all command contained in command line
+#
+# $Id: hbide.hbp 13463 2010-01-04 10:15:18Z vouchcac $
+#
+
+../hbxbp/hbxbp.hbc
+
+-inc
+
+-w3 -es2 -gc3
+
+-ohbide
+
+# Trick to make it link using default Harbour builds
+-ldflag={msvc}-nodefaultlib:msvcrt.lib
+-ldflag={msvc}-defaultlib:libcmt.lib
+
+hbide.prg
+ideobject.prg
+idestylesheets.prg
+idetags.prg
+idemisc.prg
+ideactions.prg
+ideeditor.prg
+idefindreplace.prg
+idedocks.prg
+idesaveload.prg
+iderequests.prg
+idethemes.prg
+ideprojmanager.prg
+
+ideparseexpr.c
+
+What is hb.mk?
+
+Is a default setting applied to all source compiled in this directory
+How obain help?
+
+hbmk2 - help
+
+Harbour Make (hbmk2) 2.0.1dev (Rev. 13476)
+Copyright (c) 1999-2010, Viktor Szakats
+http://www.harbour-project.org/
+Translation (it-IT): (add your name here)
+
+Syntax:
+
+  hbmk2 [options] [<script[s]>]
+<src[s][.prg|.c|.obj|.o|.rc|.res|.po|.pot|.hbl|@.clp|.d]>
+
+Options:
+  -o<outname>        output file name
+  -l<libname>        link with <libname> library. <libname> should be without
+                     path, extension and 'lib' prefix (unless part of libname).
+  -L<libpath>        additional path to search for libraries
+  -i<p>|-incpath=<p> additional path to search for headers
+  -static|-shared    link with static/shared libs
+  -mt|-st            link with multi/single-thread VM
+  -gt<name>          link with GT<name> GT driver, can be repeated to link with
+                     more GTs. First one will be the default at runtime
+  -hblib             create static library
+  -hbdyn             create dynamic library
+
+  -gui|-std          create GUI/console executable
+  -main=<mainfunc>   override the name of starting function/procedure
+  -fullstatic        link with all static libs
+  -[full|fix]shared  create shared Harbour binaries without/with absolute dir
+                     reference to Harbour library (default: 'fullshared' when
+                     Harbour is installed on system location, 'fixshared'
+                     otherwise) (fix/full option in *nix only)
+  -nulrdd[-]         link with nulrdd
+  -[no]debug         add/exclude C compiler debug info. For Harbour level
+                     debug, use Harbour option -b as usual
+  -[no]optim         toggle C compiler optimizations (default: on)
+  -[no]cpp[=def]     force C/C++ mode or reset to default
+  -[no]map           create (or not) a map file
+  -[no]implib        create (or not) an import library (in -hbdyn mode)
+  -[no]strip         strip (no strip) binaries
+  -[no]trace         show commands executed
+  -[no]beep          enable (or disable) single beep on successful exit, double
+                     beep on failure
+  -[no]ignore        ignore errors when running compiler tools (default: off)
+  -nohblib[-]        do not use static core Harbour libraries when linking
+  -nolibgrouping[-]  disable library grouping on gcc based compilers
+  -nomiscsyslib[-]   don't add extra list of system libraries to default
+                     library list
+  -traceonly         show commands to be executed, but don't execute them
+  -[no]warn[=lev]    set C compiler warning level
+                     <lev> can be: yes, no, def (default: yes)
+  -[no]compr[=lev]   compress executable/dynamic lib (needs UPX)
+                     <lev> can be: min, max, def
+  -[no]run           run/don't run output executable
+  -vcshead=<file>    generate .ch header file with local repository
+                     information. SVN, CVS, Git, Mercurial, Bazaar and Fossil
+                     are currently supported. Generated header will define
+                     macro _HBMK_VCS_TYPE_ with the name of detected VCS and
+                     _HBMK_VCS_ID_ with the unique ID of local repository
+  -tshead=<file>     generate .ch header file with timestamp information.
+                     Generated header will define macros _HBMK_BUILD_DATE_,
+                     _HBMK_BUILD_TIME_, _HBMK_BUILD_TIMESTAMP_ with the
+                     date/time of build
+  -icon=<file>       set <file> as application icon. <file> should be a
+                     supported format on the target platform (experimental)
+  -instpath=<path>   copy target to <path>. if <path> is a directory, it should
+                     end with path separator. can be specified multiple times
+  -nohbc             do not process .hbc files in current directory
+  -stop              stop without doing anything
+  -echo=<text>       echo text on screen
+
+  -bldf[-]           inherit all/no (default) flags from Harbour build
+  -bldf=[p][c][l]    inherit .prg/.c/linker flags (or none) from Harbour build
+  -inctrypath=<p>    additional path to autodetect .c header locations
+  -prgflag=<f>       pass flag to Harbour
+  -cflag=<f>         pass flag to C compiler
+  -resflag=<f>       pass flag to resource compiler (Windows only)
+  -ldflag=<f>        pass flag to linker (executable)
+  -aflag=<f>         pass flag to linker (static library)
+  -dflag=<f>         pass flag to linker (dynamic library)
+  -runflag=<f>       pass flag to output executable when -run option is used
+  -jobs=<n>          start n compilation threads (multiprocess platforms only)
+  -inc               enable incremental build mode
+  -[no]head[=<m>]    control source header parsing (in incremental build mode)
+                     <m> can be: native, full, partial (default), off
+  -rebuild           rebuild all (in incremental build mode)
+  -clean             clean (in incremental build mode)
+  -workdir=<dir>     working directory for incremental build mode
+                     (default: .hbmk/plat/comp)
+
+  -hbl[=<output>]    output .hbl filename. %{hb_lng} macro is accepted in
+                     filename
+  -lng=<languages>   list of languages to be replaced in %{hb_lng} macros in
+                     .pot/.po filenames and output .hbl/.po filenames. Comma
+                     separared list:
+                     -lng=en-EN,hu-HU,de
+  -po=<output>       create/update .po file from source. Merge it with previous
+                     .po file of the same name
+  -[no]minipo        don't (or do) add Harbour version number and source file
+                     reference to .po (default: add them)
+  -rebuildpo         recreate .po file, thus removing all obsolete entries in
+                     it
+
+  -target=<script>   specify a new build target. <script> can be .prg (or no
+                     extension) or .hbm file (available on command line only)
+  -target            marks beginning of options belonging to a new build target
+                     (available on command line only)
+  -alltarget         marks beginning of common options belonging to all targets
+                     (available on command line only)
+
+  -hbrun             run target
+  -hbraw             stop after running Harbour compiler
+  -hbcmp|-clipper    stop after creating the object files
+                     create link/copy hbmk2 to hbcmp/clipper for the same
+                     effect
+  -hbcc              stop after creating the object files and accept raw C
+                     flags
+                     create link/copy hbmk2 to hbcc for the same effect
+  -hblnk             accept raw linker flags
+  -hb10              enable Harbour 1.0.x compatibility mode (experimental)
+  -xhb               enable xhb mode (experimental)
+  -hbc               enable pure C mode (experimental)
+  -exospace          emulate Clipper compatible linker behavior
+                     create link/copy hbmk2 to rtlink/blinker/exospace for the
+                     same effect
+
+  -hbmake=<file>     convert hbmake project file to .hbp file (experimental)
+  -xbp=<file>        convert .xbp (xbuild) project file to .hbp file
+                     (experimental)
+  -xhp=<file>        convert .xhp (xMate) project file to .hbp file
+                     (experimental)
+
+  --hbdirbin         output Harbour binary directory
+  --hbdirdyn         output Harbour dynamic library directory
+  --hbdirlib         output Harbour static library directory
+  --hbdirinc         output Harbour header directory
+
+  -plat[form]=<plat> select target platform.
+  -comp[iler]=<comp> select C compiler.
+                     Special value:
+                      - bld: use original build settings (default on *nix)
+  -build=<name>      use a specific build name
+  -lang=<lang>       override default language. Similar to HB_LANG envvar.
+  --version          display version header only
+  -pause             force waiting for a key on exit in case of failure (with
+                     alternate GTs only)
+  -info              turn on informational messages
+  -quiet             suppress all screen messages
+
+Notes:
+  - <script> can be <@script> (.hbm format), <script.hbm>, <script.hbp> (marks
+    a new target) or <script.hbc>.
+  - Multiple -l, -L and <script> parameters are accepted.
+  - Regular Harbour compiler options are also accepted.
+  - hbmk.cfg option file in hbmk2 directory is always processed if it exists.
+    On *nix platforms ~/.harbour, /etc/harbour, <base>/etc/harbour, <base>/etc
+    are checked (in that order) before the hbmk2 directory. The file format is
+    the same as .hbc.
+  - hbmk.hbm make script in current directory is always processed if it exists.
+  - .hbc config files in current dir are automatically processed.
+  - .hbc options (they should come in separate lines): libs=[<libname[s]>],
+    hbcs=[<.hbc file[s]>], gt=[gtname], syslibs=[<libname[s]>],
+    prgflags=[Harbour flags], cflags=[C compiler flags], resflags=[resource
+    compiler flags], ldflags=[linker flags], libpaths=[paths], sources=[source
+    files], incpaths=[paths], inctrypaths=[paths], instpaths=[paths],
+    gui|mt|shared|nulrdd|debug|opt|map|implib|strip|run|inc=[yes|no],
+    cpp=[yes|no|def], warn=[yes|no|def], compr=[yes|no|def|min|max],
+    head=[off|partial|full|native], skip=[yes|no], echo=<text>
+    Lines starting with '#' char are ignored
+  - Platform filters are accepted in each .hbc line and with several options.
+    Filter format: {[!][<plat>|<comp>|<keyword>]}. Filters can be combined
+    using '&', '|' operators and grouped by parantheses. Ex.: {win}, {gcc},
+    {linux|darwin}, {win&!pocc}, {(win|linux)&!watcom}, {unix&mt&gui},
+    -cflag={win}-DMYDEF, -stop{dos}, -stop{!allwin},
+    {allpocc|allgcc|allmingw|unix}, {allmsvc}, {x86|x86_64|ia64|arm},
+    {debug|nodebug|gui|std|mt|st|xhb}
+  - Certain .hbc lines (libs=, hbcs=, prgflags=, cflags=, ldflags=, libpaths=,
+    inctrypaths=, instpaths=, echo=) and corresponding command line parameters
+    will accept macros: ${hb_root}, ${hb_dir}, ${hb_name}, ${hb_plat},
+    ${hb_comp}, ${hb_build}, ${hb_cpu}, ${hb_bin}, ${hb_lib}, ${hb_dyn},
+    ${hb_inc}, ${<envvar>}. libpaths= also accepts %{hb_name} which translates
+    to the name of the .hbc file under search.
+  - Options accepting macros also support command substitution. Enclose command
+    inside ``, and, if the command contains space, also enclose in double
+    quotes. F.e. "-cflag=`wx-config --cflags`", or
+    ldflags={unix&gcc}"`wx-config --libs`".
+  - Defaults and feature support vary by platform/compiler.
+  - Options can also be specified in environment variable HBMK_OPTIONS
+
+Supported <comp> values for each supported <plat> value:
+  - linux  : gcc, clang, icc, watcom, sunpro, open64
+  - darwin : gcc, clang, icc
+  - win    : mingw, msvc, bcc, watcom, icc, pocc, cygwin, xcc,
+  -          mingw64, msvc64, msvcia64, iccia64, pocc64
+  - wce    : mingwarm, mingw, msvcarm, poccarm
+  - os2    : gcc, gccomf, watcom
+  - dos    : djgpp, watcom
+  - bsd    : gcc
+  - hpux   : gcc
+  - beos   : gcc
+  - sunos  : gcc, sunpro
+
+
+
+
+2010/1/21 smu johnson <smujohnson@gmail.com>:
+> Hi.
+>
+> I have installed Harbour on my Windows 64 machine... but have absolutely no
+> clue how to use this. ?It just installed, and I have a tree with a bunch of
+> executables.
+>
+> If I wanted to write a hello world program (which I have done), what steps
+> must I take to actually be able to use Harbour as intended... ie, make a
+> hello.exe file?
+>
+> I am surprised that nowhere in the FAQ is this question answered, or even
+> addressed. ?I feel like I missed the school day when "how to generate,
+> compile, link, and make .exe" discussions were held.
+>
+> I tried to experiment, and ran C:\>harbour hello.prg. ?Now I have a C file
+> generated... I don't understand in a harbour context what I'm susposed to do
+> with this. ?Obviously it won't compile without a few arguments to MinGW or
+> gcc. ? Since I couldn't find any hints or explanations, ?I tried compiling
+> it on my Linux machine as it has gcc setup easily, and it complains about
+> missing headers, which I kind of guessed would happen. ?So, maybe the most
+> obvious question of all for the FAQ: ?"I installed Harbour. ?How do I make
+> an .exe from a helloworld.prg file?" ?or something to that effect.
+>
+> Am I simply missing a simple batch file that will just do all this linking
+> work for me, so that hello.prg turns into an .exe without any fuss or
+> frustration? ?Could someone please kindly explain what I am missing? ?Since
+> old DOS apps like Turbo C or Pascal, or Microsoft Basic let you do this
+> without the slightest thought, is this not already done with Harbour?
+>
+> Many thanks in advice!
+>
+> PS: ?I have seen that it can be made into an exe, as the screenshot showing
+> a Hello World working made it clear, yet the advice on "how to compile" only
+> lists Linux as a simple guide. ?*sad face*
+>
+> --
+> smu johnson <smujohnson@gmail.com>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+
+Iscritto all'albo dei CTU presso il Tribunale di Novara per materia Informatica
+Delta Informatica S.r.l. (http://www.deltain.it/) (+39 0321 455962)
+Analisi e sviluppo software per Lan e Web -  Consulenza informatica - Formazione
+From smujohnson at gmail.com  Thu Jan 21 04:57:28 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Thu Jan 21 04:57:40 2010
+Subject: [Harbour-users] Question for FAQ: "How to compile a hello world 
+	program?"
+In-Reply-To: <609353e71001202308u6aabfc1ah8ceb02cc33aafd95@mail.gmail.com>
+References: <674e4ddd1001201916k498b455w456244c4683a51c0@mail.gmail.com>
+	<609353e71001202308u6aabfc1ah8ceb02cc33aafd95@mail.gmail.com>
+Message-ID: <674e4ddd1001210157t729720a1k708661f0f464c04b@mail.gmail.com>
+
+Thanks everyone.  I appreciate all the replies greatly.  I don't understand
+why this wouldn't be in the FAQ, when questions like "What is Harbour?" are
+in there.  I am skeptical that that question is actually a "Frequently asked
+question".  I will keep a journal of my attempts to get Harbour working
+properly by piecing it together with everyones help and my own effort.., and
+at the end, suggest a few important yet pertinent questions for the FAQ.
+
+Looking forward to Harbour!
+
+On Wed, Jan 20, 2010 at 11:08 PM, Massimo Belgrano <mbelgrano@deltain.it>wrote:
+
+> Using hbmk2
+>
+>
+> hbmk2 is a Tool that allow compile sample and large project
+> basic use of this tools is
+> hbmk2 ac_test
+> hbmk2 ac_test.prg
+> After this command you have ac_test.exe created
+> You can also immediaply execute simple using
+> hbmk2 ac_test -run
+>
+> Hbmk2 is indipendent from Platform and Compiler that you use
+>
+> Please also try the recommended way with hbmk2, it does
+> a similar job to your manual Makefile, but it's portable, works
+> for all future test programs and just one line.
+>
+> If hbmk2 doesn't work for you for some reason, post your -trace output
+>
+> How compile several. PRG & lib?
+>
+> hbmk2 test1 test2 testn -lmylib1 -lmylib2 -lmylibn
+> hbmk2 test1.prg test2.prg testn.prg mylib1.lib mylib2.lib mylibn.lib
+>
+> How create a lib?
+>
+> hbmk2 myprg1.PRG myprg2.prg myrc.rc  -b -m  -hblib -omiolib.lib
+>
+> How have additional information?
+>
+> hbmk2 test1 test2 testn -lmylib1 -lmylib2 -lmylibn
+> hbmk2 ac_test -info -trace
+>
+> How disample compile incremental?
+>
+> hbmk2 test1 test2 testn -lmylib1 -lmylib2 -lmylibn -rebuild
+>  default os enable incremental build mode   , so only modified part of
+> your project will be recompiled
+>  -rebuild flag allow
+> How use a config library file (hbc)?
+>
+> hbc contain the library used from the project
+> typically exist a template for each library for include all neccessary
+> references
+> se for eaxample
+> /harbour/contrib/hbxbp/hbxbp.hbc
+> Yoy can use use hbc adding to  hbmk2 command line
+> use inside a hpb adding a line with path where hbc reside
+>
+>
+> #
+> # $Id: hbxbp.hbc 11447 2009-06-20 02:41:38Z vszakats $
+> #
+>
+> incpaths=.
+>
+> libs=hbxbp
+> libs=../hbqt/hbqt.hbc
+> How used a Project file (hbp)?
+>
+> you can simply use
+> hbmk2 hbide.hbp
+> hbp contain all command contained in command line
+> #
+> # $Id: hbide.hbp 13463 2010-01-04 10:15:18Z vouchcac $
+> #
+>
+> ../hbxbp/hbxbp.hbc
+>
+> -inc
+>
+> -w3 -es2 -gc3
+>
+> -ohbide
+>
+> # Trick to make it link using default Harbour builds
+> -ldflag={msvc}-nodefaultlib:msvcrt.lib
+> -ldflag={msvc}-defaultlib:libcmt.lib
+>
+> hbide.prg
+> ideobject.prg
+> idestylesheets.prg
+> idetags.prg
+> idemisc.prg
+> ideactions.prg
+> ideeditor.prg
+> idefindreplace.prg
+> idedocks.prg
+> idesaveload.prg
+> iderequests.prg
+> idethemes.prg
+> ideprojmanager.prg
+>
+> ideparseexpr.c
+>
+> What is hb.mk?
+>
+> Is a default setting applied to all source compiled in this directory
+> How obain help?
+>
+> hbmk2 - help
+>
+> Harbour Make (hbmk2) 2.0.1dev (Rev. 13476)
+> Copyright (c) 1999-2010, Viktor Szakats
+> http://www.harbour-project.org/
+> Translation (it-IT): (add your name here)
+>
+> Syntax:
+>
+>  hbmk2 [options] [<script[s]>]
+> <src[s][.prg|.c|.obj|.o|.rc|.res|.po|.pot|.hbl|@.clp|.d]>
+>
+> Options:
+>  -o<outname>        output file name
+>  -l<libname>        link with <libname> library. <libname> should be
+> without
+>                     path, extension and 'lib' prefix (unless part of
+> libname).
+>  -L<libpath>        additional path to search for libraries
+>  -i<p>|-incpath=<p> additional path to search for headers
+>  -static|-shared    link with static/shared libs
+>  -mt|-st            link with multi/single-thread VM
+>  -gt<name>          link with GT<name> GT driver, can be repeated to link
+> with
+>                     more GTs. First one will be the default at runtime
+>  -hblib             create static library
+>  -hbdyn             create dynamic library
+>
+>  -gui|-std          create GUI/console executable
+>  -main=<mainfunc>   override the name of starting function/procedure
+>  -fullstatic        link with all static libs
+>  -[full|fix]shared  create shared Harbour binaries without/with absolute
+> dir
+>                     reference to Harbour library (default: 'fullshared'
+> when
+>                     Harbour is installed on system location, 'fixshared'
+>                     otherwise) (fix/full option in *nix only)
+>  -nulrdd[-]         link with nulrdd
+>  -[no]debug         add/exclude C compiler debug info. For Harbour level
+>                     debug, use Harbour option -b as usual
+>  -[no]optim         toggle C compiler optimizations (default: on)
+>  -[no]cpp[=def]     force C/C++ mode or reset to default
+>  -[no]map           create (or not) a map file
+>  -[no]implib        create (or not) an import library (in -hbdyn mode)
+>  -[no]strip         strip (no strip) binaries
+>  -[no]trace         show commands executed
+>  -[no]beep          enable (or disable) single beep on successful exit,
+> double
+>                     beep on failure
+>  -[no]ignore        ignore errors when running compiler tools (default:
+> off)
+>  -nohblib[-]        do not use static core Harbour libraries when linking
+>  -nolibgrouping[-]  disable library grouping on gcc based compilers
+>  -nomiscsyslib[-]   don't add extra list of system libraries to default
+>                     library list
+>  -traceonly         show commands to be executed, but don't execute them
+>  -[no]warn[=lev]    set C compiler warning level
+>                     <lev> can be: yes, no, def (default: yes)
+>  -[no]compr[=lev]   compress executable/dynamic lib (needs UPX)
+>                     <lev> can be: min, max, def
+>  -[no]run           run/don't run output executable
+>  -vcshead=<file>    generate .ch header file with local repository
+>                     information. SVN, CVS, Git, Mercurial, Bazaar and
+> Fossil
+>                     are currently supported. Generated header will define
+>                     macro _HBMK_VCS_TYPE_ with the name of detected VCS and
+>                     _HBMK_VCS_ID_ with the unique ID of local repository
+>  -tshead=<file>     generate .ch header file with timestamp information.
+>                     Generated header will define macros _HBMK_BUILD_DATE_,
+>                     _HBMK_BUILD_TIME_, _HBMK_BUILD_TIMESTAMP_ with the
+>                     date/time of build
+>  -icon=<file>       set <file> as application icon. <file> should be a
+>                     supported format on the target platform (experimental)
+>  -instpath=<path>   copy target to <path>. if <path> is a directory, it
+> should
+>                     end with path separator. can be specified multiple
+> times
+>  -nohbc             do not process .hbc files in current directory
+>  -stop              stop without doing anything
+>  -echo=<text>       echo text on screen
+>
+>  -bldf[-]           inherit all/no (default) flags from Harbour build
+>  -bldf=[p][c][l]    inherit .prg/.c/linker flags (or none) from Harbour
+> build
+>  -inctrypath=<p>    additional path to autodetect .c header locations
+>  -prgflag=<f>       pass flag to Harbour
+>  -cflag=<f>         pass flag to C compiler
+>  -resflag=<f>       pass flag to resource compiler (Windows only)
+>  -ldflag=<f>        pass flag to linker (executable)
+>  -aflag=<f>         pass flag to linker (static library)
+>  -dflag=<f>         pass flag to linker (dynamic library)
+>  -runflag=<f>       pass flag to output executable when -run option is used
+>  -jobs=<n>          start n compilation threads (multiprocess platforms
+> only)
+>  -inc               enable incremental build mode
+>  -[no]head[=<m>]    control source header parsing (in incremental build
+> mode)
+>                     <m> can be: native, full, partial (default), off
+>  -rebuild           rebuild all (in incremental build mode)
+>  -clean             clean (in incremental build mode)
+>  -workdir=<dir>     working directory for incremental build mode
+>                     (default: .hbmk/plat/comp)
+>
+>  -hbl[=<output>]    output .hbl filename. %{hb_lng} macro is accepted in
+>                     filename
+>  -lng=<languages>   list of languages to be replaced in %{hb_lng} macros in
+>                     .pot/.po filenames and output .hbl/.po filenames. Comma
+>                     separared list:
+>                     -lng=en-EN,hu-HU,de
+>  -po=<output>       create/update .po file from source. Merge it with
+> previous
+>                     .po file of the same name
+>  -[no]minipo        don't (or do) add Harbour version number and source
+> file
+>                     reference to .po (default: add them)
+>  -rebuildpo         recreate .po file, thus removing all obsolete entries
+> in
+>                     it
+>
+>  -target=<script>   specify a new build target. <script> can be .prg (or no
+>                     extension) or .hbm file (available on command line
+> only)
+>  -target            marks beginning of options belonging to a new build
+> target
+>                     (available on command line only)
+>  -alltarget         marks beginning of common options belonging to all
+> targets
+>                     (available on command line only)
+>
+>  -hbrun             run target
+>  -hbraw             stop after running Harbour compiler
+>  -hbcmp|-clipper    stop after creating the object files
+>                     create link/copy hbmk2 to hbcmp/clipper for the same
+>                     effect
+>  -hbcc              stop after creating the object files and accept raw C
+>                     flags
+>                     create link/copy hbmk2 to hbcc for the same effect
+>  -hblnk             accept raw linker flags
+>  -hb10              enable Harbour 1.0.x compatibility mode (experimental)
+>  -xhb               enable xhb mode (experimental)
+>  -hbc               enable pure C mode (experimental)
+>  -exospace          emulate Clipper compatible linker behavior
+>                     create link/copy hbmk2 to rtlink/blinker/exospace for
+> the
+>                     same effect
+>
+>  -hbmake=<file>     convert hbmake project file to .hbp file (experimental)
+>  -xbp=<file>        convert .xbp (xbuild) project file to .hbp file
+>                     (experimental)
+>  -xhp=<file>        convert .xhp (xMate) project file to .hbp file
+>                     (experimental)
+>
+>  --hbdirbin         output Harbour binary directory
+>  --hbdirdyn         output Harbour dynamic library directory
+>  --hbdirlib         output Harbour static library directory
+>  --hbdirinc         output Harbour header directory
+>
+>  -plat[form]=<plat> select target platform.
+>  -comp[iler]=<comp> select C compiler.
+>                     Special value:
+>                      - bld: use original build settings (default on *nix)
+>  -build=<name>      use a specific build name
+>  -lang=<lang>       override default language. Similar to HB_LANG envvar.
+>  --version          display version header only
+>  -pause             force waiting for a key on exit in case of failure
+> (with
+>                     alternate GTs only)
+>  -info              turn on informational messages
+>  -quiet             suppress all screen messages
+>
+> Notes:
+>  - <script> can be <@script> (.hbm format), <script.hbm>, <script.hbp>
+> (marks
+>    a new target) or <script.hbc>.
+>  - Multiple -l, -L and <script> parameters are accepted.
+>  - Regular Harbour compiler options are also accepted.
+>  - hbmk.cfg option file in hbmk2 directory is always processed if it
+> exists.
+>    On *nix platforms ~/.harbour, /etc/harbour, <base>/etc/harbour,
+> <base>/etc
+>    are checked (in that order) before the hbmk2 directory. The file format
+> is
+>    the same as .hbc.
+>  - hbmk.hbm make script in current directory is always processed if it
+> exists.
+>  - .hbc config files in current dir are automatically processed.
+>  - .hbc options (they should come in separate lines): libs=[<libname[s]>],
+>    hbcs=[<.hbc file[s]>], gt=[gtname], syslibs=[<libname[s]>],
+>    prgflags=[Harbour flags], cflags=[C compiler flags], resflags=[resource
+>    compiler flags], ldflags=[linker flags], libpaths=[paths],
+> sources=[source
+>    files], incpaths=[paths], inctrypaths=[paths], instpaths=[paths],
+>    gui|mt|shared|nulrdd|debug|opt|map|implib|strip|run|inc=[yes|no],
+>    cpp=[yes|no|def], warn=[yes|no|def], compr=[yes|no|def|min|max],
+>    head=[off|partial|full|native], skip=[yes|no], echo=<text>
+>    Lines starting with '#' char are ignored
+>  - Platform filters are accepted in each .hbc line and with several
+> options.
+>    Filter format: {[!][<plat>|<comp>|<keyword>]}. Filters can be combined
+>    using '&', '|' operators and grouped by parantheses. Ex.: {win}, {gcc},
+>    {linux|darwin}, {win&!pocc}, {(win|linux)&!watcom}, {unix&mt&gui},
+>    -cflag={win}-DMYDEF, -stop{dos}, -stop{!allwin},
+>    {allpocc|allgcc|allmingw|unix}, {allmsvc}, {x86|x86_64|ia64|arm},
+>    {debug|nodebug|gui|std|mt|st|xhb}
+>  - Certain .hbc lines (libs=, hbcs=, prgflags=, cflags=, ldflags=,
+> libpaths=,
+>    inctrypaths=, instpaths=, echo=) and corresponding command line
+> parameters
+>    will accept macros: ${hb_root}, ${hb_dir}, ${hb_name}, ${hb_plat},
+>    ${hb_comp}, ${hb_build}, ${hb_cpu}, ${hb_bin}, ${hb_lib}, ${hb_dyn},
+>    ${hb_inc}, ${<envvar>}. libpaths= also accepts %{hb_name} which
+> translates
+>    to the name of the .hbc file under search.
+>  - Options accepting macros also support command substitution. Enclose
+> command
+>    inside ``, and, if the command contains space, also enclose in double
+>    quotes. F.e. "-cflag=`wx-config --cflags`", or
+>    ldflags={unix&gcc}"`wx-config --libs`".
+>  - Defaults and feature support vary by platform/compiler.
+>  - Options can also be specified in environment variable HBMK_OPTIONS
+>
+> Supported <comp> values for each supported <plat> value:
+>  - linux  : gcc, clang, icc, watcom, sunpro, open64
+>  - darwin : gcc, clang, icc
+>  - win    : mingw, msvc, bcc, watcom, icc, pocc, cygwin, xcc,
+>  -          mingw64, msvc64, msvcia64, iccia64, pocc64
+>  - wce    : mingwarm, mingw, msvcarm, poccarm
+>  - os2    : gcc, gccomf, watcom
+>  - dos    : djgpp, watcom
+>  - bsd    : gcc
+>  - hpux   : gcc
+>  - beos   : gcc
+>  - sunos  : gcc, sunpro
+>
+>
+>
+>
+> 2010/1/21 smu johnson <smujohnson@gmail.com>:
+> > Hi.
+> >
+> > I have installed Harbour on my Windows 64 machine... but have absolutely
+> no
+> > clue how to use this.  It just installed, and I have a tree with a bunch
+> of
+> > executables.
+> >
+> > If I wanted to write a hello world program (which I have done), what
+> steps
+> > must I take to actually be able to use Harbour as intended... ie, make a
+> > hello.exe file?
+> >
+> > I am surprised that nowhere in the FAQ is this question answered, or even
+> > addressed.  I feel like I missed the school day when "how to generate,
+> > compile, link, and make .exe" discussions were held.
+> >
+> > I tried to experiment, and ran C:\>harbour hello.prg.  Now I have a C
+> file
+> > generated... I don't understand in a harbour context what I'm susposed to
+> do
+> > with this.  Obviously it won't compile without a few arguments to MinGW
+> or
+> > gcc.   Since I couldn't find any hints or explanations,  I tried
+> compiling
+> > it on my Linux machine as it has gcc setup easily, and it complains about
+> > missing headers, which I kind of guessed would happen.  So, maybe the
+> most
+> > obvious question of all for the FAQ:  "I installed Harbour.  How do I
+> make
+> > an .exe from a helloworld.prg file?"  or something to that effect.
+> >
+> > Am I simply missing a simple batch file that will just do all this
+> linking
+> > work for me, so that hello.prg turns into an .exe without any fuss or
+> > frustration?  Could someone please kindly explain what I am missing?
+>  Since
+> > old DOS apps like Turbo C or Pascal, or Microsoft Basic let you do this
+> > without the slightest thought, is this not already done with Harbour?
+> >
+> > Many thanks in advice!
+> >
+> > PS:  I have seen that it can be made into an exe, as the screenshot
+> showing
+> > a Hello World working made it clear, yet the advice on "how to compile"
+> only
+> > lists Linux as a simple guide.  *sad face*
+> >
+> > --
+> > smu johnson <smujohnson@gmail.com>
+> > _______________________________________________
+> > Harbour-users mailing list (attachment size limit: 40KB)
+> > Harbour-users@harbour-project.org
+> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >
+>
+>
+>
+> --
+> Massimo Belgrano
+>
+> Iscritto all'albo dei CTU presso il Tribunale di Novara per materia
+> Informatica
+> Delta Informatica S.r.l. (http://www.deltain.it/) (+39 0321 455962)
+> Analisi e sviluppo software per Lan e Web -  Consulenza informatica -
+> Formazione
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From smujohnson at gmail.com  Thu Jan 21 05:04:53 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Thu Jan 21 05:05:04 2010
+Subject: [Harbour-users] Question for FAQ "Hbtest fails. Should I be
+	worried?"
+Message-ID: <674e4ddd1001210204p18e5fe5fy938e81937c1cdb89@mail.gmail.com>
+
+Hi,
+
+I was poking around the hb20\ directory on my Windows machine, and I came
+across a cute hbtext.exe file.  I ran it, and got errors saying the
+regression testing failed in some areas.  Is this something to be worried
+about?  Nothing I have found on the website mentions this concern.
+
+Maybe someone could answer this in the FAQ?  Thank you!
+
+My result on a Windows 7 32-bit install:
+
+========================================
+
+Harbour Regression Test Suite
+Copyright (c) 1999-2010, http://www.harbour-project.org/
+---------------------------------------------------------------------------
+      Version: Harbour 2.0.0 (Rev. 13372)
+     Compiler: MinGW GNU C 4.4.1 (32-bit)
+           OS: Windows 7 6.1.7100
+   Date, Time: 2010.01.21 01:52:30
+       Output: (stdout)
+Shortcut opt.: ON
+     Switches:
+===========================================================================
+R No.  Line            TestCall()                               ->
+Result
+|
+Expected
+
+---------------------------------------------------------------------------
+!  612 MAIN_HVMA(373)  saArray[ 1000 ]
+       Result: "E 2 BASE 1132 Bound error (array access) OS:0 #:0
+A:2:A:{.[1].};N:1000 "
+     Expected: "E 2 BASE 1132 Bound error (array access) OS:0 #:0 "
+!  613 MAIN_HVMA(374)  saArray[ 1000 ] := 1
+       Result: "E 2 BASE 1133 Bound error (array assign) OS:0 #:0 A:1:N:1000
+"
+     Expected: "E 2 BASE 1133 Bound error (array assign) OS:0 #:0 "
+!  742 MAIN_HVMA(542)  RTSTR( 00000500000000000000 )
+       Result: " 16  500000000000000"
+     Expected: " 21       500000000000000"
+!  743 MAIN_HVMA(543)  RTSTR( 0500000000000000 )
+       Result: " 16  500000000000000"
+     Expected: " 17   500000000000000"
+! 1087 MAIN_MATH(359)  Str(1234567890 * 1234567890 )
+       Result: " 1524157875019052100"
+     Expected: " 1524157875019052000"
+! 2889 MAIN_ARRAY(164) ASize( NIL )
+       Result: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 A:1:U:NIL "
+     Expected: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 "
+! 2890 MAIN_ARRAY(165) ASize( {} )
+       Result: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 A:1:A:{.[0].}
+"
+     Expected: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 "
+! 2891 MAIN_ARRAY(166) ASize( ErrorNew() )
+       Result: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 A:1:O:ERROR
+Object "
+     Expected: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 "
+! 2892 MAIN_ARRAY(175) ASize( NIL, 0 )
+       Result: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 A:2:U:NIL;N:0
+"
+     Expected: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 "
+! 2893 MAIN_ARRAY(176) ASize( NIL, 1 )
+       Result: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 A:2:U:NIL;N:1
+"
+     Expected: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 "
+! 2894 MAIN_ARRAY(177) ASize( NIL, -1 )
+       Result: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 A:2:U:NIL;N:-1
+"
+     Expected: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 "
+! 2916 MAIN_ARRAY(214) Array( -1 )
+       Result: "E 2 BASE 1131 Bound error (array dimension) OS:0 #:0
+A:1:N:-1 "
+     Expected: "E 2 BASE 1131 Bound error (array dimension) OS:0 #:0 "
+! 2917 MAIN_ARRAY(215) Array( 1, 0, -10 )
+       Result: "E 2 BASE 1131 Bound error (array dimension) OS:0 #:0
+A:3:N:1;N:0;N:-10 "
+     Expected: "E 2 BASE 1131 Bound error (array dimension) OS:0 #:0 "
+! 3056 MAIN_ARRAY(395) TAEVSM()
+       Result: "N10N 9N 8N 7N 6         5"
+     Expected: "N10N 9N 8N 7N 6N 5N 4N 3N 2N 1         0"
+! 3057 MAIN_ARRAY(396) TASOSM1()
+       Result: "NN 5NN 4NN 3NN 2         1{ 3 }"
+     Expected: "NN 5NN 4NN 3NN 2NN 1NN 0NN 0NN 0NN 0NN 0NN 0NN 0         0{
+}"
+! 3058 MAIN_ARRAY(397) TASOSM2()
+       Result: "NN 5NN 4NN 3NN 2         1{ 3 }"
+     Expected: "NN 5NN 4NN 3NN 2NN 1NN 0NN 0NN 0NN 0NN 0         0{  }"
+! 3178 MAIN_MISC(94)   Set( 40  )
+       Result: 0
+     Expected: NIL
+! 3187 MAIN_MISC(104)  Set( 40 , -1 )
+       Result: 0
+     Expected: NIL
+! 3195 MAIN_MISC(114)  Set( 19,   BADFNAME2() )
+       Result: "E 20 TERM 2013 Create error <*INVALI*.TMP> OS:123 #:1 F:DR"
+     Expected: "E 20 TERM 2013 Create error <*INVALI*.TMP> OS:2 #:1 F:DR"
+! 3196 MAIN_MISC(115)  Set( 24, BADFNAME2() )
+       Result: "E 20 TERM 2014 Create error <*INVALI*.TMP> OS:123 #:1 F:DR"
+     Expected: "E 20 TERM 2014 Create error <*INVALI*.TMP> OS:2 #:1 F:DR"
+! 3197 MAIN_MISC(116)  Set( 22, BADFNAME2() )
+       Result: "E 20 TERM 2015 Create error <*INVALI*.TMP> OS:123 #:1 F:DR"
+     Expected: "E 20 TERM 2015 Create error <*INVALI*.TMP> OS:2 #:1 F:DR"
+! 3656 MAIN_MISC(815)  __CopyFile("$$COPYFR.TMP", BADFNAME())
+       Result: "E 20 BASE 2012 Create error <*INVALID*.> OS:123 #:1 F:DR"
+     Expected: "E 20 BASE 2012 Create error <*INVALID*.> OS:2 #:1 F:DR"
+! 4761 MAIN_LAST(184)  __MSave( BADFNAME(), "*", .T. )
+       Result: "E 20 BASE 2006 Create error <*BADNAM*.MEM> OS:123 #:1 F:DR"
+     Expected: "E 20 BASE 2006 Create error <*BADNAM*.MEM> OS:2 #:1 F:DR"
+===========================================================================
+Test calls passed:       4738 ( 99.51 % )
+Test calls failed:         23 ( 0.49 % )
+                   ----------
+            Total:       4761 ( Time elapsed: 0.22 seconds )
+
+WARNING ! Failures detected
+
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From mbelgrano at deltain.it  Thu Jan 21 15:08:13 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Thu Jan 21 15:08:42 2010
+Subject: [Harbour-users] Question for FAQ: "How to compile a hello world 
+	program?"
+In-Reply-To: <674e4ddd1001210157t729720a1k708661f0f464c04b@mail.gmail.com>
+References: <674e4ddd1001201916k498b455w456244c4683a51c0@mail.gmail.com> 
+	<609353e71001202308u6aabfc1ah8ceb02cc33aafd95@mail.gmail.com> 
+	<674e4ddd1001210157t729720a1k708661f0f464c04b@mail.gmail.com>
+Message-ID: <609353e71001211208y4c41b029w8221974606b3c180@mail.gmail.com>
+
+You are right
+I invite you collaborate to harbour project writing and sharing with your faq
+
+2010/1/21 smu johnson <smujohnson@gmail.com>:
+> Thanks everyone. ?I appreciate all the replies greatly. ?I don't understand
+> why this wouldn't be in the FAQ, when questions like "What is Harbour?" are
+> in there. ?I am skeptical that that question is actually a "Frequently asked
+> question". ?I will keep a journal of my attempts to get Harbour working
+> properly by piecing it together with everyones help and my own effort.., and
+> at the end, suggest a few important yet pertinent questions for the FAQ.
+>
+
+
+-- 
+Massimo Belgrano
+From smujohnson at gmail.com  Thu Jan 21 21:23:15 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Thu Jan 21 21:23:23 2010
+Subject: [Harbour-users] Question for FAQ: "How to compile a hello world 
+	program?"
+In-Reply-To: <609353e71001211208y4c41b029w8221974606b3c180@mail.gmail.com>
+References: <674e4ddd1001201916k498b455w456244c4683a51c0@mail.gmail.com>
+	<609353e71001202308u6aabfc1ah8ceb02cc33aafd95@mail.gmail.com>
+	<674e4ddd1001210157t729720a1k708661f0f464c04b@mail.gmail.com>
+	<609353e71001211208y4c41b029w8221974606b3c180@mail.gmail.com>
+Message-ID: <674e4ddd1001211823k22da331bh12e7ac7144ab31f5@mail.gmail.com>
+
+Massimo,
+
+Where / how do I start though?  Who do I get in touch with?  I have a few
+more questions I'm documenting that I believe will come up often... and
+would love to see the answers to them to alleviate frustration for others.
+I looked on the site and didn't find any IRC channel info.. but maybe a
+secret one exists somewhere?
+
+Thanks in advance
+
+On Thu, Jan 21, 2010 at 12:08 PM, Massimo Belgrano <mbelgrano@deltain.it>wrote:
+
+> You are right
+> I invite you collaborate to harbour project writing and sharing with your
+> faq
+>
+> 2010/1/21 smu johnson <smujohnson@gmail.com>:
+> > Thanks everyone.  I appreciate all the replies greatly.  I don't
+> understand
+> > why this wouldn't be in the FAQ, when questions like "What is Harbour?"
+> are
+> > in there.  I am skeptical that that question is actually a "Frequently
+> asked
+> > question".  I will keep a journal of my attempts to get Harbour working
+> > properly by piecing it together with everyones help and my own effort..,
+> and
+> > at the end, suggest a few important yet pertinent questions for the FAQ.
+> >
+>
+>
+> --
+> Massimo Belgrano
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From amigosam at adinet.com.uy  Thu Jan 21 23:17:35 2010
+From: amigosam at adinet.com.uy (Angel Pais)
+Date: Thu Jan 21 23:18:09 2010
+Subject: [Harbour-users] Re: Question for FAQ: "How to compile a hello world
+	program?"
+In-Reply-To: <674e4ddd1001211823k22da331bh12e7ac7144ab31f5@mail.gmail.com>
+References: <674e4ddd1001201916k498b455w456244c4683a51c0@mail.gmail.com>	<609353e71001202308u6aabfc1ah8ceb02cc33aafd95@mail.gmail.com>	<674e4ddd1001210157t729720a1k708661f0f464c04b@mail.gmail.com>	<609353e71001211208y4c41b029w8221974606b3c180@mail.gmail.com>
+	<674e4ddd1001211823k22da331bh12e7ac7144ab31f5@mail.gmail.com>
+Message-ID: <hjb8ss$dce$1@ger.gmane.org>
+
+smu johnson escribi?:
+> Massimo,
+> 
+> Where / how do I start though?  Who do I get in touch with?  I have a few
+> more questions I'm documenting that I believe will come up often... and
+> would love to see the answers to them to alleviate frustration for others.
+> I looked on the site and didn't find any IRC channel info.. but maybe a
+> secret one exists somewhere?
+
+There's no secret.
+Harbour is not a commercial product and lacks people in charge of 
+marketing documentation and tasks alike.
+However is a technically excelent compiler and a rock solid tool for 
+business apps.
+Please ask your questions here and we will try to answer them.
+Maybe if we are lucky some of the developpers will pop in on some of them.
+
+HTH
+Angel
+
+From smujohnson at gmail.com  Fri Jan 22 00:49:34 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Fri Jan 22 00:49:43 2010
+Subject: [Harbour-users] Re: Question for FAQ: "How to compile a hello 
+	world program?"
+In-Reply-To: <hjb8ss$dce$1@ger.gmane.org>
+References: <674e4ddd1001201916k498b455w456244c4683a51c0@mail.gmail.com>
+	<609353e71001202308u6aabfc1ah8ceb02cc33aafd95@mail.gmail.com>
+	<674e4ddd1001210157t729720a1k708661f0f464c04b@mail.gmail.com>
+	<609353e71001211208y4c41b029w8221974606b3c180@mail.gmail.com>
+	<674e4ddd1001211823k22da331bh12e7ac7144ab31f5@mail.gmail.com>
+	<hjb8ss$dce$1@ger.gmane.org>
+Message-ID: <674e4ddd1001212149y548fc9e7g10847d6de6572918@mail.gmail.com>
+
+Thank you very much Angel.  The way you phrased that makes me proud to use
+Harbour and gave me much confidence in what it is capable of.
+
+I have spent a few hours writing a small blog from scratch with some
+questions, hoping to help the documentation cause.  I will post the link in
+a few hours.  Thank you for responding, and yes, you were helpful.
+
+
+On Thu, Jan 21, 2010 at 8:17 PM, Angel Pais <amigosam@adinet.com.uy> wrote:
+
+> smu johnson escribi?:
+>
+>  Massimo,
+>>
+>> Where / how do I start though?  Who do I get in touch with?  I have a few
+>> more questions I'm documenting that I believe will come up often... and
+>> would love to see the answers to them to alleviate frustration for others.
+>> I looked on the site and didn't find any IRC channel info.. but maybe a
+>> secret one exists somewhere?
+>>
+>
+> There's no secret.
+> Harbour is not a commercial product and lacks people in charge of marketing
+> documentation and tasks alike.
+> However is a technically excelent compiler and a rock solid tool for
+> business apps.
+> Please ask your questions here and we will try to answer them.
+> Maybe if we are lucky some of the developpers will pop in on some of them.
+>
+> HTH
+> Angel
+>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From smujohnson at gmail.com  Fri Jan 22 04:56:16 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Fri Jan 22 04:56:25 2010
+Subject: [Harbour-users] My homemade Harbour blog website to improve Harbour
+	docs.
+Message-ID: <674e4ddd1001220156q34af3f42ra598dc70d54edde7@mail.gmail.com>
+
+Hi.
+
+For those who know, I've been whining about a lack of documentation a bit.
+I am sorry.  I've decided to do the right thing, and stop being a baby, and
+join the Harbour project to improve the FAQ so that others like me will be
+able to make use of this great software without frustration.
+
+My goal is to get an old 16-bit app to work in a Win32/64 environment, and
+if I detail my struggles and accomplishments as a live example of Harbour in
+effect, I think a lot of other similar minded users will be benefit from my
+questions and everyone's help from the mailinglist a bit easier.
+
+So I have started a blog:  http://209.97.219.2/sjohnson/index.html
+
+It is quite small and simple, yet if anyone could answer any of these
+questions, I would be happy to include the answers, so that one day, no more
+newcomers need to go through the same frustrations / difficulties as I will
+have to go through.
+
+I haven't posted it to the developer's mailing list... but maybe I will, if
+people here think it wouldn't hurt.
+
+Thank you very much!!
+
+The link again is:  http://209.97.219.2/sjohnson/index.html
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From amigosam at adinet.com.uy  Fri Jan 22 06:55:48 2010
+From: amigosam at adinet.com.uy (Angel Pais)
+Date: Fri Jan 22 06:56:28 2010
+Subject: [Harbour-users] Re: My homemade Harbour blog website to improve
+	Harbour docs.
+In-Reply-To: <674e4ddd1001220156q34af3f42ra598dc70d54edde7@mail.gmail.com>
+References: <674e4ddd1001220156q34af3f42ra598dc70d54edde7@mail.gmail.com>
+Message-ID: <hjc3o0$jnh$1@ger.gmane.org>
+
+Hi Stu
+
+I've beeng reading your blog..., and I got tired LOL.
+I suggest you to post here all that uncertainities and questions so they 
+can be answered and discussed one by one.
+It also can be used by more newcommers as documentation.
+Please one post one question =)
+When you complete your FAQ file, then we can pass it to Harbour's 
+webmaster to be included in the official web site.
+Please also consider that most people here and in Harbour team are not 
+english native speakers so our syntax sometimes can be innacurate and 
+confusing.
+We need people like you who can rephrase our posts right.
+
+Regards
+Angel
+
+From bruno.luciani at gmail.com  Fri Jan 22 07:40:49 2010
+From: bruno.luciani at gmail.com (Bruno Luciani)
+Date: Fri Jan 22 07:40:57 2010
+Subject: [Harbour-users] My homemade Harbour blog website to improve 
+	Harbour docs.
+In-Reply-To: <674e4ddd1001220156q34af3f42ra598dc70d54edde7@mail.gmail.com>
+References: <674e4ddd1001220156q34af3f42ra598dc70d54edde7@mail.gmail.com>
+Message-ID: <133778361001220440k277c028eg33666f4763b9bd22@mail.gmail.com>
+
+This is my test in UBuntu 9.10 32 bits , givme an error too
+but all works ok here , I don't know why the test program generates
+the error
+
+Bruno
+
+bruno@notebook:~/harbour_svn/harbour/utils/hbtest$ hbmk2 hbtest.hbp
+hbmk2: Processing configuration: /usr/local/bin/hbmk.cfg
+bruno@notebook:~/harbour_svn/harbour/utils/hbtest$ ./hbtest
+Harbour Regression Test
+Suite
+Copyright (c) 1999-2010, http://www.harbour-project.org/
+
+---------------------------------------------------------------------------
+
+      Version: Harbour 2.0.1dev (Rev.
+13647)
+     Compiler: GNU C 4.4.1
+(32-bit)
+           OS: Linux 2.6.31-17-generic
+i686
+   Date, Time: 2010.01.22
+09:38:49
+       Output:
+(stdout)
+Shortcut opt.:
+ON
+
+Switches:
+===========================================================================
+
+R No.  Line            TestCall()                               ->
+Result
+                                                                         |
+Expec
+ted
+
+
+---------------------------------------------------------------------------
+
+!  612 MAIN_HVMA(373)  saArray[ 1000
+]
+       Result: "E 2 BASE 1132 Bound error (array access) OS:0 #:0
+A:2:A:{.[1].};
+N:1000
+"
+     Expected: "E 2 BASE 1132 Bound error (array access) OS:0 #:0
+"
+!  613 MAIN_HVMA(374)  saArray[ 1000 ] :=
+1
+       Result: "E 2 BASE 1133 Bound error (array assign) OS:0 #:0 A:1:N:1000
+"
+     Expected: "E 2 BASE 1133 Bound error (array assign) OS:0 #:0 "
+!  742 MAIN_HVMA(542)  RTSTR( 00000500000000000000 )
+       Result: " 16  500000000000000"
+     Expected: " 21       500000000000000"
+!  743 MAIN_HVMA(543)  RTSTR( 0500000000000000 )
+       Result: " 16  500000000000000"
+     Expected: " 17   500000000000000"
+! 1087 MAIN_MATH(359)  Str(1234567890 * 1234567890 )
+       Result: " 1524157875019052100"
+     Expected: " 1524157875019052000"
+! 2889 MAIN_ARRAY(164) ASize( NIL )
+       Result: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 A:1:U:NIL "
+     Expected: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 "
+! 2890 MAIN_ARRAY(165) ASize( {} )
+       Result: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 A:1:A:{.[0].}
+"
+     Expected: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 "
+! 2891 MAIN_ARRAY(166) ASize( ErrorNew() )
+       Result: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 A:1:O:ERROR
+Object
+ "
+     Expected: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 "
+! 2892 MAIN_ARRAY(175) ASize( NIL, 0 )
+       Result: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 A:2:U:NIL;N:0
+"
+     Expected: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 "
+! 2893 MAIN_ARRAY(176) ASize( NIL, 1 )
+       Result: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 A:2:U:NIL;N:1
+"
+     Expected: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 "
+! 2894 MAIN_ARRAY(177) ASize( NIL, -1 )
+       Result: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 A:2:U:NIL;N:-1
+"
+     Expected: "E 1 BASE 2023 Argument error (ASIZE) OS:0 #:0 "
+! 2916 MAIN_ARRAY(214) Array( -1 )
+       Result: "E 2 BASE 1131 Bound error (array dimension) OS:0 #:0
+A:1:N:-1 "
+     Expected: "E 2 BASE 1131 Bound error (array dimension) OS:0 #:0 "
+! 2917 MAIN_ARRAY(215) Array( 1, 0, -10 )
+       Result: "E 2 BASE 1131 Bound error (array dimension) OS:0 #:0
+A:3:N:1;N:0
+;N:-10 "
+     Expected: "E 2 BASE 1131 Bound error (array dimension) OS:0 #:0 "
+! 3056 MAIN_ARRAY(395) TAEVSM()
+       Result: "N10N 9N 8N 7N 6         5"
+     Expected: "N10N 9N 8N 7N 6N 5N 4N 3N 2N 1         0"
+! 3057 MAIN_ARRAY(396) TASOSM1()
+       Result: "NN 5NN 4NN 3NN 2         1{ 3 }"
+     Expected: "NN 5NN 4NN 3NN 2NN 1NN 0NN 0NN 0NN 0NN 0NN 0NN 0         0{
+}"
+! 3058 MAIN_ARRAY(397) TASOSM2()
+       Result: "NN 5NN 4NN 3NN 2         1{ 3 }"
+     Expected: "NN 5NN 4NN 3NN 2NN 1NN 0NN 0NN 0NN 0NN 0         0{  }"
+! 3178 MAIN_MISC(94)   Set( 40  )
+       Result: 0
+     Expected: NIL
+! 3187 MAIN_MISC(104)  Set( 40 , -1 )
+       Result: 0
+     Expected: NIL
+===========================================================================
+Test calls passed:       4743 ( 99.62 % )
+Test calls failed:         18 ( 0.38 % )
+                   ----------
+            Total:       4761 ( Time elapsed: 0.10 seconds )
+
+WARNING ! Failures detected
+bruno@notebook:~/harbour_svn/harbour/utils/hbtest$
+From druzus at acn.waw.pl  Fri Jan 22 08:59:14 2010
+From: druzus at acn.waw.pl (=?utf-8?Q?Przemys=C5=82aw?= Czerpak)
+Date: Fri Jan 22 08:59:21 2010
+Subject: [Harbour-users] My homemade Harbour blog website to improve
+	Harbour docs.
+In-Reply-To: <133778361001220440k277c028eg33666f4763b9bd22@mail.gmail.com>
+References: <674e4ddd1001220156q34af3f42ra598dc70d54edde7@mail.gmail.com>
+	<133778361001220440k277c028eg33666f4763b9bd22@mail.gmail.com>
+Message-ID: <20100122135914.GA20679@linux-4bod.home.aster.pl>
+
+On Fri, 22 Jan 2010, Bruno Luciani wrote:
+
+Hi,
+
+> This is my test in UBuntu 9.10 32 bits , givme an error too
+> but all works ok here , I don't know why the test program generates
+> the error
+
+These are not real errors.
+hbtest is regression test which compares Clipper and Harbour results
+for different language constructions and also checks if some of Harbour
+extensions gives expected results.
+We haven't replicated Clipper bugs and limitations so it's expected that
+some of these test will report differences to Clipper. Usually we pacify
+them though in some cases they are intentionally left just to show the
+difference.
+i.e.:
+
+> !  612 MAIN_HVMA(373)  saArray[ 1000 ]
+>        Result: "E 2 BASE 1132 Bound error (array access) OS:0 #:0 A:2:A:{.[1].};N:1000"
+>      Expected: "E 2 BASE 1132 Bound error (array access) OS:0 #:0
+
+In Clipper ("Expected:") the RTE does not contain the reference to the array
+and index. In Harbour the RTE is extended and HVM pass original array, index
+and value in assign operation in ARGS error object item so user can catch
+such RTE and create his own action for it, i.e. emulate hash arrays or return
+some default value instead of RTE.
+
+> !  742 MAIN_HVMA(542)  RTSTR( 00000500000000000000 )
+>        Result: " 16  500000000000000"
+>      Expected: " 21       500000000000000"
+
+In Clipper and Harbour in PCODE only double values can store the number
+size and integer values are stored without it. Because Harbour support
+64bit integer this behavior is extended to numbers over 2^31 and creates
+above difference between Harbour and Clipper. In the past I decided that
+it's too minor problem to introduce separate PCODE which will store the
+size with 64bit integers which can be used to pacify this difference.
+
+
+> ! 1087 MAIN_MATH(359)  Str(1234567890 * 1234567890 )
+>        Result: " 1524157875019052100"
+>      Expected: " 1524157875019052000"
+
+In Harbour the result is 64bit integer and in Clipper which supports only
+32bit integers it has to be stored in double item.
+64bit integers have better precision (~20 decimal digits) then IEEE758
+double values (~16 decimal digits) and you can see the difference in
+this test. Harbour shows the correct result when in Clipper only 16
+digit are significant for formatting strings with result.
+
+> ! 3056 MAIN_ARRAY(395) TAEVSM()
+>        Result: "N10N 9N 8N 7N 6         5"
+>      Expected: "N10N 9N 8N 7N 6N 5N 4N 3N 2N 1         0"
+
+This tests exploits some problems in Clipper internals which can also
+effect some .prg code which needs such side effects. In this example
+not existing items are accessed by Clipper because AEVAL() ignores the
+fact that array was dynamically cut by evaluated codeblock. In Clipper
+it may even cause internal VM structures corruption if codeblock activates
+garbage collector. In Harbour such problem does not exists because
+AEVAL() respects dynamically modified array size.
+
+> ! 3178 MAIN_MISC(94)   Set( 40  )
+>        Result: 0
+>      Expected: NIL
+
+Unimplemented CL5.3 LIGHTLIB setting. We intentionally return NIL to
+indicate the fact that LIGHTLIB is not part of Harbour.
+
+best regards,
+Przemek
+From f.klein at winposware.com  Fri Jan 22 10:11:40 2010
+From: f.klein at winposware.com (frans Klein)
+Date: Fri Jan 22 10:11:50 2010
+Subject: [Harbour-users] Re: How to handle DOS BOX close
+In-Reply-To: <hj26rb$lfm$1@ger.gmane.org>
+References: <6877240E10EE4B4E9B9C67AC7C344C8B@AZ.local>
+	<hj26rb$lfm$1@ger.gmane.org>
+Message-ID: <96484617506D41C78D1E3865A2F59B63@AZ.local>
+
+Hi Antonio,
+
+Thanks a lot for your reply.
+
+My Spanish is a bit rusty, it seems you re talking about removing the X
+button.
+
+Actually, I do not mind allowing the user to close the window (I think it is
+actually good if it is possible), but I would like to be able in my DOS
+program the actual close the application before Vista does.
+
+Is there a way for me to receive something from Vista telling that my
+program needed to be closed ? (like in XP : key 256 is received in the INKEY
+() function)
+
+Thanks for your reply,
+
+
+Frans
+ 
+
+-----Message d'origine-----
+De?: harbour-users-bounces@harbour-project.org
+[mailto:harbour-users-bounces@harbour-project.org] De la part de Antonio
+Martinez
+Envoy??: lundi 18 janvier 2010 18:45
+??: harbour-users@harbour-project.org
+Objet?: [Harbour-users] Re: How to handle DOS BOX close
+
+Lo mejor es desactivar el boton de salida.... en el grupo de usuarios de
+xharbour en portuguese creo que reynaldo puso como desactivar el boton X de
+la application box
+
+
+frans Klein escribi? en mensaje
+<6877240E10EE4B4E9B9C67AC7C344C8B@AZ.local>...
+>Hi to all,
+>
+>
+>
+>USING WINDOWS XP, I have noticed that the INKEY () function will return a
+>256 value when a dos box running a harbour dos application is closed by a
+>click on the CLOSE button (upper right of the window).
+>
+>This is very easy. It allows managing quitting the program.
+>
+>
+>
+>On VISTA and WINDOWS 7, this behaviour does not seem to exist.
+>
+>
+>
+>Is there a way to detect in the DOS program if the Close (X) button is
+>clicked ?
+>
+>
+>
+>Thanks a lot,
+>
+>
+>
+>Frans.
+>
+>PS : is this the right way to submit these kind of questions ?
+
+
+
+_______________________________________________
+Harbour-users mailing list (attachment size limit: 40KB)
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+From bruno.luciani at gmail.com  Fri Jan 22 14:14:46 2010
+From: bruno.luciani at gmail.com (Bruno Luciani)
+Date: Fri Jan 22 14:14:53 2010
+Subject: [Harbour-users] My homemade Harbour blog website to improve 
+	Harbour docs.
+In-Reply-To: <20100122135914.GA20679@linux-4bod.home.aster.pl>
+References: <674e4ddd1001220156q34af3f42ra598dc70d54edde7@mail.gmail.com>
+	<133778361001220440k277c028eg33666f4763b9bd22@mail.gmail.com>
+	<20100122135914.GA20679@linux-4bod.home.aster.pl>
+Message-ID: <133778361001221114i3a144393kc5b1fcd018c68c83@mail.gmail.com>
+
+Thanks for the explanation
+
+Best Regards
+
+Bruno
+
+2010/1/22 Przemys?aw Czerpak <druzus@acn.waw.pl>
+
+> On Fri, 22 Jan 2010, Bruno Luciani wrote:
+>
+> Hi,
+>
+> > This is my test in UBuntu 9.10 32 bits , givme an error too
+> > but all works ok here , I don't know why the test program generates
+> > the error
+>
+From smujohnson at gmail.com  Fri Jan 22 17:46:02 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Fri Jan 22 17:46:10 2010
+Subject: [Harbour-users] HELP! Harbour "hello world" not compiling on
+	Windows 64bit?
+Message-ID: <674e4ddd1001221446s3c842903m1e31eaa0a041e8e6@mail.gmail.com>
+
+Hi,
+
+I have taken Angel's suggestion seriously, and will post a question one at a
+time.  On a legit copy of Win7 64-bit, after I cleanly install Harbour
+2.0.0, I cannot use hbmk2 to compile a hello world program, where as my
+32-bit Win7 machine worked fine.
+
+
+   1.
+
+   Why can't I compile my Hello World program on my Windows 7 x64 OS?
+
+   C:\hb20\bin>hbmk2.exe hello.prg
+   hbmk2: Processing configuration: C:\hb20\bin\hbmk.cfg
+   Harbour 2.0.0 (Rev. 13372)
+   Copyright (c) 1999-2010, http://www.harbour-project.org/
+   Compiling 'hello.prg'...
+   Lines 1, Functions/Procedures 1
+   Generating C source output to 'hello.c'... Done.
+   C:/hb20/lib/win/mingw/libhbvm.a(hvmall.o):hvmall.c:(.text+0x2e23):
+undefined r
+   eference to `__mingw_vprintf'
+   C:/hb20/lib/win/mingw/libhbvm.a(hvmall.o):hvmall.c:(.text+0x359b):
+undefined r
+   eference to `__mingw_vfprintf'
+   collect2: ld returned 1 exit status
+   hbmk2: Error: Running linker. 1
+   gcc.exe hello.o hbmk_mn4kgp.o    -mconsole -Wl,--start-group
+-lhbextern -lhbdebu
+   g -lhbvm -lhbrtl -lhblang -lhbcpage -lgtcgi -lgtpca -lgtstd -lgtwin
+-lgtwvt -lgt
+   gui -lhbrdd -lhbuddall -lhbusrrdd -lrddntx -lrddcdx -lrddnsx
+-lrddfpt -lhbrdd -l
+   hbhsx -lhbsix -lhbmacro -lhbcplr -lhbpp -lhbcommon -lkernel32
+-luser32 -lgdi32 -
+   ladvapi32 -lws2_32 -lwinspool -lcomctl32 -lcomdlg32 -lshell32
+-luuid -lole32 -lo
+   leaut32 -lmpr -lwinmm -lmapi32 -limm32 -lmsimg32 -lwininet -lhbpcre
+-lhbzlib  -W
+   l,--end-group -ohello.exe -L"C:/hb20/lib/win/mingw"
+
+   *Note: I also found and read the HARBOUR_README_MINGW64 file. The
+   instructions were a bit vague, as the link it provides gives you many
+   options of what to install and no hint as to which one you need. But with my
+   brother's help, he picked out likely the one to use, and it didn't make any
+   difference on this issue. Nor did reinstalling Harbour 2.0.0 with every
+   option installed in the Wizard. *sad face**
+
+Any hints?  This looks like it might be a common problem as I didn't do
+anything wrong that I know of... Any help greatly appreciated!
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From smujohnson at gmail.com  Sat Jan 23 21:28:18 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Sat Jan 23 21:28:27 2010
+Subject: [Harbour-users] My homemade Harbour blog website to improve 
+	Harbour docs.
+In-Reply-To: <20100122135914.GA20679@linux-4bod.home.aster.pl>
+References: <674e4ddd1001220156q34af3f42ra598dc70d54edde7@mail.gmail.com>
+	<133778361001220440k277c028eg33666f4763b9bd22@mail.gmail.com>
+	<20100122135914.GA20679@linux-4bod.home.aster.pl>
+Message-ID: <674e4ddd1001231828n62292bf4m3877e6ac37e4a44b@mail.gmail.com>
+
+Sorry, forgot to thank you for your extremely thorough answer!  I included
+it on http://209.97.219.2/sjohnson/ with props to your nickname.  Thanks
+again.
+
+2010/1/22 Przemys?aw Czerpak <druzus@acn.waw.pl>
+
+> On Fri, 22 Jan 2010, Bruno Luciani wrote:
+>
+> Hi,
+>
+> > This is my test in UBuntu 9.10 32 bits , givme an error too
+> > but all works ok here , I don't know why the test program generates
+> > the error
+>
+> These are not real errors.
+> hbtest is regression test which compares Clipper and Harbour results
+> for different language constructions and also checks if some of Harbour
+> extensions gives expected results.
+> We haven't replicated Clipper bugs and limitations so it's expected that
+> some of these test will report differences to Clipper. Usually we pacify
+> them though in some cases they are intentionally left just to show the
+> difference.
+> i.e.:
+>
+> > !  612 MAIN_HVMA(373)  saArray[ 1000 ]
+> >        Result: "E 2 BASE 1132 Bound error (array access) OS:0 #:0
+> A:2:A:{.[1].};N:1000"
+> >      Expected: "E 2 BASE 1132 Bound error (array access) OS:0 #:0
+>
+> In Clipper ("Expected:") the RTE does not contain the reference to the
+> array
+> and index. In Harbour the RTE is extended and HVM pass original array,
+> index
+> and value in assign operation in ARGS error object item so user can catch
+> such RTE and create his own action for it, i.e. emulate hash arrays or
+> return
+> some default value instead of RTE.
+>
+> > !  742 MAIN_HVMA(542)  RTSTR( 00000500000000000000 )
+> >        Result: " 16  500000000000000"
+> >      Expected: " 21       500000000000000"
+>
+> In Clipper and Harbour in PCODE only double values can store the number
+> size and integer values are stored without it. Because Harbour support
+> 64bit integer this behavior is extended to numbers over 2^31 and creates
+> above difference between Harbour and Clipper. In the past I decided that
+> it's too minor problem to introduce separate PCODE which will store the
+> size with 64bit integers which can be used to pacify this difference.
+>
+>
+> > ! 1087 MAIN_MATH(359)  Str(1234567890 * 1234567890 )
+> >        Result: " 1524157875019052100"
+> >      Expected: " 1524157875019052000"
+>
+> In Harbour the result is 64bit integer and in Clipper which supports only
+> 32bit integers it has to be stored in double item.
+> 64bit integers have better precision (~20 decimal digits) then IEEE758
+> double values (~16 decimal digits) and you can see the difference in
+> this test. Harbour shows the correct result when in Clipper only 16
+> digit are significant for formatting strings with result.
+>
+> > ! 3056 MAIN_ARRAY(395) TAEVSM()
+> >        Result: "N10N 9N 8N 7N 6         5"
+> >      Expected: "N10N 9N 8N 7N 6N 5N 4N 3N 2N 1         0"
+>
+> This tests exploits some problems in Clipper internals which can also
+> effect some .prg code which needs such side effects. In this example
+> not existing items are accessed by Clipper because AEVAL() ignores the
+> fact that array was dynamically cut by evaluated codeblock. In Clipper
+> it may even cause internal VM structures corruption if codeblock activates
+> garbage collector. In Harbour such problem does not exists because
+> AEVAL() respects dynamically modified array size.
+>
+> > ! 3178 MAIN_MISC(94)   Set( 40  )
+> >        Result: 0
+> >      Expected: NIL
+>
+> Unimplemented CL5.3 LIGHTLIB setting. We intentionally return NIL to
+> indicate the fact that LIGHTLIB is not part of Harbour.
+>
+> best regards,
+> Przemek
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From mbelgrano at deltain.it  Mon Jan 25 09:37:44 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Mon Jan 25 09:38:13 2010
+Subject: [Harbour-users] Harbour 2.0.0 stats after one month
+Message-ID: <609353e71001250637s64f5db4dvf78403fe689969ca@mail.gmail.com>
+
+Hi want post the Victor Messages on Harbour developer mailing list:
+
+
+Hi All,
+
+It's been one month since we released Harbour 2.0.0,
+and since then, the sf.net stats are even better than
+before.
+
+As for the overall sf.net rank, Harbour Project was
+most of the days in the 135-175 range. This is
+pretty good considering that this is a sophisticated
+development software for expert audience only and
+sf.net hosts hundreds of thousands of project. [ I'm
+sure it can still be even better though. ]
+  http://sourceforge.net/project/stats/rank_history.php?group_id=681&ugn=harbour-project
+
+Among 'compiler' projects, this rank translated to
+_5th_ position, which is simply great:
+  http://sourceforge.net/softwaremap/trove_list.php?stquery=&sort=group_ranking&sortdir=asc&offset=0&form_cat=48
+
+Among 'database' projects, this translated to 7-9th
+overall sf.net rank, also very nice.
+  http://sourceforge.net/softwaremap/trove_list.php?stquery=&sort=group_ranking&sortdir=asc&offset=0&form_cat=66
+
+We exceeded 90000 total downloads a few days ago.
+
+There has been a total of 3145 downloads for 2.0.0
+in one month, and this is very good, especially
+if we consider that by 2.0.x we offer the unified
+package for majority Windows users, which contains
+10 platforms/compilers, amongst them MS-DOS, OS/2
+and Linux targets. So all those separate downloads
+in 1.0.x release are now blended into one download
+with 2.0.x. This is no so good for our stats, but
+it's good for users :)
+
+Please keep downloading and recommending the project
+on these links:
+   http://sourceforge.net/projects/harbour-project/
+   http://sourceforge.net/projects/harbour-project/files/
+
+Brgds,
+Viktor
+
+
+-- 
+Massimo Belgrano
+From itamarlins at bol.com.br  Mon Jan 25 20:32:19 2010
+From: itamarlins at bol.com.br (Itamar Lins)
+Date: Mon Jan 25 20:55:16 2010
+Subject: [Harbour-users] how to ?
+Message-ID: <hjlgsh$pto$1@ger.gmane.org>
+
+Hi!
+how to resolve this is question?
+
+{||MyFunc(&oOwB , oObj)}
+
+ Error E0047  Code block contains both macro and declared symbol references.
+
+Best regards,
+Itamar M. Lins Jr.
+
+
+
+From alcisoft at arrakis.es  Tue Jan 26 03:01:46 2010
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Tue Jan 26 03:06:15 2010
+Subject: [Harbour-users] WVT_SetTitle(), buggy ?
+Message-ID: <hjm7ol$a8t$1@ger.gmane.org>
+
+Hi,
+
+. Window title doesn´t modify with call above:
+Wvt_SetTitle("Ey title !")
+
+
+It's necessary refreshing ? I do Wvt_processmessages() and not refresh !
+
+Wvt_SetFont() and others are running ok !  I don't use graphics elements,
+only Wvt_ on old clipper application + gtwvg.lib
+
+BUT, I do use CLEAR all it's ok !
+
+Example running:
+
+CLEAR                        // <-- That's neccessary
+Wvt_Set("Ey title !")
+
+
+I use Harbour 2.0.0
+
+Regards
+
+
+
+
+
+From alcisoft at arrakis.es  Tue Jan 26 03:10:51 2010
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Tue Jan 26 03:14:14 2010
+Subject: [Harbour-users] Re: how to ?
+References: <hjlgsh$pto$1@ger.gmane.org>
+Message-ID: <hjm87k$bhu$1@ger.gmane.org>
+
+Itamar,
+
+do you like a  workaround ?
+
+{|| MyFunc(oOwB, oObj) }
+
+FUNCTION MyFun(oOwB, oObj)
+RETURN MyFunc2(&oOwB, oObj)
+
+Regards
+
+
+
+Itamar Lins escribió en mensaje ...
+>Hi!
+>how to resolve this is question?
+>
+>{||MyFunc(&oOwB , oObj)}
+>
+> Error E0047  Code block contains both macro and declared symbol
+references.
+>
+>Best regards,
+>Itamar M. Lins Jr.
+
+
+
+From itamarlins at bol.com.br  Tue Jan 26 06:32:47 2010
+From: itamarlins at bol.com.br (Itamar Lins)
+Date: Tue Jan 26 06:36:17 2010
+Subject: [Harbour-users] Re: how to ?
+References: <hjlgsh$pto$1@ger.gmane.org> <hjm87k$bhu$1@ger.gmane.org>
+Message-ID: <hjmk2d$h18$1@ger.gmane.org>
+
+No, because oOwB change N times and Myfunc2 will return only the last.
+For example
+
+For n = 1 to 100
+...
+          @ x,y OwnerButton &oMesa of oDlgMesas Text cAtende+' 
+'+strzero(nCount,3) Coordinates 00,45,20,15 Size 60,60 ;
+          ON CLICK {||mesa(&oOwB , oHora)} FLAT BITMAP cMesa TRANSPARENT 
+COORDINATES 0,0,41,41
+...
+{||mesa(&oOwB)} //so it works well
+{||mesa(&oOwB,oHora)} //so it not works
+
+Next
+
+it should be changed at runtime!
+
+Regards,
+Itamar M. Lins Jr.
+
+"Antonio Martinez" <alcisoft@arrakis.es> 
+escreveu na mensagem news:hjm87k$bhu$1@ger.gmane.org...
+> Itamar,
+>
+> do you like a  workaround ?
+>
+> {|| MyFunc(oOwB, oObj) }
+>
+> FUNCTION MyFun(oOwB, oObj)
+> RETURN MyFunc2(&oOwB, oObj)
+>
+> Regards
+>
+>
+>
+> Itamar Lins escribió en mensaje ...
+>>Hi!
+>>how to resolve this is question?
+>>
+>>{||MyFunc(&oOwB , oObj)}
+>>
+>> Error E0047  Code block contains both macro and declared symbol
+> references.
+>>
+>>Best regards,
+>>Itamar M. Lins Jr. 
+
+
+
+From amigosam at adinet.com.uy  Tue Jan 26 07:32:34 2010
+From: amigosam at adinet.com.uy (Angel Pais)
+Date: Tue Jan 26 07:32:58 2010
+Subject: [Harbour-users] Re: how to ?
+In-Reply-To: <hjlgsh$pto$1@ger.gmane.org>
+References: <hjlgsh$pto$1@ger.gmane.org>
+Message-ID: <hjmncm$p43$1@ger.gmane.org>
+
+Itamar Lins escribi?:
+> Hi!
+> how to resolve this is question?
+> 
+> {||MyFunc(&oOwB , oObj)}
+> 
+>  Error E0047  Code block contains both macro and declared symbol references.
+> 
+> Best regards,
+> Itamar M. Lins Jr.
+
+Just a shot in the dark...
+
+bBlock := &('{||MyFunc('+cOwB+', oObj)}')
+
+HTH
+Angel
+
+From alcisoft at arrakis.es  Tue Jan 26 10:21:56 2010
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Tue Jan 26 10:26:46 2010
+Subject: [Harbour-users] Re: how to ?
+References: <hjlgsh$pto$1@ger.gmane.org> <hjm87k$bhu$1@ger.gmane.org>
+	<hjmk2d$h18$1@ger.gmane.org>
+Message-ID: <hjn1il$16b$1@ger.gmane.org>
+
+Itamar,
+
+The trick is detached locals: A function returns a codeblock for each n
+
+FOR n:= 1 TO 100
+
+      @ x, y ......... ON CLICK FunDetached(oOwB, oHora, n)
+
+NEXT
+*
+FUNCTION FunDetached(oOwB, oHora, n)
+RETURN {|| MyFunc(oOwB, oHora, n) }
+*
+*
+FUNCTION MyFunc(oOwB, oHora, n)
+RETURN Mesa(oOwB, oHora, n)
+
+
+Regards
+
+
+Itamar Lins escribió en mensaje ...
+>No, because oOwB change N times and Myfunc2 will return only the last.
+>For example
+>
+>For n = 1 to 100
+>...
+>          @ x,y OwnerButton &oMesa of oDlgMesas Text cAtende+'
+>'+strzero(nCount,3) Coordinates 00,45,20,15 Size 60,60 ;
+>          ON CLICK {||mesa(&oOwB , oHora)} FLAT BITMAP cMesa TRANSPARENT
+>COORDINATES 0,0,41,41
+>...
+>{||mesa(&oOwB)} //so it works well
+>{||mesa(&oOwB,oHora)} //so it not works
+>
+>Next
+>
+>it should be changed at runtime!
+>
+>Regards,
+>Itamar M. Lins Jr.
+>
+>"Antonio Martinez" <alcisoft@arrakis.es>
+>escreveu na mensagem news:hjm87k$bhu$1@ger.gmane.org...
+>> Itamar,
+>>
+>> do you like a  workaround ?
+>>
+>> {|| MyFunc(oOwB, oObj) }
+>>
+>> FUNCTION MyFun(oOwB, oObj)
+>> RETURN MyFunc2(&oOwB, oObj)
+>>
+>> Regards
+>>
+>>
+>>
+>> Itamar Lins escribió en mensaje ...
+>>>Hi!
+>>>how to resolve this is question?
+>>>
+>>>{||MyFunc(&oOwB , oObj)}
+>>>
+>>> Error E0047  Code block contains both macro and declared symbol
+>> references.
+>>>
+>>>Best regards,
+>>>Itamar M. Lins Jr.
+
+
+
+From alcisoft at arrakis.es  Tue Jan 26 10:28:13 2010
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Tue Jan 26 10:36:20 2010
+Subject: [Harbour-users] Re: how to ?
+References: <hjlgsh$pto$1@ger.gmane.org>
+	<hjm87k$bhu$1@ger.gmane.org><hjmk2d$h18$1@ger.gmane.org>
+	<hjn1il$16b$1@ger.gmane.org>
+Message-ID: <hjn1sd$2fk$1@ger.gmane.org>
+
+
+
+Itamar,  small fix:
+
+The trick is detached locals: A function returns a codeblock for each n
+
+FOR n:= 1 TO 100
+
+      @ x, y ......... ON CLICK FunDetached(oOwB, oHora, n)
+
+NEXT
+*
+FUNCTION FunDetached(oOwB, oHora, n)
+RETURN {|| MyFunc(oOwB, oHora, n) }
+*
+*
+FUNCTION MyFunc(oOwB, oHora, n)
+RETURN Mesa(&oOwB, oHora, n)                              // here you are:
+Forget &
+
+
+Regards
+
+
+
+
+From smujohnson at gmail.com  Thu Jan 28 04:36:52 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Thu Jan 28 04:37:01 2010
+Subject: [Harbour-users] Telepathy TP_ONTIME / "function calling timer"
+	alternate implementations?
+Message-ID: <674e4ddd1001280136u7fc95d90oeabb579eac7591ca@mail.gmail.com>
+
+Hi,
+
+Has anyone found a replacement for Telepathy TP_ONTIME?  (it just allows you
+to execute any function you want during any millisecond intervals.
+Unfortunately, the hbtpathy library has left this TP_ONTIME function out...
+I e-mailed the author of the Harbour contrib lib, but perhaps he never
+implemented this FUNC because it was not portable.
+
+I wouldn't want to write my own if I didn't have to, as I decided to ask
+here.
+
+I read some other threads on the mailing list and someone mentioned to check
+out another thread on multithreading.  It was a bit too high-brow for me, as
+well as not really answering this (and the original posters) question.  In a
+nutshell, I'm looking to implement a simple feature that Telepathy provided
+in the DOS days.
+
+As always, any hints highly appreciated.  Thank you for reading
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From smujohnson at gmail.com  Thu Jan 28 05:29:16 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Thu Jan 28 05:29:24 2010
+Subject: [Harbour-users] Q: Where can I find the harbour debugger?
+Message-ID: <674e4ddd1001280229q72b7e3f1k9c680279de330734@mail.gmail.com>
+
+Hi,
+
+I keep googling for Harbour Debugger, and get a bunch of results, yet no
+hints as to how to use this thing.  From what I have read, I assume it
+exists... but where?
+
+Thanks
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From cyberdanny at tiscalinet.it  Thu Jan 28 05:48:53 2010
+From: cyberdanny at tiscalinet.it (Danny)
+Date: Thu Jan 28 05:49:06 2010
+Subject: [Harbour-users] Q: Where can I find the harbour debugger?
+In-Reply-To: <674e4ddd1001280229q72b7e3f1k9c680279de330734@mail.gmail.com>
+References: <674e4ddd1001280229q72b7e3f1k9c680279de330734@mail.gmail.com>
+Message-ID: <4B616B95.6060501@tiscalinet.it>
+
+smu johnson ha scritto:
+> Hi,
+>
+> I keep googling for Harbour Debugger, and get a bunch of results, yet no
+> hints as to how to use this thing.  From what I have read, I assume it
+> exists... but where?
+>
+> Thanks
+>
+>   
+Just link hbdebug.lib, compile with flag -b (includes debug information) 
+and activate it via source with the instruction ALTD(), or pressing in 
+execution environment... guess... alt-D.
+Regards
+Dan
+From smujohnson at gmail.com  Thu Jan 28 05:57:57 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Thu Jan 28 05:58:05 2010
+Subject: [Harbour-users] Q: Where can I find the harbour debugger?
+In-Reply-To: <4B616B95.6060501@tiscalinet.it>
+References: <674e4ddd1001280229q72b7e3f1k9c680279de330734@mail.gmail.com>
+	<4B616B95.6060501@tiscalinet.it>
+Message-ID: <674e4ddd1001280257k2634d7c4ib6cd2932c5941104@mail.gmail.com>
+
+Thanks Dan, will give it a shot.
+
+
+
+On Thu, Jan 28, 2010 at 2:48 AM, Danny <cyberdanny@tiscalinet.it> wrote:
+
+> smu johnson ha scritto:
+>
+>  Hi,
+>>
+>> I keep googling for Harbour Debugger, and get a bunch of results, yet no
+>> hints as to how to use this thing.  From what I have read, I assume it
+>> exists... but where?
+>>
+>> Thanks
+>>
+>>
+>>
+> Just link hbdebug.lib, compile with flag -b (includes debug information)
+> and activate it via source with the instruction ALTD(), or pressing in
+> execution environment... guess... alt-D.
+> Regards
+> Dan
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From cyberdanny at tiscalinet.it  Thu Jan 28 06:29:19 2010
+From: cyberdanny at tiscalinet.it (Danny)
+Date: Thu Jan 28 06:29:30 2010
+Subject: [Harbour-users] Telepathy TP_ONTIME / "function calling timer"
+	alternate implementations?
+In-Reply-To: <674e4ddd1001280136u7fc95d90oeabb579eac7591ca@mail.gmail.com>
+References: <674e4ddd1001280136u7fc95d90oeabb579eac7591ca@mail.gmail.com>
+Message-ID: <4B61750F.6020609@tiscalinet.it>
+
+smu johnson ha scritto:
+> Hi,
+>
+> Has anyone found a replacement for Telepathy TP_ONTIME?  (it just allows you
+> to execute any function you want during any millisecond intervals.
+> Unfortunately, the hbtpathy library has left this TP_ONTIME function out...
+> I e-mailed the author of the Harbour contrib lib, but perhaps he never
+> implemented this FUNC because it was not portable.
+>
+> I wouldn't want to write my own if I didn't have to, as I decided to ask
+> here.
+>
+> I read some other threads on the mailing list and someone mentioned to check
+> out another thread on multithreading.  It was a bit too high-brow for me, as
+> well as not really answering this (and the original posters) question.  In a
+> nutshell, I'm looking to implement a simple feature that Telepathy provided
+> in the DOS days.
+>
+> As always, any hints highly appreciated.  Thank you for reading
+>
+>   
+I'm not sure about those instructions, but here they are:
+
+HB_IdleAdd() : Adds a background task for being executed during idle states
+HB_IdleDel() Removes a task from the list of idle tasks.
+HB_IdleState() Signals an idle state.
+HB_IdleSleepMSec() Queries or changes the default time interval for idle 
+task processing.
+
+HB_BackGroundAdd() Adds a new background task.
+HB_BackGroundRun() : Enforces execution of one or all background tasks
+HB_BackGroundActive() Queries and/or changes the activity of a single 
+background task.
+HB_BackGroundDel() Removes a background task from the internal task list.
+HB_BackGroundReset() Resets the internal counter of background tasks.
+HB_BackGroundTime() Queries or changes the wait interval in milliseconds 
+after which the task is executed.
+
+StartThread() Starts a new thread.
+
+HTH
+Dan
+From smujohnson at gmail.com  Thu Jan 28 08:17:19 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Thu Jan 28 08:17:27 2010
+Subject: [Harbour-users] Telepathy TP_ONTIME / "function calling timer" 
+	alternate implementations?
+In-Reply-To: <4B61750F.6020609@tiscalinet.it>
+References: <674e4ddd1001280136u7fc95d90oeabb579eac7591ca@mail.gmail.com>
+	<4B61750F.6020609@tiscalinet.it>
+Message-ID: <674e4ddd1001280517x475a5846p442884c78262cff5@mail.gmail.com>
+
+It seems that the background func call is what I want, but I can't get it to
+implement.
+
+I grep'd the entire source tree, and found only 3 references:
+
+contrib/xhb/bkgtsks.c:extern ULONG    hb_backgroundAddFunc( PHB_ITEM pBlock,
+int nMillisec, BOOL bActive ); /* Adds a codeblock or an executable array */
+contrib/xhb/bkgtsks.c:ULONG hb_backgroundAddFunc( PHB_ITEM pBlock, int
+nMillisec, BOOL bActive )
+contrib/xhb/bkgtsks.c:      hb_retnl( hb_backgroundAddFunc( pBlock,
+
+... When I use it, I get the classic  undefined reference to
+`HB_FUN_HB_BACKGROUNDADDFUNC message.
+
+Maybe it is ready yet?  *confused*
+
+TIA
+
+On Thu, Jan 28, 2010 at 3:29 AM, Danny <cyberdanny@tiscalinet.it> wrote:
+
+> smu johnson ha scritto:
+>
+>  Hi,
+>>
+>> Has anyone found a replacement for Telepathy TP_ONTIME?  (it just allows
+>> you
+>> to execute any function you want during any millisecond intervals.
+>> Unfortunately, the hbtpathy library has left this TP_ONTIME function
+>> out...
+>> I e-mailed the author of the Harbour contrib lib, but perhaps he never
+>> implemented this FUNC because it was not portable.
+>>
+>> I wouldn't want to write my own if I didn't have to, as I decided to ask
+>> here.
+>>
+>> I read some other threads on the mailing list and someone mentioned to
+>> check
+>> out another thread on multithreading.  It was a bit too high-brow for me,
+>> as
+>> well as not really answering this (and the original posters) question.  In
+>> a
+>> nutshell, I'm looking to implement a simple feature that Telepathy
+>> provided
+>> in the DOS days.
+>>
+>> As always, any hints highly appreciated.  Thank you for reading
+>>
+>>
+>>
+> I'm not sure about those instructions, but here they are:
+>
+> HB_IdleAdd() : Adds a background task for being executed during idle states
+> HB_IdleDel() Removes a task from the list of idle tasks.
+> HB_IdleState() Signals an idle state.
+> HB_IdleSleepMSec() Queries or changes the default time interval for idle
+> task processing.
+>
+> HB_BackGroundAdd() Adds a new background task.
+> HB_BackGroundRun() : Enforces execution of one or all background tasks
+> HB_BackGroundActive() Queries and/or changes the activity of a single
+> background task.
+> HB_BackGroundDel() Removes a background task from the internal task list.
+> HB_BackGroundReset() Resets the internal counter of background tasks.
+> HB_BackGroundTime() Queries or changes the wait interval in milliseconds
+> after which the task is executed.
+>
+> StartThread() Starts a new thread.
+>
+> HTH
+> Dan
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From smujohnson at gmail.com  Thu Jan 28 08:28:08 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Thu Jan 28 08:28:17 2010
+Subject: [Harbour-users] Telepathy TP_ONTIME / "function calling timer" 
+	alternate implementations?
+In-Reply-To: <674e4ddd1001280517x475a5846p442884c78262cff5@mail.gmail.com>
+References: <674e4ddd1001280136u7fc95d90oeabb579eac7591ca@mail.gmail.com>
+	<4B61750F.6020609@tiscalinet.it>
+	<674e4ddd1001280517x475a5846p442884c78262cff5@mail.gmail.com>
+Message-ID: <674e4ddd1001280528r3208fefvf03aa0ca292261c7@mail.gmail.com>
+
+Sorry, I was calling the wrong function...  I was too hasty.
+
+On Thu, Jan 28, 2010 at 5:17 AM, smu johnson <smujohnson@gmail.com> wrote:
+
+> It seems that the background func call is what I want, but I can't get it
+> to implement.
+>
+> I grep'd the entire source tree, and found only 3 references:
+>
+> contrib/xhb/bkgtsks.c:extern ULONG    hb_backgroundAddFunc( PHB_ITEM
+> pBlock, int nMillisec, BOOL bActive ); /* Adds a codeblock or an executable
+> array */
+> contrib/xhb/bkgtsks.c:ULONG hb_backgroundAddFunc( PHB_ITEM pBlock, int
+> nMillisec, BOOL bActive )
+> contrib/xhb/bkgtsks.c:      hb_retnl( hb_backgroundAddFunc( pBlock,
+>
+> ... When I use it, I get the classic  undefined reference to
+> `HB_FUN_HB_BACKGROUNDADDFUNC message.
+>
+> Maybe it is ready yet?  *confused*
+>
+> TIA
+>
+>
+> On Thu, Jan 28, 2010 at 3:29 AM, Danny <cyberdanny@tiscalinet.it> wrote:
+>
+>> smu johnson ha scritto:
+>>
+>>  Hi,
+>>>
+>>> Has anyone found a replacement for Telepathy TP_ONTIME?  (it just allows
+>>> you
+>>> to execute any function you want during any millisecond intervals.
+>>> Unfortunately, the hbtpathy library has left this TP_ONTIME function
+>>> out...
+>>> I e-mailed the author of the Harbour contrib lib, but perhaps he never
+>>> implemented this FUNC because it was not portable.
+>>>
+>>> I wouldn't want to write my own if I didn't have to, as I decided to ask
+>>> here.
+>>>
+>>> I read some other threads on the mailing list and someone mentioned to
+>>> check
+>>> out another thread on multithreading.  It was a bit too high-brow for me,
+>>> as
+>>> well as not really answering this (and the original posters) question.
+>>>  In a
+>>> nutshell, I'm looking to implement a simple feature that Telepathy
+>>> provided
+>>> in the DOS days.
+>>>
+>>> As always, any hints highly appreciated.  Thank you for reading
+>>>
+>>>
+>>>
+>> I'm not sure about those instructions, but here they are:
+>>
+>> HB_IdleAdd() : Adds a background task for being executed during idle
+>> states
+>> HB_IdleDel() Removes a task from the list of idle tasks.
+>> HB_IdleState() Signals an idle state.
+>> HB_IdleSleepMSec() Queries or changes the default time interval for idle
+>> task processing.
+>>
+>> HB_BackGroundAdd() Adds a new background task.
+>> HB_BackGroundRun() : Enforces execution of one or all background tasks
+>> HB_BackGroundActive() Queries and/or changes the activity of a single
+>> background task.
+>> HB_BackGroundDel() Removes a background task from the internal task list.
+>> HB_BackGroundReset() Resets the internal counter of background tasks.
+>> HB_BackGroundTime() Queries or changes the wait interval in milliseconds
+>> after which the task is executed.
+>>
+>> StartThread() Starts a new thread.
+>>
+>> HTH
+>> Dan
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>
+>
+>
+> --
+> smu johnson <smujohnson@gmail.com>
+>
+>
+
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From smujohnson at gmail.com  Thu Jan 28 09:14:04 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Thu Jan 28 09:14:13 2010
+Subject: [Harbour-users] Q: Where can I find the harbour debugger?
+In-Reply-To: <674e4ddd1001280257k2634d7c4ib6cd2932c5941104@mail.gmail.com>
+References: <674e4ddd1001280229q72b7e3f1k9c680279de330734@mail.gmail.com>
+	<4B616B95.6060501@tiscalinet.it>
+	<674e4ddd1001280257k2634d7c4ib6cd2932c5941104@mail.gmail.com>
+Message-ID: <674e4ddd1001280614j7cc9b3a3g7554ac82297eb74a@mail.gmail.com>
+
+It seems all I had to do was add -b to the hbmk2 command, without having to
+include anything else, and it magically worked.  Well, with your ALT-D hint
+:).  Maybe I need to include the bmdebug.ch header if I intended to do
+ALTD()?
+
+Am I doing anything wrong?
+
+On Thu, Jan 28, 2010 at 2:57 AM, smu johnson <smujohnson@gmail.com> wrote:
+
+> Thanks Dan, will give it a shot.
+>
+>
+>
+> On Thu, Jan 28, 2010 at 2:48 AM, Danny <cyberdanny@tiscalinet.it> wrote:
+>
+>> smu johnson ha scritto:
+>>
+>>  Hi,
+>>>
+>>> I keep googling for Harbour Debugger, and get a bunch of results, yet no
+>>> hints as to how to use this thing.  From what I have read, I assume it
+>>> exists... but where?
+>>>
+>>> Thanks
+>>>
+>>>
+>>>
+>> Just link hbdebug.lib, compile with flag -b (includes debug information)
+>> and activate it via source with the instruction ALTD(), or pressing in
+>> execution environment... guess... alt-D.
+>> Regards
+>> Dan
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>
+>
+>
+> --
+> smu johnson <smujohnson@gmail.com>
+>
+>
+
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From smujohnson at gmail.com  Fri Jan 29 02:18:31 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Fri Jan 29 02:18:39 2010
+Subject: [Harbour-users] Telepathy TP_ONTIME / "function calling timer" 
+	alternate implementations?
+In-Reply-To: <674e4ddd1001280528r3208fefvf03aa0ca292261c7@mail.gmail.com>
+References: <674e4ddd1001280136u7fc95d90oeabb579eac7591ca@mail.gmail.com>
+	<4B61750F.6020609@tiscalinet.it>
+	<674e4ddd1001280517x475a5846p442884c78262cff5@mail.gmail.com>
+	<674e4ddd1001280528r3208fefvf03aa0ca292261c7@mail.gmail.com>
+Message-ID: <674e4ddd1001282318l7b31ab9eha2deda8e3db3db7a@mail.gmail.com>
+
+Alright, I have no freaking clue how to do this properly.
+
+I have found that HB_IDLEADD() will keep calling the <function()> you
+specify while it's idle.  Problem is, I need it called by millisecond
+lengths.  This becomes a problem because I don't want to hold up the system
+for 5 seconds, simply to count 5 seconds.  I need the interrupts to happen
+every 5 seconds.
+
+Despite this problem, I tried to experiment.  I put a timer inside the
+function itself using HB_MILLISECONDS() (hint I got from Viktor S.)  But I
+am probably going at it the wrong way, as it uses 100% CPU, and still causes
+the system to freeze for 5 seconds trying to build up the time to 5
+seconds.  I'm no expert either, so feel free to call me a fool!  I also
+tried the Clipper-Tools MILLISEC() function, which also didn't solve the
+problem of stalling the system for 5 seconds, and still drilled the CPU to
+max the same way my foolish solution did.
+
+PS:  The reason I know it's "stalling" is because I am being prompted by a
+WAIT command at the end of the program below, and hitting any key has to
+wait till the 5 second timer finishes before it quits.
+
+--- code ---
+
+func say()
+
+  local now
+  local interval := 1000
+
+  start = HB_MILLISECONDS()
+  do while (HB_MILLISECONDS() - start <= interval)  // kill time loop
+  end do
+
+  ? "Here I am!"
+
+// end func
+
+func main()
+
+  local nTask
+  nTask := HB_IDLEADD( {|| say() })
+  wait
+
+return nil
+
+-----
+
+Thanks for reading!!
+
+Yours frustrated,
+smu johnson  :)
+
+
+On Thu, Jan 28, 2010 at 5:28 AM, smu johnson <smujohnson@gmail.com> wrote:
+
+> Sorry, I was calling the wrong function...  I was too hasty.
+>
+>
+> On Thu, Jan 28, 2010 at 5:17 AM, smu johnson <smujohnson@gmail.com> wrote:
+>
+>> It seems that the background func call is what I want, but I can't get it
+>> to implement.
+>>
+>> I grep'd the entire source tree, and found only 3 references:
+>>
+>> contrib/xhb/bkgtsks.c:extern ULONG    hb_backgroundAddFunc( PHB_ITEM
+>> pBlock, int nMillisec, BOOL bActive ); /* Adds a codeblock or an executable
+>> array */
+>> contrib/xhb/bkgtsks.c:ULONG hb_backgroundAddFunc( PHB_ITEM pBlock, int
+>> nMillisec, BOOL bActive )
+>> contrib/xhb/bkgtsks.c:      hb_retnl( hb_backgroundAddFunc( pBlock,
+>>
+>> ... When I use it, I get the classic  undefined reference to
+>> `HB_FUN_HB_BACKGROUNDADDFUNC message.
+>>
+>> Maybe it is ready yet?  *confused*
+>>
+>> TIA
+>>
+>>
+>> On Thu, Jan 28, 2010 at 3:29 AM, Danny <cyberdanny@tiscalinet.it> wrote:
+>>
+>>> smu johnson ha scritto:
+>>>
+>>>  Hi,
+>>>>
+>>>> Has anyone found a replacement for Telepathy TP_ONTIME?  (it just allows
+>>>> you
+>>>> to execute any function you want during any millisecond intervals.
+>>>> Unfortunately, the hbtpathy library has left this TP_ONTIME function
+>>>> out...
+>>>> I e-mailed the author of the Harbour contrib lib, but perhaps he never
+>>>> implemented this FUNC because it was not portable.
+>>>>
+>>>> I wouldn't want to write my own if I didn't have to, as I decided to ask
+>>>> here.
+>>>>
+>>>> I read some other threads on the mailing list and someone mentioned to
+>>>> check
+>>>> out another thread on multithreading.  It was a bit too high-brow for
+>>>> me, as
+>>>> well as not really answering this (and the original posters) question.
+>>>>  In a
+>>>> nutshell, I'm looking to implement a simple feature that Telepathy
+>>>> provided
+>>>> in the DOS days.
+>>>>
+>>>> As always, any hints highly appreciated.  Thank you for reading
+>>>>
+>>>>
+>>>>
+>>> I'm not sure about those instructions, but here they are:
+>>>
+>>> HB_IdleAdd() : Adds a background task for being executed during idle
+>>> states
+>>> HB_IdleDel() Removes a task from the list of idle tasks.
+>>> HB_IdleState() Signals an idle state.
+>>> HB_IdleSleepMSec() Queries or changes the default time interval for idle
+>>> task processing.
+>>>
+>>> HB_BackGroundAdd() Adds a new background task.
+>>> HB_BackGroundRun() : Enforces execution of one or all background tasks
+>>> HB_BackGroundActive() Queries and/or changes the activity of a single
+>>> background task.
+>>> HB_BackGroundDel() Removes a background task from the internal task list.
+>>> HB_BackGroundReset() Resets the internal counter of background tasks.
+>>> HB_BackGroundTime() Queries or changes the wait interval in milliseconds
+>>> after which the task is executed.
+>>>
+>>> StartThread() Starts a new thread.
+>>>
+>>> HTH
+>>> Dan
+>>> _______________________________________________
+>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>
+>>
+>>
+>>
+>> --
+>> smu johnson <smujohnson@gmail.com>
+>>
+>>
+>
+>
+> --
+> smu johnson <smujohnson@gmail.com>
+>
+>
+
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From f.klein at winposware.com  Fri Jan 29 02:43:27 2010
+From: f.klein at winposware.com (frans Klein)
+Date: Fri Jan 29 02:43:36 2010
+Subject: [Harbour-users] Telepathy TP_ONTIME / "function calling timer"
+	alternate implementations?
+In-Reply-To: <674e4ddd1001282318l7b31ab9eha2deda8e3db3db7a@mail.gmail.com>
+References: <674e4ddd1001280136u7fc95d90oeabb579eac7591ca@mail.gmail.com><4B61750F.6020609@tiscalinet.it><674e4ddd1001280517x475a5846p442884c78262cff5@mail.gmail.com><674e4ddd1001280528r3208fefvf03aa0ca292261c7@mail.gmail.com>
+	<674e4ddd1001282318l7b31ab9eha2deda8e3db3db7a@mail.gmail.com>
+Message-ID: <3601A69CA7D040ECB3109E523F528232@AZ.local>
+
+Hi everyone, 
+
+Her is the code I use :
+
+
+function delay (secs)
+   local i
+
+   i = seconds () + secs
+   while (seconds () < i)
+      hb_idlestate ()
+   end
+return (nil)
+
+
+-	CPU usage : 0 to 2 %
+-	secs : number of seconds to wait.
+	You can also specify 0.1 for 100 milliseconds
+-	seconds () : standard clipper function
+-	Caution : if the function is called at 23:59:59 and the wait is 2
+seconds, the function will never exit. So I have added the DATE notion in
+the function.
+
+Greatings,
+
+
+Frans
+
+
+
+
+
+
+-----Message d'origine-----
+De?: harbour-users-bounces@harbour-project.org
+[mailto:harbour-users-bounces@harbour-project.org] De la part de smu johnson
+Envoy??: vendredi 29 janvier 2010 8:19
+??: Users of the Harbour compiler
+Objet?: Re: [Harbour-users] Telepathy TP_ONTIME / "function calling timer"
+alternate implementations?
+
+Alright, I have no freaking clue how to do this properly.
+
+I have found that HB_IDLEADD() will keep calling the <function()> you
+specify while it's idle.  Problem is, I need it called by millisecond
+lengths.  This becomes a problem because I don't want to hold up the system
+for 5 seconds, simply to count 5 seconds.  I need the interrupts to happen
+every 5 seconds.
+
+Despite this problem, I tried to experiment.  I put a timer inside the
+function itself using HB_MILLISECONDS() (hint I got from Viktor S.)  But I
+am probably going at it the wrong way, as it uses 100% CPU, and still causes
+the system to freeze for 5 seconds trying to build up the time to 5
+seconds.  I'm no expert either, so feel free to call me a fool!  I also
+tried the Clipper-Tools MILLISEC() function, which also didn't solve the
+problem of stalling the system for 5 seconds, and still drilled the CPU to
+max the same way my foolish solution did.
+
+PS:  The reason I know it's "stalling" is because I am being prompted by a
+WAIT command at the end of the program below, and hitting any key has to
+wait till the 5 second timer finishes before it quits.
+
+--- code ---
+
+func say()
+
+  local now
+  local interval := 1000
+
+  start = HB_MILLISECONDS()
+  do while (HB_MILLISECONDS() - start <= interval)  // kill time loop
+  end do
+
+  ? "Here I am!"
+
+// end func
+
+func main()
+
+  local nTask
+  nTask := HB_IDLEADD( {|| say() })
+  wait
+
+return nil
+
+-----
+
+Thanks for reading!!
+
+Yours frustrated,
+smu johnson  :)
+
+
+On Thu, Jan 28, 2010 at 5:28 AM, smu johnson <smujohnson@gmail.com> wrote:
+
+> Sorry, I was calling the wrong function...  I was too hasty.
+>
+>
+> On Thu, Jan 28, 2010 at 5:17 AM, smu johnson <smujohnson@gmail.com> wrote:
+>
+>> It seems that the background func call is what I want, but I can't get it
+>> to implement.
+>>
+>> I grep'd the entire source tree, and found only 3 references:
+>>
+>> contrib/xhb/bkgtsks.c:extern ULONG    hb_backgroundAddFunc( PHB_ITEM
+>> pBlock, int nMillisec, BOOL bActive ); /* Adds a codeblock or an
+executable
+>> array */
+>> contrib/xhb/bkgtsks.c:ULONG hb_backgroundAddFunc( PHB_ITEM pBlock, int
+>> nMillisec, BOOL bActive )
+>> contrib/xhb/bkgtsks.c:      hb_retnl( hb_backgroundAddFunc( pBlock,
+>>
+>> ... When I use it, I get the classic  undefined reference to
+>> `HB_FUN_HB_BACKGROUNDADDFUNC message.
+>>
+>> Maybe it is ready yet?  *confused*
+>>
+>> TIA
+>>
+>>
+>> On Thu, Jan 28, 2010 at 3:29 AM, Danny <cyberdanny@tiscalinet.it> wrote:
+>>
+>>> smu johnson ha scritto:
+>>>
+>>>  Hi,
+>>>>
+>>>> Has anyone found a replacement for Telepathy TP_ONTIME?  (it just
+allows
+>>>> you
+>>>> to execute any function you want during any millisecond intervals.
+>>>> Unfortunately, the hbtpathy library has left this TP_ONTIME function
+>>>> out...
+>>>> I e-mailed the author of the Harbour contrib lib, but perhaps he never
+>>>> implemented this FUNC because it was not portable.
+>>>>
+>>>> I wouldn't want to write my own if I didn't have to, as I decided to
+ask
+>>>> here.
+>>>>
+>>>> I read some other threads on the mailing list and someone mentioned to
+>>>> check
+>>>> out another thread on multithreading.  It was a bit too high-brow for
+>>>> me, as
+>>>> well as not really answering this (and the original posters) question.
+>>>>  In a
+>>>> nutshell, I'm looking to implement a simple feature that Telepathy
+>>>> provided
+>>>> in the DOS days.
+>>>>
+>>>> As always, any hints highly appreciated.  Thank you for reading
+>>>>
+>>>>
+>>>>
+>>> I'm not sure about those instructions, but here they are:
+>>>
+>>> HB_IdleAdd() : Adds a background task for being executed during idle
+>>> states
+>>> HB_IdleDel() Removes a task from the list of idle tasks.
+>>> HB_IdleState() Signals an idle state.
+>>> HB_IdleSleepMSec() Queries or changes the default time interval for idle
+>>> task processing.
+>>>
+>>> HB_BackGroundAdd() Adds a new background task.
+>>> HB_BackGroundRun() : Enforces execution of one or all background tasks
+>>> HB_BackGroundActive() Queries and/or changes the activity of a single
+>>> background task.
+>>> HB_BackGroundDel() Removes a background task from the internal task
+list.
+>>> HB_BackGroundReset() Resets the internal counter of background tasks.
+>>> HB_BackGroundTime() Queries or changes the wait interval in milliseconds
+>>> after which the task is executed.
+>>>
+>>> StartThread() Starts a new thread.
+>>>
+>>> HTH
+>>> Dan
+>>> _______________________________________________
+>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>
+>>
+>>
+>>
+>> --
+>> smu johnson <smujohnson@gmail.com>
+>>
+>>
+>
+>
+> --
+> smu johnson <smujohnson@gmail.com>
+>
+>
+
+
+-- 
+smu johnson <smujohnson@gmail.com>
+_______________________________________________
+Harbour-users mailing list (attachment size limit: 40KB)
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+From druzus at acn.waw.pl  Fri Jan 29 02:46:41 2010
+From: druzus at acn.waw.pl (=?utf-8?Q?Przemys=C5=82aw?= Czerpak)
+Date: Fri Jan 29 02:46:50 2010
+Subject: [Harbour-users] Telepathy TP_ONTIME / "function calling timer"
+	alternate implementations?
+In-Reply-To: <674e4ddd1001282318l7b31ab9eha2deda8e3db3db7a@mail.gmail.com>
+References: <674e4ddd1001280136u7fc95d90oeabb579eac7591ca@mail.gmail.com>
+	<4B61750F.6020609@tiscalinet.it>
+	<674e4ddd1001280517x475a5846p442884c78262cff5@mail.gmail.com>
+	<674e4ddd1001280528r3208fefvf03aa0ca292261c7@mail.gmail.com>
+	<674e4ddd1001282318l7b31ab9eha2deda8e3db3db7a@mail.gmail.com>
+Message-ID: <20100129074641.GA30236@linux-4bod.home.aster.pl>
+
+On Thu, 28 Jan 2010, smu johnson wrote:
+
+Hi,
+
+> Alright, I have no freaking clue how to do this properly.
+> I have found that HB_IDLEADD() will keep calling the <function()> you
+> specify while it's idle.  Problem is, I need it called by millisecond
+> lengths.  This becomes a problem because I don't want to hold up the system
+> for 5 seconds, simply to count 5 seconds.  I need the interrupts to happen
+> every 5 seconds.
+> Despite this problem, I tried to experiment.  I put a timer inside the
+> function itself using HB_MILLISECONDS() (hint I got from Viktor S.)  But I
+> am probably going at it the wrong way, as it uses 100% CPU, and still causes
+> the system to freeze for 5 seconds trying to build up the time to 5
+> seconds.  I'm no expert either, so feel free to call me a fool!  I also
+> tried the Clipper-Tools MILLISEC() function, which also didn't solve the
+> problem of stalling the system for 5 seconds, and still drilled the CPU to
+> max the same way my foolish solution did.
+
+The CPU usage is caused by active loop you have in your code.
+The function you are using to measure the time is unimportant.
+
+   proc main()
+      cls
+      hb_idleAdd( {||
+                     static s_timer := 0
+                     local timer := hb_milliseconds()
+                     if timer - s_timer > 1000 // execute once per second
+                        s_timer := timer
+                        hb_dispoutat( 0, 72, time() )
+                     endif
+                     return nil
+                  } )
+      wait
+   return
+
+best regards,
+Przemek
+From smujohnson at gmail.com  Fri Jan 29 03:00:58 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Fri Jan 29 03:01:11 2010
+Subject: [Harbour-users] Telepathy TP_ONTIME / "function calling timer" 
+	alternate implementations?
+In-Reply-To: <20100129074641.GA30236@linux-4bod.home.aster.pl>
+References: <674e4ddd1001280136u7fc95d90oeabb579eac7591ca@mail.gmail.com>
+	<4B61750F.6020609@tiscalinet.it>
+	<674e4ddd1001280517x475a5846p442884c78262cff5@mail.gmail.com>
+	<674e4ddd1001280528r3208fefvf03aa0ca292261c7@mail.gmail.com>
+	<674e4ddd1001282318l7b31ab9eha2deda8e3db3db7a@mail.gmail.com>
+	<20100129074641.GA30236@linux-4bod.home.aster.pl>
+Message-ID: <674e4ddd1001290000o4d73e3c7tfe1e1478b913290c@mail.gmail.com>
+
+Przemek, this function is great!  Do you think it would be a worthy
+inclusion in the Harbour functions?  It might be quite useful, specially if
+you could do...
+
+nTask = HB_TIMER({|| stuff() }, 1000)
+
+Just a thought.  Maybe there's an even more useful prototype you or someone
+else could think of.  I think it'd be handy!
+
+2010/1/28 Przemys?aw Czerpak <druzus@acn.waw.pl>
+
+> On Thu, 28 Jan 2010, smu johnson wrote:
+>
+>   proc main()
+>      cls
+>      hb_idleAdd( {||
+>                     static s_timer := 0
+>                     local timer := hb_milliseconds()
+>                     if timer - s_timer > 1000 // execute once per second
+>                        s_timer := timer
+>                        hb_dispoutat( 0, 72, time() )
+>                     endif
+>                     return nil
+>                  } )
+>      wait
+>   return
+>
+> best regards,
+> Przemek
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From gruncic at gmail.com  Fri Jan 29 16:54:04 2010
+From: gruncic at gmail.com (Zvonimir Gruncic)
+Date: Fri Jan 29 16:54:12 2010
+Subject: [Harbour-users] curos shape
+Message-ID: <b811782a1001291354k15dc43fam133a00320f8e5efc@mail.gmail.com>
+
+Hi all ,
+
+
+how can I change cursor shape in harbour 1.xx in  GET  (READ ) command.
+
+I try with setcursor(sc_special1)... but dont work.
+
+
+
+best regards .
+From smujohnson at gmail.com  Sat Jan 30 01:25:09 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Sat Jan 30 01:25:17 2010
+Subject: [Harbour-users] Any Harbour CLOCK functions?
+Message-ID: <674e4ddd1001292225x67909d5bx6bf6bcb71b75adcd@mail.gmail.com>
+
+Hi...
+
+We used the FUNCKy CLOCK12 function back in the day, as it made putting a
+little clock that ticks up quite easily.  I think the Clipper Tools did
+something similar with SHOWTIME(), but it doesn't seem to be implemented in
+Harbour.  There is no HB_FUNC to it when grepping the sourcecode.
+
+>From Przemek's help with HB_IdleAdd, it seems you can manually build a clock
+using hb_dispoutat( 0, 72, time() ).  But maybe there is an easier little
+HB_CLOCK type thing hanging around that would take all the work out for me.
+
+Any hints greatly appreciated.
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From mbelgrano at deltain.it  Sat Jan 30 03:45:51 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Sat Jan 30 03:46:22 2010
+Subject: [Harbour-users] Any Harbour CLOCK functions?
+In-Reply-To: <674e4ddd1001292225x67909d5bx6bf6bcb71b75adcd@mail.gmail.com>
+References: <674e4ddd1001292225x67909d5bx6bf6bcb71b75adcd@mail.gmail.com>
+Message-ID: <609353e71001300045y1b536166oe0c28d07ea1bb184@mail.gmail.com>
+
+I have tried use Multithread to show a possible solution
+
+
+   PROCEDURE Main
+      LOCAL oThread := Thread():new()
+      LOCAL AA
+      CLS
+      aa="Hello"
+      oThread:start( "MYOperation" )        // thread executes code
+      ? "Thread started"
+      @ 2,1 SAY "THIS IS TEST" GET AA
+      READ
+      CLS
+      ? "Performing some other tasks"
+      WAIT "PRESS ANY KEY"
+      oThread:QUIT( )        // thread
+
+   RETURN
+
+   PROCEDURE MYOperation
+      LOCAL Tclock
+      Tclock=TIME()   // I WANT SAVE LAST TO DISPLAY ONLY IF MODIFIED
+      DO WHILE .T.
+        IF Tclock<>TIME()
+           Tclock=TIME()
+           @ 0,72 SAY TIME()
+        ENDIF
+      ENDDO
+   RETURN
+
+
+
+2010/1/30 smu johnson <smujohnson@gmail.com>
+
+> Hi...
+>
+> We used the FUNCKy CLOCK12 function back in the day, as it made putting a
+> little clock that ticks up quite easily.  I think the Clipper Tools did
+> something similar with SHOWTIME(), but it doesn't seem to be implemented in
+> Harbour.  There is no HB_FUNC to it when grepping the sourcecode.
+>
+> >From Przemek's help with HB_IdleAdd, it seems you can manually build a
+> clock
+> using hb_dispoutat( 0, 72, time() ).  But maybe there is an easier little
+> HB_CLOCK type thing hanging around that would take all the work out for me.
+>
+> Any hints greatly appreciated.
+>
+> --
+> smu johnson <smujohnson@gmail.com>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+
+Iscritto all'albo dei CTU presso il Tribunale di Novara per materia
+Informatica
+Delta Informatica S.r.l. (http://www.deltain.it/) (+39 0321 455962)
+Analisi e sviluppo software per Lan e Web -  Consulenza informatica -
+Formazione
+From smujohnson at gmail.com  Sat Jan 30 03:55:59 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Sat Jan 30 03:56:07 2010
+Subject: [Harbour-users] Any Harbour CLOCK functions?
+In-Reply-To: <609353e71001300045y1b536166oe0c28d07ea1bb184@mail.gmail.com>
+References: <674e4ddd1001292225x67909d5bx6bf6bcb71b75adcd@mail.gmail.com>
+	<609353e71001300045y1b536166oe0c28d07ea1bb184@mail.gmail.com>
+Message-ID: <674e4ddd1001300055i2601ca24p67662479429e1c1e@mail.gmail.com>
+
+Thanks for the reply.
+
+Weird thing was, after I wrote this message, I got the showtime() thing to
+work.  I don't know what was happening.   Maybe I thought it was part of
+Nanforum instead of Clipper Tools.  Either way the thing seems to work
+well... but for the sake of learning, I will go through your suggestion.
+
+Thanks M.
+
+PS:  I would have replied back to the thread and said "Nevermind, I found
+it!"  But I couldn't figure out how to do that, since I don't get my own
+e-mail to reply to when posting.
+
+
+On Sat, Jan 30, 2010 at 12:45 AM, Massimo Belgrano <mbelgrano@deltain.it>wrote:
+
+> I have tried use Multithread to show a possible solution
+>
+>
+>   PROCEDURE Main
+>      LOCAL oThread := Thread():new()
+>      LOCAL AA
+>      CLS
+>      aa="Hello"
+>      oThread:start( "MYOperation" )        // thread executes code
+>      ? "Thread started"
+>      @ 2,1 SAY "THIS IS TEST" GET AA
+>      READ
+>      CLS
+>      ? "Performing some other tasks"
+>      WAIT "PRESS ANY KEY"
+>      oThread:QUIT( )        // thread
+>
+>   RETURN
+>
+>   PROCEDURE MYOperation
+>      LOCAL Tclock
+>      Tclock=TIME()   // I WANT SAVE LAST TO DISPLAY ONLY IF MODIFIED
+>      DO WHILE .T.
+>        IF Tclock<>TIME()
+>           Tclock=TIME()
+>           @ 0,72 SAY TIME()
+>        ENDIF
+>      ENDDO
+>   RETURN
+>
+>
+>
+> 2010/1/30 smu johnson <smujohnson@gmail.com>
+>
+> > Hi...
+> >
+> > We used the FUNCKy CLOCK12 function back in the day, as it made putting a
+> > little clock that ticks up quite easily.  I think the Clipper Tools did
+> > something similar with SHOWTIME(), but it doesn't seem to be implemented
+> in
+> > Harbour.  There is no HB_FUNC to it when grepping the sourcecode.
+> >
+> > >From Przemek's help with HB_IdleAdd, it seems you can manually build a
+> > clock
+> > using hb_dispoutat( 0, 72, time() ).  But maybe there is an easier little
+> > HB_CLOCK type thing hanging around that would take all the work out for
+> me.
+> >
+> > Any hints greatly appreciated.
+> >
+> > --
+> > smu johnson <smujohnson@gmail.com>
+> > _______________________________________________
+> > Harbour-users mailing list (attachment size limit: 40KB)
+> > Harbour-users@harbour-project.org
+> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >
+>
+>
+>
+> --
+> Massimo Belgrano
+>
+> Iscritto all'albo dei CTU presso il Tribunale di Novara per materia
+> Informatica
+> Delta Informatica S.r.l. (http://www.deltain.it/) (+39 0321 455962)
+> Analisi e sviluppo software per Lan e Web -  Consulenza informatica -
+> Formazione
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From smujohnson at gmail.com  Sun Jan 31 05:21:04 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Sun Jan 31 05:21:12 2010
+Subject: [Harbour-users] Anyone know of a Clipper BARCODE funcs?
+Message-ID: <674e4ddd1001310221w699e3f87kdda7a70d3c413c5e@mail.gmail.com>
+
+Hi.
+
+I've been Googling around for a solution to implement CODE128 (a b or c)
+barcodes... and haven't really found much.  Most of the stuff is
+undocumented, and the only free Clipper one I found doesn't say what Barcode
+standard it is.  Added to this futility, is the fact that the Internet does
+not seem to contain a simple .PDF or document that actually details the
+CODE128 standard!
+
+Then I thought, maybe I should just ask here.  Maybe this is a sign / omen
+that someone here already knows of a free solution for this.
+
+PS:  I'm just trying to output barcodes to a DoxMatrix type string.
+
+Thanks in advance
+-- 
+smu johnson <smujohnson@gmail.com>
+From mbelgrano at deltain.it  Sun Jan 31 06:05:46 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Sun Jan 31 06:06:16 2010
+Subject: [Harbour-users] Anyone know of a Clipper BARCODE funcs?
+In-Reply-To: <674e4ddd1001310221w699e3f87kdda7a70d3c413c5e@mail.gmail.com>
+References: <674e4ddd1001310221w699e3f87kdda7a70d3c413c5e@mail.gmail.com>
+Message-ID: <609353e71001310305j146e62c4h2a62fd2d552ed59a@mail.gmail.com>
+
+One way for printing barcode code 128 symbologies  is use font
+here you can find a open source solution
+http://sourceforge.net/projects/openbarcodes/
+here a commercial solution http://www.barcodesoft.com/code128_font.aspx
+
+Folllow a untested sample
+
+oPrn := win_prn():New(GetDefaultPrinter())
+oPrn:SetFont("code128",11,,,,255)  // please try different   value
+ oPrn:TextOut("?ABC!?",.t.)   // TEXT ready to TO PRINT
+ oPrn:TextOut(code128("ABC"),.t.)   // TEXT TO PRINT IF YOU HAVE CONVERT FUNC
+oPrn:NewPage()
+
+
+follow is vb function  to convert
+please share here your result
+
+Public Function code128$(chaine$)
+  'Cette fonction est r?gie par la Licence G?n?rale Publique Amoindrie
+GNU (GNU LGPL)
+  'This function is governed by the GNU Lesser General Public License (GNU LGPL)
+  'V 2.0.0
+  'Param?tres : une chaine
+  'Parameters : a string
+  'Retour : * une chaine qui, affich?e avec la police CODE128.TTF,
+donne le code barre
+  '         * une chaine vide si param?tre fourni incorrect
+  'Return : * a string which give the bar code when it is dispayed
+with CODE128.TTF font
+  '         * an empty string if the supplied parameter is no good
+  Dim i%, checksum&, mini%, dummy%, tableB As Boolean
+  code128$ = ""
+  If Len(chaine$) > 0 Then
+  'V?rifier si caract?res valides
+  'Check for valid characters
+    For i% = 1 To Len(chaine$)
+      Select Case Asc(Mid$(chaine$, i%, 1))
+      Case 32 To 126, 203
+      Case Else
+        i% = 0
+        Exit For
+      End Select
+    Next
+    'Calculer la chaine de code en optimisant l'usage des tables B et C
+    'Calculation of the code string with optimized use of tables B and C
+    code128$ = ""
+    tableB = True
+    If i% > 0 Then
+      i% = 1 'i% devient l'index sur la chaine / i% become the string index
+      Do While i% <= Len(chaine$)
+        If tableB Then
+          'Voir si int?ressant de passer en table C / See if
+interesting to switch to table C
+          'Oui pour 4 chiffres au d?but ou ? la fin, sinon pour 6
+chiffres / yes for 4 digits at start or end, else if 6 digits
+          mini% = IIf(i% = 1 Or i% + 3 = Len(chaine$), 4, 6)
+          GoSub testnum
+          If mini% < 0 Then 'Choix table C / Choice of table C
+            If i% = 1 Then 'D?buter sur table C / Starting with table C
+              code128$ = Chr$(210)
+            Else 'Commuter sur table C / Switch to table C
+              code128$ = code128$ & Chr$(204)
+            End If
+            tableB = False
+          Else
+            If i% = 1 Then code128$ = Chr$(209) 'D?buter sur table B /
+Starting with table B
+          End If
+        End If
+        If Not tableB Then
+          'On est sur la table C, essayer de traiter 2 chiffres / We
+are on table C, try to process 2 digits
+          mini% = 2
+          GoSub testnum
+          If mini% < 0 Then 'OK pour 2 chiffres, les traiter / OK for
+2 digits, process it
+            dummy% = Val(Mid$(chaine$, i%, 2))
+            dummy% = IIf(dummy% < 95, dummy% + 32, dummy% + 105)
+            code128$ = code128$ & Chr$(dummy%)
+            i% = i% + 2
+          Else 'On n'a pas 2 chiffres, repasser en table B / We
+haven't 2 digits, switch to table B
+            code128$ = code128$ & Chr$(205)
+            tableB = True
+          End If
+        End If
+        If tableB Then
+          'Traiter 1 caract?re en table B / Process 1 digit with table B
+          code128$ = code128$ & Mid$(chaine$, i%, 1)
+          i% = i% + 1
+        End If
+      Loop
+      'Calcul de la cl? de contr?le / Calculation of the checksum
+      For i% = 1 To Len(code128$)
+        dummy% = Asc(Mid$(code128$, i%, 1))
+        dummy% = IIf(dummy% < 127, dummy% - 32, dummy% - 105)
+        If i% = 1 Then checksum& = dummy%
+        checksum& = (checksum& + (i% - 1) * dummy%) Mod 103
+      Next
+      'Calcul du code ASCII de la cl? / Calculation of the checksum ASCII code
+      checksum& = IIf(checksum& < 95, checksum& + 32, checksum& + 105)
+      'Ajout de la cl? et du STOP / Add the checksum and the STOP
+      code128$ = code128$ & Chr$(checksum&) & Chr$(211)
+    End If
+  End If
+  Exit Function
+testnum:
+  'si les mini% caract?res ? partir de i% sont num?riques, alors mini%=0
+  'if the mini% characters from i% are numeric, then mini%=0
+  mini% = mini% - 1
+  If i% + mini% <= Len(chaine$) Then
+    Do While mini% >= 0
+      If Asc(Mid$(chaine$, i% + mini%, 1)) < 48 Or Asc(Mid$(chaine$,
+i% + mini%, 1)) > 57 Then Exit Do
+      mini% = mini% - 1
+    Loop
+  End If
+Return
+End Function
+
+
+
+2010/1/31 smu johnson <smujohnson@gmail.com>:
+> Hi.
+>
+> I've been Googling around for a solution to implement CODE128 (a b or c)
+> barcodes... and haven't really found much. ?Most of the stuff is
+> undocumented, and the only free Clipper one I found doesn't say what Barcode
+> standard it is. ?Added to this futility, is the fact that the Internet does
+> not seem to contain a simple .PDF or document that actually details the
+> CODE128 standard!
+>
+> Then I thought, maybe I should just ask here. ?Maybe this is a sign / omen
+> that someone here already knows of a free solution for this.
+>
+> PS: ?I'm just trying to output barcodes to a DoxMatrix type string.
+>
+> Thanks in advance
+> --
+> smu johnson <smujohnson@gmail.com>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+
+Iscritto all'albo dei CTU presso il Tribunale di Novara per materia Informatica
+Delta Informatica S.r.l. (http://www.deltain.it/) (+39 0321 455962)
+Analisi e sviluppo software per Lan e Web -  Consulenza informatica - Formazione
+From mbelgrano at deltain.it  Sun Jan 31 06:11:40 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Sun Jan 31 06:12:08 2010
+Subject: [Harbour-users] Anyone know of a Clipper BARCODE funcs?
+In-Reply-To: <609353e71001310305j146e62c4h2a62fd2d552ed59a@mail.gmail.com>
+References: <674e4ddd1001310221w699e3f87kdda7a70d3c413c5e@mail.gmail.com> 
+	<609353e71001310305j146e62c4h2a62fd2d552ed59a@mail.gmail.com>
+Message-ID: <609353e71001310311j891cb0ayd613cc4a4c0f7144@mail.gmail.com>
+
+here a visual fox pro solution more compatible with harbour
+*-----------------------------------------------------------
+* Conversion VB --> VFP : Emile MAITREJEAN www.emsystems.be
+*-----------------------------------------------------------
+* Entr?e : lcChaine
+* 			
+* Retour : * w_code128 qui, affich?e avec la police CODE128.TTF, donne
+le code barre
+*          * une chaine vide si param?tre fourni incorrect
+code128 = ""
+IF LEN(lcChaine) > 0
+	* V?rifier si caract?res valides
+	FOR lni = 1 TO LEN(lcChaine)
+		IF ASC(SUBSTR(lcChaine, lni, 1)) >= 32 AND ASC(SUBSTR(lcChaine, lni,
+1)) <= 126
+		ELSE
+			lni = 0
+			EXIT
+		ENDIF
+	ENDFOR
+	* Calculer la chaine de code en optimisant l'usage des tables B et C
+	code128 = ""
+	tableB = .T.
+	IF lni > 0
+		lni = 1 						&&lni devient l'index sur la chaine
+		DO WHILE lni <= LEN(lcChaine)
+			IF tableB
+				* Voir si int?ressant de passer en table C
+				* Oui pour 4 chiffres au d?but ou ? la fin, sinon pour 6 chiffres
+				minlni = IIF(lni = 1 OR lni + 3 = LEN(lcChaine), 4, 6)
+				*=============				DO testnum
+				*=============				IF minlni < 0		 	&& Choix table C
+					IF lni = 1 		 	&& D?buter sur table C
+						code128 = CHR(210)
+					ELSE 				&& Commuter sur table C
+						code128 = code128+CHR(204)
+					ENDIF
+					tableB = .F.
+				ELSE
+					IF lni = 1
+						code128 = CHR(209) && D?buter sur table B
+					ENDIF
+				ENDIF
+			ENDIF
+			IF NOT tableB Then
+				* On est sur la table C, essayer de traiter 2 chiffres
+				minlni = 2
+				*=============				DO testnum
+				*=============				IF minlni < 0 && OK pour 2 chiffres, les traiter
+					dummy = Val(SUBSTR(lcChaine, lni, 2))
+					dummy = IIF(dummy < 95, dummy + 32, dummy + 100)
+					code128 = code128+CHR(dummy)
+					lni = lni + 2
+				ELSE 								&& On n'a pas 2 chiffres, repasser en table B
+					code128 = code128+CHR(205)
+					tableB = .T.
+				ENDIF
+			ENDIF
+			IF tableB
+				* Traiter 1 caract?re en table B
+				code128 = code128+SUBSTR(lcChaine, lni, 1)
+				lni = lni + 1
+			ENDIF
+		ENDDO
+		* Calcul de la cl? de contr?le
+		FOR lni = 1 TO LEN(code128)
+			dummy = ASC(SUBSTR(code128, lni, 1))
+			dummy = IIF(dummy < 127, dummy - 32, dummy - 100)
+			IF lni = 1
+				CheckSum = dummy
+			ELSE
+				CheckSum = MOD((CheckSum + (lni - 1) * dummy),103)
+			ENDIF
+		ENDFOR
+		* Calcul du code ASCII de la cl?
+		CheckSum = IIF(CheckSum < 95, CheckSum + 32, CheckSum + 100)
+		* Ajout de la cl? et du STOP
+		code128 = code128+CHR(CheckSum)+CHR(211)
+	ENDIF
+ENDIF
+w_code128 = code128
+RETURN
+FUNCTION testnum
+	* si les minlni caract?res ? partir de lni sont num?riques, alors minlni=0
+	minlni = minlni - 1
+	IF lni + minlni <= LEN(lcChaine)
+		DO WHILE minlni >= 0
+			IF ASC(SUBSTR(lcChaine, lni + minlni, 1)) < 48 OR
+ASC(SUBSTR(lcChaine, lni + minlni, 1)) > 57
+				EXIT
+			ENDIF
+			minlni = minlni - 1
+		ENDDO
+	ENDIF
+	ENDFUNC
+
+
+2010/1/31 Massimo Belgrano <mbelgrano@deltain.it>:
+> One way for printing barcode code 128 symbologies ?is use font
+> here you can find a open source solution
+> http://sourceforge.net/projects/openbarcodes/
+> here a commercial solution http://www.barcodesoft.com/code128_font.aspx
+>
+> Folllow a untested sample
+>
+> oPrn := win_prn():New(GetDefaultPrinter())
+> oPrn:SetFont("code128",11,,,,255) ?// please try different ? value
+> ?oPrn:TextOut("?ABC!?",.t.) ? // TEXT ready to TO PRINT
+> ?oPrn:TextOut(code128("ABC"),.t.) ? // TEXT TO PRINT IF YOU HAVE CONVERT FUNC
+> oPrn:NewPage()
+>
+>
+> follow is vb function ?to convert
+> please share here your result
+>
+> Public Function code128$(chaine$)
+> ?'Cette fonction est r?gie par la Licence G?n?rale Publique Amoindrie
+> GNU (GNU LGPL)
+> ?'This function is governed by the GNU Lesser General Public License (GNU LGPL)
+> ?'V 2.0.0
+> ?'Param?tres : une chaine
+> ?'Parameters : a string
+> ?'Retour : * une chaine qui, affich?e avec la police CODE128.TTF,
+> donne le code barre
+> ?' ? ? ? ? * une chaine vide si param?tre fourni incorrect
+> ?'Return : * a string which give the bar code when it is dispayed
+> with CODE128.TTF font
+> ?' ? ? ? ? * an empty string if the supplied parameter is no good
+> ?Dim i%, checksum&, mini%, dummy%, tableB As Boolean
+> ?code128$ = ""
+> ?If Len(chaine$) > 0 Then
+> ?'V?rifier si caract?res valides
+> ?'Check for valid characters
+> ? ?For i% = 1 To Len(chaine$)
+> ? ? ?Select Case Asc(Mid$(chaine$, i%, 1))
+> ? ? ?Case 32 To 126, 203
+> ? ? ?Case Else
+> ? ? ? ?i% = 0
+> ? ? ? ?Exit For
+> ? ? ?End Select
+> ? ?Next
+> ? ?'Calculer la chaine de code en optimisant l'usage des tables B et C
+> ? ?'Calculation of the code string with optimized use of tables B and C
+> ? ?code128$ = ""
+> ? ?tableB = True
+> ? ?If i% > 0 Then
+> ? ? ?i% = 1 'i% devient l'index sur la chaine / i% become the string index
+> ? ? ?Do While i% <= Len(chaine$)
+> ? ? ? ?If tableB Then
+> ? ? ? ? ?'Voir si int?ressant de passer en table C / See if
+> interesting to switch to table C
+> ? ? ? ? ?'Oui pour 4 chiffres au d?but ou ? la fin, sinon pour 6
+> chiffres / yes for 4 digits at start or end, else if 6 digits
+> ? ? ? ? ?mini% = IIf(i% = 1 Or i% + 3 = Len(chaine$), 4, 6)
+> ? ? ? ? ?GoSub testnum
+> ? ? ? ? ?If mini% < 0 Then 'Choix table C / Choice of table C
+> ? ? ? ? ? ?If i% = 1 Then 'D?buter sur table C / Starting with table C
+> ? ? ? ? ? ? ?code128$ = Chr$(210)
+> ? ? ? ? ? ?Else 'Commuter sur table C / Switch to table C
+> ? ? ? ? ? ? ?code128$ = code128$ & Chr$(204)
+> ? ? ? ? ? ?End If
+> ? ? ? ? ? ?tableB = False
+> ? ? ? ? ?Else
+> ? ? ? ? ? ?If i% = 1 Then code128$ = Chr$(209) 'D?buter sur table B /
+> Starting with table B
+> ? ? ? ? ?End If
+> ? ? ? ?End If
+> ? ? ? ?If Not tableB Then
+> ? ? ? ? ?'On est sur la table C, essayer de traiter 2 chiffres / We
+> are on table C, try to process 2 digits
+> ? ? ? ? ?mini% = 2
+> ? ? ? ? ?GoSub testnum
+> ? ? ? ? ?If mini% < 0 Then 'OK pour 2 chiffres, les traiter / OK for
+> 2 digits, process it
+> ? ? ? ? ? ?dummy% = Val(Mid$(chaine$, i%, 2))
+> ? ? ? ? ? ?dummy% = IIf(dummy% < 95, dummy% + 32, dummy% + 105)
+> ? ? ? ? ? ?code128$ = code128$ & Chr$(dummy%)
+> ? ? ? ? ? ?i% = i% + 2
+> ? ? ? ? ?Else 'On n'a pas 2 chiffres, repasser en table B / We
+> haven't 2 digits, switch to table B
+> ? ? ? ? ? ?code128$ = code128$ & Chr$(205)
+> ? ? ? ? ? ?tableB = True
+> ? ? ? ? ?End If
+> ? ? ? ?End If
+> ? ? ? ?If tableB Then
+> ? ? ? ? ?'Traiter 1 caract?re en table B / Process 1 digit with table B
+> ? ? ? ? ?code128$ = code128$ & Mid$(chaine$, i%, 1)
+> ? ? ? ? ?i% = i% + 1
+> ? ? ? ?End If
+> ? ? ?Loop
+> ? ? ?'Calcul de la cl? de contr?le / Calculation of the checksum
+> ? ? ?For i% = 1 To Len(code128$)
+> ? ? ? ?dummy% = Asc(Mid$(code128$, i%, 1))
+> ? ? ? ?dummy% = IIf(dummy% < 127, dummy% - 32, dummy% - 105)
+> ? ? ? ?If i% = 1 Then checksum& = dummy%
+> ? ? ? ?checksum& = (checksum& + (i% - 1) * dummy%) Mod 103
+> ? ? ?Next
+> ? ? ?'Calcul du code ASCII de la cl? / Calculation of the checksum ASCII code
+> ? ? ?checksum& = IIf(checksum& < 95, checksum& + 32, checksum& + 105)
+> ? ? ?'Ajout de la cl? et du STOP / Add the checksum and the STOP
+> ? ? ?code128$ = code128$ & Chr$(checksum&) & Chr$(211)
+> ? ?End If
+> ?End If
+> ?Exit Function
+> testnum:
+> ?'si les mini% caract?res ? partir de i% sont num?riques, alors mini%=0
+> ?'if the mini% characters from i% are numeric, then mini%=0
+> ?mini% = mini% - 1
+> ?If i% + mini% <= Len(chaine$) Then
+> ? ?Do While mini% >= 0
+> ? ? ?If Asc(Mid$(chaine$, i% + mini%, 1)) < 48 Or Asc(Mid$(chaine$,
+> i% + mini%, 1)) > 57 Then Exit Do
+> ? ? ?mini% = mini% - 1
+> ? ?Loop
+> ?End If
+> Return
+> End Function
+>
+>
+>
+> 2010/1/31 smu johnson <smujohnson@gmail.com>:
+>> Hi.
+>>
+>> I've been Googling around for a solution to implement CODE128 (a b or c)
+>> barcodes... and haven't really found much. ?Most of the stuff is
+>> undocumented, and the only free Clipper one I found doesn't say what Barcode
+>> standard it is. ?Added to this futility, is the fact that the Internet does
+>> not seem to contain a simple .PDF or document that actually details the
+>> CODE128 standard!
+>>
+>> Then I thought, maybe I should just ask here. ?Maybe this is a sign / omen
+>> that someone here already knows of a free solution for this.
+>>
+>> PS: ?I'm just trying to output barcodes to a DoxMatrix type string.
+>>
+>> Thanks in advance
+>> --
+>> smu johnson <smujohnson@gmail.com>
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>
+>
+>
+> --
+> Massimo Belgrano
+>
+> Iscritto all'albo dei CTU presso il Tribunale di Novara per materia Informatica
+> Delta Informatica S.r.l. (http://www.deltain.it/) (+39 0321 455962)
+> Analisi e sviluppo software per Lan e Web - ?Consulenza informatica - Formazione
+>
+
+
+
+-- 
+Massimo Belgrano
+
+Iscritto all'albo dei CTU presso il Tribunale di Novara per materia Informatica
+Delta Informatica S.r.l. (http://www.deltain.it/) (+39 0321 455962)
+Analisi e sviluppo software per Lan e Web -  Consulenza informatica - Formazione
+From smujohnson at gmail.com  Sun Jan 31 06:22:03 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Sun Jan 31 06:22:12 2010
+Subject: [Harbour-users] Anyone know of a Clipper BARCODE funcs?
+In-Reply-To: <609353e71001310311j891cb0ayd613cc4a4c0f7144@mail.gmail.com>
+References: <674e4ddd1001310221w699e3f87kdda7a70d3c413c5e@mail.gmail.com>
+	<609353e71001310305j146e62c4h2a62fd2d552ed59a@mail.gmail.com>
+	<609353e71001310311j891cb0ayd613cc4a4c0f7144@mail.gmail.com>
+Message-ID: <674e4ddd1001310322n7630648epef4fa072149063e0@mail.gmail.com>
+
+Massimo,  thanks for finding that.  After looking through this and finally a
+page that kind of briefly explains CODE128, I will just write my own,
+probably in C... or maybe Clipper.
+
+http://www.barcodeisland.com/code128.phtml
+
+I'll probably make it public, if anyone else wants it.. but likely I'm only
+going to make it print CODE128B and no fancy switching between mode A, B,
+and C...  maybe if I have more time, I will.
+
+Thanks again
+
+On Sun, Jan 31, 2010 at 3:11 AM, Massimo Belgrano <mbelgrano@deltain.it>wrote:
+
+> here a visual fox pro solution more compatible with harbour
+> *-----------------------------------------------------------
+> * Conversion VB --> VFP : Emile MAITREJEAN www.emsystems.be
+> *-----------------------------------------------------------
+> * Entr?e : lcChaine
+> *
+> * Retour : * w_code128 qui, affich?e avec la police CODE128.TTF, donne
+> le code barre
+> *          * une chaine vide si param?tre fourni incorrect
+> code128 = ""
+> IF LEN(lcChaine) > 0
+>        * V?rifier si caract?res valides
+>        FOR lni = 1 TO LEN(lcChaine)
+>                IF ASC(SUBSTR(lcChaine, lni, 1)) >= 32 AND
+> ASC(SUBSTR(lcChaine, lni,
+> 1)) <= 126
+>                ELSE
+>                        lni = 0
+>                        EXIT
+>                ENDIF
+>        ENDFOR
+>        * Calculer la chaine de code en optimisant l'usage des tables B et C
+>        code128 = ""
+>        tableB = .T.
+>        IF lni > 0
+>                lni = 1
+> &&lni devient l'index sur la chaine
+>                DO WHILE lni <= LEN(lcChaine)
+>                        IF tableB
+>                                * Voir si int?ressant de passer en table C
+>                                * Oui pour 4 chiffres au d?but ou ? la fin,
+> sinon pour 6 chiffres
+>                                minlni = IIF(lni = 1 OR lni + 3 =
+> LEN(lcChaine), 4, 6)
+>                                *=============                          DO
+> testnum
+>                                *=============                          IF
+> minlni < 0                   && Choix table C
+>                                        IF lni = 1                      &&
+> D?buter sur table C
+>                                                code128 = CHR(210)
+>                                        ELSE                            &&
+> Commuter sur table C
+>                                                code128 = code128+CHR(204)
+>                                        ENDIF
+>                                        tableB = .F.
+>                                ELSE
+>                                        IF lni = 1
+>                                                code128 = CHR(209) &&
+> D?buter sur table B
+>                                        ENDIF
+>                                ENDIF
+>                        ENDIF
+>                        IF NOT tableB Then
+>                                 * On est sur la table C, essayer de traiter
+> 2 chiffres
+>                                 minlni = 2
+>                                *=============                          DO
+> testnum
+>                                *=============                          IF
+> minlni < 0 && OK pour 2 chiffres, les traiter
+>                                        dummy = Val(SUBSTR(lcChaine, lni,
+> 2))
+>                                        dummy = IIF(dummy < 95, dummy + 32,
+> dummy + 100)
+>                                        code128 = code128+CHR(dummy)
+>                                        lni = lni + 2
+>                                ELSE
+>                    && On n'a pas 2 chiffres, repasser en table B
+>                                        code128 = code128+CHR(205)
+>                                        tableB = .T.
+>                                ENDIF
+>                        ENDIF
+>                        IF tableB
+>                                * Traiter 1 caract?re en table B
+>                                code128 = code128+SUBSTR(lcChaine, lni, 1)
+>                                lni = lni + 1
+>                        ENDIF
+>                ENDDO
+>                * Calcul de la cl? de contr?le
+>                FOR lni = 1 TO LEN(code128)
+>                        dummy = ASC(SUBSTR(code128, lni, 1))
+>                        dummy = IIF(dummy < 127, dummy - 32, dummy - 100)
+>                        IF lni = 1
+>                                CheckSum = dummy
+>                        ELSE
+>                                CheckSum = MOD((CheckSum + (lni - 1) *
+> dummy),103)
+>                        ENDIF
+>                ENDFOR
+>                * Calcul du code ASCII de la cl?
+>                CheckSum = IIF(CheckSum < 95, CheckSum + 32, CheckSum + 100)
+>                * Ajout de la cl? et du STOP
+>                code128 = code128+CHR(CheckSum)+CHR(211)
+>        ENDIF
+> ENDIF
+> w_code128 = code128
+> RETURN
+> FUNCTION testnum
+>        * si les minlni caract?res ? partir de lni sont num?riques, alors
+> minlni=0
+>        minlni = minlni - 1
+>        IF lni + minlni <= LEN(lcChaine)
+>                DO WHILE minlni >= 0
+>                        IF ASC(SUBSTR(lcChaine, lni + minlni, 1)) < 48 OR
+> ASC(SUBSTR(lcChaine, lni + minlni, 1)) > 57
+>                                EXIT
+>                        ENDIF
+>                        minlni = minlni - 1
+>                ENDDO
+>        ENDIF
+>        ENDFUNC
+>
+>
+> 2010/1/31 Massimo Belgrano <mbelgrano@deltain.it>:
+> > One way for printing barcode code 128 symbologies  is use font
+> > here you can find a open source solution
+> > http://sourceforge.net/projects/openbarcodes/
+> > here a commercial solution http://www.barcodesoft.com/code128_font.aspx
+> >
+> > Folllow a untested sample
+> >
+> > oPrn := win_prn():New(GetDefaultPrinter())
+> > oPrn:SetFont("code128",11,,,,255)  // please try different   value
+> >  oPrn:TextOut("?ABC!?",.t.)   // TEXT ready to TO PRINT
+> >  oPrn:TextOut(code128("ABC"),.t.)   // TEXT TO PRINT IF YOU HAVE CONVERT
+> FUNC
+> > oPrn:NewPage()
+> >
+> >
+> > follow is vb function  to convert
+> > please share here your result
+> >
+> > Public Function code128$(chaine$)
+> >  'Cette fonction est r?gie par la Licence G?n?rale Publique Amoindrie
+> > GNU (GNU LGPL)
+> >  'This function is governed by the GNU Lesser General Public License (GNU
+> LGPL)
+> >  'V 2.0.0
+> >  'Param?tres : une chaine
+> >  'Parameters : a string
+> >  'Retour : * une chaine qui, affich?e avec la police CODE128.TTF,
+> > donne le code barre
+> >  '         * une chaine vide si param?tre fourni incorrect
+> >  'Return : * a string which give the bar code when it is dispayed
+> > with CODE128.TTF font
+> >  '         * an empty string if the supplied parameter is no good
+> >  Dim i%, checksum&, mini%, dummy%, tableB As Boolean
+> >  code128$ = ""
+> >  If Len(chaine$) > 0 Then
+> >  'V?rifier si caract?res valides
+> >  'Check for valid characters
+> >    For i% = 1 To Len(chaine$)
+> >      Select Case Asc(Mid$(chaine$, i%, 1))
+> >      Case 32 To 126, 203
+> >      Case Else
+> >        i% = 0
+> >        Exit For
+> >      End Select
+> >    Next
+> >    'Calculer la chaine de code en optimisant l'usage des tables B et C
+> >    'Calculation of the code string with optimized use of tables B and C
+> >    code128$ = ""
+> >    tableB = True
+> >    If i% > 0 Then
+> >      i% = 1 'i% devient l'index sur la chaine / i% become the string
+> index
+> >      Do While i% <= Len(chaine$)
+> >        If tableB Then
+> >          'Voir si int?ressant de passer en table C / See if
+> > interesting to switch to table C
+> >          'Oui pour 4 chiffres au d?but ou ? la fin, sinon pour 6
+> > chiffres / yes for 4 digits at start or end, else if 6 digits
+> >          mini% = IIf(i% = 1 Or i% + 3 = Len(chaine$), 4, 6)
+> >          GoSub testnum
+> >          If mini% < 0 Then 'Choix table C / Choice of table C
+> >            If i% = 1 Then 'D?buter sur table C / Starting with table C
+> >              code128$ = Chr$(210)
+> >            Else 'Commuter sur table C / Switch to table C
+> >              code128$ = code128$ & Chr$(204)
+> >            End If
+> >            tableB = False
+> >          Else
+> >            If i% = 1 Then code128$ = Chr$(209) 'D?buter sur table B /
+> > Starting with table B
+> >          End If
+> >        End If
+> >        If Not tableB Then
+> >          'On est sur la table C, essayer de traiter 2 chiffres / We
+> > are on table C, try to process 2 digits
+> >          mini% = 2
+> >          GoSub testnum
+> >          If mini% < 0 Then 'OK pour 2 chiffres, les traiter / OK for
+> > 2 digits, process it
+> >            dummy% = Val(Mid$(chaine$, i%, 2))
+> >            dummy% = IIf(dummy% < 95, dummy% + 32, dummy% + 105)
+> >            code128$ = code128$ & Chr$(dummy%)
+> >            i% = i% + 2
+> >          Else 'On n'a pas 2 chiffres, repasser en table B / We
+> > haven't 2 digits, switch to table B
+> >            code128$ = code128$ & Chr$(205)
+> >            tableB = True
+> >          End If
+> >        End If
+> >        If tableB Then
+> >          'Traiter 1 caract?re en table B / Process 1 digit with table B
+> >          code128$ = code128$ & Mid$(chaine$, i%, 1)
+> >          i% = i% + 1
+> >        End If
+> >      Loop
+> >      'Calcul de la cl? de contr?le / Calculation of the checksum
+> >      For i% = 1 To Len(code128$)
+> >        dummy% = Asc(Mid$(code128$, i%, 1))
+> >        dummy% = IIf(dummy% < 127, dummy% - 32, dummy% - 105)
+> >        If i% = 1 Then checksum& = dummy%
+> >        checksum& = (checksum& + (i% - 1) * dummy%) Mod 103
+> >      Next
+> >      'Calcul du code ASCII de la cl? / Calculation of the checksum ASCII
+> code
+> >      checksum& = IIf(checksum& < 95, checksum& + 32, checksum& + 105)
+> >      'Ajout de la cl? et du STOP / Add the checksum and the STOP
+> >      code128$ = code128$ & Chr$(checksum&) & Chr$(211)
+> >    End If
+> >  End If
+> >  Exit Function
+> > testnum:
+> >  'si les mini% caract?res ? partir de i% sont num?riques, alors mini%=0
+> >  'if the mini% characters from i% are numeric, then mini%=0
+> >  mini% = mini% - 1
+> >  If i% + mini% <= Len(chaine$) Then
+> >    Do While mini% >= 0
+> >      If Asc(Mid$(chaine$, i% + mini%, 1)) < 48 Or Asc(Mid$(chaine$,
+> > i% + mini%, 1)) > 57 Then Exit Do
+> >      mini% = mini% - 1
+> >    Loop
+> >  End If
+> > Return
+> > End Function
+> >
+> >
+> >
+> > 2010/1/31 smu johnson <smujohnson@gmail.com>:
+> >> Hi.
+> >>
+> >> I've been Googling around for a solution to implement CODE128 (a b or c)
+> >> barcodes... and haven't really found much.  Most of the stuff is
+> >> undocumented, and the only free Clipper one I found doesn't say what
+> Barcode
+> >> standard it is.  Added to this futility, is the fact that the Internet
+> does
+> >> not seem to contain a simple .PDF or document that actually details the
+> >> CODE128 standard!
+> >>
+> >> Then I thought, maybe I should just ask here.  Maybe this is a sign /
+> omen
+> >> that someone here already knows of a free solution for this.
+> >>
+> >> PS:  I'm just trying to output barcodes to a DoxMatrix type string.
+> >>
+> >> Thanks in advance
+> >> --
+> >> smu johnson <smujohnson@gmail.com>
+> >> _______________________________________________
+> >> Harbour-users mailing list (attachment size limit: 40KB)
+> >> Harbour-users@harbour-project.org
+> >> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >>
+> >
+> >
+> >
+> > --
+> > Massimo Belgrano
+> >
+> > Iscritto all'albo dei CTU presso il Tribunale di Novara per materia
+> Informatica
+> > Delta Informatica S.r.l. (http://www.deltain.it/) (+39 0321 455962)
+> > Analisi e sviluppo software per Lan e Web -  Consulenza informatica -
+> Formazione
+> >
+>
+>
+>
+> --
+> Massimo Belgrano
+>
+> Iscritto all'albo dei CTU presso il Tribunale di Novara per materia
+> Informatica
+> Delta Informatica S.r.l. (http://www.deltain.it/) (+39 0321 455962)
+> Analisi e sviluppo software per Lan e Web -  Consulenza informatica -
+> Formazione
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+smu johnson <smujohnson@gmail.com>
+From bruno.luciani at gmail.com  Sun Jan 31 10:31:19 2010
+From: bruno.luciani at gmail.com (Bruno Luciani)
+Date: Sun Jan 31 10:31:28 2010
+Subject: [Harbour-users] Anyone know of a Clipper BARCODE funcs?
+In-Reply-To: <609353e71001310305j146e62c4h2a62fd2d552ed59a@mail.gmail.com>
+References: <674e4ddd1001310221w699e3f87kdda7a70d3c413c5e@mail.gmail.com>
+	<609353e71001310305j146e62c4h2a62fd2d552ed59a@mail.gmail.com>
+Message-ID: <133778361001310731n2c10c4bfk94b1e040d0977a25@mail.gmail.com>
+
+Massimo it is posible to use this fonts and code sample in linux ?
+
+Bruno
+
+
+2010/1/31 Massimo Belgrano <mbelgrano@deltain.it>
+
+> One way for printing barcode code 128 symbologies  is use font
+> here you can find a open source solution
+> http://sourceforge.net/projects/openbarcodes/
+> here a commercial solution http://www.barcodesoft.com/code128_font.aspx
+>
+> Folllow a untested sample
+>
+> oPrn := win_prn():New(GetDefaultPrinter())
+> oPrn:SetFont("code128",11,,,,255)  // please try different   value
+>  oPrn:TextOut("?ABC!?",.t.)   // TEXT ready to TO PRINT
+>  oPrn:TextOut(code128("ABC"),.t.)   // TEXT TO PRINT IF YOU HAVE CONVERT
+> FUNC
+> oPrn:NewPage()
+>
+From mbelgrano at deltain.it  Sun Jan 31 13:00:17 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Sun Jan 31 13:00:45 2010
+Subject: [Harbour-users] Anyone know of a Clipper BARCODE funcs?
+In-Reply-To: <133778361001310731n2c10c4bfk94b1e040d0977a25@mail.gmail.com>
+References: <674e4ddd1001310221w699e3f87kdda7a70d3c413c5e@mail.gmail.com> 
+	<609353e71001310305j146e62c4h2a62fd2d552ed59a@mail.gmail.com> 
+	<133778361001310731n2c10c4bfk94b1e040d0977a25@mail.gmail.com>
+Message-ID: <609353e71001311000p565c872am6f174f62335f9cd3@mail.gmail.com>
+
+No but
+is possible
+using hbxbp and xbpPrinter class
+   oPrt := xbpPrinter():New():Create()
+   oFont := XbpFont():new(oPS)
+   ..
+
+ + harbour/contrib/hbxbp/xbpprinter.prg
+    + Implemented XbpPrinter() class.
+      Mostly working but has some differences with Xbase++ - a work-in-progress.
+      Integrated with XbpPrintDialog()
+
+  * harbour/contrib/hbxbp/tests/demoxbp.prg
+    + Demonstration of XbpPrintDialog() and XbpPrinter() classes.
+      Click on <Print Dialog> toolbar button.
+
+
+2010/1/31 Bruno Luciani <bruno.luciani@gmail.com>:
+> Massimo it is posible to use this fonts and code sample in linux ?
+>
+> Bruno
+>
+>
+> 2010/1/31 Massimo Belgrano <mbelgrano@deltain.it>
+>
+>> One way for printing barcode code 128 symbologies ?is use font
+>> here you can find a open source solution
+>> http://sourceforge.net/projects/openbarcodes/
+>> here a commercial solution http://www.barcodesoft.com/code128_font.aspx
+>>
+>> Folllow a untested sample
+>>
+>> oPrn := win_prn():New(GetDefaultPrinter())
+>> oPrn:SetFont("code128",11,,,,255) ?// please try different ? value
+>> ?oPrn:TextOut("?ABC!?",.t.) ? // TEXT ready to TO PRINT
+>> ?oPrn:TextOut(code128("ABC"),.t.) ? // TEXT TO PRINT IF YOU HAVE CONVERT
+>> FUNC
+>> oPrn:NewPage()
+>>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano

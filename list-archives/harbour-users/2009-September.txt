@@ -1,0 +1,667 @@
+From neo.stealth at gmail.com  Tue Sep  8 10:54:02 2009
+From: neo.stealth at gmail.com (jim clark)
+Date: Tue Sep  8 10:54:09 2009
+Subject: [Harbour-users] mysql connect
+Message-ID: <1890a35e0909080754r2319eb03x8a9a19c9552a9399@mail.gmail.com>
+
+hi,   i am new to harbour and xbase. i have been using mysql and python
+based mvc for connecting to mysql for my database needs. can anybody point
+me to any tutorials for doing the same with harbour. i got my hands on my
+dad's old dbase reference guide and i have been able to do some simple db
+work. but i unable to find any way to connect to mysql.
+
+Regards
+
+utkarsh
+From esgici at gmail.com  Tue Sep  8 12:56:54 2009
+From: esgici at gmail.com (Bicahi Esgici)
+Date: Tue Sep  8 12:57:00 2009
+Subject: [Harbour-users] Re: Harbour-users Digest, Vol 15, Issue 1
+In-Reply-To: <4aa67f99.8b15f10a.5308.246eSMTPIN_ADDED@mx.google.com>
+References: <4aa67f99.8b15f10a.5308.246eSMTPIN_ADDED@mx.google.com>
+Message-ID: <d4ce00e70909080956j66176326w5e4331bf42186271@mail.gmail.com>
+
+Hello Jim Clark
+Welcome to wonderful world of Harbour :)
+
+Harbour have many opportunities for xBase programing, including using
+foreign database servers like MySQL. The bad news is: ?nverse of its power,
+Harbour documentation is weak:(
+
+My recommendation is to visit HMG Forum :
+
+http://www.hmgforum.com/
+
+This forum has many MySQL experts and a lot of examples.
+
+Regards
+
+--
+
+Esgici
+From danilo_seron at yahoo.com  Wed Sep  9 08:20:55 2009
+From: danilo_seron at yahoo.com (DANILO SERON)
+Date: Wed Sep  9 08:21:02 2009
+Subject: [Harbour-users] =?iso-8859-1?q?=BF_cual_es_la_pregunta_=3F?=
+Message-ID: <272408.53928.qm@web30307.mail.mud.yahoo.com>
+
+? http://packages.debian.org/es/sid/dbf2mysql ?
+
+
+
+--- El mar 8-sep-09, harbour-users-request@harbour-project.org <harbour-users-request@harbour-project.org> escribi?:
+
+De: harbour-users-request@harbour-project.org <harbour-users-request@harbour-project.org>
+Asunto: Harbour-users Digest, Vol 15, Issue 1
+A: harbour-users@harbour-project.org
+Fecha: martes, 8 septiembre, 2009, 1:00 pm
+
+Send Harbour-users mailing list submissions to
+??? harbour-users@harbour-project.org
+
+To subscribe or unsubscribe via the World Wide Web, visit
+??? http://lists.harbour-project.org/mailman/listinfo/harbour-users
+or, via email, send a message with subject or body 'help' to
+??? harbour-users-request@harbour-project.org
+
+You can reach the person managing the list at
+??? harbour-users-owner@harbour-project.org
+
+When replying, please edit your Subject line so it is more specific
+than "Re: Contents of Harbour-users digest..."
+
+
+Today's Topics:
+
+???1. mysql connect (jim clark)
+
+
+----------------------------------------------------------------------
+
+Message: 1
+Date: Tue, 8 Sep 2009 20:24:02 +0530
+From: jim clark <neo.stealth@gmail.com>
+Subject: [Harbour-users] mysql connect
+To: harbour-users@harbour-project.org
+Message-ID:
+??? <1890a35e0909080754r2319eb03x8a9a19c9552a9399@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1
+
+hi,???i am new to harbour and xbase. i have been using mysql and python
+based mvc for connecting to mysql for my database needs. can anybody point
+me to any tutorials for doing the same with harbour. i got my hands on my
+dad's old dbase reference guide and i have been able to do some simple db
+work. but i unable to find any way to connect to mysql.
+
+Regards
+
+utkarsh
+
+
+------------------------------
+
+_______________________________________________
+Harbour-users mailing list
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+
+End of Harbour-users Digest, Vol 15, Issue 1
+********************************************
+
+
+
+      ____________________________________________________________________________________
+?Obt?n la mejor experiencia en la web!
+Descarga gratis el nuevo Internet Explorer 8. 
+http://downloads.yahoo.com/ieak8/?l=e1
+From mbelgrano at deltain.it  Wed Sep  9 10:48:18 2009
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Wed Sep  9 10:48:46 2009
+Subject: =?ISO-8859-1?Q?Re=3A_=5BHarbour=2Dusers=5D_=BF_cual_es_la_pregunta_=3F?=
+In-Reply-To: <272408.53928.qm@web30307.mail.mud.yahoo.com>
+References: <272408.53928.qm@web30307.mail.mud.yahoo.com>
+Message-ID: <609353e70909090748h455b30efp258bbd6e199029cb@mail.gmail.com>
+
+You have two way rddado and rddsql
+I suggest you see sample contrib/rddsql
+
+about rddado way unsuggested here an Italian document
+http://www.gio22.com/harbour/tutorial/mysql01.pdf
+
+
+With rdd you can use a different use program and maintain rest of
+dbase priogram unchanged
+USE giovanni VIA "ADORDD" TABLE "mytable" MYSQL FROM "db4free.net"
+USER "username" PASSWORD "***"
+
+rddado is limited to windows and require a right distribution of mdac
+done my microsoft, e the odbc driver
+
+rddsql allow use more sql oriented command
+
+AFAIK RDDSQL talk directly with the sql language so in not neccessary
+this is message post by Mindaugas Kavaliauskas on this  list
+same capability like deleted(),recno() are not aivable but can be
+emulated adding special field..
+
+Code:
+===================================================================
+                    Simple SQL Interface for Harbour
+
+
+
+1. Introduction
+
+   Simple SQL interface implements accessing SQL query result via RDD
+interface. It is not intended to be replacement for "transparent" move of
+DBFCDX application to SQL world.
+
+   I want to discuss this in more detail. Many current RDDs for SQL servers
+(ex. SQLRDD from xHarbour.com) tries to make a feeling you are working with
+DBF file, but not with SQL database. SQL server does not support many
+features, ex. RECNO(), deleted flag, file locks, record locks. These RDDs
+are emulating these features to make feeling of DBF. DELETED() function is
+emulated by creating additional table columns to store delete flag. Some
+"hidden system" tables are used to register locking operations and emulate
+record and file locks in DBF style. The idea of SQL query is also lost. If
+you do a simple loop
+
+ DBUSEAREA(, "select * from my_table")
+ DO WHILE ! EOF()
+   somefunc( FIELD->some_sql_field )
+   DBSKIP()
+ ENDDO
+
+RDD usualy will read SQL rows in portions, let's say 100 records per query.
+So, hidden queries are generated. If you are using indexes these queries
+are really complicated. Let's have index on FIELD1 + STR(FIELD2). A seek to
+value cValue1 + STR(nValue2) will generate a query like:
+
+ SELECT * FROM my_table
+     WHERE (FIELD1 == cValue1 and FIELD2 >= nValue2) or FIELD1 > cValue1
+     ORDER BY FIELD1, FIELD2, _RECNO
+     LIMIT 100
+
+After evaluation of first 100 cached records, next query will be generated:
+
+ SELECT * FROM my_table
+     WHERE (FIELD1 == cLastField1 and FIELD2 == nLastValue2 and
+_RECNO > nLastRecno) or
+           (FIELD1 == cLastField1 and FIELD2 > nLastValue2) or
+           FIELD1 > cLastValue1
+     ORDER BY FIELD1, FIELD2, _RECNO
+     LIMIT 100
+
+To optimize these queries the SQL index expresion should be
+"FIELD1,FIELD2,_RECNO", but not "FIELD1,FIELD2" as written in INDEX ON
+command.
+
+   "Simple SQL interface" is too long to repeat every time I want to
+address this library. I'll also use acronym "SSI" to address it.
+
+   The idea of SSI is different. It does not make hidden queries. All
+queries should be made explicitly by programmer. SSI gives access to query
+result via RDD interface, it does not tries to emulate DBF and be
+"plug-and-play" solution for DBF to SQL migration. If you do
+
+ DBUSEAREA(, "select * from my_table")
+
+all query (it could contain millions of records!) will be cached.
+
+   The features of SSI approach are:
+
+- It's possible to access SQL database of other applications. Other
+ applications usualy does not follow agreement of "plug-and-play" SQL drivers
+ about additional DELETED column, _RECNO in the end of index expression, etc.
+ Access of SQL database of other applications is sometimes not possible.
+
+- It's query oriented. That means a simple DO WHILE ! EOF() loop will iterate
+ each records once and only once. This is not true for "plug-and-play" SQL
+ drivers, if indexing is used. Just like in the case of loop over DBF file.
+ It is not guaranteed that all records are included! Yes! If key value of the
+ first record in index is changed to be the last record in index during the
+ phase of record processing, DO WHILE ! EOF() loop will iterate only this
+ single records even if the database contains millions of records. Your sould
+ do FLOCK() on DBF to guarantee the records are not changed. Do you use FLOCK()
+ before readonly DO WHILE ! EOF() loops? :)
+
+
+
+2. Architecture
+
+
+             +-------------+
+             |             |
+             | SQLMIX RDD  |
+             |             |
+             +-------------+
+                  |  ^
+                  V  |
+             +-------------+    +---------+
+             |             |--->|         |
+             | SQLBASE RDD |    |   SDD   |
+             |             |<---|         |
+             +-------------+    +---------+
+
+
+   SQLBASE RDD implements basic functionality for accessing SQL query result
+via RDD interface. This RDD could be used, if indexing of query result is not
+necessary or all indexing is done by SQL server (by using ORDER BY clause).
+
+   SQLMIX RDD implements indexing of query result. This indexing is not
+related to SQL server ORDER BY clause. SQLMIX do indexing of the query on the
+client side.
+
+   SDD is acronym for Sql Database Driver. RDD is used to implement access
+of different database formats like DBF, SDF, etc. SDD is used to implement
+access of different SQL databases. Every SQL server (MySQL, PostgreSQL, etc.)
+has a corresponding SDD. SDD driver implements a specific part of data
+exchange interface between SQLBASE and SQL server.
+
+   A few additional functions are also implemented, ex. HB_SQLCONNECT().
+Usualy these functions are just a shorter version of corresponding RDDINFO()
+call.
+
+
+
+3. Modifying database
+
+   SSI presents a query result via RDD interface and generates no hidden
+SQL queries. So, how database can be changed? Does DBAPPEND() and FIELDPUT()
+works, or is it readonly SQL interface?
+   DBAPPEND(), FIELDPUT() and other similiar functions work on cached query
+result, i.e. query can be appended by new rows and field values can be
+changed, but SQL database is not changed. DBCREATE() function can also be
+used to create an "empty query result" but no table is created on SQL server.
+So, SSI can also be used as implementation of "array RDD".
+   The programmer must call SQL command explicitly to modify SQL tables.
+SSI provides a method to detect which cached rows was changed or appended
+
+
+I suggest you download last version of harbour
+Harbour 2.0.0beta3 (r12422) source archives and Windows binary
+releases are available for download here:
+  http://syenar.hu/harbour/
+Make sure to check INSTALL doc "QUICK START" section and visit
+our user forums at:
+  http://sourceforge.net/apps/phpbb/harbour-project/
+
+
+
+
+2009/9/9 DANILO SERON <danilo_seron@yahoo.com>:
+> ? http://packages.debian.org/es/sid/dbf2mysql ?
+>
+>
+>
+> --- El mar 8-sep-09, harbour-users-request@harbour-project.org <harbour-users-request@harbour-project.org> escribi?:
+>
+> De: harbour-users-request@harbour-project.org <harbour-users-request@harbour-project.org>
+> Asunto: Harbour-users Digest, Vol 15, Issue 1
+> A: harbour-users@harbour-project.org
+> Fecha: martes, 8 septiembre, 2009, 1:00 pm
+>
+> Send Harbour-users mailing list submissions to
+> ??? harbour-users@harbour-project.org
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+> ??? http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> or, via email, send a message with subject or body 'help' to
+> ??? harbour-users-request@harbour-project.org
+>
+> You can reach the person managing the list at
+> ??? harbour-users-owner@harbour-project.org
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of Harbour-users digest..."
+>
+>
+> Today's Topics:
+>
+> ???1. mysql connect (jim clark)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: Tue, 8 Sep 2009 20:24:02 +0530
+> From: jim clark <neo.stealth@gmail.com>
+> Subject: [Harbour-users] mysql connect
+> To: harbour-users@harbour-project.org
+> Message-ID:
+> ??? <1890a35e0909080754r2319eb03x8a9a19c9552a9399@mail.gmail.com>
+> Content-Type: text/plain; charset=ISO-8859-1
+>
+> hi,???i am new to harbour and xbase. i have been using mysql and python
+> based mvc for connecting to mysql for my database needs. can anybody point
+> me to any tutorials for doing the same with harbour. i got my hands on my
+> dad's old dbase reference guide and i have been able to do some simple db
+> work. but i unable to find any way to connect to mysql.
+>
+> Regards
+>
+> utkarsh
+>
+>
+> ------------------------------
+>
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>
+> End of Harbour-users Digest, Vol 15, Issue 1
+> ********************************************
+>
+>
+>
+> ? ? ?____________________________________________________________________________________
+> ?Obt?n la mejor experiencia en la web!
+> Descarga gratis el nuevo Internet Explorer 8.
+> http://downloads.yahoo.com/ieak8/?l=e1
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+From emmer at rigter.net  Sat Sep 12 15:54:07 2009
+From: emmer at rigter.net (Emmer)
+Date: Sat Sep 12 15:51:56 2009
+Subject: [Harbour-users] Compiling dynamic so's/dll's 
+Message-ID: <4AABFC5F.20807@rigter.net>
+
+Need some help compiling Przemek's example from june 2007
+
+harbour nightly build
+slackware linux
+
+2 prg's, tst.prg and dllcode.prg
+
+# hbmk2 -static tst.prg       --> creates tst
+# hbmk2 -hbdyn dllcode.prg    --> creates dllcode.so
+
+
+#./tst
+Begin:          1
+Cannot load DLL library: dllcode.so
+./dllcode.so: undefined symbol: hb_vmExecute
+
+
+What am i missing?
+
+Regards
+Emmer
+
+ps. i removed the windows stuff from the examples
+
+
+/*** tst.prg ***/
+proc main()
+local h, cExt, xRetVal,n
+
+cExt:=".so"
+for n := 1 to 2
+   ? "Begin:", n
+   h := HB_LIBLOAD("./dllcode"+cExt)
+   if EMPTY(h)
+      ? "Cannot load DLL library: dllcode"+cExt
+      ? HB_LIBERROR()
+      quit
+   endif
+   xRetVal:=HB_LIBDO("DLLFUNC")
+   ? iif(valtype(xRetVal)=="B", eval(xRetVal), xRetVal)
+   xRetVal:=HB_LIBDO("DLLFUNC")
+   ? iif(valtype(xRetVal)=="B", eval(xRetVal), xRetVal)
+   HB_LIBFREE(h)
+   ? "DLL library unloaded"
+   ? iif(valtype(xRetVal)=="B", eval(xRetVal), xRetVal)
+   ? iif(valtype(xRetVal)=="B", eval(xRetVal,"result: "), xRetVal)
+next
+return
+
+
+
+
+/*** dllcode.prg ***/
+DYNAMIC QOUT, UPPER
+
+static s_var := "I'm static variable"
+
+func DLLFUNC
+local xRet:="DLLFUNC RETURN VALUE"
+? "I'm DLL function"
+? s_var
+s_var := UPPER( s_var )
+? s_var
+return {|x|iif(x==nil,xRet,x+xRet)}
+
+init proc DLLINIT
+? "I'm DLL INIT procedure"
+return
+
+exit proc DLLEXIT
+? "I'm DLL EXIT procedure"
+return
+
+
+From oscar.ezzio at gmail.com  Mon Sep 21 15:17:47 2009
+From: oscar.ezzio at gmail.com (ezzio)
+Date: Mon Sep 21 15:17:54 2009
+Subject: [Harbour-users] external dll
+Message-ID: <2dfc13fe0909211217s49c10796l35dcf1a652735d33@mail.gmail.com>
+
+Hi, first of all, I am a newbie to harbour
+I have several apps developed en foxpro 2.6 (DOS)
+not in clipper because a use some features in foxpro like sql statement to
+query dbf files
+Can I use sql to query dbf files with harbour?
+Can I use an external DLL within harbour?
+
+Thanks in advance
+
+-- 
+MSc. Oscar Ezzio Reyes Donato
+(506) 8382-2547
+From szekely3 at enternet.hu  Wed Sep 23 14:00:41 2009
+From: szekely3 at enternet.hu (szekely)
+Date: Wed Sep 23 14:00:48 2009
+Subject: [Harbour-users] Fwd: os2?
+Message-ID: <mailman.0.1253728848.3660.harbour-users@harbour-project.org>
+
+==================BEGIN FORWARDED MESSAGE==================
+Hello !
+
+Is here anybody who use os/2 (eCS) ?
+Many years ago I wrote clipper programs, now I want to start with
+harbour, but I didn't find the first steps.
+
+Thanks: Andras
+===================END FORWARDED MESSAGE===================
+
+____________________________________________________
+Szekely Andras <> szekely3@enternet.hu <> http://2Mai.dyndns.org <> eCS 1.2 <>
+
+From cyberdanny at tiscalinet.it  Wed Sep 23 17:06:02 2009
+From: cyberdanny at tiscalinet.it (Danny)
+Date: Wed Sep 23 17:06:26 2009
+Subject: [Harbour-users] Fwd: os2?
+In-Reply-To: <4AB78C1100EAD8AF@mx-1-it.mail.tiscali.sys> (added by
+	postmaster@mx-1-it.mail.tiscali.it)
+References: <4AB78C1100EAD8AF@mx-1-it.mail.tiscali.sys> (added by
+	postmaster@mx-1-it.mail.tiscali.it)
+Message-ID: <4ABA8DBA.6000303@tiscalinet.it>
+
+szekely ha scritto:
+> ==================BEGIN FORWARDED MESSAGE==================
+> Hello !
+>
+> Is here anybody who use os/2 (eCS) ?
+> Many years ago I wrote clipper programs, now I want to start with
+> harbour, but I didn't find the first steps.
+>
+> Thanks: Andras
+> ===================END FORWARDED MESSAGE===================
+>
+> ____________________________________________________
+> Szekely Andras <> szekely3@enternet.hu <> http://2Mai.dyndns.org <> eCS 1.2 <>
+>
+>   
+The last time I have been using OS/2 was in 1999 I think. Is it still 
+maintained/developed?
+I think the actual release of Harbour can't deal with OS/2, but if there 
+is a DOS version, it shoul be compatible.
+Let us know...
+D. Campagna
+
+From sscc at mweb.co.za  Thu Sep 24 02:09:24 2009
+From: sscc at mweb.co.za (Alex Strickland)
+Date: Thu Sep 24 02:09:32 2009
+Subject: [Harbour-users] Fwd: os2?
+In-Reply-To: <4ABA8DBA.6000303@tiscalinet.it>
+References: <4AB78C1100EAD8AF@mx-1-it.mail.tiscali.sys> (added
+	by	postmaster@mx-1-it.mail.tiscali.it)
+	<4ABA8DBA.6000303@tiscalinet.it>
+Message-ID: <4ABB0D14.9020500@mweb.co.za>
+
+> The last time I have been using OS/2 was in 1999 I think. Is it still 
+> maintained/developed?
+> I think the actual release of Harbour can't deal with OS/2, but if there 
+> is a DOS version, it shoul be compatible.
+> Let us know...
+
+I can't help you with the first steps (well maybe tell you to get latest CVS, 
+gcc and read INSTALL) but it looks to me like Harbour is fully supported on OS/2.
+
+Regards
+Alex
+From szekely3 at enternet.hu  Thu Sep 24 15:23:26 2009
+From: szekely3 at enternet.hu (szekely)
+Date: Thu Sep 24 15:23:34 2009
+Subject: [Harbour-users] Fwd: os2?
+In-Reply-To: <4ABB0D14.9020500@mweb.co.za>
+Message-ID: <mailman.1.1253820214.3660.harbour-users@harbour-project.org>
+
+Hello !
+
+On Thu, 24 Sep 2009 08:09:24 +0200, Alex Strickland wrote:
+
+>> The last time I have been using OS/2 was in 1999 I think. Is it still 
+>> maintained/developed?
+>> I think the actual release of Harbour can't deal with OS/2, but if there 
+>> is a DOS version, it shoul be compatible.
+>> Let us know...
+>
+>I can't help you with the first steps (well maybe tell you to get latest CVS, 
+>gcc and read INSTALL) but it looks to me like Harbour is fully supported on OS/2.
+
+I think this is in the install about OS/2:
+------------------
+   OS/2
+   ----
+      > set HB_COMPILER=<[gcc]|owatcom>
+      > set HB_INSTALL_PREFIX=<DIR>
+      > make_gnu_os2.cmd install
+-------------------
+
+The two set: OK, I can run in a cmd window.
+
+The next: make_gnu_os2.cmd install. 
+
+I think, the make_gnu_os2.cmd is something what include parameters ...
+for gcc. I have a window, in wich I already run many set commands, so
+if I run in this the 
+gcc helloworld.c 
+it makes a helloworld.exe. 
+
+And what is install? It is the name of source? And where it is?
+I thought that if I want to get a harbour.exe in os/2, I must compile a
+harbour.c, isn't it?
+
+Thanks: Andras
+
+
+
+____________________________________________________
+Szekely Andras <> szekely3@enternet.hu <> http://2Mai.dyndns.org <> eCS 1.2 <>
+
+From szekely3 at enternet.hu  Sat Sep 26 19:04:56 2009
+From: szekely3 at enternet.hu (szekely)
+Date: Sat Sep 26 19:05:05 2009
+Subject: [Harbour-users] Fwd: os2?
+In-Reply-To: <4ABA8DBA.6000303@tiscalinet.it>
+Message-ID: <mailman.2.1254006305.3660.harbour-users@harbour-project.org>
+
+Hello !
+
+>> Is here anybody who use os/2 (eCS) ?
+>> Many years ago I wrote clipper programs, now I want to start with
+>> harbour, but I didn't find the first steps.
+>>
+>The last time I have been using OS/2 was in 1999 I think. Is it still 
+>maintained/developed?
+>I think the actual release of Harbour can't deal with OS/2, but if there 
+>is a DOS version, it shoul be compatible.
+>Let us know...
+
+It works under eCS. ;-))
+I had only problem with the C compiling, but Doodle helped me.
+
+Andras
+____________________________________________________
+Szekely Andras <> szekely3@enternet.hu <> http://2Mai.dyndns.org <> eCS 1.2 <>
+
+From lucasdebeltran at gmail.com  Mon Sep 28 02:29:12 2009
+From: lucasdebeltran at gmail.com (=?ISO-8859-1?Q?Lucas_De_Beltr=E1n?=)
+Date: Mon Sep 28 02:29:18 2009
+Subject: [Harbour-users] Fivewin 6.12 is free
+Message-ID: <eb96f4980909272329keef291dt8af3109619ffa2fb@mail.gmail.com>
+
+More info at: http://forums.fivetechsupport.com/viewtopic.php?f=3&t=16841
+
+Regards
+From anezch at gmail.com  Mon Sep 28 05:21:20 2009
+From: anezch at gmail.com (Agustianes Umbara Suwardi)
+Date: Mon Sep 28 05:22:13 2009
+Subject: [Harbour-users] Migrating from FoxPro 2.6 DOS
+Message-ID: <1254129680.3765.49.camel@anezch-desktop>
+
+Hello,
+
+I decided to migrate my old application written in FoxPro 2.6 for DOS to
+Harbour. It's a quite large application with more than 450 .prg files.
+However, I found some FoxPro unique commands that I can't find in
+Harbour, such as:
+1. Scatter memvar
+2. Gather memvar
+3. Define window
+4. Set textmerge
+
+Is there any library or equivalent for those commands? Sorry for my
+English :)
+
+Thank You,
+Agustianes
+
+From szekely3 at enternet.hu  Wed Sep 23 13:56:30 2009
+From: szekely3 at enternet.hu (szekely)
+Date: Mon Oct  5 19:02:35 2009
+Subject: [Harbour-users] os2?
+Message-ID: <mailman.4.1254783755.3660.harbour-users@harbour-project.org>
+
+Hello !
+
+Is here anybody who use os/2 (eCS) ?
+Many years ago I wrote clipper programs, now I want to start with
+harbour, but I didn't find the first steps.
+
+Thanks: Andras
+____________________________________________________
+Szekely Andras <> szekely3@enternet.hu <> http://2Mai.dyndns.org <> eCS 1.2 <>
+

@@ -1,0 +1,4483 @@
+From druzus at priv.onet.pl  Fri Jan  5 02:41:33 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Fri Jan  5 02:42:40 2007
+Subject: [Harbour] ChangeLog 2007-01-05 08:00 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+Message-ID: <20070105074133.GA9331@localhost.localdomain>
+
+2007-01-05 08:00 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/include/hbcompdf.h
+     + added comment
+
+  * harbour/include/hbexpra.c
+     * change expression type for <exp> = <exp> from HB_EO_EQUAL
+       to HB_EO_ASSIGN in hb_compExprGenStatement() function so
+       later we can safely make all optimization in hb_compExprUseEqual()
+       during reduce process - optimization only when PCODE is generated
+       is too late and causes that expressions like:
+         iif( 1 = 1, <exp>, <exp> )
+       are not reduces (Clipper reduce them)
+     * do not execute hb_compFunCallCheck() in hb_compExprNewFunCall()
+       to avoid repeating the same error message in hb_compExprUseFunCall()
+
+  * harbour/include/hbexprb.c
+     * enabled reduction for hb_compExprUseEqual() and generate errors
+       when it's used as statement
+
+  * harbour/source/common/expropt2.c
+     * added some missing reductions for expressions like: NIL == NIL
+
+  * harbour/source/common/reserved.c
+     % very basic optimization: use binary search instead of linear
+       scanning for reserved words and shortcuts - it gives noticeable
+       speed improvement in macro compiler
+
+  * harbour/source/compiler/complex.c
+     * changed the order of special keywords to keep alphabetic sorting
+
+  * harbour/source/compiler/harbour.c
+     % some minor optimizations in aliased expressions
+     ! added protection in hb_compIsJump() to avoid possible problems
+       when this function is executed after replacing some code with
+       jumps by series of NOOPs in optimizations process
+
+  * harbour/source/compiler/hbfix.c
+     * better optimization of PCODE generated for logical expressions
+
+  * harbour/source/compiler/hbfunchk.c
+     % use binary search instead of linear scan
+
+  * harbour/source/rtl/minmax.c
+     ! fixed GPF when MIN() or MAX() function is called with less then
+       two parameters
+
+  * harbour/source/vm/itemapi.c
+     * minor optimization and formatting
+
+best regards,
+Przemek
+From philb at philb.us  Fri Jan  5 08:45:36 2007
+From: philb at philb.us (Phil Barnett)
+Date: Fri Jan  5 08:45:02 2007
+Subject: [Harbour] ChangeLog 2007-01-05 08:00 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+In-Reply-To: <20070105074133.GA9331@localhost.localdomain>
+References: <20070105074133.GA9331@localhost.localdomain>
+Message-ID: <200701050845.37089.philb@philb.us>
+
+On Friday 05 January 2007 02:41, Przemyslaw Czerpak wrote:
+
+Are you ready for a code lockdown and for us to go into Beta status now?
+
+-- 
+My other computer is your Windows machine
+From druzus at priv.onet.pl  Fri Jan  5 09:28:20 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Fri Jan  5 09:29:27 2007
+Subject: [Harbour] ChangeLog 2007-01-05 08:00 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+In-Reply-To: <200701050845.37089.philb@philb.us>
+References: <20070105074133.GA9331@localhost.localdomain>
+	<200701050845.37089.philb@philb.us>
+Message-ID: <20070105142820.GA26914@localhost.localdomain>
+
+On Fri, 05 Jan 2007, Phil Barnett wrote:
+> Are you ready for a code lockdown and for us to go into Beta status now?
+
+Yes, I'm. In practice the recent modifications are caused by fixes
+some small differences between Harbour and Clipper. I can commit
+such things after code freeze too during beta tests with some other
+fixes for possible problems reported by users. F.e. I've just found
+that VALTYPE is not in the list of reserved words so shortcuts like
+VALT()/VALTY()/VALTYP() do not works in Harbour. I'll commit the fix
+in 10 minutes and please announce release freeze.
+I would like to know if during release freeze we can update contrib
+tree. Some things like CT3 library needs some additional job - f.e.
+it will be worth to borrow some modifications from xHarbour. IMHO
+hbodbc should be also replaced by the xHarbour version, etc.
+
+best regards,
+Przemek
+From randy at palmasdev.com  Fri Jan  5 09:38:22 2007
+From: randy at palmasdev.com (Randy Portnoff)
+Date: Fri Jan  5 09:38:03 2007
+Subject: [Harbour] ChangeLog 2007-01-05 08:00 UTC+0100 Przemyslaw
+	Czerpak (druzus/at/priv.onet.pl)
+In-Reply-To: <20070105142820.GA26914@localhost.localdomain>
+References: <200701050845.37089.philb@philb.us>
+	<20070105074133.GA9331@localhost.localdomain>
+	<200701050845.37089.philb@philb.us>
+Message-ID: <5.2.0.9.0.20070105093646.024e1c68@pop3.pathcom.com>
+
+How much time will we have for testing before the freeze if over? (Ideally, 
+a few weeks would be ideal to give us time to implement and test the new 
+version).
+
+At 03:28 PM 1/5/2007 +0100, you wrote:
+>On Fri, 05 Jan 2007, Phil Barnett wrote:
+> > Are you ready for a code lockdown and for us to go into Beta status now?
+>
+>Yes, I'm. In practice the recent modifications are caused by fixes
+>some small differences between Harbour and Clipper. I can commit
+>such things after code freeze too during beta tests with some other
+>fixes for possible problems reported by users. F.e. I've just found
+>that VALTYPE is not in the list of reserved words so shortcuts like
+>VALT()/VALTY()/VALTYP() do not works in Harbour. I'll commit the fix
+>in 10 minutes and please announce release freeze.
+>I would like to know if during release freeze we can update contrib
+>tree. Some things like CT3 library needs some additional job - f.e.
+>it will be worth to borrow some modifications from xHarbour. IMHO
+>hbodbc should be also replaced by the xHarbour version, etc.
+>
+>best regards,
+>Przemek
+>_______________________________________________
+>Harbour mailing list
+>Harbour@harbour-project.org
+>http://lists.harbour-project.org/mailman/listinfo/harbour
+
+From druzus at priv.onet.pl  Fri Jan  5 10:02:21 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Fri Jan  5 10:03:19 2007
+Subject: [Harbour] ChangeLog 2007-01-05 16:00 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+Message-ID: <20070105150221.GA10484@localhost.localdomain>
+
+2007-01-05 16:10 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/include/hbexprb.c
+    * make function call optimizations only when hb_compFunCallCheck()
+      do not report errors
+
+  * harbour/source/common/reserved.c
+    + added VALTYPE to list of reserved words and shortcuts (Clipper
+      compatible)
+
+  * harbour/source/compiler/hbfunchk.c
+    * checking for number of parameters in FILE() function call is Harbour
+      extension - do not enable it when HB_C52_STRICT macro is set
+
+  * harbour/source/rtl/filehb.c
+    * formatting
+
+best regards,
+Przemek
+From philb at philb.us  Fri Jan  5 22:46:55 2007
+From: philb at philb.us (Phil Barnett)
+Date: Fri Jan  5 22:47:10 2007
+Subject: [Harbour] ChangeLog 2007-01-05 08:00 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+In-Reply-To: <5.2.0.9.0.20070105093646.024e1c68@pop3.pathcom.com>
+References: <200701050845.37089.philb@philb.us>
+	<5.2.0.9.0.20070105093646.024e1c68@pop3.pathcom.com>
+Message-ID: <200701052246.55949.philb@philb.us>
+
+On Friday 05 January 2007 09:38, Randy Portnoff wrote:
+> How much time will we have for testing before the freeze if over? (Ideally,
+> a few weeks would be ideal to give us time to implement and test the new
+> version).
+
+A typical beta cycle will work like this:
+
+Set the project to beta status and branch the code.
+
+The original fork continues with future developments
+
+The branch becomes the beta product.
+
+A beta release is created
+
+Bugs are reported and fixed
+
+That cycle repeats until there are very few bugs reported.
+
+At that time, a release candidate is created.
+
+If the release candidate has problems found, it is fixed and there is a new 
+release candidate created.
+
+When a release candidate runs for a period of time (probably at least two 
+weeks, but likely a month) with no bugs, it becomes the released version, in 
+this case, the 1.0 release.
+
+-- 
+My other computer is your Windows machine
+From druzus at priv.onet.pl  Sat Jan  6 23:08:55 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Sat Jan  6 23:10:30 2007
+Subject: [Harbour] 2007-01-07 05:00 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+Message-ID: <20070107040855.GA29504@localhost.localdomain>
+
+2007-01-07 05:00 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/makefile.bc
+  * harbour/makefile.vc
+  * harbour/include/hbcomp.h
+  * harbour/include/hbexpra.c
+  * harbour/include/hbexprb.c
+  * harbour/include/hbexprc.c
+  * harbour/include/hbexprop.h
+  * harbour/source/common/expropt1.c
+  * harbour/source/common/expropt2.c
+  * harbour/source/compiler/Makefile
+  * harbour/source/compiler/cmdcheck.c
+  * harbour/source/compiler/harbour.c
+  * harbour/source/compiler/harbour.y
+  * harbour/source/compiler/harbour.yyc
+  * harbour/source/compiler/harbour.yyh
+  * harbour/source/compiler/hbcomp.c
+  * harbour/source/compiler/hbusage.c
+  * harbour/source/compiler/ppcomp.c
+  * harbour/source/macro/Makefile
+  * harbour/source/macro/macro.y
+  * harbour/source/macro/macro.yyc
+  * harbour/source/macro/macro.yyh
+  * harbour/source/vm/macro.c
+  * harbour/source/vm/memvars.c
+  * harbour/source/vm/memvclip.c
+    * keep prefix definition for bison public symbols in *.y files instead
+      of passing them as bison arguments to avoid possible mistakes during
+      *.yy[hc] file generation
+    ! fixed iif() reduction when used as single function parameter
+    + add -kM compiler switch - turn off macrotext substitution
+    * updated <string> + <string> optimization and other macrotext usage
+      to keep more Clipper compatible behavior
+    ! fixed typo in expression type checking in IIF() reduction - it was
+      working because wrongly used macros has the same values as the valid
+      ones
+    - removed compiler switches and macros for old HB_INLINE() syntax - it
+      was not supported after last months modifications. Only:
+         HB_INLINE([params,...]) { C code }
+      is supported.
+    ! fixed passing parameters by reference in IIF() statement and macro
+      compiler. The following valid Clipper code:
+         &("myfunc(<exp>, @var1, @var2)")
+      was not supported
+    ! do not allow to use references or empty expressions in expression list
+      AFAIK it's Clipper compatible. If I'm wrong then please fix me but
+      Clipper allows to use references only as function arguments, 2-nd and
+      3-rd IIF() argument and as directly created array items ( {...@var...} )
+      DO ... WITH ... is a special case of function call.
+    ! Changed grammar rules to accept only Clipper compatible parameters.
+    ! fixed typo in macro name in hb_memvarNewParameter() function.
+    * use HB_FUNC_EXEC(...) instead of HB_FUNCNAME(...)()
+
+Sorry Phil,
+I haven't plan the above modifications - it's a side effect of checking
+the source code for modifications I plan to introduce in new development
+tree - just simply when I'm seeing that sth is wrong then I'm fixing it.
+
+best regards,
+Przemek
+From druzus at priv.onet.pl  Sun Jan  7 13:29:14 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Sun Jan  7 13:30:09 2007
+Subject: [Harbour] ChangeLog 2007-01-07 19:25 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+Message-ID: <20070107182914.GA1483@localhost.localdomain>
+
+2007-01-07 19:25 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/source/vm/hvm.c
+    * small modification to protect against creating long references chains
+      which can hardly reduce the performance in some cases
+
+The example below shows the problem. After the above modification the
+cost of both calls are static and the same in all cases.
+
+best regards,
+Przemek
+
+
+/*
+ * example of long reference chain overhead
+ * when tst is called 1-st time to access 'i' only one reference has
+ * to be resolved, on second call we have reference chain with 101 items
+ * my results:
+ *       0.22 sec.
+ *       2.18 sec.
+ */
+#define N_LOOP 1000000
+proc main
+local i, t
+t:=seconds()+5
+while seconds()<t;end
+p(@i,0)
+return
+
+proc p(i,n)
+if n < 100
+   if n == 0
+      tst(@i)
+   endif
+   p(@i,n+1)
+else
+   tst(@i)
+endif
+return
+
+proc tst(i)
+local t:=secondsCPU()
+for i:=1 to N_LOOP
+next
+? secondsCPU()-t, "sec."
+return
+From druzus at priv.onet.pl  Sun Jan  7 18:51:20 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Sun Jan  7 18:52:25 2007
+Subject: [Harbour] ChangeLog 2007-01-08 00:50 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+Message-ID: <20070107235120.GA22911@localhost.localdomain>
+
+2007-01-08 00:50 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/include/hbexpra.c
+    ! fixed GPF which can appear on syntax error during compilation
+      one of enumerator message
+
+  * harbour/source/compiler/harbour.y
+  * harbour/source/compiler/harbour.yyc
+    * accept the folowing syntax: (@var):msg
+      With this modification FOR EACH overloading is completed.
+
+best regards,
+Przemek
+From niki at synel.co.il  Mon Jan  8 02:19:55 2007
+From: niki at synel.co.il (Chen Kedem)
+Date: Mon Jan  8 02:17:32 2007
+Subject: [Harbour] Re: 2007-01-07 05:00 UTC+0100 Przemyslaw Czerpak
+Message-ID: <45A1F09B.45A2@synel.co.il>
+
+Was doing my tests on this version (not the latest 2007-01-08 00:50),
+my regular BCC32 environment. No new warnings, I could not create any
+CodeGuard errors. HBTest and HBPPTest results are the same.
+
+You might want to bump the year from 2006 --> 2007 in
+source/compiler/hbusage.c hb_compPrintLogo()
+
+
+> removed compiler switches and macros for old HB_INLINE() syntax
+
+tests/hbinline.prg seems to be working (there is no -kcI switch),
+I don't know exactly what it should do.
+
+tests/inline_c.prg refuse to complie, is it suppose to be this
+way after this change? again, I can't really understand how it
+suppose to work.
+
+
+  Chen.
+**********************************************************************************************
+IMPORTANT: The contents of this email and any attachments are confidential. They are intended for the 
+named recipient(s) only.
+If you have received this email in error, please notify the system manager or the sender immediately and do 
+not disclose the contents to anyone or make copies thereof.
+*** eSafe scanned this email for viruses, vandals, and malicious content. ***
+**********************************************************************************************
+
+From druzus at priv.onet.pl  Mon Jan  8 06:45:13 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Mon Jan  8 06:46:02 2007
+Subject: [Harbour] Re: 2007-01-07 05:00 UTC+0100 Przemyslaw Czerpak
+In-Reply-To: <45A1F09B.45A2@synel.co.il>
+References: <45A1F09B.45A2@synel.co.il>
+Message-ID: <20070108114513.GA24334@localhost.localdomain>
+
+On Mon, 08 Jan 2007, Chen Kedem wrote:
+> Was doing my tests on this version (not the latest 2007-01-08 00:50),
+> my regular BCC32 environment. No new warnings, I could not create any
+> CodeGuard errors. HBTest and HBPPTest results are the same.
+
+Thank you for test and informations.
+
+> You might want to bump the year from 2006 --> 2007 in
+> source/compiler/hbusage.c hb_compPrintLogo()
+
+OK, I'll update it.
+
+> > removed compiler switches and macros for old HB_INLINE() syntax
+> tests/hbinline.prg seems to be working (there is no -kcI switch),
+> I don't know exactly what it should do.
+
+Now -kI does not exists and -ki make the same job as -kI was.
+It's enabled by default because it does not interact with any
+valid Clipper syntax.
+
+> tests/inline_c.prg refuse to complie, is it suppose to be this
+> way after this change? again, I can't really understand how it
+> suppose to work.
+
+inline_c.prg needs old syntax - it will not longer way.
+The old hb_inline() version was limited to single hb_inline()
+instruction in the line, causes that HB_INLINE was reserved
+word and couldn't be used in any other context and the body
+of inlined code {...} has to be declared in next line. Just
+simply the syntax was forced by side effects of old implementation.
+I do not like it. If you realy think it's usable then I can implement 
+emulation for old HB_INLINE version but if no one really need it then
+I'd prefer to left only the new one. Please note that this extensions
+should not be used in core code files because in the future we may want
+to use some other (not -gc*) output format to build core binaries.
+
+best regards,
+Przemek
+From niki at synel.co.il  Mon Jan  8 07:34:12 2007
+From: niki at synel.co.il (Chen Kedem)
+Date: Mon Jan  8 07:31:48 2007
+Subject: [Harbour] Re: 2007-01-07 05:00 UTC+0100 Przemyslaw Czerpak
+References: <45A1F09B.45A2@synel.co.il>
+Message-ID: <45A23A44.FE1@synel.co.il>
+
+Przemek,
+
+> Now -kI does not exists and -ki make the same job as -kI was
+
+Was talking about -kcI because in tests/hbinline.prg it is written:
+"compile it using -kcI Harbour compiler switch"
+Should probably be changed.
+
+> inline_c.prg needs old syntax - it will not longer way.
+> The old hb_inline() version was limited to single hb_inline()
+> instruction in the line, causes that HB_INLINE was reserved
+> word and couldn't be used in any other context and the body
+> of inlined code {...} has to be declared in next line.
+> ...
+> If you realy think it's usable then I can implement
+> emulation for old HB_INLINE version
+
+No need. I just asked because I had never seen it, and it failed
+during the test. The new syntax is much clearer.
+
+So, //NOTEST should be added to the start of tests/inline_c.prg
+(probably many of the test programs there could be removed now)
+
+
+  Chen.
+**********************************************************************************************
+IMPORTANT: The contents of this email and any attachments are confidential. They are intended for the 
+named recipient(s) only.
+If you have received this email in error, please notify the system manager or the sender immediately and do 
+not disclose the contents to anyone or make copies thereof.
+*** eSafe scanned this email for viruses, vandals, and malicious content. ***
+**********************************************************************************************
+
+From druzus at priv.onet.pl  Mon Jan  8 08:10:35 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Mon Jan  8 08:11:23 2007
+Subject: [Harbour] Re: 2007-01-07 05:00 UTC+0100 Przemyslaw Czerpak
+In-Reply-To: <45A23A44.FE1@synel.co.il>
+References: <45A1F09B.45A2@synel.co.il> <45A23A44.FE1@synel.co.il>
+Message-ID: <20070108131035.GB24334@localhost.localdomain>
+
+On Mon, 08 Jan 2007, Chen Kedem wrote:
+> > Now -kI does not exists and -ki make the same job as -kI was
+> Was talking about -kcI because in tests/hbinline.prg it is written:
+> "compile it using -kcI Harbour compiler switch"
+> Should probably be changed.
+
+The 'c' was necessary to disable old HB_INLINE syntax support which
+was enabled by default and causes that the test code cannot be compiled
+at all due to limitation in old HB_INLINE implementation.
+Now it's not necessary to use any switches to compile tests/hbinline.prg
+
+> > inline_c.prg needs old syntax - it will not longer way.
+> > The old hb_inline() version was limited to single hb_inline()
+> > instruction in the line, causes that HB_INLINE was reserved
+> > word and couldn't be used in any other context and the body
+> > of inlined code {...} has to be declared in next line.
+> > ...
+> > If you realy think it's usable then I can implement
+> > emulation for old HB_INLINE version
+> No need. I just asked because I had never seen it, and it failed
+> during the test. The new syntax is much clearer.
+> 
+> So, //NOTEST should be added to the start of tests/inline_c.prg
+> (probably many of the test programs there could be removed now)
+
+Yes but I'm not familiar with most of them. If I'll find some time
+then I'll try to create list of .prg files from tests directory
+which we can remove because they are not longer necessary.
+
+best regards,
+Przemek
+From philb at philb.us  Mon Jan  8 08:33:49 2007
+From: philb at philb.us (Phil Barnett)
+Date: Mon Jan  8 08:34:41 2007
+Subject: [Harbour] Harbour Beta Cycle for the release of Harbour 1.0 begins
+Message-ID: <200701080833.49229.philb@philb.us>
+
+
+Przemek, please branch the code repository with a marker of HARBOURBETA1 and 
+cycle the changelog.
+
+Starting today, all commits must be for bugfixes only. We need to perform a 
+beta release for all to test and report bugs against.
+
+Thanks, everyone for everything you have done to get the code to this place. 
+It's been a LOT of work and it is appreciated.
+
+-- 
+My other computer is your Windows machine
+From druzus at priv.onet.pl  Mon Jan  8 15:47:11 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Mon Jan  8 15:48:01 2007
+Subject: [Harbour] Harbour Beta Cycle for the release of Harbour 1.0 begins
+In-Reply-To: <200701080833.49229.philb@philb.us>
+References: <200701080833.49229.philb@philb.us>
+Message-ID: <20070108204711.GA29514@localhost.localdomain>
+
+On Mon, 08 Jan 2007, Phil Barnett wrote:
+> Przemek, please branch the code repository with a marker of HARBOURBETA1 and 
+> cycle the changelog.
+
+OK but I'd like to clarify the procedure steps before I'll commit sth.
+I'll create new branch with:
+    cvs tag -b HARBOURBETA1
+    cvs update -r HARBOURBETA1
+    cvs commit
+
+After the above using -r HARBOURBETA1 in checkout will allow to switch
+local repository to HARBOURBETA1 branch to create binaries or commit
+fixes. The default tree will be for farther developing.
+
+So I have few questions:
+1. I think that before creating branch tag it will be good tag current
+   repository as build46_2 or build47 - it may help later in switching
+   between branches and in comparison/syncing operations.
+2. isn't BETA1 enough? Do we need HARBOURBETA1?
+3. what release number I should set in hbver.h in new beta branch?
+   Now we have 0.46.2
+4. waht release number I should set in hbver.h in the main branch? (1.1.0?)
+
+best regards,
+Przemek
+From philb at philb.us  Mon Jan  8 18:02:53 2007
+From: philb at philb.us (Phil Barnett)
+Date: Mon Jan  8 18:07:06 2007
+Subject: [Harbour] Harbour Beta Cycle for the release of Harbour 1.0 begins
+In-Reply-To: <20070108204711.GA29514@localhost.localdomain>
+References: <200701080833.49229.philb@philb.us>
+	<20070108204711.GA29514@localhost.localdomain>
+Message-ID: <200701081802.53218.philb@philb.us>
+
+On Monday 08 January 2007 15:47, Przemyslaw Czerpak wrote:
+> On Mon, 08 Jan 2007, Phil Barnett wrote:
+> > Przemek, please branch the code repository with a marker of HARBOURBETA1
+> > and cycle the changelog.
+>
+> OK but I'd like to clarify the procedure steps before I'll commit sth.
+> I'll create new branch with:
+>     cvs tag -b HARBOURBETA1
+>     cvs update -r HARBOURBETA1
+>     cvs commit
+
+That looks correct. Anyone care to comment?
+
+> After the above using -r HARBOURBETA1 in checkout will allow to switch
+> local repository to HARBOURBETA1 branch to create binaries or commit
+> fixes. The default tree will be for farther developing.
+>
+> So I have few questions:
+> 1. I think that before creating branch tag it will be good tag current
+>    repository as build46_2 or build47 - it may help later in switching
+>    between branches and in comparison/syncing operations.
+
+Yes, that will be fine. Tags cost nothing.
+
+> 2. isn't BETA1 enough? Do we need HARBOURBETA1?
+
+Sure, that's ok with me.
+
+> 3. what release number I should set in hbver.h in new beta branch?
+>    Now we have 0.46.2
+
+0.99.0
+
+> 4. waht release number I should set in hbver.h in the main branch? (1.1.0?)
+
+Yes, that's fine.
+From antonioharbour at gmail.com  Mon Jan  8 18:59:52 2007
+From: antonioharbour at gmail.com (Antonio Linares)
+Date: Mon Jan  8 19:04:39 2007
+Subject: [Harbour] Harbour Beta Cycle for the release of Harbour 1.0 begins
+In-Reply-To: <200701081802.53218.philb@philb.us>
+Message-ID: <45a2dafe.07caed8a.3d7e.ffffa824@mx.google.com>
+
+Przmek, Phil, 
+
+> That looks correct. Anyone care to comment?
+
+Everything ok. Thanks to both,
+
+best regards,
+
+Antonio
+
+From druzus at priv.onet.pl  Mon Jan  8 21:27:18 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Mon Jan  8 21:28:06 2007
+Subject: [Harbour] Harbour Beta Cycle for the release of Harbour 1.0 begins
+In-Reply-To: <200701081802.53218.philb@philb.us>
+References: <200701080833.49229.philb@philb.us>
+	<20070108204711.GA29514@localhost.localdomain>
+	<200701081802.53218.philb@philb.us>
+Message-ID: <20070109022718.GA10988@localhost.localdomain>
+
+On Mon, 08 Jan 2007, Phil Barnett wrote:
+[...]
+
+And one thing else we forgot. docs/whatsnew.txt should be updated.
+There was a lot of modifications since last release and we should
+write at least few words about them.
+I've just created a short list with most important changes
+I remember:
+
+- New non GNU make files with common dependences list
+- New written from scratch preprocessor code
+- Added std.ch file with standard preprocessor definitions
+- New lexer which translate preprocessor tokens to grammar parser terminal
+  symbols - FLEX is not longer used by Harbour
+- Added prebuild grammar parser source code to CVS - BISON is not longer
+  necessary to build Harbour from source code - only developers which want
+  to change Harbour grammar rules need BISON
+- Cleaned grammar rules with many small fixes
+- Preprocessor, compiler and macrocompiler code is fully MT safe
+- Added support for variable number of parameters functions
+- reimplemented xbase++ multivalue macro support
+- Changed HB_INLINE() syntax
+- Added support for WITH OBJECT
+- Added support for macro compiled messages
+- Added support for passing array items and object variables be reference
+- Many new different optimizations
+- Added PCODE version information to compiled files - it's checked at
+  runtime by HVM to detect problems when files with old unsupported PCODE
+  are linked with current HVM
+- profiler code disabled in default build
+- class code extensively changed with many extensions like nonvirtual
+  methods and members, scopes, friend classes and functions, destructors,
+  etc.
+- added inspected by GC POINTER items
+- added SYMBOL items with support for :exec() and :name() messages
+- changed function references to use SYMBOL item instead of POINTER item
+- added support for loading and unloading dynamic libraries with PCODE
+  and .hrb files 
+- added support for PROCFILE()
+- modifications to make HVM code reentrant safe
+- fixes in memvar core code (memory leaks, GPF, Clipper compatibility, etc.)
+- added GTGUI
+- added support for: REQUEST HB_GT_<name>_DEFAULT
+- New USRRDD library. It allows to create new RDD from scratch
+  or by inheriting from any other RDDs (except USRRDDs) and overloading
+  any of their methods at .prg level.
+- Added missing undocumented Clipper RDD functions
+- many speed improvements and fixes
+- and other things - see ChangeLog.* files for details
+
+So far Chen was updating docs/whatsnew.txt
+Chen do you think it's enough? If not then any chance that you can
+create more detail description?
+
+best regards,
+Przemek
+From philb at philb.us  Mon Jan  8 23:47:31 2007
+From: philb at philb.us (Phil Barnett)
+Date: Mon Jan  8 23:49:01 2007
+Subject: [Harbour] Harbour Beta Cycle for the release of Harbour 1.0 begins
+In-Reply-To: <20070109022718.GA10988@localhost.localdomain>
+References: <200701080833.49229.philb@philb.us>
+	<200701081802.53218.philb@philb.us>
+	<20070109022718.GA10988@localhost.localdomain>
+Message-ID: <200701082347.31636.philb@philb.us>
+
+On Monday 08 January 2007 21:27, Przemyslaw Czerpak wrote:
+
+> I've just created a short list with most important changes
+> I remember:
+
+Some of these were spectacular changes. Like MT safe.
+
+Bravo!
+
+-- 
+My other computer is your Windows machine
+From niki at synel.co.il  Tue Jan  9 03:04:34 2007
+From: niki at synel.co.il (Chen Kedem)
+Date: Tue Jan  9 03:04:10 2007
+Subject: [Harbour] Re: Harbour Beta Cycle for the release of Harbour 1.0
+	begins
+Message-ID: <45A34C92.2828@synel.co.il>
+
+Przemek,
+
+> So far Chen was updating docs/whatsnew.txt
+> Chen do you think it's enough? If not then any chance that you can
+> create more detail description?
+
+All I do usually is to grab all the changes from the ChangeLog
+files and devide them according to main modules. There were 5000
+changelog lines since last build. Most of them is your work, so
+I guess you should know what should be there (there is not much
+point if I'll write names of functions what were added).
+I'll take your list and add it to doc/whatsnew.txt so it would
+be a base if someone want to change/add it.
+
+Please review the doc/howtorel.txt for the How-To-Realese procedure.
+
+Is there anywhere a document or a sript that tell people what
+to put inside a ZIP/tar/package ? Last time, the source ZIP
+contained all of the CVS Root, Repository and Entries files,
+which cause problems when people tried to update their repository
+using these files as a base.
+
+
+  Chen.
+**********************************************************************************************
+IMPORTANT: The contents of this email and any attachments are confidential. They are intended for the 
+named recipient(s) only.
+If you have received this email in error, please notify the system manager or the sender immediately and do 
+not disclose the contents to anyone or make copies thereof.
+*** eSafe scanned this email for viruses, vandals, and malicious content. ***
+**********************************************************************************************
+
+From niki at synel.co.il  Tue Jan  9 03:57:17 2007
+From: niki at synel.co.il (Chen Kedem)
+Date: Tue Jan  9 04:16:54 2007
+Subject: [Harbour] ChangeLog: 2007-01-09 10:56 UTC+0200 Chen Kedem
+Message-ID: <45A358ED.41FB@synel.co.il>
+
+2007-01-09 10:56 UTC+0200 Chen Kedem <niki@actcom.co.il>
+  * doc/whatsnew.txt
+    + Add changes for the new beta build.
+
+  * tests/inline_c.prg
+    ! Add //NOTEST and a comment since this file uses old,
+      unsupported syntax.
+
+  Chen.
+**********************************************************************************************
+IMPORTANT: The contents of this email and any attachments are confidential. They are intended for the 
+named recipient(s) only.
+If you have received this email in error, please notify the system manager or the sender immediately and do 
+not disclose the contents to anyone or make copies thereof.
+*** eSafe scanned this email for viruses, vandals, and malicious content. ***
+**********************************************************************************************
+
+From druzus at priv.onet.pl  Tue Jan  9 10:14:22 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Tue Jan  9 10:15:10 2007
+Subject: [Harbour] ChangeLog 2007-01-09 15:10 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+Message-ID: <20070109151422.GA20073@localhost.localdomain>
+
+2007-01-09 15:10 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/source/compiler/hbusage.c
+    * update the year in hb_compPrintLogo() from 2006 to 2007
+
+  * harbour/source/vm/garbage.c
+    ! fixed potentially very serious bug - when I added array items
+      references I forgot to update GC. Fortunately it was caught
+      by code to detect bugs in object destructors so only RT error
+      was reported instead of internal HVM memory corruption
+
+  * harbour/tests/hbinline.prg
+    * updated comments
+
+best regards,
+Przemek
+From druzus at priv.onet.pl  Tue Jan  9 10:14:54 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Tue Jan  9 10:15:41 2007
+Subject: [Harbour] ChangeLog 2007-01-09 15:34 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+Message-ID: <20070109151454.GB20073@localhost.localdomain>
+
+2007-01-09 15:34 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/ChangeLog
+  + harbour/ChangeLog.017
+    * new ChangeLog file created
+  * harbour/doc/whatsnew.txt
+  * harbour/harbour.spec
+  * harbour/include/hbver.h
+    * updated version number to 0.47.0
+  * tagged CVS as build47
+
+best regards,
+Przemek
+From druzus at priv.onet.pl  Tue Jan  9 10:17:47 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Tue Jan  9 10:18:35 2007
+Subject: [Harbour] ChangeLog 2007-01-09 15:57 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+Message-ID: <20070109151747.GC20073@localhost.localdomain>
+
+2007-01-09 15:57 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/ChangeLog
+  * harbour/harbour.spec
+  * harbour/include/hbver.h
+    * created branch tag "beta1"
+    * updated version number to 0.99.0
+
+You can switch to "beta1" CVS tree using -r "beta1" switch in your
+checkout/update cvs command. To return to main CVS branch use -A
+switch.
+
+best regards,
+Przemek
+From druzus at priv.onet.pl  Tue Jan  9 10:18:25 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Tue Jan  9 10:19:13 2007
+Subject: [Harbour] ChangeLog 2007-01-09 16:10 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+Message-ID: <20070109151825.GD20073@localhost.localdomain>
+
+2007-01-09 16:10 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/harbour.spec
+  * harbour/include/hbver.h
+    * updated version number to 1.1.0
+
+best regards,
+Przemek
+From druzus at priv.onet.pl  Tue Jan  9 10:27:17 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Tue Jan  9 10:28:06 2007
+Subject: [Harbour] ChangeLog 2007-01-09 16:22 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+Message-ID: <20070109152717.GA20183@localhost.localdomain>
+
+2007-01-09 16:22 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/source/common/hbver.c
+    * changed "Aplha" state to "Beta" in release info
+
+Phil, what state should I set in main branch?
+Keep "Alpha" or maybe set sth differ like "Unstable"?
+
+best regards,
+Przemek
+From philb at philb.us  Tue Jan  9 19:21:24 2007
+From: philb at philb.us (Phil Barnett)
+Date: Tue Jan  9 19:23:42 2007
+Subject: [Harbour] ChangeLog 2007-01-09 16:22 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+In-Reply-To: <20070109152717.GA20183@localhost.localdomain>
+References: <20070109152717.GA20183@localhost.localdomain>
+Message-ID: <200701091921.24357.philb@philb.us>
+
+On Tuesday 09 January 2007 10:27, Przemyslaw Czerpak wrote:
+> Phil, what state should I set in main branch?
+> Keep "Alpha" or maybe set sth differ like "Unstable"?
+
+I like either unstable or devel. Either one.
+
+-- 
+My other computer is your Windows machine
+From antonioharbour at gmail.com  Wed Jan 10 00:59:22 2007
+From: antonioharbour at gmail.com (Antonio Linares)
+Date: Wed Jan 10 00:59:33 2007
+Subject: [Harbour] ChangeLog 2007-01-09 16:22 UTC+0100 Przemyslaw
+	Czerpak(druzus/at/priv.onet.pl)
+In-Reply-To: <200701091921.24357.philb@philb.us>
+Message-ID: <45a480c2.5f795fe1.7b49.ffffacd4@mx.google.com>
+
+> > Phil, what state should I set in main branch?
+> > Keep "Alpha" or maybe set sth differ like "Unstable"?
+> 
+> I like either unstable or devel. Either one.
+
+It was not unstable. It was in developement.
+
+Antonio
+
+From niki at synel.co.il  Wed Jan 10 07:04:59 2007
+From: niki at synel.co.il (Chen Kedem)
+Date: Wed Jan 10 07:09:36 2007
+Subject: [Harbour] Which branch to use?
+Message-ID: <45A4D66B.6D7@synel.co.il>
+
+On Tue Jan 9 2007, Przemyslaw Czerpak wrote:
+> You can switch to "beta1" CVS tree using -r "beta1" switch in your
+> checkout/update cvs command. To return to main CVS branch use -A
+> switch.
+
+So, now if I'm doing testing, on which branch should I work?
+Or, if I want to update something, lets say docs, in which branch?
+
+When people would like to create sets and packages, which one
+should they use (in order to upload them to SourceForge) ?
+
+Without doing anything special, my CVS repository point to the main
+branch, latest ChangLog file is v1.5169 
+I'm using the MAIN and see Harbour 1.1.0
+
+
+  Chen.
+**********************************************************************************************
+IMPORTANT: The contents of this email and any attachments are confidential. They are intended for the 
+named recipient(s) only.
+If you have received this email in error, please notify the system manager or the sender immediately and do 
+not disclose the contents to anyone or make copies thereof.
+*** eSafe scanned this email for viruses, vandals, and malicious content. ***
+**********************************************************************************************
+
+From druzus at priv.onet.pl  Wed Jan 10 07:57:56 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Wed Jan 10 07:58:46 2007
+Subject: [Harbour] Which branch to use?
+In-Reply-To: <45A4D66B.6D7@synel.co.il>
+References: <45A4D66B.6D7@synel.co.il>
+Message-ID: <20070110125756.GA29111@localhost.localdomain>
+
+On Wed, 10 Jan 2007, Chen Kedem wrote:
+> On Tue Jan 9 2007, Przemyslaw Czerpak wrote:
+> > You can switch to "beta1" CVS tree using -r "beta1" switch in your
+> > checkout/update cvs command. To return to main CVS branch use -A
+> > switch.
+> So, now if I'm doing testing, on which branch should I work?
+> Or, if I want to update something, lets say docs, in which branch?
+
+The modifications in branch beta1 should be limited only to bug
+fixing. I do not see anything wrong in updating documentation too.
+You can make it in main branch commit and then merge modifications
+with beta1 branch. There are some special CVS commands which helps in
+such process or you can make it manually by simple file coping if you
+will have to CVS trees at your local disk and before your modifications
+the files contents were the same. If not or more people is working
+on them then I suggest to use CVS commands to merge modifications.
+It works in similar way to merging modifications in normal update.
+For sometime some modifications will have to be done in both trees
+until we release final 1.0 version from beta1 tree.
+
+> When people would like to create sets and packages, which one
+> should they use (in order to upload them to SourceForge) ?
+
+Now we plan to release beta1 packages. So you should switch to beta1
+branch to build binaries. You can switch your current CVS tree by
+adding: -r beta1 switch to your checkout command or you can create
+separate CVS tree for beta1 in your local disks. F.e. because I plan
+to make deeper modifications in development version then for me it's
+much easier to keep two copies of CVS tree.
+When you once call:
+    cvs checkout -r beta1 harbour
+then at your local CVS copy sticky bit with branch name will be set
+and until you will not execute checkout or update with -A switch
+all CVS commands will work with the beta1 data.
+
+> Without doing anything special, my CVS repository point to the main
+> branch, latest ChangLog file is v1.5169 
+> I'm using the MAIN and see Harbour 1.1.0
+
+Yes, it's development version. Now it's nearly the same as beta1 but
+in few days I'll begin to commit some deeper modifications to core
+code which will cause that they will be strongly differ. F.e. I will
+want to change all reference items and method of locals detaching, add
+automatic late detaching in stack POP operation, fix possible problems
+with infinite loop in cyclic reference item chain, etc. Then I'll add
+extended pointer items and probably hashes and socket support.
+I do not know how much time I will need to finish it - I have also my
+own busines jobs and family ;-). Using branches allows me to begin
+the work even now because possible problems I can introduce will not
+effect beta1 branch from which we will release version 1.0.
+
+best regards,
+Przemek
+From druzus at acn.waw.pl  Wed Jan 10 20:00:50 2007
+From: druzus at acn.waw.pl (Przemyslaw Czerpak)
+Date: Wed Jan 10 20:01:39 2007
+Subject: [Harbour] ChangeLog 2007-01-11 02:00 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+Message-ID: <20070111010050.GA32451@localhost.localdomain>
+
+2007-01-11 02:00 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * xharbour/xharbour.spec
+    * changed version number to 0.99.71
+
+  * xharbour/config/w32/bcc32.cf
+  * xharbour/config/w32/xcc.cf
+    + added pcrepos library
+
+  * xharbour/contrib/rdd_ads/adsfunc.c
+    * use ISBYREF() macro instead of hb_param( <i>, HB_IT_BYREF ) to
+      check if parameter is passed by reference
+
+  * xharbour/include/hbapi.h
+  * xharbour/include/hbapifs.h
+  * xharbour/include/hbdefs.h
+  * xharbour/source/common/hbstr.c
+  * xharbour/source/rdd/dbf1.c
+  * xharbour/source/rdd/delim1.c
+  * xharbour/source/rdd/sdf1.c
+  * xharbour/source/rdd/workarea.c
+  * xharbour/source/rdd/dbcmd.c
+    + added support for "I" fields with fixed number of decimal places
+    * some other RDD modifications synced with Harbour like fixes for
+      xbase++ currency fields or allowing opening DBFs with varchar
+      or nullable fields
+
+  * xharbour/include/hbexprb.c
+    ! fixed a:={"ABC"}; a[1][2]:="x"; ? a[1]
+      It's only partial fix which does not resolve similar problem when
+      hashes or object items are used, f.e.:
+         a:={1=>"ABC"}; a[1][2]:="x"; ? a[1]
+      or
+         o:setget[1][2]:="x"; ? o:setget[1]
+
+  * xharbour/include/hbregex.h
+    * updated XCC file paths for compilation with GNU make - if it will
+      cause problems for other make systems then please revert it
+
+  * xharbour/source/compiler/harbour.sly
+    * removed some unused rules
+
+  * xharbour/source/rdd/dbffpt/Makefile
+    * workaround for XCC compilation with enabled optimization
+
+  * xharbour/source/vm/hvm.c
+    * cover hb_vmDoInitOle() function by #ifdef HB_OS_WIN_32
+
+  * xharbour/source/vm/thread.c
+    * cleaned warning
+
+  * xharbour/utils/Makefile
+    * added compilation for optional modules set in $(HB_UTILS) envvar
+
+best regards,
+Przemek
+From druzus at priv.onet.pl  Wed Jan 10 20:04:22 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Wed Jan 10 20:05:12 2007
+Subject: [Harbour] ChangeLog 2007-01-11 02:00 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+In-Reply-To: <20070111010050.GA32451@localhost.localdomain>
+References: <20070111010050.GA32451@localhost.localdomain>
+Message-ID: <20070111010422.GC32451@localhost.localdomain>
+
+On Thu, 11 Jan 2007, Przemyslaw Czerpak wrote:
+> 2007-01-11 02:00 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+
+Ups, wrong list, my mistake, sorry.
+
+best regards,
+Przemek
+From druzus at priv.onet.pl  Fri Jan 12 15:54:00 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Fri Jan 12 15:54:49 2007
+Subject: [Harbour] New BETA1 release
+Message-ID: <20070112205400.GA6788@localhost.localdomain>
+
+Hi Phil and Ryszard.
+
+I think you should start new release process with beat1 binaries.
+We need information from users about existing problems. I already
+know three things which should be fixed. They are not critical so
+they can wait some time and I'll commit them with other fixes for
+reported problems.
+
+best regards,
+Przemek
+From philb at philb.us  Fri Jan 12 19:10:34 2007
+From: philb at philb.us (Phil Barnett)
+Date: Fri Jan 12 19:15:51 2007
+Subject: [Harbour] New BETA1 release
+In-Reply-To: <20070112205400.GA6788@localhost.localdomain>
+References: <20070112205400.GA6788@localhost.localdomain>
+Message-ID: <200701121910.34639.philb@philb.us>
+
+On Friday 12 January 2007 15:54, Przemyslaw Czerpak wrote:
+> Hi Phil and Ryszard.
+>
+> I think you should start new release process with beat1 binaries.
+> We need information from users about existing problems. I already
+> know three things which should be fixed. They are not critical so
+> they can wait some time and I'll commit them with other fixes for
+> reported problems.
+
+I agree, it is time to build beta 1 binaries.
+
+Who can build what?
+
+-- 
+"The price of apathy towards public affairs is to be ruled by evil men." - 
+Plato
+From antonioharbour at gmail.com  Sat Jan 13 01:43:25 2007
+From: antonioharbour at gmail.com (Antonio Linares)
+Date: Sat Jan 13 01:43:50 2007
+Subject: [Harbour] Harbour compiler version
+In-Reply-To: <20070111010422.GC32451@localhost.localdomain>
+Message-ID: <45a87f9f.3d0300a5.596c.7d08@mx.google.com>
+
+Shouldn't we change ? : 
+
+Harbour Alpha build 1.0 Intl.
+
+into 
+
+Harbour Beta build 1.0 Intl.  
+
+
+Antonio
+
+From philb at philb.us  Sat Jan 13 01:56:35 2007
+From: philb at philb.us (Phil Barnett)
+Date: Sat Jan 13 02:02:08 2007
+Subject: [Harbour] Harbour compiler version
+In-Reply-To: <45a87f9f.3d0300a5.596c.7d08@mx.google.com>
+References: <45a87f9f.3d0300a5.596c.7d08@mx.google.com>
+Message-ID: <200701130156.35370.philb@philb.us>
+
+On Saturday 13 January 2007 01:43, Antonio Linares wrote:
+> Shouldn't we change ? :
+>
+> Harbour Alpha build 1.0 Intl.
+>
+> into
+>
+> Harbour Beta build 1.0 Intl.
+
+Yes, of course. Anywhere you see Alpha can be changed to Beta, even in the 
+main branch.
+
+-- 
+Men occasionally stumble over the truth, but most of them pick themselves up 
+and hurry off as if nothing had happened.
+Winston Churchill
+From antonioharbour at gmail.com  Sat Jan 13 02:07:57 2007
+From: antonioharbour at gmail.com (Antonio Linares)
+Date: Sat Jan 13 02:08:24 2007
+Subject: [Harbour] xHarbour change
+In-Reply-To: <20070111010422.GC32451@localhost.localdomain>
+Message-ID: <45a8855f.0fd6a2fa.0b58.7774@mx.google.com>
+
+ 
+Przemek,
+
+Would you please change xHarbour source\vm\estack.c line 596 into:
+
+LONG WINAPI hb_UnhandledExceptionFilter( struct _EXCEPTION_POINTERS *
+ExceptionInfo )
+
+Such change is required in order to properly compile with MSVC. Thanks,
+
+
+Antonio
+
+From antonioharbour at gmail.com  Sat Jan 13 02:44:35 2007
+From: antonioharbour at gmail.com (Antonio Linares)
+Date: Sat Jan 13 02:44:56 2007
+Subject: [Harbour] Harbour compiler version
+In-Reply-To: <200701130156.35370.philb@philb.us>
+Message-ID: <45a88df4.6cdb5048.1778.ffff84b8@mx.google.com>
+
+> Yes, of course. Anywhere you see Alpha can be changed to 
+> Beta, even in the main branch.
+
+Harbour.exe:
+
+Harbour Alpha build 1.0 Intl.
+Copyright 1999-2007, http://www.harbour-project.org/
+
+Syntax:  C:\harbour\harbour\bin\b32\harbour.exe <file[s][.prg]> [options]
+
+Options:  /a               automatic memvar declaration
+...
+
+
+Antonio
+
+From druzus at priv.onet.pl  Sat Jan 13 06:01:31 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Sat Jan 13 06:02:19 2007
+Subject: [Harbour] Harbour compiler version
+In-Reply-To: <200701130156.35370.philb@philb.us>
+References: <45a87f9f.3d0300a5.596c.7d08@mx.google.com>
+	<200701130156.35370.philb@philb.us>
+Message-ID: <20070113110131.GB7630@localhost.localdomain>
+
+On Sat, 13 Jan 2007, Phil Barnett wrote:
+> > Shouldn't we change ? :
+> > Harbour Alpha build 1.0 Intl.
+> > into
+> > Harbour Beta build 1.0 Intl.
+> Yes, of course. Anywhere you see Alpha can be changed to Beta, even in the 
+> main branch.
+
+I already changed the main branch to:
+    Harbour devel build 1.1-0 Intl.
+    Copyright 1999-2007, http://www.harbour-project.org/
+
+and the beta1 branch to:
+    Harbour Beta build 0.99-0 Intl.
+    Copyright 1999-2007, http://www.harbour-project.org/
+
+IMHO this logo should show clearly show current code status.
+
+In few days I'll commit some modifications to references which
+fixes the problem with cyclic reference chains which can cause
+infinite loop in HVM and adds support for writable string
+enumerators, f.e.:
+   local s, c
+   s:="abcdefghijklmnopqrst"
+   for each c in @s
+      if c$"aeio"
+         c:="*"
+      endif
+   next
+   ? s // "*bcd*fgh*jklmn*pqrst"
+
+Then I plan to add extended references, automatic stack items detaching
+and common item buffer for memvars, stack items, detached locals,
+hb_ItemNew().
+These modifications will be done only in Devel branch.
+
+best regards,
+Przemek
+From druzus at priv.onet.pl  Sat Jan 13 06:12:49 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Sat Jan 13 06:13:37 2007
+Subject: [Harbour] xHarbour change
+In-Reply-To: <45a8855f.0fd6a2fa.0b58.7774@mx.google.com>
+References: <20070111010422.GC32451@localhost.localdomain>
+	<45a8855f.0fd6a2fa.0b58.7774@mx.google.com>
+Message-ID: <20070113111248.GC7630@localhost.localdomain>
+
+On Sat, 13 Jan 2007, Antonio Linares wrote:
+> Przemek,
+> Would you please change xHarbour source\vm\estack.c line 596 into:
+> LONG WINAPI hb_UnhandledExceptionFilter( struct _EXCEPTION_POINTERS *
+> ExceptionInfo )
+> Such change is required in order to properly compile with MSVC. Thanks,
+
+I'll change it.
+
+best regards,
+Przemek
+From druzus at priv.onet.pl  Sat Jan 13 06:14:42 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Sat Jan 13 06:15:30 2007
+Subject: [Harbour] New BETA1 release
+In-Reply-To: <200701121910.34639.philb@philb.us>
+References: <20070112205400.GA6788@localhost.localdomain>
+	<200701121910.34639.philb@philb.us>
+Message-ID: <20070113111442.GD7630@localhost.localdomain>
+
+On Fri, 12 Jan 2007, Phil Barnett wrote:
+> > I think you should start new release process with beat1 binaries.
+> > We need information from users about existing problems. I already
+> > know three things which should be fixed. They are not critical so
+> > they can wait some time and I'll commit them with other fixes for
+> > reported problems.
+> I agree, it is time to build beta 1 binaries.
+> Who can build what?
+
+Just start the release process and we will upload binaries to given
+place.
+
+best regards,
+Przemek
+From druzus at priv.onet.pl  Sat Jan 13 08:19:39 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Sat Jan 13 08:20:28 2007
+Subject: [Harbour] ChangeLog 2007-01-13 14:05 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+Message-ID: <20070113131939.GA26796@localhost.localdomain>
+
+2007-01-13 14:05 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/contrib/rdd_ads/adsfunc.c
+  * harbour/source/rdd/workarea.c
+    * formatting
+
+  * harbour/include/hbapi.h
+  * harbour/source/vm/extend.c
+    + added missing hb_storptrGC()
+
+  * harbour/include/hbapicdp.h
+  * harbour/source/rtl/cdpapi.c
+    + added parameter to unicode translation function to protect control
+      code translation
+    * formatting
+
+  * harbour/source/rtl/gtsln/kbsln.c
+  * harbour/source/rtl/gtxwc/gtxwc.c
+    * use new unicode translation function format. It also fixes problem
+      with space translation in GTLSN used in UTF8 mode
+
+  * harbour/include/hbapiitm.h
+  * harbour/source/vm/itemapi.c
+    + added hb_itemCopyToRef(), hb_itemMoveToRef(), hb_itemMoveRef(),
+      hb_itemUnRefWrite()
+
+  * harbour/include/hbexprb.c
+    ! use HB_P_DUPLUNREF instead of HB_P_DUPLICATE when assign is used in
+      push context - Clipper compatible behavior, see:
+         x:=10
+         f(y:=iif(.t.,@x,))
+         ? x, y
+         func f(x)
+         x+=100
+         return nil
+
+  * harbour/include/hbver.h
+  * harbour/source/common/hbver.c
+    * changed status to "devel"
+
+  * harbour/source/common/expropt2.c
+    * disabled setting NIL when iif(.t.,,sth()) is optimized to avoid
+      warning when iif() is used as statement - to fix number of parameters
+      passed to function in code like f(iif(.t.,,sth())) we will need a
+      little bit deeper modification
+
+  * harbour/source/compiler/complex.c
+    * added hack for potential problems caused by WITH OBJECT syntax, f.e.
+      in code like:
+         proc p(obj,x)
+         case:=myCaseClass():new()
+         retu:=myCaseClass():new()
+         WITH OBJECT obj
+            do case
+               case x==nil
+               case:value()
+               case:action()
+                  retu:sth()
+            end
+         END
+         case:action()
+         retu:sth()
+         return
+      case:action(), case:value(), retu:sth() can means two different things
+      and compiler cannot guess which one should use. It cannot be fixed
+      because it's caused by bad WITH OBJECT syntax. In xHarbour constractions
+      like case:value() or retu:sth() are always used as in  WITH OBJECT
+      context what is not Clipper compatible. I do not want to introduce
+      such limitations. We have two choices: change WITH OBJECT syntax or
+      add some hack to "hide" the problem a little bit. Now I intorduce
+      ugly hack which check number of spaces between ':' so
+         case :action()
+      is compiled as case condition using WITH OBJECT message and
+      case:action() as sending message to object in case variable
+
+  * harbour/source/compiler/harbour.y
+  * harbour/source/compiler/harbour.yyc
+    + added support for passing base value to FOR EACH by reference.
+  
+  * harbour/source/vm/arrays.c
+    * use hb_itemMoveRef() in AINS()/ADEL() to avoid creation of cyclic
+      reference chains
+
+  * harbour/source/vm/debug.c
+  * harbour/source/vm/memvars.c
+    * use hb_itemCopyToRef() to avoid creation of cyclic reference chains
+
+  * harbour/source/vm/classes.c
+  * harbour/source/vm/hvm.c
+    * use hb_itemMoveToRef() to avoid creation of cyclic reference chains
+    + added support for for writable string enumerators, f.e.:
+         proc main()
+         local s, c
+         s:="abcdefghijklmnopqrst"
+         for each c in @s
+            if c$"aeio"
+               c:="*"
+            endif
+         next
+         ? s // "*bcd*fgh*jklmn*pqrst"
+         return
+
+best regards,
+Przemek
+From philb at philb.us  Sat Jan 13 08:16:16 2007
+From: philb at philb.us (Phil Barnett)
+Date: Sat Jan 13 08:22:04 2007
+Subject: [Harbour] New BETA1 release
+In-Reply-To: <20070113111442.GD7630@localhost.localdomain>
+References: <20070112205400.GA6788@localhost.localdomain>
+	<200701121910.34639.philb@philb.us>
+	<20070113111442.GD7630@localhost.localdomain>
+Message-ID: <200701130816.16662.philb@philb.us>
+
+On Saturday 13 January 2007 06:14, Przemyslaw Czerpak wrote:
+> On Fri, 12 Jan 2007, Phil Barnett wrote:
+> > > I think you should start new release process with beat1 binaries.
+> > > We need information from users about existing problems. I already
+> > > know three things which should be fixed. They are not critical so
+> > > they can wait some time and I'll commit them with other fixes for
+> > > reported problems.
+> >
+> > I agree, it is time to build beta 1 binaries.
+> > Who can build what?
+>
+> Just start the release process and we will upload binaries to given
+> place.
+
+The release process started when we marked the beta1 branch. Let's make 
+binaries and get them published.
+
+-- 
+Men occasionally stumble over the truth, but most of them pick themselves up 
+and hurry off as if nothing had happened.
+Winston Churchill
+From druzus at priv.onet.pl  Sat Jan 13 08:23:29 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Sat Jan 13 08:24:16 2007
+Subject: [Harbour] New BETA1 release
+In-Reply-To: <200701130816.16662.philb@philb.us>
+References: <20070112205400.GA6788@localhost.localdomain>
+	<200701121910.34639.philb@philb.us>
+	<20070113111442.GD7630@localhost.localdomain>
+	<200701130816.16662.philb@philb.us>
+Message-ID: <20070113132329.GA28220@localhost.localdomain>
+
+On Sat, 13 Jan 2007, Phil Barnett wrote:
+> The release process started when we marked the beta1 branch. Let's make 
+> binaries and get them published.
+
+Where we should upload them?
+
+best regards,
+Przemek
+From druzus at acn.waw.pl  Sat Jan 13 10:59:42 2007
+From: druzus at acn.waw.pl (Przemyslaw Czerpak)
+Date: Sat Jan 13 11:00:31 2007
+Subject: [Harbour] ChangeLog 2007-01-13 16:50 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+Message-ID: <20070113155942.GA2376@localhost.localdomain>
+
+2007-01-13 16:50 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * xharbour/source/vm/estack.c
+    * changed UnhandledExceptionFilter() to hb_UnhandledExceptionFilter()
+      modification requested by Antonio Lineares
+
+  * xharbour/source/vm/macro.c
+    * changed default hb_macroCompile() context to
+      HB_MACRO_GEN_LIST | HB_MACRO_GEN_PARE
+
+best regards,
+Przemek
+From antonioharbour at gmail.com  Sat Jan 13 12:44:16 2007
+From: antonioharbour at gmail.com (Antonio Linares)
+Date: Sat Jan 13 12:44:48 2007
+Subject: [Harbour] ChangeLog 2007-01-13 16:50 UTC+0100 Przemyslaw
+	Czerpak(druzus/at/priv.onet.pl)
+In-Reply-To: <20070113155942.GA2376@localhost.localdomain>
+Message-ID: <45a91a83.472672c2.7ce6.29f3@mx.google.com>
+
+Przemek, 
+
+> 2007-01-13 16:50 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+>   * xharbour/source/vm/estack.c
+>     * changed UnhandledExceptionFilter() to 
+> hb_UnhandledExceptionFilter()
+>       modification requested by Antonio Lineares
+
+Thanks,
+
+Antonio
+
+From java.net.ardo at gmail.com  Sun Jan 14 01:00:53 2007
+From: java.net.ardo at gmail.com (ardo septama)
+Date: Sun Jan 14 01:00:57 2007
+Subject: [Harbour] need help with DBFDBT.LIB
+Message-ID: <f306932a0701132200i72697f5bie951276114d31e45@mail.gmail.com>
+
+hello I am new to this mailing list.
+I just started to use Harbour to create a database program DOS based.
+I already downloaded release 046 from www.harbour -project.org and somehow
+when I try to create a program using 'bld' batch command there's an error
+when executing BCC 5 compiler stating about DBFDBT.LIB not found. (Fatal
+error)
+I have looked at LIB directory and the file indeed does not exist.
+But at the bld.batch file the file was mentioned.
+I dont know where to find the files.
+If someone know please help me.
+
+Thanks, Ardo
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: http://lists.harbour-project.org/pipermail/harbour/attachments/20070114/0fe9a184/attachment.html
+From e.m.giordano at emagsoftware.it  Sun Jan 14 03:03:43 2007
+From: e.m.giordano at emagsoftware.it (Enrico Maria Giordano)
+Date: Sun Jan 14 03:04:19 2007
+Subject: [Harbour] need help with DBFDBT.LIB
+References: <f306932a0701132200i72697f5bie951276114d31e45@mail.gmail.com>
+Message-ID: <002401c737b2$82d5bb20$0100a8c0@emag>
+
+
+-----Messaggio Originale----- 
+Da: "ardo septama" <java.net.ardo@gmail.com>
+A: <harbour@harbour-project.org>
+Data invio: domenica 14 gennaio 2007 7.00
+Oggetto: [Harbour] need help with DBFDBT.LIB
+
+
+> hello I am new to this mailing list.
+> I just started to use Harbour to create a database program DOS based.
+> I already downloaded release 046 from www.harbour -project.org and somehow
+> when I try to create a program using 'bld' batch command there's an error
+> when executing BCC 5 compiler stating about DBFDBT.LIB not found. (Fatal
+> error)
+
+Just remove that LIB from your link script. It is not needed anymore. You may 
+need to add hbsix.lib, though.
+
+EMG
+
+--
+EMAG Software Homepage:     http://www.emagsoftware.it
+The EMG's ZX-Spectrum Page: http://www.emagsoftware.it/spectrum
+The Best of Spectrum Games: http://www.emagsoftware.it/tbosg
+The EMG Music page:         http://www.emagsoftware.it/emgmusic 
+
+From niki at synel.co.il  Sun Jan 14 03:35:20 2007
+From: niki at synel.co.il (Chen Kedem)
+Date: Sun Jan 14 03:35:39 2007
+Subject: [Harbour] Re: Which branch to use?
+References: <45A4D66B.6D7@synel.co.il>
+Message-ID: <45A9EB48.6DCD@synel.co.il>
+
+I understand the theory, but I'm still a bit confused by this.
+
+If I see a changelog notification here on the list, how would I
+know if it was a fix in the beta branch or in the devel branch
+(or both?)
+
+  Chen.
+**********************************************************************************************
+IMPORTANT: The contents of this email and any attachments are confidential. They are intended for the 
+named recipient(s) only.
+If you have received this email in error, please notify the system manager or the sender immediately and do 
+not disclose the contents to anyone or make copies thereof.
+*** eSafe scanned this email for viruses, vandals, and malicious content. ***
+**********************************************************************************************
+
+From druzus at priv.onet.pl  Sun Jan 14 10:10:16 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Sun Jan 14 10:11:06 2007
+Subject: [Harbour] ChangeLog 2007-01-14 16:05 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+Message-ID: <20070114151016.GA28463@localhost.localdomain>
+
+2007-01-14 16:05 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/source/macro/macro.y
+    * formatting
+  * harbour/source/vm/macro.c
+    ! fixed macrocompiler for proper compilation of string with embedded
+      ASCII NUL byte (chr(0)), f.e.:
+         ? &("'["+chr(0)+"]'")
+
+best regards,
+Przemek
+From druzus at priv.onet.pl  Sun Jan 14 10:23:43 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Sun Jan 14 10:24:32 2007
+Subject: [Harbour] Re: Which branch to use?
+In-Reply-To: <45A9EB48.6DCD@synel.co.il>
+References: <45A4D66B.6D7@synel.co.il> <45A9EB48.6DCD@synel.co.il>
+Message-ID: <20070114152343.GB28463@localhost.localdomain>
+
+On Sun, 14 Jan 2007, Chen Kedem wrote:
+> I understand the theory, but I'm still a bit confused by this.
+> If I see a changelog notification here on the list, how would I
+> know if it was a fix in the beta branch or in the devel branch
+> (or both?)
+
+Any ChangeLogs for modifications in beta1 branch sent here should be
+marked in some special way, f.e.:
+    ChangeLog[beta1]: ...
+
+We will commit only bug fixes. Some of the recent modifications in devel
+branch will have to be committed also to beta1 but I want to reduce number
+of modifications in beta1 and I'll commit them together with other fixes
+for problems reported by users.
+Now we need back information from users. As soon as I will know were I can
+upload Linux and DOS binaries. I can also create some of Windows binaries
+but created in my Linux box with GNU make system so maybe it will be better
+if real Windows users create them.
+Enrico AFAIR you were the master of 0.46 release - can you start the process?
+
+best regards,
+Przemek
+From e.m.giordano at emagsoftware.it  Sun Jan 14 11:00:15 2007
+From: e.m.giordano at emagsoftware.it (Enrico Maria Giordano)
+Date: Sun Jan 14 11:01:32 2007
+Subject: [Harbour] Re: Which branch to use?
+References: <45A4D66B.6D7@synel.co.il> <45A9EB48.6DCD@synel.co.il>
+	<20070114152343.GB28463@localhost.localdomain>
+Message-ID: <03c601c737f5$14b722d0$0100a8c0@emag>
+
+
+-----Messaggio Originale----- 
+Da: "Przemyslaw Czerpak" <druzus@priv.onet.pl>
+A: "Harbour Project Main Developer List." <harbour@harbour-project.org>
+Data invio: domenica 14 gennaio 2007 16.23
+Oggetto: Re: [Harbour] Re: Which branch to use?
+
+
+> Enrico AFAIR you were the master of 0.46 release - can you start the 
+> process?
+
+No, I wasn't, sorry.
+
+EMG
+
+--
+EMAG Software Homepage:     http://www.emagsoftware.it
+The EMG's ZX-Spectrum Page: http://www.emagsoftware.it/spectrum
+The Best of Spectrum Games: http://www.emagsoftware.it/tbosg
+The EMG Music page:         http://www.emagsoftware.it/emgmusic 
+
+From philb at philb.us  Mon Jan 15 02:46:22 2007
+From: philb at philb.us (Phil Barnett)
+Date: Mon Jan 15 02:53:56 2007
+Subject: [Harbour] New BETA1 release
+In-Reply-To: <20070113132329.GA28220@localhost.localdomain>
+References: <20070112205400.GA6788@localhost.localdomain>
+	<200701130816.16662.philb@philb.us>
+	<20070113132329.GA28220@localhost.localdomain>
+Message-ID: <200701150246.22647.philb@philb.us>
+
+On Saturday 13 January 2007 08:23, Przemyslaw Czerpak wrote:
+> On Sat, 13 Jan 2007, Phil Barnett wrote:
+> > The release process started when we marked the beta1 branch. Let's make
+> > binaries and get them published.
+>
+> Where we should upload them?
+
+It looks like build 46 was released from the Source Forge download pages. I'm 
+sure you have admin priveliges there, so that seems like a fine place to move 
+files around.
+
+I also have the ftp.harbour-project.org site working (including passive ftp) 
+for anonymous uploads and downloads if we want to move the file base back to 
+there. The upload directory is protected, so it takes a single command to 
+move them to an available directory.
+
+Either way is fine with me.
+
+-- 
+Men occasionally stumble over the truth, but most of them pick themselves up 
+and hurry off as if nothing had happened.
+Winston Churchill
+From antonioharbour at gmail.com  Mon Jan 15 23:29:57 2007
+From: antonioharbour at gmail.com (Antonio Linares)
+Date: Mon Jan 15 23:30:05 2007
+Subject: [Harbour] Harbour and MSVC 2005
+Message-ID: <45ac54c9.3737d46c.0ec8.fffff89a@mx.google.com>
+
+We have build Harbour using MSVC 2005 and now we get these warnings when
+linking:
+
+tutor02.obj : warning LNK4254: section '.CRT' (40000040) merged into '.data'
+(C0
+000040) with different attributes
+Fivehmx.lib(ERRSYSW.obj) : warning LNK4254: section '.CRT' (40000040) merged
+int
+o '.data' (C0000040) with different attributes
+Fivehmx.lib(ACTIVEX.obj) : warning LNK4254: section '.CRT' (40000040) merged
+int
+o '.data' (C0000040) with different attributes
+Fivehmx.lib(SAY.obj) : warning LNK4254: section '.CRT' (40000040) merged
+into '.
+data' (C0000040) with different attributes
+Fivehmx.lib(WINDOW.obj) : warning LNK4254: section '.CRT' (40000040) merged
+into
+ '.data' (C0000040) with different attributes
+Fivehmx.lib(FWERROR.obj) : warning LNK4254: section '.CRT' (40000040) merged
+int
+o '.data' (C0000040) with different attributes
+Fivehmx.lib(REG32.obj) : warning LNK4254: section '.CRT' (40000040) merged
+into
+'.data' (C0000040) with different attributes
+Fivehmx.lib(BUTTON.obj) : warning LNK4254: section '.CRT' (40000040) merged
+into
+ '.data' (C0000040) with different attributes
+... more
+
+It look as it may be related to:
+   #if _MSC_VER >= 1010
+      #pragma data_seg( ".CRT$XIY" )
+      #pragma comment( linker, "/Merge:.CRT=.data" ) 
+used in Harbour .C output files.
+
+Any hints to remove these warnings ?
+
+Thanks,
+
+Antonio
+
+From antonioharbour at gmail.com  Mon Jan 15 23:34:46 2007
+From: antonioharbour at gmail.com (Antonio Linares)
+Date: Mon Jan 15 23:35:01 2007
+Subject: [Harbour] RE: Harbour and MSVC 2005
+Message-ID: <45ac55eb.0f7955c9.0ec8.fffff902@mx.google.com>
+
+> #pragma comment( linker, "/Merge:.CRT=.data" ) used in 
+> Harbour .C output files.
+> 
+> Any hints to remove these warnings ?
+
+http://msdn2.microsoft.com/en-us/library/ms235500.aspx comments this problem
+
+It looks as .CRT and .data have different attributes, how to fix it ?
+
+regards,
+
+Antonio
+
+From niki at synel.co.il  Tue Jan 16 05:11:01 2007
+From: niki at synel.co.il (Chen Kedem)
+Date: Tue Jan 16 05:11:18 2007
+Subject: [Harbour] SF bug list, please review
+Message-ID: <45ACA4B5.AAE@synel.co.il>
+
+Please look at the bug list on SF, which were posted by "kcarmody0":
+http://sourceforge.net/tracker/?atid=100681&group_id=681&func=browse
+
+Tests were done on Harbour 46.1
+I'll try to close the bugs which were already fixed in latest devel.
+
+  Chen.
+**********************************************************************************************
+IMPORTANT: The contents of this email and any attachments are confidential. They are intended for the 
+named recipient(s) only.
+If you have received this email in error, please notify the system manager or the sender immediately and do 
+not disclose the contents to anyone or make copies thereof.
+*** eSafe scanned this email for viruses, vandals, and malicious content. ***
+**********************************************************************************************
+
+From druzus at priv.onet.pl  Tue Jan 16 08:03:38 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Tue Jan 16 08:04:28 2007
+Subject: [Harbour] SF bug list, please review
+In-Reply-To: <45ACA4B5.AAE@synel.co.il>
+References: <45ACA4B5.AAE@synel.co.il>
+Message-ID: <20070116130338.GA21063@localhost.localdomain>
+
+On Tue, 16 Jan 2007, Chen Kedem wrote:
+> Please look at the bug list on SF, which were posted by "kcarmody0":
+> http://sourceforge.net/tracker/?atid=100681&group_id=681&func=browse
+> Tests were done on Harbour 46.1
+> I'll try to close the bugs which were already fixed in latest devel.
+
+ad. 1
+Error object in [x]Harbour is a real object. In Clipper it's C structure
+mapped as object. Probably we will never have the same structure for
+them. The [x]Harbour version is more flexible but also has to bad side
+effects:
+1. speed overhead in object creation - in some code it can be noticeable
+   and I was not able to replicate _exact_ Clipper behavior in some code.
+2. our object system needs working classy code and HVM without pending
+   exception so it's not possible to catch RTE inside classy code or
+   generate new object when some exception is set
+
+ad. 2
+Clipper does not accept array index operator in any function call in
+macro compiler, f.e.: ? type("main()[1]") - Harbour does and it's
+intentional. In Clipper macro compiler cannot compile many different
+expressions which are supported by compiler
+
+ad. 3
+Harbour compiler accept qself()[1] but later refuse to generate the code
+exacuting explicitly error message. If it's a problem then we can simple
+remove error message. See:
+     hb_compErrorType( HB_COMP_PARAM, pSelf );   /* QUESTION: Is this OK ? */
+in include/hbexprb.c[599]:
+
+ad. 4
+Forward references in local initializations.
+It's a known thing. AFAIR it was even documented somewhere as intentional
+behavior so I haven't tried to make it Clipper compatible but it's possible
+that it's a side effect of used implementation. Probably only Ryszard can
+answer if this is intentional behavior or not.
+
+ad. 5
+The description of Clipper behavior in bug report is wrong.
+see doc/pp.txt, point 11 for the exact one - it's a minor bug in
+Clipper PP. New PP accepts 0 ASCII character as any other one
+and report error when used in wrong context.
+
+ad. 6
+This is GT dependent behavior - only GTDOS can emulate exact Clipper one.
+Some GT driver can report mouse event only when OS/terminal/console sends
+information to them. It's absolutely out of our control. Maybe if we will
+know which GT driver was used for tests then we can say sth more and even
+make it Clipper compatible in this GT driver but it's rather minor problem.
+
+ad. 7
+MLCTOPOS() should be fixed, probably like many other similar functions
+but it will have to be done by someone else. Sorry but I do not have
+enough time to update whole Harbour code. Upper level functions like
+MLCTOPOS() can be fixed by anyone who has some experience with Clipper
+and some C knowledge. It's not necessary to know details of HVM/compiler
+implementation.
+
+best regards,
+Przemek
+From druzus at priv.onet.pl  Tue Jan 16 08:09:16 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Tue Jan 16 08:10:05 2007
+Subject: [Harbour] BUG in Beta1
+Message-ID: <20070116130916.GA21264@localhost.localdomain>
+
+Hi Phil.
+
+This time I located serious bug in Beta1.
+It may cause index corruption on application exit.
+The s_uiActionRequest was not cleared before
+hb_rddShutDown() so the KEY/FOR/REL expressions cannot
+be evaluated and when buffers are hot index will not be
+properly updated.
+I think that such serious problem should be fixed before
+we release binaries.
+Should I also commit some other fixes for not critical problems?
+
+best regards,
+Przemek
+From philb at philb.us  Tue Jan 16 08:31:51 2007
+From: philb at philb.us (Phil Barnett)
+Date: Tue Jan 16 08:40:14 2007
+Subject: [Harbour] BUG in Beta1
+In-Reply-To: <20070116130916.GA21264@localhost.localdomain>
+References: <20070116130916.GA21264@localhost.localdomain>
+Message-ID: <200701160831.51619.philb@philb.us>
+
+On Tuesday 16 January 2007 08:09, Przemyslaw Czerpak wrote:
+> Hi Phil.
+>
+> This time I located serious bug in Beta1.
+> It may cause index corruption on application exit.
+> The s_uiActionRequest was not cleared before
+> hb_rddShutDown() so the KEY/FOR/REL expressions cannot
+> be evaluated and when buffers are hot index will not be
+> properly updated.
+> I think that such serious problem should be fixed before
+> we release binaries.
+> Should I also commit some other fixes for not critical problems?
+
+Sure. Submit bug fixes.
+
+-- 
+Men occasionally stumble over the truth, but most of them pick themselves up 
+and hurry off as if nothing had happened.
+Winston Churchill
+From druzus at priv.onet.pl  Tue Jan 16 21:56:27 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Tue Jan 16 21:57:15 2007
+Subject: [Harbour] ChangeLog 2007-01-17 03:55 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+Message-ID: <20070117025627.GA6250@localhost.localdomain>
+
+2007-01-17 03:55 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/contrib/libct/ctc.c
+  * harbour/contrib/libct/files.c
+  * harbour/contrib/libnf/ftattr.c
+  * harbour/contrib/libnf/n2color.c
+    * cleaned some BCC warnings
+
+  * harbour/include/hbapi.h
+  * harbour/include/hbexpra.c
+  * harbour/include/hbexprb.c
+  * harbour/include/hbsetup.ch
+  * harbour/source/common/expropt1.c
+  * harbour/source/common/expropt2.c
+  * harbour/source/common/hbver.c
+  * harbour/source/common/hbverdsp.c
+  * harbour/source/compiler/hbcomp.c
+  * harbour/source/vm/arrays.c
+  * harbour/source/vm/arrayshb.c
+  * harbour/source/vm/cmdarg.c
+  * harbour/source/vm/hvm.c
+    ! fixed Harbour support for accessing string characters with array
+      index operators []
+    + added support for #define HB_COMPAT_XHB - it's disabled by default.
+      When set it enables some of xHarbour features like negative array
+      indexes calculated from tail, accessing string characters with []
+      operators (warning it's not compatible with default Harbour version
+      enabled by -ks during compilation and //flags:s at runtime - in
+      xHarbour compatibility mode "ABC"[2] returns "B" when in Harbour 66)
+      and some other minor features.
+
+  * harbour/source/compiler/cmdcheck.c
+    * added support for optional setting C output type in -go switch
+      Now it accepts optional digit [0123] after -go in the same way
+      as -gc, f.e.: -go3
+
+  * harbour/source/compiler/harbour.c
+    * call hb_compExprLstDealloc() only when errors appeared during
+      compilation - it disable automatic freeing all allocated expressions
+      in clean compilation. I make it intentionally for easier detecting
+      problems one some expressions are not freed. So far the final cleanup
+      code always deallocated expressions what can hide some real bugs.
+
+  * harbour/source/vm/hvm.c
+    ! fixed very serious bug in HVM closing. The s_uiActionRequest flag
+      was not cleared before hb_rddShutDown() so when RDD buffers were
+      hot and flushing required some PCODE evaluation (f.e. index KEY
+      or FOR expression) then they were not properly evaluated.
+
+  * harbour/source/vm/macro.c
+    * minor improvement
+
+  * harbour/utils/hbtest/rt_misc.prg
+    ! fixed one of expected result, it was neither Harbour nor Clipper
+      result (I've just made some test with Clipper), I do not know why
+      it existed
+
+best regards,
+Przemek
+From druzus at priv.onet.pl  Wed Jan 17 07:49:09 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Wed Jan 17 07:49:59 2007
+Subject: [Harbour] ChangeLog 2007-01-17 13:50 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+Message-ID: <20070117124909.GA13370@localhost.localdomain>
+
+2007-01-17 13:50 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/source/compiler/gencc.c
+  * harbour/source/vm/hvm.c
+    ! fixed typo in hb_xvmGreaterEqualThenIntIs() - <= was used instead
+      of >=
+    ! fixed :&macro() messages used in WITH OBJECT structure and -gc3
+      output
+    + added some missing optimizations in -gc3 output
+
+best regards,
+Przemek
+From randy at palmasdev.com  Wed Jan 17 14:59:26 2007
+From: randy at palmasdev.com (Randy Portnoff)
+Date: Wed Jan 17 22:05:43 2007
+Subject: [Harbour] ChangeLog 2007-01-17 03:55 UTC+0100 Przemyslaw
+	Czerpak (druzus/at/priv.onet.pl)
+In-Reply-To: <20070117025627.GA6250@localhost.localdomain>
+Message-ID: <5.2.0.9.0.20070117145621.024699f0@pop3.pathcom.com>
+
+Hi Przemek,
+
+>   * harbour/source/vm/hvm.c
+>     ! fixed very serious bug in HVM closing. The s_uiActionRequest flag
+>       was not cleared before hb_rddShutDown() so when RDD buffers were
+>       hot and flushing required some PCODE evaluation (f.e. index KEY
+>       or FOR expression) then they were not properly evaluated.
+
+FYI - This fix was originally in build 43 as...
+
+s_uiActionRequest = 0; /* EXIT procedures should be processed */
+
+...but seems to have been removed at some point after that build even 
+though it was clearly marked!?
+
+Regards,
+Randy.
+
+From druzus at priv.onet.pl  Thu Jan 18 01:05:18 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Thu Jan 18 01:06:06 2007
+Subject: [Harbour] ChangeLog 2007-01-17 03:55 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+In-Reply-To: <5.2.0.9.0.20070117145621.024699f0@pop3.pathcom.com>
+References: <20070117025627.GA6250@localhost.localdomain>
+	<5.2.0.9.0.20070117145621.024699f0@pop3.pathcom.com>
+Message-ID: <20070118060518.GA9316@localhost.localdomain>
+
+On Wed, 17 Jan 2007, Randy Portnoff wrote:
+> >  * harbour/source/vm/hvm.c
+> >    ! fixed very serious bug in HVM closing. The s_uiActionRequest flag
+> >      was not cleared before hb_rddShutDown() so when RDD buffers were
+> >      hot and flushing required some PCODE evaluation (f.e. index KEY
+> >      or FOR expression) then they were not properly evaluated.
+> FYI - This fix was originally in build 43 as...
+> 
+> s_uiActionRequest = 0; /* EXIT procedures should be processed */
+> ...but seems to have been removed at some point after that build even 
+> though it was clearly marked!?
+
+Now. It's still there but it's not enough. RTE in one of exit proc,
+ALT+C or sth like that was never safe in Harbour or xHarbour - it also
+has to be fixed in xHarbour.
+
+best regards,
+Przemek.
+From randy at palmasdev.com  Thu Jan 18 11:13:13 2007
+From: randy at palmasdev.com (Randy Portnoff)
+Date: Thu Jan 18 11:13:02 2007
+Subject: [Harbour] Location of Beta 1 source code
+In-Reply-To: <20070118060518.GA9316@localhost.localdomain>
+References: <5.2.0.9.0.20070117145621.024699f0@pop3.pathcom.com>
+	<20070117025627.GA6250@localhost.localdomain>
+	<5.2.0.9.0.20070117145621.024699f0@pop3.pathcom.com>
+Message-ID: <5.2.0.9.0.20070118111025.024d77f0@pop3.pathcom.com>
+
+Hi all,
+
+I checked the Harbour website download section but I only see Build 46 - 
+Where can I find the Beta 1 source code (ie. the code-freezed version which 
+includes only bug fixes but no new features)?
+
+TIA.
+
+Regards,
+Randy.
+
+From java.net.ardo at gmail.com  Fri Jan 19 01:55:11 2007
+From: java.net.ardo at gmail.com (ardo septama)
+Date: Fri Jan 19 01:55:18 2007
+Subject: [Harbour] Database for MS-DOS (help)
+Message-ID: <f306932a0701182255t35902e4ana6f23671cb700330@mail.gmail.com>
+
+What database should I use if I want to create a pure DOS program. Free one
+if possible.
+
+Thanks,
+Ardo
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: http://lists.harbour-project.org/pipermail/harbour/attachments/20070119/5a05ed57/attachment.html
+From hbco2 at sbcglobal.net  Fri Jan 19 03:31:23 2007
+From: hbco2 at sbcglobal.net (Bill Smith)
+Date: Fri Jan 19 03:32:15 2007
+Subject: [Harbour] Database for MS-DOS (help)
+References: <f306932a0701182255t35902e4ana6f23671cb700330@mail.gmail.com>
+Message-ID: <011901c73ba4$3834acc0$0203a8c0@hbco>
+
+Just use the create command, and the right one will work.
+  ----- Original Message ----- 
+  From: ardo septama 
+  To: harbour@harbour-project.org 
+  Sent: Thursday, January 18, 2007 10:55 PM
+  Subject: [Harbour] Database for MS-DOS (help)
+
+
+  What database should I use if I want to create a pure DOS program. Free one if possible.
+
+  Thanks,
+  Ardo
+
+
+------------------------------------------------------------------------------
+
+
+  _______________________________________________
+  Harbour mailing list
+  Harbour@harbour-project.org
+  http://lists.harbour-project.org/mailman/listinfo/harbour
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: http://lists.harbour-project.org/pipermail/harbour/attachments/20070119/7710419f/attachment.html
+From alex at belacy.belgorod.su  Fri Jan 19 06:03:58 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Fri Jan 19 06:05:20 2007
+Subject: [Harbour] Re: ChangeLog 2007-01-17 03:55 UTC+0100 Przemyslaw
+	Czerpak (druzus/at/priv.onet.pl)
+In-Reply-To: <20070117025627.GA6250@localhost.localdomain>
+References: <20070117025627.GA6250@localhost.localdomain>
+Message-ID: <12919223630.20070119140358@belacy.belgorod.su>
+
+Wednesday, January 17, 2007, 5:56:27 AM, Przemyslaw Czerpak <druzus@priv.onet.pl> wrote:
+
+PC>  [ ... ]
+PC>   * harbour/source/vm/hvm.c
+PC>     ! fixed very serious bug in HVM closing. The s_uiActionRequest flag
+PC>       was not cleared before hb_rddShutDown() so when RDD buffers were
+PC>       hot and flushing required some PCODE evaluation (f.e. index KEY
+PC>       or FOR expression) then they were not properly evaluated.
+
+Przemek, this fix is made in development branch only, but you wanted
+to do it in "beta1", too.
+
+The beta1 packages, which we will upload, must have this fixed, isn't
+it ?
+
+Now I have did the checkout -r "beta1" and the latest Changelog there
+is:
+
+2007-01-09 16:22 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+
+-- 
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+
+From alex at belacy.belgorod.su  Fri Jan 19 06:09:37 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Fri Jan 19 06:10:35 2007
+Subject: [Harbour] Re: New BETA1 release
+In-Reply-To: <200701150246.22647.philb@philb.us>
+References: <20070112205400.GA6788@localhost.localdomain>
+	<200701130816.16662.philb@philb.us>
+	<20070113132329.GA28220@localhost.localdomain>
+	<200701150246.22647.philb@philb.us>
+Message-ID: <19919561843.20070119140937@belacy.belgorod.su>
+
+Monday, January 15, 2007, 10:46:22 AM, Phil Barnett <philb@philb.us> wrote:
+
+PB> [ ... ]
+PB> I also have the ftp.harbour-project.org site working (including passive ftp) 
+PB> for anonymous uploads and downloads if we want to move the file base back to 
+PB> there.
+
+ No, Phil. It still doesn't work from here.
+
+-- 
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+
+From java.net.ardo at gmail.com  Fri Jan 19 06:10:43 2007
+From: java.net.ardo at gmail.com (ardo septama)
+Date: Fri Jan 19 06:10:46 2007
+Subject: [Harbour] Database for MS-DOS (help)
+In-Reply-To: <011901c73ba4$3834acc0$0203a8c0@hbco>
+References: <f306932a0701182255t35902e4ana6f23671cb700330@mail.gmail.com>
+	<011901c73ba4$3834acc0$0203a8c0@hbco>
+Message-ID: <f306932a0701190310i4d3acf7bl2e51fd0a3d22844d@mail.gmail.com>
+
+I am sorry but I dont understand. I am using Harbour (does it have a built
+in database manager?)
+I actually want to create a .DBF file . Do I need another program to create
+it ?
+
+Thanks,
+Ardo
+
+
+On 1/19/07, Bill Smith <hbco2@sbcglobal.net> wrote:
+>
+>  Just use the create command, and the right one will work.
+>
+>  ----- Original Message -----
+> *From:* ardo septama <java.net.ardo@gmail.com>
+> *To:* harbour@harbour-project.org
+> *Sent:* Thursday, January 18, 2007 10:55 PM
+> *Subject:* [Harbour] Database for MS-DOS (help)
+>
+>
+> What database should I use if I want to create a pure DOS program. Free
+> one if possible.
+>
+> Thanks,
+> Ardo
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: http://lists.harbour-project.org/pipermail/harbour/attachments/20070119/3a01f353/attachment.html
+From xnet at 4mb.de  Fri Jan 19 08:30:58 2007
+From: xnet at 4mb.de (Manfred Bergler)
+Date: Fri Jan 19 06:31:06 2007
+Subject: [Harbour] Database for MS-DOS (help)
+In-Reply-To: <f306932a0701190310i4d3acf7bl2e51fd0a3d22844d@mail.gmail.com>
+References: <f306932a0701182255t35902e4ana6f23671cb700330@mail.gmail.com>,
+	<011901c73ba4$3834acc0$0203a8c0@hbco>,
+	<f306932a0701190310i4d3acf7bl2e51fd0a3d22844d@mail.gmail.com>
+Message-ID: <45B0BA02.4712.A1251C@xnet.4mb.de>
+
+An HTML attachment was scrubbed...
+URL: http://lists.harbour-project.org/pipermail/harbour/attachments/20070119/f4049272/attachment.html
+From elart at elart.it  Fri Jan 19 07:47:00 2007
+From: elart at elart.it (elart)
+Date: Fri Jan 19 07:46:59 2007
+Subject: [Harbour] Harbour 0.99 compile time warning on Linux-Fedora gcc
+In-Reply-To: <20070118060518.GA9316@localhost.localdomain>
+References: <20070117025627.GA6250@localhost.localdomain>	<5.2.0.9.0.20070117145621.024699f0@pop3.pathcom.com>
+	<20070118060518.GA9316@localhost.localdomain>
+Message-ID: <45B0BDC4.2010709@elart.it>
+
+Warning that i see compiling Harbour-0.99 on Linux Fedora Core 5 with 
+gcc version 4.1.1 20060525 (Red Hat 4.1.1-1)
+
+....
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../hbfix.c -ohbfix.o
+../../hbfix.c: In function 'hb_compFixFuncPCode':
+../../hbfix.c:856: warning: dereferencing type-punned pointer will break strict-aliasing rules
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../hbdead.c -ohbdead.o
+../../hbdead.c: In function 'hb_compCodeTraceMarkDead':
+../../hbdead.c:499: warning: dereferencing type-punned pointer will break strict-aliasing rules
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../hblbl.c -ohblbl.o
+../../hblbl.c: In function 'hb_compGenLabelTable':
+../../hblbl.c:350: warning: dereferencing type-punned pointer will break strict-aliasing rules
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../hbstripl.c -ohbstripl.o
+../../hbstripl.c: In function 'hb_compStripFuncLines':
+../../hbstripl.c:253: warning: dereferencing type-punned pointer will break strict-aliasing rules
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../hbusage.c -ohbusage.o
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../hbident.c -ohbident.o
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../ppcomp.c -oppcomp.o
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../expropta.c -oexpropta.o
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../exproptb.c -oexproptb.o
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../exproptc.c -oexproptc.o
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../complex.c -ocomplex.o
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../harbour.c -oharbour.o
+...
+....
+gcc -I. -I../../../../../include -I/usr/include/slang -I/usr/local/include -I/usr/local/include/slang -I/sw/include -I/opt/local/include -DHB_OS_LINUX -Wall -W -DHAVE_GPM_H -DHB_FM_STATISTICS_OFF -O3 -c ../../gtsln.c -ogtsln.o
+../../gtsln.c: In function 'hb_sln_setCharTrans':
+../../gtsln.c:272: warning: 'SLch.wchars[4u]' is used uninitialized in this function
+../../gtsln.c:272: warning: 'SLch.wchars[3u]' is used uninitialized in this function
+../../gtsln.c:272: warning: 'SLch.wchars[2u]' is used uninitialized in this function
+../../gtsln.c:272: warning: 'SLch.wchars[1u]' is used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[0].wchars[4u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[0].wchars[3u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[0].wchars[2u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[0].wchars[1u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[1].wchars[4u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[1].wchars[3u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[1].wchars[2u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[1].wchars[1u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[2].wchars[4u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[2].wchars[3u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[2].wchars[2u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[2].wchars[1u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[3].wchars[4u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[3].wchars[3u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[3].wchars[2u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[3].wchars[1u]' may be used uninitialized in this function
+....
+...
+
+HTH
+
+
+From philb at philb.us  Fri Jan 19 08:34:55 2007
+From: philb at philb.us (Phil Barnett)
+Date: Fri Jan 19 08:34:55 2007
+Subject: [Harbour] Re: New BETA1 release
+In-Reply-To: <19919561843.20070119140937@belacy.belgorod.su>
+References: <20070112205400.GA6788@localhost.localdomain>
+	<200701150246.22647.philb@philb.us>
+	<19919561843.20070119140937@belacy.belgorod.su>
+Message-ID: <200701190834.55747.philb@philb.us>
+
+On Friday 19 January 2007 06:09, Alexander S.Kresin wrote:
+> Monday, January 15, 2007, 10:46:22 AM, Phil Barnett <philb@philb.us> wrote:
+>
+> PB> [ ... ]
+> PB> I also have the ftp.harbour-project.org site working (including passive
+> ftp) PB> for anonymous uploads and downloads if we want to move the file
+> base back to PB> there.
+>
+>  No, Phil. It still doesn't work from here.
+
+What did you try to do that doesn't work?
+
+-- 
+Men occasionally stumble over the truth, but most of them pick themselves up 
+and hurry off as if nothing had happened.
+Winston Churchill
+From druzus at priv.onet.pl  Fri Jan 19 08:37:31 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Fri Jan 19 08:38:35 2007
+Subject: [Harbour] Re: ChangeLog 2007-01-17 03:55 UTC+0100 Przemyslaw
+	Czerpak (druzus/at/priv.onet.pl)
+In-Reply-To: <12919223630.20070119140358@belacy.belgorod.su>
+References: <20070117025627.GA6250@localhost.localdomain>
+	<12919223630.20070119140358@belacy.belgorod.su>
+Message-ID: <20070119133731.GA10129@localhost.localdomain>
+
+On Fri, 19 Jan 2007, Alexander S.Kresin wrote:
+> Przemek, this fix is made in development branch only, but you wanted
+> to do it in "beta1", too.
+> The beta1 packages, which we will upload, must have this fixed, isn't
+> it ?
+
+Yes. But there was more fixes in devel branch and I will have to make
+common patch for them. I'll try to make it tonight or tomorrow.
+Meanwhile I'd like someone will start release procedure. We need a
+place to upload binaries. Who is responsible to start this process?
+
+best regars,
+Przemek
+From harbour.01 at syenar.hu  Fri Jan 19 08:59:59 2007
+From: harbour.01 at syenar.hu (=?ISO-8859-2?Q?Viktor_Szak=E1ts?=)
+Date: Fri Jan 19 09:01:04 2007
+Subject: [Harbour] Harbour CVS statistics
+Message-ID: <AC5A372A-7957-49F0-9A7A-C171D44E553E@syenar.hu>
+
+Hi all,
+
+First of all congrats for the last few month of work, awesome progress.
+
+(I fell off the list for a month due to an unfortunate coindicence
+between my mail address change and the mailing list restore from  
+backup.)
+
+I just found an interesting (and fun) CVS statistics tool and run it  
+on the
+Harbour repository, see the output here:
+http://www.harbour-project.org/statcvs/
+
+Find the tool here:
+http://statcvs.sf.net/ (for CVS)
+http://statsvn.org/ (for SVN)
+
+The batch file used to make the output was this:
+-------------------------------------------------------
+SET CVSROOT=:ext:username@harbour-project.cvs.sourceforge.net:/ 
+cvsroot/harbour-project
+SET HOME=C:\DEVL\CVS\
+SET CVS_RSH=ssh
+
+%HOME%cvs -z3 checkout -P harbour
+%HOME%cvs log harbour > cvs.log
+
+java -mx128m -jar C:\util\statcvs.jar -verbose -output-dir C:\statcvs 
+\harbour -title Harbour-Project -viewvc http://harbour- 
+project.cvs.sourceforge.net/harbour-project/harbour/ ./cvs.log .
+-------------------------------------------------------
+
+Brgds,
+Viktor
+
+From harbour.01 at syenar.hu  Fri Jan 19 09:03:33 2007
+From: harbour.01 at syenar.hu (=?ISO-8859-2?Q?Szak=E1ts_Viktor?=)
+Date: Fri Jan 19 09:03:36 2007
+Subject: [Harbour] Re: ChangeLog 2007-01-17 03:55 UTC+0100 Przemyslaw
+	Czerpak (druzus/at/priv.onet.pl)
+In-Reply-To: <20070119133731.GA10129@localhost.localdomain>
+References: <20070117025627.GA6250@localhost.localdomain>
+	<12919223630.20070119140358@belacy.belgorod.su>
+	<20070119133731.GA10129@localhost.localdomain>
+Message-ID: <8B680630-D4AB-4A0B-A07A-C957CCAFA08F@syenar.hu>
+
+Hi,
+
+AFAIR we've agreed last time to use sf.net to release files.
+
+(because it's the standard way for pretty much all sf.net
+hosted projects, and that's what users are expecting. It
+also has a good stats page and has SCP for upload.)
+
+Brgds,
+Viktor
+
+On 2007.01.19., at 14:37, Przemyslaw Czerpak wrote:
+
+> On Fri, 19 Jan 2007, Alexander S.Kresin wrote:
+>> Przemek, this fix is made in development branch only, but you wanted
+>> to do it in "beta1", too.
+>> The beta1 packages, which we will upload, must have this fixed, isn't
+>> it ?
+>
+> Yes. But there was more fixes in devel branch and I will have to make
+> common patch for them. I'll try to make it tonight or tomorrow.
+> Meanwhile I'd like someone will start release procedure. We need a
+> place to upload binaries. Who is responsible to start this process?
+>
+> best regars,
+> Przemek
+> _______________________________________________
+> Harbour mailing list
+> Harbour@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour
+
+From alex at belacy.belgorod.su  Fri Jan 19 10:13:16 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Fri Jan 19 10:22:04 2007
+Subject: [Harbour] Re: New BETA1 release
+In-Reply-To: <200701190834.55747.philb@philb.us>
+References: <20070112205400.GA6788@localhost.localdomain>
+	<200701150246.22647.philb@philb.us>
+	<19919561843.20070119140937@belacy.belgorod.su>
+	<200701190834.55747.philb@philb.us>
+Message-ID: <722524009.20070119181316@belacy.belgorod.su>
+
+On  Friday, January 19, 2007, 16:34 Phil Barnett <philb@philb.us> wrote:
+
+PB> On Friday 19 January 2007 06:09, Alexander S.Kresin wrote:
+>> Monday, January 15, 2007, 10:46:22 AM, Phil Barnett <philb@philb.us> wrote:
+>>
+>> PB> [ ... ]
+>> PB> I also have the ftp.harbour-project.org site working (including passive
+>> ftp) PB> for anonymous uploads and downloads if we want to move the file
+>> base back to PB> there.
+>>
+>>  No, Phil. It still doesn't work from here.
+
+PB> What did you try to do that doesn't work?
+
+ To connect.
+ I can't connect to ftp.harbour-project.org from my work, where I have
+ firewall, routers, ...
+ Connecting from my home ( simple dialup connection ), I haven't any
+ problems ( excepting slow access, of cource :) ).
+
+
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+From alex at belacy.belgorod.su  Fri Jan 19 10:20:29 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Fri Jan 19 10:35:51 2007
+Subject: [Harbour] Re: ChangeLog 2007-01-17 03:55 UTC+0100 Przemyslaw
+	Czerpak (druzus/at/priv.onet.pl)
+In-Reply-To: <20070119133731.GA10129@localhost.localdomain>
+References: <20070117025627.GA6250@localhost.localdomain>
+	<12919223630.20070119140358@belacy.belgorod.su>
+	<20070119133731.GA10129@localhost.localdomain>
+Message-ID: <1132957362.20070119182029@belacy.belgorod.su>
+
+On  Friday, January 19, 2007, 16:37 Przemyslaw Czerpak <druzus@priv.onet.pl> wrote:
+
+PC> Meanwhile I'd like someone will start release procedure. We need a
+PC> place to upload binaries. Who is responsible to start this process?
+
+ Before the 0.46 I did it.
+ Released 0.46 was the first with hosting on Sourceforge and Ryszard
+ was that one who initiated the release process.
+ I can do it now - it is needed to add the file release with a certain
+ name on Sourceforge.
+ Packages should be uploaded to upload.sourceforge.net into 'incoming'
+ directory - then one of project admins may add them via the
+ Sourceforge web interface.
+ The previous release name was 'build46'.
+ New release name should be 'beta1' ?
+
+
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+From randy at palmasdev.com  Fri Jan 19 13:05:02 2007
+From: randy at palmasdev.com (Randy Portnoff)
+Date: Fri Jan 19 13:04:42 2007
+Subject: [Harbour] Bug fixes to Beta 1 build
+In-Reply-To: <722524009.20070119181316@belacy.belgorod.su>
+References: <200701190834.55747.philb@philb.us>
+	<20070112205400.GA6788@localhost.localdomain>
+	<200701150246.22647.philb@philb.us>
+	<19919561843.20070119140937@belacy.belgorod.su>
+	<200701190834.55747.philb@philb.us>
+Message-ID: <5.2.0.9.0.20070119125950.021e6858@pop3.pathcom.com>
+
+Hi all,
+
+I am downloading both the current CVS version (1.1.0) and the Beta 1 
+version (0.99.0) from http://elart.it/harbour (I understand it is updated 
+frequently) but I do not see the recent bug fixes in the Beta 1 version 
+(eg. s_uiActionRequest fix in HVM.C).
+
+Are bug fixes applied to the Beta 1 (0.99.0) release or not?
+
+TIA.
+
+Regards,
+Randy.
+
+From antonioharbour at gmail.com  Fri Jan 19 16:15:49 2007
+From: antonioharbour at gmail.com (Antonio Linares)
+Date: Fri Jan 19 16:16:07 2007
+Subject: [Harbour] Bug fixes to Beta 1 build
+In-Reply-To: <5.2.0.9.0.20070119125950.021e6858@pop3.pathcom.com>
+Message-ID: <45b13511.62fdd03a.311b.5418@mx.google.com>
+
+Randy,
+
+Why don't you directly download from the Harbour CVS ?
+
+Antonio 
+
+> Hi all,
+> 
+> I am downloading both the current CVS version (1.1.0) and the 
+> Beta 1 version (0.99.0) from http://elart.it/harbour (I 
+> understand it is updated
+> frequently) but I do not see the recent bug fixes in the Beta 
+> 1 version (eg. s_uiActionRequest fix in HVM.C).
+> 
+> Are bug fixes applied to the Beta 1 (0.99.0) release or not?
+> 
+> TIA.
+> 
+> Regards,
+> Randy.
+
+From randy at palmasdev.com  Fri Jan 19 16:33:17 2007
+From: randy at palmasdev.com (Randy Portnoff)
+Date: Fri Jan 19 16:33:06 2007
+Subject: [Harbour] Bug fixes to Beta 1 build
+In-Reply-To: <45b13511.62fdd03a.311b.5418@mx.google.com>
+References: <5.2.0.9.0.20070119125950.021e6858@pop3.pathcom.com>
+Message-ID: <5.2.0.9.0.20070119163029.021febf0@pop3.pathcom.com>
+
+Honestly, because I am confused as to what/where the two different CVS 
+versions are now stored - I asked here on the list but the only reply I 
+received pointed me to the elart.it server. From what I understand, it is 
+updated every 3 hours.
+
+Anyway, if you could please point me to the CVS locations for the current 
+and Beta build I would appreciate it and then I can reverify the bug fixes...
+
+
+At 10:15 PM 1/19/2007 +0100, you wrote:
+>Randy,
+>
+>Why don't you directly download from the Harbour CVS ?
+>
+>Antonio
+>
+> > Hi all,
+> >
+> > I am downloading both the current CVS version (1.1.0) and the
+> > Beta 1 version (0.99.0) from http://elart.it/harbour (I
+> > understand it is updated
+> > frequently) but I do not see the recent bug fixes in the Beta
+> > 1 version (eg. s_uiActionRequest fix in HVM.C).
+> >
+> > Are bug fixes applied to the Beta 1 (0.99.0) release or not?
+> >
+> > TIA.
+> >
+> > Regards,
+> > Randy.
+>
+>_______________________________________________
+>Harbour mailing list
+>Harbour@harbour-project.org
+>http://lists.harbour-project.org/mailman/listinfo/harbour
+
+From philb at philb.us  Fri Jan 19 19:28:20 2007
+From: philb at philb.us (Phil Barnett)
+Date: Fri Jan 19 19:28:16 2007
+Subject: [Harbour] Re: ChangeLog 2007-01-17 03:55 UTC+0100 Przemyslaw
+	Czerpak (druzus/at/priv.onet.pl)
+In-Reply-To: <1132957362.20070119182029@belacy.belgorod.su>
+References: <20070117025627.GA6250@localhost.localdomain>
+	<20070119133731.GA10129@localhost.localdomain>
+	<1132957362.20070119182029@belacy.belgorod.su>
+Message-ID: <200701191928.20841.philb@philb.us>
+
+On Friday 19 January 2007 10:20, Alexander S.Kresin wrote:
+> ?New release name should be 'beta1' ?
+Yes
+-- 
+Men occasionally stumble over the truth, but most of them pick themselves up 
+and hurry off as if nothing had happened.
+Winston Churchill
+From druzus at priv.onet.pl  Fri Jan 19 22:01:42 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Fri Jan 19 22:02:42 2007
+Subject: [Harbour] ChangeLog BETA1 2007-01-20 04:00 UTC+0100 Przemyslaw
+	Czerpak (druzus/at/priv.onet.pl)
+Message-ID: <20070120030142.GA26010@localhost.localdomain>
+
+2007-01-20 04:00 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/ChangeLog
+  * harbour/config/w32/bcc32.cf
+  * harbour/contrib/libct/ctc.c
+  * harbour/contrib/libct/files.c
+  * harbour/contrib/libnf/ftattr.c
+  * harbour/contrib/libnf/n2color.c
+  * harbour/contrib/rdd_ads/adsfunc.c
+  * harbour/include/hbapi.h
+  * harbour/include/hbapicdp.h
+  * harbour/include/hbapiitm.h
+  * harbour/include/hbexpra.c
+  * harbour/include/hbexprb.c
+  * harbour/include/hbsetup.ch
+  * harbour/include/hbver.h
+  * harbour/source/common/expropt1.c
+  * harbour/source/common/expropt2.c
+  * harbour/source/common/hbver.c
+  * harbour/source/common/hbverdsp.c
+  * harbour/source/compiler/cmdcheck.c
+  * harbour/source/compiler/complex.c
+  * harbour/source/compiler/gencc.c
+  * harbour/source/compiler/harbour.c
+  * harbour/source/compiler/harbour.y
+  * harbour/source/compiler/hbcomp.c
+  * harbour/source/macro/macro.y
+  * harbour/source/rdd/workarea.c
+  * harbour/source/rtl/cdpapi.c
+  * harbour/source/rtl/transfrm.c
+  * harbour/source/rtl/gtsln/kbsln.c
+  * harbour/source/rtl/gtxwc/gtxwc.c
+  * harbour/source/vm/arrays.c
+  * harbour/source/vm/arrayshb.c
+  * harbour/source/vm/classes.c
+  * harbour/source/vm/cmdarg.c
+  * harbour/source/vm/debug.c
+  * harbour/source/vm/extend.c
+  * harbour/source/vm/hvm.c
+  * harbour/source/vm/itemapi.c
+  * harbour/source/vm/macro.c
+  * harbour/source/vm/memvars.c
+  * harbour/utils/hbtest/rt_misc.prg
+    * synced with fixes in devel branch. This patch includes also some
+      extensions but most of them is disabled by default and I decided
+      that it will be safer to commit some already tested code then
+      manually update modifications merged with extensions. The most
+      important are:
+
+      ! fixed typo in hb_xvmGreaterEqualThenIntIs() - <= was used instead
+        of >=
+      ! fixed :&macro() messages used in WITH OBJECT structure and -gc3
+        output
+      ! fixed Harbour support for accessing string characters with array
+        index operators []
+      ! fixed very serious bug in HVM closing. The s_uiActionRequest flag
+        was not cleared before hb_rddShutDown() so when RDD buffers were
+        hot and flushing required some PCODE evaluation (f.e. index KEY
+        or FOR expression) then they were not properly evaluated.
+      ! fixed one of expected result in hbtest, it was neither Harbour nor
+        Clipper result
+      ! fixed macrocompiler for proper compilation of string with embedded
+        ASCII NUL byte (chr(0)), f.e.:
+           ? &("'["+chr(0)+"]'")
+      ! use HB_P_DUPLUNREF instead of HB_P_DUPLICATE when assign is used in
+        push context - Clipper compatible behavior, see:
+           x:=10
+           f(y:=iif(.t.,@x,))
+           ? x, y
+           func f(x)
+           x+=100
+           return nil
+      + added missing hb_storptrGC()
+      + added hack for potential problems caused by WITH OBJECT syntax
+      * some warning fixes
+
+best regards,
+Przemek
+From antonioharbour at gmail.com  Sat Jan 20 01:14:00 2007
+From: antonioharbour at gmail.com (Antonio Linares)
+Date: Sat Jan 20 01:14:21 2007
+Subject: [Harbour] Bug fixes to Beta 1 build
+In-Reply-To: <5.2.0.9.0.20070119163029.021febf0@pop3.pathcom.com>
+Message-ID: <45b1b339.47885a20.0736.7a02@mx.google.com>
+
+Randy,
+
+Unless I am wrong, all you need to do is:
+
+cvs
+-d:pserver:anonymous@harbour-project.cvs.sourceforge.net:/cvsroot/harbour-pr
+oject login 
+ 
+cvs -z3
+-d:pserver:anonymous@harbour-project.cvs.sourceforge.net:/cvsroot/harbour-pr
+oject co harbour > checkout.txt
+
+as explained at http://sourceforge.net/cvs/?group_id=681
+
+You may download cvs.exe from... where is the CVS download link that used to
+be at www.harbour-project.org ??? :-)
+
+
+Antonio
+
+From alex at belacy.belgorod.su  Sat Jan 20 02:08:12 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Sat Jan 20 02:09:20 2007
+Subject: [Harbour] Beta1 release
+Message-ID: <1522547402.20070120100812@belacy.belgorod.su>
+
+ Since the critical fixes in Beta1 branch have been done ( 2007-01-20
+ 04:00 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl) ), we may
+ upload the new release.
+
+ Packages should be uploaded to the incoming/ directory of
+ ftp://upload.sourceforge.net. After the package is uploaded I can add
+ it to the Harbour's download page on Sourceforge.
+
+ I can provide the following packages:
+ source,
+ bcc32,
+ suse
+ on Monday when I will be at work and have a fast connection.
+
+ We need to agree upon a naming convention. Should "beta1" present in
+ file names, or they will be just like harbour-0.99.bin.w32.bcc32.zip
+ ?
+  
+
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+From philb at philb.us  Sat Jan 20 02:17:46 2007
+From: philb at philb.us (Phil Barnett)
+Date: Sat Jan 20 02:17:39 2007
+Subject: [Harbour] Beta1 release
+In-Reply-To: <1522547402.20070120100812@belacy.belgorod.su>
+References: <1522547402.20070120100812@belacy.belgorod.su>
+Message-ID: <200701200217.46494.philb@philb.us>
+
+On Saturday 20 January 2007 02:08, Alexander S.Kresin wrote:
+> We need to agree upon a naming convention. Should "beta1" present in
+> ?file names, or they will be just like harbour-0.99.bin.w32.bcc32.zip
+
+I don't think that it's necessary in the file names.
+
+-- 
+Men occasionally stumble over the truth, but most of them pick themselves up 
+and hurry off as if nothing had happened.
+Winston Churchill
+From niki at synel.co.il  Sun Jan 21 03:09:20 2007
+From: niki at synel.co.il (Chen Kedem)
+Date: Sun Jan 21 03:13:31 2007
+Subject: [Harbour] Harbour CVS statistics
+Message-ID: <45B31FB0.4245@synel.co.il>
+
+Nice statistics page!
+
+And if you're uploading stuff to http://www.harbour-project.org
+maybe you can modify the from page too. If you change the link
+to the SF logo from
+http://www.Harbour-Project.org/images/sourceforge.gif
+into http://sflogo.sourceforge.net/sflogo.php?group_id=681&type=4
+(the same as in http://harbour-project.sourceforge.net/ )
+It would cause each visit in the Harbour home to be counted in the
+Sf statistics too (home page hits).
+
+A link to your given statistics would be nice too.
+It was talked a few months ago, that the Harbour site should be
+revised (the Wiki talk). As the beta release is almost out, this
+would be a great time to do the changes (I don't have the necessary
+technical or artistic knowledge to do it myself).
+
+  Chen.
+**********************************************************************************************
+IMPORTANT: The contents of this email and any attachments are confidential. They are intended for the 
+named recipient(s) only.
+If you have received this email in error, please notify the system manager or the sender immediately and do 
+not disclose the contents to anyone or make copies thereof.
+*** eSafe scanned this email for viruses, vandals, and malicious content. ***
+**********************************************************************************************
+
+From harbour.01 at syenar.hu  Sun Jan 21 05:06:17 2007
+From: harbour.01 at syenar.hu (=?ISO-8859-2?Q?Szak=E1ts_Viktor?=)
+Date: Sun Jan 21 05:06:23 2007
+Subject: [Harbour] Harbour CVS statistics
+In-Reply-To: <45B31FB0.4245@synel.co.il>
+References: <45B31FB0.4245@synel.co.il>
+Message-ID: <C91EAED4-FA70-467F-A7E7-8ED927E2E964@syenar.hu>
+
+Hi Chen,
+
+No problem, I modified it, pls check.
+
+Brgds,
+Viktor
+
+On 2007.01.21., at 9:09, Chen Kedem wrote:
+
+> Nice statistics page!
+>
+> And if you're uploading stuff to http://www.harbour-project.org
+> maybe you can modify the from page too. If you change the link
+> to the SF logo from
+> http://www.Harbour-Project.org/images/sourceforge.gif
+> into http://sflogo.sourceforge.net/sflogo.php?group_id=681&type=4
+> (the same as in http://harbour-project.sourceforge.net/ )
+> It would cause each visit in the Harbour home to be counted in the
+> Sf statistics too (home page hits).
+>
+> A link to your given statistics would be nice too.
+> It was talked a few months ago, that the Harbour site should be
+> revised (the Wiki talk). As the beta release is almost out, this
+> would be a great time to do the changes (I don't have the necessary
+> technical or artistic knowledge to do it myself).
+>
+>   Chen.
+> ********************************************************************** 
+> ************************
+> IMPORTANT: The contents of this email and any attachments are  
+> confidential. They are intended for the
+> named recipient(s) only.
+> If you have received this email in error, please notify the system  
+> manager or the sender immediately and do
+> not disclose the contents to anyone or make copies thereof.
+> *** eSafe scanned this email for viruses, vandals, and malicious  
+> content. ***
+> ********************************************************************** 
+> ************************
+>
+> _______________________________________________
+> Harbour mailing list
+> Harbour@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour
+
+From elart at elart.it  Sun Jan 21 09:44:30 2007
+From: elart at elart.it (elart)
+Date: Sun Jan 21 09:44:18 2007
+Subject: [Harbour] Re: Harbour-0.99 (beta1) compile warning
+In-Reply-To: <200701191928.20841.philb@philb.us>
+References: <20070117025627.GA6250@localhost.localdomain>	<20070119133731.GA10129@localhost.localdomain>	<1132957362.20070119182029@belacy.belgorod.su>
+	<200701191928.20841.philb@philb.us>
+Message-ID: <45B37C4E.3090908@elart.it>
+
+Warning that i see compiling Harbour-0.99 on Linux Fedora Core 5 with 
+gcc version 4.1.1 20060525 (Red Hat 4.1.1-1)
+
+
+../../genc.c: In function 'hb_compGenCReadable':
+../../genc.c:2390: warning: dereferencing type-punned pointer will break strict-aliasing rules
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../gencc.c -ogencc.o
+../../gencc.c: In function 'hb_compGenCRealCode':
+../../gencc.c:1966: warning: dereferencing type-punned pointer will break strict-aliasing rules
+
+...
+
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../gencli.c -ogencli.o
+../../gencli.c: In function 'hb_compGenCReadable':
+../../gencli.c:1896: warning: dereferencing type-punned pointer will break strict-aliasing rules
+
+...
+
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../hbfix.c -ohbfix.o
+../../hbfix.c: In function 'hb_compFixFuncPCode':
+../../hbfix.c:856: warning: dereferencing type-punned pointer will break strict-aliasing rules
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../hbdead.c -ohbdead.o
+../../hbdead.c: In function 'hb_compCodeTraceMarkDead':
+../../hbdead.c:499: warning: dereferencing type-punned pointer will break strict-aliasing rules
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../hblbl.c -ohblbl.o
+../../hblbl.c: In function 'hb_compGenLabelTable':
+../../hblbl.c:350: warning: dereferencing type-punned pointer will break strict-aliasing rules
+gcc -I. -I../../../../include -DHB_OS_LINUX -Wall -W -DHB_FM_STATISTICS_OFF -O3 -c ../../hbstripl.c -ohbstripl.o
+../../hbstripl.c: In function 'hb_compStripFuncLines':
+../../hbstripl.c:253: warning: dereferencing type-punned pointer will break strict-aliasing rules
+
+...
+
+gcc -I. -I../../../../../include -I/usr/include/slang -I/usr/local/include -I/usr/local/include/slang -I/sw/include -I/opt/local/include -DHB_OS_LINUX -Wall -W -DHAVE_GPM_H -DHB_FM_STATISTICS_OFF -O3 -c ../../gtsln.c -ogtsln.o
+../../gtsln.c: In function 'hb_sln_setCharTrans':
+../../gtsln.c:272: warning: 'SLch.wchars[4u]' is used uninitialized in this function
+../../gtsln.c:272: warning: 'SLch.wchars[3u]' is used uninitialized in this function
+../../gtsln.c:272: warning: 'SLch.wchars[2u]' is used uninitialized in this function
+../../gtsln.c:272: warning: 'SLch.wchars[1u]' is used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[0].wchars[4u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[0].wchars[3u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[0].wchars[2u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[0].wchars[1u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[1].wchars[4u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[1].wchars[3u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[1].wchars[2u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[1].wchars[1u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[2].wchars[4u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[2].wchars[3u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[2].wchars[2u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[2].wchars[1u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[3].wchars[4u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[3].wchars[3u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[3].wchars[2u]' may be used uninitialized in this function
+../../gtsln.c:222: warning: 'chArrow[3].wchars[1u]' may be used uninitialized in this function
+
+....
+HTH
+From philb at philb.us  Sun Jan 21 10:32:51 2007
+From: philb at philb.us (Phil Barnett)
+Date: Sun Jan 21 10:32:31 2007
+Subject: [Harbour] Harbour CVS statistics
+In-Reply-To: <45B31FB0.4245@synel.co.il>
+References: <45B31FB0.4245@synel.co.il>
+Message-ID: <200701211032.51682.philb@philb.us>
+
+On Sunday 21 January 2007 03:09, Chen Kedem wrote:
+
+> It was talked a few months ago, that the Harbour site should be
+> revised (the Wiki talk). As the beta release is almost out, this
+> would be a great time to do the changes (I don't have the necessary
+> technical or artistic knowledge to do it myself).
+
+I can have a wiki up on our site in a few minutes whenever you all want it.
+
+-- 
+Men occasionally stumble over the truth, but most of them pick themselves up 
+and hurry off as if nothing had happened.
+Winston Churchill
+From alex at belacy.belgorod.su  Mon Jan 22 02:58:49 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Mon Jan 22 03:01:15 2007
+Subject: [Harbour] 2007-01-22 10:50 UTC+0300 Alexander Kresin
+Message-ID: <858062246.20070122105849@belacy.belgorod.su>
+
+2007-01-22 10:50 UTC+0300 Alexander Kresin <alex@belacy.belgorod.su>
+  * include/hbver.h
+    * Changed HB_VER_LENTRY and HB_VER_CHLCVS for beta1 release.
+
+
+-- 
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+
+From alex at belacy.belgorod.su  Mon Jan 22 03:54:29 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Mon Jan 22 03:57:34 2007
+Subject: [Harbour] Release Beta1 - first files have been uploaded
+Message-ID: <13011403396.20070122115429@belacy.belgorod.su>
+
+The following files are now available via the Harbour download page on
+Sourceforge:
+
+harbour-0.99.src.zip
+harbour-0.99.bin.w32.bcc32.zip
+
+You may upload other packages to ftp://upload.sourceforge.net,
+incoming/ directory.
+
+-- 
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+
+From alex at belacy.belgorod.su  Mon Jan 22 07:20:49 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Mon Jan 22 07:21:50 2007
+Subject: [Harbour] Re: Release Beta1 - first files have been uploaded
+In-Reply-To: <13011403396.20070122115429@belacy.belgorod.su>
+References: <13011403396.20070122115429@belacy.belgorod.su>
+Message-ID: <7223696007.20070122152049@belacy.belgorod.su>
+
+harbour-0.99.0.src.tar.gz is now available, too.
+
+
+-- 
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+
+From alex at belacy.belgorod.su  Mon Jan 22 08:34:18 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Mon Jan 22 08:36:28 2007
+Subject: [Harbour] Re: Release Beta1 - first files have been uploaded
+In-Reply-To: <7223696007.20070122152049@belacy.belgorod.su>
+References: <13011403396.20070122115429@belacy.belgorod.su>
+	<7223696007.20070122152049@belacy.belgorod.su>
+Message-ID: <15028105477.20070122163418@belacy.belgorod.su>
+
+Fedora core binary rpm's, provided by marcobra@elart.it, have been
+added to the download page.
+
+
+-- 
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+
+From alex at belacy.belgorod.su  Mon Jan 22 08:40:41 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Mon Jan 22 08:41:46 2007
+Subject: [Harbour] Re: Release Beta1 - first files have been uploaded
+In-Reply-To: <15028105477.20070122163418@belacy.belgorod.su>
+References: <13011403396.20070122115429@belacy.belgorod.su>
+	<7223696007.20070122152049@belacy.belgorod.su>
+	<15028105477.20070122163418@belacy.belgorod.su>
+Message-ID: <16628488617.20070122164041@belacy.belgorod.su>
+
+Monday, January 22, 2007, 4:34:18 PM, Alexander S.Kresin <alex@belacy.belgorod.su> wrote:
+
+ASK> Fedora core binary rpm's, provided by marcobra@elart.it, have been
+ASK> added to the download page.
+
+Marco, I just have noticed, that there are files marked as 1.1.0 among
+the Fedora core packages which you uploaded. What are they ?
+
+
+
+-- 
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+
+From randy at palmasdev.com  Mon Jan 22 08:59:50 2007
+From: randy at palmasdev.com (Randy Portnoff)
+Date: Mon Jan 22 08:59:39 2007
+Subject: [Harbour] ChangeLog BETA1 2007-01-20 04:00 UTC+0100
+	Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+In-Reply-To: <20070120030142.GA26010@localhost.localdomain>
+Message-ID: <5.2.0.9.0.20070122085900.00cf47c8@pop3.pathcom.com>
+
+Hi Przemyslaw,
+
+Excellent! Will bug fixes continue to be applied to the Beta 1 (0.99) 
+release or was this a one-time patch?
+
+Regards,
+Randy.
+
+At 04:01 AM 1/20/2007 +0100, you wrote:
+>2007-01-20 04:00 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+>   * harbour/ChangeLog
+>   * harbour/config/w32/bcc32.cf
+>   * harbour/contrib/libct/ctc.c
+>   * harbour/contrib/libct/files.c
+>   * harbour/contrib/libnf/ftattr.c
+>   * harbour/contrib/libnf/n2color.c
+>   * harbour/contrib/rdd_ads/adsfunc.c
+>   * harbour/include/hbapi.h
+>   * harbour/include/hbapicdp.h
+>   * harbour/include/hbapiitm.h
+>   * harbour/include/hbexpra.c
+>   * harbour/include/hbexprb.c
+>   * harbour/include/hbsetup.ch
+>   * harbour/include/hbver.h
+>   * harbour/source/common/expropt1.c
+>   * harbour/source/common/expropt2.c
+>   * harbour/source/common/hbver.c
+>   * harbour/source/common/hbverdsp.c
+>   * harbour/source/compiler/cmdcheck.c
+>   * harbour/source/compiler/complex.c
+>   * harbour/source/compiler/gencc.c
+>   * harbour/source/compiler/harbour.c
+>   * harbour/source/compiler/harbour.y
+>   * harbour/source/compiler/hbcomp.c
+>   * harbour/source/macro/macro.y
+>   * harbour/source/rdd/workarea.c
+>   * harbour/source/rtl/cdpapi.c
+>   * harbour/source/rtl/transfrm.c
+>   * harbour/source/rtl/gtsln/kbsln.c
+>   * harbour/source/rtl/gtxwc/gtxwc.c
+>   * harbour/source/vm/arrays.c
+>   * harbour/source/vm/arrayshb.c
+>   * harbour/source/vm/classes.c
+>   * harbour/source/vm/cmdarg.c
+>   * harbour/source/vm/debug.c
+>   * harbour/source/vm/extend.c
+>   * harbour/source/vm/hvm.c
+>   * harbour/source/vm/itemapi.c
+>   * harbour/source/vm/macro.c
+>   * harbour/source/vm/memvars.c
+>   * harbour/utils/hbtest/rt_misc.prg
+>     * synced with fixes in devel branch. This patch includes also some
+>       extensions but most of them is disabled by default and I decided
+>       that it will be safer to commit some already tested code then
+>       manually update modifications merged with extensions. The most
+>       important are:
+>
+>       ! fixed typo in hb_xvmGreaterEqualThenIntIs() - <= was used instead
+>         of >=
+>       ! fixed :&macro() messages used in WITH OBJECT structure and -gc3
+>         output
+>       ! fixed Harbour support for accessing string characters with array
+>         index operators []
+>       ! fixed very serious bug in HVM closing. The s_uiActionRequest flag
+>         was not cleared before hb_rddShutDown() so when RDD buffers were
+>         hot and flushing required some PCODE evaluation (f.e. index KEY
+>         or FOR expression) then they were not properly evaluated.
+>       ! fixed one of expected result in hbtest, it was neither Harbour nor
+>         Clipper result
+>       ! fixed macrocompiler for proper compilation of string with embedded
+>         ASCII NUL byte (chr(0)), f.e.:
+>            ? &("'["+chr(0)+"]'")
+>       ! use HB_P_DUPLUNREF instead of HB_P_DUPLICATE when assign is used in
+>         push context - Clipper compatible behavior, see:
+>            x:=10
+>            f(y:=iif(.t.,@x,))
+>            ? x, y
+>            func f(x)
+>            x+=100
+>            return nil
+>       + added missing hb_storptrGC()
+>       + added hack for potential problems caused by WITH OBJECT syntax
+>       * some warning fixes
+>
+>best regards,
+>Przemek
+>_______________________________________________
+>Harbour mailing list
+>Harbour@harbour-project.org
+>http://lists.harbour-project.org/mailman/listinfo/harbour
+
+From philb at philb.us  Mon Jan 22 09:02:39 2007
+From: philb at philb.us (Phil Barnett)
+Date: Mon Jan 22 09:02:11 2007
+Subject: [Harbour] Release Beta1 - first files have been uploaded
+In-Reply-To: <13011403396.20070122115429@belacy.belgorod.su>
+References: <13011403396.20070122115429@belacy.belgorod.su>
+Message-ID: <200701220902.39907.philb@philb.us>
+
+On Monday 22 January 2007 03:54, Alexander S.Kresin wrote:
+> The following files are now available via the Harbour download page on
+> Sourceforge:
+>
+> harbour-0.99.src.zip
+> harbour-0.99.bin.w32.bcc32.zip
+>
+> You may upload other packages to ftp://upload.sourceforge.net,
+> incoming/ directory.
+
+Hi, and thanks.
+
+We need to stick with the naming convention. 0.99.0 is the first beta release. 
+The second beta release will be 0.99.1 and so on.
+
+Thanks for all the work you are all doing!
+
+-- 
+Men occasionally stumble over the truth, but most of them pick themselves up 
+and hurry off as if nothing had happened.
+Winston Churchill
+From alex at belacy.belgorod.su  Mon Jan 22 09:10:55 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Mon Jan 22 09:11:57 2007
+Subject: [Harbour] Re: Release Beta1 - first files have been uploaded
+In-Reply-To: <45B4C19E.50406@elart.it>
+References: <13011403396.20070122115429@belacy.belgorod.su>
+	<7223696007.20070122152049@belacy.belgorod.su>
+	<15028105477.20070122163418@belacy.belgorod.su>
+	<16628488617.20070122164041@belacy.belgorod.su>
+	<45B4C19E.50406@elart.it>
+Message-ID: <4230302242.20070122171055@belacy.belgorod.su>
+
+Monday, January 22, 2007, 4:52:30 PM, marco <marcobra@elart.it> wrote:
+
+m> harbour-0.99.0-0fc5.i386.rpm ...harbour_0.99.0_cvs_src.tar.gz (beta1 branch)
+m> harbour-1.1.0-0fc5.i386.rpm ... harbour_1.1.0_cvs_src.tar.gz - (harbour 
+m> trunk)
+
+ Hm...
+ In this case I'll delete the 1.1.0 from "beta1" release and shall add
+ them if we decide to create new release ( "trunk" or something else )
+ on Sourceforge download page.
+
+
+-- 
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+
+From druzus at priv.onet.pl  Mon Jan 22 09:44:02 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Mon Jan 22 09:45:00 2007
+Subject: [Harbour] Release Beta1 - first files have been uploaded
+In-Reply-To: <200701220902.39907.philb@philb.us>
+References: <13011403396.20070122115429@belacy.belgorod.su>
+	<200701220902.39907.philb@philb.us>
+Message-ID: <20070122144402.GA11490@localhost.localdomain>
+
+On Mon, 22 Jan 2007, Phil Barnett wrote:
+> > harbour-0.99.src.zip
+> > harbour-0.99.bin.w32.bcc32.zip
+> > You may upload other packages to ftp://upload.sourceforge.net,
+> > incoming/ directory.
+> Hi, and thanks.
+> We need to stick with the naming convention. 0.99.0 is the first beta release. 
+> The second beta release will be 0.99.1 and so on.
+> Thanks for all the work you are all doing!
+
+Me too, but I've found next bug in both branches which have to be fixed.
+Should we continue release or I should commit fix immediatelly.
+I can add a small hack to fix it quite fast.
+The problem can be seen in code like:
+    a:={0}; ? a[1]++; ? a[1]
+
+best regards,
+Przemek
+From elart at elart.it  Mon Jan 22 10:12:54 2007
+From: elart at elart.it (elart)
+Date: Mon Jan 22 10:12:41 2007
+Subject: [Harbour] Release Beta1 - first files have been uploaded
+In-Reply-To: <200701220902.39907.philb@philb.us>
+References: <13011403396.20070122115429@belacy.belgorod.su>
+	<200701220902.39907.philb@philb.us>
+Message-ID: <45B4D476.1010008@elart.it>
+
+Phil Barnett wrote:
+> On Monday 22 January 2007 03:54, Alexander S.Kresin wrote:
+>> The following files are now available via the Harbour download page on
+>> Sourceforge:
+>>
+>> harbour-0.99.src.zip
+>> harbour-0.99.bin.w32.bcc32.zip
+>>
+>> You may upload other packages to ftp://upload.sourceforge.net,
+>> incoming/ directory.
+> Hi, and thanks.
+>
+> We need to stick with the naming convention. 0.99.0 is the first beta release. 
+> The second beta release will be 0.99.1 and so on.
+>
+> Thanks for all the work you are all doing!
+>
+May i suggest some Harbour release naming something
+like Firefox internal developers and tester coding name style:
+http://forums.mozillazine.org/viewtopic.php?t=305281
+
+Trunk is harbour-trunk (top of Harbour developement - unstable)
+the name of code:
+harbour-1-trunk
+
+
+Harbour now is doing a 1.0 branch:
+
+Branch for Harbour 1.x.x releases
+
+1.0.0-branch
+  harbour-0.99.0-0fc5.i386.rpm i think must be renamed to 
+  harbour-1.0.0-b1
+  ...
+  harbour-1.0.0-b2pre
+  harbour-1.0.0-b2
+  ...
+  harbour-1.0.0-rc1
+  ...
+  harbour-1.0.0 
+  harbour-1.0.1-a1
+  harbour-1.0.1-a2
+  ...
+  harbour-1.0.1-rc1
+
+
+harbour-1-trunk continue with new branch...
+  harbour-1.2
+  harbour-1.3
+  harbour-1.4
+
+a harbour-2.0 developement could be named 
+
+harbour-2-trunk
+  harbour-2.0.0a1
+  harbour-2.0.0a2
+  ...
+
+
+
+and so on
+
+
+Hth
+Marco
+
+From jarabal at ya.com  Mon Jan 22 13:06:29 2007
+From: jarabal at ya.com (Javier)
+Date: Mon Jan 22 13:07:41 2007
+Subject: [Harbour] Release Beta1 - first files have been uploaded
+In-Reply-To: <200701220902.39907.philb@philb.us>
+References: <13011403396.20070122115429@belacy.belgorod.su>
+	<200701220902.39907.philb@philb.us>
+Message-ID: <45B4FD25.3030103@ya.com>
+
+Thanks Phil & Vicktor.
+Would it be possible avoid these warnings?
+Warning W8004 harboury.c 3796: 'yymsg' is assigned a value that is never 
+used in function yydestruct
+Warning W8008 harboury.c 6997: Condition is always false in function 
+hb_compparse
+Warning W8066 harboury.c 6998: Unreachable code in function hb_compparse
+Warning W8004 harboury.c 6925: 'hb_compnerrs' is assigned a value that 
+is never used in function hb_compparse
+Warning W8004 harboury.c 3994: 'yyptr' is assigned a value that is never 
+used in function hb_compparse
+Warning W8004 macroy.c 1709: 'yymsg' is assigned a value that is never 
+used in function yydestruct
+Warning W8066 macro.y 268: Unreachable code in function hb_macroparse
+Warning W8066 macro.y 273: Unreachable code in function hb_macroparse
+Warning W8008 macroy.c 2940: Condition is always false in function 
+hb_macroparse
+Warning W8066 macroy.c 2941: Unreachable code in function hb_macroparse
+Warning W8004 macroy.c 2868: 'hb_macronerrs' is assigned a value that is 
+never used in function hb_macroparse
+Warning W8004 macroy.c 1897: 'yyptr' is assigned a value that is never 
+used in function hb_macroparse
+Making with .-
+@echo off
+rem ----------------------------------------------------------------
+rem Asume que se tiene Borland C++
+rem http://www.borland.com/products/downloads/download_cbuilder.html
+rem con el path al directorio bin y configurado el fichero BCC32.CFG
+rem http://dn.codegear.com/article/21205
+rem ----------------------------------------------------------------
+set HB_ARCHITECTURE=w32
+set HB_COMPILER=bcc32
+call make_b32.bat %1
+
+A greeting
+Xavi
+
+Phil Barnett escribi?:
+> On Monday 22 January 2007 03:54, Alexander S.Kresin wrote:
+>   
+>> The following files are now available via the Harbour download page on
+>> Sourceforge:
+>>
+>> harbour-0.99.src.zip
+>> harbour-0.99.bin.w32.bcc32.zip
+>>
+>> You may upload other packages to ftp://upload.sourceforge.net,
+>> incoming/ directory.
+>>     
+>
+> Hi, and thanks.
+>
+> We need to stick with the naming convention. 0.99.0 is the first beta release. 
+> The second beta release will be 0.99.1 and so on.
+>
+> Thanks for all the work you are all doing!
+>
+>   
+From druzus at priv.onet.pl  Mon Jan 22 13:41:21 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Mon Jan 22 13:42:08 2007
+Subject: [Harbour] Release Beta1 - first files have been uploaded
+In-Reply-To: <45B4FD25.3030103@ya.com>
+References: <13011403396.20070122115429@belacy.belgorod.su>
+	<200701220902.39907.philb@philb.us> <45B4FD25.3030103@ya.com>
+Message-ID: <20070122184121.GA20852@localhost.localdomain>
+
+On Mon, 22 Jan 2007, Javier wrote:
+> Thanks Phil & Vicktor.
+> Would it be possible avoid these warnings?
+> Warning W8004 harboury.c 3796: 'yymsg' is assigned a value that is never 
+> used in function yydestruct
+> Warning W8008 harboury.c 6997: Condition is always false in function 
+> hb_compparse
+> Warning W8066 harboury.c 6998: Unreachable code in function hb_compparse
+> Warning W8004 harboury.c 6925: 'hb_compnerrs' is assigned a value that 
+> is never used in function hb_compparse
+> Warning W8004 harboury.c 3994: 'yyptr' is assigned a value that is never 
+> used in function hb_compparse
+> Warning W8004 macroy.c 1709: 'yymsg' is assigned a value that is never 
+> used in function yydestruct
+> Warning W8066 macro.y 268: Unreachable code in function hb_macroparse
+> Warning W8066 macro.y 273: Unreachable code in function hb_macroparse
+> Warning W8008 macroy.c 2940: Condition is always false in function 
+> hb_macroparse
+> Warning W8066 macroy.c 2941: Unreachable code in function hb_macroparse
+> Warning W8004 macroy.c 2868: 'hb_macronerrs' is assigned a value that is 
+> never used in function hb_macroparse
+> Warning W8004 macroy.c 1897: 'yyptr' is assigned a value that is never 
+> used in function hb_macroparse
+
+No without manual updating files generated by bison.
+
+best regards,
+Przemek
+From alex at belacy.belgorod.su  Mon Jan 22 13:53:28 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Mon Jan 22 13:54:29 2007
+Subject: [Harbour] Re: Release Beta1 - first files have been uploaded
+In-Reply-To: <20070122144402.GA11490@localhost.localdomain>
+References: <13011403396.20070122115429@belacy.belgorod.su>
+	<200701220902.39907.philb@philb.us>
+	<20070122144402.GA11490@localhost.localdomain>
+Message-ID: <19814297468.20070122215328@belacy.belgorod.su>
+
+On  Monday, January 22, 2007, 17:44 Przemyslaw Czerpak <druzus@priv.onet.pl> wrote:
+
+PC> Me too, but I've found next bug in both branches which have to be fixed.
+PC> Should we continue release or I should commit fix immediatelly.
+PC> I can add a small hack to fix it quite fast.
+PC> The problem can be seen in code like:
+PC>     a:={0}; ? a[1]++; ? a[1]
+
+ I think it's really better to fix it now.
+ I'll re-upload files tomorrow.
+
+
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+From druzus at priv.onet.pl  Mon Jan 22 14:01:05 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Mon Jan 22 14:01:54 2007
+Subject: [Harbour] ChangeLog BETA1 2007-01-22 19:40 UTC+0100 Przemyslaw
+	Czerpak (druzus/at/priv.onet.pl)
+Message-ID: <20070122190105.GA21136@localhost.localdomain>
+
+2007-01-22 19:40 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/include/hbexprb.c
+  * harbour/include/hbpcode.h
+  * harbour/include/hbxvm.h
+  * harbour/source/compiler/genc.c
+  * harbour/source/compiler/gencc.c
+  * harbour/source/compiler/hbdead.c
+  * harbour/source/compiler/hbfix.c
+  * harbour/source/compiler/hblbl.c
+  * harbour/source/compiler/hbpcode.c
+  * harbour/source/compiler/hbstripl.c
+  * harbour/source/vm/hvm.c
+    ! fixed a:={0}; ? a[1]++; ? a[1]
+      By mistake I used HB_P_DUPLUNREF in two different context - to avoid
+      confusion in the future I added HB_P_PUSHUNREF PCODE which should be
+      used in assignment context
+
+  * harbour/source/rtl/gtsln/gtsln.c
+    * cleaned GCC warning and potential problems in future SLANG versions
+
+best regards,
+Przemek
+From druzus at priv.onet.pl  Mon Jan 22 14:23:59 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Mon Jan 22 14:24:50 2007
+Subject: [Harbour] Re: Harbour-0.99 (beta1) compile warning
+In-Reply-To: <45B37C4E.3090908@elart.it>
+References: <20070117025627.GA6250@localhost.localdomain>
+	<20070119133731.GA10129@localhost.localdomain>
+	<1132957362.20070119182029@belacy.belgorod.su>
+	<200701191928.20841.philb@philb.us> <45B37C4E.3090908@elart.it>
+Message-ID: <20070122192359.GB21136@localhost.localdomain>
+
+On Sun, 21 Jan 2007, elart wrote:
+> Warning that i see compiling Harbour-0.99 on Linux Fedora Core 5 with 
+> gcc version 4.1.1 20060525 (Red Hat 4.1.1-1)
+> ../../genc.c: In function 'hb_compGenCReadable':
+> ../../genc.c:2390: warning: dereferencing type-punned pointer will break 
+> strict-aliasing rules
+
+Seems that new GCC reports this potential problem in more places then the
+old ones. In the context where it's used in Harbour it does not create any
+real problems for strict aliasing optimization because the original type
+is restored before use so these warnings can be safely ignored. In some
+spare time I'll look if I can clean them without additional code overhead
+or using __attribute__ to define explicitly alias-able structures.
+
+> gcc -I. -I../../../../../include -I/usr/include/slang -I/usr/local/include 
+> -I/usr/local/include/slang -I/sw/include -I/opt/local/include -DHB_OS_LINUX 
+> -Wall -W -DHAVE_GPM_H -DHB_FM_STATISTICS_OFF -O3 -c ../../gtsln.c -ogtsln.o
+> ../../gtsln.c: In function 'hb_sln_setCharTrans':
+> ../../gtsln.c:272: warning: 'SLch.wchars[4u]' is used uninitialized in this 
+> function
+
+This should be cleaned after last commit.
+
+best regards,
+Przemek
+From druzus at priv.onet.pl  Mon Jan 22 14:25:31 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Mon Jan 22 14:26:25 2007
+Subject: [Harbour] Re: Release Beta1 - first files have been uploaded
+In-Reply-To: <19814297468.20070122215328@belacy.belgorod.su>
+References: <13011403396.20070122115429@belacy.belgorod.su>
+	<200701220902.39907.philb@philb.us>
+	<20070122144402.GA11490@localhost.localdomain>
+	<19814297468.20070122215328@belacy.belgorod.su>
+Message-ID: <20070122192531.GA21306@localhost.localdomain>
+
+On Mon, 22 Jan 2007, Alexander S.Kresin wrote:
+> PC> Me too, but I've found next bug in both branches which have to be fixed.
+> PC> Should we continue release or I should commit fix immediatelly.
+> PC> I can add a small hack to fix it quite fast.
+> PC> The problem can be seen in code like:
+> PC>     a:={0}; ? a[1]++; ? a[1]
+>  I think it's really better to fix it now.
+>  I'll re-upload files tomorrow.
+
+OK, thank you. I've just committed the fix.
+
+best regards,
+Przemek
+From druzus at priv.onet.pl  Mon Jan 22 15:58:48 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Mon Jan 22 15:59:40 2007
+Subject: [Harbour] ChangeLog BETA1 2007-01-22 21:55 UTC+0100 Przemyslaw
+	Czerpak (druzus/at/priv.onet.pl)
+Message-ID: <20070122205848.GA22856@localhost.localdomain>
+
+2007-01-22 21:55 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/source/rtl/set.c
+    * changed default initialization of _SET_DEBUG flag to TRUE when
+      debugger is linked. These modification already existed in the
+      past but was removed by Ryszard. Ryszard I know that in Clipper
+      _SET_DEBUG is always set to FALSE at application startup but
+      if we make the same then we will not be Clipper compatible.
+      These is a note I left in source/rtl/set.c which should explain why:
+
+      Tests shows that Clipper has two different flags to control ALT+D
+      and ALTD() behavior and on startup these flags are not synchronized.
+      When application starts _SET_DEBUG is set to FALSE but debugger
+      can be activated by hitting K_ALT_D or calling ALTD() function without
+      parameter. It means that some other internal flag enables these
+      operations.
+      Because Harbour is using _SET_DEBUG flag only then we have to
+      initialize it to TRUE when debugger is linked to keep real Clipper
+      behavior or we will have to add second flag too and try to replicate
+      exactly unsynchronized behavior of these flags which exists in Clipper.
+      IMHO it's a bug in Clipper (side effect of some internal solutions) and
+      we should not try to emulate it [druzus].
+
+Because the binaries will have to be rebuild due to previous fix then
+I decided to commit these minor fix too.
+
+best regards,
+Przemek
+From jarabal at ya.com  Mon Jan 22 20:31:55 2007
+From: jarabal at ya.com (Javier)
+Date: Mon Jan 22 20:32:39 2007
+Subject: [Harbour] Release Beta1 - [Out road and finished for my part]
+	first files have been uploaded.
+In-Reply-To: <20070122184121.GA20852@localhost.localdomain>
+References: <13011403396.20070122115429@belacy.belgorod.su>	<200701220902.39907.philb@philb.us>
+	<45B4FD25.3030103@ya.com>
+	<20070122184121.GA20852@localhost.localdomain>
+Message-ID: <45B5658B.4050503@ya.com>
+
+OK Przemyslaw,
+Thanks to you & Victor by not activating -w-rch.
+I would not be happy thinking in the possibility of having instructions 
+of code in [CS+Offset].
+BR
+Xavi
+
+Przemyslaw Czerpak escribi?:
+> On Mon, 22 Jan 2007, Javier wrote:
+>   
+>> Thanks Phil & Vicktor.
+>> Would it be possible avoid these warnings?
+>> Warning W8004 harboury.c 3796: 'yymsg' is assigned a value that is never 
+>> used in function yydestruct
+>> Warning W8008 harboury.c 6997: Condition is always false in function 
+>> hb_compparse
+>> Warning W8066 harboury.c 6998: Unreachable code in function hb_compparse
+>> Warning W8004 harboury.c 6925: 'hb_compnerrs' is assigned a value that 
+>> is never used in function hb_compparse
+>> Warning W8004 harboury.c 3994: 'yyptr' is assigned a value that is never 
+>> used in function hb_compparse
+>> Warning W8004 macroy.c 1709: 'yymsg' is assigned a value that is never 
+>> used in function yydestruct
+>> Warning W8066 macro.y 268: Unreachable code in function hb_macroparse
+>> Warning W8066 macro.y 273: Unreachable code in function hb_macroparse
+>> Warning W8008 macroy.c 2940: Condition is always false in function 
+>> hb_macroparse
+>> Warning W8066 macroy.c 2941: Unreachable code in function hb_macroparse
+>> Warning W8004 macroy.c 2868: 'hb_macronerrs' is assigned a value that is 
+>> never used in function hb_macroparse
+>> Warning W8004 macroy.c 1897: 'yyptr' is assigned a value that is never 
+>> used in function hb_macroparse
+>>     
+>
+> No without manual updating files generated by bison.
+>
+> best regards,
+> Przemek
+> _______________________________________________
+> Harbour mailing list
+> Harbour@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour
+>
+>
+>   
+From harbour.01 at syenar.hu  Mon Jan 22 20:39:25 2007
+From: harbour.01 at syenar.hu (=?ISO-8859-2?Q?Szak=E1ts_Viktor?=)
+Date: Mon Jan 22 20:39:36 2007
+Subject: [Harbour] Release Beta1 - [Out road and finished for my part]
+	first files have been uploaded.
+In-Reply-To: <45B5658B.4050503@ya.com>
+References: <13011403396.20070122115429@belacy.belgorod.su>	<200701220902.39907.philb@philb.us>
+	<45B4FD25.3030103@ya.com>
+	<20070122184121.GA20852@localhost.localdomain>
+	<45B5658B.4050503@ya.com>
+Message-ID: <1C0CD890-C6B5-440F-A0D3-69ED865B4680@syenar.hu>
+
+> Thanks to you & Victor by not activating -w-rch.
+
+Credit goes to someone else, not me.
+
+BTW, wouldn't it be better to bump the beta number
+after this recent critical fix? Several ppl already downloaded
+the original 0.99.0. If we have two different revisions going
+under the same version number, it could confuse users and
+make bug tracking harder.
+
+Brgds,
+Viktor
+
+> I would not be happy thinking in the possibility of having  
+> instructions of code in [CS+Offset].
+> BR
+> Xavi
+
+From philb at philb.us  Mon Jan 22 20:48:17 2007
+From: philb at philb.us (Phil Barnett)
+Date: Mon Jan 22 20:47:44 2007
+Subject: [Harbour] Please bump the version to 0.99.2
+Message-ID: <200701222048.17481.philb@philb.us>
+
+
+To avoid confusion, please bump the number to 0.99.2 and start the release 
+cycle. Also, insert a new tag in the beta1 branch for this version.
+
+We need to run each beta for a fixed number of days, accumulate the problems 
+and fixes for a few days, bump the number and do it all again. We'll have to 
+decide what is a sane number for 'few'. It will probably start out small and 
+get larger quickly. I hope.
+
+Thanks everyone.
+
+-- 
+Men occasionally stumble over the truth, but most of them pick themselves up 
+and hurry off as if nothing had happened.
+Winston Churchill
+From alex at belacy.belgorod.su  Tue Jan 23 00:55:21 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Tue Jan 23 00:57:43 2007
+Subject: [Harbour] Re: Please bump the version to 0.99.2
+In-Reply-To: <200701222048.17481.philb@philb.us>
+References: <200701222048.17481.philb@philb.us>
+Message-ID: <1891122797.20070123085521@belacy.belgorod.su>
+
+Tuesday, January 23, 2007, 4:48:17 AM, Phil Barnett <philb@philb.us> wrote:
+
+
+PB> To avoid confusion, please bump the number to 0.99.2 and start the release 
+PB> cycle.
+
+ Ok. But why not a 0.99.1, since we marked current as 0.99.0 ?
+ 
+PB>  Also, insert a new tag in the beta1 branch for this version.
+
+ What is our accepted naming convention for tags ?
+ Before the beta release I marked them as "build45", "build46", ...
+
+-- 
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+
+From philb at philb.us  Tue Jan 23 01:39:12 2007
+From: philb at philb.us (Phil Barnett)
+Date: Tue Jan 23 01:38:37 2007
+Subject: [Harbour] Re: Please bump the version to 0.99.2
+In-Reply-To: <1891122797.20070123085521@belacy.belgorod.su>
+References: <200701222048.17481.philb@philb.us>
+	<1891122797.20070123085521@belacy.belgorod.su>
+Message-ID: <200701230139.12997.philb@philb.us>
+
+On Tuesday 23 January 2007 00:55, Alexander S.Kresin wrote:
+> Tuesday, January 23, 2007, 4:48:17 AM, Phil Barnett <philb@philb.us> wrote:
+>
+>
+> PB> To avoid confusion, please bump the number to 0.99.2 and start the
+> release PB> cycle.
+>
+>  Ok. But why not a 0.99.1, since we marked current as 0.99.0 ?
+
+Getting old sucks. See how confused you can get?
+
+Yes, 0.99.1 is fine.
+
+> PB>  Also, insert a new tag in the beta1 branch for this version.
+>
+>  What is our accepted naming convention for tags ?
+>  Before the beta release I marked them as "build45", "build46", ...
+
+How about beta-0.99.1
+
+That should make it obvious and easy to remember.
+
+-- 
+Men occasionally stumble over the truth, but most of them pick themselves up 
+and hurry off as if nothing had happened.
+Winston Churchill
+From alex at belacy.belgorod.su  Tue Jan 23 01:53:34 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Tue Jan 23 01:57:17 2007
+Subject: [Harbour] 2007-01-23 09:50 UTC+0300 Alexander Kresin
+Message-ID: <514615879.20070123095334@belacy.belgorod.su>
+
+2007-01-23 09:50 UTC+0300 Alexander Kresin <alex@belacy.belgorod.su>
+  * include/hbver.h
+    * Changed HB_VER_LENTRY, HB_VER_CHLCVS and HB_VER_REVISION 
+      for 0.99.1 release.
+
+ CVS has been tagged as beta-0_99_1 ( '.' character isn't accepted by
+ cvs in a tag name ).
+
+-- 
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+
+From alex at belacy.belgorod.su  Tue Jan 23 02:49:41 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Tue Jan 23 02:52:15 2007
+Subject: [Harbour] Release 0.99.1 files uploaded
+Message-ID: <1547983608.20070123104941@belacy.belgorod.su>
+
+The following files are now available via the Harbour download page on
+Sourceforge:
+
+harbour-0.99.1.src.tar.gz
+harbour-0.99.1.src.zip
+harbour-0.99.1.bin.w32.bcc32.zip
+
+Marco, could you re-upload Fedora files from the latest CVS sources (
+beta1 branch ), binary rpms only, as 0.99.1 ?
+
+-- 
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+
+From randy at palmasdev.com  Mon Jan 22 14:29:33 2007
+From: randy at palmasdev.com (Randy Portnoff)
+Date: Tue Jan 23 04:35:44 2007
+Subject: [Harbour] Lost changes in adsfunc.c
+Message-ID: <5.2.0.9.0.20070122142418.02516a08@pop3.pathcom.com>
+
+Hi all,
+
+On 2004-04-27 I committed a change as follows...
+
+    * contrib/rdd_ads/adsfunc.c
+
+      Changes to ADSCOPYTABLECONTENTS as follows:
+      ! changed default filter option from ADS_IGNOREFILTERS to 
+ADS_RESPECTFILTERS
+      + added second optional param for ADS filter option
+      + Now uses default index order if set
+
+...but the change is no longer there - I think it was lost with a 
+subsequent syncing of the code base with xHarbour.
+
+Does that mean that we should not be making changes to RDD_ADS (or any of 
+the other RDD's) since these changes may be overwritten by xHarbour syncing 
+again in the future?
+
+Regards,
+Randy.
+
+From antonioharbour at gmail.com  Tue Jan 23 07:45:08 2007
+From: antonioharbour at gmail.com (Antonio Linares)
+Date: Tue Jan 23 07:45:10 2007
+Subject: [Harbour] sourceforge Harbour latest news
+Message-ID: <9471afc80701230445n2df269b2v62b8b0f9f52246ef@mail.gmail.com>
+
+http://sourceforge.net/projects/harbour-project/
+
+latest news is not updated
+
+thanks,
+
+Antonio
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: http://lists.harbour-project.org/pipermail/harbour/attachments/20070123/70619e55/attachment.html
+From alex at belacy.belgorod.su  Tue Jan 23 09:12:41 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Tue Jan 23 09:13:45 2007
+Subject: [Harbour] sourceforge Harbour latest news
+In-Reply-To: <9471afc80701230445n2df269b2v62b8b0f9f52246ef@mail.gmail.com>
+References: <9471afc80701230445n2df269b2v62b8b0f9f52246ef@mail.gmail.com>
+Message-ID: <1616350087.20070123171241@belacy.belgorod.su>
+
+Tuesday, January 23, 2007, 3:45:08 PM, Antonio Linares <antonioharbour@gmail.com> wrote:
+
+AL> http://sourceforge.net/projects/harbour-project/
+
+AL> latest news is not updated
+
+AL> thanks,
+
+AL> Antonio
+
+ News item added.
+
+-- 
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+
+From randy at palmasdev.com  Tue Jan 23 09:52:48 2007
+From: randy at palmasdev.com (Randy Portnoff)
+Date: Tue Jan 23 09:52:45 2007
+Subject: [Harbour] More changes lost in ADS_RDD
+In-Reply-To: <5.2.0.9.0.20070122142418.02516a08@pop3.pathcom.com>
+Message-ID: <5.2.0.9.0.20070123094817.00cf6830@pop3.pathcom.com>
+
+Hi all,
+
+This change was also lost as a result of the xHarbour ADS_RDD syncing...
+
+2003-05-15 21:35 UTC+0300 Alexander Kresin <alex@belacy.belgorod.su>
+   * contrib/rdd_ads/ads1.c
+     ! adsInfo() fixed for DBI_GETHEADERSIZE, so Header() returns now correct
+       value ( for dbf tables )
+
+Header() now returns ZERO when using ADS - This is the code I have from a 
+build that works:
+
+       case DBI_GETHEADERSIZE:
+          if( !pArea->uiHeaderLen && pArea->iFileType != ADS_ADT )
+             pArea->uiHeaderLen = 32 + pArea->uiFieldCount * 32 + 2;
+          hb_itemPutNL( pItem, pArea->uiHeaderLen );
+          break;
+
+Regards,
+Randy.
+
+P.S. I am concerned that we lost other changes to the RDD's as a result of 
+the xHarbour syncing.
+
+From tomaz.zupan at orpo.si  Tue Jan 23 16:46:00 2007
+From: tomaz.zupan at orpo.si (=?utf-8?q?Toma=C5=BE_Zupan?=)
+Date: Tue Jan 23 16:46:16 2007
+Subject: [Harbour] Uploaded Mandriva 0.99.1
+Message-ID: <200701232246.00889.tomaz.zupan@orpo.si>
+
+Hi !
+
+I uploaded files for Mandriva 2007 to incoming directory on SF:
+harbour-0.99.1-0mdk20070.i586.rpm
+harbour-contrib-0.99.1-0mdk20070.i586.rpm
+harbour-debug-0.99.1-0mdk20070.i586.rpm
+harbour-lib-0.99.1-0mdk20070.i586.rpm
+harbour-pp-0.99.1-0mdk20070.i586.rpm
+harbour-static-0.99.1-0mdk20070.i586.rpm
+harbour-0.99.1-0mdk20070.src.rpm
+
+But I had some minor problems while making rpms: 
+- I had to move version number in harbour.spec to 0.99.1 (I suppose there will 
+be problems on other distros too)
+- I had to add another platform to harbour.spec (Mandriva One)
+
+Where do i commit this changes? To beta branch, devel or both?
+
+-- 
+Toma? Zupan
+ORPO d.o.o.
+http://www.orpo.si
+From elart at elart.it  Tue Jan 23 18:03:48 2007
+From: elart at elart.it (elart)
+Date: Tue Jan 23 18:03:33 2007
+Subject: [Harbour] Release 0.99.1 files uploaded
+In-Reply-To: <1547983608.20070123104941@belacy.belgorod.su>
+References: <1547983608.20070123104941@belacy.belgorod.su>
+Message-ID: <45B69454.5040308@elart.it>
+
+Alexander S.Kresin wrote:
+> The following files are now available via the Harbour download page on
+> Sourceforge:
+>
+> harbour-0.99.1.src.tar.gz
+> harbour-0.99.1.src.zip
+> harbour-0.99.1.bin.w32.bcc32.zip
+>
+> Marco, could you re-upload Fedora files from the latest CVS sources (
+> beta1 branch ), binary rpms only, as 0.99.1 ?
+>
+>   
+Updated
+
+Please delete the sent harbour-0.99.1.src.tar.gz
+i marked harbour.spec 0.99.1 to build the rpms
+The harbour.spec need to be marked to 0.99.2pre or something different 
+form 0.99.1  now... ?
+
+Thank you
+Marco
+From tomaz.zupan at orpo.si  Wed Jan 24 02:02:34 2007
+From: tomaz.zupan at orpo.si (=?utf-8?q?Toma=C5=BE_Zupan?=)
+Date: Wed Jan 24 02:02:41 2007
+Subject: [Harbour] Release 0.99.1 files uploaded
+In-Reply-To: <45B69454.5040308@elart.it>
+References: <1547983608.20070123104941@belacy.belgorod.su>
+	<45B69454.5040308@elart.it>
+Message-ID: <200701240802.34685.tomaz.zupan@orpo.si>
+
+Dne sreda 24. januarja 2007 00:03 je elart napisal(a):
+> i marked harbour.spec 0.99.1 to build the rpms
+> The harbour.spec need to be marked to 0.99.2pre or something different
+> form 0.99.1  now... ?
+>
+harbur.spec must be marked exactly the same as include/hbver.h
+
+-- 
+Toma? Zupan
+ORPO d.o.o.
+http://www.orpo.si
+From alex at belacy.belgorod.su  Wed Jan 24 01:49:03 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Wed Jan 24 02:49:54 2007
+Subject: [Harbour] Re: Release 0.99.1 files uploaded
+In-Reply-To: <45B69454.5040308@elart.it>
+References: <1547983608.20070123104941@belacy.belgorod.su>
+	<45B69454.5040308@elart.it>
+Message-ID: <1024361372.20070124094903@belacy.belgorod.su>
+
+Wednesday, January 24, 2007, 2:03:48 AM, elart <elart@elart.it> wrote:
+
+>> Marco, could you re-upload Fedora files from the latest CVS sources (
+>> beta1 branch ), binary rpms only, as 0.99.1 ?
+>>
+>>   
+e> Updated
+
+ Thank you. Added to the download page.
+ 
+e> Please delete the sent harbour-0.99.1.src.tar.gz
+e> i marked harbour.spec 0.99.1 to build the rpms
+e> The harbour.spec need to be marked to 0.99.2pre or something different 
+e> form 0.99.1  now... ?
+
+ Yes.
+
+-- 
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+
+From alex at belacy.belgorod.su  Wed Jan 24 01:50:47 2007
+From: alex at belacy.belgorod.su (Alexander S.Kresin)
+Date: Wed Jan 24 02:49:57 2007
+Subject: [Harbour] Re: Uploaded Mandriva 0.99.1
+In-Reply-To: <200701232246.00889.tomaz.zupan@orpo.si>
+References: <200701232246.00889.tomaz.zupan@orpo.si>
+Message-ID: <1574465067.20070124095047@belacy.belgorod.su>
+
+Wednesday, January 24, 2007, 12:46:00 AM, Tomaz Zupan <tomaz.zupan@orpo.si> wrote:
+
+TZ> Hi !
+
+TZ> I uploaded files for Mandriva 2007 to incoming directory on SF:
+TZ> harbour-0.99.1-0mdk20070.i586.rpm
+TZ> harbour-contrib-0.99.1-0mdk20070.i586.rpm
+TZ> harbour-debug-0.99.1-0mdk20070.i586.rpm
+TZ> harbour-lib-0.99.1-0mdk20070.i586.rpm
+TZ> harbour-pp-0.99.1-0mdk20070.i586.rpm
+TZ> harbour-static-0.99.1-0mdk20070.i586.rpm
+TZ> harbour-0.99.1-0mdk20070.src.rpm
+
+ Thank you. Added to the download page.
+
+TZ> But I had some minor problems while making rpms: 
+TZ> - I had to move version number in harbour.spec to 0.99.1 (I suppose there will 
+TZ> be problems on other distros too)
+TZ> - I had to add another platform to harbour.spec (Mandriva One)
+
+TZ> Where do i commit this changes? To beta branch, devel or both?
+
+ To both, I think.
+
+-- 
+Regards,
+ Alexander
+http://kresin.belgorod.su
+
+
+From druzus at priv.onet.pl  Wed Jan 24 04:29:40 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Wed Jan 24 04:30:28 2007
+Subject: [Harbour] ChangeLog 2007-01-24 10:25 UTC+0100 Przemyslaw Czerpak
+	(druzus/at/priv.onet.pl)
+Message-ID: <20070124092940.GA6549@localhost.localdomain>
+
+2007-01-24 10:25 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/config/w32/bcc32.cf
+  * harbour/include/hbexprb.c
+  * harbour/include/hbpcode.h
+  * harbour/include/hbxvm.h
+  * harbour/source/compiler/genc.c
+  * harbour/source/compiler/gencc.c
+  * harbour/source/compiler/hbdead.c
+  * harbour/source/compiler/hbfix.c
+  * harbour/source/compiler/hblbl.c
+  * harbour/source/compiler/hbpcode.c
+  * harbour/source/compiler/hbstripl.c
+  * harbour/source/rtl/set.c
+  * harbour/source/rtl/gtsln/gtsln.c
+  * harbour/source/vm/hvm.c
+    * recent fixes from Beta1
+
+  * harbour/contrib/libct/Makefile
+  - harbour/contrib/libct/bit1.c
+  - harbour/contrib/libct/bit2.c
+  - harbour/contrib/libct/bit3.c
+  + harbour/contrib/libct/bitnum.c
+    ! rewritten bit functions
+
+  * harbour/contrib/libct/addascii.c
+    * cleanup
+
+  * harbour/contrib/odbc/Makefile
+  * harbour/contrib/odbc/odbc.c
+  * harbour/contrib/odbc/sql.ch
+  - harbour/contrib/odbc/sql.h
+  - harbour/contrib/odbc/sqlext.h
+  - harbour/contrib/odbc/sqltypes.h
+  * harbour/contrib/odbc/todbc.prg
+    ! synced with xHarbour
+
+  * harbour/contrib/rdd_ads/ads1.c
+    ! fixed typo in DBI_GETHEADERSIZE
+
+  * harbour/contrib/rdd_ads/adsfunc.c
+    + added ADSDDREMOVEINDEXFILE - borrowed from xHarbour
+
+  * harbour/source/rtl/alert.prg
+    * minor cleanup
+
+  * harbour/source/rtl/gtfunc.c
+    * use HB_ERR_ARGS_BASEPARAMS in error messages
+
+  * harbour/source/rtl/transfrm.c
+    * casting
+
+best regards,
+Przemek
+From java.net.ardo at gmail.com  Thu Jan 25 21:49:30 2007
+From: java.net.ardo at gmail.com (ardo septama)
+Date: Thu Jan 25 21:49:38 2007
+Subject: [Harbour] Serial port access
+Message-ID: <f306932a0701251849p6a34b68axe96f9b80cc791bee@mail.gmail.com>
+
+Hi all,
+
+I want to access a serial port COM1 just to act as a listener (receiving
+only).
+I found this IOLIB at oasis but it's for the Clipper not Harbour. I already
+tried it but its not working. Is there a way to make it work ?
+If not I want to know how to initialize the PORT (baud rate etc) using
+Harbour.
+I already try to access it using the FREAD function. But all I get is a
+strange data.
+
+Thanks in advance,
+
+Ardo
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: http://lists.harbour-project.org/pipermail/harbour/attachments/20070126/284dadbe/attachment.html
+From lkrausem at shaw.ca  Thu Jan 25 21:54:52 2007
+From: lkrausem at shaw.ca (Luis Krause Mantilla)
+Date: Thu Jan 25 21:56:07 2007
+Subject: [Harbour] Serial port access
+In-Reply-To: <f306932a0701251849p6a34b68axe96f9b80cc791bee@mail.gmail.com>
+References: <f306932a0701251849p6a34b68axe96f9b80cc791bee@mail.gmail.com>
+Message-ID: <45B96D7C.4030507@shaw.ca>
+
+Ardo:
+
+There's the hbComm library Ned Robertson created sometime ago.
+If you can't find it, email me and I'll dig it up.
+
+Regards,
+
+ardo septama wrote:
+
+> Hi all,
+>  
+> I want to access a serial port COM1 just to act as a listener 
+> (receiving only).
+> I found this IOLIB at oasis but it's for the Clipper not Harbour. I 
+> already tried it but its not working. Is there a way to make it work ?
+> If not I want to know how to initialize the PORT (baud rate etc) using 
+> Harbour.
+> I already try to access it using the FREAD function. But all I get is 
+> a strange data.
+>  
+> Thanks in advance,
+>  
+> Ardo
+>
+>------------------------------------------------------------------------
+>
+>_______________________________________________
+>Harbour mailing list
+>Harbour@harbour-project.org
+>http://lists.harbour-project.org/mailman/listinfo/harbour
+>  
+>
+
+-- 
+Luis Krause Mantilla
+lkrausem at shaw dot ca
+luis_krause at hotmail dot com
+"May the Source be with GNU"
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: http://lists.harbour-project.org/pipermail/harbour/attachments/20070125/08763ca6/attachment.html
+From java.net.ardo at gmail.com  Fri Jan 26 01:33:10 2007
+From: java.net.ardo at gmail.com (ardo septama)
+Date: Fri Jan 26 01:33:13 2007
+Subject: [Harbour] Serial port access
+In-Reply-To: <45B96D7C.4030507@shaw.ca>
+References: <f306932a0701251849p6a34b68axe96f9b80cc791bee@mail.gmail.com>
+	<45B96D7C.4030507@shaw.ca>
+Message-ID: <f306932a0701252233t46d80473ue512d1797ea7f348@mail.gmail.com>
+
+Dear Luis,
+
+I have found it at
+http://article.gmane.org/gmane.comp.compilers.harbour.user/20/match=hbcomm
+Someone has attached it but when I download it, it becomes a .bin file ?
+(supposed to be .zip file)
+
+
+Thanks,
+Ardo
+
+
+
+On 1/26/07, Luis Krause Mantilla <lkrausem@shaw.ca> wrote:
+>
+> Ardo:
+>
+> There's the hbComm library Ned Robertson created sometime ago.
+> If you can't find it, email me and I'll dig it up.
+>
+> Regards,
+>
+> ardo septama wrote:
+>
+>  Hi all,
+>
+> I want to access a serial port COM1 just to act as a listener (receiving
+> only).
+> I found this IOLIB at oasis but it's for the Clipper not Harbour. I
+> already tried it but its not working. Is there a way to make it work ?
+> If not I want to know how to initialize the PORT (baud rate etc) using
+> Harbour.
+> I already try to access it using the FREAD function. But all I get is a
+> strange data.
+>
+> Thanks in advance,
+>
+> Ardo
+>
+> ------------------------------
+>
+> _______________________________________________
+> Harbour mailing listHarbour@harbour-project.orghttp://lists.harbour-project.org/mailman/listinfo/harbour
+>
+>
+> --
+> Luis Krause Mantilla
+> lkrausem at shaw dot ca
+> luis_krause at hotmail dot com
+> "May the Source be with GNU"
+>
+>
+>
+> _______________________________________________
+> Harbour mailing list
+> Harbour@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour
+>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: http://lists.harbour-project.org/pipermail/harbour/attachments/20070126/86374563/attachment.html
+From java.net.ardo at gmail.com  Fri Jan 26 04:07:37 2007
+From: java.net.ardo at gmail.com (ardo septama)
+Date: Fri Jan 26 04:07:41 2007
+Subject: [Harbour] Serial port access
+In-Reply-To: <f306932a0701252233t46d80473ue512d1797ea7f348@mail.gmail.com>
+References: <f306932a0701251849p6a34b68axe96f9b80cc791bee@mail.gmail.com>
+	<45B96D7C.4030507@shaw.ca>
+	<f306932a0701252233t46d80473ue512d1797ea7f348@mail.gmail.com>
+Message-ID: <f306932a0701260107w7a917dcbs4651cbddc0b53ef9@mail.gmail.com>
+
+Apparently it's a compressed file with .bin extension.
+I already unzip it. Thank you for your help. Hope it works.
+
+Regards,
+Ardo
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: http://lists.harbour-project.org/pipermail/harbour/attachments/20070126/843bfb3f/attachment.html
+From marciomgil at bol.com.br  Fri Jan 26 06:52:04 2007
+From: marciomgil at bol.com.br (=?iso-8859-1?Q?M=E1rcio_Gil?=)
+Date: Fri Jan 26 05:52:41 2007
+Subject: [Harbour] MaxRow() on Windows XP (Harbour Beta build 0.99-1)
+Message-ID: <20070126105220.49C6F48000602@smart4.bol.com.br>
+
+Hello people,
+
+The code:
+
+? "Row(): "+STR(Row())
+? "MaxRow():"+STR(MaxRow())
+ALERT("Row(): "+STR(Row())+";MaxRow():"+STR(MaxRow()))
+
+With Harbour result:
+
+Row():        103
+MaxRow():      2999
+
+And the ALERT window don't appear (there is very down).
+
+With Clipper result:
+
+Row():         42
+MaxRow():        42
+
+Compiler: Harbour Beta build 0.99-1 Intl.
+OS: Windows XP 5.1.2600 Service Pack 2
+
+Environment:
+
+SET INCLUDE=C:\HARBOUR\INCLUDE
+SET LIB=C:\HARBOUR\LIB
+SET OBJ=C:\HARBOUR\OBJ
+SET PLL=
+SET PIPEHANDLE=
+SET HB_ARCHITECTURE=w32
+SET HB_COMPILER=bcc32
+SET HB_GT_LIB=gtwin
+SET HB_BIN_INSTALL=C:\HARBOUR\bin
+SET HB_LIB_INSTALL=C:\HARBOUR\lib
+SET HB_INC_INSTALL=C:\HARBOUR\include
+
+Thanks and excuse my title English.
+
+M?rcio Gil.
+
+From druzus at priv.onet.pl  Fri Jan 26 13:07:00 2007
+From: druzus at priv.onet.pl (Przemyslaw Czerpak)
+Date: Fri Jan 26 13:07:49 2007
+Subject: [Harbour] MaxRow() on Windows XP (Harbour Beta build 0.99-1)
+In-Reply-To: <20070126105220.49C6F48000602@smart4.bol.com.br>
+References: <20070126105220.49C6F48000602@smart4.bol.com.br>
+Message-ID: <20070126180700.GA30268@localhost.localdomain>
+
+On Fri, 26 Jan 2007, M?rcio Gil wrote:
+> Hello people,
+> The code:
+> ? "Row(): "+STR(Row())
+> ? "MaxRow():"+STR(MaxRow())
+> ALERT("Row(): "+STR(Row())+";MaxRow():"+STR(MaxRow()))
+> With Harbour result:
+> Row():        103
+> MaxRow():      2999
+> And the ALERT window don't appear (there is very down).
+
+GTWIN in WinXP accepts any console window size set by user.
+If you do not like the default size then change it in
+the window preferences or use setmode() in your code.
+I haven't tested this code but it should change console
+window size to the visible (not scrolled) size.
+
+#include "hbgtinfo.ch"
+proc main()
+   setmode( hb_gtInfo( GTI_VIEWPORTHEIGHT ), hb_gtInfo( GTI_VIEWPORTWIDTH ) )
+   alert( os() + ";" + version() + ";" + hb_gtVersion( 1 ) )
+return
+
+best regards,
+Przemek
+From randy at palmasdev.com  Fri Jan 26 17:35:16 2007
+From: randy at palmasdev.com (Randy Portnoff)
+Date: Fri Jan 26 17:35:08 2007
+Subject: [Harbour] ChangeLog 2007-01-24 10:25 UTC+0100 Przemyslaw
+	Czerpak (druzus/at/priv.onet.pl)
+In-Reply-To: <20070124092940.GA6549@localhost.localdomain>
+Message-ID: <5.2.0.9.0.20070126173338.025f68e0@pop3.pathcom.com>
+
+Hi Przemek,
+
+>   * harbour/contrib/rdd_ads/ads1.c
+>     ! fixed typo in DBI_GETHEADERSIZE
+
+Will this fix be lost again if RDD_ADS is synced again with xHarbour?
+
+Regards,
+Randy.
+
+From dmacias at mail.udg.mx  Sat Jan 27 19:09:49 2007
+From: dmacias at mail.udg.mx (David Arturo Macias Corona)
+Date: Sat Jan 27 22:49:02 2007
+Subject: [Harbour] beta 0.99.1 in OS/2
+In-Reply-To: <20070124170009.96FC220DF22@antivirus2.noc.udg.mx>
+References: <20070124170009.96FC220DF22@antivirus2.noc.udg.mx>
+Message-ID: <45BBE9CD.3090307@mail.udg.mx>
+
+I tried to build Harbour beta 0.99.1 branch in OS/2 using:
+   gcc (GCC) 3.3.5 (Bird Build 2006-03-18 05:37)
+and
+   set C_USR=-DHB_LONG_LONG_OFF
+as in previous Harbour release
+
+First problem was:
+-----------------------------------------
+[E:\harbourbeta991\harbour]make_gnu.cmd install
+SYS0008: There is not enough memory available to process this command.
+All available memory is in use.
+SYS0008: There is not enough memory available to process this command.
+All available memory is in use.
+make[1]: *** [install] Error 1
+-----------------------------------------
+
+and using make_gnu.cmd without "install" parameter, these are results:
+-------------------------------------------------
+[E:\harbourbeta991\harbour]make_gnu.cmd
+In file included from ../../ppgen.c:55:
+../../ppcore.c: In function `hb_pp_pragmaNew':
+../../ppcore.c:2065: warning: passing arg 2 of `hb_pp_pragmaGetLogical'
+from inc
+ompatible pointer type
+../../ppcore.c:2128: warning: passing arg 2 of `hb_pp_pragmaGetLogical'
+from inc
+ompatible pointer type
+../../ppcore.c: In function `hb_pp_pragmaNew':
+../../ppcore.c:2065: warning: passing arg 2 of `hb_pp_pragmaGetLogical'
+from inc
+ompatible pointer type
+../../ppcore.c:2128: warning: passing arg 2 of `hb_pp_pragmaGetLogical'
+from inc
+ompatible pointer type
+make[3]: *** [harboury.c] Error 1
+make[2]: *** [descend] Error 2
+../../hbgtcore.c:2176: warning: initialization from incompatible pointer
+type
+make[3]: ../../../../source/compiler/os2/gcc/harbour.exe: Command not found
+make[2]: *** [descend] Error 1
+../../mainpm.c: In function `main':
+../../mainpm.c:64: warning: useless keyword or type name in empty
+declaration
+../../mainpm.c:64: warning: empty declaration
+../../mainpm.c:73: error: `iErrorCode' undeclared (first use in this
+function)
+../../mainpm.c:73: error: (Each undeclared identifier is reported only once
+../../mainpm.c:73: error: for each function it appears in.)
+make[3]: *** [mainpm.o] Error 1
+make[2]: *** [descend] Error 2
+make[3]: *** [macroy.c] Error 1
+make[2]: *** [descend] Error 2
+../../dbcmd.c: In function `HB_FUN_DBSEEK':
+../../dbcmd.c:2158: warning: signed and unsigned type in conditional
+expression
+../../dbcmd.c: In function `HB_FUN_ORDCREATE':
+../../dbcmd.c:2856: warning: signed and unsigned type in conditional
+expression
+../../dbf1.c: In function `hb_dbfGetValue':
+../../dbf1.c:1486: error: `SCHAR' undeclared (first use in this function)
+../../dbf1.c:1486: error: (Each undeclared identifier is reported only once
+../../dbf1.c:1486: error: for each function it appears in.)
+../../dbf1.c:1486: error: parse error before "pArea"
+../../dbf1.c:1519: error: parse error before "pArea"
+make[3]: *** [dbf1.o] Error 1
+make[2]: *** [descend] Error 2
+make[3]: ../../../../source/compiler/os2/gcc/harbour.exe: Command not found
+make[2]: *** [descend] Error 1
+make[1]: *** [install] Error 2
+make[3]: ../../../../source/compiler/os2/gcc/harbour.exe: Command not found
+make[2]: *** [descend] Error 1
+make[3]: ../../../../source/compiler/os2/gcc/harbour.exe: Command not found
+make[2]: *** [descend] Error 1
+make[3]: ../../../../source/compiler/os2/gcc/harbour.exe: Command not found
+make[2]: *** [descend] Error 1
+make[3]: ../../../../source/compiler/os2/gcc/harbour.exe: Command not found
+make[2]: *** [descend] Error 1
+make[3]: ../../../../source/compiler/os2/gcc/harbour.exe: Command not found
+make[2]: *** [descend] Error 1
+make[1]: *** [install] Error 2
+make[3]: ../../../../source/compiler/os2/gcc/harbour.exe: Command not found
+make[2]: *** [descend] Error 1
+make[3]: ../../../../source/compiler/os2/gcc/harbour.exe: Command not found
+make[2]: *** [descend] Error 1
+../../os2pm.c: In function `HB_FUN_WINSENDMSG':
+../../os2pm.c:294: warning: signed and unsigned type in conditional
+expression
+../../os2pm.c:295: warning: signed and unsigned type in conditional
+expression
+make[3]: ../../../../../source/compiler/os2/gcc/harbour.exe: Command not
+found
+make[2]: *** [descend] Error 1
+make[1]: *** [install] Error 2
+make: *** [install] Error 2
+-------------------------------------------------
+
+
+
+These are results for previous Harbour 46 release
+In this case everything build fine
+-----------------------------------------------------
+[E:\hxh3\harbour]mi_gnu.cmd install
+SYS1086: The following character string is too long:
+
+make[1]: *** [install] Error 1
+../../gtos2.c: In function `hb_gt_os2_Init':
+../../gtos2.c:508: warning: dereferencing type-punned pointer will break
+strict-
+aliasing rules
+../../gtos2.c:518: warning: dereferencing type-punned pointer will break
+strict-
+aliasing rules
+../../hvm.c: In function `hb_vmInit':
+../../hvm.c:397: warning: missing initializer
+../../hvm.c:397: warning: (near initialization for
+`RegRec.ExceptionHandler')
+../../dbcmd.c: In function `HB_FUN_DBSEEK':
+../../dbcmd.c:2023: warning: signed and unsigned type in conditional
+expression
+-----------------------------------------------------
+
+
+Any hints in order to build Harbour beta 0.99.1 branch in OS/2 are welcome
+
+Gracias,
+David Macias
+
+
+
+
+From marciomgil at bol.com.br  Sat Jan 27 13:07:52 2007
+From: marciomgil at bol.com.br (=?iso-8859-1?Q?M=E1rcio_Gil?=)
+Date: Sat Jan 27 22:59:02 2007
+Subject: RES: [Harbour] MaxRow() on Windows XP (Harbour Beta build 0.99-1)
+In-Reply-To: <20070126180700.GA30268@localhost.localdomain>
+Message-ID: <20070127170812.BC3F848000698@smart4.bol.com.br>
+
+Hello Przemek,
+
+Thanks, work fine!
+
+But, why this configuration isn't default? Since the command prompt of
+Windows XP, normally, have 500 lines in de screen buffer. In that
+operational system the ALERT window normally don't work without this command
+line.
+
+M?rcio.
+
+> -----Mensagem original-----
+> De: harbour-bounces@harbour-project.org 
+> [mailto:harbour-bounces@harbour-project.org] Em nome de 
+> Przemyslaw Czerpak
+> Enviada em: sexta-feira, 26 de janeiro de 2007 15:07
+> Para: Harbour Project Main Developer List.
+> Assunto: Re: [Harbour] MaxRow() on Windows XP (Harbour Beta 
+> build 0.99-1)
+> 
+> On Fri, 26 Jan 2007, M?rcio Gil wrote:
+> > Hello people,
+> > The code:
+> > ? "Row(): "+STR(Row())
+> > ? "MaxRow():"+STR(MaxRow())
+> > ALERT("Row(): "+STR(Row())+";MaxRow():"+STR(MaxRow()))
+> > With Harbour result:
+> > Row():        103
+> > MaxRow():      2999
+> > And the ALERT window don't appear (there is very down).
+> 
+> GTWIN in WinXP accepts any console window size set by user.
+> If you do not like the default size then change it in
+> the window preferences or use setmode() in your code.
+> I haven't tested this code but it should change console
+> window size to the visible (not scrolled) size.
+> 
+> #include "hbgtinfo.ch"
+> proc main()
+>    setmode( hb_gtInfo( GTI_VIEWPORTHEIGHT ), hb_gtInfo( 
+> GTI_VIEWPORTWIDTH ) )
+>    alert( os() + ";" + version() + ";" + hb_gtVersion( 1 ) )
+> return
+> 
+> best regards,
+> Przemek
+
+From smalltalker.marcelo at gmail.com  Wed Jan 31 09:33:27 2007
+From: smalltalker.marcelo at gmail.com (Marcelo Cortez)
+Date: Wed Jan 31 09:33:30 2007
+Subject: [Harbour] hacking question
+Message-ID: <c689f9a60701310633t3647776akb6d777b69a22e12f@mail.gmail.com>
+
+Hi all
+
+
+i'ts posible to determinate where ( start offset) of symbol table ,
+may be, pcode table, readeding  header of any  .exe ( clipper or
+harbour) compiled program?
+
+i'ts here the right list for this questions?
+
+best regards
+ mdc

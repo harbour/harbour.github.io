@@ -1,0 +1,798 @@
+From vatzct at polly.com.ua  Wed Nov 11 02:22:32 2009
+From: vatzct at polly.com.ua (vatzct)
+Date: Wed Nov 11 02:22:22 2009
+Subject: [Harbour-users] about hbtip
+Message-ID: <4AFA6638.8050004@polly.com.ua>
+
+I got error with loadhtml, see below;
+
+C:\dev\harbour_svn\contrib\hbtip\tests\>loadhtml.exe
+
+     15504 bytes received
+Images 
+http://images.google.de/images?hl=en&q=xHarbour&um=1&ie=UTF-8&sa=N&tab=wi
+
+Error BASE/1004  No exported method: AS
+Called from AS(0)
+Called from MAIN(46)
+
+What is right code must be instead of this
+
+   // "aS" is the plural of "a" and returns all <a href="url"> tags
+   aLink := oNode:aS
+
+   FOR EACH oNode IN aLink
+      ? HtmlToOem( oNode:getText("") ), oNode:href
+   NEXT
+
+Regards,
+Alexey Myronenko
+From vatzct at polly.com.ua  Wed Nov 11 02:58:58 2009
+From: vatzct at polly.com.ua (vatzct)
+Date: Wed Nov 11 02:58:48 2009
+Subject: [Harbour-users] hbmk2 output info
+Message-ID: <4AFA6EC2.5080706@polly.com.ua>
+
+Hi Viktor!
+
+When i compiling hwgui sources, hbmk2 is show
+
+hbmk2: Processing: hwgui.hbc
+hbmk2: Compiling Harbour sources...               
+<----------------------------
+hbmk2: Harbour compiler command (embedded):
+(c:\dev\harbour\bin\harbour.exe) -n1 source\errorsys.prg 
+source\hipedit.prg ...
+...
+
+i understand that hbmk2 not compiling harbour sources but it says that. 
+Maybe just "Compiling sources..."?
+
+Regards,
+Alexey Myronenko
+
+From gvarona at ec-red.com  Fri Nov 13 09:46:43 2009
+From: gvarona at ec-red.com (http://news.gmane.org/gmane.comp.db.sqlite.general)
+Date: Fri Nov 13 10:00:14 2009
+Subject: [Harbour-users] Started with Linux
+Message-ID: <hdjra5$796$1@ger.gmane.org>
+
+[SPA]
+Iniciandome en Linux
+Hola, estoy iniciandome en el uso del SO Linux a traves de Ubuntu 8.04,
+hasta ahora he podido bajar y construir Harbour desde el SVN, tambien he
+construido el binario de mi aplicac??n, se trata de una peque?a
+aplicaci?n de consola que viene funcionando bien bajo Windows XP, aqui
+yo tengo una carpeta que la comparto y bajo esta carpeta esta la
+estructura de carpetas que utiliza mi aplicaci?n, la estructura es mas o
+menos la siguiente:
+\sistema		<-- Carpeta Compartida
+	\SyS-GVS	<-- Carpeta del Sistema
+		\CDX	<-- Carpeta de Indices
+		\Cont	<-- Carpeta de Programas
+		\Datos	<-- Carpeta de DATA
+		\Tablas	<-- Carpeta de Tablas
+
+Esta estructura la cargo a unas variables de memoria de la siguiente manera:
+wDirPRG := \SyS-GVS\Cont
+wDirCDX := \SyS-GVS\CDX
+wDirDAT := \SyS-GVS\Datos
+wDirTAB := \SyS-GVS\Tablas
+
+En Windows, lo que hago es simplemente compartir la carpeta \sistema, y
+en cada terminal, incluida la maquina local, conecto esta carpeta a una
+unidad de red y ya puedo utilizar el sistema.
+?C?mo puedo hacer esto en Ubuntu?
+
+[ENG] By Google
+
+Started with Linux
+Hello, I'm starting to use Linux OS through Ubuntu 8.04, so far I could
+go down and build from SVN Harbor, I've also built the binary of my
+application, it is a small console application that has worked well
+under Windows XP, here I have a folder that I share and under this
+folder is the folder structure used by my application, the structure is
+more or less as follows:
+\ system 		<- Shared Folder
+	\ SYS-GVS 	<- System Folder
+	\ CDX 		<- Folder Index
+	\ Cont 		<- Folder Programs
+	\ Data 		<- DATA Folder
+	\ Tables 	<- Folder Table
+
+This structure is under some memory variables as follows:
+wDirPRG := \SyS-GVS\Cont
+wDirCDX := \SyS-GVS\CDX
+wDirDAT := \SyS-GVS\Datos
+wDirTAB := \SyS-GVS\Tablas
+
+In Windows, what I do is simply share the folder \system, and at each
+terminal, including the local machine, I connect this folder to a
+network drive and I can use the system.
+How can I do this in Ubuntu?
+
+TIA
+
+Best Regards
+GVS
+
+
+From Denis.Baller at stm.info  Fri Nov 13 10:02:01 2009
+From: Denis.Baller at stm.info (Baller, Denis)
+Date: Fri Nov 13 10:02:09 2009
+Subject: [Harbour-users] need some help 
+Message-ID: <FA7CE78D44A25242AF3F31D476AA981F20363C4339@E2K7STM.corpo.stm.info>
+
+Hi,
+
+            I downloaded the Harbour Projet to help me resolve a bug with a program that was originaly compile in 94?s with Clipper 5 and new PC that are to fast for the code.
+I was able to decompile the original application with Valkyrie software. I?m able to recompile the application but I?m missing some library that render the new version useless with a RDD(0) error.
+
+After reading what Harbour offer, I?m trying to recompile the salvage code with it but I need a kind of Walktrought to help do that.
+I?m working on a Windows XP-Prof. with Visual Studio 2005 install on it. Its been 15 years since I touch Clipper 5 and I was working elsewhere, so I?m a bit rustee.
+I currently support old Foxpro 2.6 dos/win on this workstation with that on a Novell 3.12 server.
+
+I?ve install the harbour beta2.0 on my drive d:
+
+Thank?s and sorry for my poor English
+
+Denis Baller
+Analyste Programmeur
+800, rue de La Gaucheti?re Ouest
+Bureau 8500
+T?l.: (514) 280-7482
+Fax: (514) 280-7206
+denis.baller@stm.info<mailto:denis.baller@stm.info>
+
+Imprimer P c'est couper.  Pensez-y!
+
+Avis de confidentialit? : Ce document ?lectronique (incluant tout fichier ou ?l?ment qui y est joint) est destin? uniquement ? la personne ou ? l'entit? ? qui il est adress?. Il peut contenir de l'information prot?g?e ou des renseignements confidentiels assujettis au secret professionnel. Si vous avez re?u ce document par erreur, veuillez le d?truire et avoir l'obligeance de communiquer avec nous, afin que nous apportions les correctifs requis. Toute distribution, reproduction ou autre utilisation de ce document par un destinataire non vis? est interdite.
+
+From mbelgrano at deltain.it  Fri Nov 13 10:13:53 2009
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Fri Nov 13 10:14:22 2009
+Subject: [Harbour-users] need some help
+In-Reply-To: <FA7CE78D44A25242AF3F31D476AA981F20363C4339@E2K7STM.corpo.stm.info>
+References: <FA7CE78D44A25242AF3F31D476AA981F20363C4339@E2K7STM.corpo.stm.info>
+Message-ID: <609353e70911130713g2cfc6c17n5e3143f2cae567c6@mail.gmail.com>
+
+here you can download beta3 http://www.syenar.hu/harbour/
+
+with clipper you have a batch
+clipper one.prg two,prrg
+linker b/r fi ...
+
+with harbour after point path to your harbour bin d:\harbour
+hbmk2 one.prg two.prg
+you have one.exe created
+
+2009/11/13 Baller, Denis <Denis.Baller@stm.info>:
+> Hi,
+>
+> ? ? ? ? ? ?I downloaded the Harbour Projet to help me resolve a bug with a program that was originaly compile in 94?s with Clipper 5 and new PC that are to fast for the code.
+> I was able to decompile the original application with Valkyrie software. I?m able to recompile the application but I?m missing some library that render the new version useless with a RDD(0) error.
+>
+> After reading what Harbour offer, I?m trying to recompile the salvage code with it but I need a kind of Walktrought to help do that.
+> I?m working on a Windows XP-Prof. with Visual Studio 2005 install on it. Its been 15 years since I touch Clipper 5 and I was working elsewhere, so I?m a bit rustee.
+> I currently support old Foxpro 2.6 dos/win on this workstation with that on a Novell 3.12 server.
+>
+> I?ve install the harbour beta2.0 on my drive d:
+>
+> Thank?s and sorry for my poor English
+>
+> Denis Baller
+> Analyste Programmeur
+> 800, rue de La Gaucheti?re Ouest
+> Bureau 8500
+> T?l.: (514) 280-7482
+> Fax: (514) 280-7206
+> denis.baller@stm.info<mailto:denis.baller@stm.info>
+>
+> Imprimer P c'est couper. ?Pensez-y!
+>
+> Avis de confidentialit? : Ce document ?lectronique (incluant tout fichier ou ?l?ment qui y est joint) est destin? uniquement ? la personne ou ? l'entit? ? qui il est adress?. Il peut contenir de l'information prot?g?e ou des renseignements confidentiels assujettis au secret professionnel. Si vous avez re?u ce document par erreur, veuillez le d?truire et avoir l'obligeance de communiquer avec nous, afin que nous apportions les correctifs requis. Toute distribution, reproduction ou autre utilisation de ce document par un destinataire non vis? est interdite.
+>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>
+
+
+
+-- 
+Massimo Belgrano
+
+Iscritto all'albo dei CTU presso il Tribunale di Novara per materia Informatica
+Delta Informatica S.r.l. (http://www.deltain.it/) (+39 0321 455962)
+Analisi e sviluppo software per Lan e Web -  Consulenza informatica - Formazione
+From bruno.luciani at gmail.com  Fri Nov 13 10:33:07 2009
+From: bruno.luciani at gmail.com (Bruno Luciani)
+Date: Fri Nov 13 10:33:17 2009
+Subject: [Harbour-users] Started with Linux
+In-Reply-To: <hdjra5$796$1@ger.gmane.org>
+References: <hdjra5$796$1@ger.gmane.org>
+Message-ID: <133778360911130733r3f176035o9cf1b2380c136310@mail.gmail.com>
+
+El 13 de noviembre de 2009 11:46,
+http://news.gmane.org/gmane.comp.db.sqlite.general <gvarona@ec-red.com>escribi?:
+
+> [SPA]
+> Iniciandome en Linux
+> Hola, estoy iniciandome en el uso del SO Linux a traves de Ubuntu 8.04,
+> hasta ahora he podido bajar y construir Harbour desde el SVN, tambien he
+> construido el binario de mi aplicac??n, se trata de una peque?a
+> aplicaci?n de consola que viene funcionando bien bajo Windows XP, aqui
+> yo tengo una carpeta que la comparto y bajo esta carpeta esta la
+> estructura de carpetas que utiliza mi aplicaci?n, la estructura es mas o
+> menos la siguiente:
+> \sistema                <-- Carpeta Compartida
+>        \SyS-GVS        <-- Carpeta del Sistema
+>                \CDX    <-- Carpeta de Indices
+>                \Cont   <-- Carpeta de Programas
+>                \Datos  <-- Carpeta de DATA
+>                \Tablas <-- Carpeta de Tablas
+>
+> Esta estructura la cargo a unas variables de memoria de la siguiente
+> manera:
+> wDirPRG := \SyS-GVS\Cont
+> wDirCDX := \SyS-GVS\CDX
+> wDirDAT := \SyS-GVS\Datos
+> wDirTAB := \SyS-GVS\Tablas
+>
+> En Windows, lo que hago es simplemente compartir la carpeta \sistema, y
+> en cada terminal, incluida la maquina local, conecto esta carpeta a una
+> unidad de red y ya puedo utilizar el sistema.
+> ?C?mo puedo hacer esto en Ubuntu?
+>
+GVS
+
+En linux tenes dos opciones para compartir archivos SAMBA o NFS
+
+si no necesitas samba para compartir archivos con maquinas windows
+
+podrias probar directamente con NFS que es nativo linux
+
+Samba es un servicio que hace que puedas ver los recursos compartidos como
+si fuera un server windows.
+
+Busca info de NFS , MOUNT NFS , este servicio debe correr en la maquina
+servidor
+con los recursos a compartir en la PC cliente y luego deben ser montados en
+una carpeta de la pc cliente
+
+Montar es relacionar una carpeta o recurso del servidor con una del PC
+cliente
+
+Saludos
+
+Bruno
+>
+>
+> [ENG] By Google
+>
+> Started with Linux
+> Hello, I'm starting to use Linux OS through Ubuntu 8.04, so far I could
+> go down and build from SVN Harbor, I've also built the binary of my
+> application, it is a small console application that has worked well
+> under Windows XP, here I have a folder that I share and under this
+> folder is the folder structure used by my application, the structure is
+> more or less as follows:
+> \ system                <- Shared Folder
+>        \ SYS-GVS       <- System Folder
+>        \ CDX           <- Folder Index
+>        \ Cont          <- Folder Programs
+>        \ Data          <- DATA Folder
+>        \ Tables        <- Folder Table
+> This structure is under some memory variables as follows:
+> wDirPRG := \SyS-GVS\Cont
+> wDirCDX := \SyS-GVS\CDX
+> wDirDAT := \SyS-GVS\Datos
+> wDirTAB := \SyS-GVS\Tablas
+>
+> In Windows, what I do is simply share the folder \system, and at each
+> terminal, including the local machine, I connect this folder to a
+> network drive and I can use the system.
+> How can I do this in Ubuntu?
+>
+
+
+
+
+In linux you have two options for SAMBA or NFS file sharing
+
+if you do not need samba to share files with windows machines
+
+you could try directly with NFS is a native linux
+
+Samba is a service that means you can view the shares as
+if it were a Windows server.
+
+Info for NFS, NFS MOUNT, this service must run on the host machine
+with resources to share in the PC client and then must be assembled in a
+folder on the client pc
+
+Mounting is to relate a folder or server with a client PC
+
+Greetings
+
+Bruno
+
+>
+> TIA
+>
+> Best Regards
+> GVS
+>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From eyelagui at adinet.com.uy  Fri Nov 13 10:43:21 2009
+From: eyelagui at adinet.com.uy (Richard)
+Date: Fri Nov 13 10:43:27 2009
+Subject: [Harbour-users] need some help
+In-Reply-To: <609353e70911130713g2cfc6c17n5e3143f2cae567c6@mail.gmail.com>
+References: <FA7CE78D44A25242AF3F31D476AA981F20363C4339@E2K7STM.corpo.stm.info>
+	<609353e70911130713g2cfc6c17n5e3143f2cae567c6@mail.gmail.com>
+Message-ID: <4AFD7E99.3080008@adinet.com.uy>
+
+I ussually compile using the same(kind off) old batch method.
+It is almost the way i did in the past. It may not be the most ordered 
+way, but is the only way i wont get messed up.
+
+Regards and the best of luck.
+
+Explanation:
+
+I declare the environment variables on the batch file (path, include, etc)
+
+    set pathharb=d:\programa\comps\xharbour121\bin\b32
+    set incsharb=d:\programa\comps\xharbour121\include
+    set libharb=d:\programa\comps\xharbour121\lib\b32
+    set libbc32=d:\programa\comps\BCC55\lib
+    set incbc32=d:\programa\comps\BCC55\include
+    set
+    path=%path%;d:\programa\comps\BCC55\bin;d:\programa\comps\xharbour121\bin\b32
+
+Then fill with precompiling lines.
+
+    %pathharb%\harbour menu.prg  -n -m -i%incsharb% %2 %3 %harb_BCFLAGS%
+    %pathharb%\harbour funcs.prg  -n -m -i%incsharb% %2 %3 %harb_BCFLAGS%
+
+And to the end the C++ compile
+
+    bcc32 -O2 -d %CFLAGS% -I%incsharb%;%incbc32%;%incmwvw%
+    -L%libharb%;%libbc32%;%libmwvw% menu.c funcs.c lang.lib vm.lib
+    rtl.lib rdd.lib macro.lib pp.lib dbfcdx.lib dbfntx.lib dbffpt.lib
+    common.lib libpdf.lib gtwvw.lib gtwin.lib codepage.lib ct.lib
+    tip.lib pcrepos.lib hsx.lib hbsix.lib zlib.lib
+
+    del *.c
+    del *.obj
+    del *.tds
+    del *.bak
+    move menu.exe terminado\menu.exe
+
+
+
+
+Massimo Belgrano escribi?:
+> here you can download beta3 http://www.syenar.hu/harbour/
+>
+> with clipper you have a batch
+> clipper one.prg two,prrg
+> linker b/r fi ...
+>
+> with harbour after point path to your harbour bin d:\harbour
+> hbmk2 one.prg two.prg
+> you have one.exe created
+>
+> 2009/11/13 Baller, Denis <Denis.Baller@stm.info>:
+>   
+>> Hi,
+>>
+>>            I downloaded the Harbour Projet to help me resolve a bug with a program that was originaly compile in 94?s with Clipper 5 and new PC that are to fast for the code.
+>> I was able to decompile the original application with Valkyrie software. I?m able to recompile the application but I?m missing some library that render the new version useless with a RDD(0) error.
+>>
+>> After reading what Harbour offer, I?m trying to recompile the salvage code with it but I need a kind of Walktrought to help do that.
+>> I?m working on a Windows XP-Prof. with Visual Studio 2005 install on it. Its been 15 years since I touch Clipper 5 and I was working elsewhere, so I?m a bit rustee.
+>> I currently support old Foxpro 2.6 dos/win on this workstation with that on a Novell 3.12 server.
+>>
+>> I?ve install the harbour beta2.0 on my drive d:
+>>
+>> Thank?s and sorry for my poor English
+>>
+>> Denis Baller
+>> Analyste Programmeur
+>> 800, rue de La Gaucheti?re Ouest
+>> Bureau 8500
+>> T?l.: (514) 280-7482
+>> Fax: (514) 280-7206
+>> denis.baller@stm.info<mailto:denis.baller@stm.info>
+>>
+>> Imprimer P c'est couper.  Pensez-y!
+>>
+>> Avis de confidentialit? : Ce document ?lectronique (incluant tout fichier ou ?l?ment qui y est joint) est destin? uniquement ? la personne ou ? l'entit? ? qui il est adress?. Il peut contenir de l'information prot?g?e ou des renseignements confidentiels assujettis au secret professionnel. Si vous avez re?u ce document par erreur, veuillez le d?truire et avoir l'obligeance de communiquer avec nous, afin que nous apportions les correctifs requis. Toute distribution, reproduction ou autre utilisation de ce document par un destinataire non vis? est interdite.
+>>
+>>
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>
+>>     
+>
+>
+>
+>   
+
+From anezch at gmail.com  Mon Nov 16 03:47:58 2009
+From: anezch at gmail.com (Agustianes Umbara Suwardi)
+Date: Mon Nov 16 03:48:09 2009
+Subject: [Harbour-users] DBFCDX and IDX files
+Message-ID: <1258361278.4043.26.camel@anezch-desktop>
+
+Hi, I'm using Harbour 1.1.0-dev nightly build. I'm trying to use my
+FoxPro databases using harbour. Here's a test code:
+
+function main()
+	REQUEST DBFCDX
+	
+	select 1
+	use /home/anezch/z/data/cor ;
+		index /home/anezch/z/data/corno.idx ;
+		via 'DBFCDX' ;
+		alias cor
+
+	use
+return nil
+
+This program always crash with this error message:
+Unrecoverable error 1010: hb_cdxIndexPageRead: Read index page
+failed.          
+Called from ORDLISTADD(0)                                             
+Called from MAIN(7) in test.prg
+
+When I tried to access it with FoxPro, there were no problem. If I don't
+include .idx in index statement, harbour shows an error telling me that
+it could not find corno.cdx. So I suspected that harbour always assume
+the index is CDX format regardless I write corno.idx.
+
+Then I tried to create an IDX from harbour:
+
+	use /home/anezch/z/data/cor via 'DBFCDX' alias cor
+	index on nocor to /home/anezch/z/data/corno.idx
+
+And when I opened it in FoxPro, I found that corno.idx is actually in
+CDX format. So how can I use IDX in Harbour?
+
+Thanks,
+Agustianes U.S.
+
+From druzus at acn.waw.pl  Mon Nov 16 10:19:06 2009
+From: druzus at acn.waw.pl (=?utf-8?Q?Przemys=C5=82aw?= Czerpak)
+Date: Mon Nov 16 10:19:13 2009
+Subject: [Harbour-users] DBFCDX and IDX files
+In-Reply-To: <1258361278.4043.26.camel@anezch-desktop>
+References: <1258361278.4043.26.camel@anezch-desktop>
+Message-ID: <20091116151906.GA8109@34-mo7-2.home.aster.pl>
+
+On Mon, 16 Nov 2009, Agustianes Umbara Suwardi wrote:
+
+Hi,
+
+> Hi, I'm using Harbour 1.1.0-dev nightly build. I'm trying to use my
+> FoxPro databases using harbour. Here's a test code:
+> function main()
+> 	REQUEST DBFCDX
+> 	select 1
+> 	use /home/anezch/z/data/cor ;
+> 		index /home/anezch/z/data/corno.idx ;
+> 		via 'DBFCDX' ;
+> 		alias cor
+> 	use
+> return nil
+> This program always crash with this error message:
+> Unrecoverable error 1010: hb_cdxIndexPageRead: Read index page
+> failed.          
+> Called from ORDLISTADD(0)                                             
+> Called from MAIN(7) in test.prg
+> When I tried to access it with FoxPro, there were no problem. If I don't
+> include .idx in index statement, harbour shows an error telling me that
+> it could not find corno.cdx. So I suspected that harbour always assume
+> the index is CDX format regardless I write corno.idx.
+> Then I tried to create an IDX from harbour:
+> 	use /home/anezch/z/data/cor via 'DBFCDX' alias cor
+> 	index on nocor to /home/anezch/z/data/corno.idx
+> And when I opened it in FoxPro, I found that corno.idx is actually in
+> CDX format. So how can I use IDX in Harbour?
+
+There are four possible index formats based on IDX/CDX structure:
+
+1. uncompresed single tag (.IDX)
+2. compresed single tag (.IDX)
+3. uncompresed multi tag (.CDX)
+4. compresed multi tag (.CDX)
+
+Clipper 5.2 DBFCDX and SIXCDX supports 2 and 4 (maybe also 1 but I haven't
+tested it.
+Clipper 5.3 DBFCDX, ClipMore/COMIX, [x]Harbour supports only 4.
+In documentation ForPro supports 1, 2 and 4.
+I haven't heard about implementation which supports 3-rd version.
+
+Probably the file you try to use is in format 2 which is not supported.
+In fact it's stripped version of format 3 so if someone is interesting
+then he can add support for this format using existing DBFCDX code.
+
+best regards,
+Przemek
+From anezch at gmail.com  Tue Nov 17 03:54:05 2009
+From: anezch at gmail.com (Agustianes Umbara Suwardi)
+Date: Tue Nov 17 04:15:10 2009
+Subject: [Harbour-users] DBFCDX and IDX files
+In-Reply-To: <20091116151906.GA8109@34-mo7-2.home.aster.pl>
+References: <1258361278.4043.26.camel@anezch-desktop>
+	<20091116151906.GA8109@34-mo7-2.home.aster.pl>
+Message-ID: <1258448045.3991.4.camel@anezch-desktop>
+
+Thank you for your information Przemek, now I'm converting IDX files to
+CDX. Besides, CDX files are easier to maintain and use.
+
+Regards,
+Agustianes U.S.
+
+On Mon, 2009-11-16 at 16:19 +0100, Przemys?aw Czerpak wrote:
+> On Mon, 16 Nov 2009, Agustianes Umbara Suwardi wrote:
+> 
+> Hi,
+> 
+> > Hi, I'm using Harbour 1.1.0-dev nightly build. I'm trying to use my
+> > FoxPro databases using harbour. Here's a test code:
+> > function main()
+> > 	REQUEST DBFCDX
+> > 	select 1
+> > 	use /home/anezch/z/data/cor ;
+> > 		index /home/anezch/z/data/corno.idx ;
+> > 		via 'DBFCDX' ;
+> > 		alias cor
+> > 	use
+> > return nil
+> > This program always crash with this error message:
+> > Unrecoverable error 1010: hb_cdxIndexPageRead: Read index page
+> > failed.          
+> > Called from ORDLISTADD(0)                                             
+> > Called from MAIN(7) in test.prg
+> > When I tried to access it with FoxPro, there were no problem. If I don't
+> > include .idx in index statement, harbour shows an error telling me that
+> > it could not find corno.cdx. So I suspected that harbour always assume
+> > the index is CDX format regardless I write corno.idx.
+> > Then I tried to create an IDX from harbour:
+> > 	use /home/anezch/z/data/cor via 'DBFCDX' alias cor
+> > 	index on nocor to /home/anezch/z/data/corno.idx
+> > And when I opened it in FoxPro, I found that corno.idx is actually in
+> > CDX format. So how can I use IDX in Harbour?
+> 
+> There are four possible index formats based on IDX/CDX structure:
+> 
+> 1. uncompresed single tag (.IDX)
+> 2. compresed single tag (.IDX)
+> 3. uncompresed multi tag (.CDX)
+> 4. compresed multi tag (.CDX)
+> 
+> Clipper 5.2 DBFCDX and SIXCDX supports 2 and 4 (maybe also 1 but I haven't
+> tested it.
+> Clipper 5.3 DBFCDX, ClipMore/COMIX, [x]Harbour supports only 4.
+> In documentation ForPro supports 1, 2 and 4.
+> I haven't heard about implementation which supports 3-rd version.
+> 
+> Probably the file you try to use is in format 2 which is not supported.
+> In fact it's stripped version of format 3 so if someone is interesting
+> then he can add support for this format using existing DBFCDX code.
+> 
+> best regards,
+> Przemek
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+From jochercoles at gmail.com  Mon Nov 23 08:46:08 2009
+From: jochercoles at gmail.com (Javier Chercoles)
+Date: Mon Nov 23 08:46:16 2009
+Subject: [Harbour-users] Information how compiler projects with many files.
+Message-ID: <43f723280911230546w2cf2fc94wac39f3c87ffa7005@mail.gmail.com>
+
+Hello, I must return to the world of Clipper, and I find the problem of
+license of the Clipper Compiler. I searched and I found your compiler but I
+need a example for to compile muy files.
+
+I have File1.prg, File2.prg, File3.prg and I want obtain one File.exe.
+
+How I must compiler?
+
+Thank.
+
+Javier O. Ch?rcoles
+From vatzct at polly.com.ua  Mon Nov 23 08:52:44 2009
+From: vatzct at polly.com.ua (vatzct)
+Date: Mon Nov 23 08:52:31 2009
+Subject: [Harbour-users] Information how compiler projects with many files.
+In-Reply-To: <43f723280911230546w2cf2fc94wac39f3c87ffa7005@mail.gmail.com>
+References: <43f723280911230546w2cf2fc94wac39f3c87ffa7005@mail.gmail.com>
+Message-ID: <4B0A93AC.1020905@polly.com.ua>
+
+Javier Chercoles ???????(??):
+> Hello, I must return to the world of Clipper, and I find the problem of
+> license of the Clipper Compiler. I searched and I found your compiler but I
+> need a example for to compile muy files.
+>
+> I have File1.prg, File2.prg, File3.prg and I want obtain one File.exe.
+>
+> How I must compiler?
+>
+> Thank.
+>
+> Javier O. Ch?rcoles
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>   
+ From INSTALL file:
+
+Examples to build a Harbour application:
+
+- To build one simple .prg:
+'hbmk2 hello.prg'
+- To build multiple .prg sources into one application:
+'hbmk2 mymain.prg client.prg'
+- To build an application using a project file:
+'hbmk2 myapp.hbp'
+- To build an application using incremental mode:
+'hbmk2 myapp.hbp -inc'
+- To build an application which uses a contrib library:
+'hbmk2 myapp.prg -lhbct'
+- To build an application which uses a 3rd party library:
+'hbmk2 myapp.prg -lsuplib -L<path_to_lib>'
+- To build an application which uses a 3rd party library,
+and the 3rd party lib has an .hbc file:
+'hbmk2 myapp.prg rddleto.hbc -L<path_to_letodb>'
+- To build an application which uses Windows resources:
+'hbmk2 mymain.prg client.prg myres.rc'
+- To build an application which links against Harbour dynamic libraries:
+'hbmk2 -shared hello.prg'
+- To build an application out of all .prg and .c sources residing
+in 'source' subdir:
+'hbmk2 -omyapp src/*.prg src/*.c'
+
+Regards,
+Alexey Myronenko
+From gvarona at ec-red.com  Mon Nov 23 10:52:08 2009
+From: gvarona at ec-red.com (http://news.gmane.org/gmane.comp.db.sqlite.general)
+Date: Mon Nov 23 10:49:12 2009
+Subject: [Harbour-users] Function or routine, in console mode,
+ to select a file and get the file name and path
+Message-ID: <heeasn$8l8$1@ger.gmane.org>
+
+[SPA]
+?Habr? alguna funci?n o rutina, en modo consola, para seleccionar un 
+archivo y obtener el nombre de del archivo y su ruta?
+Algo similar a GetFile() del API de Windows.
+
+[ENG] By Google
+Is there any function or routine, in console mode, to select a file and 
+get the file name and path?
+Something similar to GetFile () Windows API.
+
+TIA
+
+BestRegars
+GVS
+
+From szekely3 at enternet.hu  Sat Nov 28 17:40:33 2009
+From: szekely3 at enternet.hu (szekely)
+Date: Sat Nov 28 17:40:42 2009
+Subject: [Harbour-users] dbedit / user function
+Message-ID: <mailman.0.1259448042.3964.harbour-users@harbour-project.org>
+
+Hi !
+
+I want to do the next: 
+I have a TABLE, dbedit it, and if on a record I press ENTER then it
+must go into the CHILD table. (And if I press INS it must open an input
+form, this isn't here now).
+
+My  problem is with the next code, that it edits the TABLE and inmediat
+go to the fchild function and edits the CHILD also. (I want to select a
+record in TABLE and then go to the adequate record of CHILD.)  And when
+I press ENTER in the child, it returns with error: 
+Error BASE/1003  Variable does not exist: BIZDATUM 
+where BIZDATUM is a field in the TABLE.
+
+Many thanks if anybody can help me: Andras
+
+
+The code:
+------------------------------
+function ftable()
+   select table
+   	dbedit(3, 3, 21, 76,,"fchild")
+   return nil  
+
+function fchild(n1, n2)
+   select child
+	dbedit(7, 3, 21, 76)
+   return 1  
+
+
+
+____________________________________________________
+Szekely Andras <> szekely3@enternet.hu <> http://2Mai.dyndns.org <> eCS 1.2 <>
+
+From doleynikov at gmail.com  Mon Nov 30 07:21:35 2009
+From: doleynikov at gmail.com (INETERA user)
+Date: Mon Nov 30 07:22:39 2009
+Subject: [Harbour-users] SQL databases with Harbour
+Message-ID: <1259583696.1732.61.camel@dmitry-desktop>
+
+Hi everyone!
+I just decided to return to the Clipper world. I have pretty good view
+how to use dbf files, but have no (absolutely NO) experience with SQL
+databases. where can I get examples of using sql database in replacement
+of set DBF files? I know that some DBF features need to be emulated in
+sql,but there are several RDDs, which can do so.
+I extremely need simple step-by-step examples: 
+1)how to install driver (preferably for MySQL)
+2)how to compile programs with Harbour on Linux (what to include and so
+on)
+3)example of application with couple of tables (indexes, relations,
+loops)
+
+
+THanks,
+Dmitry Oleynikov
+
+From szekely3 at enternet.hu  Mon Nov 30 10:00:36 2009
+From: szekely3 at enternet.hu (szekely)
+Date: Mon Nov 30 10:00:43 2009
+Subject: [Harbour-users] dbedit / user function
+Message-ID: <mailman.1.1259593243.3964.harbour-users@harbour-project.org>
+
+Hi !
+
+>I want to do the next: 
+>I have a TABLE, dbedit it, and if on a record I press ENTER then it
+>must go into the CHILD table. (And if I press INS it must open an input ...
+
+I resolved the problem of the user function in the dbedit. But I have
+another: my program is in many source file (*.prg). I want use the: "
+#include <inkey.ch> " . I must write it in all *.prg files, or is a way
+to write it in the first file only?
+
+Thanks: Andras
+
+____________________________________________________
+Szekely Andras <> szekely3@enternet.hu <> http://2Mai.dyndns.org <> eCS 1.2 <>
+
+From alcisoft at arrakis.es  Mon Nov 30 13:15:00 2009
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Mon Nov 30 13:16:49 2009
+Subject: [Harbour-users] Re: SQL databases with Harbour
+References: <1259583696.1732.61.camel@dmitry-desktop>
+Message-ID: <hf125b$k1r$1@ger.gmane.org>
+
+
+>I just decided to return to the Clipper world. I have pretty good view
+Where do you from ? v.foxpro ?
+
+
+
+
+

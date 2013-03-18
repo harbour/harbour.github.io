@@ -1,0 +1,313 @@
+From harbour-users at harbour-project.org  Tue Mar  3 09:37:18 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Tue Mar  3 09:38:02 2009
+Subject: [Harbour-users] POCC build error
+Message-ID: <49AD409E.4000500@polly.com.ua>
+
+process_begin: CreateProcess(NULL, pocc.exe -I. -Ze -Go -MT -Ot -Ox 
+-I../../../.
+./include -c ../../expropt1.c -Foexpropt1.obj, ...) failed.
+make (e=193): Error 193
+mingw32-make.exe[3]: *** [expropt1.obj] Error 193
+mingw32-make.exe[2]: *** [descend] Error 2
+mingw32-make.exe[1]: *** [common.inst] Error 2
+mingw32-make.exe: *** [source.inst] Error 2
+
+Harbour from svn
+/*
+ * $Id: ChangeLog 10513 2009-03-03 09:44:16Z vszakats $
+ */
+
+With BCC all ok.
+
+Regards,
+Alexey Myronenko
+From harbour-users at harbour-project.org  Tue Mar  3 09:56:03 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Tue Mar  3 09:56:45 2009
+Subject: [Harbour-users] Re: POCC build error
+In-Reply-To: <49AD409E.4000500@polly.com.ua>
+References: <49AD409E.4000500@polly.com.ua>
+Message-ID: <49AD4503.8010803@polly.com.ua>
+
+vatzct ???????(??):
+> process_begin: CreateProcess(NULL, pocc.exe -I. -Ze -Go -MT -Ot -Ox 
+> -I../../../.
+> ./include -c ../../expropt1.c -Foexpropt1.obj, ...) failed.
+> make (e=193): Error 193
+> mingw32-make.exe[3]: *** [expropt1.obj] Error 193
+> mingw32-make.exe[2]: *** [descend] Error 2
+> mingw32-make.exe[1]: *** [common.inst] Error 2
+> mingw32-make.exe: *** [source.inst] Error 2
+>
+> Harbour from svn
+> /*
+> * $Id: ChangeLog 10513 2009-03-03 09:44:16Z vszakats $
+> */
+>
+> With BCC all ok.
+>
+> Regards,
+> Alexey Myronenko
+>
+Sorry, i'm forgot to set environment for pellesC.
+Now all ok.
+
+Regards,
+Alexey Myronenko
+From harbour-users at harbour-project.org  Mon Mar  2 19:41:50 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Thu Mar  5 01:37:04 2009
+Subject: [Harbour-users] serial communications 
+Message-ID: <mailman.0.1236235024.3346.harbour-users@harbour-project.org>
+
+Hello, 
+ 
+I am trying to get serial commincations working.  
+ 
+I have an older version of xharbour with xhbcomm.  I bought xharbour becase
+it has serial support.  After paying for it, I was told  that the particular
+library that I need, xhbcomm, is not source code available, without
+explanation.  I suppose that this is because it not open source licensed.
+This means that without source code, I cannot upgrade.  
+ 
+I have tried to use the hbcomm.lib, but it always crashed with an "abnormal
+program termination" message.  According to a previous post, this is because
+my input parameters are incorrect.  I have tried different parameters, but
+it still crashes.  
+ 
+Next, I tried telepathy, but it appears to support Linux and OS/2, not
+Windows32.  
+ 
+Now I am trying testprt1.prg in contrib/hbwin.  I have two computers connect
+via null modem cable.  The owinport:write method seems to work, but
+oWinport:read does not.  
+ 
+Any suggestions greatly appreciated, thanks, mattfriend88
+<mailto:mattfriend88@yahoo.com>   at yahoo.com 
+ 
+From harbour-users at harbour-project.org  Thu Mar  5 04:52:37 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Thu Mar  5 04:52:44 2009
+Subject: [Harbour-users] serial communications
+In-Reply-To: <49af73dc.16125e0a.7bd2.0ab2SMTPIN_ADDED@mx.google.com>
+References: <49af73dc.16125e0a.7bd2.0ab2SMTPIN_ADDED@mx.google.com>
+Message-ID: <609353e70903050152y3085fa2q184c262566e28c62@mail.gmail.com>
+
+hbtpathy doesn't have a complete implementation
+for Windows. There is however a comm subsystem
+for Windows in hbwin.lib. See testprt1.prg and testprt2.prg
+for example code.
+
+Here is used read command and seem works
+
+#include "hbwin.ch"
+
+procedure main(cPortName)
+
+    local oWinPort := WinPort():Init(cPortName, CBR_9600, NOPARITY, 8,
+ONESTOPBIT)
+    local cString := "ATE0" + chr(13) + "ATI3" + chr(13)
+    local nResult
+
+    if !oWinPort:Open
+        ? "Open() failed :", oWinPort:Error()
+    else
+        ? "Open() succeeded"
+        ?
+        if oWinPort:SetDTR(.t.)
+            ? "SetDTR(.t.) succeeded"
+        else
+            ? "SetDTR(.t.) failed :", oWinPort:Error()
+        endif
+        if (nResult := oWinPort:Write(cString)) == len(cString)
+            ? "Write() succeeded"
+        else
+            ? "Write() failed, returned ", nResult, " expected ", len(cString)
+        endif
+        ? "Scan something... we'll not read it but purge it, press enter"
+        inkey(0)
+        ? "Read() ", oWinPort:Read(@cString, 32), len(cString), cString
+        ? oWinPort:Error()
+        ? "Close", oWinPort:Close()
+    endif
+
+return
+
+2009/3/3  <harbour-users@harbour-project.org>:
+> Hello,
+>
+> I am trying to get serial commincations working.
+>
+> I have an older version of xharbour with xhbcomm. ?I bought xharbour becase
+> it has serial support. ?After paying for it, I was told ?that the particular
+> library that I need, xhbcomm, is not source code available, without
+> explanation. ?I suppose that this is because it not open source licensed.
+> This means that without source code, I cannot upgrade.
+>
+> I have tried to use the hbcomm.lib, but it always crashed with an "abnormal
+> program termination" message. ?According to a previous post, this is because
+> my input parameters are incorrect. ?I have tried different parameters, but
+> it still crashes.
+>
+> Next, I tried telepathy, but it appears to support Linux and OS/2, not
+> Windows32.
+>
+> Now I am trying testprt1.prg in contrib/hbwin. ?I have two computers connect
+> via null modem cable. ?The owinport:write method seems to work, but
+> oWinport:read does not.
+>
+> Any suggestions greatly appreciated, thanks, mattfriend88
+> <mailto:mattfriend88@yahoo.com> ? at yahoo.com
+>
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+
+Albo Nazionale Informatici Professionisti 2620
+Socio 2843 Associazione Informatici prof.
+
+Analisi e sviluppo software per Lan e Web
+Consulenza informatica - Formazione
+Delta Informatica S.r.l.  http://www.deltain.it
+Via Torelli,31 - 28100 Novara - Tel: 0321/30281
+From harbour-users at harbour-project.org  Thu Mar  5 04:53:33 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Thu Mar  5 04:53:38 2009
+Subject: [Harbour-users] Re: POCC build error
+In-Reply-To: <49AD4503.8010803@polly.com.ua>
+References: <49AD409E.4000500@polly.com.ua> <49AD4503.8010803@polly.com.ua>
+Message-ID: <609353e70903050153s68762de2k97a0079c6a49868@mail.gmail.com>
+
+Good
+
+2009/3/3  <harbour-users@harbour-project.org>:
+> vatzct ???????(??):
+>>
+>> process_begin: CreateProcess(NULL, pocc.exe -I. -Ze -Go -MT -Ot -Ox
+>> -I../../../.
+>> ./include -c ../../expropt1.c -Foexpropt1.obj, ...) failed.
+>> make (e=193): Error 193
+>> mingw32-make.exe[3]: *** [expropt1.obj] Error 193
+>> mingw32-make.exe[2]: *** [descend] Error 2
+>> mingw32-make.exe[1]: *** [common.inst] Error 2
+>> mingw32-make.exe: *** [source.inst] Error 2
+>>
+>> Harbour from svn
+>> /*
+>> * $Id: ChangeLog 10513 2009-03-03 09:44:16Z vszakats $
+>> */
+>>
+>> With BCC all ok.
+>>
+>> Regards,
+>> Alexey Myronenko
+>>
+> Sorry, i'm forgot to set environment for pellesC.
+> Now all ok.
+>
+> Regards,
+> Alexey Myronenko
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+From harbour-users at harbour-project.org  Sun Mar  8 19:33:45 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sun Mar  8 19:33:48 2009
+Subject: [Harbour-users] MySql
+Message-ID: <fb955ae40903081633s1b7a87b0o9631da3e221c7abd@mail.gmail.com>
+
+I am using Linux/Fedora, and I installed Harbor compiler to test,...
+
+It works great,... but I cannot figure out how to connect to MySql,...
+
+Where could I find a command's list, syntaxes or  just same examples?
+
+Thanks you very much.
+
+[ ]'s
+Leo
+From harbour-users at harbour-project.org  Mon Mar 16 18:48:33 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Mar 16 18:48:37 2009
+Subject: [Harbour-users] browse
+Message-ID: <031620092248.10581.49BED740000F375C0000295522218865869B0A02D29B9B0EBF0C0B020E0A9C@att.net>
+
+Is there any built in functionality in Harbour to get browse capability (like dbu)?  This sort of code works in FlagShip and elsewhere:
+
+use tempdbf
+browse()               && browse here
+
+Thanks.
+
+Sean
+From harbour-users at harbour-project.org  Mon Mar 16 21:05:35 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Mar 16 21:05:46 2009
+Subject: [Harbour-users] browse
+In-Reply-To: <031620092248.10581.49BED740000F375C0000295522218865869B0A02D29B9B0EBF0C0B020E0A9C@att.net>
+References: <031620092248.10581.49BED740000F375C0000295522218865869B0A02D29B9B0EBF0C0B020E0A9C@att.net>
+Message-ID: <133778360903161805t3e17617fxde92cabe4c5dcda7@mail.gmail.com>
+
+Yes , this code works in harbour
+
+almost all code in clipper  works in harbour
+
+Bruno
+
+2009/3/16 <harbour-users@harbour-project.org>
+
+> Is there any built in functionality in Harbour to get browse capability
+> (like dbu)?  This sort of code works in FlagShip and elsewhere:
+>
+> use tempdbf
+> browse()               && browse here
+>
+> Thanks.
+>
+> Sean
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From harbour-users at harbour-project.org  Tue Mar 24 09:08:42 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Tue Mar 24 09:08:50 2009
+Subject: [Harbour-users] compile error latest svn 
+Message-ID: <49C8DB5A.3090709@tiscalinet.it>
+
+I tried to compile the svn version but I get an error at early stage.
+I have BCC 5.5.1, win XP pro. I get the message: unresolved external 
+_hb_snprintf referenced from 
+v:\harbour-svn\harbour\lib\b32\hbcommon.lib|hbver.
+First I downloaded the SVN files, only to discover there were many 
+missing. So i added the missing files from the 1.0.1 directory tree. Is 
+this correct?
+I use the version 0.99 without problems, and the 1.0.1 too seems to work 
+well.
+Any help would be appreciated.
+TIA
+D. Campagna
+From harbour-users at harbour-project.org  Tue Mar 31 11:43:47 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed Apr  1 21:53:02 2009
+Subject: [Harbour-users] break point error
+Message-ID: <21146612.671071238514227123.JavaMail.nabble@tervel.nabble.com>
+
+when i set a break point the debugger not accept it and esecution not stop.
+My english is bad escuse me

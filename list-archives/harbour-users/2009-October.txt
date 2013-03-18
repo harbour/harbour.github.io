@@ -1,0 +1,973 @@
+From kardjo at gmail.com  Fri Oct  2 23:30:22 2009
+From: kardjo at gmail.com (Kardjo Danzict Izverno Bimantoro)
+Date: Fri Oct  2 23:30:28 2009
+Subject: [Harbour-users] Is this cpliment or substituion of CLIPPER.LIB?
+Message-ID: <8bfbfafe0910022030tac0da35u7f58f66a0555c9a8@mail.gmail.com>
+
+Hi all,
+
+I am new on Harbour. And my program is running well in legacy.
+When I use harbour as compiler, is my old Clipper53 can totally
+uninstalled??
+
+I mean, if i have no CLIPPER.LIB in my disk, is harbour have a substituion
+file to continue linking?
+
+FYI, I use Blinker 7.0
+
+Thank you guys..
+From icim at sfr.fr  Sat Oct  3 08:56:40 2009
+From: icim at sfr.fr (Badara Thiam)
+Date: Sat Oct  3 08:56:48 2009
+Subject: [Harbour-users] Is this cpliment or substituion of CLIPPER.LIB?
+In-Reply-To: <8bfbfafe0910022030tac0da35u7f58f66a0555c9a8@mail.gmail.com>
+References: <8bfbfafe0910022030tac0da35u7f58f66a0555c9a8@mail.gmail.com>
+Message-ID: <8B928475379D4FCE99C788EC93872A3C@BadouPortable>
+
+Hello,
+
+Yes, Harbour replace Clipper to create a C file,
+not to create an OBJ file. You have two choices :
+
+1 - Compile with Harbour or xHarbour to create a C source.
+2 - Link with Borland bcc 5.5 (free) to create yours .obj and .exe.
+  OR
+Link with Microsoft (i don't remember what).
+
+Takes a look to Harbour and xHarbour to do your choice.
+Fivewin is a good product to use if you have add graphic
+functions in your code.
+
+Regards.
+
+----- Original Message ----- 
+From: "Kardjo Danzict Izverno Bimantoro" <kardjo@gmail.com>
+To: <harbour-users@harbour-project.org>
+Sent: Saturday, October 03, 2009 5:30 AM
+Subject: [Harbour-users] Is this cpliment or substituion of CLIPPER.LIB?
+
+
+> Hi all,
+> 
+> I am new on Harbour. And my program is running well in legacy.
+> When I use harbour as compiler, is my old Clipper53 can totally
+> uninstalled??
+> 
+> I mean, if i have no CLIPPER.LIB in my disk, is harbour have a substituion
+> file to continue linking?
+> 
+> FYI, I use Blinker 7.0
+> 
+> Thank you guys..
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+From tech_know at sympatico.ca  Sun Oct  4 15:52:07 2009
+From: tech_know at sympatico.ca (RANDY OLEKSIW)
+Date: Sun Oct  4 15:52:13 2009
+Subject: [Harbour-users] Harbour with prg and c files.
+Message-ID: <BAY108-W490598E335AF1A4EBADB29E9D00@phx.gbl>
+
+
+Hi All
+
+ 
+
+I am a new user looking for a hand hold.
+
+ 
+
+I have 
+
+1. a Clipper prg file 
+
+2. and a C file 
+
+ 
+
+What I want to do is write a function in the C file and have that C function available to use in my prg file. Using HBMK2 HBC and HBP files.
+
+ 
+
+Does anyone have a VERY simple example of how to do this? Along with the steps onhow to do this.
+
+ 
+
+I have already converted and completed creating a Harbour exe from my old clipper program Using HBMK2 HBC and HBP files now I want to add a C function. 
+
+ 
+
+Many thanx
+
+ 
+
+Randy
+ 		 	   		  
+From eyelagui at gmail.com  Sun Oct  4 22:35:06 2009
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Sun Oct  4 22:35:15 2009
+Subject: [Harbour-users] Harbour with prg and c files.
+In-Reply-To: <BAY108-W490598E335AF1A4EBADB29E9D00@phx.gbl>
+References: <BAY108-W490598E335AF1A4EBADB29E9D00@phx.gbl>
+Message-ID: <4AC95B5A.10204@gmail.com>
+
+Hello Randy.
+
+You must precompile your programH.prg file using harbour(obtaining .c 
+files), then compile them and your programC.c file with your C compiler 
+(obtaining .obj files), then link all obtained .obj (programC.obj + 
+programH.obj + otherH.obj + plusH.obj) and required .lib files using 
+your usual linker and and you can call that function from inside your prg.
+I have made that way some time ago a simple program for calling 
+parallell port to move some motors using a harbour compiled .prg and a 
+.c file to send lpt signals.
+
+I mean, the "complicated" part is (to understand how) to call your 
+function from inside the "clipper" part, but you can do it the same way 
+you've been it without .c when using all .prg files.
+
+
+This is the sample .bat file i used to compile using harbour and openwatcom
+
+    @echo off
+    version
+    echo.
+    echo ------------preCompilo con Harbour---------------
+    %HB_BIN_INSTALL%\harbour menu.prg -n -q0 -gc -m -i%HB_INC_INSTALL%
+    %HARBOURFLAGS% -p -w0
+    %HB_BIN_INSTALL%\harbour archivos.prg -n -q0 -gc -m
+    -i%HB_INC_INSTALL% %HARBOURFLAGS% -p -w0
+    %HB_BIN_INSTALL%\harbour varmenus.prg -n -q0 -gc -m
+    -i%HB_INC_INSTALL% %HARBOURFLAGS% -p -w0
+    %HB_BIN_INSTALL%\harbour fraton.prg -n -q0 -gc -m -i%HB_INC_INSTALL%
+    %HARBOURFLAGS% -p -w0
+    %HB_BIN_INSTALL%\harbour estado.prg -n -q0 -gc -m -i%HB_INC_INSTALL%
+    %HARBOURFLAGS% -p -w0
+    %HB_BIN_INSTALL%\harbour menu_pie.prg -n -gc -m -i%HB_INC_INSTALL%
+    %HARBOURFLAGS% -p -w0
+
+    echo ----------Compilo los .c de harbour-------------
+    wpp386 -j -w3 -d2 -5s -5r -fp5 -oehsz -s -zq -zt0 -bt=DOS menu.c
+    -fo=menu.obj
+    wpp386 -j -w3 -d2 -5s -5r -fp5 -oehsz -s -zq -zt0 -bt=DOS archivos.c
+    -fo=archivos.obj
+    wpp386 -j -w3 -d2 -5s -5r -fp5 -oehsz -s -zq -zt0 -bt=DOS fraton.c
+    -fo=fraton.obj
+    wpp386 -j -w3 -d2 -5s -5r -fp5 -oehsz -s -zq -zt0 -bt=DOS varmenus.c
+    -fo=varmenus.obj
+    wpp386 -j -w3 -d2 -5s -5r -fp5 -oehsz -s -zq -zt0 -bt=DOS estado.c
+    -fo=estado.obj
+    wpp386 -j -w3 -d2 -5s -5r -fp5 -oehsz -s -zq -zt0 -bt=DOS menu_pie.c
+    -fo=menu_pie.obj
+    echo ------------Compilo el basico.c-------------------
+              wpp386 -j -w0 -d2 -5s -5r -fp5 -oehsz -s -zq -zt0 -bt=DOS
+    basico.c -fo=basico.obj
+    echo.
+
+    echo ------------Preparo el build.tmp------------------
+        echo debug all OP osn=DOS OP stack=65536 OP CASEEXACT OP
+    stub=cwstub.exe NAME perfora.exe > build.tmp
+        echo FILE menu.obj >> build.tmp
+        echo FILE archivos.obj >> build.tmp
+        echo FILE fraton.obj >> build.tmp
+        echo FILE varmenus.obj >> build.tmp
+        echo FILE estado.obj >> build.tmp
+        echo FILE basico.obj >> build.tmp
+        echo FILE menu_pie.obj >> build.tmp
+        echo LIB vm.lib >> build.tmp
+        echo LIB rtl.lib >> build.tmp
+        echo LIB debug.lib >> build.tmp
+        echo LIB ct.lib >> build.tmp
+        echo LIB gtnul.lib >> build.tmp
+        echo LIB gtdos.lib >> build.tmp
+        echo LIB gtstd.lib >> build.tmp
+        echo LIB nulsys.lib >> build.tmp
+        echo LIB lang.lib >> build.tmp
+        echo LIB rdd.lib >> build.tmp
+        echo LIB rtl.lib >> build.tmp
+        echo LIB macro.lib >> build.tmp
+        echo LIB pp.lib >> build.tmp
+        echo LIB dbfntx.lib >> build.tmp
+        echo LIB dbfcdx.lib >> build.tmp
+        echo LIB dbffpt.lib >> build.tmp
+        echo LIB common.lib >> build.tmp   
+        echo LIB codepage.lib >> build.tmp
+        echo LIB ct.lib >> build.tmp
+        echo LIB misc.lib >> build.tmp
+        echo LIB cgi.lib >> build.tmp
+        echo LIB hsx.lib >> build.tmp
+        echo LIB pcrepos.lib >> build.tmp
+    echo.
+    echo ------------Linkeo con wlink (OpenWatcom)---------
+          wlink @build.tmp
+    del *.obj
+    del *.tmp
+    del *.err
+    del *.ppo
+    del *.c
+
+
+
+RANDY OLEKSIW escribi?:
+> Hi All
+>
+>  
+>
+> I am a new user looking for a hand hold.
+>
+>  
+>
+> I have 
+>
+> 1. a Clipper prg file 
+>
+> 2. and a C file 
+>
+>  
+
+>
+> What I want to do is write a function in the C file and have that C function available to use in my prg file. Using HBMK2 HBC and HBP files.
+>
+>  
+>
+> Does anyone have a VERY simple example of how to do this? Along with the steps onhow to do this.
+>
+>  
+>
+> I have already converted and completed creating a Harbour exe from my old clipper program Using HBMK2 HBC and HBP files now I want to add a C function. 
+>
+>  
+>
+> Many thanx
+>
+>  
+>
+> Randy
+>  		 	   		  _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>   
+
+From tech_know at sympatico.ca  Sun Oct  4 22:59:45 2009
+From: tech_know at sympatico.ca (RANDY OLEKSIW)
+Date: Sun Oct  4 22:59:51 2009
+Subject: [Harbour-users] Harbour & Printing
+Message-ID: <BAY108-W45F01FCE612D4586254029E9CF0@phx.gbl>
+
+
+Does harbour have any built in printing capabilities? I was uing PScript but I want to switch.
+
+ 
+
+Randy
+
+
+ 
+
+
+From: tech_know@sympatico.ca
+To: harbour-users@harbour-project.org
+Subject: Harbour with prg and c files.
+Date: Sun, 4 Oct 2009 19:52:07 +0000
+
+
+
+Hi All
+ 
+I am a new user looking for a hand hold.
+ 
+I have 
+1. a Clipper prg file 
+2. and a C file 
+ 
+What I want to do is write a function in the C file and have that C function available to use in my prg file. Using HBMK2 HBC and HBP files.
+ 
+Does anyone have a VERY simple example of how to do this? Along with the steps onhow to do this.
+ 
+I have already converted and completed creating a Harbour exe from my old clipper program Using HBMK2 HBC and HBP files now I want to add a C function. 
+ 
+Many thanx
+ 
+Randy
+ 		 	   		  
+From tech_know at sympatico.ca  Sun Oct  4 22:59:59 2009
+From: tech_know at sympatico.ca (RANDY OLEKSIW)
+Date: Sun Oct  4 23:00:06 2009
+Subject: [Harbour-users] Harbour with prg and c files.
+In-Reply-To: <4AC95B5A.10204@gmail.com>
+References: <BAY108-W490598E335AF1A4EBADB29E9D00@phx.gbl>
+Message-ID: <BAY108-W301EDEB6CB538D540225D9E9CF0@phx.gbl>
+
+
+
+ 
+> Date: Mon, 5 Oct 2009 00:35:06 -0200
+> From: eyelagui@gmail.com
+> To: harbour-users@harbour-project.org
+> Subject: Re: [Harbour-users] Harbour with prg and c files.
+> 
+> Hello Randy.
+> 
+> You must precompile your programH.prg file using harbour(obtaining .c 
+> files), then compile them and your programC.c file with your C compiler 
+> (obtaining .obj files), then link all obtained .obj (programC.obj + 
+> programH.obj + otherH.obj + plusH.obj) and required .lib files using 
+> your usual linker and and you can call that function from inside your prg.
+> I have made that way some time ago a simple program for calling 
+> parallell port to move some motors using a harbour compiled .prg and a 
+> .c file to send lpt signals.
+> 
+> I mean, the "complicated" part is (to understand how) to call your 
+> function from inside the "clipper" part, but you can do it the same way 
+> you've been it without .c when using all .prg files.
+> 
+> 
+> This is the sample .bat file i used to compile using harbour and openwatcom
+> 
+> @echo off
+> version
+> echo.
+> echo ------------preCompilo con Harbour---------------
+> %HB_BIN_INSTALL%\harbour menu.prg -n -q0 -gc -m -i%HB_INC_INSTALL%
+> %HARBOURFLAGS% -p -w0
+> %HB_BIN_INSTALL%\harbour archivos.prg -n -q0 -gc -m
+> -i%HB_INC_INSTALL% %HARBOURFLAGS% -p -w0
+> %HB_BIN_INSTALL%\harbour varmenus.prg -n -q0 -gc -m
+> -i%HB_INC_INSTALL% %HARBOURFLAGS% -p -w0
+> %HB_BIN_INSTALL%\harbour fraton.prg -n -q0 -gc -m -i%HB_INC_INSTALL%
+> %HARBOURFLAGS% -p -w0
+> %HB_BIN_INSTALL%\harbour estado.prg -n -q0 -gc -m -i%HB_INC_INSTALL%
+> %HARBOURFLAGS% -p -w0
+> %HB_BIN_INSTALL%\harbour menu_pie.prg -n -gc -m -i%HB_INC_INSTALL%
+> %HARBOURFLAGS% -p -w0
+> 
+> echo ----------Compilo los .c de harbour-------------
+> wpp386 -j -w3 -d2 -5s -5r -fp5 -oehsz -s -zq -zt0 -bt=DOS menu.c
+> -fo=menu.obj
+> wpp386 -j -w3 -d2 -5s -5r -fp5 -oehsz -s -zq -zt0 -bt=DOS archivos.c
+> -fo=archivos.obj
+> wpp386 -j -w3 -d2 -5s -5r -fp5 -oehsz -s -zq -zt0 -bt=DOS fraton.c
+> -fo=fraton.obj
+> wpp386 -j -w3 -d2 -5s -5r -fp5 -oehsz -s -zq -zt0 -bt=DOS varmenus.c
+> -fo=varmenus.obj
+> wpp386 -j -w3 -d2 -5s -5r -fp5 -oehsz -s -zq -zt0 -bt=DOS estado.c
+> -fo=estado.obj
+> wpp386 -j -w3 -d2 -5s -5r -fp5 -oehsz -s -zq -zt0 -bt=DOS menu_pie.c
+> -fo=menu_pie.obj
+> echo ------------Compilo el basico.c-------------------
+> wpp386 -j -w0 -d2 -5s -5r -fp5 -oehsz -s -zq -zt0 -bt=DOS
+> basico.c -fo=basico.obj
+> echo.
+> 
+> echo ------------Preparo el build.tmp------------------
+> echo debug all OP osn=DOS OP stack=65536 OP CASEEXACT OP
+> stub=cwstub.exe NAME perfora.exe > build.tmp
+> echo FILE menu.obj >> build.tmp
+> echo FILE archivos.obj >> build.tmp
+> echo FILE fraton.obj >> build.tmp
+> echo FILE varmenus.obj >> build.tmp
+> echo FILE estado.obj >> build.tmp
+> echo FILE basico.obj >> build.tmp
+> echo FILE menu_pie.obj >> build.tmp
+> echo LIB vm.lib >> build.tmp
+> echo LIB rtl.lib >> build.tmp
+> echo LIB debug.lib >> build.tmp
+> echo LIB ct.lib >> build.tmp
+> echo LIB gtnul.lib >> build.tmp
+> echo LIB gtdos.lib >> build.tmp
+> echo LIB gtstd.lib >> build.tmp
+> echo LIB nulsys.lib >> build.tmp
+> echo LIB lang.lib >> build.tmp
+> echo LIB rdd.lib >> build.tmp
+> echo LIB rtl.lib >> build.tmp
+> echo LIB macro.lib >> build.tmp
+> echo LIB pp.lib >> build.tmp
+> echo LIB dbfntx.lib >> build.tmp
+> echo LIB dbfcdx.lib >> build.tmp
+> echo LIB dbffpt.lib >> build.tmp
+> echo LIB common.lib >> build.tmp 
+> echo LIB codepage.lib >> build.tmp
+> echo LIB ct.lib >> build.tmp
+> echo LIB misc.lib >> build.tmp
+> echo LIB cgi.lib >> build.tmp
+> echo LIB hsx.lib >> build.tmp
+> echo LIB pcrepos.lib >> build.tmp
+> echo.
+> echo ------------Linkeo con wlink (OpenWatcom)---------
+> wlink @build.tmp
+> del *.obj
+> del *.tmp
+> del *.err
+> del *.ppo
+> del *.c
+> 
+> 
+> 
+> RANDY OLEKSIW escribi?:
+> > Hi All
+> >
+> > 
+> >
+> > I am a new user looking for a hand hold.
+> >
+> > 
+> >
+> > I have 
+> >
+> > 1. a Clipper prg file 
+> >
+> > 2. and a C file 
+> >
+> > 
+> 
+> >
+> > What I want to do is write a function in the C file and have that C function available to use in my prg file. Using HBMK2 HBC and HBP files.
+> >
+> > 
+> >
+> > Does anyone have a VERY simple example of how to do this? Along with the steps onhow to do this.
+> >
+> > 
+> >
+> > I have already converted and completed creating a Harbour exe from my old clipper program Using HBMK2 HBC and HBP files now I want to add a C function. 
+> >
+> > 
+> >
+> > Many thanx
+> >
+> > 
+> >
+> > Randy
+> > _______________________________________________
+> > Harbour-users mailing list
+> > Harbour-users@harbour-project.org
+> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >
+> > 
+> 
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+ 		 	   		  
+From tech_know at sympatico.ca  Sun Oct  4 23:01:48 2009
+From: tech_know at sympatico.ca (RANDY OLEKSIW)
+Date: Sun Oct  4 23:03:17 2009
+Subject: [Harbour-users] Adding Windows to my clipper app
+In-Reply-To: <BAY108-W45F01FCE612D4586254029E9CF0@phx.gbl>
+References: <BAY108-W45F01FCE612D4586254029E9CF0@phx.gbl>
+Message-ID: <BAY108-W37C2D8E56D77760903993E9CF0@phx.gbl>
+
+
+Can I gues some advice on adding a windows flavour to my clipper app now that I Have it converted into Harbour.
+
+ 
+
+I would like to replace my screens with windows forms.
+
+ 
+
+Randy
+
+ 
+
+
+ 
+> From: tech_know@sympatico.ca
+> To: harbour-users@harbour-project.org
+> Date: Mon, 5 Oct 2009 02:59:45 +0000
+> Subject: [Harbour-users] Harbour & Printing
+> 
+> 
+> Does harbour have any built in printing capabilities? I was uing PScript but I want to switch.
+> 
+> 
+> 
+> Randy
+> 
+> 
+> 
+> 
+> 
+> From: tech_know@sympatico.ca
+> To: harbour-users@harbour-project.org
+> Subject: Harbour with prg and c files.
+> Date: Sun, 4 Oct 2009 19:52:07 +0000
+> 
+> 
+> 
+> Hi All
+> 
+> I am a new user looking for a hand hold.
+> 
+> I have 
+> 1. a Clipper prg file 
+> 2. and a C file 
+> 
+> What I want to do is write a function in the C file and have that C function available to use in my prg file. Using HBMK2 HBC and HBP files.
+> 
+> Does anyone have a VERY simple example of how to do this? Along with the steps onhow to do this.
+> 
+> I have already converted and completed creating a Harbour exe from my old clipper program Using HBMK2 HBC and HBP files now I want to add a C function. 
+> 
+> Many thanx
+> 
+> Randy
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+ 		 	   		  
+From karweru at yahoo.com  Mon Oct  5 02:22:09 2009
+From: karweru at yahoo.com (Gilbert Karweru)
+Date: Mon Oct  5 02:22:17 2009
+Subject: [Harbour-users] Adding Windows to my clipper app
+In-Reply-To: <BAY108-W37C2D8E56D77760903993E9CF0@phx.gbl>
+References: <BAY108-W45F01FCE612D4586254029E9CF0@phx.gbl>
+	<BAY108-W37C2D8E56D77760903993E9CF0@phx.gbl>
+Message-ID: <917466.36293.qm@web112305.mail.gq1.yahoo.com>
+
+Randy,
+
+Look up Harbour MiniGui (HMG). It's an excellent product with an easy learning curve and a vibrant, helpfull user group at www.hmgforum.com
+
+Gilbert
+
+
+
+
+________________________________
+From: RANDY OLEKSIW <tech_know@sympatico.ca>
+To: harbour-users@harbour-project.org
+Sent: Monday, October 5, 2009 6:01:48 AM
+Subject: [Harbour-users] Adding Windows to my clipper app
+
+
+Can I gues some advice on adding a windows flavour to my clipper app now that I Have it converted into Harbour.
+
+
+
+I would like to replace my screens with windows forms.
+
+
+
+Randy
+
+
+
+
+
+> From: tech_know@sympatico.ca
+> To: harbour-users@harbour-project.org
+> Date: Mon, 5 Oct 2009 02:59:45 +0000
+> Subject: [Harbour-users] Harbour & Printing
+> 
+> 
+> Does harbour have any built in printing capabilities? I was uing PScript but I want to switch.
+> 
+> 
+> 
+> Randy
+> 
+> 
+> 
+> 
+> 
+> From: tech_know@sympatico.ca
+> To: harbour-users@harbour-project.org
+> Subject: Harbour with prg and c files.
+> Date: Sun, 4 Oct 2009 19:52:07 +0000
+> 
+> 
+> 
+> Hi All
+> 
+> I am a new user looking for a hand hold.
+> 
+> I have 
+> 1. a Clipper prg file 
+> 2. and a C file 
+> 
+> What I want to do is write a function in the C file and have that C function available to use in my prg file. Using HBMK2 HBC and HBP files.
+> 
+> Does anyone have a VERY simple example of how to do this? Along with the steps onhow to do this.
+> 
+> I have already converted and completed creating a Harbour exe from my old clipper program Using HBMK2 HBC and HBP files now I want to add a C function. 
+> 
+> Many thanx
+> 
+> Randy
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+                          _______________________________________________
+Harbour-users mailing list
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+
+
+      
+From calimero22 at yahoo.it  Mon Oct  5 12:49:48 2009
+From: calimero22 at yahoo.it (Di Maria Giovanni)
+Date: Mon Oct  5 19:02:36 2009
+Subject: [Harbour-users] Harbour with prg and c files.
+Message-ID: <627465.32577.qm@web28211.mail.ukl.yahoo.com>
+
+Hi 
+You can write in a single PRG file, both harbour program e C function. 
+Here's the RND fucntion example: 
+
+
+function Main()
+clear screen
+for k=1 to 10
+? rnd(6)
+next k
+return NIL
+
+
+
+#pragma BEGINDUMP
+HB_FUNC(RND) {
+hb_retni(rand()%hb_parni(1)+1);
+}
+#pragma ENDDUMP
+
+
+Here's another example of function without parameters:
+
+
+function Main()
+clear screen
+? stampa()
+return nil
+
+
+
+#pragma BEGINDUMP
+#include 
+HB_FUNC(STAMPA) {
+unsigned int a,b,c;
+a=16;
+b=5;
+c=a+b;
+hb_retni(c);
+}
+#pragma ENDDUMP
+
+
+
+Here's another example of function WITH parameters:
+
+
+function Main()
+clear screen
+? moltiplicazione(58,37)
+return nil
+
+
+#pragma BEGINDUMP
+#include 
+HB_FUNC(MOLTIPLICAZIONE) {
+unsigned int a,b,c;
+a=hb_parni(1);
+b=hb_parni(2);
+c=a*b;
+hb_retni(c);
+}
+#pragma ENDDUMP
+
+
+
+Hi hope to helped you. 
+Giovanni Di Maria
+
+
+
+
+
+
+
+
+Hi All 
+
+
+
+I am a new user looking for a hand hold. 
+
+
+
+I have 
+
+1. a Clipper prg file 
+
+2. and a C file 
+
+
+
+What I want to do is write a function in the C file and have that C function available to use in my prg file. Using HBMK2 HBC and HBP files. 
+
+
+
+Does anyone have a VERY simple example of how to do this? Along with the steps onhow to do this. 
+
+
+
+I have already converted and completed creating a Harbour exe from my old clipper program Using HBMK2 HBC and HBP files now I want to add a C function. 
+
+
+
+Many thanx 
+
+
+
+Randy
+
+
+      
+From szekely3 at enternet.hu  Thu Oct  8 18:29:51 2009
+From: szekely3 at enternet.hu (szekely)
+Date: Thu Oct  8 18:30:00 2009
+Subject: [Harbour-users] dbedit
+In-Reply-To: <627465.32577.qm@web28211.mail.ukl.yahoo.com>
+Message-ID: <mailman.5.1255041000.3660.harbour-users@harbour-project.org>
+
+Hello !
+
+I have a problem with the dbedit: user function: return code. My
+function gives back or 1 or 0 or 2, the dbedit didn't terminate. So I
+couldn't leave the dbedit.  
+(I wanted to make something like a combo box. And if there isn't the
+value in the database, in the user function I add the new record.)
+If anybody have an example for the dbedit - user function please send
+me.
+
+Thanks: Andras
+____________________________________________________
+Szekely Andras <> szekely3@enternet.hu <> http://2Mai.dyndns.org <> eCS 1.2 <>
+
+From jlcapel2 at gmail.com  Fri Oct  9 02:54:42 2009
+From: jlcapel2 at gmail.com (=?ISO-8859-1?Q?Jos=E9_Luis_Capel?=)
+Date: Fri Oct  9 02:54:49 2009
+Subject: [Harbour-users] DFSET function
+Message-ID: <ab2a7b4c0910082354n6034a612vf90a5e723e67f27f@mail.gmail.com>
+
+Hi all,
+
+I am building an almost 20 year old clipper application.
+
+After some corrections finally I could compile without any warning or
+error.  But at link time shows an error telling this:
+
+Lines 298239, Functions/Procedures 1601
+Generating C source output to 'hbtrade.c'... Done.
+hbtrade.o:hbtrade.c:(.data+0x1918): undefined reference to `HB_FUN__DFSET'
+collect2: ld returned 1 exit status hbmk2: Error: Running linker. 1
+gcc.exe hbtrade.o    -mconsole -Wl,--start-group -lhbextern -lhbdebug -lhbvm
+-lh
+brtl -lhblang -lhbcpage -lgtcgi -lgtpca -lgtstd -lgtwin -lgtwvt -lgtgui
+-lhbrdd
+-lhbuddall -lhbusrrdd -lrddntx -lrddcdx -lrddnsx -lrddfpt -lhbrdd -lhbhsx
+-lhbsi
+x -lhbmacro -lhbcplr -lhbpp -lhbcommon -lkernel32 -luser32 -lgdi32
+-ladvapi32 -l
+ws2_32 -lwinspool -lcomctl32 -lcomdlg32 -lshell32 -luuid -lole32 -loleaut32
+-lmp
+r -lwinmm -lmapi32 -limm32 -lmsimg32 -lwininet -lhbpcre -lhbzlib
+-Wl,--end-grou
+p -ohbtrade.exe -Le:/programacion_ant/hb_mingw/lib/win/mingw
+I'd searched for this function 'HB_FUN__DBSET' on my code but I don't have
+it.  So... anyone knows where is this function ??  Is missing some lib to
+include ??
+
+Thanks and regards,
+Jos? Luis Capel
+From szekely3 at enternet.hu  Fri Oct  9 03:07:30 2009
+From: szekely3 at enternet.hu (szekely)
+Date: Fri Oct  9 03:07:43 2009
+Subject: [Harbour-users] DFSET function
+In-Reply-To: <ab2a7b4c0910082354n6034a612vf90a5e723e67f27f@mail.gmail.com>
+Message-ID: <32ce683b-7847-415a-bd9c-45a8928b854f@proxy5.progen.local>
+
+Hello !
+
+>hbtrade.o:hbtrade.c:(.data+0x1918): undefined reference to `HB_FUN__DFSET'
+
+>I'd searched for this function 'HB_FUN__DBSET' on my code but I don't have
+
+I found 25 times: HB_FUN_DBSET.  Not D_F_SET and with one "_" before
+the DB.
+
+Andras
+____________________________________________________
+Szekely Andras <> szekely3@enternet.hu <> http://2Mai.dyndns.org <> eCS 1.2 <>
+
+From jlcapel2 at gmail.com  Fri Oct  9 06:05:03 2009
+From: jlcapel2 at gmail.com (=?ISO-8859-2?Q?Jos=E9_Luis_Capel?=)
+Date: Fri Oct  9 06:05:09 2009
+Subject: [Harbour-users] DFSET function
+In-Reply-To: <32ce683b-7847-415a-bd9c-45a8928b854f@proxy5.progen.local>
+References: <ab2a7b4c0910082354n6034a612vf90a5e723e67f27f@mail.gmail.com>
+	<32ce683b-7847-415a-bd9c-45a8928b854f@proxy5.progen.local>
+Message-ID: <ab2a7b4c0910090305y526d641bja9303ef79cc37170@mail.gmail.com>
+
+Andras,
+
+Thanks for your anwer.
+
+The fact is that I have no line of my code with DBFSET function nor DBSET
+also.
+
+So I think it could be a cross call from one lib to another.... but I don`t
+know who is calling to.
+
+Regards,
+Jos? luis Capel
+
+
+
+2009/10/9 szekely <szekely3@enternet.hu>
+
+> Hello !
+>
+> >hbtrade.o:hbtrade.c:(.data+0x1918): undefined reference to `HB_FUN__DFSET'
+>
+> >I'd searched for this function 'HB_FUN__DBSET' on my code but I don't have
+>
+> I found 25 times: HB_FUN_DBSET.  Not D_F_SET and with one "_" before
+> the DB.
+>
+> Andras
+> ____________________________________________________
+> Szekely Andras <> szekely3@enternet.hu <> http://2Mai.dyndns.org<http://2mai.dyndns.org/><> eCS 1.2 <>
+>
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From sscc at mweb.co.za  Fri Oct  9 08:07:52 2009
+From: sscc at mweb.co.za (Alex Strickland)
+Date: Fri Oct  9 08:08:00 2009
+Subject: [Harbour-users] DFSET function
+In-Reply-To: <ab2a7b4c0910090305y526d641bja9303ef79cc37170@mail.gmail.com>
+References: <ab2a7b4c0910082354n6034a612vf90a5e723e67f27f@mail.gmail.com>	<32ce683b-7847-415a-bd9c-45a8928b854f@proxy5.progen.local>
+	<ab2a7b4c0910090305y526d641bja9303ef79cc37170@mail.gmail.com>
+Message-ID: <4ACF2798.7070909@mweb.co.za>
+
+Jos? Luis Capel wrote:
+> Andras,
+> 
+> Thanks for your anwer.
+> 
+> The fact is that I have no line of my code with DBFSET function nor DBSET
+> also.
+> 
+> So I think it could be a cross call from one lib to another.... but I don`t
+> know who is calling to.
+
+I don't know if it is a typo in your e-mail, but are you looking for DFSET? You 
+mention other names.
+
+Regards
+Alex
+From szekely3 at enternet.hu  Thu Oct 22 16:57:52 2009
+From: szekely3 at enternet.hu (szekely)
+Date: Thu Oct 22 16:58:00 2009
+Subject: [Harbour-users] inkey.ch
+In-Reply-To: <4ACF2798.7070909@mweb.co.za>
+Message-ID: <mailman.6.1256245080.3660.harbour-users@harbour-project.org>
+
+Hello !
+
+How can I use the inkey.ch ?
+I have a "one.prg" and I compile it only with command: "hbmk2 one.prg"
+In the one.prg I have a row: "if lastkey() = 27" and it is TRUE when
+the last key is escape. 
+I want to change it "if lastkey() = K_ESC" and I think I must include
+the inkey.ch. But how and were?
+
+(I have os/2 and open watcom)
+
+Thanks: Andras
+  
+
+
+____________________________________________________
+Szekely Andras <> szekely3@enternet.hu <> http://2Mai.dyndns.org <> eCS 1.2 <>
+
+From szekely3 at enternet.hu  Thu Oct 22 17:02:32 2009
+From: szekely3 at enternet.hu (szekely)
+Date: Thu Oct 22 17:02:40 2009
+Subject: [Harbour-users] inkey.ch
+Message-ID: <mailman.7.1256245360.3660.harbour-users@harbour-project.org>
+
+Hello !
+
+Sorry, I found:
+#include <inkey.ch>
+
+Andras
+
+On Thu, 22 Oct 2009 22:57:52 +0200 (CEST), szekely wrote:
+
+>Hello !
+>
+>How can I use the inkey.ch ?
+>I have a "one.prg" and I compile it only with command: "hbmk2 one.prg"
+>In the one.prg I have a row: "if lastkey() = 27" and it is TRUE when
+>the last key is escape. 
+>I want to change it "if lastkey() = K_ESC" and I think I must include
+>the inkey.ch. But how and were?
+>
+>(I have os/2 and open watcom)
+>
+>Thanks: Andras
+>  
+>
+>
+>____________________________________________________
+>Szekely Andras <> szekely3@enternet.hu <> http://2Mai.dyndns.org <> eCS 1.2 <>
+>
+>_______________________________________________
+>Harbour-users mailing list
+>Harbour-users@harbour-project.org
+>http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+____________________________________________________
+Szekely Andras <> szekely3@enternet.hu <> http://2Mai.dyndns.org <> eCS 1.2 <>
+
+From vatzct at polly.com.ua  Tue Oct 27 08:25:44 2009
+From: vatzct at polly.com.ua (vatzct)
+Date: Tue Oct 27 08:25:36 2009
+Subject: [Harbour-users] ordinfo and dbinfo.ch
+Message-ID: <4AE6E6C8.70007@polly.com.ua>
+
+Hi!
+
+from dbinfo.ch
+...
+/*
+   Constants for SELF_ORDINFO ()
+*/
+
+#define DBOI_CONDITION            1    /* The order's conditional 
+expression     */
+#define DBOI_EXPRESSION           2    /* The order's key 
+expression             */
+...
+
+For DBOI_... i should use dbOrderInfo() instead of SELF_ORDINFO (), am i 
+right?
+
+Regards,
+Alexey Myronenko
+

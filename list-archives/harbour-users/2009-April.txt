@@ -1,0 +1,902 @@
+From harbour-users at harbour-project.org  Thu Apr  2 05:11:59 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Thu Apr  2 05:12:25 2009
+Subject: [Harbour-users] break point error
+In-Reply-To: <21146612.671071238514227123.JavaMail.nabble@tervel.nabble.com>
+References: <21146612.671071238514227123.JavaMail.nabble@tervel.nabble.com>
+Message-ID: <609353e70904020211l52ba6656n7bb574c09a48e2f1@mail.gmail.com>
+
+for use debugger you must add hbdebug.lib and compiler with -btry inserrt
+altd() in your source
+hbmk2 mysample.prg -b debug.lib
+
+2009/3/31 <harbour-users@harbour-project.org>
+
+> when i set a break point the debugger not accept it and esecution not stop.
+> My english is bad escuse me
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+From harbour-users at harbour-project.org  Thu Apr  2 10:43:41 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Thu Apr  2 10:43:49 2009
+Subject: [Harbour-users] RDD SQL
+Message-ID: <49D4CF1D.9030604@gmail.com>
+
+Hi All,
+
+According rddsql author (Mindaugas Kavaliauskas) there is a way to know 
+what records were modified on the recordset:
+
+"SSI provides a method to detect which cached rows was changed or appended"
+
+Has anyone some information about that?
+
+Thanks in advance.
+
+Roberto.
+
+From harbour-users at harbour-project.org  Fri Apr  3 10:15:58 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Apr  3 10:16:02 2009
+Subject: [Harbour-users] Fullscreen Text with Harbour in Linux
+Message-ID: <ce56c7c00904030715h22d9c44fk60525bc04bddce5c@mail.gmail.com>
+
+Hi,
+
+I compiled and ran a simple application in Harbour+Linux. I'd like to move
+our legacy applications (runs on a 25 user Novell Netware) to Harbour+Linux
+if there is enough support for this platform combination.
+
+However the first hurdle is the small Terminal screen. Is there any way to
+do something like Alt+Enter (as in Windows) to switch to full screen text
+mode while running Harbour apps in Linux?
+
+Thanks,
+Jasim.
+From harbour-users at harbour-project.org  Fri Apr  3 10:19:06 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Apr  3 10:19:10 2009
+Subject: [Harbour-users] Concurrent Clipper Apps with Harbour
+Message-ID: <ce56c7c00904030719t621a3108wc12904612fbff487@mail.gmail.com>
+
+Is it absolutely safe on a network to run the same application accessing the
+same databases and indices on several machines using Clipper+DBFNTX, and
+several others in Harbour+DBFNTX ?
+
+And is it okay to run a combination of the same harbour app concurrently on
+a network in both Linux and Windows?
+
+Thanks,
+Jasim.
+From harbour-users at harbour-project.org  Fri Apr  3 10:43:19 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Apr  3 10:50:10 2009
+Subject: [Harbour-users] Re: Concurrent Clipper Apps with Harbour
+References: <ce56c7c00904030719t621a3108wc12904612fbff487@mail.gmail.com>
+Message-ID: <gr57fn$uhk$1@ger.gmane.org>
+
+I use xHarbour+ DbfNtx and Clipper+ DbfNtx on Novel and too Windows
+enviroments; and results are very well..
+xHarbour is more rapid and robust than Clipper program. xHarbour program is
+really Windows. Clipper program is running on NTVDM and that is often a
+problem
+
+
+harbour-users@harbour-project.org escribió en
+mensaje ...
+>Is it absolutely safe on a network to run the same application accessing
+the
+>same databases and indices on several machines using Clipper+DBFNTX, and
+>several others in Harbour+DBFNTX ?
+>
+>And is it okay to run a combination of the same harbour app concurrently on
+>a network in both Linux and Windows?
+>
+>Thanks,
+>Jasim.
+
+
+
+From harbour-users at harbour-project.org  Fri Apr  3 10:58:42 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Apr  3 11:02:02 2009
+Subject: [Harbour-users] Re: Fullscreen Text with Harbour in Linux
+References: <ce56c7c00904030715h22d9c44fk60525bc04bddce5c@mail.gmail.com>
+Message-ID: <gr58cn$26e$1@ger.gmane.org>
+
+use SetMode(300,50)... i dont remember exact syntax..
+
+harbour-users@harbour-project.org escribió en
+mensaje ...
+>Hi,
+>
+>I compiled and ran a simple application in Harbour+Linux. I'd like to move
+>our legacy applications (runs on a 25 user Novell Netware) to Harbour+Linux
+>if there is enough support for this platform combination.
+>
+>However the first hurdle is the small Terminal screen. Is there any way to
+>do something like Alt+Enter (as in Windows) to switch to full screen text
+>mode while running Harbour apps in Linux?
+>
+>Thanks,
+>Jasim.
+
+
+
+From harbour-users at harbour-project.org  Fri Apr  3 11:02:44 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Apr  3 11:04:12 2009
+Subject: [Harbour-users] Concurrent Clipper Apps with Harbour
+In-Reply-To: <ce56c7c00904030719t621a3108wc12904612fbff487@mail.gmail.com>
+References: <ce56c7c00904030719t621a3108wc12904612fbff487@mail.gmail.com>
+Message-ID: <609353e70904030802x73a74339n7433405bd04541e5@mail.gmail.com>
+
+Yes is possible sharing database
+but you can easy recompile any clipper+dbfntx to harbour because it is more
+reliable that clipper
+
+2009/4/3 <harbour-users@harbour-project.org>
+
+> Is it absolutely safe on a network to run the same application accessing
+> the
+> same databases and indices on several machines using Clipper+DBFNTX, and
+> several others in Harbour+DBFNTX ?
+>
+> And is it okay to run a combination of the same harbour app concurrently on
+> a network in both Linux and Windows?
+>
+> Thanks,
+> Jasim.
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+
+Analisi e sviluppo software per Lan e Web - Consulenza informatica -
+Formazione
+Delta Informatica S.r.l. http://www.deltain.it/   +39 0321 455962
+From harbour-users at harbour-project.org  Sat Apr  4 14:12:34 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sat Apr  4 14:12:39 2009
+Subject: [Harbour-users] Problem with LIB
+Message-ID: <133778360904041112p30f8d133pc19a23511caeda05@mail.gmail.com>
+
+The code Below is part of a LIB to act as interfaz betwen a DLL ( similar to
+DLL.LIB )
+
+But in actual version of Harbour compile ok but create an error when use it
+:
+
+____________________________________________
+Error: Error BASE/1068  Argument error: array access
+
+Called from CALLDLL32(64)
+Called from ABRIRPUERTO(71)
+____________________________________________
+
+
+May be a change in Harbour produce this error
+
+Any Help with this ?
+
+Thanks in advance
+
+Bruno
+
+
+
+////////////HDLL.prg
+////////////////////////////////////////////////////////////////////////////////////////////
+
+#define MAX_PARAMS   8
+
+function CALLDLL32(p1,p2,p3,p4,p5,p6,p7,p8,p9,p10)
+local aPass := array(11)
+local aParms := HB_aParams()
+local nParmCnt := LEN(aParms)
+local i
+
+    IF nParmCnt > MAX_PARAMS + 2
+        return 0
+    ENDIF
+
+    aPass[1] := aParms[1]
+    aPass[2] := aParms[2]
+    aPass[3] := nParmCnt-2
+    FOR i := 3 TO nParmCnt
+        aPass[i+1] := IIF(valtype(aParms[i]) == "C", STRPTR(aParms[i]),
+aParms[i])
+    NEXT
+
+return HB_DynaCall1(
+aPass[1],aPass[2],aPass[3],aPass[4],aPass[5],aPass[6],aPass[7],aPass[8],aPass[9],aPass[10],aPass[11])
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+and the C part of the LIB
+
+///////////////////////////////// CDLL.C
+////////////////////////////////////////////////////////////////////
+#include "windows.h"
+#include "hbapi.h"
+
+#define MAX_PARAMS   8
+
+HINSTANCE HB_DllStore[256];
+
+HINSTANCE HB_LoadDll(char *);
+void      HB_UnloadDll(void);
+typedef   int (CALLBACK *DYNACALL1)(void);
+int       HB_DynaCall(char *, char *, int, ...);
+
+HINSTANCE HB_LoadDll (char *DllName)
+{
+  static int DllCnt;
+  static int RegUnload;
+  if (!RegUnload) RegUnload=!atexit(HB_UnloadDll);
+  DllCnt=(DllCnt+1) & 255;
+  FreeLibrary(HB_DllStore[DllCnt]);
+  return HB_DllStore[DllCnt]=LoadLibrary(DllName);
+}
+
+HB_FUNC( UNLOADALLDLL )
+{
+   HB_UnloadDll();
+}
+
+void HB_UnloadDll (void)
+{
+  register int i;
+  for(i=255;i>=0;i--)
+    {
+      FreeLibrary(HB_DllStore[i]);
+    }
+}
+
+HB_FUNC( HB_DYNACALL1 )
+{
+   hb_retnl(
+           HB_DynaCall(
+             hb_parc(1),
+             hb_parc(2),
+             hb_parnl(3),
+             hb_parnl(4),
+             hb_parnl(5),
+             hb_parnl(6),
+             hb_parnl(7),
+             hb_parnl(8),
+             hb_parnl(9),
+             hb_parnl(10),
+             hb_parnl(11)
+             )
+             );
+}
+
+int HB_DynaCall (char *FuncName, char *DllName, int nArgs, ...)
+{
+    register int i;
+    HINSTANCE  hInst;
+    DYNACALL1 lpAddr;
+    int arg;
+    int result = -2000;
+    //int *argtable = (int*)malloc(nArgs * sizeof *argtable);
+    int argtable[MAX_PARAMS];
+    char buff[256];
+    va_list ap;
+
+    hInst=GetModuleHandle(DllName);
+    if(hInst==NULL)
+    {
+        hInst=HB_LoadDll(DllName);
+    }
+    lpAddr=(DYNACALL1)GetProcAddress(hInst,FuncName);
+    if(lpAddr==NULL)
+    {
+        sprintf(buff,"%s%s",FuncName,"A");
+        lpAddr=(DYNACALL1)GetProcAddress(hInst,buff);
+    }
+    if(lpAddr==NULL)
+    {
+        sprintf(buff,"%s%s","_",FuncName);
+        lpAddr=(DYNACALL1)GetProcAddress(hInst,buff);
+    }
+    if (lpAddr)
+    {
+        va_start(ap,nArgs);
+        for (i=0; i<nArgs;i++)
+        {
+            arg = va_arg(ap,int);
+            argtable[i] = arg;
+        }
+        for (i=nArgs-1;i >=0; i--)
+        {
+            arg = argtable[i];
+            #if defined( __LCC__ )
+            _asm("pushl %arg")
+            #elif defined( __MINGW32__ )
+            __asm__("pushl %0" : : "r" (arg));
+            #elif defined( __BCPLUSPLUS__ )
+              asm push arg
+            #else
+            __asm{push arg}
+            #endif
+        }
+        result = (int)(lpAddr)();
+        va_end(ap);
+    }
+    return result;
+}
+
+HB_FUNC( STRPTR )
+{
+        char *cString = hb_parc( 1 );
+        hb_retnl( ( LONG_PTR) cString );
+}
+
+HB_FUNC( PTRSTR )
+{
+   hb_retc( (LPSTR) hb_parnl(1) );
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+From harbour-users at harbour-project.org  Sat Apr  4 17:31:39 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sat Apr  4 17:31:51 2009
+Subject: [Harbour-users] Fullscreen Text with Harbour in Linux
+In-Reply-To: <ce56c7c00904030715h22d9c44fk60525bc04bddce5c@mail.gmail.com>
+References: <ce56c7c00904030715h22d9c44fk60525bc04bddce5c@mail.gmail.com>
+Message-ID: <49D7D1BB.8040107@tiscalinet.it>
+
+harbour-users@harbour-project.org ha scritto:
+> Hi,
+>
+> I compiled and ran a simple application in Harbour+Linux. I'd like to move
+> our legacy applications (runs on a 25 user Novell Netware) to Harbour+Linux
+> if there is enough support for this platform combination.
+>
+> However the first hurdle is the small Terminal screen. Is there any way to
+> do something like Alt+Enter (as in Windows) to switch to full screen text
+> mode while running Harbour apps in Linux?
+>
+> Thanks,
+> Jasim.
+> _______________________________________________
+>   
+You are in a graphical environment, use ctrl-alt-F1 to get the text 
+console n.1, ctrl-alt-F2 to get the second one, and (usually) 
+ctrl-alt-F7 to get back the GUI.
+HTH
+D. Campagna
+From harbour-users at harbour-project.org  Sat Apr  4 17:38:39 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sat Apr  4 17:38:49 2009
+Subject: [Harbour-users] Fullscreen Text with Harbour in Linux
+In-Reply-To: <49D7D1BB.8040107@tiscalinet.it>
+References: <ce56c7c00904030715h22d9c44fk60525bc04bddce5c@mail.gmail.com>
+	<49D7D1BB.8040107@tiscalinet.it>
+Message-ID: <49D7D35F.9050402@tiscalinet.it>
+
+harbour-users@harbour-project.org ha scritto:
+> and (usually) ctrl-alt-F7 to get back the GUI.
+I mean ctrl-F7
+D. Campagna
+From harbour-users at harbour-project.org  Sat Apr  4 18:02:33 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sat Apr  4 18:05:32 2009
+Subject: [Harbour-users] Fullscreen Text with Harbour in Linux
+In-Reply-To: <49D7D35F.9050402@tiscalinet.it>
+References: <ce56c7c00904030715h22d9c44fk60525bc04bddce5c@mail.gmail.com>
+	<49D7D1BB.8040107@tiscalinet.it> <49D7D35F.9050402@tiscalinet.it>
+Message-ID: <20090404220233.GB22295@RawFedDogs.net>
+
+On Sat, Apr 04, 2009 at 11:38:39PM +0200, harbour-users@harbour-project.org wrote:
+> harbour-users@harbour-project.org ha scritto:
+>> and (usually) ctrl-alt-F7 to get back the GUI.
+> I mean ctrl-F7
+
+Actually, I think you mean alt-F7 if you're talking about if you're talking
+about switching from a virtual console back to X on most Linux distros.  Or,
+alt-F2 if one is running Slackware, alt-F8 on FreeBSD, and I'm sure there
+are other variations.  
+
+
+
+Kevin
+http://www.RawFedDogs.net
+http://www.WacoAgilityGroup.org
+Bruceville, TX
+
+Si hoc legere scis nimium eruditionis habes.
+Longum iter est per praecepta, breve et efficax per exempla!!!
+
+From harbour-users at harbour-project.org  Sun Apr  5 03:49:07 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sun Apr  5 03:49:20 2009
+Subject: [Harbour-users] Fullscreen Text with Harbour in Linux
+In-Reply-To: <20090404220233.GB22295@RawFedDogs.net>
+References: <ce56c7c00904030715h22d9c44fk60525bc04bddce5c@mail.gmail.com>	<49D7D1BB.8040107@tiscalinet.it>
+	<49D7D35F.9050402@tiscalinet.it>
+	<20090404220233.GB22295@RawFedDogs.net>
+Message-ID: <49D86273.3070303@tiscalinet.it>
+
+harbour-users@harbour-project.org ha scritto:
+> On Sat, Apr 04, 2009 at 11:38:39PM +0200, harbour-users@harbour-project.org wrote:
+>   
+>> harbour-users@harbour-project.org ha scritto:
+>>     
+>>> and (usually) ctrl-alt-F7 to get back the GUI.
+>>>       
+>> I mean ctrl-F7
+>>     
+>
+> Actually, I think you mean alt-F7 if you're talking about if you're talking
+> about switching from a virtual console back to X on most Linux distros.  Or,
+> alt-F2 if one is running Slackware, alt-F8 on FreeBSD, and I'm sure there
+> are other variations.  
+>
+>   
+OMG what was I smoking? yes, alt-F7. And that works in my Slackware and 
+Zenwalk. I tried other distros and don't remember of any of them with a 
+different command. But my experience with other distros is in no way 
+significant. Thanks, and sorry for the wrong advice given!
+D. Campagna
+From harbour-users at harbour-project.org  Thu Apr 16 16:11:35 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Thu Apr 16 16:11:39 2009
+Subject: [Harbour-users] valtoprg()
+Message-ID: <89c0927b0904161311j3c6aa916va31d4fdfd3a500d0@mail.gmail.com>
+
+Hi!
+I am looking for equivalent function  to valtoprg.
+
+TIA,
+Itamar M. Lins Jr.
+From harbour-users at harbour-project.org  Thu Apr 16 17:34:53 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Thu Apr 16 17:35:18 2009
+Subject: [Harbour-users] valtoprg()
+In-Reply-To: <89c0927b0904161311j3c6aa916va31d4fdfd3a500d0@mail.gmail.com>
+References: <89c0927b0904161311j3c6aa916va31d4fdfd3a500d0@mail.gmail.com>
+Message-ID: <609353e70904161434q73ef62cew48ce11a007f0f8dc@mail.gmail.com>
+
+I think that is in XHB.libtry add this lib to yuur hbmk2 script compilation
+
+2009/4/16 <harbour-users@harbour-project.org>
+
+> Hi!
+> I am looking for equivalent function  to valtoprg.
+>
+> TIA,
+> Itamar M. Lins Jr.
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+From harbour-users at harbour-project.org  Sat Apr 18 14:46:27 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sat Apr 18 14:46:32 2009
+Subject: [Harbour-users] valtoprg()
+In-Reply-To: <609353e70904161434q73ef62cew48ce11a007f0f8dc@mail.gmail.com>
+References: <89c0927b0904161311j3c6aa916va31d4fdfd3a500d0@mail.gmail.com>
+	<609353e70904161434q73ef62cew48ce11a007f0f8dc@mail.gmail.com>
+Message-ID: <89c0927b0904181146x4a55cbc9m4982f0245c6f4796@mail.gmail.com>
+
+No, no exist this is function into file xhb.lib, already linked the lib.
+But the error persist.
+
+TIA,
+Itamar M. Lins Jr.
+
+2009/4/16 <harbour-users@harbour-project.org>
+
+> I think that is in XHB.libtry add this lib to yuur hbmk2 script compilation
+>
+> 2009/4/16 <harbour-users@harbour-project.org>
+>
+> > Hi!
+> > I am looking for equivalent function  to valtoprg.
+> >
+> > TIA,
+> > Itamar M. Lins Jr.
+> > _______________________________________________
+> > Harbour-users mailing list
+> > Harbour-users@harbour-project.org
+> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >
+>
+>
+>
+> --
+> Massimo Belgrano
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From harbour-users at harbour-project.org  Sat Apr 18 16:34:45 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sat Apr 18 16:34:54 2009
+Subject: [Harbour-users] valtoprg()
+In-Reply-To: <89c0927b0904181146x4a55cbc9m4982f0245c6f4796@mail.gmail.com>
+References: <89c0927b0904161311j3c6aa916va31d4fdfd3a500d0@mail.gmail.com>	<609353e70904161434q73ef62cew48ce11a007f0f8dc@mail.gmail.com>
+	<89c0927b0904181146x4a55cbc9m4982f0245c6f4796@mail.gmail.com>
+Message-ID: <49EA3965.2060004@tiscalinet.it>
+
+harbour-users@harbour-project.org ha scritto:
+>>> Hi!
+>>> I am looking for equivalent function  to valtoprg.
+>>>
+>>> TIA,
+>>> Itamar M. Lins Jr.
+>>> _______________________________________________
+>>> Harbour-users mailing list
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>       
+
+And what is supposed to do this function? Never heard about it.
+D. Campagna
+From harbour-users at harbour-project.org  Sat Apr 18 16:54:42 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sat Apr 18 16:54:46 2009
+Subject: [Harbour-users] valtoprg()
+In-Reply-To: <89c0927b0904161311j3c6aa916va31d4fdfd3a500d0@mail.gmail.com>
+References: <89c0927b0904161311j3c6aa916va31d4fdfd3a500d0@mail.gmail.com>
+Message-ID: <1240088082406-2657181.post@n2.nabble.com>
+
+
+
+
+Hi!
+I am looking for equivalent function  to valtoprg.
+
+
+Hello,
+
+Depending on your final usage of this xHarbour function you can try with:
+
+HB_ValToExp( xVal )
+
+Also may be you can use the HB_ItemSerialize/HB_ItemDeSerialize functions too.
+
+best regards,
+
+Teo Fonrouge
+
+
+-- 
+View this message in context: http://n2.nabble.com/valtoprg%28%29-tp2648880p2657181.html
+Sent from the Harbour-users -- Users of the Harbour compiler mailing list archive at Nabble.com.
+
+From harbour-users at harbour-project.org  Mon Apr 20 20:16:50 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Apr 20 20:16:55 2009
+Subject: [Harbour-users] Bug Copy To.
+Message-ID: <89c0927b0904201716m62bb6bd9ibc121a8dd38ec7bd@mail.gmail.com>
+
+Hi!
+I get the bug.
+I.E:
+Functin Main
+sFile := "c:\xyz\myfile_a"
+tFile := "c:\xyz\send\myfile_a"
+use &sFile
+Copy To &tFile //Run Fine
+
+sFile := "c:\xyz\myfile_b"
+tFile := "c:\xyz\send\myfile_b"
+use &sFile // Function not defined:; PAD called from pad(0)
+Copy To &tFile
+
+>Error BASE/1001  Fun??o indefinida: PAD
+>Called from PAD(0)
+>Called from DBUSEAREA(0)
+
+
+TIA,
+Itamar M. Lins Jr.
+From harbour-users at harbour-project.org  Mon Apr 20 22:33:20 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Apr 20 20:33:26 2009
+Subject: [Harbour-users] Bug Copy To.
+References: <89c0927b0904201716m62bb6bd9ibc121a8dd38ec7bd@mail.gmail.com>
+Message-ID: <6809F67165AE4F8AA9406C04DC67C504@PORTATIL3>
+
+AFAIK, there is no PAD function.
+There are the following for specific use:
+PADR,PADR,PADC
+
+BR,
+__________________________________
+Jan Sperling Frischmuth
+Presidente,
+Sperling Consultor?a Inform?tica S.A.
+
+Tels:
+(506)2225-9667, (506)2225-9219
+(506)2253-2460, (506)2253-2473
+(506)2280-6232, (506)2281-3739
+Fax: (506)2281-3739
+Cel: (506)8381-1488
+email: jan.sperling@grecoavalon.com
+web: www.grecoavalon.com
+
+Este correo electr?nico contiene informaci?n confidencial. En caso de que usted no sea el receptor previsto, cont?ctenos al tel?fono (506)2225-9667 o por correo electr?nico y elimine inmediatamente el mensaje.
+This e-mail contain confidential information. If you are not the intended recipient, please notify us by reply e-mail, or by telephone at (506)2225-9667, and destroy the original message immediately.
+
+----- Original Message ----- 
+From: harbour-users@harbour-project.org 
+To: Users of the Harbour compiler 
+Sent: Monday, April 20, 2009 4:16 PM
+Subject: [Harbour-users] Bug Copy To.
+
+
+Hi!
+I get the bug.
+I.E:
+Functin Main
+sFile := "c:\xyz\myfile_a"
+tFile := "c:\xyz\send\myfile_a"
+use &sFile
+Copy To &tFile //Run Fine
+
+sFile := "c:\xyz\myfile_b"
+tFile := "c:\xyz\send\myfile_b"
+use &sFile // Function not defined:; PAD called from pad(0)
+Copy To &tFile
+
+>Error BASE/1001  Fun??o indefinida: PAD
+>Called from PAD(0)
+>Called from DBUSEAREA(0)
+
+
+TIA,
+Itamar M. Lins Jr.
+_______________________________________________
+Harbour-users mailing list
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+From harbour-users at harbour-project.org  Mon Apr 20 20:38:22 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Apr 20 20:38:28 2009
+Subject: [Harbour-users] Bug Copy To.
+In-Reply-To: <6809F67165AE4F8AA9406C04DC67C504@PORTATIL3>
+References: <89c0927b0904201716m62bb6bd9ibc121a8dd38ec7bd@mail.gmail.com>
+	<6809F67165AE4F8AA9406C04DC67C504@PORTATIL3>
+Message-ID: <89c0927b0904201738w60b4b427rabe5d7d2b0c152ca@mail.gmail.com>
+
+Yes Pad() function exist.
+Because if:
+Request PAD
+Function main
+sFile := "c:\xyz\myfile_a"
+tFile := "c:\xyz\send\myfile_a"
+use &sFile
+Copy To &tFile //Run Fine
+
+sFile := "c:\xyz\myfile_b"
+tFile := "c:\xyz\send\myfile_b"
+use &sFile //Run Fine!!!
+Copy To &tFile
+
+2009/4/20 <harbour-users@harbour-project.org>
+
+> AFAIK, there is no PAD function.
+> There are the following for specific use:
+> PADR,PADR,PADC
+>
+> BR,
+> __________________________________
+> Jan Sperling Frischmuth
+> Presidente,
+> Sperling Consultor?a Inform?tica S.A.
+>
+> Tels:
+> (506)2225-9667, (506)2225-9219
+> (506)2253-2460, (506)2253-2473
+> (506)2280-6232, (506)2281-3739
+> Fax: (506)2281-3739
+> Cel: (506)8381-1488
+> email: jan.sperling@grecoavalon.com
+> web: www.grecoavalon.com
+>
+> Este correo electr?nico contiene informaci?n confidencial. En caso de que
+> usted no sea el receptor previsto, cont?ctenos al tel?fono (506)2225-9667 o
+> por correo electr?nico y elimine inmediatamente el mensaje.
+> This e-mail contain confidential information. If you are not the intended
+> recipient, please notify us by reply e-mail, or by telephone at
+> (506)2225-9667, and destroy the original message immediately.
+>
+> ----- Original Message -----
+> From: harbour-users@harbour-project.org
+> To: Users of the Harbour compiler
+> Sent: Monday, April 20, 2009 4:16 PM
+> Subject: [Harbour-users] Bug Copy To.
+>
+>
+> Hi!
+> I get the bug.
+> I.E:
+> Functin Main
+> sFile := "c:\xyz\myfile_a"
+> tFile := "c:\xyz\send\myfile_a"
+> use &sFile
+> Copy To &tFile //Run Fine
+>
+> sFile := "c:\xyz\myfile_b"
+> tFile := "c:\xyz\send\myfile_b"
+> use &sFile // Function not defined:; PAD called from pad(0)
+> Copy To &tFile
+>
+> >Error BASE/1001  Fun??o indefinida: PAD
+> >Called from PAD(0)
+> >Called from DBUSEAREA(0)
+>
+>
+> TIA,
+> Itamar M. Lins Jr.
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From harbour-users at harbour-project.org  Sat Apr 18 14:22:42 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Tue Apr 21 00:31:57 2009
+Subject: [Harbour-users] valtoprg()
+In-Reply-To: <89c0927b0904161311j3c6aa916va31d4fdfd3a500d0@mail.gmail.com>
+References: <89c0927b0904161311j3c6aa916va31d4fdfd3a500d0@mail.gmail.com>
+Message-ID: <1240078962741-2656674.post@n2.nabble.com>
+
+
+
+
+Hi!
+I am looking for equivalent function  to valtoprg.
+
+
+
+Hello,
+
+Depending on your final usage of this xHarbour function you can try with:
+
+HB_ValToExp( xVal )
+
+Also may be you can use the HB_ItemSerialize/HB_ItemDeSerialize functions too.
+
+best regards,
+
+Teo Fonrouge
+
+-- 
+View this message in context: http://n2.nabble.com/valtoprg%28%29-tp2648880p2656674.html
+Sent from the Harbour-users -- Users of the Harbour compiler mailing list archive at Nabble.com.
+
+From harbour-users at harbour-project.org  Tue Apr 21 03:19:30 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Tue Apr 21 03:19:41 2009
+Subject: [Harbour-users] Bug Copy To.
+In-Reply-To: <6809F67165AE4F8AA9406C04DC67C504@PORTATIL3>
+References: <89c0927b0904201716m62bb6bd9ibc121a8dd38ec7bd@mail.gmail.com>
+	<6809F67165AE4F8AA9406C04DC67C504@PORTATIL3>
+Message-ID: <49ED7382.7060900@tiscalinet.it>
+
+harbour-users@harbour-project.org ha scritto:
+>
+> Hi!
+> I get the bug.
+> I.E:
+> Functin Main
+> sFile := "c:\xyz\myfile_a"
+> tFile := "c:\xyz\send\myfile_a"
+> use &sFile
+> Copy To &tFile //Run Fine
+>
+> sFile := "c:\xyz\myfile_b"
+> tFile := "c:\xyz\send\myfile_b"
+> use &sFile // Function not defined:; PAD called from pad(0)
+> Copy To &tFile
+>
+>   
+>> Error BASE/1001  Fun??o indefinida: PAD
+>> Called from PAD(0)
+>> Called from DBUSEAREA(0)
+>>     
+>
+>   
+It seems that you have named one of the fields of your database myfile_b 
+as "pad(something)"
+Is this the case?
+D. Campagna
+From harbour-users at harbour-project.org  Tue Apr 21 08:02:44 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Tue Apr 21 08:02:50 2009
+Subject: [Harbour-users] Bug Copy To.
+In-Reply-To: <49ED7382.7060900@tiscalinet.it>
+References: <89c0927b0904201716m62bb6bd9ibc121a8dd38ec7bd@mail.gmail.com>
+	<6809F67165AE4F8AA9406C04DC67C504@PORTATIL3>
+	<49ED7382.7060900@tiscalinet.it>
+Message-ID: <89c0927b0904210502w25b7c2ben573cfe1441c5d7ef@mail.gmail.com>
+
+No. PAD is out function, maybe RDDCDX internal function, or other lib.
+This is a BUG of "COPY TO " command.
+
+TIA,
+Itamar M. Lins Jr.
+2009/4/21 <harbour-users@harbour-project.org>
+
+> harbour-users@harbour-project.org ha scritto:
+>
+>>
+>> Hi!
+>> I get the bug.
+>> I.E:
+>> Functin Main
+>> sFile := "c:\xyz\myfile_a"
+>> tFile := "c:\xyz\send\myfile_a"
+>> use &sFile
+>> Copy To &tFile //Run Fine
+>>
+>> sFile := "c:\xyz\myfile_b"
+>> tFile := "c:\xyz\send\myfile_b"
+>> use &sFile // Function not defined:; PAD called from pad(0)
+>> Copy To &tFile
+>>
+>>
+>>
+>>> Error BASE/1001  Fun??o indefinida: PAD
+>>> Called from PAD(0)
+>>> Called from DBUSEAREA(0)
+>>>
+>>>
+>>
+>>
+>>
+> It seems that you have named one of the fields of your database myfile_b as
+> "pad(something)"
+> Is this the case?
+> D. Campagna
+>
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From harbour-users at harbour-project.org  Wed Apr 29 03:40:58 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed Apr 29 03:41:06 2009
+Subject: [Harbour-users] Under WinXP set window position and font
+Message-ID: <5616F6D7-9A7B-4792-8CAB-0993BBF6C1BD@mosaic.hu>
+
+- How to set/get the window position and font type and/or size?
+- How to change between fullscreen mode and normal window mode?
+- Where I find harbour function list reference (non standard clipper  
+functions)?
+
+Thanks
+Venczel Jozsef
+

@@ -1,0 +1,28 @@
+From firasfirasm at gmail.com  Mon Aug 17 20:16:19 2009
+From: firasfirasm at gmail.com (firas m)
+Date: Mon Aug 17 20:16:26 2009
+Subject: [Harbour-users] : Mirroring and (RTL) layout
+Message-ID: <96b1fd7e0908171716m5f90ed6blebf0d001d0652a89@mail.gmail.com>
+
+is there library  support this features  ?
+
+emmm
+
+
+like
+
+http://www.microsoft.com/middleeast/msdn/mirror.aspx
+From lucasdebeltran at gmail.com  Wed Aug 19 09:02:49 2009
+From: lucasdebeltran at gmail.com (=?ISO-8859-1?Q?Lucas_De_Beltr=E1n?=)
+Date: Wed Aug 19 09:02:56 2009
+Subject: [Harbour-users] SQL RDD
+Message-ID: <eb96f4980908190602h3d0bc9aexae09dfd75e683c94@mail.gmail.com>
+
+Hi,
+
+In Harbour, is there a RDD for SQL, so I keep the same code (such as SELECT
+("INFO"), SET FILTER, PACK, etc).
+
+Thank you very much. Regards,
+
+Lucas

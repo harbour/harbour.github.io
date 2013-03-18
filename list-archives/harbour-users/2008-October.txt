@@ -1,0 +1,206 @@
+From harbour-users at harbour-project.org  Thu Oct  2 18:36:33 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Thu Oct  2 18:38:12 2008
+Subject: [Harbour-users] Docs on installation?
+Message-ID: <200810021836.33638.slitt@troubleshooters.com>
+
+Hi all,
+
+Where do I find installation documentation?
+
+I downloaded /harbour-1.0.1.tar.gz, untarred it into a directory, switched to 
+the harbour-1.0.1 directory. I saw no INSTALL or README file, couldn't find 
+any installation docs on the Harbour website, so I ran ./make_gcc.sh.
+
+Then I switched to harbour-1.0.1/bin/gcc, created a hello world program, and 
+this as the result:
+
+[slitt@mydesk gcc]$ ./hbrun ~/hello.prg
+   
+Hello world!                                                                                                                                   
+[slitt@mydesk gcc]$
+
+So far so good. But when I did this:
+
+./hbrun ~/hello.prg
+
+and then compiled the resulting hello.c:
+
+[slitt@mydesk gcc]$ gcc hello.c
+hello.c:7:21: error: hbvmpub.h: No such file or directory
+hello.c:8:20: error: hbinit.h: No such file or directory
+hello.c:11: warning: data definition has no type or storage class
+
+And then a whole bunch of errors. It doesn't surprise me, as I didn't do the 
+equivalent of make install, but I don't know how to do that. I 
+ran /harbour/harbour-1.0.1/bin/postinst.sh, but it told me I had to set 
+several environment variables, and I decided not knowing what I was doing 
+wasn't a good idea.
+
+Anyone know where I can find documentation on installation?
+
+Thanks
+
+SteveT
+
+Steve Litt
+Recession Relief Package
+http://www.recession-relief.US
+
+From harbour-users at harbour-project.org  Fri Oct  3 07:43:50 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Oct  3 07:43:58 2008
+Subject: [Harbour-users] Docs on installation?
+In-Reply-To: <200810021836.33638.slitt@troubleshooters.com>
+References: <200810021836.33638.slitt@troubleshooters.com>
+Message-ID: <edff235e0810030443s1aa9fbchb66dbdb5c7fff2ef@mail.gmail.com>
+
+Look at:
+http://www.abix.info.pl/kompilator-harbour,56.html
+
+There are rpm's created under openSUSE 10.3 and some infos ....
+
+Best regards, Adam
+From harbour-users at harbour-project.org  Fri Oct  3 11:28:03 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Oct  3 11:29:48 2008
+Subject: [Harbour-users] Docs on installation?
+In-Reply-To: <edff235e0810030443s1aa9fbchb66dbdb5c7fff2ef@mail.gmail.com>
+References: <200810021836.33638.slitt@troubleshooters.com>
+	<edff235e0810030443s1aa9fbchb66dbdb5c7fff2ef@mail.gmail.com>
+Message-ID: <200810031128.03954.slitt@troubleshooters.com>
+
+On Friday 03 October 2008 07:43:50 am harbour-users@harbour-project.org wrote:
+> Look at:
+> http://www.abix.info.pl/kompilator-harbour,56.html
+>
+> There are rpm's created under openSUSE 10.3 and some infos ....
+
+Thanks Adam, but I can't read Polish, and I'd prefer to compile it myself 
+rather than use RPMs which probably don't match my exact distro.
+
+Steve
+
+Steve Litt
+Recession Relief Package
+http://www.recession-relief.US
+
+From harbour-users at harbour-project.org  Fri Oct  3 12:15:05 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Oct  3 12:15:15 2008
+Subject: [Harbour-users] Docs on installation?
+In-Reply-To: <200810031128.03954.slitt@troubleshooters.com>
+References: <200810021836.33638.slitt@troubleshooters.com>
+	<edff235e0810030443s1aa9fbchb66dbdb5c7fff2ef@mail.gmail.com>
+	<200810031128.03954.slitt@troubleshooters.com>
+Message-ID: <edff235e0810030915h9fe2888h450bbb2ba3e6062f@mail.gmail.com>
+
+I'm uploading script to make all, just execute it in your local home
+directory. Remember NOT to do it as root, but DO it as normal user.
+This script gets all harbour sources and makes rpms for your
+distribution.
+Some info in english you will find at:
+http://www.abix.info.pl/harbour-scripts-howto,80.html
+Best regards, Adam
+From harbour-users at harbour-project.org  Fri Oct  3 13:58:21 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Oct  3 14:00:08 2008
+Subject: [Harbour-users] Docs on installation?
+In-Reply-To: <edff235e0810030915h9fe2888h450bbb2ba3e6062f@mail.gmail.com>
+References: <200810021836.33638.slitt@troubleshooters.com>
+	<200810031128.03954.slitt@troubleshooters.com>
+	<edff235e0810030915h9fe2888h450bbb2ba3e6062f@mail.gmail.com>
+Message-ID: <200810031358.21847.slitt@troubleshooters.com>
+
+On Friday 03 October 2008 12:15:05 pm harbour-users@harbour-project.org wrote:
+> I'm uploading script to make all, just execute it in your local home
+> directory. Remember NOT to do it as root, but DO it as normal user.
+> This script gets all harbour sources and makes rpms for your
+> distribution.
+
+Thanks Adam! Where can I download the script?
+
+> Some info in english you will find at:
+> http://www.abix.info.pl/harbour-scripts-howto,80.html
+> Best regards, Adam
+
+Thanks. That was a clear explanation, but unfortunately many of the programs 
+that page mentions aren't in my Harbour distribution: 
+
+[slitt@mydesk harbour-1.0.1]$ ls -l bin/gcc/*
+-rwxr-xr-x 1 slitt slitt  568204 2008-10-02 18:12 bin/gcc/harbour*
+-rwxr-xr-x 1 slitt slitt 1004688 2008-10-02 18:13 bin/gcc/hbdoc*
+-rwxr-xr-x 1 slitt slitt 1055014 2008-10-02 18:13 bin/gcc/hbmake*
+-rwxr-xr-x 1 slitt slitt  111322 2008-10-02 18:12 bin/gcc/hbpp*
+-rwxr-xr-x 1 slitt slitt 2181205 2008-10-02 18:13 bin/gcc/hbrun*
+-rwxr-xr-x 1 slitt slitt 1218448 2008-10-02 18:13 bin/gcc/hbtest*
+-rw-r--r-- 1 slitt slitt    1321 2008-10-02 18:31 bin/gcc/hello.c
+-rw-r--r-- 1 slitt slitt     867 2008-10-03 13:47 bin/gcc/hello.ppo
+
+bin/gcc/htm:
+total 0
+[slitt@mydesk harbour-1.0.1]$
+
+
+I made hello.c by using harbour on hello.prg, and I'm not sure how I made 
+hello.ppo.
+
+I couldn't find any equivalent to the hbcc and hbmake mentioned in your web 
+page.
+
+Thanks
+
+SteveT
+
+Steve Litt
+Recession Relief Package
+http://www.recession-relief.US
+
+From harbour-users at harbour-project.org  Sat Oct  4 12:23:30 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sat Oct  4 12:23:37 2008
+Subject: [Harbour-users] Docs on installation?
+In-Reply-To: <200810031358.21847.slitt@troubleshooters.com>
+References: <200810021836.33638.slitt@troubleshooters.com>
+	<200810031128.03954.slitt@troubleshooters.com>
+	<edff235e0810030915h9fe2888h450bbb2ba3e6062f@mail.gmail.com>
+	<200810031358.21847.slitt@troubleshooters.com>
+Message-ID: <edff235e0810040923m37e4bf43yaef09eb57764b9fc@mail.gmail.com>
+
+2008/10/3  <harbour-users@harbour-project.org>:
+> On Friday 03 October 2008 12:15:05 pm harbour-users@harbour-project.org wrote:
+> Thanks Adam! Where can I download the script?
+It is attached to my previous mail.
+Or directly http://www.abix.info.pl/files/hbgtmk-script.tgz
+And look again in http://www.abix.info.pl/kompilator-harbour,56.html
+
+Best Regards, Adam.
+From harbour-users at harbour-project.org  Sat Oct  4 16:36:04 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sat Oct  4 16:48:42 2008
+Subject: [Harbour-users] Docs on installation?
+In-Reply-To: <edff235e0810040923m37e4bf43yaef09eb57764b9fc@mail.gmail.com>
+References: <200810021836.33638.slitt@troubleshooters.com>
+	<200810031128.03954.slitt@troubleshooters.com>
+	<edff235e0810030915h9fe2888h450bbb2ba3e6062f@mail.gmail.com>
+	<200810031358.21847.slitt@troubleshooters.com>
+	<edff235e0810040923m37e4bf43yaef09eb57764b9fc@mail.gmail.com>
+Message-ID: <edff235e0810041336s387aa837x3b7768c165e7f0a7@mail.gmail.com>
+
+Additional infos.. in newest SVN there is new script to create RPMs:
+mpkg_rpm_from_svn.sh
+http://www.abix.info.pl/files/mpkg_rpm_from_svn.tgz
+
+Best regards,
+Adam
+
+2008/10/4 ABIX Firma <abix.adam@gmail.com>:
+> 2008/10/3  <harbour-users@harbour-project.org>:
+>> On Friday 03 October 2008 12:15:05 pm harbour-users@harbour-project.org wrote:
+>> Thanks Adam! Where can I download the script?
+> It is attached to my previous mail.
+> Or directly http://www.abix.info.pl/files/hbgtmk-script.tgz
+> And look again in http://www.abix.info.pl/kompilator-harbour,56.html
+>
+> Best Regards, Adam.
+>

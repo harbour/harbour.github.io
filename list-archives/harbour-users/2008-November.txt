@@ -1,0 +1,1376 @@
+From harbour-users at harbour-project.org  Tue Nov  4 19:15:39 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Tue Nov  4 19:15:44 2008
+Subject: [Harbour-users] Docs on installation?
+Message-ID: <4910E5AB.2050302@zen.co.uk>
+
+I am trying to use the mpkg_rpm_from_svn.sh script but it fails at this 
+point after quite some time :-
+(just the last few lines shown)
+
+A    harbour/config/w32/mingw.cf
+A    harbour/config/w32/pocc.cf
+A    harbour/obj
+ U   harbour
+Checked out revision 9837.
+"rpm -b" is deprecated, use "rpmbuild -b"
+/usr/lib/rpm/rpmb_deprecated: line 3: exec: rpmbuild: not found
+[baz@localhost ~]$
+
+Any help would be appreciated.
+
+System is Mandriva Linux 2008.1 running in VBox (under Mandriva Linux 
+2009.0)
+From harbour-users at harbour-project.org  Wed Nov  5 16:12:13 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed Nov  5 16:12:19 2008
+Subject: [Harbour-users] Docs on installation?
+In-Reply-To: <4910E5AB.2050302@zen.co.uk>
+References: <4910E5AB.2050302@zen.co.uk>
+Message-ID: <edff235e0811051312g33f7814t7e1ce5533440e550@mail.gmail.com>
+
+Maybe you should try to set BUGGY_RPM="yas" hardcoded in mpkg_rpm.sh at line 59.
+This is for Connectivia, but maybe it will be nedded for Mandrivia too.
+I use openSUSE 11 and in it everything is ok.
+
+best regards,
+Adam
+
+2008/11/5  <harbour-users@harbour-project.org>:
+> I am trying to use the mpkg_rpm_from_svn.sh script but it fails at this
+> point after quite some time :-
+> (just the last few lines shown)
+>
+> A    harbour/config/w32/mingw.cf
+> A    harbour/config/w32/pocc.cf
+> A    harbour/obj
+> U   harbour
+> Checked out revision 9837.
+> "rpm -b" is deprecated, use "rpmbuild -b"
+> /usr/lib/rpm/rpmb_deprecated: line 3: exec: rpmbuild: not found
+> [baz@localhost ~]$
+>
+> Any help would be appreciated.
+>
+> System is Mandriva Linux 2008.1 running in VBox (under Mandriva Linux
+> 2009.0)
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From harbour-users at harbour-project.org  Thu Nov  6 14:11:34 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Thu Nov  6 14:11:38 2008
+Subject: [Harbour-users] Re: Harbour-users Digest, Vol 6,
+	Issue 2 (Docs on installation?)
+In-Reply-To: <E1Ky8EN-0004NM-0O@hausdorff.zen.co.uk>
+References: <E1Ky8EN-0004NM-0O@hausdorff.zen.co.uk>
+Message-ID: <49134166.8030808@zen.co.uk>
+
+Thanks for your reply Adam.
+I finally found the Mandriva version of 'rpmbuild' in the Mandriva 
+repository - I had searched but missed it as it is called 'rpm-build'. 
+After installing that and a few more missing libraries I have finally 
+built everything and it is working on Mandriva 2009.
+"Hello World" compiles and runs.
+I wonder if anyone knows of a 3rd party library with functions 
+equivalent to Clipper Tools III COM functions for RS232, as I notice 
+these are not yet available in harbour?
+
+
+harbour-users-request@harbour-project.org wrote:
+> Send Harbour-users mailing list submissions to
+> 	harbour-users@harbour-project.org
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+> 	http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> or, via email, send a message with subject or body 'help' to
+> 	harbour-users-request@harbour-project.org
+>
+> You can reach the person managing the list at
+> 	harbour-users-owner@harbour-project.org
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of Harbour-users digest..."
+>   
+> ------------------------------------------------------------------------
+>
+> Today's Topics:
+>
+>    1. Re: Docs on installation? (harbour-users@harbour-project.org)
+>   
+>
+> ------------------------------------------------------------------------
+>
+> Subject:
+> Re: [Harbour-users] Docs on installation?
+> From:
+> harbour-users@harbour-project.org
+> Date:
+> Wed, 5 Nov 2008 22:12:13 +0100
+> To:
+> "Users of the Harbour compiler" <harbour-users@harbour-project.org>
+>
+> To:
+> "Users of the Harbour compiler" <harbour-users@harbour-project.org>
+>
+>
+> Maybe you should try to set BUGGY_RPM="yas" hardcoded in mpkg_rpm.sh at line 59.
+> This is for Connectivia, but maybe it will be nedded for Mandrivia too.
+> I use openSUSE 11 and in it everything is ok.
+>
+> best regards,
+> Adam
+>
+> 2008/11/5  <harbour-users@harbour-project.org>:
+>   
+>> I am trying to use the mpkg_rpm_from_svn.sh script but it fails at this
+>> point after quite some time :-
+>> (just the last few lines shown)
+>>
+>> A    harbour/config/w32/mingw.cf
+>> A    harbour/config/w32/pocc.cf
+>> A    harbour/obj
+>> U   harbour
+>> Checked out revision 9837.
+>> "rpm -b" is deprecated, use "rpmbuild -b"
+>> /usr/lib/rpm/rpmb_deprecated: line 3: exec: rpmbuild: not found
+>> [baz@localhost ~]$
+>>
+>> Any help would be appreciated.
+>>
+>> System is Mandriva Linux 2008.1 running in VBox (under Mandriva Linux
+>> 2009.0)
+>> _______________________________________________
+>> Harbour-users mailing list
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>     
+>
+>   
+> ------------------------------------------------------------------------
+>
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>   
+From harbour-users at harbour-project.org  Thu Nov  6 18:40:16 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Thu Nov  6 18:40:19 2008
+Subject: [Harbour-users] Re: Harbour-users Digest, Vol 6,
+	Issue 2 (Docs on installation?)
+In-Reply-To: <49134166.8030808@zen.co.uk>
+References: <E1Ky8EN-0004NM-0O@hausdorff.zen.co.uk>
+	<49134166.8030808@zen.co.uk>
+Message-ID: <edff235e0811061540m18590a1eq28b40122803f5a09@mail.gmail.com>
+
+There must be a lot of them, because I use application written by
+Przemek in Harbour, where communication with rs-232 (fiscal printers)
+is a must a high priority. So ask Przemek / druzus at acn dot waw dot
+pl / for details.....
+
+Adam
+
+2008/11/6  <harbour-users@harbour-project.org>:
+> Thanks for your reply Adam.
+From harbour-users at harbour-project.org  Fri Nov  7 14:18:22 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Nov  7 14:18:27 2008
+Subject: [Harbour-users] Re: Harbour-users Digest, Vol 6, Issue 3
+In-Reply-To: <E1KyUrP-0005oA-Hk@julia.zen.co.uk>
+References: <E1KyUrP-0005oA-Hk@julia.zen.co.uk>
+Message-ID: <4914947E.6010709@zen.co.uk>
+
+
+
+harbour-users-request@harbour-project.org wrote:
+> Send Harbour-users mailing list submissions to
+> 	harbour-users@harbour-project.org
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+> 	http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> or, via email, send a message with subject or body 'help' to
+> 	harbour-users-request@harbour-project.org
+>
+> You can reach the person managing the list at
+> 	harbour-users-owner@harbour-project.org
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of Harbour-users digest..."
+>   
+> ------------------------------------------------------------------------
+>
+> Today's Topics:
+>
+>    1. Re: Harbour-users Digest, Vol 6,	Issue 2 (Docs on
+>       installation?) (harbour-users@harbour-project.org)
+>    2. Re: Re: Harbour-users Digest, Vol 6,	Issue 2 (Docs on
+>       installation?) (harbour-users@harbour-project.org)
+>   
+>
+> ------------------------------------------------------------------------
+>
+> Subject:
+> [Harbour-users] Re: Harbour-users Digest, Vol 6, Issue 2 (Docs on 
+> installation?)
+> From:
+> harbour-users@harbour-project.org
+> Date:
+> Thu, 06 Nov 2008 19:11:34 +0000
+> To:
+> harbour-users@harbour-project.org
+>
+> To:
+> harbour-users@harbour-project.org
+>
+>
+> Thanks for your reply Adam.
+> I finally found the Mandriva version of 'rpmbuild' in the Mandriva 
+> repository - I had searched but missed it as it is called 'rpm-build'. 
+> After installing that and a few more missing libraries I have finally 
+> built everything and it is working on Mandriva 2009.
+> "Hello World" compiles and runs.
+> I wonder if anyone knows of a 3rd party library with functions 
+> equivalent to Clipper Tools III COM functions for RS232, as I notice 
+> these are not yet available in harbour?
+>
+>
+> harbour-users-request@harbour-project.org wrote:
+>> Send Harbour-users mailing list submissions to
+>>     harbour-users@harbour-project.org
+>>
+>> To subscribe or unsubscribe via the World Wide Web, visit
+>>     http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>> or, via email, send a message with subject or body 'help' to
+>>     harbour-users-request@harbour-project.org
+>>
+>> You can reach the person managing the list at
+>>     harbour-users-owner@harbour-project.org
+>>
+>> When replying, please edit your Subject line so it is more specific
+>> than "Re: Contents of Harbour-users digest..."
+>>   
+>> ------------------------------------------------------------------------
+>>
+>> Today's Topics:
+>>
+>>    1. Re: Docs on installation? (harbour-users@harbour-project.org)
+>>  
+>> ------------------------------------------------------------------------
+>>
+>> Subject:
+>> Re: [Harbour-users] Docs on installation?
+>> From:
+>> harbour-users@harbour-project.org
+>> Date:
+>> Wed, 5 Nov 2008 22:12:13 +0100
+>> To:
+>> "Users of the Harbour compiler" <harbour-users@harbour-project.org>
+>>
+>> To:
+>> "Users of the Harbour compiler" <harbour-users@harbour-project.org>
+>>
+>>
+>> Maybe you should try to set BUGGY_RPM="yas" hardcoded in mpkg_rpm.sh 
+>> at line 59.
+>> This is for Connectivia, but maybe it will be nedded for Mandrivia too.
+>> I use openSUSE 11 and in it everything is ok.
+>>
+>> best regards,
+>> Adam
+>>
+>> 2008/11/5  <harbour-users@harbour-project.org>:
+>>  
+>>> I am trying to use the mpkg_rpm_from_svn.sh script but it fails at this
+>>> point after quite some time :-
+>>> (just the last few lines shown)
+>>>
+>>> A    harbour/config/w32/mingw.cf
+>>> A    harbour/config/w32/pocc.cf
+>>> A    harbour/obj
+>>> U   harbour
+>>> Checked out revision 9837.
+>>> "rpm -b" is deprecated, use "rpmbuild -b"
+>>> /usr/lib/rpm/rpmb_deprecated: line 3: exec: rpmbuild: not found
+>>> [baz@localhost ~]$
+>>>
+>>> Any help would be appreciated.
+>>>
+>>> System is Mandriva Linux 2008.1 running in VBox (under Mandriva Linux
+>>> 2009.0)
+>>> _______________________________________________
+>>> Harbour-users mailing list
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>
+>>>     
+>>
+>>   
+>> ------------------------------------------------------------------------
+>>
+>> _______________________________________________
+>> Harbour-users mailing list
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>   
+>
+>
+> ------------------------------------------------------------------------
+>
+> Subject:
+> Re: [Harbour-users] Re: Harbour-users Digest, Vol 6, Issue 2 (Docs on 
+> installation?)
+> From:
+> harbour-users@harbour-project.org
+> Date:
+> Fri, 7 Nov 2008 00:40:16 +0100
+> To:
+> "Users of the Harbour compiler" <harbour-users@harbour-project.org>
+>
+> To:
+> "Users of the Harbour compiler" <harbour-users@harbour-project.org>
+>
+>
+> There must be a lot of them, because I use application written by
+> Przemek in Harbour, where communication with rs-232 (fiscal printers)
+> is a must a high priority. So ask Przemek / druzus at acn dot waw dot
+> pl / for details.....
+>
+> Adam
+>
+> 2008/11/6  <harbour-users@harbour-project.org>:
+>   
+>> Thanks for your reply Adam.
+>>     
+>
+>   
+> ------------------------------------------------------------------------
+> Thanks again Adam,
+>   
+I have just sent a mail to Przemek.
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>   
+From harbour-users at harbour-project.org  Mon Nov 10 21:39:55 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Nov 10 21:40:06 2008
+Subject: [Harbour-users] "New" User - Intro
+Message-ID: <alpine.LNX.2.00.0811102026490.18283@Damaris.RawFedDogs.net>
+
+Clipper Fans,
+
+I just wanted to post an intro from a "new" user.
+
+I was bitten by the dBase bug during my all too brief stint in college. 
+I think it was dBase III+ that I started with.  I used dBase at home for a 
+bit until I switched to Linux.  That was back in the 1.xx Linux kernel 
+days.  Back then I hadn't heard of Clipper.  I kept searching for dBase 
+like programs for Linux and eventually came across FlagShip.  I used the 
+personal version of FlagShip for a while until they started adding 
+"nagware" dialog boxes that popped up every time one started a program 
+compiled with the personal edition.  I then started searching again for 
+other options.  I think at that the time I came across the harbour and 
+xHarbour projects.  For some reason harbour wouldn't work for me back 
+then.  It wouldn't display anything on the screen.  A simple program like:
+
+Function Main()
+
+? "Hello World!!"
+
+Return
+
+would just display a blank line.  At the time I didn't even try xHarbour. 
+I was under the mistaken impression that xHarbour was an X windows GUI 
+version of harbour.  I prefer TUI interfaces.  Anyway, I found clip from 
+http://www.itk.ru and have been using it for several years.  I just gave 
+harbour another try and the problem I encountered the first time around 
+appears to be gone.  And, my programs run faster with harbour than with 
+itk.ru's clip.  I also tried xHarbour, but I encountered the blank display 
+problem I mentioned above with the current version of xHarbour.  I think I 
+might be making the switch from clip to harbour.
+
+
+P.S.  If anyone here is the FreeBSD harbour port maintainer or has contact 
+with him/her, the version of Harbour in the FreeBSD ports tree is 0.44.0. 
+It looks like it might be time for an update.
+
+
+
+
+Kevin
+http://www.RawFedDogs.net
+http://www.WacoAgilityGroup.org
+Bruceville, TX
+
+Si hoc legere scis nimium eruditionis habes.
+Longum iter est per praecepta, breve et efficax per exempla!!!
+
+From harbour-users at harbour-project.org  Tue Nov 11 06:04:04 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Tue Nov 11 06:05:00 2008
+Subject: [Harbour-users] "New" User - Intro
+In-Reply-To: <alpine.LNX.2.00.0811102026490.18283@Damaris.RawFedDogs.net>
+References: <alpine.LNX.2.00.0811102026490.18283@Damaris.RawFedDogs.net>
+Message-ID: <AFB948164110ED43B5EB849E8DEEF03815F172@SRV02.deltain.net>
+
+Harbour is a powerful languages compatible with clipper (dbase compiler)
+born in 1999
+xHarbour is a fork of the earlier Harbour project. xHarbour takes a more
+aggressive approach to implementing new features in the language, while
+Harbour is more conservative in its approach, aiming first of all for an
+exact replication of Clipper behaviours and then implementing new
+features and extensions as a secondary consideration.
+The Harbour developers have attempted to document all hidden behaviours
+in the Clipper language and test Harbour-compiled code alongside the
+same code compiled with Clipper to maintain compatibility.
+The Harbour developers explicitly reject extensions to the language
+where those extensions would break Clipper compatibility.
+Now harbour 1.1 (not ready but working) have strong capability like a
+Multi Thread, Multi windows, and is under development an incoming GUI
+class compatible with Xbase Parts
+Imo you can easy making the switch from clip to harbour
+Today harbour seem more active that xharbour as you seen in developer
+mailing
+http://news.gmane.org/gmane.comp.lang.xharbour.devel
+http://news.gmane.org/gmane.comp.lang.harbour.devel
+
+For compile your sample you can simply use hbmk 
+
+-----Original Message-----
+From: harbour-users-bounces@harbour-project.org
+[mailto:harbour-users-bounces@harbour-project.org] On Behalf Of
+harbour-users@harbour-project.org
+Sent: Tuesday, November 11, 2008 3:40 AM
+To: Harbour users Mailing List
+Subject: [Harbour-users] "New" User - Intro
+
+Clipper Fans,
+
+I just wanted to post an intro from a "new" user.
+
+I was bitten by the dBase bug during my all too brief stint in college. 
+I think it was dBase III+ that I started with.  I used dBase at home for
+a 
+bit until I switched to Linux.  That was back in the 1.xx Linux kernel 
+days.  Back then I hadn't heard of Clipper.  I kept searching for dBase 
+like programs for Linux and eventually came across FlagShip.  I used the
+
+personal version of FlagShip for a while until they started adding 
+"nagware" dialog boxes that popped up every time one started a program 
+compiled with the personal edition.  I then started searching again for 
+other options.  I think at that the time I came across the harbour and 
+xHarbour projects.  For some reason harbour wouldn't work for me back 
+then.  It wouldn't display anything on the screen.  A simple program
+like:
+
+Function Main()
+
+? "Hello World!!"
+
+Return
+
+would just display a blank line.  At the time I didn't even try
+xHarbour. 
+I was under the mistaken impression that xHarbour was an X windows GUI 
+version of harbour.  I prefer TUI interfaces.  Anyway, I found clip from
+
+http://www.itk.ru and have been using it for several years.  I just gave
+
+harbour another try and the problem I encountered the first time around 
+appears to be gone.  And, my programs run faster with harbour than with 
+itk.ru's clip.  I also tried xHarbour, but I encountered the blank
+display 
+problem I mentioned above with the current version of xHarbour.  I think
+I 
+might be making the switch from clip to harbour.
+
+
+P.S.  If anyone here is the FreeBSD harbour port maintainer or has
+contact 
+with him/her, the version of Harbour in the FreeBSD ports tree is
+0.44.0. 
+It looks like it might be time for an update.
+
+
+
+
+Kevin
+http://www.RawFedDogs.net
+http://www.WacoAgilityGroup.org
+Bruceville, TX
+
+Si hoc legere scis nimium eruditionis habes.
+Longum iter est per praecepta, breve et efficax per exempla!!!
+
+_______________________________________________
+Harbour-users mailing list
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+From harbour-users at harbour-project.org  Wed Nov 12 07:31:50 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed Nov 12 07:31:53 2008
+Subject: [Harbour-users] Switch
+Message-ID: <89c0927b0811120431g5931fdc1p5ce0b8120dd269c7@mail.gmail.com>
+
+Hi!
+This exemple fail.
+E0020 Incomplete statement or unbalanced delimiters
+Because (DEFAULT) flag.
+Harbour CVS  * $Id: ChangeLog 9912 2008-11-12 11:34:50Z vszakats $
+
+// The example prints a file in RAW mode and demonstrates
+// the possible return values of PrintFileRaw().
+PROCEDURE Main()
+ LOCAL cPrinter := GetDefaultPrinter()
+ LOCAL cFile := "MyFile.Txt"
+ LOCAL nResult := -1
+ LOCAL cMsg := "PrintFileRaw(): "
+
+CLS
+ IF Empty( cPrinter )
+? "No default printer found"
+QUIT
+ ENDIF
+ nResult := PrintFileRaw( cPrinter, cFile, "Test for PrintFileRaw()" )
+ SWITCH nResult
+ CASE -1 cMsg += "Invalid parameters passed to function" ; EXIT
+ CASE -2 cMsg += "WinAPI OpenPrinter() call failed" ; EXIT
+CASE -3 cMsg += "WinAPI StartDocPrinter() call failed" ; EXIT
+CASE -4 cMsg += "WinAPI StartPagePrinter() call failed" ; EXIT
+CASE -5 cMsg += "WinAPI malloc() of memory failed" ; EXIT
+CASE -6 cMsg += "File " + cFile + " not found" ; EXIT
+DEFAULT //Fail here
+cMsg += cFile + " PRINTED OK!!!"
+END
+? cMsg RETURN
+
+
+Tks,
+Itamar M. Lins Jr.
+From harbour-users at harbour-project.org  Wed Nov 12 17:25:31 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed Nov 12 17:25:34 2008
+Subject: [Harbour-users] Re: Harbour-users Digest, Vol 6, Issue 6
+In-Reply-To: <E1L0Jz6-0003u0-35@julia.zen.co.uk>
+References: <E1L0Jz6-0003u0-35@julia.zen.co.uk>
+Message-ID: <491B57DB.4040103@zen.co.uk>
+
+All looks OK to me except the last line
+? cMsg RETURN
+should this not be
+? cMsg ; RETURN
+
+harbour-users-request@harbour-project.org wrote:
+> Send Harbour-users mailing list submissions to
+> 	harbour-users@harbour-project.org
+> 
+> To subscribe or unsubscribe via the World Wide Web, visit
+> 	http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> or, via email, send a message with subject or body 'help' to
+> 	harbour-users-request@harbour-project.org
+> 
+> You can reach the person managing the list at
+> 	harbour-users-owner@harbour-project.org
+> 
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of Harbour-users digest..."
+> 
+> 
+> ------------------------------------------------------------------------
+> 
+> Today's Topics:
+> 
+>    1. Switch (harbour-users@harbour-project.org)
+> 
+> 
+> ------------------------------------------------------------------------
+> 
+> Subject:
+> [Harbour-users] Switch
+> From:
+> harbour-users@harbour-project.org
+> Date:
+> Wed, 12 Nov 2008 09:31:50 -0300
+> To:
+> harbour-users@harbour-project.org
+> 
+> To:
+> harbour-users@harbour-project.org
+> 
+> 
+> Hi!
+> This exemple fail.
+> E0020 Incomplete statement or unbalanced delimiters
+> Because (DEFAULT) flag.
+> Harbour CVS  * $Id: ChangeLog 9912 2008-11-12 11:34:50Z vszakats $
+> 
+> // The example prints a file in RAW mode and demonstrates
+> // the possible return values of PrintFileRaw().
+> PROCEDURE Main()
+>  LOCAL cPrinter := GetDefaultPrinter()
+>  LOCAL cFile := "MyFile.Txt"
+>  LOCAL nResult := -1
+>  LOCAL cMsg := "PrintFileRaw(): "
+> 
+> CLS
+>  IF Empty( cPrinter )
+> ? "No default printer found"
+> QUIT
+>  ENDIF
+>  nResult := PrintFileRaw( cPrinter, cFile, "Test for PrintFileRaw()" )
+>  SWITCH nResult
+>  CASE -1 cMsg += "Invalid parameters passed to function" ; EXIT
+>  CASE -2 cMsg += "WinAPI OpenPrinter() call failed" ; EXIT
+> CASE -3 cMsg += "WinAPI StartDocPrinter() call failed" ; EXIT
+> CASE -4 cMsg += "WinAPI StartPagePrinter() call failed" ; EXIT
+> CASE -5 cMsg += "WinAPI malloc() of memory failed" ; EXIT
+> CASE -6 cMsg += "File " + cFile + " not found" ; EXIT
+> DEFAULT //Fail here
+> cMsg += cFile + " PRINTED OK!!!"
+> END
+> ? cMsg RETURN
+> 
+> 
+> Tks,
+> Itamar M. Lins Jr.
+> 
+> 
+> 
+> ------------------------------------------------------------------------
+> 
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+From harbour-users at harbour-project.org  Thu Nov 13 06:11:34 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Thu Nov 13 06:11:39 2008
+Subject: R: [Harbour-users] Re: Harbour-users Digest, Vol 6, Issue 6
+In-Reply-To: <491B57DB.4040103@zen.co.uk>
+References: <E1L0Jz6-0003u0-35@julia.zen.co.uk> <491B57DB.4040103@zen.co.uk>
+Message-ID: <AFB948164110ED43B5EB849E8DEEF03815F193@SRV02.deltain.net>
+
+Can be a crlf problem by posting from different os
+? cMsg 
+RETURN
+
+-----Messaggio originale-----
+Da: harbour-users-bounces@harbour-project.org [mailto:harbour-users-bounces@harbour-project.org] Per conto di harbour-users@harbour-project.org
+Inviato: mercoled? 12 novembre 2008 23.26
+A: harbour-users@harbour-project.org
+Oggetto: [Harbour-users] Re: Harbour-users Digest, Vol 6, Issue 6
+
+All looks OK to me except the last line
+? cMsg RETURN
+should this not be
+? cMsg ; RETURN
+
+harbour-users-request@harbour-project.org wrote:
+> Send Harbour-users mailing list submissions to
+> 	harbour-users@harbour-project.org
+> 
+> To subscribe or unsubscribe via the World Wide Web, visit
+> 	http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> or, via email, send a message with subject or body 'help' to
+> 	harbour-users-request@harbour-project.org
+> 
+> You can reach the person managing the list at
+> 	harbour-users-owner@harbour-project.org
+> 
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of Harbour-users digest..."
+> 
+> 
+> ------------------------------------------------------------------------
+> 
+> Today's Topics:
+> 
+>    1. Switch (harbour-users@harbour-project.org)
+> 
+> 
+> ------------------------------------------------------------------------
+> 
+> Subject:
+> [Harbour-users] Switch
+> From:
+> harbour-users@harbour-project.org
+> Date:
+> Wed, 12 Nov 2008 09:31:50 -0300
+> To:
+> harbour-users@harbour-project.org
+> 
+> To:
+> harbour-users@harbour-project.org
+> 
+> 
+> Hi!
+> This exemple fail.
+> E0020 Incomplete statement or unbalanced delimiters
+> Because (DEFAULT) flag.
+> Harbour CVS  * $Id: ChangeLog 9912 2008-11-12 11:34:50Z vszakats $
+> 
+> // The example prints a file in RAW mode and demonstrates
+> // the possible return values of PrintFileRaw().
+> PROCEDURE Main()
+>  LOCAL cPrinter := GetDefaultPrinter()
+>  LOCAL cFile := "MyFile.Txt"
+>  LOCAL nResult := -1
+>  LOCAL cMsg := "PrintFileRaw(): "
+> 
+> CLS
+>  IF Empty( cPrinter )
+> ? "No default printer found"
+> QUIT
+>  ENDIF
+>  nResult := PrintFileRaw( cPrinter, cFile, "Test for PrintFileRaw()" )
+>  SWITCH nResult
+>  CASE -1 cMsg += "Invalid parameters passed to function" ; EXIT
+>  CASE -2 cMsg += "WinAPI OpenPrinter() call failed" ; EXIT
+> CASE -3 cMsg += "WinAPI StartDocPrinter() call failed" ; EXIT
+> CASE -4 cMsg += "WinAPI StartPagePrinter() call failed" ; EXIT
+> CASE -5 cMsg += "WinAPI malloc() of memory failed" ; EXIT
+> CASE -6 cMsg += "File " + cFile + " not found" ; EXIT
+> DEFAULT //Fail here
+> cMsg += cFile + " PRINTED OK!!!"
+> END
+> ? cMsg RETURN
+> 
+> 
+> Tks,
+> Itamar M. Lins Jr.
+> 
+> 
+> 
+> ------------------------------------------------------------------------
+> 
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+_______________________________________________
+Harbour-users mailing list
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+From harbour-users at harbour-project.org  Fri Nov 14 08:08:23 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Nov 14 08:08:29 2008
+Subject: [Harbour-users] Mac OS 10.5.5 "dyld: Library not loaded:
+	libharbour.1.dylib"
+Message-ID: <F4F2BFB8-1999-4093-976B-A38618909789@gmx.de>
+
+Hello,
+
+I have just downloaded the Mac OS binary 1.0.1.
+
+After I copied the files to /usr/ and /private, I tried running a  
+sample program:
+
+jan$ hbrun helloworld.prg
+
+and got the following error:
+dyld: Library not loaded: libharbour.1.dylib
+   Referenced from: /usr/local/bin/hbrun
+   Reason: image not found
+Trace/BPT trap
+
+Is there anything else I have to do to load the library?
+
+Thanks a lot for your help
+
+Jan
+From harbour-users at harbour-project.org  Mon Nov 17 10:15:55 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Nov 17 10:15:58 2008
+Subject: [Harbour-users] Error creating demowvg
+Message-ID: <89c0927b0811170715g342699b0vfe686742e5b5fa20@mail.gmail.com>
+
+demowvg.c:
+Error: Unresolved external '_hb_vmThreadState' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\GTWVG.LIB|wvgsink
+
+
+TIA,
+Itamar M. Lins Jr.
+From harbour-users at harbour-project.org  Mon Nov 17 12:17:37 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Nov 17 12:17:40 2008
+Subject: [Harbour-users] Filestats of xHarbour
+Message-ID: <89c0927b0811170917h170ad5fcv9ab61e217b8bd7a4@mail.gmail.com>
+
+Hi!
+What is equivalent function ?
+
+As subject.
+
+TIA,
+Itamar M. Lins Jr.
+
+xHarbour Language Reference Guide (Version 1.1) - FileStats()FileStats()
+
+Retrieves file information for a single file.
+Syntax
+
+FileStats( <cFileName>    , ;
+          [@<cFileAttr>]  , ;
+          [@<nFileSize>]  , ;
+          [@<dCreateDate>], ;
+          [@<nCreateTime>], ;
+          [@<dChangeDate>], ;
+          [@<nChangeTime>]  ) --> lSuccess
+
+Arguments *<cFileName>* This is a character string holding the name of the
+file to query. It must include path and file extension. If the path is
+omitted from *<cFileName>*, the file is searched in the current directory. @
+*<cFileAttr>* If specified, *<cFileAttr>* must be passed by reference. It
+receives the file attributes of the file as a character string. @*
+<nFileSize>* If specified, *<cFileSize>* must be passed by reference. It
+receives the file size of the file as a numeric value. @*<dCreateDate>* If
+specified, *<dCreateDate>* must be passed by reference. It receives the
+creation date of the file as a date value. @*<nCreateTime>* If specified, *
+<nCreateTime>* must be passed by reference. It receives the creation time of
+the file as a numeric value. The unit is "seconds elapsed since midnight".
+Use function TString() <Tstring_f.en.html> to convert this value to a
+"hh:mm:ss" formatted time string. @*<dChangeDate>* If specified, *
+<dChangeDate>* must be passed by reference. It receives the last change date
+of the file as a date value. @*<nChangeTime>* If specified,
+*<nChangeTime>*must be passed by reference. It receives the creation
+time of the file as a
+numeric value. The unit is "seconds elapsed since midnight". Return
+
+The return value is .T. (true) when the information on the file *<cFileName>
+* could be retrieved, otherwise .F. (false) is returned.
+Description
+
+Function FileStats() retrieves statistical information about a single file.
+It is more efficient than the Directory() <Directory_f.en.html> function
+which retrieves the same information for a group of files and stores them in
+an array. FileStats(), in contrast, allows for "picking" desired information
+about a single file by passing the according parameters by reference to the
+function.
+Info
+
+  See also: Directory() <Directory_f.en.html>, FCreate() <Fcreate_f.en.html>,
+HB_FSize() <Hb_fsize_f.en.html> Category: File
+functions<../../Grp_file_functions.en.html>, Low
+level file functions <../../Grp_low_level_file_functions.en.html> , xHarbour
+extensions <../../Grp_xharbour_extensions.en.html> Source: rtl\filestat.c
+LIB: xhb.lib DLL: xhbdll.dll
+Example
+
+// The example shows how to retrieve statistical information about
+// a single file, and how to convert the time values from Seconds
+// to a hh:mm:ss time formatted string.
+
+   PROCEDURE Main
+      LOCAL cFileName := "FILESTATS.PRG"
+      LOCAL cFileAttr  , nFileSize
+      LOCAL dCreateDate, nCreateTime
+      LOCAL dChangeDate, nChangeTime
+
+      ? FileStats( cFileName, @cFileAttr  , @nFileSize  , ;
+                              @dCreateDate, @nCreateTime, ;
+                              @dChangeDate, @nChangeTime  )
+
+      ? "File statistiscs"
+      ? "File Name :", cFileName
+      ? "Attributes:", cFileAttr
+      ? "File Size :", nFileSize
+      ? "Created   :", dCreateDate, TString( nCreateTime )
+      ? "Changed   :", dChangeDate, TSTring( nChangeTime )
+   RETURN
+From harbour-users at harbour-project.org  Mon Nov 17 13:01:08 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Nov 17 13:02:12 2008
+Subject: [Harbour-users] Error creating demowvg
+In-Reply-To: <89c0927b0811170715g342699b0vfe686742e5b5fa20@mail.gmail.com>
+References: <89c0927b0811170715g342699b0vfe686742e5b5fa20@mail.gmail.com>
+Message-ID: <AFB948164110ED43B5EB849E8DEEF03815F1B1@SRV02.deltain.net>
+
+hbmk_b32 -mt -gui demowvg
+or with other make consider HB_USER_LIBS=gtwvg.lib hbwin.lib
+
+-----Original Message-----
+From: harbour-users-bounces@harbour-project.org
+[mailto:harbour-users-bounces@harbour-project.org] On Behalf Of
+harbour-users@harbour-project.org
+Sent: Monday, November 17, 2008 4:16 PM
+To: harbour-users@harbour-project.org
+Subject: [Harbour-users] Error creating demowvg
+
+demowvg.c:
+Error: Unresolved external '_hb_vmThreadState' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\GTWVG.LIB|wvgsink
+
+
+TIA,
+Itamar M. Lins Jr.
+_______________________________________________
+Harbour-users mailing list
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+From harbour-users at harbour-project.org  Mon Nov 17 13:35:35 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Nov 17 13:36:42 2008
+Subject: [Harbour-users] Filestats of xHarbour
+In-Reply-To: <89c0927b0811170917h170ad5fcv9ab61e217b8bd7a4@mail.gmail.com>
+References: <89c0927b0811170917h170ad5fcv9ab61e217b8bd7a4@mail.gmail.com>
+Message-ID: <AFB948164110ED43B5EB849E8DEEF03815F1B2@SRV02.deltain.net>
+
+AFAIK this function is not present in harbour
+Very good see xHarbour Language Reference Guide (I love it)
+
+-----Original Message-----
+From: harbour-users-bounces@harbour-project.org
+[mailto:harbour-users-bounces@harbour-project.org] On Behalf Of
+harbour-users@harbour-project.org
+Sent: Monday, November 17, 2008 6:18 PM
+To: harbour-users@harbour-project.org
+Subject: [Harbour-users] Filestats of xHarbour
+
+Hi!
+What is equivalent function ?
+
+As subject.
+
+TIA,
+Itamar M. Lins Jr.
+
+xHarbour Language Reference Guide (Version 1.1) - FileStats()FileStats()
+
+Retrieves file information for a single file.
+Syntax
+
+FileStats( <cFileName>    , ;
+          [@<cFileAttr>]  , ;
+          [@<nFileSize>]  , ;
+          [@<dCreateDate>], ;
+          [@<nCreateTime>], ;
+          [@<dChangeDate>], ;
+          [@<nChangeTime>]  ) --> lSuccess
+
+Arguments *<cFileName>* This is a character string holding the name of
+the
+file to query. It must include path and file extension. If the path is
+omitted from *<cFileName>*, the file is searched in the current
+directory. @
+*<cFileAttr>* If specified, *<cFileAttr>* must be passed by reference.
+It
+receives the file attributes of the file as a character string. @*
+<nFileSize>* If specified, *<cFileSize>* must be passed by reference. It
+receives the file size of the file as a numeric value. @*<dCreateDate>*
+If
+specified, *<dCreateDate>* must be passed by reference. It receives the
+creation date of the file as a date value. @*<nCreateTime>* If
+specified, *
+<nCreateTime>* must be passed by reference. It receives the creation
+time of
+the file as a numeric value. The unit is "seconds elapsed since
+midnight".
+Use function TString() <Tstring_f.en.html> to convert this value to a
+"hh:mm:ss" formatted time string. @*<dChangeDate>* If specified, *
+<dChangeDate>* must be passed by reference. It receives the last change
+date
+of the file as a date value. @*<nChangeTime>* If specified,
+*<nChangeTime>*must be passed by reference. It receives the creation
+time of the file as a
+numeric value. The unit is "seconds elapsed since midnight". Return
+
+The return value is .T. (true) when the information on the file
+*<cFileName>
+* could be retrieved, otherwise .F. (false) is returned.
+Description
+
+Function FileStats() retrieves statistical information about a single
+file.
+It is more efficient than the Directory() <Directory_f.en.html> function
+which retrieves the same information for a group of files and stores
+them in
+an array. FileStats(), in contrast, allows for "picking" desired
+information
+about a single file by passing the according parameters by reference to
+the
+function.
+Info
+
+  See also: Directory() <Directory_f.en.html>, FCreate()
+<Fcreate_f.en.html>,
+HB_FSize() <Hb_fsize_f.en.html> Category: File
+functions<../../Grp_file_functions.en.html>, Low
+level file functions <../../Grp_low_level_file_functions.en.html> ,
+xHarbour
+extensions <../../Grp_xharbour_extensions.en.html> Source:
+rtl\filestat.c
+LIB: xhb.lib DLL: xhbdll.dll
+Example
+
+// The example shows how to retrieve statistical information about
+// a single file, and how to convert the time values from Seconds
+// to a hh:mm:ss time formatted string.
+
+   PROCEDURE Main
+      LOCAL cFileName := "FILESTATS.PRG"
+      LOCAL cFileAttr  , nFileSize
+      LOCAL dCreateDate, nCreateTime
+      LOCAL dChangeDate, nChangeTime
+
+      ? FileStats( cFileName, @cFileAttr  , @nFileSize  , ;
+                              @dCreateDate, @nCreateTime, ;
+                              @dChangeDate, @nChangeTime  )
+
+      ? "File statistiscs"
+      ? "File Name :", cFileName
+      ? "Attributes:", cFileAttr
+      ? "File Size :", nFileSize
+      ? "Created   :", dCreateDate, TString( nCreateTime )
+      ? "Changed   :", dChangeDate, TSTring( nChangeTime )
+   RETURN
+_______________________________________________
+Harbour-users mailing list
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+From harbour-users at harbour-project.org  Wed Nov 19 08:39:37 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed Nov 19 08:39:41 2008
+Subject: [Harbour-users] Binaries to Windows CE
+Message-ID: <89c0927b0811190539l42983248i1d185d76686bc87b@mail.gmail.com>
+
+Hi!
+
+I looking for harbour binararies to Windows CE.
+
+TIA,
+Itamar M. Lins Jr.
+From harbour-users at harbour-project.org  Wed Nov 19 10:32:25 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed Nov 19 10:32:29 2008
+Subject: [Harbour-users] Binaries to Windows CE
+In-Reply-To: <89c0927b0811190539l42983248i1d185d76686bc87b@mail.gmail.com>
+References: <89c0927b0811190539l42983248i1d185d76686bc87b@mail.gmail.com>
+Message-ID: <edff235e0811190732ied426dfh1ca4752722dbea8c@mail.gmail.com>
+
+>From harbour-devel list.... little howto build harbour for WinCE on Linux
+=======================
+1.Get http://www.abix.info.pl/files/mpkg_rpm_from_svn.tgz and unpack
+on non-root account, then simply run; more info at my site:
+http://www.abix.info.pl/kompilator-harbour,56.html
+
+2. install from root account newly created RPMs at ~user/RMP/RPMS/i586
+
+3. Download from http://cegcc.sourceforge.net/
+   cegcc-mingw32ce-0.50-1.i586.rpm and install it.
+
+4. run from non root account: mpkg_rpm_wce.sh
+   it will create binary RPM harbour-ce-<ver>.<arch>.rpm with
+   WinCE/PocketPC cross build Harbour compiler in $HOME/RPM/RPMS/<arch>/
+   directory
+
+5. install from root account newly created RPM
+
+And now you can use hbce* scripts to create WinCE binaries.
+In /usr/share/doc/harbour-ce-<ver> you will find README.RPM with
+additional information about hbce* scripts.
+
+If you also want to create x86/Win32 binaries in your Linux box then
+install MingGW32 cross compiler (you can download ready to install RPMs
+from http://mirzam.it.vu.nl/mingw/) and then run: make_rpmw32.sh
+It will create harbour-w32-<ver>.<arch>.rpm in $HOME/RPM/RPMS/<arch>/
+Install it and you will be able to use hbw* to create Win32 binaries
+in you Linux box.
+
+
+But if you want descition for Windows then it will be a problem for
+me and I hope that MS-Windows users will help you.
+First you should download MinGW and MSYS binaries for Windows.
+On SF you should find self installing binaries. I do not know
+what this *.exe packages exactly contain so I cannot say which
+additional files you will have to download and install. Hope MS-Win
+users will help here.
+
+Now you can try to create normal Harbour binaries by simple running
+    ./make_gnu.sh install
+from Harbour source using MSYS shell (it's bash).
+If everything is OK then you should be able to use hb* scripts.
+Read in harbour/doc/howtobld.txt about them. If you want to create
+self installing archive then you can run ./make_tgz.sh.
+
+Then you should download from http://cegcc.sourceforge.net/
+cegcc-mingw32ce-0.50-cygwin.tar.gz and decompress it root / MSYS
+directory (in /opt/mingw32ce you should have MinGW32-CE cross compiler)
+It's CYGWIN build so the exe files inside will probably need cygwin*.dll
+You can install whole cygwin environment but probably cygwin*.dll will
+be enough.
+Finally run:
+    ./make_xmingwce.sh install
+to create WinCE/PocketPC binaries. If you want to create self installing
+archive then you can run:
+    ./make_gnu_xmingwce.sh tgz
+
+I hope that MS-Windows users will give you more precise description.
+
+best regards,
+Przemek
+=======================
+I hope this will help.
+Adam
+
+2008/11/19  <harbour-users@harbour-project.org>:
+> Hi!
+>
+> I looking for harbour binararies to Windows CE.
+>
+> TIA,
+> Itamar M. Lins Jr.
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From harbour-users at harbour-project.org  Wed Nov 19 10:37:57 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed Nov 19 10:39:04 2008
+Subject: [Harbour-users] Binaries to Windows CE
+In-Reply-To: <89c0927b0811190539l42983248i1d185d76686bc87b@mail.gmail.com>
+References: <89c0927b0811190539l42983248i1d185d76686bc87b@mail.gmail.com>
+Message-ID: <AFB948164110ED43B5EB849E8DEEF03815F1CC@SRV02.deltain.net>
+
+I hope that this post of Przemek will be usefull:
+
+You will have to change C compiler and use one which supports ARM
+processors and linker which can create WinCE binaries. You can try MSVC,
+POCC or POGCC, CeGCC and probably others I haven't tested.
+My tests with new POCC version shows that this compiler has some
+problems/bugs when generate ARM binaries so probably it's not good
+choice today. POGCC was not developed for long time. So you should chose
+between MSVC and CeGCC. I've chosen CeGCC with MinGW RTL (MinGW-CE). See
+http://cegcc.sourceforge.net/ It can be installed on x86 Windows and
+Linux and then you can create PocketPC(ARM)-WinCE binaries. Such
+binaries cannot be executed on x86 computers natively but you can
+install PocketPC emulator (Virtual Machine) and test them and of course
+you can copy them to your mobile device controlled by WinCE and execute.
+If you decide to use MinGW-CE then I suggest to use *nix like shell
+environment, f.e. MSYS in Windows. In such case you will be able to use
+hb* scripts updated for this compiler. If you are using RPM based Linux
+distribution then creating WinCE binaries is very easy. Run
+./make_rpm.sh from non root account and in few minutes in
+${HOME}/RPM/RPMS/<arch>/ you will have ready to install RPMs with native
+harbour build. Then run ./make_rpmce.sh and it will create RPM with
+Harbour binaries for PocketPC in the same directory.
+Install new RPMs using root account and now you can easy create PocketPC
+binaries. For .prg compilation use hbcecmp and for linking hbcelnk. See
+/usr/share/doc/harbour-ce-1.1.1/README.RPM for detail description of
+hbce* scripts. They are working in exactly the same way as normal hb*
+scripts which are used for standard native builds.
+If you want to compile and link .prg file in one command then use
+hbcemk. F.e.:
+    hbcemk -n -w -es2 -gtwvt wcecon
+
+If you will create binaries linked with harbour shared library
+(harbour.dll), f.e. by:
+    hbcemk -n -w -es2 -gtwvt wcecon -shared
+
+then please remember that you will have to copy to your PocketPC also
+harbour.dll (you will find it in /usr/lib/harbour-ce).
+
+HTH.
+
+best regards,
+Przemek
+
+ps. For Linux users who want to easy create Win32 binaries and
+    are using RPM based distributions I'll add soon make_rpmw32.sh
+    which will create RPM with Harbour binaries for Windows and
+    hbw* scripts.
+
+-----Original Message-----
+From: harbour-users-bounces@harbour-project.org
+[mailto:harbour-users-bounces@harbour-project.org] On Behalf Of
+harbour-users@harbour-project.org
+Sent: Wednesday, November 19, 2008 2:40 PM
+To: harbour-users@harbour-project.org
+Subject: [Harbour-users] Binaries to Windows CE
+
+Hi!
+
+I looking for harbour binararies to Windows CE.
+
+TIA,
+Itamar M. Lins Jr.
+_______________________________________________
+Harbour-users mailing list
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+From harbour-users at harbour-project.org  Wed Nov 19 10:40:56 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed Nov 19 10:41:59 2008
+Subject: [Harbour-users] Filestats of xHarbour
+In-Reply-To: <AFB948164110ED43B5EB849E8DEEF03815F1B2@SRV02.deltain.net>
+References: <89c0927b0811170917h170ad5fcv9ab61e217b8bd7a4@mail.gmail.com>
+	<AFB948164110ED43B5EB849E8DEEF03815F1B2@SRV02.deltain.net>
+Message-ID: <AFB948164110ED43B5EB849E8DEEF03815F1CD@SRV02.deltain.net>
+
+No, but this function could be added to xhb.lib as is.
+
+As a replacement, we have Directory() and hb_FSize().
+
+
+
+-----Original Message-----
+From: harbour-users-bounces@harbour-project.org
+[mailto:harbour-users-bounces@harbour-project.org] On Behalf Of
+harbour-users@harbour-project.org
+Sent: Monday, November 17, 2008 7:36 PM
+To: Users of the Harbour compiler
+Subject: RE: [Harbour-users] Filestats of xHarbour
+
+AFAIK this function is not present in harbour
+Very good see xHarbour Language Reference Guide (I love it)
+
+-----Original Message-----
+From: harbour-users-bounces@harbour-project.org
+[mailto:harbour-users-bounces@harbour-project.org] On Behalf Of
+harbour-users@harbour-project.org
+Sent: Monday, November 17, 2008 6:18 PM
+To: harbour-users@harbour-project.org
+Subject: [Harbour-users] Filestats of xHarbour
+
+Hi!
+What is equivalent function ?
+
+As subject.
+
+TIA,
+Itamar M. Lins Jr.
+
+xHarbour Language Reference Guide (Version 1.1) - FileStats()FileStats()
+
+Retrieves file information for a single file.
+Syntax
+
+FileStats( <cFileName>    , ;
+          [@<cFileAttr>]  , ;
+          [@<nFileSize>]  , ;
+          [@<dCreateDate>], ;
+          [@<nCreateTime>], ;
+          [@<dChangeDate>], ;
+          [@<nChangeTime>]  ) --> lSuccess
+
+Arguments *<cFileName>* This is a character string holding the name of
+the
+file to query. It must include path and file extension. If the path is
+omitted from *<cFileName>*, the file is searched in the current
+directory. @
+*<cFileAttr>* If specified, *<cFileAttr>* must be passed by reference.
+It
+receives the file attributes of the file as a character string. @*
+<nFileSize>* If specified, *<cFileSize>* must be passed by reference. It
+receives the file size of the file as a numeric value. @*<dCreateDate>*
+If
+specified, *<dCreateDate>* must be passed by reference. It receives the
+creation date of the file as a date value. @*<nCreateTime>* If
+specified, *
+<nCreateTime>* must be passed by reference. It receives the creation
+time of
+the file as a numeric value. The unit is "seconds elapsed since
+midnight".
+Use function TString() <Tstring_f.en.html> to convert this value to a
+"hh:mm:ss" formatted time string. @*<dChangeDate>* If specified, *
+<dChangeDate>* must be passed by reference. It receives the last change
+date
+of the file as a date value. @*<nChangeTime>* If specified,
+*<nChangeTime>*must be passed by reference. It receives the creation
+time of the file as a
+numeric value. The unit is "seconds elapsed since midnight". Return
+
+The return value is .T. (true) when the information on the file
+*<cFileName>
+* could be retrieved, otherwise .F. (false) is returned.
+Description
+
+Function FileStats() retrieves statistical information about a single
+file.
+It is more efficient than the Directory() <Directory_f.en.html> function
+which retrieves the same information for a group of files and stores
+them in
+an array. FileStats(), in contrast, allows for "picking" desired
+information
+about a single file by passing the according parameters by reference to
+the
+function.
+Info
+
+  See also: Directory() <Directory_f.en.html>, FCreate()
+<Fcreate_f.en.html>,
+HB_FSize() <Hb_fsize_f.en.html> Category: File
+functions<../../Grp_file_functions.en.html>, Low
+level file functions <../../Grp_low_level_file_functions.en.html> ,
+xHarbour
+extensions <../../Grp_xharbour_extensions.en.html> Source:
+rtl\filestat.c
+LIB: xhb.lib DLL: xhbdll.dll
+Example
+
+// The example shows how to retrieve statistical information about
+// a single file, and how to convert the time values from Seconds
+// to a hh:mm:ss time formatted string.
+
+   PROCEDURE Main
+      LOCAL cFileName := "FILESTATS.PRG"
+      LOCAL cFileAttr  , nFileSize
+      LOCAL dCreateDate, nCreateTime
+      LOCAL dChangeDate, nChangeTime
+
+      ? FileStats( cFileName, @cFileAttr  , @nFileSize  , ;
+                              @dCreateDate, @nCreateTime, ;
+                              @dChangeDate, @nChangeTime  )
+
+      ? "File statistiscs"
+      ? "File Name :", cFileName
+      ? "Attributes:", cFileAttr
+      ? "File Size :", nFileSize
+      ? "Created   :", dCreateDate, TString( nCreateTime )
+      ? "Changed   :", dChangeDate, TSTring( nChangeTime )
+   RETURN
+_______________________________________________
+Harbour-users mailing list
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+_______________________________________________
+Harbour-users mailing list
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+From harbour-users at harbour-project.org  Fri Nov 21 13:30:34 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Nov 21 13:30:37 2008
+Subject: [Harbour-users] harbour error compiling xhgtk sample
+Message-ID: <133778360811211030h9031e03mca93831504ccb34c@mail.gmail.com>
+
+I am using harbour , last version in Ubuntu 8.10
+
+I get this error trying to compile a Xhgtk Sample   ( library was compiled
+with the same harbour version without problems )
+
+thanks for any help
+
+Bruno
+
+/////////////////////////////////////////////// error code
+////////////////////////////////////////////////////////////
+
+bruno@notebook:~/xhgtk/samples/classes/browse$ sh build.sh browse
+Harbour 1.0.1 Intl. (Rev. 9429)
+Copyright (c) 1999-2008, http://www.harbour-project.org/
+Compiling 'browse.prg'...
+Lines 5786, Functions/Procedures
+Generating C source output to 'browse.c'... Done.
+/usr/lib/harbour/libhbrtl.a(gtsys.o): In function
+`hb_gt_ForceLink_HB_GT_TRM':
+(.text+0x7): undefined reference to `HB_FUN_HB_GT_TRM'
+collect2: ld devolvi? el estado de salida 1
+build.sh: 51: ./browse: not found
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////

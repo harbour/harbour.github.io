@@ -1,0 +1,4499 @@
+From jerryfinuliar at operamail.com  Tue Apr  6 22:47:36 2010
+From: jerryfinuliar at operamail.com (Jerry Finuliar)
+Date: Tue Apr  6 22:47:45 2010
+Subject: [Harbour-users] TempName?
+Message-ID: <20100407024736.ABA53CC18B@ws5-11.us4.outblaze.com>
+
+Hi,
+
+This function is from funck(y) fTempName("t*.tmp"). 
+Is there a function in Harbour nearly like this?
+
+TIA,
+Jerry
+
+-- 
+_______________________________________________
+Surf the Web in a faster, safer and easier way:
+Download Opera 9 at http://www.opera.com
+
+Powered by Outblaze
+From teo at windtelsoft.com  Wed Apr  7 10:35:42 2010
+From: teo at windtelsoft.com (Teo Fonrouge)
+Date: Wed Apr  7 10:35:54 2010
+Subject: [Harbour-users] TempName?
+In-Reply-To: <5473317.20.1270650567272.JavaMail.root@mail.windtelsoft.com>
+Message-ID: <24300758.22.1270650942708.JavaMail.root@mail.windtelsoft.com>
+
+Hello Jerry,
+
+----- Original Message -----
+>From: "Jerry Finuliar" <jerryfinuliar@operamail.com>
+>To: harbour-users@harbour-project.org
+>Sent: Tuesday, April 6, 2010 9:47:36 PM
+>Subject: [Harbour-users] TempName?
+>
+>Hi,
+>
+>This function is from funck(y) fTempName("t*.tmp"). 
+>Is there a function in Harbour nearly like this?
+
+In Harbour you have:
+
+nFh := HB_FTempCreateEx( @fileName, [cDir], [cPrefix], [cExt], [nAttr] )
+
+returns "nFh" which is the file handle for the new created file.
+
+"fileName" is the file name and is returned by reference.
+
+"cDir" is the path used to create the file. (you can use
+  HB_DirTemp() here as parameter).
+
+"cPrefix" is the file name prefix desired.
+
+"cExt" is the file name extension desired.
+
+"nAttr" is the file attribute.
+
+Note that if you need to use the fileName as the file name for
+another process, you need to close the file handle returned:
+
+FClose( HB_FTempCreateEx( @fileName, NIL, NIL, ".dbf" ) )
+
+
+best regards,
+
+Teo
+From jerryfinuliar at operamail.com  Wed Apr  7 23:30:55 2010
+From: jerryfinuliar at operamail.com (Jerry Finuliar)
+Date: Wed Apr  7 23:31:04 2010
+Subject: [Harbour-users] TempName?
+Message-ID: <20100408033055.25C097BFD5@ws5-10.us4.outblaze.com>
+
+Hi Teo,
+
+nFh := HB_FTempCreateEx( @fileName, [cDir], [cPrefix], [cExt], [nAttr])
+Found this in harbour source
+
+FClose( HB_FTempCreateEx( @fileName, NIL, NIL, ".dbf" ) ) 
+Never thought of this.
+
+Very clever trick.
+
+
+Thanks
+
+-- 
+_______________________________________________
+Surf the Web in a faster, safer and easier way:
+Download Opera 9 at http://www.opera.com
+
+Powered by Outblaze
+From srvet at adinet.com.uy  Sun Apr 11 11:22:35 2010
+From: srvet at adinet.com.uy (srvet@adinet.com.uy)
+Date: Sun Apr 11 11:22:43 2010
+Subject: [Harbour-users] hb_arrayNew consultation
+Message-ID: <2097889.1270999355575.JavaMail.root@fe-ps02>
+
+Hello,
+I need your help:
+
+When I create an array in C:
+
+pArray = hb_itemNew (NULL);
+hb_arrayNew (pArray, size);
+
+before the program ends I have necessarily to call:
+
+hb_itemRelease (pArray);
+
+to free the memory allocated? 
+or HARBOUR releases automatically?
+
+thank you very much,
+Claudio Soto
+srvet@adinet.com.uy
+From eyelagui at gmail.com  Mon Apr 12 11:43:43 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Mon Apr 12 11:43:54 2010
+Subject: [Harbour-users] MySQL and Harbourd
+Message-ID: <4BC33FAF.6010609@gmail.com>
+
+Hello, i'm starting a new program, and for the fist time i'm intended to 
+start using a database server instead of .dbf files.
+Due the fact my customer has a MySQL server installed, i'm planning to 
+use that.
+Also there is no issues about permissions since i have full admin access 
+to it.
+
+I would appreciate any guidance on how to manage data on MySQL server, 
+i'm only used to .dbf files and i'm kind of lost here.
+
+Tanks in advance.
+From bruno.luciani at gmail.com  Mon Apr 12 11:58:11 2010
+From: bruno.luciani at gmail.com (Bruno Luciani)
+Date: Mon Apr 12 11:58:21 2010
+Subject: [Harbour-users] MySQL and Harbourd
+In-Reply-To: <4BC33FAF.6010609@gmail.com>
+References: <4BC33FAF.6010609@gmail.com>
+Message-ID: <x2v133778361004120858xcba573c3r69212f604dce9101@mail.gmail.com>
+
+take a look at hbmysql contrib folder , try to download SVN harbour it have
+up to date working samples
+
+Bruno
+
+2010/4/12 Richard Acosta <eyelagui@gmail.com>
+
+> Hello, i'm starting a new program, and for the fist time i'm intended to
+> start using a database server instead of .dbf files.
+> Due the fact my customer has a MySQL server installed, i'm planning to use
+> that.
+> Also there is no issues about permissions since i have full admin access to
+> it.
+>
+> I would appreciate any guidance on how to manage data on MySQL server, i'm
+> only used to .dbf files and i'm kind of lost here.
+>
+> Tanks in advance.
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From eyelagui at gmail.com  Mon Apr 12 12:16:07 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Mon Apr 12 12:16:17 2010
+Subject: [Harbour-users] MySQL and Harbourd
+In-Reply-To: <x2v133778361004120858xcba573c3r69212f604dce9101@mail.gmail.com>
+References: <4BC33FAF.6010609@gmail.com>
+	<x2v133778361004120858xcba573c3r69212f604dce9101@mail.gmail.com>
+Message-ID: <4BC34747.9050405@gmail.com>
+
+i'll do thanks.
+
+El 12/04/2010 12:58 p.m., Bruno Luciani escribi?:
+> take a look at hbmysql contrib folder , try to download SVN harbour it have
+> up to date working samples
+>
+> Bruno
+>
+> 2010/4/12 Richard Acosta<eyelagui@gmail.com>
+>
+>    
+>> Hello, i'm starting a new program, and for the fist time i'm intended to
+>> start using a database server instead of .dbf files.
+>> Due the fact my customer has a MySQL server installed, i'm planning to use
+>> that.
+>> Also there is no issues about permissions since i have full admin access to
+>> it.
+>>
+>> I would appreciate any guidance on how to manage data on MySQL server, i'm
+>> only used to .dbf files and i'm kind of lost here.
+>>
+>> Tanks in advance.
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>      
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>    
+From eyelagui at gmail.com  Mon Apr 12 13:48:29 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Mon Apr 12 13:48:41 2010
+Subject: [Harbour-users] MySQL and Harbourd
+In-Reply-To: <x2v133778361004120858xcba573c3r69212f604dce9101@mail.gmail.com>
+References: <4BC33FAF.6010609@gmail.com>
+	<x2v133778361004120858xcba573c3r69212f604dce9101@mail.gmail.com>
+Message-ID: <4BC35CED.4070506@gmail.com>
+
+i'm lloking for svn but cant find where to go...
+
+can you please (or anyone else) give me the address ?
+
+El 12/04/2010 12:58 p.m., Bruno Luciani escribi?:
+> take a look at hbmysql contrib folder , try to download SVN harbour it have
+> up to date working samples
+>
+> Bruno
+>
+> 2010/4/12 Richard Acosta<eyelagui@gmail.com>
+>
+>    
+>> Hello, i'm starting a new program, and for the fist time i'm intended to
+>> start using a database server instead of .dbf files.
+>> Due the fact my customer has a MySQL server installed, i'm planning to use
+>> that.
+>> Also there is no issues about permissions since i have full admin access to
+>> it.
+>>
+>> I would appreciate any guidance on how to manage data on MySQL server, i'm
+>> only used to .dbf files and i'm kind of lost here.
+>>
+>> Tanks in advance.
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>      
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>    
+From bruno.luciani at gmail.com  Mon Apr 12 14:14:18 2010
+From: bruno.luciani at gmail.com (Bruno Luciani)
+Date: Mon Apr 12 14:14:26 2010
+Subject: [Harbour-users] MySQL and Harbourd
+In-Reply-To: <4BC35CED.4070506@gmail.com>
+References: <4BC33FAF.6010609@gmail.com>
+	<x2v133778361004120858xcba573c3r69212f604dce9101@mail.gmail.com>
+	<4BC35CED.4070506@gmail.com>
+Message-ID: <l2p133778361004121114h1b58c8daie1a3a097aec9540@mail.gmail.com>
+
+http://www.harbour-project.org/
+
+Bruno
+
+2010/4/12 Richard Acosta <eyelagui@gmail.com>
+
+> i'm lloking for svn but cant find where to go...
+>
+> can you please (or anyone else) give me the address ?
+>
+>
+> El 12/04/2010 12:58 p.m., Bruno Luciani escribi?:
+>
+>> take a look at hbmysql contrib folder , try to download SVN harbour it
+>> have
+>>
+>> up to date working samples
+>>
+>> Bruno
+>>
+>> 2010/4/12 Richard Acosta<eyelagui@gmail.com>
+>>
+>>
+>>
+>>> Hello, i'm starting a new program, and for the fist time i'm intended to
+>>> start using a database server instead of .dbf files.
+>>> Due the fact my customer has a MySQL server installed, i'm planning to
+>>> use
+>>> that.
+>>> Also there is no issues about permissions since i have full admin access
+>>> to
+>>> it.
+>>>
+>>> I would appreciate any guidance on how to manage data on MySQL server,
+>>> i'm
+>>> only used to .dbf files and i'm kind of lost here.
+>>>
+>>> Tanks in advance.
+>>> _______________________________________________
+>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>
+>>>
+>>>
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>
+>>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From mbelgrano at deltain.it  Mon Apr 12 16:09:51 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Mon Apr 12 16:10:20 2010
+Subject: [Harbour-users] MySQL and Harbourd
+In-Reply-To: <4BC35CED.4070506@gmail.com>
+References: <4BC33FAF.6010609@gmail.com>
+	<x2v133778361004120858xcba573c3r69212f604dce9101@mail.gmail.com>
+	<4BC35CED.4070506@gmail.com>
+Message-ID: <y2o609353e71004121309h12fe7a5fw64cbd5519dc466a3@mail.gmail.com>
+
+How download from cvs
+Donwload and install TortoiseSVN .-  http://tortoisesvn.net/downloads
+Make new dir c:\harbour, inside, context menu (right clicl on disk)
+option SVN Checkout... .-
+URL of repository:
+https://harbour-project.svn.sourceforge.net/svnroot/harbour-project/trunk/harbour
+Checkout directory: c:\harbour
+
+Then where is hbmysql
+c:\harbour\contrib\hbmysql
+
+2010/4/12 Richard Acosta <eyelagui@gmail.com>:
+> i'm lloking for svn but cant find where to go...
+>
+> can you please (or anyone else) give me the address ?
+>
+
+-- 
+Massimo Belgrano
+From eyelagui at gmail.com  Mon Apr 12 16:57:50 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Mon Apr 12 16:57:58 2010
+Subject: [Harbour-users] MySQL and Harbourd
+In-Reply-To: <y2o609353e71004121309h12fe7a5fw64cbd5519dc466a3@mail.gmail.com>
+References: <4BC33FAF.6010609@gmail.com>	<x2v133778361004120858xcba573c3r69212f604dce9101@mail.gmail.com>	<4BC35CED.4070506@gmail.com>
+	<y2o609353e71004121309h12fe7a5fw64cbd5519dc466a3@mail.gmail.com>
+Message-ID: <4BC3894E.8090002@gmail.com>
+
+Thanks a lot.
+
+El 12/04/2010 05:09 p.m., Massimo Belgrano escribi?:
+> How download from cvs
+> Donwload and install TortoiseSVN .-  http://tortoisesvn.net/downloads
+> Make new dir c:\harbour, inside, context menu (right clicl on disk)
+> option SVN Checkout... .-
+> URL of repository:
+> https://harbour-project.svn.sourceforge.net/svnroot/harbour-project/trunk/harbour
+> Checkout directory: c:\harbour
+>
+> Then where is hbmysql
+> c:\harbour\contrib\hbmysql
+>
+> 2010/4/12 Richard Acosta<eyelagui@gmail.com>:
+>    
+>> i'm lloking for svn but cant find where to go...
+>>
+>> can you please (or anyone else) give me the address ?
+>>
+>>      
+>    
+From eyelagui at gmail.com  Mon Apr 12 16:58:29 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Mon Apr 12 16:58:36 2010
+Subject: [Harbour-users] MySQL and Harbourd
+In-Reply-To: <l2p133778361004121114h1b58c8daie1a3a097aec9540@mail.gmail.com>
+References: <4BC33FAF.6010609@gmail.com>	<x2v133778361004120858xcba573c3r69212f604dce9101@mail.gmail.com>	<4BC35CED.4070506@gmail.com>
+	<l2p133778361004121114h1b58c8daie1a3a097aec9540@mail.gmail.com>
+Message-ID: <4BC38975.1070300@gmail.com>
+
+There i could'nt find any reference to svn. that's why i asked.
+
+
+El 12/04/2010 03:14 p.m., Bruno Luciani escribi?:
+> http://www.harbour-project.org/
+>
+> Bruno
+>
+> 2010/4/12 Richard Acosta<eyelagui@gmail.com>
+>
+>    
+>> i'm lloking for svn but cant find where to go...
+>>
+>> can you please (or anyone else) give me the address ?
+>>
+>>
+>> El 12/04/2010 12:58 p.m., Bruno Luciani escribi?:
+>>
+>>      
+>>> take a look at hbmysql contrib folder , try to download SVN harbour it
+>>> have
+>>>
+>>> up to date working samples
+>>>
+>>> Bruno
+>>>
+>>> 2010/4/12 Richard Acosta<eyelagui@gmail.com>
+>>>
+>>>
+>>>
+>>>        
+>>>> Hello, i'm starting a new program, and for the fist time i'm intended to
+>>>> start using a database server instead of .dbf files.
+>>>> Due the fact my customer has a MySQL server installed, i'm planning to
+>>>> use
+>>>> that.
+>>>> Also there is no issues about permissions since i have full admin access
+>>>> to
+>>>> it.
+>>>>
+>>>> I would appreciate any guidance on how to manage data on MySQL server,
+>>>> i'm
+>>>> only used to .dbf files and i'm kind of lost here.
+>>>>
+>>>> Tanks in advance.
+>>>> _______________________________________________
+>>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>>> Harbour-users@harbour-project.org
+>>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>>
+>>>>
+>>>>
+>>>>          
+>>> _______________________________________________
+>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>
+>>>
+>>>
+>>>        
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>      
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>    
+From bruno.luciani at gmail.com  Mon Apr 12 19:24:16 2010
+From: bruno.luciani at gmail.com (Bruno Luciani)
+Date: Mon Apr 12 19:24:27 2010
+Subject: [Harbour-users] MySQL and Harbourd
+In-Reply-To: <4BC38975.1070300@gmail.com>
+References: <4BC33FAF.6010609@gmail.com>
+	<x2v133778361004120858xcba573c3r69212f604dce9101@mail.gmail.com>
+	<4BC35CED.4070506@gmail.com>
+	<l2p133778361004121114h1b58c8daie1a3a097aec9540@mail.gmail.com>
+	<4BC38975.1070300@gmail.com>
+Message-ID: <i2g133778361004121624s4c1322d4m9f4f8ad3fed82396@mail.gmail.com>
+
+Which is your operating system ?
+
+Bruno
+
+2010/4/12 Richard Acosta <eyelagui@gmail.com>
+
+> There i could'nt find any reference to svn. that's why i asked.
+>
+>
+> El 12/04/2010 03:14 p.m., Bruno Luciani escribi?:
+>
+>  http://www.harbour-project.org/
+>>
+>> Bruno
+>>
+>> 2010/4/12 Richard Acosta<eyelagui@gmail.com>
+>>
+>>
+>>
+>>> i'm lloking for svn but cant find where to go...
+>>>
+>>> can you please (or anyone else) give me the address ?
+>>>
+>>>
+>>> El 12/04/2010 12:58 p.m., Bruno Luciani escribi?:
+>>>
+>>>
+>>>
+>>>> take a look at hbmysql contrib folder , try to download SVN harbour it
+>>>> have
+>>>>
+>>>> up to date working samples
+>>>>
+>>>> Bruno
+>>>>
+>>>> 2010/4/12 Richard Acosta<eyelagui@gmail.com>
+>>>>
+>>>>
+>>>>
+>>>>
+>>>>
+>>>>> Hello, i'm starting a new program, and for the fist time i'm intended
+>>>>> to
+>>>>> start using a database server instead of .dbf files.
+>>>>> Due the fact my customer has a MySQL server installed, i'm planning to
+>>>>> use
+>>>>> that.
+>>>>> Also there is no issues about permissions since i have full admin
+>>>>> access
+>>>>> to
+>>>>> it.
+>>>>>
+>>>>> I would appreciate any guidance on how to manage data on MySQL server,
+>>>>> i'm
+>>>>> only used to .dbf files and i'm kind of lost here.
+>>>>>
+>>>>> Tanks in advance.
+>>>>> _______________________________________________
+>>>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>>>> Harbour-users@harbour-project.org
+>>>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>>>
+>>>>>
+>>>>>
+>>>>>
+>>>>>
+>>>> _______________________________________________
+>>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>>> Harbour-users@harbour-project.org
+>>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>>
+>>>>
+>>>>
+>>>>
+>>>>
+>>> _______________________________________________
+>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>
+>>>
+>>>
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>
+>>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From smujohnson at gmail.com  Mon Apr 12 20:08:50 2010
+From: smujohnson at gmail.com (smu johnson)
+Date: Mon Apr 12 20:08:59 2010
+Subject: [Harbour-users] MySQL and Harbourd
+In-Reply-To: <i2g133778361004121624s4c1322d4m9f4f8ad3fed82396@mail.gmail.com>
+References: <4BC33FAF.6010609@gmail.com>
+	<x2v133778361004120858xcba573c3r69212f604dce9101@mail.gmail.com>
+	<4BC35CED.4070506@gmail.com>
+	<l2p133778361004121114h1b58c8daie1a3a097aec9540@mail.gmail.com>
+	<4BC38975.1070300@gmail.com>
+	<i2g133778361004121624s4c1322d4m9f4f8ad3fed82396@mail.gmail.com>
+Message-ID: <i2n674e4ddd1004121708rb2d9025at535de8eb4530423f@mail.gmail.com>
+
+If I were you, I'd just download the Nightly Source .zip file, and if you're
+on Windows, download TDM mingw32 (google for it) and compile it yourself
+using  "win-make install".
+
+On Mon, Apr 12, 2010 at 4:24 PM, Bruno Luciani <bruno.luciani@gmail.com>wrote:
+
+> Which is your operating system ?
+>
+> Bruno
+>
+> 2010/4/12 Richard Acosta <eyelagui@gmail.com>
+>
+> > There i could'nt find any reference to svn. that's why i asked.
+>
+From mbelgrano at deltain.it  Tue Apr 13 01:59:10 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Tue Apr 13 01:59:38 2010
+Subject: [Harbour-users] MySQL and Harbourd
+In-Reply-To: <i2n674e4ddd1004121708rb2d9025at535de8eb4530423f@mail.gmail.com>
+References: <4BC33FAF.6010609@gmail.com>
+	<x2v133778361004120858xcba573c3r69212f604dce9101@mail.gmail.com>
+	<4BC35CED.4070506@gmail.com>
+	<l2p133778361004121114h1b58c8daie1a3a097aec9540@mail.gmail.com>
+	<4BC38975.1070300@gmail.com>
+	<i2g133778361004121624s4c1322d4m9f4f8ad3fed82396@mail.gmail.com>
+	<i2n674e4ddd1004121708rb2d9025at535de8eb4530423f@mail.gmail.com>
+Message-ID: <j2j609353e71004122259y73d9d04et87c3040562d43a0b@mail.gmail.com>
+
+IMO better
+"win-make clean install".
+because incremental mode must be disabled
+
+2010/4/13 smu johnson <smujohnson@gmail.com>:
+> If I were you, I'd just download the Nightly Source .zip file, and if you're
+> on Windows, download TDM mingw32 (google for it) and compile it yourself
+> using ?"win-make install".
+>
+
+
+-- 
+Massimo Belgrano
+From eyelagui at gmail.com  Tue Apr 13 02:42:13 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Tue Apr 13 02:42:19 2010
+Subject: [Harbour-users] MySQL and Harbourd
+In-Reply-To: <i2g133778361004121624s4c1322d4m9f4f8ad3fed82396@mail.gmail.com>
+References: <4BC33FAF.6010609@gmail.com>	<x2v133778361004120858xcba573c3r69212f604dce9101@mail.gmail.com>	<4BC35CED.4070506@gmail.com>	<l2p133778361004121114h1b58c8daie1a3a097aec9540@mail.gmail.com>	<4BC38975.1070300@gmail.com>
+	<i2g133778361004121624s4c1322d4m9f4f8ad3fed82396@mail.gmail.com>
+Message-ID: <4BC41245.4080607@gmail.com>
+
+OH!, sorry, i'm on windows and plan to develop on windows too.
+
+El 12/04/2010 08:24 p.m., Bruno Luciani escribi?:
+> Which is your operating system ?
+>
+> Bruno
+>
+> 2010/4/12 Richard Acosta<eyelagui@gmail.com>
+>
+>    
+>> There i could'nt find any reference to svn. that's why i asked.
+>>
+>>
+>> El 12/04/2010 03:14 p.m., Bruno Luciani escribi?:
+>>
+>>   http://www.harbour-project.org/
+>>      
+>>> Bruno
+>>>
+>>> 2010/4/12 Richard Acosta<eyelagui@gmail.com>
+>>>
+>>>
+>>>
+>>>        
+>>>> i'm lloking for svn but cant find where to go...
+>>>>
+>>>> can you please (or anyone else) give me the address ?
+>>>>
+>>>>
+>>>> El 12/04/2010 12:58 p.m., Bruno Luciani escribi?:
+>>>>
+>>>>
+>>>>
+>>>>          
+>>>>> take a look at hbmysql contrib folder , try to download SVN harbour it
+>>>>> have
+>>>>>
+>>>>> up to date working samples
+>>>>>
+>>>>> Bruno
+>>>>>
+>>>>> 2010/4/12 Richard Acosta<eyelagui@gmail.com>
+>>>>>
+>>>>>
+>>>>>
+>>>>>
+>>>>>
+>>>>>            
+>>>>>> Hello, i'm starting a new program, and for the fist time i'm intended
+>>>>>> to
+>>>>>> start using a database server instead of .dbf files.
+>>>>>> Due the fact my customer has a MySQL server installed, i'm planning to
+>>>>>> use
+>>>>>> that.
+>>>>>> Also there is no issues about permissions since i have full admin
+>>>>>> access
+>>>>>> to
+>>>>>> it.
+>>>>>>
+>>>>>> I would appreciate any guidance on how to manage data on MySQL server,
+>>>>>> i'm
+>>>>>> only used to .dbf files and i'm kind of lost here.
+>>>>>>
+>>>>>> Tanks in advance.
+>>>>>> _______________________________________________
+>>>>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>>>>> Harbour-users@harbour-project.org
+>>>>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>>>>
+>>>>>>
+>>>>>>
+>>>>>>
+>>>>>>
+>>>>>>              
+>>>>> _______________________________________________
+>>>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>>>> Harbour-users@harbour-project.org
+>>>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>>>
+>>>>>
+>>>>>
+>>>>>
+>>>>>
+>>>>>            
+>>>> _______________________________________________
+>>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>>> Harbour-users@harbour-project.org
+>>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>>
+>>>>
+>>>>
+>>>>          
+>>> _______________________________________________
+>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>
+>>>
+>>>
+>>>        
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>      
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>    
+From eyelagui at gmail.com  Tue Apr 13 02:45:28 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Tue Apr 13 02:45:33 2010
+Subject: [Harbour-users] MySQL and Harbourd
+In-Reply-To: <j2j609353e71004122259y73d9d04et87c3040562d43a0b@mail.gmail.com>
+References: <4BC33FAF.6010609@gmail.com>	<x2v133778361004120858xcba573c3r69212f604dce9101@mail.gmail.com>	<4BC35CED.4070506@gmail.com>	<l2p133778361004121114h1b58c8daie1a3a097aec9540@mail.gmail.com>	<4BC38975.1070300@gmail.com>	<i2g133778361004121624s4c1322d4m9f4f8ad3fed82396@mail.gmail.com>	<i2n674e4ddd1004121708rb2d9025at535de8eb4530423f@mail.gmail.com>
+	<j2j609353e71004122259y73d9d04et87c3040562d43a0b@mail.gmail.com>
+Message-ID: <4BC41308.3020201@gmail.com>
+
+thanks people but i have downloaded tortoiseSVN.
+
+By downloading SVN  am i geting Harbour 1.x or Harbour 2?...
+?Are those separate branches?
+
+
+
+El 13/04/2010 02:59 a.m., Massimo Belgrano escribi?:
+> IMO better
+> "win-make clean install".
+> because incremental mode must be disabled
+>
+> 2010/4/13 smu johnson<smujohnson@gmail.com>:
+>    
+>> If I were you, I'd just download the Nightly Source .zip file, and if you're
+>> on Windows, download TDM mingw32 (google for it) and compile it yourself
+>> using  "win-make install".
+>>
+>>      
+>
+>    
+From mbelgrano at deltain.it  Tue Apr 13 03:20:25 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Tue Apr 13 03:20:53 2010
+Subject: [Harbour-users] MySQL and Harbourd
+In-Reply-To: <4BC41308.3020201@gmail.com>
+References: <4BC33FAF.6010609@gmail.com>
+	<x2v133778361004120858xcba573c3r69212f604dce9101@mail.gmail.com>
+	<4BC35CED.4070506@gmail.com>
+	<l2p133778361004121114h1b58c8daie1a3a097aec9540@mail.gmail.com>
+	<4BC38975.1070300@gmail.com>
+	<i2g133778361004121624s4c1322d4m9f4f8ad3fed82396@mail.gmail.com>
+	<i2n674e4ddd1004121708rb2d9025at535de8eb4530423f@mail.gmail.com> 
+	<j2j609353e71004122259y73d9d04et87c3040562d43a0b@mail.gmail.com> 
+	<4BC41308.3020201@gmail.com>
+Message-ID: <m2g609353e71004130020lf296bfc3uda53bd9854bfe748@mail.gmail.com>
+
+1.x and 2 are old versione
+2.1 dev is at
+https://harbour-project.svn.sourceforge.net/svnroot/harbour-project/trunk/harbour/
+
+2010/4/13 Richard Acosta <eyelagui@gmail.com>:
+> thanks people but i have downloaded tortoiseSVN.
+>
+> By downloading SVN ?am i geting Harbour 1.x or Harbour 2?...
+> ?Are those separate branches?
+>
+
+
+-- 
+Massimo Belgrano
+From eyelagui at gmail.com  Tue Apr 13 10:48:19 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Tue Apr 13 10:48:29 2010
+Subject: [Harbour-users] MySQL and Harbourd
+In-Reply-To: <m2g609353e71004130020lf296bfc3uda53bd9854bfe748@mail.gmail.com>
+References: <4BC33FAF.6010609@gmail.com>	<x2v133778361004120858xcba573c3r69212f604dce9101@mail.gmail.com>	<4BC35CED.4070506@gmail.com>	<l2p133778361004121114h1b58c8daie1a3a097aec9540@mail.gmail.com>	<4BC38975.1070300@gmail.com>	<i2g133778361004121624s4c1322d4m9f4f8ad3fed82396@mail.gmail.com>	<i2n674e4ddd1004121708rb2d9025at535de8eb4530423f@mail.gmail.com>
+	<j2j609353e71004122259y73d9d04et87c3040562d43a0b@mail.gmail.com>
+	<4BC41308.3020201@gmail.com>
+	<m2g609353e71004130020lf296bfc3uda53bd9854bfe748@mail.gmail.com>
+Message-ID: <4BC48433.7010606@gmail.com>
+
+thanks... i googled it and found the trunk so used that.
+
+
+
+El 13/04/2010 04:20 a.m., Massimo Belgrano escribi?:
+> 1.x and 2 are old versione
+> 2.1 dev is at
+> https://harbour-project.svn.sourceforge.net/svnroot/harbour-project/trunk/harbour/
+>
+> 2010/4/13 Richard Acosta<eyelagui@gmail.com>:
+>    
+>> thanks people but i have downloaded tortoiseSVN.
+>>
+>> By downloading SVN  am i geting Harbour 1.x or Harbour 2?...
+>> ?Are those separate branches?
+>>
+>>      
+>
+>    
+From maufacc at adinet.com.uy  Tue Apr 13 14:01:40 2010
+From: maufacc at adinet.com.uy (Maurizio Faccio adinet)
+Date: Tue Apr 13 14:01:50 2010
+Subject: [Harbour-users] MySQL and Harbourd
+Message-ID: <4BC4B184.1010200@adinet.com.uy>
+
+In order to compile and use with mysql you need to compile harbour with
+
+the libraries that talk with.
+To do that you need to
+
+Point to where you have the mysql libraries.
+As the readme.txt in contrib/hbmysql points you should download a
+version of mysql that you wish to talk with an install in your machine.
+You should show harbour win-make where it have to search to mysql libraries.
+Make a directory where make put the recent build (p.e. HARBOUR2).
+
+You should put in path where you have mingw
+
+SET HB_WITH_MYSQL=C:\mysql\include
+set HB_DIR_MYSQL=C:\mysql
+SET HB_INSTALL_PREFIX=C:\HARBOUR2
+set HB_BUILD_IMPLIB=yes
+
+CD\HARBOUR
+WIN-MAKE CLEAN INSTALL
+
+
+
+El 13/04/2010 03:42 a.m., Richard Acosta escribi?:
+>  OH!, sorry, i'm on windows and plan to develop on windows too.
+>
+>
+
+-- 
+________________________
+Ing. Maurizio Faccio
+Merbe Ltda.
+Av. Italia 2346. Paysand?, Uruguay
+web: www.merbe.com.uy
+Tel : 598-72-29043 Int. 130
+Fax: 598-72-22591
+Cel: 598-99-007030
+
+
+From eyelagui at gmail.com  Tue Apr 13 15:11:06 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Tue Apr 13 15:11:12 2010
+Subject: [Harbour-users] MySQL and Harbourd
+In-Reply-To: <4BC4B184.1010200@adinet.com.uy>
+References: <4BC4B184.1010200@adinet.com.uy>
+Message-ID: <4BC4C1CA.4020006@gmail.com>
+
+Thanks for your answer, but i'm using borland and i'm intended to keep 
+on it, i had so much trouble in the past to compile using others, and 
+finally ended on my start.
+
+About the rest of your msg. yes, thanks, i already downloaded mysql 
+(twice for not checking what essentials is) and installed.
+At this moment i'm still trying to compile HwGUI or Harbour 2.1 (asking 
+on their list also)
+
+Thanks again and best regards.
+
+
+El 13/04/2010 03:01 p.m., Maurizio Faccio adinet escribi?:
+> In order to compile and use with mysql you need to compile harbour with
+>
+> the libraries that talk with.
+> To do that you need to
+>
+> Point to where you have the mysql libraries.
+> As the readme.txt in contrib/hbmysql points you should download a
+> version of mysql that you wish to talk with an install in your machine.
+> You should show harbour win-make where it have to search to mysql 
+> libraries.
+> Make a directory where make put the recent build (p.e. HARBOUR2).
+>
+> You should put in path where you have mingw
+>
+> SET HB_WITH_MYSQL=C:\mysql\include
+> set HB_DIR_MYSQL=C:\mysql
+> SET HB_INSTALL_PREFIX=C:\HARBOUR2
+> set HB_BUILD_IMPLIB=yes
+>
+> CD\HARBOUR
+> WIN-MAKE CLEAN INSTALL
+>
+>
+>
+> El 13/04/2010 03:42 a.m., Richard Acosta escribi?:
+>>  OH!, sorry, i'm on windows and plan to develop on windows too.
+>>
+>>
+>
+
+From eyelagui at gmail.com  Tue Apr 13 15:13:05 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Tue Apr 13 15:13:12 2010
+Subject: [Harbour-users] hbcompat.ch for HwGUI
+Message-ID: <4BC4C241.4000305@gmail.com>
+
+I have just downloaded Harbour 2.1 from SVN and started to recompile 
+tools, but found this issue when trying to make hwgui
+
+source\guimain.prg(15) Error F0029  Can't open #include file 'hbcompat.ch'
+
+?Does this file no longer exists?
+?Did server refuse to give it to me?
+?Should i get it from a different place?
+
+Thanks for patience.
+From suporte at tribalbrasil.com  Tue Apr 13 15:40:23 2010
+From: suporte at tribalbrasil.com (Qatan)
+Date: Tue Apr 13 16:05:00 2010
+Subject: [Harbour-users] hbcompat.ch for HwGUI
+References: <4BC4C241.4000305@gmail.com>
+Message-ID: <FD24F82F7B4D42AF9DA3514648DFB3D3@SUPPORTS>
+
+Richard,
+
+    Give a look in: harbour/contrib/xhb/hbcompat.ch
+
+    I suggest you to look for information on the harbour\changelog file.
+    Also harbour\install
+    Both are TXT files (you can rename them to have .TXT on the end to make 
+it easier to open with notepad)
+    It has many valuable information.
+    Helps me to find things like this.
+
+Qatan
+
+----- Original Message ----- 
+From: "Richard Acosta" <eyelagui@gmail.com>
+To: "Lista Harbour" <harbour-users@harbour-project.org>
+Sent: Tuesday, 13 de April de 2010 16:13
+Subject: [Harbour-users] hbcompat.ch for HwGUI
+
+
+I have just downloaded Harbour 2.1 from SVN and started to recompile
+tools, but found this issue when trying to make hwgui
+
+source\guimain.prg(15) Error F0029  Can't open #include file 'hbcompat.ch'
+
+?Does this file no longer exists?
+?Did server refuse to give it to me?
+?Should i get it from a different place?
+
+Thanks for patience.
+_______________________________________________
+Harbour-users mailing list (attachment size limit: 40KB)
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+From eyelagui at gmail.com  Tue Apr 13 16:19:04 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Tue Apr 13 16:19:11 2010
+Subject: [Harbour-users] hbcompat.ch for HwGUI
+In-Reply-To: <FD24F82F7B4D42AF9DA3514648DFB3D3@SUPPORTS>
+References: <4BC4C241.4000305@gmail.com>
+	<FD24F82F7B4D42AF9DA3514648DFB3D3@SUPPORTS>
+Message-ID: <4BC4D1B8.8040909@gmail.com>
+
+Tanks for your answer, i use notepad++ that opens anything with just a 
+right click of the mouse.
+
+Did'nt check other folders for the file... thanks again.
+
+El 13/04/2010 04:40 p.m., Qatan escribi?:
+> Richard,
+>
+>    Give a look in: harbour/contrib/xhb/hbcompat.ch
+>
+>    I suggest you to look for information on the harbour\changelog file.
+>    Also harbour\install
+>    Both are TXT files (you can rename them to have .TXT on the end to 
+> make it easier to open with notepad)
+>    It has many valuable information.
+>    Helps me to find things like this.
+>
+> Qatan
+>
+> ----- Original Message ----- From: "Richard Acosta" <eyelagui@gmail.com>
+> To: "Lista Harbour" <harbour-users@harbour-project.org>
+> Sent: Tuesday, 13 de April de 2010 16:13
+> Subject: [Harbour-users] hbcompat.ch for HwGUI
+>
+>
+> I have just downloaded Harbour 2.1 from SVN and started to recompile
+> tools, but found this issue when trying to make hwgui
+>
+> source\guimain.prg(15) Error F0029  Can't open #include file 
+> 'hbcompat.ch'
+>
+> ?Does this file no longer exists?
+> ?Did server refuse to give it to me?
+> ?Should i get it from a different place?
+>
+> Thanks for patience.
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+From suporte at tribalbrasil.com  Fri Apr 16 13:53:48 2010
+From: suporte at tribalbrasil.com (Qatan)
+Date: Fri Apr 16 13:57:10 2010
+Subject: [Harbour-users] Datecs MP-5000
+Message-ID: <E2FCC2EA9D414EB4BA0701AD74E666F0@SUPPORTS>
+
+Hi,
+
+    Does anyone know this fiscal cash register?
+    This brand is not common here (this is the first one I ever seen...) anyway seems to be a good device.
+    Any idea how to use it with Harbour? The manual is very short but it has a serial port adaptor. 
+    Any information is welcome.
+    Thanks.
+
+Qatan
+From eyelagui at gmail.com  Sun Apr 18 13:32:06 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Sun Apr 18 13:32:17 2010
+Subject: [Harbour-users] Too many def files
+Message-ID: <4BCB4216.30105@gmail.com>
+
+Hello, i'm having this strange error when compiling my app.
+
+    Fatal: Too many DEF file names:
+    d:\programa\comps\hwgui_hb2\lib\procmisc.lib
+
+I'm using harbour 2.1+HWgui both from SVN/CVS and Borland C 5.5
+
+The funny thing is, if i compile only 1 prg, it's ok, it compiles and 
+program runs, but as soon as i add a 2nd .prg this error comes up.
+
+This is the compile batch file i'm using wich is the same i have used 
+since entered Harbour+HWGUI world.
+
+http://pastebin.com/Cmd5uC9U
+
+The main prg. has only a menu, and the second .prg is blank, that's the 
+strangest....(i guess)
+
+I'm sorry if i should put this on hwgui list, but i am not receiving 
+absolutely anything from them, and i have suscribed and unsuscribed 
+several times.
+
+
+Thanks.
+From mbelgrano at deltain.it  Sun Apr 18 13:40:24 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Sun Apr 18 13:40:51 2010
+Subject: [Harbour-users] Too many def files
+In-Reply-To: <4BCB4216.30105@gmail.com>
+References: <4BCB4216.30105@gmail.com>
+Message-ID: <o2u609353e71004181040g74a7763fxf1bee62affb0d2f1@mail.gmail.com>
+
+I suggest use hbmk2
+harbourlanguage.blogspot.com/search/label/hbmk2
+
+2010/4/18 Richard Acosta <eyelagui@gmail.com>
+
+> Hello, i'm having this strange error when compiling my app.
+>
+>   Fatal: Too many DEF file names:
+>   d:\programa\comps\hwgui_hb2\lib\procmisc.lib
+>
+> I'm using harbour 2.1+HWgui both from SVN/CVS and Borland C 5.5
+>
+> The funny thing is, if i compile only 1 prg, it's ok, it compiles and
+> program runs, but as soon as i add a 2nd .prg this error comes up.
+>
+> This is the compile batch file i'm using wich is the same i have used since
+> entered Harbour+HWGUI world.
+>
+> http://pastebin.com/Cmd5uC9U
+>
+> The main prg. has only a menu, and the second .prg is blank, that's the
+> strangest....(i guess)
+>
+> I'm sorry if i should put this on hwgui list, but i am not receiving
+> absolutely anything from them, and i have suscribed and unsuscribed several
+> times.
+>
+>
+> Thanks.
+>
+-- 
+Massimo Belgrano
+From eyelagui at gmail.com  Sun Apr 18 15:22:04 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Sun Apr 18 15:22:15 2010
+Subject: [Harbour-users] variables management.
+Message-ID: <4BCB5BDC.5090406@gmail.com>
+
+In the past i could save variables by "save to varfile"
+
+Now, the file is created, but variables seem to not being read when 
+"restore from varfile"
+
+?Anything changed?
+
+Harbour 2.1 right from SVN.
+From eyelagui at gmail.com  Sun Apr 18 15:24:06 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Sun Apr 18 15:24:15 2010
+Subject: [Harbour-users] Too many def files
+In-Reply-To: <o2u609353e71004181040g74a7763fxf1bee62affb0d2f1@mail.gmail.com>
+References: <4BCB4216.30105@gmail.com>
+	<o2u609353e71004181040g74a7763fxf1bee62affb0d2f1@mail.gmail.com>
+Message-ID: <4BCB5C56.6060502@gmail.com>
+
+Thanks massimo, i have tryed to use it, but can't figure how to.
+
+I use Crimson Editor to manage my text files (.prg) and some shortcuts 
+ctrl+1 ctrl+2 to execute .bat compiler files... ?is there a way to fully 
+automate hbmk2? ?can you give me a direction on how to use hbmk2?
+
+
+
+
+El 18/04/2010 02:40 p.m., Massimo Belgrano escribi?:
+> I suggest use hbmk2
+> harbourlanguage.blogspot.com/search/label/hbmk2
+>
+> 2010/4/18 Richard Acosta<eyelagui@gmail.com>
+>
+>    
+>> Hello, i'm having this strange error when compiling my app.
+>>
+>>    Fatal: Too many DEF file names:
+>>    d:\programa\comps\hwgui_hb2\lib\procmisc.lib
+>>
+>> I'm using harbour 2.1+HWgui both from SVN/CVS and Borland C 5.5
+>>
+>> The funny thing is, if i compile only 1 prg, it's ok, it compiles and
+>> program runs, but as soon as i add a 2nd .prg this error comes up.
+>>
+>> This is the compile batch file i'm using wich is the same i have used since
+>> entered Harbour+HWGUI world.
+>>
+>> http://pastebin.com/Cmd5uC9U
+>>
+>> The main prg. has only a menu, and the second .prg is blank, that's the
+>> strangest....(i guess)
+>>
+>> I'm sorry if i should put this on hwgui list, but i am not receiving
+>> absolutely anything from them, and i have suscribed and unsuscribed several
+>> times.
+>>
+>>
+>> Thanks.
+>>
+>>      
+From mbelgrano at deltain.it  Sun Apr 18 15:51:21 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Sun Apr 18 15:51:50 2010
+Subject: [Harbour-users] Too many def files
+In-Reply-To: <4BCB5C56.6060502@gmail.com>
+References: <4BCB4216.30105@gmail.com>
+	<o2u609353e71004181040g74a7763fxf1bee62affb0d2f1@mail.gmail.com>
+	<4BCB5C56.6060502@gmail.com>
+Message-ID: <q2l609353e71004181251l8b7d0c56qb41aa4f046ad1348@mail.gmail.com>
+
+you can simply insert in bat file
+hbmk2 test1.prg test2.prtg testn.prg -lmylib1 -lmylib2 -lmylibn
+
+i also suggest try hbide http://hbide.vouch.info/
+
+2010/4/18 Richard Acosta <eyelagui@gmail.com>:
+> Thanks massimo, i have tryed to use it, but can't figure how to.
+>
+> I use Crimson Editor to manage my text files (.prg) and some shortcuts
+> ctrl+1 ctrl+2 to execute .bat compiler files... ?is there a way to fully
+> automate hbmk2? ?can you give me a direction on how to use hbmk2?
+>
+>
+>
+>
+> El 18/04/2010 02:40 p.m., Massimo Belgrano escribi?:
+>>
+>> I suggest use hbmk2
+>> harbourlanguage.blogspot.com/search/label/hbmk2
+>>
+>> 2010/4/18 Richard Acosta<eyelagui@gmail.com>
+>>
+>>
+>>>
+>>> Hello, i'm having this strange error when compiling my app.
+>>>
+>>> ? Fatal: Too many DEF file names:
+>>> ? d:\programa\comps\hwgui_hb2\lib\procmisc.lib
+>>>
+>>> I'm using harbour 2.1+HWgui both from SVN/CVS and Borland C 5.5
+>>>
+>>> The funny thing is, if i compile only 1 prg, it's ok, it compiles and
+>>> program runs, but as soon as i add a 2nd .prg this error comes up.
+>>>
+>>> This is the compile batch file i'm using wich is the same i have used
+>>> since
+>>> entered Harbour+HWGUI world.
+>>>
+>>> http://pastebin.com/Cmd5uC9U
+>>>
+>>> The main prg. has only a menu, and the second .prg is blank, that's the
+>>> strangest....(i guess)
+>>>
+>>> I'm sorry if i should put this on hwgui list, but i am not receiving
+>>> absolutely anything from them, and i have suscribed and unsuscribed
+>>> several
+>>> times.
+>>>
+>>>
+>>> Thanks.
+>>>
+>>>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+
+Iscritto all'albo dei CTU presso il Tribunale di Novara per materia Informatica
+Delta Informatica S.r.l. (http://www.deltain.it/) (+39 0321 455962)
+Analisi e sviluppo software per Lan e Web -  Consulenza informatica - Formazione
+From eyelagui at gmail.com  Sun Apr 18 20:37:37 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Sun Apr 18 20:37:49 2010
+Subject: [Harbour-users] Too many def files
+In-Reply-To: <q2l609353e71004181251l8b7d0c56qb41aa4f046ad1348@mail.gmail.com>
+References: <4BCB4216.30105@gmail.com>	<o2u609353e71004181040g74a7763fxf1bee62affb0d2f1@mail.gmail.com>	<4BCB5C56.6060502@gmail.com>
+	<q2l609353e71004181251l8b7d0c56qb41aa4f046ad1348@mail.gmail.com>
+Message-ID: <4BCBA5D1.7070902@gmail.com>
+
+ok, nice, and mylib are the ussual harbour libs i'm using for any 
+program or only the ones from outside of harbour? (3rd party)
+
+Thanks for your time.
+
+
+El 18/04/2010 04:51 p.m., Massimo Belgrano escribi?:
+> you can simply insert in bat file
+> hbmk2 test1.prg test2.prtg testn.prg -lmylib1 -lmylib2 -lmylibn
+>
+> i also suggest try hbide http://hbide.vouch.info/
+>
+> 2010/4/18 Richard Acosta<eyelagui@gmail.com>:
+>    
+>> Thanks massimo, i have tryed to use it, but can't figure how to.
+>>
+>> I use Crimson Editor to manage my text files (.prg) and some shortcuts
+>> ctrl+1 ctrl+2 to execute .bat compiler files... ?is there a way to fully
+>> automate hbmk2? ?can you give me a direction on how to use hbmk2?
+>>
+>>
+>>
+>>
+>> El 18/04/2010 02:40 p.m., Massimo Belgrano escribi?:
+>>      
+>>> I suggest use hbmk2
+>>> harbourlanguage.blogspot.com/search/label/hbmk2
+>>>
+>>> 2010/4/18 Richard Acosta<eyelagui@gmail.com>
+>>>
+>>>
+>>>        
+>>>> Hello, i'm having this strange error when compiling my app.
+>>>>
+>>>>    Fatal: Too many DEF file names:
+>>>>    d:\programa\comps\hwgui_hb2\lib\procmisc.lib
+>>>>
+>>>> I'm using harbour 2.1+HWgui both from SVN/CVS and Borland C 5.5
+>>>>
+>>>> The funny thing is, if i compile only 1 prg, it's ok, it compiles and
+>>>> program runs, but as soon as i add a 2nd .prg this error comes up.
+>>>>
+>>>> This is the compile batch file i'm using wich is the same i have used
+>>>> since
+>>>> entered Harbour+HWGUI world.
+>>>>
+>>>> http://pastebin.com/Cmd5uC9U
+>>>>
+>>>> The main prg. has only a menu, and the second .prg is blank, that's the
+>>>> strangest....(i guess)
+>>>>
+>>>> I'm sorry if i should put this on hwgui list, but i am not receiving
+>>>> absolutely anything from them, and i have suscribed and unsuscribed
+>>>> several
+>>>> times.
+>>>>
+>>>>
+>>>> Thanks.
+>>>>
+>>>>
+>>>>          
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>      
+>
+>
+>    
+From eyelagui at gmail.com  Sun Apr 18 21:05:28 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Sun Apr 18 21:05:37 2010
+Subject: [Harbour-users] Too many def files
+In-Reply-To: <q2l609353e71004181251l8b7d0c56qb41aa4f046ad1348@mail.gmail.com>
+References: <4BCB4216.30105@gmail.com>	<o2u609353e71004181040g74a7763fxf1bee62affb0d2f1@mail.gmail.com>	<4BCB5C56.6060502@gmail.com>
+	<q2l609353e71004181251l8b7d0c56qb41aa4f046ad1348@mail.gmail.com>
+Message-ID: <4BCBAC58.8060705@gmail.com>
+
+ok, i have figured it out...
+
+thanks a lot.
+
+.
+
+El 18/04/2010 04:51 p.m., Massimo Belgrano escribi?:
+> you can simply insert in bat file
+> hbmk2 test1.prg test2.prtg testn.prg -lmylib1 -lmylib2 -lmylibn
+>
+> i also suggest try hbide http://hbide.vouch.info/
+>
+> 2010/4/18 Richard Acosta<eyelagui@gmail.com>:
+>    
+>> Thanks massimo, i have tryed to use it, but can't figure how to.
+>>
+>> I use Crimson Editor to manage my text files (.prg) and some shortcuts
+>> ctrl+1 ctrl+2 to execute .bat compiler files... ?is there a way to fully
+>> automate hbmk2? ?can you give me a direction on how to use hbmk2?
+>>
+>>
+>>
+>>
+>> El 18/04/2010 02:40 p.m., Massimo Belgrano escribi?:
+>>      
+>>> I suggest use hbmk2
+>>> harbourlanguage.blogspot.com/search/label/hbmk2
+>>>
+>>> 2010/4/18 Richard Acosta<eyelagui@gmail.com>
+>>>
+>>>
+>>>        
+>>>> Hello, i'm having this strange error when compiling my app.
+>>>>
+>>>>    Fatal: Too many DEF file names:
+>>>>    d:\programa\comps\hwgui_hb2\lib\procmisc.lib
+>>>>
+>>>> I'm using harbour 2.1+HWgui both from SVN/CVS and Borland C 5.5
+>>>>
+>>>> The funny thing is, if i compile only 1 prg, it's ok, it compiles and
+>>>> program runs, but as soon as i add a 2nd .prg this error comes up.
+>>>>
+>>>> This is the compile batch file i'm using wich is the same i have used
+>>>> since
+>>>> entered Harbour+HWGUI world.
+>>>>
+>>>> http://pastebin.com/Cmd5uC9U
+>>>>
+>>>> The main prg. has only a menu, and the second .prg is blank, that's the
+>>>> strangest....(i guess)
+>>>>
+>>>> I'm sorry if i should put this on hwgui list, but i am not receiving
+>>>> absolutely anything from them, and i have suscribed and unsuscribed
+>>>> several
+>>>> times.
+>>>>
+>>>>
+>>>> Thanks.
+>>>>
+>>>>
+>>>>          
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>      
+>
+>
+>    
+From bedipritpal at hotmail.com  Sun Apr 18 22:49:13 2010
+From: bedipritpal at hotmail.com (Pritpal Bedi)
+Date: Sun Apr 18 22:49:21 2010
+Subject: [Harbour-users] Too many def files
+In-Reply-To: <4BCBAC58.8060705@gmail.com>
+References: <4BCB4216.30105@gmail.com>
+	<o2u609353e71004181040g74a7763fxf1bee62affb0d2f1@mail.gmail.com>
+	<4BCB5C56.6060502@gmail.com>,
+	<q2l609353e71004181251l8b7d0c56qb41aa4f046ad1348@mail.gmail.com>,
+	<4BCBAC58.8060705@gmail.com>
+Message-ID: <SNT123-W9D03AE3ACD586E7D75712A70B0@phx.gbl>
+
+
+Hi
+
+ 
+
+> > i also suggest try hbide http://hbide.vouch.info/
+> > 
+> >> Thanks massimo, i have tryed to use it, but can't figure how to.
+
+
+Can you exactly tell where did you struck, or did not find easy in hbIDE ?
+
+ 
+
+
+
+Regards
+ 
+Pritpal Bedi, a student of software analysis and design
+http://www.vouch.in  | Vouch, the software that GROWS with you
+http://www.vouch32.com  |  Home of Vouch32 ActiveX Server
+http://www.vouchcac.com/vouch32/vouch32.htm   |   A Free Windows Extended
+Utilities Library for Clipper, Xbase++ and (x)Harbour
+http://www.help.vouch.info | Online Vouch Help
+http://www.harbour.vouch.info | Online Harbour Help
+
+
+
+ 		 	   		  
+_________________________________________________________________
+The New Busy think 9 to 5 is a cute idea. Combine multiple calendars with Hotmail. 
+http://www.windowslive.com/campaign/thenewbusy?tile=multicalendar&ocid=PID28326::T:WLMTAGL:ON:WL:en-US:WM_HMP:042010_5
+From eyelagui at gmail.com  Mon Apr 19 00:03:49 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Mon Apr 19 00:04:01 2010
+Subject: [Harbour-users] Too many def files
+In-Reply-To: <SNT123-W9D03AE3ACD586E7D75712A70B0@phx.gbl>
+References: <4BCB4216.30105@gmail.com>	<o2u609353e71004181040g74a7763fxf1bee62affb0d2f1@mail.gmail.com>	<4BCB5C56.6060502@gmail.com>,
+	<q2l609353e71004181251l8b7d0c56qb41aa4f046ad1348@mail.gmail.com>,
+	<4BCBAC58.8060705@gmail.com>
+	<SNT123-W9D03AE3ACD586E7D75712A70B0@phx.gbl>
+Message-ID: <4BCBD625.5090106@gmail.com>
+
+oh, i was talking about hbmk2, never tried hbide.
+
+I have tried some IDEs but never liked them, i prefer to write the full 
+code myself, i feel uncomfortable with IDEs.
+I come from dBase then foxpro and clipper, then harbour right at the 
+beginnings and i kept always programming the same way.
+
+
+
+El 18/04/2010 11:49 p.m., Pritpal Bedi escribi?:
+> Hi
+>    
+>>> i also suggest try hbide http://hbide.vouch.info/
+>>>        
+>>>> Thanks massimo, i have tryed to use it, but can't figure how to.
+>>>>          
+>
+> Can you exactly tell where did you struck, or did not find easy in hbIDE ?
+>
+>    
+
+From bedipritpal at hotmail.com  Mon Apr 19 00:15:13 2010
+From: bedipritpal at hotmail.com (Pritpal Bedi)
+Date: Mon Apr 19 00:15:25 2010
+Subject: [Harbour-users] Too many def files
+In-Reply-To: <4BCBD625.5090106@gmail.com>
+References: <4BCB4216.30105@gmail.com>
+	<o2u609353e71004181040g74a7763fxf1bee62affb0d2f1@mail.gmail.com>
+	<4BCB5C56.6060502@gmail.com>, ,
+	<q2l609353e71004181251l8b7d0c56qb41aa4f046ad1348@mail.gmail.com>,
+	, <4BCBAC58.8060705@gmail.com>,
+	<SNT123-W9D03AE3ACD586E7D75712A70B0@phx.gbl>,
+	<4BCBD625.5090106@gmail.com>
+Message-ID: <SNT123-W474B9B81C9023E5FCE54AA70B0@phx.gbl>
+
+
+Hi
+
+
+
+> oh, i was talking about hbmk2, never tried hbide.
+> 
+> I have tried some IDEs but never liked them, i prefer to write the full 
+> code myself, i feel uncomfortable with IDEs.
+> I come from dBase then foxpro and clipper, then harbour right at the 
+> beginnings and i kept always programming the same way.
+
+
+Sounds good, but to some extent.
+
+I had the same theory few years back which has changed over the time.
+
+BTW hbIDE can be used as a text editor only mode if you are so scared of project management.
+
+Harbour team is working hard on how it can be made more productive.
+
+ 
+
+Give it a try, you will not repent.
+
+ 
+
+Regards
+ 
+Pritpal Bedi, a student of software analysis and design
+http://www.vouch.in  | Vouch, the software that GROWS with you
+http://www.vouch32.com  |  Home of Vouch32 ActiveX Server
+http://www.vouchcac.com/vouch32/vouch32.htm   |   A Free Windows Extended
+Utilities Library for Clipper, Xbase++ and (x)Harbour
+http://www.help.vouch.info | Online Vouch Help
+http://www.harbour.vouch.info | Online Harbour Help
+
+ 		 	   		  
+_________________________________________________________________
+The New Busy is not the old busy. Search, chat and e-mail from your inbox.
+http://www.windowslive.com/campaign/thenewbusy?ocid=PID28326::T:WLMTAGL:ON:WL:en-US:WM_HMP:042010_3
+From eyelagui at gmail.com  Mon Apr 19 00:26:47 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Mon Apr 19 00:27:02 2010
+Subject: [Harbour-users] Too many def files
+In-Reply-To: <SNT123-W9D03AE3ACD586E7D75712A70B0@phx.gbl>
+References: <4BCB4216.30105@gmail.com>	<o2u609353e71004181040g74a7763fxf1bee62affb0d2f1@mail.gmail.com>	<4BCB5C56.6060502@gmail.com>,
+	<q2l609353e71004181251l8b7d0c56qb41aa4f046ad1348@mail.gmail.com>,
+	<4BCBAC58.8060705@gmail.com>
+	<SNT123-W9D03AE3ACD586E7D75712A70B0@phx.gbl>
+Message-ID: <4BCBDB87.5060606@gmail.com>
+
+I?m sorry Pripal, i'm messing ideas around, is 1AM here and i'm very tired.
+
+I have tried some IDEs, to make forms and stuff, and i cant keep putting 
+menus and windows using a mouse, i like to program character by 
+character, like very old school.
+
+I had, actually tried hbide some years ago, i followed massimo's link 
+just a minute ago to hbide's page and found it familiar.
+I really can't remember now what impression i had from it, i just can 
+say i tried and left it.
+I also tried minigui IDE, and others but noone convinced me about 
+changing my way.
+
+I'm very familiar with Crimson Editor, is more a text editor with fancy 
+habilities, but i have beeing using it for over 12 years if i'm not wrong.
+
+
+Thanks for your time, and best regards.
+
+--
+
+El 18/04/2010 11:49 p.m., Pritpal Bedi escribi?:
+> Hi
+>
+>
+>
+>    
+>>> i also suggest try hbide http://hbide.vouch.info/
+>>>
+>>>        
+>>>> Thanks massimo, i have tryed to use it, but can't figure how to.
+>>>>          
+>
+> Can you exactly tell where did you struck, or did not find easy in hbIDE ?
+>
+>
+>
+>
+>
+> Regards
+>
+> Pritpal Bedi, a student of software analysis and design
+> http://www.vouch.in  | Vouch, the software that GROWS with you
+> http://www.vouch32.com  |  Home of Vouch32 ActiveX Server
+> http://www.vouchcac.com/vouch32/vouch32.htm   |   A Free Windows Extended
+> Utilities Library for Clipper, Xbase++ and (x)Harbour
+> http://www.help.vouch.info | Online Vouch Help
+> http://www.harbour.vouch.info | Online Harbour Help
+>
+>
+>
+>   		 	   		
+> _________________________________________________________________
+> The New Busy think 9 to 5 is a cute idea. Combine multiple calendars with Hotmail.
+> http://www.windowslive.com/campaign/thenewbusy?tile=multicalendar&ocid=PID28326::T:WLMTAGL:ON:WL:en-US:WM_HMP:042010_5_______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>    
+From mbelgrano at deltain.it  Mon Apr 19 01:31:04 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Mon Apr 19 01:31:33 2010
+Subject: [Harbour-users] Too many def files
+In-Reply-To: <4BCBDB87.5060606@gmail.com>
+References: <4BCB4216.30105@gmail.com>
+	<o2u609353e71004181040g74a7763fxf1bee62affb0d2f1@mail.gmail.com>
+	<4BCB5C56.6060502@gmail.com>
+	<q2l609353e71004181251l8b7d0c56qb41aa4f046ad1348@mail.gmail.com>
+	<4BCBAC58.8060705@gmail.com>
+	<SNT123-W9D03AE3ACD586E7D75712A70B0@phx.gbl> 
+	<4BCBDB87.5060606@gmail.com>
+Message-ID: <i2n609353e71004182231va869f253y869f9b1cf54e3642@mail.gmail.com>
+
+You can puy in myproject.hbp your hbmk2 command line
+------myproject.hbp ----------
+test1.prg
+test2.prtg
+testn.prg
+-lmylib1
+-lmylib2
+-lmylibn
+then you can compile using hbmk2 using
+hbmk2 myproject.hbp
+
+hbide use same project format so you can use
+hbide myproject.hbp
+Hbide allow compile you source with one click and if your source
+contain error  with a double click on red row of error showed you go
+to line that caused error and this is a big improvements in
+productivity.
+
+Hbide have a short and string history so i suggest try last version
+you can find same info regarding here my blog
+(http://harbourlanguage.blogspot.com/) about hbide and i suggest try
+last version from http://hbide.vouch.info/
+
+You recover time used on hbide with boost on productivity
+
+Last version hbide allow keyboard customization so you can give
+Crimson Editor's aspect,
+
+2010/4/19 Richard Acosta <eyelagui@gmail.com>:
+> I?m sorry Pripal, i'm messing ideas around, is 1AM here and i'm very tired.
+>
+> I have tried some IDEs, to make forms and stuff, and i cant keep putting
+> menus and windows using a mouse, i like to program character by character,
+> like very old school.
+>
+> I had, actually tried hbide some years ago, i followed massimo's link just a
+> minute ago to hbide's page and found it familiar.
+> I really can't remember now what impression i had from it, i just can say i
+> tried and left it.
+> I also tried minigui IDE, and others but noone convinced me about changing
+> my way.
+>
+> I'm very familiar with Crimson Editor, is more a text editor with fancy
+> habilities, but i have beeing using it for over 12 years if i'm not wrong.
+>
+>
+
+
+
+-- 
+Massimo Belgrano
+From rcnewton at hiline.net  Mon Apr 19 09:23:29 2010
+From: rcnewton at hiline.net (Richard C. Newton)
+Date: Mon Apr 19 09:24:02 2010
+Subject: [Harbour-users] Fedora 9 and xHarbour
+Message-ID: <1410.75.14.15.167.1271683409.squirrel@squirrelmail.hiline.net>
+
+Has anyone installed xHarbour using Fedora 9 linux ?  I recently tried to
+do so but couldn't start the program it 'installed'.
+
+Thanks.
+
+-- 
+Richard C. Newton
+rcnewton@hiline.net
+
+From eyelagui at gmail.com  Mon Apr 19 11:42:43 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Mon Apr 19 11:42:59 2010
+Subject: [Harbour-users] Too many def files
+In-Reply-To: <i2n609353e71004182231va869f253y869f9b1cf54e3642@mail.gmail.com>
+References: <4BCB4216.30105@gmail.com>	<o2u609353e71004181040g74a7763fxf1bee62affb0d2f1@mail.gmail.com>	<4BCB5C56.6060502@gmail.com>	<q2l609353e71004181251l8b7d0c56qb41aa4f046ad1348@mail.gmail.com>	<4BCBAC58.8060705@gmail.com>	<SNT123-W9D03AE3ACD586E7D75712A70B0@phx.gbl>
+	<4BCBDB87.5060606@gmail.com>
+	<i2n609353e71004182231va869f253y869f9b1cf54e3642@mail.gmail.com>
+Message-ID: <4BCC79F3.6020100@gmail.com>
+
+ok ok .. thanks both of you for your recomendations, i promise as soon i 
+can give it a try i'll do it.
+
+Best regards.
+
+
+
+El 19/04/2010 02:31 a.m., Massimo Belgrano escribi?:
+> You can puy in myproject.hbp your hbmk2 command line
+> ------myproject.hbp ----------
+> test1.prg
+> test2.prtg
+> testn.prg
+> -lmylib1
+> -lmylib2
+> -lmylibn
+> then you can compile using hbmk2 using
+> hbmk2 myproject.hbp
+>
+> hbide use same project format so you can use
+> hbide myproject.hbp
+> Hbide allow compile you source with one click and if your source
+> contain error  with a double click on red row of error showed you go
+> to line that caused error and this is a big improvements in
+> productivity.
+>
+> Hbide have a short and string history so i suggest try last version
+> you can find same info regarding here my blog
+> (http://harbourlanguage.blogspot.com/) about hbide and i suggest try
+> last version from http://hbide.vouch.info/
+>
+> You recover time used on hbide with boost on productivity
+>
+> Last version hbide allow keyboard customization so you can give
+> Crimson Editor's aspect,
+>
+> 2010/4/19 Richard Acosta<eyelagui@gmail.com>:
+>    
+>> I?m sorry Pripal, i'm messing ideas around, is 1AM here and i'm very tired.
+>>
+>> I have tried some IDEs, to make forms and stuff, and i cant keep putting
+>> menus and windows using a mouse, i like to program character by character,
+>> like very old school.
+>>
+>> I had, actually tried hbide some years ago, i followed massimo's link just a
+>> minute ago to hbide's page and found it familiar.
+>> I really can't remember now what impression i had from it, i just can say i
+>> tried and left it.
+>> I also tried minigui IDE, and others but noone convinced me about changing
+>> my way.
+>>
+>> I'm very familiar with Crimson Editor, is more a text editor with fancy
+>> habilities, but i have beeing using it for over 12 years if i'm not wrong.
+>>
+>>
+>>      
+>
+>
+>    
+From pointer at eunet.rs  Mon Apr 19 06:35:12 2010
+From: pointer at eunet.rs (Stupar)
+Date: Tue Apr 20 06:05:17 2010
+Subject: [Harbour-users] Help: Get state window ( in focus )
+Message-ID: <hqhbku$45u$1@dough.gmane.org>
+
+Hi,
+I experiment on windows (GT_VWG) with VK_* keys like:
+
+if hb_GtInfo( HB_GTI_???? )
+    lPressed := Wapi_GetKeyState( VK_APPS ) <= -127 // VK_SHIFT, VK_ALT,... 
+etc
+end
+
+I need know is application window has focus without change window state.
+
+Thanks to all
+ 
+
+
+
+From yallaone at gmail.com  Tue Apr 20 08:23:16 2010
+From: yallaone at gmail.com (Halim Issa)
+Date: Tue Apr 20 08:23:23 2010
+Subject: [Harbour-users] Compile trouble on OSX Snow Leopard,
+	harbour library not found by hbmk2
+Message-ID: <k2j510ae69e1004200523p39e8a711p3bbf6d01ae655615@mail.gmail.com>
+
+Hello,
+
+I'm completely new to Harbour after having used Clipper 5.0 under DOS
+for quite a few years. Having downloaded and installed Harbour version
+2.0.0 on OSX without any problems (ie error messages), I've run into
+trouble compiling the test program:
+
+prompt>hbmk2 hello
+hbmk2: Processing configuration: /usr/local/bin/hbmk.cfg
+Harbour 2.0.0 (Rev. 13372)
+Copyright (c) 1999-2010, http://www.harbour-project.org/
+Compiling 'hello.prg'...
+Lines 11, Functions/Procedures 1
+Generating C source output to 'hello.c'... Done.
+ld: library not found for -lharbour
+hbmk2: Error: Running linker. 1
+clang hello.o   -lhbcplr -lhbdebug -lharbour  -o hello -L/usr/local/lib/harbour
+prompt>
+
+As you can see everything is installed in /usr/local/{bin,lib,include}/
+
+I have installed Apple's Xcode 3.22 (2148) prior to installing Harbour
+(guess that's a given, otherwise it wouldn't have compiled from
+source)
+
+The /usr/local/bin/hbmk.cfg contains:
+#hbmk2 configuration
+# Generated by Harbour build process
+
+libpaths=../contrib/%{hb_name}
+libpaths=../contrib/rddsql/%{hb_name}
+libpaths=../addons/%{hb_name}
+libpaths=../examples/%{hb_name}
+
+Can anyone kindly point me towards the right direction to get started
+with Harbour on OSX ?
+
+Thanks in advance!
+From teo at windtelsoft.com  Tue Apr 20 10:31:34 2010
+From: teo at windtelsoft.com (Teo Fonrouge)
+Date: Tue Apr 20 10:31:47 2010
+Subject: [Harbour-users] Compile trouble on OSX Snow Leopard,
+	harbour library not found by hbmk2
+In-Reply-To: <k2j510ae69e1004200523p39e8a711p3bbf6d01ae655615@mail.gmail.com>
+References: <k2j510ae69e1004200523p39e8a711p3bbf6d01ae655615@mail.gmail.com>
+Message-ID: <7C3BEB20-F16B-46D5-B26B-1470E5763ED7@windtelsoft.com>
+
+Hello Halim,
+
+On Apr 20, 2010, at 7:23 AM, Halim Issa wrote:
+
+> Hello,
+> 
+> I'm completely new to Harbour after having used Clipper 5.0 under DOS
+> for quite a few years. Having downloaded and installed Harbour version
+> 2.0.0 on OSX without any problems (ie error messages), I've run into
+> trouble compiling the test program:
+> 
+> prompt>hbmk2 hello
+> hbmk2: Processing configuration: /usr/local/bin/hbmk.cfg
+> Harbour 2.0.0 (Rev. 13372)
+> Copyright (c) 1999-2010, http://www.harbour-project.org/
+> Compiling 'hello.prg'...
+> Lines 11, Functions/Procedures 1
+> Generating C source output to 'hello.c'... Done.
+> ld: library not found for -lharbour
+> hbmk2: Error: Running linker. 1
+> clang hello.o   -lhbcplr -lhbdebug -lharbour  -o hello -L/usr/local/lib/harbour
+> prompt>
+
+This is because hbmk2 tries to link with shared libraries and this are
+not found.
+
+You can bypass this by linking with static libs:
+
+$ hbmk2 -static hello
+
+
+Or, you can provide the missing shared lib with:
+
+$ sudo ln -s /usr/local/lib/harbour/libharbour.2.1.0.dylib /usr/local/lib/harbour/libharbour.dylib
+$ export DYLD_LIBRARY_PATH=/usr/local/lib/harbour
+
+the above will create a symbolic link to the shared harbour lib
+and set the DYLD_LIBRARY_PATH to point were it is.
+
+then you will have working right the following:
+
+$ hbmk2 hello
+$ ./hello
+
+[snip]
+
+HTH
+
+
+best regards,
+
+Teo
+
+
+
+From yallaone at gmail.com  Tue Apr 20 13:05:31 2010
+From: yallaone at gmail.com (Halim Issa)
+Date: Tue Apr 20 13:05:40 2010
+Subject: [Harbour-users] Compile trouble on OSX Snow Leopard harbour 
+	library not found by hbmk2
+Message-ID: <x2x510ae69e1004201005k4257b3bcy3c8ba5b480cb0bdb@mail.gmail.com>
+
+On 20 April 2010 18:01,  <harbour-users-request@harbour-project.org> wrote:
+> Hello Halim,
+>
+> On Apr 20, 2010, at 7:23 AM, Halim Issa wrote:
+>
+>> Hello,
+>>
+>> I'm completely new to Harbour after having used Clipper 5.0 under DOS
+>> for quite a few years. Having downloaded and installed Harbour version
+>> 2.0.0 on OSX without any problems (ie error messages), I've run into
+>> trouble compiling the test program:
+>>
+>> prompt>hbmk2 hello
+>> hbmk2: Processing configuration: /usr/local/bin/hbmk.cfg
+>> Harbour 2.0.0 (Rev. 13372)
+>> Copyright (c) 1999-2010, http://www.harbour-project.org/
+>> Compiling 'hello.prg'...
+>> Lines 11, Functions/Procedures 1
+>> Generating C source output to 'hello.c'... Done.
+>> ld: library not found for -lharbour
+>> hbmk2: Error: Running linker. 1
+>> clang hello.o ? -lhbcplr -lhbdebug -lharbour ?-o hello -L/usr/local/lib/harbour
+>> prompt>
+>
+> This is because hbmk2 tries to link with shared libraries and this are
+> not found.
+>
+> You can bypass this by linking with static libs:
+>
+> $ hbmk2 -static hello
+>
+>
+> Or, you can provide the missing shared lib with:
+>
+> $ sudo ln -s /usr/local/lib/harbour/libharbour.2.1.0.dylib /usr/local/lib/harbour/libharbour.dylib
+> $ export DYLD_LIBRARY_PATH=/usr/local/lib/harbour
+>
+> the above will create a symbolic link to the shared harbour lib
+> and set the DYLD_LIBRARY_PATH to point were it is.
+>
+> then you will have working right the following:
+>
+> $ hbmk2 hello
+> $ ./hello
+>
+> [snip]
+
+
+Works like a charm - thank you much for quick and to-the-point answer!
+Much appreciated!
+
+Good to be back on Clipper again, never thought my old 16bit DOS
+programs would emerge as 64bit OSX applications :-)
+From jasim.ab at gmail.com  Tue Apr 20 13:43:51 2010
+From: jasim.ab at gmail.com (Jasim A Basheer)
+Date: Tue Apr 20 13:44:00 2010
+Subject: [Harbour-users] Compile trouble on OSX Snow Leopard harbour 
+	library not found by hbmk2
+In-Reply-To: <x2x510ae69e1004201005k4257b3bcy3c8ba5b480cb0bdb@mail.gmail.com>
+References: <x2x510ae69e1004201005k4257b3bcy3c8ba5b480cb0bdb@mail.gmail.com>
+Message-ID: <s2uce56c7c01004201043l13cd2055jba286e6c5eea7cb5@mail.gmail.com>
+
+Does Harbour build with Leopard ? I tried building Harbour on my Leopard,
+however:
+
+make[3]: `../../../../../lib/darwin/gcc/libhbextern.a' is up to date.
+make[3]: `../../../../../lib/darwin/gcc/libhbdebug.a' is up to date.
+libtool  -dynamic -flat_namespace -undefined warning -multiply_defined
+suppress -single_module -L../../../../../lib/darwin/gcc -L/usr/X11R6/lib
+-install_name "libharbour.dylib" -compatibility_version 2.0 -current_version
+2.0.0  -o ../../../../../lib/darwin/gcc/libharbour.2.0.0.dylib
+../../../../../src/common/obj/darwin/gcc/expropt1.o
+../../../../../src/common/obj/darwin/gcc/expropt2.o ../../../../* <snip snip
+- a long list of object files>
+*libtool: can't locate file for: -lpcre
+libtool: file: -lpcre is not an object file (not allowed in a library)
+make[3]: *** [libharbour.2.0.0.dylib] Error 1
+
+I've done a 'port install pcre'. But no avail.
+
+My gcc is :
+ i686-apple-darwin9-gcc-4.0.1 (GCC) 4.0.1 (Apple Inc. build 5465)
+libtool:
+ Apple Computer, Inc. version cctools-667.3
+
+Thanks!
+
+On Tue, Apr 20, 2010 at 10:35 PM, Halim Issa <yallaone@gmail.com> wrote:
+
+> On 20 April 2010 18:01,  <harbour-users-request@harbour-project.org>
+> wrote:
+> > Hello Halim,
+> >
+> > On Apr 20, 2010, at 7:23 AM, Halim Issa wrote:
+> >
+> >> Hello,
+> >>
+> >> I'm completely new to Harbour after having used Clipper 5.0 under DOS
+> >> for quite a few years. Having downloaded and installed Harbour version
+> >> 2.0.0 on OSX without any problems (ie error messages), I've run into
+> >> trouble compiling the test program:
+> >>
+> >> prompt>hbmk2 hello
+> >> hbmk2: Processing configuration: /usr/local/bin/hbmk.cfg
+> >> Harbour 2.0.0 (Rev. 13372)
+> >> Copyright (c) 1999-2010, http://www.harbour-project.org/
+> >> Compiling 'hello.prg'...
+> >> Lines 11, Functions/Procedures 1
+> >> Generating C source output to 'hello.c'... Done.
+> >> ld: library not found for -lharbour
+> >> hbmk2: Error: Running linker. 1
+> >> clang hello.o   -lhbcplr -lhbdebug -lharbour  -o hello
+> -L/usr/local/lib/harbour
+> >> prompt>
+> >
+> > This is because hbmk2 tries to link with shared libraries and this are
+> > not found.
+> >
+> > You can bypass this by linking with static libs:
+> >
+> > $ hbmk2 -static hello
+> >
+> >
+> > Or, you can provide the missing shared lib with:
+> >
+> > $ sudo ln -s /usr/local/lib/harbour/libharbour.2.1.0.dylib
+> /usr/local/lib/harbour/libharbour.dylib
+> > $ export DYLD_LIBRARY_PATH=/usr/local/lib/harbour
+> >
+> > the above will create a symbolic link to the shared harbour lib
+> > and set the DYLD_LIBRARY_PATH to point were it is.
+> >
+> > then you will have working right the following:
+> >
+> > $ hbmk2 hello
+> > $ ./hello
+> >
+> > [snip]
+>
+>
+> Works like a charm - thank you much for quick and to-the-point answer!
+> Much appreciated!
+>
+> Good to be back on Clipper again, never thought my old 16bit DOS
+> programs would emerge as 64bit OSX applications :-)
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From yallaone at gmail.com  Tue Apr 20 13:48:39 2010
+From: yallaone at gmail.com (Halim Issa)
+Date: Tue Apr 20 13:48:48 2010
+Subject: [Harbour-users] Trouble compiling Pritpal Bedi's harupdf sample
+	harupdf.c
+Message-ID: <h2y510ae69e1004201048ob44897f5vbebd154eec6184b7@mail.gmail.com>
+
+Hello,
+
+I am trying to compile the sample program found in harbour's
+contrib/hbhpdf directory on OSX.
+
+I have modified the hbhpdf.hbc file from the tests directory to
+contain the following:
+
+#
+# $Id: hbhpdf.hbc 12643 2009-10-04 19:56:27Z vszakats $
+#
+
+incpaths=.
+
+libs=hbhpdf
+libs=libhpdf
+libs=libpng
+
+# END OF FILE
+
+(ie to force it to use libpng rather than png on OSX)
+
+However, that only gets me a small step further, as compile fails with
+the following:
+
+hbmk2: Processing local make script: hbmk.hbm
+hbmk2: Processing configuration: /usr/local/bin/hbmk.cfg
+hbmk2: Processing: hbhpdf.hbc
+Harbour 2.0.0 (Rev. 13372)
+Copyright (c) 1999-2010, http://www.harbour-project.org/
+Compiling 'harupdf.prg'...
+Lines 2246, Functions/Procedures 18
+Generating C source output to 'harupdf.c'... Done.
+Undefined symbols:
+  "_crc32", referenced from:
+      _png_reset_crc in liblibpng.a(png.o)
+      _png_calculate_crc in liblibpng.a(png.o)
+  "_inflate", referenced from:
+      _png_read_row in liblibpng.a(pngread.o)
+      _png_decompress_chunk in liblibpng.a(pngrutil.o)
+      _png_read_finish_row in liblibpng.a(pngrutil.o)
+  "_deflateInit_", referenced from:
+      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+  "_inflateEnd", referenced from:
+      _png_read_destroy in liblibpng.a(pngread.o)
+  "_inflateInit_", referenced from:
+      _png_create_read_struct_2 in liblibpng.a(pngread.o)
+      _png_read_init_3 in liblibpng.a(pngread.o)
+  "_deflate", referenced from:
+      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+  "_deflateEnd", referenced from:
+      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+  "_inflateReset", referenced from:
+      _png_reset_zstream in liblibpng.a(png.o)
+      _png_decompress_chunk in liblibpng.a(pngrutil.o)
+      _png_decompress_chunk in liblibpng.a(pngrutil.o)
+      _png_read_finish_row in liblibpng.a(pngrutil.o)
+ld: symbol(s) not found
+hbmk2: Error: Running linker. 1
+clang harupdf.o   -lhbhpdf -llibhpdf -llibpng -lhbct -lhbcplr
+-lhbdebug -lharbour  -o harupdf -L/usr/local/lib/harbour
+
+
+I guess it goes without saying that the step up from Clipper Summer
+'87 to Harbour is a bit daunting, so my apologies in advance for
+possibly stupid questions. Haven't found anything on Google though, so
+I was hoping somebody here might offer some insight on where to look.
+
+Thanks much in advance!
+From jasim.ab at gmail.com  Tue Apr 20 13:58:45 2010
+From: jasim.ab at gmail.com (Jasim A Basheer)
+Date: Tue Apr 20 13:59:01 2010
+Subject: [Harbour-users] Compile trouble on OSX Snow Leopard harbour 
+	library not found by hbmk2
+In-Reply-To: <s2uce56c7c01004201043l13cd2055jba286e6c5eea7cb5@mail.gmail.com>
+References: <x2x510ae69e1004201005k4257b3bcy3c8ba5b480cb0bdb@mail.gmail.com>
+	<s2uce56c7c01004201043l13cd2055jba286e6c5eea7cb5@mail.gmail.com>
+Message-ID: <v2ice56c7c01004201058k72142761wce630acfc69d29b8@mail.gmail.com>
+
+Sorry, 'slang' was missing. Built smoothly after installing slang.
+
+On Tue, Apr 20, 2010 at 11:13 PM, Jasim A Basheer <jasim.ab@gmail.com>wrote:
+
+> Does Harbour build with Leopard ? I tried building Harbour on my Leopard,
+> however:
+>
+> make[3]: `../../../../../lib/darwin/gcc/libhbextern.a' is up to date.
+> make[3]: `../../../../../lib/darwin/gcc/libhbdebug.a' is up to date.
+> libtool  -dynamic -flat_namespace -undefined warning -multiply_defined
+> suppress -single_module -L../../../../../lib/darwin/gcc -L/usr/X11R6/lib
+> -install_name "libharbour.dylib" -compatibility_version 2.0 -current_version
+> 2.0.0  -o ../../../../../lib/darwin/gcc/libharbour.2.0.0.dylib
+> ../../../../../src/common/obj/darwin/gcc/expropt1.o
+> ../../../../../src/common/obj/darwin/gcc/expropt2.o ../../../../* <snip
+> snip - a long list of object files>
+> *libtool: can't locate file for: -lpcre
+> libtool: file: -lpcre is not an object file (not allowed in a library)
+> make[3]: *** [libharbour.2.0.0.dylib] Error 1
+>
+> I've done a 'port install pcre'. But no avail.
+>
+> My gcc is :
+>  i686-apple-darwin9-gcc-4.0.1 (GCC) 4.0.1 (Apple Inc. build 5465)
+> libtool:
+>  Apple Computer, Inc. version cctools-667.3
+>
+> Thanks!
+>
+>
+> On Tue, Apr 20, 2010 at 10:35 PM, Halim Issa <yallaone@gmail.com> wrote:
+>
+>> On 20 April 2010 18:01,  <harbour-users-request@harbour-project.org>
+>> wrote:
+>> > Hello Halim,
+>> >
+>> > On Apr 20, 2010, at 7:23 AM, Halim Issa wrote:
+>> >
+>> >> Hello,
+>> >>
+>> >> I'm completely new to Harbour after having used Clipper 5.0 under DOS
+>> >> for quite a few years. Having downloaded and installed Harbour version
+>> >> 2.0.0 on OSX without any problems (ie error messages), I've run into
+>> >> trouble compiling the test program:
+>> >>
+>> >> prompt>hbmk2 hello
+>> >> hbmk2: Processing configuration: /usr/local/bin/hbmk.cfg
+>> >> Harbour 2.0.0 (Rev. 13372)
+>> >> Copyright (c) 1999-2010, http://www.harbour-project.org/
+>> >> Compiling 'hello.prg'...
+>> >> Lines 11, Functions/Procedures 1
+>> >> Generating C source output to 'hello.c'... Done.
+>> >> ld: library not found for -lharbour
+>> >> hbmk2: Error: Running linker. 1
+>> >> clang hello.o   -lhbcplr -lhbdebug -lharbour  -o hello
+>> -L/usr/local/lib/harbour
+>> >> prompt>
+>> >
+>> > This is because hbmk2 tries to link with shared libraries and this are
+>> > not found.
+>> >
+>> > You can bypass this by linking with static libs:
+>> >
+>> > $ hbmk2 -static hello
+>> >
+>> >
+>> > Or, you can provide the missing shared lib with:
+>> >
+>> > $ sudo ln -s /usr/local/lib/harbour/libharbour.2.1.0.dylib
+>> /usr/local/lib/harbour/libharbour.dylib
+>> > $ export DYLD_LIBRARY_PATH=/usr/local/lib/harbour
+>> >
+>> > the above will create a symbolic link to the shared harbour lib
+>> > and set the DYLD_LIBRARY_PATH to point were it is.
+>> >
+>> > then you will have working right the following:
+>> >
+>> > $ hbmk2 hello
+>> > $ ./hello
+>> >
+>> > [snip]
+>>
+>>
+>> Works like a charm - thank you much for quick and to-the-point answer!
+>> Much appreciated!
+>>
+>> Good to be back on Clipper again, never thought my old 16bit DOS
+>> programs would emerge as 64bit OSX applications :-)
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>
+>
+From yallaone at gmail.com  Tue Apr 20 14:01:55 2010
+From: yallaone at gmail.com (Halim Issa)
+Date: Tue Apr 20 14:02:03 2010
+Subject: [Harbour-users] Compile trouble on OSX Snow Leopard harbour 
+	library not found by hbmk2
+In-Reply-To: <v2ice56c7c01004201058k72142761wce630acfc69d29b8@mail.gmail.com>
+References: <x2x510ae69e1004201005k4257b3bcy3c8ba5b480cb0bdb@mail.gmail.com>
+	<s2uce56c7c01004201043l13cd2055jba286e6c5eea7cb5@mail.gmail.com>
+	<v2ice56c7c01004201058k72142761wce630acfc69d29b8@mail.gmail.com>
+Message-ID: <p2y510ae69e1004201101n96e3f983ka2432f3cc7352ca0@mail.gmail.com>
+
+Hmm - I didn't do any of that. I simply installed the Xbuild and
+figured I'd have a go with as few modifications and additions as
+possible, and it works well *so far*.
+However, harbour built very well, though without X11 as I'm building
+console-based only
+
+On 20 April 2010 19:58, Jasim A Basheer <jasim.ab@gmail.com> wrote:
+> Sorry, 'slang' was missing. Built smoothly after installing slang.
+>
+> On Tue, Apr 20, 2010 at 11:13 PM, Jasim A Basheer <jasim.ab@gmail.com>wrote:
+>
+>> Does Harbour build with Leopard ? I tried building Harbour on my Leopard,
+>> however:
+>>
+>> make[3]: `../../../../../lib/darwin/gcc/libhbextern.a' is up to date.
+>> make[3]: `../../../../../lib/darwin/gcc/libhbdebug.a' is up to date.
+>> libtool ?-dynamic -flat_namespace -undefined warning -multiply_defined
+>> suppress -single_module -L../../../../../lib/darwin/gcc -L/usr/X11R6/lib
+>> -install_name "libharbour.dylib" -compatibility_version 2.0 -current_version
+>> 2.0.0 ?-o ../../../../../lib/darwin/gcc/libharbour.2.0.0.dylib
+>> ../../../../../src/common/obj/darwin/gcc/expropt1.o
+>> ../../../../../src/common/obj/darwin/gcc/expropt2.o ../../../../* <snip
+>> snip - a long list of object files>
+>> *libtool: can't locate file for: -lpcre
+>> libtool: file: -lpcre is not an object file (not allowed in a library)
+>> make[3]: *** [libharbour.2.0.0.dylib] Error 1
+>>
+>> I've done a 'port install pcre'. But no avail.
+>>
+>> My gcc is :
+>> ?i686-apple-darwin9-gcc-4.0.1 (GCC) 4.0.1 (Apple Inc. build 5465)
+>> libtool:
+>> ?Apple Computer, Inc. version cctools-667.3
+>>
+>> Thanks!
+>>
+>>
+>> On Tue, Apr 20, 2010 at 10:35 PM, Halim Issa <yallaone@gmail.com> wrote:
+>>
+>>> On 20 April 2010 18:01, ?<harbour-users-request@harbour-project.org>
+>>> wrote:
+>>> > Hello Halim,
+>>> >
+>>> > On Apr 20, 2010, at 7:23 AM, Halim Issa wrote:
+>>> >
+>>> >> Hello,
+>>> >>
+>>> >> I'm completely new to Harbour after having used Clipper 5.0 under DOS
+>>> >> for quite a few years. Having downloaded and installed Harbour version
+>>> >> 2.0.0 on OSX without any problems (ie error messages), I've run into
+>>> >> trouble compiling the test program:
+>>> >>
+>>> >> prompt>hbmk2 hello
+>>> >> hbmk2: Processing configuration: /usr/local/bin/hbmk.cfg
+>>> >> Harbour 2.0.0 (Rev. 13372)
+>>> >> Copyright (c) 1999-2010, http://www.harbour-project.org/
+>>> >> Compiling 'hello.prg'...
+>>> >> Lines 11, Functions/Procedures 1
+>>> >> Generating C source output to 'hello.c'... Done.
+>>> >> ld: library not found for -lharbour
+>>> >> hbmk2: Error: Running linker. 1
+>>> >> clang hello.o ? -lhbcplr -lhbdebug -lharbour ?-o hello
+>>> -L/usr/local/lib/harbour
+>>> >> prompt>
+>>> >
+>>> > This is because hbmk2 tries to link with shared libraries and this are
+>>> > not found.
+>>> >
+>>> > You can bypass this by linking with static libs:
+>>> >
+>>> > $ hbmk2 -static hello
+>>> >
+>>> >
+>>> > Or, you can provide the missing shared lib with:
+>>> >
+>>> > $ sudo ln -s /usr/local/lib/harbour/libharbour.2.1.0.dylib
+>>> /usr/local/lib/harbour/libharbour.dylib
+>>> > $ export DYLD_LIBRARY_PATH=/usr/local/lib/harbour
+>>> >
+>>> > the above will create a symbolic link to the shared harbour lib
+>>> > and set the DYLD_LIBRARY_PATH to point were it is.
+>>> >
+>>> > then you will have working right the following:
+>>> >
+>>> > $ hbmk2 hello
+>>> > $ ./hello
+>>> >
+>>> > [snip]
+>>>
+>>>
+>>> Works like a charm - thank you much for quick and to-the-point answer!
+>>> Much appreciated!
+>>>
+>>> Good to be back on Clipper again, never thought my old 16bit DOS
+>>> programs would emerge as 64bit OSX applications :-)
+>>> _______________________________________________
+>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>
+>>
+>>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From jasim.ab at gmail.com  Tue Apr 20 14:09:35 2010
+From: jasim.ab at gmail.com (Jasim A Basheer)
+Date: Tue Apr 20 14:09:42 2010
+Subject: [Harbour-users] Compile trouble on OSX Snow Leopard harbour 
+	library not found by hbmk2
+In-Reply-To: <p2y510ae69e1004201101n96e3f983ka2432f3cc7352ca0@mail.gmail.com>
+References: <x2x510ae69e1004201005k4257b3bcy3c8ba5b480cb0bdb@mail.gmail.com>
+	<s2uce56c7c01004201043l13cd2055jba286e6c5eea7cb5@mail.gmail.com>
+	<v2ice56c7c01004201058k72142761wce630acfc69d29b8@mail.gmail.com>
+	<p2y510ae69e1004201101n96e3f983ka2432f3cc7352ca0@mail.gmail.com>
+Message-ID: <z2kce56c7c01004201109j6810d9dawbfbffeab86c294ec@mail.gmail.com>
+
+I'm building from harbour-2.0.0.tar.gz from SF. Could you tell the process
+you followed.. what  was Xbuild?
+
+Thanks.
+
+On Tue, Apr 20, 2010 at 11:31 PM, Halim Issa <yallaone@gmail.com> wrote:
+
+> Hmm - I didn't do any of that. I simply installed the Xbuild and
+> figured I'd have a go with as few modifications and additions as
+> possible, and it works well *so far*.
+> However, harbour built very well, though without X11 as I'm building
+> console-based only
+>
+> On 20 April 2010 19:58, Jasim A Basheer <jasim.ab@gmail.com> wrote:
+> > Sorry, 'slang' was missing. Built smoothly after installing slang.
+> >
+> > On Tue, Apr 20, 2010 at 11:13 PM, Jasim A Basheer <jasim.ab@gmail.com
+> >wrote:
+> >
+> >> Does Harbour build with Leopard ? I tried building Harbour on my
+> Leopard,
+> >> however:
+> >>
+> >> make[3]: `../../../../../lib/darwin/gcc/libhbextern.a' is up to date.
+> >> make[3]: `../../../../../lib/darwin/gcc/libhbdebug.a' is up to date.
+> >> libtool  -dynamic -flat_namespace -undefined warning -multiply_defined
+> >> suppress -single_module -L../../../../../lib/darwin/gcc -L/usr/X11R6/lib
+> >> -install_name "libharbour.dylib" -compatibility_version 2.0
+> -current_version
+> >> 2.0.0  -o ../../../../../lib/darwin/gcc/libharbour.2.0.0.dylib
+> >> ../../../../../src/common/obj/darwin/gcc/expropt1.o
+> >> ../../../../../src/common/obj/darwin/gcc/expropt2.o ../../../../* <snip
+> >> snip - a long list of object files>
+> >> *libtool: can't locate file for: -lpcre
+> >> libtool: file: -lpcre is not an object file (not allowed in a library)
+> >> make[3]: *** [libharbour.2.0.0.dylib] Error 1
+> >>
+> >> I've done a 'port install pcre'. But no avail.
+> >>
+> >> My gcc is :
+> >>  i686-apple-darwin9-gcc-4.0.1 (GCC) 4.0.1 (Apple Inc. build 5465)
+> >> libtool:
+> >>  Apple Computer, Inc. version cctools-667.3
+> >>
+> >> Thanks!
+> >>
+> >>
+> >> On Tue, Apr 20, 2010 at 10:35 PM, Halim Issa <yallaone@gmail.com>
+> wrote:
+> >>
+> >>> On 20 April 2010 18:01,  <harbour-users-request@harbour-project.org>
+> >>> wrote:
+> >>> > Hello Halim,
+> >>> >
+> >>> > On Apr 20, 2010, at 7:23 AM, Halim Issa wrote:
+> >>> >
+> >>> >> Hello,
+> >>> >>
+> >>> >> I'm completely new to Harbour after having used Clipper 5.0 under
+> DOS
+> >>> >> for quite a few years. Having downloaded and installed Harbour
+> version
+> >>> >> 2.0.0 on OSX without any problems (ie error messages), I've run into
+> >>> >> trouble compiling the test program:
+> >>> >>
+> >>> >> prompt>hbmk2 hello
+> >>> >> hbmk2: Processing configuration: /usr/local/bin/hbmk.cfg
+> >>> >> Harbour 2.0.0 (Rev. 13372)
+> >>> >> Copyright (c) 1999-2010, http://www.harbour-project.org/
+> >>> >> Compiling 'hello.prg'...
+> >>> >> Lines 11, Functions/Procedures 1
+> >>> >> Generating C source output to 'hello.c'... Done.
+> >>> >> ld: library not found for -lharbour
+> >>> >> hbmk2: Error: Running linker. 1
+> >>> >> clang hello.o   -lhbcplr -lhbdebug -lharbour  -o hello
+> >>> -L/usr/local/lib/harbour
+> >>> >> prompt>
+> >>> >
+> >>> > This is because hbmk2 tries to link with shared libraries and this
+> are
+> >>> > not found.
+> >>> >
+> >>> > You can bypass this by linking with static libs:
+> >>> >
+> >>> > $ hbmk2 -static hello
+> >>> >
+> >>> >
+> >>> > Or, you can provide the missing shared lib with:
+> >>> >
+> >>> > $ sudo ln -s /usr/local/lib/harbour/libharbour.2.1.0.dylib
+> >>> /usr/local/lib/harbour/libharbour.dylib
+> >>> > $ export DYLD_LIBRARY_PATH=/usr/local/lib/harbour
+> >>> >
+> >>> > the above will create a symbolic link to the shared harbour lib
+> >>> > and set the DYLD_LIBRARY_PATH to point were it is.
+> >>> >
+> >>> > then you will have working right the following:
+> >>> >
+> >>> > $ hbmk2 hello
+> >>> > $ ./hello
+> >>> >
+> >>> > [snip]
+> >>>
+> >>>
+> >>> Works like a charm - thank you much for quick and to-the-point answer!
+> >>> Much appreciated!
+> >>>
+> >>> Good to be back on Clipper again, never thought my old 16bit DOS
+> >>> programs would emerge as 64bit OSX applications :-)
+> >>> _______________________________________________
+> >>> Harbour-users mailing list (attachment size limit: 40KB)
+> >>> Harbour-users@harbour-project.org
+> >>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >>>
+> >>
+> >>
+> > _______________________________________________
+> > Harbour-users mailing list (attachment size limit: 40KB)
+> > Harbour-users@harbour-project.org
+> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From eyelagui at gmail.com  Wed Apr 21 00:03:34 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Wed Apr 21 00:03:45 2010
+Subject: [Harbour-users] Too many def files
+In-Reply-To: <q2l609353e71004181251l8b7d0c56qb41aa4f046ad1348@mail.gmail.com>
+References: <4BCB4216.30105@gmail.com>	<o2u609353e71004181040g74a7763fxf1bee62affb0d2f1@mail.gmail.com>	<4BCB5C56.6060502@gmail.com>
+	<q2l609353e71004181251l8b7d0c56qb41aa4f046ad1348@mail.gmail.com>
+Message-ID: <4BCE7916.2040908@gmail.com>
+
+Hello, i have tried to compile hbide, but found a lot of errors, first 
+include files wich i have copied to hbide folder, then it throws a lot 
+of unresolved external _HB_FUN_etc.... and does not compiles.
+
+?Any thoughts?
+
+
+
+El 18/04/2010 04:51 p.m., Massimo Belgrano escribi?:
+> you can simply insert in bat file
+> hbmk2 test1.prg test2.prtg testn.prg -lmylib1 -lmylib2 -lmylibn
+>
+> i also suggest try hbide http://hbide.vouch.info/
+>
+> 2010/4/18 Richard Acosta<eyelagui@gmail.com>:
+>    
+>> Thanks massimo, i have tryed to use it, but can't figure how to.
+>>
+>> I use Crimson Editor to manage my text files (.prg) and some shortcuts
+>> ctrl+1 ctrl+2 to execute .bat compiler files... ?is there a way to fully
+>> automate hbmk2? ?can you give me a direction on how to use hbmk2?
+>>
+>>
+>>
+>>
+>> El 18/04/2010 02:40 p.m., Massimo Belgrano escribi?:
+>>      
+>>> I suggest use hbmk2
+>>> harbourlanguage.blogspot.com/search/label/hbmk2
+>>>
+>>> 2010/4/18 Richard Acosta<eyelagui@gmail.com>
+>>>
+>>>
+>>>        
+>>>> Hello, i'm having this strange error when compiling my app.
+>>>>
+>>>>    Fatal: Too many DEF file names:
+>>>>    d:\programa\comps\hwgui_hb2\lib\procmisc.lib
+>>>>
+>>>> I'm using harbour 2.1+HWgui both from SVN/CVS and Borland C 5.5
+>>>>
+>>>> The funny thing is, if i compile only 1 prg, it's ok, it compiles and
+>>>> program runs, but as soon as i add a 2nd .prg this error comes up.
+>>>>
+>>>> This is the compile batch file i'm using wich is the same i have used
+>>>> since
+>>>> entered Harbour+HWGUI world.
+>>>>
+>>>> http://pastebin.com/Cmd5uC9U
+>>>>
+>>>> The main prg. has only a menu, and the second .prg is blank, that's the
+>>>> strangest....(i guess)
+>>>>
+>>>> I'm sorry if i should put this on hwgui list, but i am not receiving
+>>>> absolutely anything from them, and i have suscribed and unsuscribed
+>>>> several
+>>>> times.
+>>>>
+>>>>
+>>>> Thanks.
+>>>>
+>>>>
+>>>>          
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>      
+>
+>
+>    
+From mbelgrano at deltain.it  Wed Apr 21 02:26:31 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Wed Apr 21 02:34:05 2010
+Subject: [Harbour-users] Too many def files
+In-Reply-To: <4BCE7916.2040908@gmail.com>
+References: <4BCB4216.30105@gmail.com>
+	<o2u609353e71004181040g74a7763fxf1bee62affb0d2f1@mail.gmail.com>
+	<4BCB5C56.6060502@gmail.com>
+	<q2l609353e71004181251l8b7d0c56qb41aa4f046ad1348@mail.gmail.com>
+	<4BCE7916.2040908@gmail.com>
+Message-ID: <q2j609353e71004202326i53ae2747j471b353f583a8ac6@mail.gmail.com>
+
+I compile fine with
+ hbmk2 hbide.hbp -rebuild
+ you need hbqt,hbxbp and can do recompiling harbour as explained in
+install (please read it)
+with simple pointing where you have
+download qt  http://get.qt.nokia.com/qt/source/qt-win-opensource-4.5.3-mingw.exe
+Install and set path to your c compiler
+HB_WITH_QT=C:\Qt\include
+win-make clean install
+
+
+2010/4/21 Richard Acosta <eyelagui@gmail.com>:
+> Hello, i have tried to compile hbide, but found a lot of errors, first
+> include files wich i have copied to hbide folder, then it throws a lot of
+> unresolved external _HB_FUN_etc.... and does not compiles.
+>
+> ?Any thoughts?
+>
+>
+>
+> El 18/04/2010 04:51 p.m., Massimo Belgrano escribi?:
+>>
+>> you can simply insert in bat file
+>> hbmk2 test1.prg test2.prtg testn.prg -lmylib1 -lmylib2 -lmylibn
+>>
+>> i also suggest try hbide http://hbide.vouch.info/
+>>
+>> 2010/4/18 Richard Acosta<eyelagui@gmail.com>:
+>>
+>>>
+>>> Thanks massimo, i have tryed to use it, but can't figure how to.
+>>>
+>>> I use Crimson Editor to manage my text files (.prg) and some shortcuts
+>>> ctrl+1 ctrl+2 to execute .bat compiler files... ?is there a way to fully
+>>> automate hbmk2? ?can you give me a direction on how to use hbmk2?
+>>>
+>>>
+>>>
+>>>
+>>> El 18/04/2010 02:40 p.m., Massimo Belgrano escribi?:
+>>>
+>>>>
+>>>> I suggest use hbmk2
+>>>> harbourlanguage.blogspot.com/search/label/hbmk2
+>>>>
+>>>> 2010/4/18 Richard Acosta<eyelagui@gmail.com>
+>>>>
+>>>>
+>>>>
+>>>>>
+>>>>> Hello, i'm having this strange error when compiling my app.
+>>>>>
+>>>>> ? Fatal: Too many DEF file names:
+>>>>> ? d:\programa\comps\hwgui_hb2\lib\procmisc.lib
+>>>>>
+>>>>> I'm using harbour 2.1+HWgui both from SVN/CVS and Borland C 5.5
+>>>>>
+>>>>> The funny thing is, if i compile only 1 prg, it's ok, it compiles and
+>>>>> program runs, but as soon as i add a 2nd .prg this error comes up.
+>>>>>
+>>>>> This is the compile batch file i'm using wich is the same i have used
+>>>>> since
+>>>>> entered Harbour+HWGUI world.
+>>>>>
+>>>>> http://pastebin.com/Cmd5uC9U
+>>>>>
+>>>>> The main prg. has only a menu, and the second .prg is blank, that's the
+>>>>> strangest....(i guess)
+>>>>>
+>>>>> I'm sorry if i should put this on hwgui list, but i am not receiving
+>>>>> absolutely anything from them, and i have suscribed and unsuscribed
+>>>>> several
+>>>>> times.
+>>>>>
+>>>>>
+>>>>> Thanks.
+>>>>>
+>>>>>
+>>>>>
+>>>
+>>> _______________________________________________
+>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>
+>>>
+>>
+>>
+>>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+
+Iscritto all'albo dei CTU presso il Tribunale di Novara per materia Informatica
+Delta Informatica S.r.l. (http://www.deltain.it/) (+39 0321 455962)
+Analisi e sviluppo software per Lan e Web -  Consulenza informatica - Formazione
+From bruno.luciani at gmail.com  Wed Apr 21 21:08:58 2010
+From: bruno.luciani at gmail.com (Bruno Luciani)
+Date: Wed Apr 21 21:09:06 2010
+Subject: [Harbour-users] Trouble compiling Pritpal Bedi's harupdf sample 
+	harupdf.c
+In-Reply-To: <h2y510ae69e1004201048ob44897f5vbebd154eec6184b7@mail.gmail.com>
+References: <h2y510ae69e1004201048ob44897f5vbebd154eec6184b7@mail.gmail.com>
+Message-ID: <h2g133778361004211808s969e7c6qa2ef22cd3646956e@mail.gmail.com>
+
+I think your hbc file is wrong
+
+take a look at tests folder in harupdf contrib folder and take a look too
+
+to harupdf.hbc , and  i think your lib definition is wrong
+
+hbct is missing
+
+and you hace twice set : libhpdf
+
+and is :
+
+libs=hbhpdf
+libs=libhpdf
+
+
+BRUNO
+
+2010/4/20 Halim Issa <yallaone@gmail.com>
+
+> Hello,
+>
+> I am trying to compile the sample program found in harbour's
+> contrib/hbhpdf directory on OSX.
+>
+> I have modified the hbhpdf.hbc file from the tests directory to
+> contain the following:
+>
+> #
+> # $Id: hbhpdf.hbc 12643 2009-10-04 19:56:27Z vszakats $
+> #
+>
+> incpaths=.
+>
+> libs=hbhpdf
+> libs=libhpdf
+> libs=libpng
+>
+> # END OF FILE
+>
+> (ie to force it to use libpng rather than png on OSX)
+>
+> However, that only gets me a small step further, as compile fails with
+> the following:
+>
+> hbmk2: Processing local make script: hbmk.hbm
+> hbmk2: Processing configuration: /usr/local/bin/hbmk.cfg
+> hbmk2: Processing: hbhpdf.hbc
+> Harbour 2.0.0 (Rev. 13372)
+> Copyright (c) 1999-2010, http://www.harbour-project.org/
+> Compiling 'harupdf.prg'...
+> Lines 2246, Functions/Procedures 18
+> Generating C source output to 'harupdf.c'... Done.
+> Undefined symbols:
+>  "_crc32", referenced from:
+>      _png_reset_crc in liblibpng.a(png.o)
+>      _png_calculate_crc in liblibpng.a(png.o)
+>  "_inflate", referenced from:
+>      _png_read_row in liblibpng.a(pngread.o)
+>      _png_decompress_chunk in liblibpng.a(pngrutil.o)
+>      _png_read_finish_row in liblibpng.a(pngrutil.o)
+>  "_deflateInit_", referenced from:
+>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>  "_inflateEnd", referenced from:
+>      _png_read_destroy in liblibpng.a(pngread.o)
+>  "_inflateInit_", referenced from:
+>      _png_create_read_struct_2 in liblibpng.a(pngread.o)
+>      _png_read_init_3 in liblibpng.a(pngread.o)
+>  "_deflate", referenced from:
+>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>  "_deflateEnd", referenced from:
+>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>  "_inflateReset", referenced from:
+>      _png_reset_zstream in liblibpng.a(png.o)
+>      _png_decompress_chunk in liblibpng.a(pngrutil.o)
+>      _png_decompress_chunk in liblibpng.a(pngrutil.o)
+>      _png_read_finish_row in liblibpng.a(pngrutil.o)
+> ld: symbol(s) not found
+> hbmk2: Error: Running linker. 1
+> clang harupdf.o   -lhbhpdf -llibhpdf -llibpng -lhbct -lhbcplr
+> -lhbdebug -lharbour  -o harupdf -L/usr/local/lib/harbour
+>
+>
+> I guess it goes without saying that the step up from Clipper Summer
+> '87 to Harbour is a bit daunting, so my apologies in advance for
+> possibly stupid questions. Haven't found anything on Google though, so
+> I was hoping somebody here might offer some insight on where to look.
+>
+> Thanks much in advance!
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From yallaone at gmail.com  Thu Apr 22 03:48:46 2010
+From: yallaone at gmail.com (Halim Issa)
+Date: Thu Apr 22 03:48:54 2010
+Subject: [Harbour-users] Trouble compiling Pritpal Bedi's harupdf sample 
+	harupdf.c
+In-Reply-To: <h2g133778361004211808s969e7c6qa2ef22cd3646956e@mail.gmail.com>
+References: <h2y510ae69e1004201048ob44897f5vbebd154eec6184b7@mail.gmail.com>
+	<h2g133778361004211808s969e7c6qa2ef22cd3646956e@mail.gmail.com>
+Message-ID: <l2r510ae69e1004220048k5ce48898p6782db8cedc63e46@mail.gmail.com>
+
+Thanks for answering Bruno - please see inline:
+
+On 22 April 2010 03:08, Bruno Luciani <bruno.luciani@gmail.com> wrote:
+> I think your hbc file is wrong
+>
+> take a look at tests folder in harupdf contrib folder and take a look too
+>
+> to harupdf.hbc , and ?i think your lib definition is wrong
+
+I used the harupdf.hbc as starting point and only removed the
+incorrect (under OSX) libpng tests.
+
+>
+> hbct is missing
+
+I have added this file, but it made no difference - its the
+png-symbols that seem to be missing though
+
+>
+> and you hace twice set : libhpdf
+
+Nope - I use hbhpdf and libhpdf, as the original .hbc file said:
+>
+> and is :
+>
+> libs=hbhpdf
+> libs=libhpdf
+
+Are you saying that these are the same and only one of them should be
+used? If so, why is the original .hbc file in tests/ using both?
+
+Thanks again for answering
+
+> 2010/4/20 Halim Issa <yallaone@gmail.com>
+>
+>> Hello,
+>>
+>> I am trying to compile the sample program found in harbour's
+>> contrib/hbhpdf directory on OSX.
+>>
+>> I have modified the hbhpdf.hbc file from the tests directory to
+>> contain the following:
+>>
+>> #
+>> # $Id: hbhpdf.hbc 12643 2009-10-04 19:56:27Z vszakats $
+>> #
+>>
+>> incpaths=.
+>>
+>> libs=hbhpdf
+>> libs=libhpdf
+>> libs=libpng
+>>
+>> # END OF FILE
+>>
+>> (ie to force it to use libpng rather than png on OSX)
+>>
+>> However, that only gets me a small step further, as compile fails with
+>> the following:
+>>
+>> hbmk2: Processing local make script: hbmk.hbm
+>> hbmk2: Processing configuration: /usr/local/bin/hbmk.cfg
+>> hbmk2: Processing: hbhpdf.hbc
+>> Harbour 2.0.0 (Rev. 13372)
+>> Copyright (c) 1999-2010, http://www.harbour-project.org/
+>> Compiling 'harupdf.prg'...
+>> Lines 2246, Functions/Procedures 18
+>> Generating C source output to 'harupdf.c'... Done.
+>> Undefined symbols:
+>> ?"_crc32", referenced from:
+>> ? ? ?_png_reset_crc in liblibpng.a(png.o)
+>> ? ? ?_png_calculate_crc in liblibpng.a(png.o)
+>> ?"_inflate", referenced from:
+>> ? ? ?_png_read_row in liblibpng.a(pngread.o)
+>> ? ? ?_png_decompress_chunk in liblibpng.a(pngrutil.o)
+>> ? ? ?_png_read_finish_row in liblibpng.a(pngrutil.o)
+>> ?"_deflateInit_", referenced from:
+>> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> ?"_inflateEnd", referenced from:
+>> ? ? ?_png_read_destroy in liblibpng.a(pngread.o)
+>> ?"_inflateInit_", referenced from:
+>> ? ? ?_png_create_read_struct_2 in liblibpng.a(pngread.o)
+>> ? ? ?_png_read_init_3 in liblibpng.a(pngread.o)
+>> ?"_deflate", referenced from:
+>> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> ?"_deflateEnd", referenced from:
+>> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> ?"_inflateReset", referenced from:
+>> ? ? ?_png_reset_zstream in liblibpng.a(png.o)
+>> ? ? ?_png_decompress_chunk in liblibpng.a(pngrutil.o)
+>> ? ? ?_png_decompress_chunk in liblibpng.a(pngrutil.o)
+>> ? ? ?_png_read_finish_row in liblibpng.a(pngrutil.o)
+>> ld: symbol(s) not found
+>> hbmk2: Error: Running linker. 1
+>> clang harupdf.o ? -lhbhpdf -llibhpdf -llibpng -lhbct -lhbcplr
+>> -lhbdebug -lharbour ?-o harupdf -L/usr/local/lib/harbour
+>>
+>>
+>> I guess it goes without saying that the step up from Clipper Summer
+>> '87 to Harbour is a bit daunting, so my apologies in advance for
+>> possibly stupid questions. Haven't found anything on Google though, so
+>> I was hoping somebody here might offer some insight on where to look.
+>>
+>> Thanks much in advance!
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From bruno.luciani at gmail.com  Thu Apr 22 10:08:51 2010
+From: bruno.luciani at gmail.com (Bruno Luciani)
+Date: Thu Apr 22 10:09:02 2010
+Subject: [Harbour-users] Trouble compiling Pritpal Bedi's harupdf sample 
+	harupdf.c
+In-Reply-To: <l2r510ae69e1004220048k5ce48898p6782db8cedc63e46@mail.gmail.com>
+References: <h2y510ae69e1004201048ob44897f5vbebd154eec6184b7@mail.gmail.com>
+	<h2g133778361004211808s969e7c6qa2ef22cd3646956e@mail.gmail.com>
+	<l2r510ae69e1004220048k5ce48898p6782db8cedc63e46@mail.gmail.com>
+Message-ID: <z2v133778361004220708w9ee9606ewae84ef2be7b5c8a1@mail.gmail.com>
+
+Halim , take a look that and update was made to libharu in SVN
+
+update from SVN an try again
+
+Bruno
+
+2010/4/22 Halim Issa <yallaone@gmail.com>
+
+> Thanks for answering Bruno - please see inline:
+>
+> On 22 April 2010 03:08, Bruno Luciani <bruno.luciani@gmail.com> wrote:
+> > I think your hbc file is wrong
+> >
+> > take a look at tests folder in harupdf contrib folder and take a look too
+> >
+> > to harupdf.hbc , and  i think your lib definition is wrong
+>
+> I used the harupdf.hbc as starting point and only removed the
+> incorrect (under OSX) libpng tests.
+>
+> >
+> > hbct is missing
+>
+> I have added this file, but it made no difference - its the
+> png-symbols that seem to be missing though
+>
+> >
+> > and you hace twice set : libhpdf
+>
+> Nope - I use hbhpdf and libhpdf, as the original .hbc file said:
+> >
+> > and is :
+> >
+> > libs=hbhpdf
+> > libs=libhpdf
+>
+> Are you saying that these are the same and only one of them should be
+> used? If so, why is the original .hbc file in tests/ using both?
+>
+> Thanks again for answering
+>
+> > 2010/4/20 Halim Issa <yallaone@gmail.com>
+> >
+> >> Hello,
+> >>
+> >> I am trying to compile the sample program found in harbour's
+> >> contrib/hbhpdf directory on OSX.
+> >>
+> >> I have modified the hbhpdf.hbc file from the tests directory to
+> >> contain the following:
+> >>
+> >> #
+> >> # $Id: hbhpdf.hbc 12643 2009-10-04 19:56:27Z vszakats $
+> >> #
+> >>
+> >> incpaths=.
+> >>
+> >> libs=hbhpdf
+> >> libs=libhpdf
+> >> libs=libpng
+> >>
+> >> # END OF FILE
+> >>
+> >> (ie to force it to use libpng rather than png on OSX)
+> >>
+> >> However, that only gets me a small step further, as compile fails with
+> >> the following:
+> >>
+> >> hbmk2: Processing local make script: hbmk.hbm
+> >> hbmk2: Processing configuration: /usr/local/bin/hbmk.cfg
+> >> hbmk2: Processing: hbhpdf.hbc
+> >> Harbour 2.0.0 (Rev. 13372)
+> >> Copyright (c) 1999-2010, http://www.harbour-project.org/
+> >> Compiling 'harupdf.prg'...
+> >> Lines 2246, Functions/Procedures 18
+> >> Generating C source output to 'harupdf.c'... Done.
+> >> Undefined symbols:
+> >>  "_crc32", referenced from:
+> >>      _png_reset_crc in liblibpng.a(png.o)
+> >>      _png_calculate_crc in liblibpng.a(png.o)
+> >>  "_inflate", referenced from:
+> >>      _png_read_row in liblibpng.a(pngread.o)
+> >>      _png_decompress_chunk in liblibpng.a(pngrutil.o)
+> >>      _png_read_finish_row in liblibpng.a(pngrutil.o)
+> >>  "_deflateInit_", referenced from:
+> >>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+> >>  "_inflateEnd", referenced from:
+> >>      _png_read_destroy in liblibpng.a(pngread.o)
+> >>  "_inflateInit_", referenced from:
+> >>      _png_create_read_struct_2 in liblibpng.a(pngread.o)
+> >>      _png_read_init_3 in liblibpng.a(pngread.o)
+> >>  "_deflate", referenced from:
+> >>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+> >>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+> >>  "_deflateEnd", referenced from:
+> >>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+> >>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+> >>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+> >>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+> >>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+> >>      _HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+> >>  "_inflateReset", referenced from:
+> >>      _png_reset_zstream in liblibpng.a(png.o)
+> >>      _png_decompress_chunk in liblibpng.a(pngrutil.o)
+> >>      _png_decompress_chunk in liblibpng.a(pngrutil.o)
+> >>      _png_read_finish_row in liblibpng.a(pngrutil.o)
+> >> ld: symbol(s) not found
+> >> hbmk2: Error: Running linker. 1
+> >> clang harupdf.o   -lhbhpdf -llibhpdf -llibpng -lhbct -lhbcplr
+> >> -lhbdebug -lharbour  -o harupdf -L/usr/local/lib/harbour
+> >>
+> >>
+> >> I guess it goes without saying that the step up from Clipper Summer
+> >> '87 to Harbour is a bit daunting, so my apologies in advance for
+> >> possibly stupid questions. Haven't found anything on Google though, so
+> >> I was hoping somebody here might offer some insight on where to look.
+> >>
+> >> Thanks much in advance!
+> >> _______________________________________________
+> >> Harbour-users mailing list (attachment size limit: 40KB)
+> >> Harbour-users@harbour-project.org
+> >> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >>
+> > _______________________________________________
+> > Harbour-users mailing list (attachment size limit: 40KB)
+> > Harbour-users@harbour-project.org
+> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From eyelagui at gmail.com  Thu Apr 22 11:46:23 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Thu Apr 22 11:46:33 2010
+Subject: [Harbour-users] Harbour + MySQL = myHeadache
+Message-ID: <4BD06F4F.6070508@gmail.com>
+
+I'm trying to make my first program to use MySQL server instead of .dbf 
+files.
+I tried to use hbmysql from contrib
+
+The thing is, the sample provided with hbmysql may be anything but 
+clear, i tryed to compile it and it does not compile, just throws : 
+Unresolved external '_HB_FUN_TMYSQLSERVER
+
+There is no explanation about what is doing at any part, so i can't 
+figure anything to change or seek.
+And as there is no explanation about any line, i can't either figure 
+what to take and use on my own program.
+
+I really don't like to waste time by studying samples and test+error 
+without any base about functioning. I learned programming from books 
+with the basic explanations about every function first and only then the 
+samples to show usage. With harbour there are samples and not 
+explanations is anti-natural for me.
+
+I have been searching around contribs and found rddsql, wich it seems 
+that has the same programming way of using a .dbf file.
+could this ease my pain?
+will this work on mySQL or it is for SQL?
+is that easy as it seems?
+
+?Is there any other simpler way to go mySQL?
+
+
+Thanks.
+From eyelagui at gmail.com  Thu Apr 22 12:48:36 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Thu Apr 22 12:48:51 2010
+Subject: [Harbour-users] rddsql not creating db.
+Message-ID: <4BD07DE4.6030905@gmail.com>
+
+I'm trying rddsql, compile my program and everything is ok, made ODBC 
+connection and everything went fine, i run the program wich actually is 
+the test provided with rddsql and runs without errors....
+
+But this test does not create the intended database on mysql server.
+
+?where may i be failing?
+
+Thanks.
+
+
+i granted it all privileges too...
+From yallaone at gmail.com  Thu Apr 22 12:52:08 2010
+From: yallaone at gmail.com (Halim Issa)
+Date: Thu Apr 22 12:52:16 2010
+Subject: [Harbour-users] Trouble compiling Pritpal Bedi's harupdf sample 
+	harupdf.c
+In-Reply-To: <z2v133778361004220708w9ee9606ewae84ef2be7b5c8a1@mail.gmail.com>
+References: <h2y510ae69e1004201048ob44897f5vbebd154eec6184b7@mail.gmail.com>
+	<h2g133778361004211808s969e7c6qa2ef22cd3646956e@mail.gmail.com>
+	<l2r510ae69e1004220048k5ce48898p6782db8cedc63e46@mail.gmail.com>
+	<z2v133778361004220708w9ee9606ewae84ef2be7b5c8a1@mail.gmail.com>
+Message-ID: <w2n510ae69e1004220952n97ea64d7pe622ad8cfd1173d9@mail.gmail.com>
+
+Great thanks will do!
+
+On 22 April 2010 16:08, Bruno Luciani <bruno.luciani@gmail.com> wrote:
+> Halim , take a look that and update was made to libharu in SVN
+>
+> update from SVN an try again
+>
+> Bruno
+>
+> 2010/4/22 Halim Issa <yallaone@gmail.com>
+>
+>> Thanks for answering Bruno - please see inline:
+>>
+>> On 22 April 2010 03:08, Bruno Luciani <bruno.luciani@gmail.com> wrote:
+>> > I think your hbc file is wrong
+>> >
+>> > take a look at tests folder in harupdf contrib folder and take a look too
+>> >
+>> > to harupdf.hbc , and ?i think your lib definition is wrong
+>>
+>> I used the harupdf.hbc as starting point and only removed the
+>> incorrect (under OSX) libpng tests.
+>>
+>> >
+>> > hbct is missing
+>>
+>> I have added this file, but it made no difference - its the
+>> png-symbols that seem to be missing though
+>>
+>> >
+>> > and you hace twice set : libhpdf
+>>
+>> Nope - I use hbhpdf and libhpdf, as the original .hbc file said:
+>> >
+>> > and is :
+>> >
+>> > libs=hbhpdf
+>> > libs=libhpdf
+>>
+>> Are you saying that these are the same and only one of them should be
+>> used? If so, why is the original .hbc file in tests/ using both?
+>>
+>> Thanks again for answering
+>>
+>> > 2010/4/20 Halim Issa <yallaone@gmail.com>
+>> >
+>> >> Hello,
+>> >>
+>> >> I am trying to compile the sample program found in harbour's
+>> >> contrib/hbhpdf directory on OSX.
+>> >>
+>> >> I have modified the hbhpdf.hbc file from the tests directory to
+>> >> contain the following:
+>> >>
+>> >> #
+>> >> # $Id: hbhpdf.hbc 12643 2009-10-04 19:56:27Z vszakats $
+>> >> #
+>> >>
+>> >> incpaths=.
+>> >>
+>> >> libs=hbhpdf
+>> >> libs=libhpdf
+>> >> libs=libpng
+>> >>
+>> >> # END OF FILE
+>> >>
+>> >> (ie to force it to use libpng rather than png on OSX)
+>> >>
+>> >> However, that only gets me a small step further, as compile fails with
+>> >> the following:
+>> >>
+>> >> hbmk2: Processing local make script: hbmk.hbm
+>> >> hbmk2: Processing configuration: /usr/local/bin/hbmk.cfg
+>> >> hbmk2: Processing: hbhpdf.hbc
+>> >> Harbour 2.0.0 (Rev. 13372)
+>> >> Copyright (c) 1999-2010, http://www.harbour-project.org/
+>> >> Compiling 'harupdf.prg'...
+>> >> Lines 2246, Functions/Procedures 18
+>> >> Generating C source output to 'harupdf.c'... Done.
+>> >> Undefined symbols:
+>> >> ?"_crc32", referenced from:
+>> >> ? ? ?_png_reset_crc in liblibpng.a(png.o)
+>> >> ? ? ?_png_calculate_crc in liblibpng.a(png.o)
+>> >> ?"_inflate", referenced from:
+>> >> ? ? ?_png_read_row in liblibpng.a(pngread.o)
+>> >> ? ? ?_png_decompress_chunk in liblibpng.a(pngrutil.o)
+>> >> ? ? ?_png_read_finish_row in liblibpng.a(pngrutil.o)
+>> >> ?"_deflateInit_", referenced from:
+>> >> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> >> ?"_inflateEnd", referenced from:
+>> >> ? ? ?_png_read_destroy in liblibpng.a(pngread.o)
+>> >> ?"_inflateInit_", referenced from:
+>> >> ? ? ?_png_create_read_struct_2 in liblibpng.a(pngread.o)
+>> >> ? ? ?_png_read_init_3 in liblibpng.a(pngread.o)
+>> >> ?"_deflate", referenced from:
+>> >> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> >> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> >> ?"_deflateEnd", referenced from:
+>> >> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> >> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> >> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> >> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> >> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> >> ? ? ?_HPDF_Stream_WriteToStreamWithDeflate in liblibhpdf.a(hpdfstre.o)
+>> >> ?"_inflateReset", referenced from:
+>> >> ? ? ?_png_reset_zstream in liblibpng.a(png.o)
+>> >> ? ? ?_png_decompress_chunk in liblibpng.a(pngrutil.o)
+>> >> ? ? ?_png_decompress_chunk in liblibpng.a(pngrutil.o)
+>> >> ? ? ?_png_read_finish_row in liblibpng.a(pngrutil.o)
+>> >> ld: symbol(s) not found
+>> >> hbmk2: Error: Running linker. 1
+>> >> clang harupdf.o ? -lhbhpdf -llibhpdf -llibpng -lhbct -lhbcplr
+>> >> -lhbdebug -lharbour ?-o harupdf -L/usr/local/lib/harbour
+>> >>
+>> >>
+>> >> I guess it goes without saying that the step up from Clipper Summer
+>> >> '87 to Harbour is a bit daunting, so my apologies in advance for
+>> >> possibly stupid questions. Haven't found anything on Google though, so
+>> >> I was hoping somebody here might offer some insight on where to look.
+>> >>
+>> >> Thanks much in advance!
+>> >> _______________________________________________
+>> >> Harbour-users mailing list (attachment size limit: 40KB)
+>> >> Harbour-users@harbour-project.org
+>> >> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>> >>
+>> > _______________________________________________
+>> > Harbour-users mailing list (attachment size limit: 40KB)
+>> > Harbour-users@harbour-project.org
+>> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>> >
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From mbelgrano at deltain.it  Thu Apr 22 13:36:37 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Thu Apr 22 13:37:06 2010
+Subject: [Harbour-users] rddsql not creating db.
+In-Reply-To: <4BD07DE4.6030905@gmail.com>
+References: <4BD07DE4.6030905@gmail.com>
+Message-ID: <r2v609353e71004221036s2a03745fl8df16ddb04439301@mail.gmail.com>
+
+Can you post a sample?
+wich version or mysql are you using?
+
+remember that rddsql not support dbcreate but reqire sql string to do it
+
+2010/4/22 Richard Acosta <eyelagui@gmail.com>:
+> I'm trying rddsql, compile my program and everything is ok, made ODBC
+> connection and everything went fine, i run the program wich actually is the
+> test provided with rddsql and runs without errors....
+>
+> But this test does not create the intended database on mysql server.
+>
+> ?where may i be failing?
+>
+> Thanks.
+>
+>
+> i granted it all privileges too...
+
+-- 
+Massimo Belgrano
+From eyelagui at gmail.com  Thu Apr 22 18:56:51 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Thu Apr 22 18:57:05 2010
+Subject: [Harbour-users] rddsql not creating db.
+In-Reply-To: <r2v609353e71004221036s2a03745fl8df16ddb04439301@mail.gmail.com>
+References: <4BD07DE4.6030905@gmail.com>
+	<r2v609353e71004221036s2a03745fl8df16ddb04439301@mail.gmail.com>
+Message-ID: <4BD0D433.9040200@gmail.com>
+
+I'm using the sample provided with SVN... it has a dbcreate(..
+
+Here is the code:
+    RDDSETDEFAULT("SQLMIX")
+    DBCREATE("persons", {{"NAME", "C", 20, 0}, {"FAMILYNAME", "C", 20, 
+0}, {"BIRTH", "D", 8, 0}, {"AMOUNT", "N", 9, 2}},, .T., "persons")
+
+    DBAPPEND();  AEVAL({PADR("John", 20), PADR("Weber", 20),    
+STOD("19750306"),   2975.45}, {|X,Y| FIELDPUT(Y, X )})
+    DBAPPEND();  AEVAL({PADR("Sim", 20),  PADR("Simsom", 20),   
+STOD("19930705"),  32975.37}, {|X,Y| FIELDPUT(Y, X )})
+
+//   DBGOTOP()
+//   BROWSE()
+
+    INDEX ON FIELD->AMOUNT TO amount
+//   DBGOTOP()
+//   BROWSE()
+    DBCLOSEALL()
+
+
+So if i create a database and use the rest of the sample it should work?
+
+
+
+El 22/04/2010 02:36 p.m., Massimo Belgrano escribi?:
+> Can you post a sample?
+> wich version or mysql are you using?
+>
+> remember that rddsql not support dbcreate but reqire sql string to do it
+>
+> 2010/4/22 Richard Acosta<eyelagui@gmail.com>:
+>    
+>> I'm trying rddsql, compile my program and everything is ok, made ODBC
+>> connection and everything went fine, i run the program wich actually is the
+>> test provided with rddsql and runs without errors....
+>>
+>> But this test does not create the intended database on mysql server.
+>>
+>> ?where may i be failing?
+>>
+>> Thanks.
+>>
+>>
+>> i granted it all privileges too...
+>>      
+>    
+From bruno.luciani at gmail.com  Thu Apr 22 20:48:53 2010
+From: bruno.luciani at gmail.com (Bruno Luciani)
+Date: Thu Apr 22 20:49:01 2010
+Subject: [Harbour-users] Harbour + MySQL = myHeadache
+In-Reply-To: <4BD06F4F.6070508@gmail.com>
+References: <4BD06F4F.6070508@gmail.com>
+Message-ID: <m2t133778361004221748l68ec40f1w18f5033c447d3f2a@mail.gmail.com>
+
+Richard , show  the command that you have used to compile your sample
+
+I think this is your problem
+
+2 questions :
+
+in who Operating systema you are working ?
+
+and
+
+IN another way , do you check if hbmysql is created when you have compiled
+SVN ?
+
+or you have downloaded a binary version of Harbour ?
+
+Bruno
+
+
+2010/4/22 Richard Acosta <eyelagui@gmail.com>
+
+> I'm trying to make my first program to use MySQL server instead of .dbf
+> files.
+> I tried to use hbmysql from contrib
+>
+> The thing is, the sample provided with hbmysql may be anything but clear, i
+> tryed to compile it and it does not compile, just throws : Unresolved
+> external '_HB_FUN_TMYSQLSERVER
+>
+> There is no explanation about what is doing at any part, so i can't figure
+> anything to change or seek.
+> And as there is no explanation about any line, i can't either figure what
+> to take and use on my own program.
+>
+> I really don't like to waste time by studying samples and test+error
+> without any base about functioning. I learned programming from books with
+> the basic explanations about every function first and only then the samples
+> to show usage. With harbour there are samples and not explanations is
+> anti-natural for me.
+>
+> I have been searching around contribs and found rddsql, wich it seems that
+> has the same programming way of using a .dbf file.
+> could this ease my pain?
+> will this work on mySQL or it is for SQL?
+> is that easy as it seems?
+>
+> ?Is there any other simpler way to go mySQL?
+>
+>
+> Thanks.
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From mbelgrano at deltain.it  Thu Apr 22 21:11:43 2010
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Thu Apr 22 21:12:12 2010
+Subject: [Harbour-users] rddsql not creating db.
+In-Reply-To: <4BD0D433.9040200@gmail.com>
+References: <4BD07DE4.6030905@gmail.com>
+	<r2v609353e71004221036s2a03745fl8df16ddb04439301@mail.gmail.com>
+	<4BD0D433.9040200@gmail.com>
+Message-ID: <i2i609353e71004221811y79f85edav67b5b1910de07253@mail.gmail.com>
+
+follow this sample:
+
+
+/*
+ * $Id: test2.prg 14028 2010-03-01 01:34:52Z vszakats $
+ */
+
+#include "simpleio.ch"
+#include "hbrddsql.ch"
+
+REQUEST SQLMIX, SDDODBC
+
+PROC main()
+LOCAL nConnection, nI, aI
+
+   RDDSETDEFAULT( "SQLMIX" )
+   SET( _SET_DATEFORMAT, "yyyy-mm-dd" )
+   nConnection := RDDINFO( RDDI_CONNECT, { "ODBC",
+"Server=localhost;Driver={MySQL ODBC 5.1
+Driver};dsn=;User=test;database=test;" } )
+   IF nConnection == 0
+      ? "Unable connect to server", RDDINFO( RDDI_ERRORNO ), RDDINFO(
+RDDI_ERROR )
+      RETURN
+   ENDIF
+   ? nConnection
+   ? RDDINFO(RDDI_EXECUTE, "DROP TABLE country")
+   ? RDDINFO(RDDI_EXECUTE, "CREATE TABLE country (CODE char(3), NAME
+char(50), RESIDENTS int(11))")
+   ? RDDINFO(RDDI_EXECUTE, "INSERT INTO country values ('LTU',
+'Lithuania', 3369600),('USA', 'United States of America', 305397000),
+('POR', 'Portugal', 10617600), ('POL', 'Poland', 38115967), ('AUS',
+'Australia', 21446187), ('FRA', 'France', 64473140), ('RUS', 'Russia',
+141900000)")
+   ? DBUSEAREA( .T.,, "SELECT * FROM country", "country" )
+   ? "LASTREC:", LASTREC()
+   DO WHILE ! EOF()
+     aI := ARRAY( FCOUNT() )
+     FOR nI := 1 TO FCOUNT()
+       aI[nI] := FIELDGET( nI )
+     NEXT
+     ? RECNO(), HB_VALTOEXP( aI )
+     DBSKIP()
+   ENDDO
+   ? "LASTREC:", LASTREC()
+   DBCLOSEALL()
+RETURN
+
+
+2010/4/23 Richard Acosta <eyelagui@gmail.com>:
+> I'm using the sample provided with SVN... it has a dbcreate(..
+>
+> Here is the code:
+> ? RDDSETDEFAULT("SQLMIX")
+> ? DBCREATE("persons", {{"NAME", "C", 20, 0}, {"FAMILYNAME", "C", 20, 0},
+> {"BIRTH", "D", 8, 0}, {"AMOUNT", "N", 9, 2}},, .T., "persons")
+>
+> ? DBAPPEND(); ?AEVAL({PADR("John", 20), PADR("Weber", 20),
+> ?STOD("19750306"), ? 2975.45}, {|X,Y| FIELDPUT(Y, X )})
+> ? DBAPPEND(); ?AEVAL({PADR("Sim", 20), ?PADR("Simsom", 20),
+> STOD("19930705"), ?32975.37}, {|X,Y| FIELDPUT(Y, X )})
+>
+> // ? DBGOTOP()
+> // ? BROWSE()
+>
+> ? INDEX ON FIELD->AMOUNT TO amount
+> // ? DBGOTOP()
+> // ? BROWSE()
+> ? DBCLOSEALL()
+>
+>
+> So if i create a database and use the rest of the sample it should work?
+>
+>
+>
+> El 22/04/2010 02:36 p.m., Massimo Belgrano escribi?:
+>>
+>> Can you post a sample?
+>> wich version or mysql are you using?
+>>
+>> remember that rddsql not support dbcreate but reqire sql string to do it
+>>
+>> 2010/4/22 Richard Acosta<eyelagui@gmail.com>:
+>>
+>>>
+>>> I'm trying rddsql, compile my program and everything is ok, made ODBC
+>>> connection and everything went fine, i run the program wich actually is
+>>> the
+>>> test provided with rddsql and runs without errors....
+>>>
+>>> But this test does not create the intended database on mysql server.
+>>>
+>>> ?where may i be failing?
+>>>
+>>> Thanks.
+>>>
+>>>
+>>> i granted it all privileges too...
+>>>
+>>
+>>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+
+Iscritto all'albo dei CTU presso il Tribunale di Novara per materia Informatica
+Delta Informatica S.r.l. (http://www.deltain.it/) (+39 0321 455962)
+Analisi e sviluppo software per Lan e Web -  Consulenza informatica - Formazione
+From eyelagui at gmail.com  Thu Apr 22 22:51:51 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Thu Apr 22 22:51:59 2010
+Subject: [Harbour-users] Harbour + MySQL = myHeadache
+In-Reply-To: <m2t133778361004221748l68ec40f1w18f5033c447d3f2a@mail.gmail.com>
+References: <4BD06F4F.6070508@gmail.com>
+	<m2t133778361004221748l68ec40f1w18f5033c447d3f2a@mail.gmail.com>
+Message-ID: <4BD10B47.2060604@gmail.com>
+
+Hi Bruno.
+
+1) I`m on Windows 7
+2) hbmysql was not created when i did the compilation, there were some 
+mysql files needed, i downloaded mysql and then compiled it.
+3) Harbour SVN
+
+
+
+El 22/04/2010 09:48 p.m., Bruno Luciani escribi?:
+> Richard , show  the command that you have used to compile your sample
+>
+> I think this is your problem
+>
+> 2 questions :
+>
+> in who Operating systema you are working ?
+>
+> and
+>
+> IN another way , do you check if hbmysql is created when you have compiled
+> SVN ?
+>
+> or you have downloaded a binary version of Harbour ?
+>
+> Bruno
+>
+>
+> 2010/4/22 Richard Acosta<eyelagui@gmail.com>
+>
+>    
+>> I'm trying to make my first program to use MySQL server instead of .dbf
+>> files.
+>> I tried to use hbmysql from contrib
+>>
+>> The thing is, the sample provided with hbmysql may be anything but clear, i
+>> tryed to compile it and it does not compile, just throws : Unresolved
+>> external '_HB_FUN_TMYSQLSERVER
+>>
+>> There is no explanation about what is doing at any part, so i can't figure
+>> anything to change or seek.
+>> And as there is no explanation about any line, i can't either figure what
+>> to take and use on my own program.
+>>
+>> I really don't like to waste time by studying samples and test+error
+>> without any base about functioning. I learned programming from books with
+>> the basic explanations about every function first and only then the samples
+>> to show usage. With harbour there are samples and not explanations is
+>> anti-natural for me.
+>>
+>> I have been searching around contribs and found rddsql, wich it seems that
+>> has the same programming way of using a .dbf file.
+>> could this ease my pain?
+>> will this work on mySQL or it is for SQL?
+>> is that easy as it seems?
+>>
+>> ?Is there any other simpler way to go mySQL?
+>>
+>>
+>> Thanks.
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>      
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>    
+From eyelagui at gmail.com  Thu Apr 22 22:56:03 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Thu Apr 22 22:56:08 2010
+Subject: [Harbour-users] Harbour + MySQL = myHeadache
+In-Reply-To: <m2t133778361004221748l68ec40f1w18f5033c447d3f2a@mail.gmail.com>
+References: <4BD06F4F.6070508@gmail.com>
+	<m2t133778361004221748l68ec40f1w18f5033c447d3f2a@mail.gmail.com>
+Message-ID: <4BD10C43.8030101@gmail.com>
+
+Sorry, i miss an answer.
+
+El 22/04/2010 09:48 p.m., Bruno Luciani escribi?:
+> Richard , show  the command that you have used to compile your sample
+>    
+Not my sample, i compiled the provided sample inside my own program.
+
+hbmk2 clientes.prg ing_cli.prg rddsql.lib %hwgui_lib%\hwgui.lib 
+%hwgui_lib%\procmisc.lib %hwgui_lib%\hbxml.lib %hwgui_lib%\hwg_qhtm.lib -gui
+
+i changed rddsql <> hbmysql and the sample provided with hbmysql is 
+inside ing_cli.prg as it was on provided .prg
+
+
+
+
+> I think this is your problem
+>
+> 2 questions :
+>
+> in who Operating systema you are working ?
+>
+> and
+>
+> IN another way , do you check if hbmysql is created when you have compiled
+> SVN ?
+>
+> or you have downloaded a binary version of Harbour ?
+>
+> Bruno
+>
+>
+> 2010/4/22 Richard Acosta<eyelagui@gmail.com>
+>
+>    
+>> I'm trying to make my first program to use MySQL server instead of .dbf
+>> files.
+>> I tried to use hbmysql from contrib
+>>
+>> The thing is, the sample provided with hbmysql may be anything but clear, i
+>> tryed to compile it and it does not compile, just throws : Unresolved
+>> external '_HB_FUN_TMYSQLSERVER
+>>
+>> There is no explanation about what is doing at any part, so i can't figure
+>> anything to change or seek.
+>> And as there is no explanation about any line, i can't either figure what
+>> to take and use on my own program.
+>>
+>> I really don't like to waste time by studying samples and test+error
+>> without any base about functioning. I learned programming from books with
+>> the basic explanations about every function first and only then the samples
+>> to show usage. With harbour there are samples and not explanations is
+>> anti-natural for me.
+>>
+>> I have been searching around contribs and found rddsql, wich it seems that
+>> has the same programming way of using a .dbf file.
+>> could this ease my pain?
+>> will this work on mySQL or it is for SQL?
+>> is that easy as it seems?
+>>
+>> ?Is there any other simpler way to go mySQL?
+>>
+>>
+>> Thanks.
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>      
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>    
+From eyelagui at gmail.com  Thu Apr 22 23:08:12 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Thu Apr 22 23:08:19 2010
+Subject: [Harbour-users] rddsql not creating db.
+In-Reply-To: <i2i609353e71004221811y79f85edav67b5b1910de07253@mail.gmail.com>
+References: <4BD07DE4.6030905@gmail.com>	<r2v609353e71004221036s2a03745fl8df16ddb04439301@mail.gmail.com>	<4BD0D433.9040200@gmail.com>
+	<i2i609353e71004221811y79f85edav67b5b1910de07253@mail.gmail.com>
+Message-ID: <4BD10F1C.5060506@gmail.com>
+
+got this:
+
+Error: Unresolved external '_HB_FUN_SDDODBC'
+
+so added sddodbc.lib then:
+
+Error: Unresolved external 'SQLErrorW' referenced from 
+D:\PROGRAMA\COMPS\HARBOUR\LIB\SDDODBC.LIB|sddodbc
+Error: Unresolved external 'SQLSetEnvAttr' referenced from 
+D:\PROGRAMA\COMPS\HARBOUR\LIB\SDDODBC.LIB|sddodbc
+Error: Unresolved external 'SQLDriverConnectW' referenced from 
+D:\PROGRAMA\COMPS\HARBOUR\LIB\SDDODBC.LIB|sddodbc
+Error: Unresolved external 'SQLDisconnect' referenced from 
+D:\PROGRAMA\COMPS\HARBOUR\LIB\SDDODBC.LIB|sddodbc
+Error: Unresolved external 'SQLRowCount' referenced from 
+D:\PROGRAMA\COMPS\HARBOUR\LIB\SDDODBC.LIB|sddodbc
+Error: Unresolved external 'SQLAllocHandle' referenced from 
+D:\PROGRAMA\COMPS\HARBOUR\LIB\SDDODBC.LIB|sddodbc
+Error: Unresolved external 'SQLExecDirectW' referenced from 
+D:\PROGRAMA\COMPS\HARBOUR\LIB\SDDODBC.LIB|sddodbc
+Error: Unresolved external 'SQLNumResultCols' referenced from 
+D:\PROGRAMA\COMPS\HARBOUR\LIB\SDDODBC.LIB|sddodbc
+Error: Unresolved external 'SQLDescribeColW' referenced from 
+D:\PROGRAMA\COMPS\HARBOUR\LIB\SDDODBC.LIB|sddodbc
+Error: Unresolved external 'SQLFreeHandle' referenced from 
+D:\PROGRAMA\COMPS\HARBOUR\LIB\SDDODBC.LIB|sddodbc
+Error: Unresolved external 'SQLFetch' referenced from 
+D:\PROGRAMA\COMPS\HARBOUR\LIB\SDDODBC.LIB|sddodbc
+Error: Unresolved external 'SQLGetData' referenced from 
+D:\PROGRAMA\COMPS\HARBOUR\LIB\SDDODBC.LIB|sddodbc
+
+and stuck again.
+
+
+
+
+El 22/04/2010 10:11 p.m., Massimo Belgrano escribi?:
+> follow this sample:
+>
+>
+> /*
+>   * $Id: test2.prg 14028 2010-03-01 01:34:52Z vszakats $
+>   */
+>
+> #include "simpleio.ch"
+> #include "hbrddsql.ch"
+>
+> REQUEST SQLMIX, SDDODBC
+>
+> PROC main()
+> LOCAL nConnection, nI, aI
+>
+>     RDDSETDEFAULT( "SQLMIX" )
+>     SET( _SET_DATEFORMAT, "yyyy-mm-dd" )
+>     nConnection := RDDINFO( RDDI_CONNECT, { "ODBC",
+> "Server=localhost;Driver={MySQL ODBC 5.1
+> Driver};dsn=;User=test;database=test;" } )
+>     IF nConnection == 0
+>        ? "Unable connect to server", RDDINFO( RDDI_ERRORNO ), RDDINFO(
+> RDDI_ERROR )
+>        RETURN
+>     ENDIF
+>     ? nConnection
+>     ? RDDINFO(RDDI_EXECUTE, "DROP TABLE country")
+>     ? RDDINFO(RDDI_EXECUTE, "CREATE TABLE country (CODE char(3), NAME
+> char(50), RESIDENTS int(11))")
+>     ? RDDINFO(RDDI_EXECUTE, "INSERT INTO country values ('LTU',
+> 'Lithuania', 3369600),('USA', 'United States of America', 305397000),
+> ('POR', 'Portugal', 10617600), ('POL', 'Poland', 38115967), ('AUS',
+> 'Australia', 21446187), ('FRA', 'France', 64473140), ('RUS', 'Russia',
+> 141900000)")
+>     ? DBUSEAREA( .T.,, "SELECT * FROM country", "country" )
+>     ? "LASTREC:", LASTREC()
+>     DO WHILE ! EOF()
+>       aI := ARRAY( FCOUNT() )
+>       FOR nI := 1 TO FCOUNT()
+>         aI[nI] := FIELDGET( nI )
+>       NEXT
+>       ? RECNO(), HB_VALTOEXP( aI )
+>       DBSKIP()
+>     ENDDO
+>     ? "LASTREC:", LASTREC()
+>     DBCLOSEALL()
+> RETURN
+>
+>
+> 2010/4/23 Richard Acosta<eyelagui@gmail.com>:
+>    
+>> I'm using the sample provided with SVN... it has a dbcreate(..
+>>
+>> Here is the code:
+>>    RDDSETDEFAULT("SQLMIX")
+>>    DBCREATE("persons", {{"NAME", "C", 20, 0}, {"FAMILYNAME", "C", 20, 0},
+>> {"BIRTH", "D", 8, 0}, {"AMOUNT", "N", 9, 2}},, .T., "persons")
+>>
+>>    DBAPPEND();  AEVAL({PADR("John", 20), PADR("Weber", 20),
+>>   STOD("19750306"),   2975.45}, {|X,Y| FIELDPUT(Y, X )})
+>>    DBAPPEND();  AEVAL({PADR("Sim", 20),  PADR("Simsom", 20),
+>> STOD("19930705"),  32975.37}, {|X,Y| FIELDPUT(Y, X )})
+>>
+>> //   DBGOTOP()
+>> //   BROWSE()
+>>
+>>    INDEX ON FIELD->AMOUNT TO amount
+>> //   DBGOTOP()
+>> //   BROWSE()
+>>    DBCLOSEALL()
+>>
+>>
+>> So if i create a database and use the rest of the sample it should work?
+>>
+>>
+>>
+>> El 22/04/2010 02:36 p.m., Massimo Belgrano escribi?:
+>>      
+>>> Can you post a sample?
+>>> wich version or mysql are you using?
+>>>
+>>> remember that rddsql not support dbcreate but reqire sql string to do it
+>>>
+>>> 2010/4/22 Richard Acosta<eyelagui@gmail.com>:
+>>>
+>>>        
+>>>> I'm trying rddsql, compile my program and everything is ok, made ODBC
+>>>> connection and everything went fine, i run the program wich actually is
+>>>> the
+>>>> test provided with rddsql and runs without errors....
+>>>>
+>>>> But this test does not create the intended database on mysql server.
+>>>>
+>>>> ?where may i be failing?
+>>>>
+>>>> Thanks.
+>>>>
+>>>>
+>>>> i granted it all privileges too...
+>>>>
+>>>>          
+>>>
+>>>        
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>      
+>
+>
+>    
+From maufacc at adinet.com.uy  Fri Apr 23 06:03:51 2010
+From: maufacc at adinet.com.uy (Maurizio Faccio adinet)
+Date: Fri Apr 23 06:04:01 2010
+Subject: [Harbour-users] Harbour + MySQL = myHeadache
+Message-ID: <4BD17087.9020803@adinet.com.uy>
+
+
+I think you should read hbmyslq's readme, where they explain how to
+
+compile to build the libraries.
+And also you should compile harbour with mysql support, please read
+install file in harbour directory.
+
+  To do that  you need to have some libraries of your myslq to harbour
+use it to build the accessing libraries to your mysql version.
+
+Then you must include the generated libraries to hbp that compile your
+applicattion
+
+I'm still do not try rrdsql but it has a sample on how to access to
+mysql (sddmy), but I think you also need the previous libraries.
+
+Hope helps you
+
+Maurizio
+
+
+
+-- 
+________________________
+Ing. Maurizio Faccio
+Merbe Ltda.
+Av. Italia 2346. Paysand?, Uruguay
+web: www.merbe.com.uy
+Tel : 598-72-29043 Int. 130
+Fax: 598-72-22591
+Cel: 598-99-007030
+
+
+
+
+El 22/04/2010 12:46 p.m., Richard Acosta escribi?:
+>  I'm trying to make my first program to use MySQL server instead of
+>  .dbf files.
+>  I tried to use hbmysql from contrib
+>
+>  The thing is, the sample provided with hbmysql may be anything but
+>  clear, i tryed to compile it and it does not compile, just throws :
+>  Unresolved external '_HB_FUN_TMYSQLSERVER
+>
+>  There is no explanation about what is doing at any part, so i can't
+>  figure anything to change or seek.
+>  And as there is no explanation about any line, i can't either figure
+>  what to take and use on my own program.
+>
+>  I really don't like to waste time by studying samples and test+error
+>  without any base about functioning. I learned programming from books
+>  with the basic explanations about every function first and only then
+>  the samples to show usage. With harbour there are samples and not
+>  explanations is anti-natural for me.
+>
+>  I have been searching around contribs and found rddsql, wich it seems
+>  that has the same programming way of using a .dbf file.
+>  could this ease my pain?
+>  will this work on mySQL or it is for SQL?
+>  is that easy as it seems?
+>
+>  ?Is there any other simpler way to go mySQL?
+>
+>
+>  Thanks.
+>  _______________________________________________
+>  Harbour-users mailing list (attachment size limit: 40KB)
+>  Harbour-users@harbour-project.org
+>  http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>
+
+From bruno.luciani at gmail.com  Fri Apr 23 07:35:16 2010
+From: bruno.luciani at gmail.com (Bruno Luciani)
+Date: Fri Apr 23 07:35:26 2010
+Subject: [Harbour-users] Harbour + MySQL = myHeadache
+In-Reply-To: <4BD10C43.8030101@gmail.com>
+References: <4BD06F4F.6070508@gmail.com>
+	<m2t133778361004221748l68ec40f1w18f5033c447d3f2a@mail.gmail.com>
+	<4BD10C43.8030101@gmail.com>
+Message-ID: <l2n133778361004230435n180b8133g7ab1b7a183596d96@mail.gmail.com>
+
+Richard , you need to install Mysql Devel Libraries , you need to check if
+your version of mysql include it , if i am not wrong an Mysql.h include and
+something more
+
+You need include folder and point harbour to it
+
+AS Maurizio say , read INSTALL txt file in harbour root , and readme of
+hbmysql
+
+If you try to use sddmy think that you need to commit using SQL .
+
+Bruno
+
+2010/4/22 Richard Acosta <eyelagui@gmail.com>
+
+> Sorry, i miss an answer.
+>
+>
+> El 22/04/2010 09:48 p.m., Bruno Luciani escribi?:
+>
+>> Richard , show  the command that you have used to compile your sample
+>>
+>>
+> Not my sample, i compiled the provided sample inside my own program.
+>
+> hbmk2 clientes.prg ing_cli.prg rddsql.lib %hwgui_lib%\hwgui.lib
+> %hwgui_lib%\procmisc.lib %hwgui_lib%\hbxml.lib %hwgui_lib%\hwg_qhtm.lib -gui
+>
+> i changed rddsql <> hbmysql and the sample provided with hbmysql is inside
+> ing_cli.prg as it was on provided .prg
+>
+>
+>
+>
+>
+>  I think this is your problem
+>>
+>> 2 questions :
+>>
+>> in who Operating systema you are working ?
+>>
+>> and
+>>
+>> IN another way , do you check if hbmysql is created when you have compiled
+>> SVN ?
+>>
+>> or you have downloaded a binary version of Harbour ?
+>>
+>> Bruno
+>>
+>>
+>> 2010/4/22 Richard Acosta<eyelagui@gmail.com>
+>>
+>>
+>>
+>>> I'm trying to make my first program to use MySQL server instead of .dbf
+>>> files.
+>>> I tried to use hbmysql from contrib
+>>>
+>>> The thing is, the sample provided with hbmysql may be anything but clear,
+>>> i
+>>> tryed to compile it and it does not compile, just throws : Unresolved
+>>> external '_HB_FUN_TMYSQLSERVER
+>>>
+>>> There is no explanation about what is doing at any part, so i can't
+>>> figure
+>>> anything to change or seek.
+>>> And as there is no explanation about any line, i can't either figure what
+>>> to take and use on my own program.
+>>>
+>>> I really don't like to waste time by studying samples and test+error
+>>> without any base about functioning. I learned programming from books with
+>>> the basic explanations about every function first and only then the
+>>> samples
+>>> to show usage. With harbour there are samples and not explanations is
+>>> anti-natural for me.
+>>>
+>>> I have been searching around contribs and found rddsql, wich it seems
+>>> that
+>>> has the same programming way of using a .dbf file.
+>>> could this ease my pain?
+>>> will this work on mySQL or it is for SQL?
+>>> is that easy as it seems?
+>>>
+>>> ?Is there any other simpler way to go mySQL?
+>>>
+>>>
+>>> Thanks.
+>>> _______________________________________________
+>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>
+>>>
+>>>
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>
+>>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From eyelagui at gmail.com  Fri Apr 23 10:50:23 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Fri Apr 23 10:50:45 2010
+Subject: [Harbour-users] Harbour + MySQL = myHeadache
+In-Reply-To: <l2n133778361004230435n180b8133g7ab1b7a183596d96@mail.gmail.com>
+References: <4BD06F4F.6070508@gmail.com>	<m2t133778361004221748l68ec40f1w18f5033c447d3f2a@mail.gmail.com>	<4BD10C43.8030101@gmail.com>
+	<l2n133778361004230435n180b8133g7ab1b7a183596d96@mail.gmail.com>
+Message-ID: <4BD1B3AF.2030803@gmail.com>
+
+I have installed mysql devel libraries, if not, i would'nt compile 
+hbmysql.lib.
+
+
+
+El 23/04/2010 08:35 a.m., Bruno Luciani escribi?:
+> Richard , you need to install Mysql Devel Libraries , you need to check if
+> your version of mysql include it , if i am not wrong an Mysql.h include and
+> something more
+>
+> You need include folder and point harbour to it
+>
+> AS Maurizio say , read INSTALL txt file in harbour root , and readme of
+> hbmysql
+>
+> If you try to use sddmy think that you need to commit using SQL .
+>
+> Bruno
+>
+> 2010/4/22 Richard Acosta<eyelagui@gmail.com>
+>
+>    
+>> Sorry, i miss an answer.
+>>
+>>
+>> El 22/04/2010 09:48 p.m., Bruno Luciani escribi?:
+>>
+>>      
+>>> Richard , show  the command that you have used to compile your sample
+>>>
+>>>
+>>>        
+>> Not my sample, i compiled the provided sample inside my own program.
+>>
+>> hbmk2 clientes.prg ing_cli.prg rddsql.lib %hwgui_lib%\hwgui.lib
+>> %hwgui_lib%\procmisc.lib %hwgui_lib%\hbxml.lib %hwgui_lib%\hwg_qhtm.lib -gui
+>>
+>> i changed rddsql<>  hbmysql and the sample provided with hbmysql is inside
+>> ing_cli.prg as it was on provided .prg
+>>
+>>
+>>
+>>
+>>
+>>   I think this is your problem
+>>      
+>>> 2 questions :
+>>>
+>>> in who Operating systema you are working ?
+>>>
+>>> and
+>>>
+>>> IN another way , do you check if hbmysql is created when you have compiled
+>>> SVN ?
+>>>
+>>> or you have downloaded a binary version of Harbour ?
+>>>
+>>> Bruno
+>>>
+>>>
+>>> 2010/4/22 Richard Acosta<eyelagui@gmail.com>
+>>>
+>>>
+>>>
+>>>        
+>>>> I'm trying to make my first program to use MySQL server instead of .dbf
+>>>> files.
+>>>> I tried to use hbmysql from contrib
+>>>>
+>>>> The thing is, the sample provided with hbmysql may be anything but clear,
+>>>> i
+>>>> tryed to compile it and it does not compile, just throws : Unresolved
+>>>> external '_HB_FUN_TMYSQLSERVER
+>>>>
+>>>> There is no explanation about what is doing at any part, so i can't
+>>>> figure
+>>>> anything to change or seek.
+>>>> And as there is no explanation about any line, i can't either figure what
+>>>> to take and use on my own program.
+>>>>
+>>>> I really don't like to waste time by studying samples and test+error
+>>>> without any base about functioning. I learned programming from books with
+>>>> the basic explanations about every function first and only then the
+>>>> samples
+>>>> to show usage. With harbour there are samples and not explanations is
+>>>> anti-natural for me.
+>>>>
+>>>> I have been searching around contribs and found rddsql, wich it seems
+>>>> that
+>>>> has the same programming way of using a .dbf file.
+>>>> could this ease my pain?
+>>>> will this work on mySQL or it is for SQL?
+>>>> is that easy as it seems?
+>>>>
+>>>> ?Is there any other simpler way to go mySQL?
+>>>>
+>>>>
+>>>> Thanks.
+>>>> _______________________________________________
+>>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>>> Harbour-users@harbour-project.org
+>>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>>
+>>>>
+>>>>
+>>>>          
+>>> _______________________________________________
+>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>
+>>>
+>>>
+>>>        
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>      
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>    
+From eyelagui at gmail.com  Fri Apr 23 10:50:54 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Fri Apr 23 10:51:02 2010
+Subject: [Harbour-users] Harbour + MySQL = myHeadache
+In-Reply-To: <4BD17087.9020803@adinet.com.uy>
+References: <4BD17087.9020803@adinet.com.uy>
+Message-ID: <4BD1B3CE.20800@gmail.com>
+
+that is done.
+
+El 23/04/2010 07:03 a.m., Maurizio Faccio adinet escribi?:
+>
+> I think you should read hbmyslq's readme, where they explain how to
+>
+> compile to build the libraries.
+> And also you should compile harbour with mysql support, please read
+> install file in harbour directory.
+>
+>  To do that  you need to have some libraries of your myslq to harbour
+> use it to build the accessing libraries to your mysql version.
+>
+> Then you must include the generated libraries to hbp that compile your
+> applicattion
+>
+> I'm still do not try rrdsql but it has a sample on how to access to
+> mysql (sddmy), but I think you also need the previous libraries.
+>
+> Hope helps you
+>
+> Maurizio
+>
+>
+>
+From eyelagui at gmail.com  Fri Apr 23 12:43:03 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Fri Apr 23 12:43:11 2010
+Subject: [Harbour-users] hbmysql+harbour = hbmyheadache
+Message-ID: <4BD1CE17.6040308@gmail.com>
+
+Now i recompiled harbour SVN with mysql dev installed and DID'NT 
+compiled hbmysql.lib, so AGAIN i had to compile it separately, BUT NOW 
+it does not compile.
+So, i had a compiled and apparently ok lib, but now i don't have the lib 
+and cant compile it again.
+I don't even understand the error...
+
+make_b32.log says:
+
+MAKE Version 5.2  Copyright (c) 1987, 2000 Borland
+     bcc32.exe -c -q -d -w -w-sig- -O2 
+-ID:\Programa\Comps\Harbour\include  -I"C:\Program Files 
+(x86)\MySQL\MySQL Server 5.1\include"   -oobj\b32\mysql.obj .\mysql.c
+.\mysql.c:
+     D:\Programa\Comps\Harbour\bin\harbour.exe 
+-iD:\Programa\Comps\Harbour\include -n -q0 -w3 -es2 -km   -oobj\b32\\ 
+.\tmysql.prg
+     bcc32.exe -c -q -d -w -w-sig- -O2 
+-ID:\Programa\Comps\Harbour\include  -I"C:\Program Files 
+(x86)\MySQL\MySQL Server 5.1\include"   -oobj\b32\tmysql.obj 
+obj\b32\\tmysql.c
+obj\b32\\tmysql.c:
+     D:\Programa\Comps\Harbour\bin\harbour.exe 
+-iD:\Programa\Comps\Harbour\include -n -q0 -w3 -es2 -km   -oobj\b32\\ 
+.\tsqlbrw.prg
+     bcc32.exe -c -q -d -w -w-sig- -O2 
+-ID:\Programa\Comps\Harbour\include  -I"C:\Program Files 
+(x86)\MySQL\MySQL Server 5.1\include"   -oobj\b32\tsqlbrw.obj 
+obj\b32\\tsqlbrw.c
+obj\b32\\tsqlbrw.c:
+     if exist "D:\Programa\Comps\Harbour\lib\hbmysql.lib" del 
+"D:\Programa\Comps\Harbour\lib\hbmysql.lib" > NUL
+     tlib.exe "D:\Programa\Comps\Harbour\lib\hbmysql.lib" /P32 @MAKE0000.@@@
+TLIB 4.5 Copyright (c) 1987, 1999 Inprise Corporation
++obj\b32\mysql.obj &
++obj\b32\tmysql.obj &
++obj\b32\tsqlbrw.obj &
++
+
+Borland Implib Version 3.0.22 Copyright (c) 1991, 2000 Inprise Corporation
+Fatal error ..\..\lib\b32\libmySQL.lib: unable to open output file
+
+
+From eyelagui at gmail.com  Sat Apr 24 17:04:34 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Sat Apr 24 17:04:49 2010
+Subject: [Harbour-users] Compiling test to use  hbmysql.lib
+Message-ID: <4BD35CE2.3050006@gmail.com>
+
+I got this message :
+
+Turbo Incremental Link 5.00 Copyright (c) 1997, 2000 Borland
+Error: Unresolved external 'mysql_init' referenced from 
+D:\PROGRAMA\COMPS\HARBOUR\LIB\HBMYSQL.LIB|mysql
+Error: Unresolved external 'mysql_real_connect' referenced from 
+D:\PROGRAMA\COMPS\HARBOUR\LIB\HBMYSQL.LIB|mysql
+
+I guess this means hbmysql is referencing something that is suppossed to 
+come in another library.
+how can i know wich library to add?
+
+thanks.
+From eyelagui at gmail.com  Sat Apr 24 17:21:43 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Sat Apr 24 17:21:52 2010
+Subject: [Harbour-users] mysqlconnector
+Message-ID: <4BD360E7.4030606@gmail.com>
+
+trying to use rddmysql i have found that there (seems to be) is no 
+activity, but neither are any error coming from test app as if mysql 
+connector were not installed.
+
+So i guess, is it possible that i need a particular version of ODBC 
+mysql connector?
+It cames to me because a friend of mine who programs on visualbasic uses 
+mysql connector 3.5 instead of 5.1 as i installed to make my attempts.
+
+?any thoughts?
+From bruno.luciani at gmail.com  Sat Apr 24 23:37:09 2010
+From: bruno.luciani at gmail.com (Bruno Luciani)
+Date: Sat Apr 24 23:37:17 2010
+Subject: [Harbour-users] Compiling test to use hbmysql.lib
+In-Reply-To: <4BD35CE2.3050006@gmail.com>
+References: <4BD35CE2.3050006@gmail.com>
+Message-ID: <o2r133778361004242037i166f0504j5a1dc75205bb16d7@mail.gmail.com>
+
+Do you have installed Mysql-Devel ?
+
+You need includes from Mysql , some installers of mysql server not include
+this files
+
+Bruno
+
+2010/4/24 Richard Acosta <eyelagui@gmail.com>
+
+> I got this message :
+>
+> Turbo Incremental Link 5.00 Copyright (c) 1997, 2000 Borland
+> Error: Unresolved external 'mysql_init' referenced from
+> D:\PROGRAMA\COMPS\HARBOUR\LIB\HBMYSQL.LIB|mysql
+> Error: Unresolved external 'mysql_real_connect' referenced from
+> D:\PROGRAMA\COMPS\HARBOUR\LIB\HBMYSQL.LIB|mysql
+>
+> I guess this means hbmysql is referencing something that is suppossed to
+> come in another library.
+> how can i know wich library to add?
+>
+> thanks.
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From eyelagui at gmail.com  Sun Apr 25 02:54:45 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Sun Apr 25 02:54:52 2010
+Subject: [Harbour-users] Compiling test to use hbmysql.lib
+In-Reply-To: <o2r133778361004242037i166f0504j5a1dc75205bb16d7@mail.gmail.com>
+References: <4BD35CE2.3050006@gmail.com>
+	<o2r133778361004242037i166f0504j5a1dc75205bb16d7@mail.gmail.com>
+Message-ID: <4BD3E735.5020109@gmail.com>
+
+I installed mysql complete...
+
+The problem ended being some sort of missdirection when making implib 
+libmysql.dll.
+
+I did it separately and worked fine, now the application compiles and 
+everything that was not working runs flawless.
+(4L coca-cola and about 20 mint candys later)
+
+I finally achieved to talk to the server and received the answers.
+
+
+
+
+
+
+El 25/04/2010 12:37 a.m., Bruno Luciani escribi?:
+> Do you have installed Mysql-Devel ?
+>
+> You need includes from Mysql , some installers of mysql server not include
+> this files
+>
+> Bruno
+>
+> 2010/4/24 Richard Acosta<eyelagui@gmail.com>
+>
+>    
+>> I got this message :
+>>
+>> Turbo Incremental Link 5.00 Copyright (c) 1997, 2000 Borland
+>> Error: Unresolved external 'mysql_init' referenced from
+>> D:\PROGRAMA\COMPS\HARBOUR\LIB\HBMYSQL.LIB|mysql
+>> Error: Unresolved external 'mysql_real_connect' referenced from
+>> D:\PROGRAMA\COMPS\HARBOUR\LIB\HBMYSQL.LIB|mysql
+>>
+>> I guess this means hbmysql is referencing something that is suppossed to
+>> come in another library.
+>> how can i know wich library to add?
+>>
+>> thanks.
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>      
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>    
+From pbruccoleri at adinet.com.uy  Sun Apr 25 10:01:25 2010
+From: pbruccoleri at adinet.com.uy (Paola Bruccoleri)
+Date: Sun Apr 25 10:01:31 2010
+Subject: [Harbour-users] mysqlconnector
+In-Reply-To: <4BD360E7.4030606@gmail.com>
+References: <4BD360E7.4030606@gmail.com>
+Message-ID: <4BD44B35.50908@adinet.com.uy>
+
+Hola Richard...
+
+te recomiendo este sitio en espa?ol:
+http://www.carozodequilmes.com.ar/Projects/QAC/_Index_QAC.htm
+
+all? hay un t?pico: c?mo construir la librer?a de interfase para acceder 
+a mysql.
+*http://www.carozodequilmes.com.ar/Projects/QAC/mysql.htm
+
+no s? si esto ya lo solucionastes, pero hay muy buena informaci?n que te 
+va a servir..
+chauuuuuuuuu
+
+
+*
+From eyelagui at gmail.com  Sun Apr 25 11:53:50 2010
+From: eyelagui at gmail.com (Richard Acosta)
+Date: Sun Apr 25 11:54:01 2010
+Subject: [Harbour-users] mysqlconnector
+In-Reply-To: <4BD44B35.50908@adinet.com.uy>
+References: <4BD360E7.4030606@gmail.com> <4BD44B35.50908@adinet.com.uy>
+Message-ID: <4BD4658E.700@gmail.com>
+
+Al final logr? solucionarlo, te agradezco el dato de todas formas, 
+porque seguro me va a servir.
+
+Saludos.
+
+El 25/04/2010 11:01 a.m., Paola Bruccoleri escribi?:
+> Hola Richard...
+>
+> te recomiendo este sitio en espa?ol:
+> http://www.carozodequilmes.com.ar/Projects/QAC/_Index_QAC.htm
+>
+> all? hay un t?pico: c?mo construir la librer?a de interfase para 
+> acceder a mysql.
+> *http://www.carozodequilmes.com.ar/Projects/QAC/mysql.htm
+>
+> no s? si esto ya lo solucionastes, pero hay muy buena informaci?n que 
+> te va a servir..
+> chauuuuuuuuu
+>
+>
+> *
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From gruncic at gmail.com  Tue Apr 27 02:50:23 2010
+From: gruncic at gmail.com (Zvonimir Gruncic)
+Date: Tue Apr 27 02:50:31 2010
+Subject: [Harbour-users] hbwin
+Message-ID: <l2vb811782a1004262350q3d38d9b4o91615c57395eedea@mail.gmail.com>
+
+I test winprint from hbwin. How set 20 cpi . What is font wheigt for this.
+
+Thanks

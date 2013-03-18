@@ -1,0 +1,84 @@
+From harbour-users at harbour-project.org  Thu Aug  7 10:12:04 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Thu Aug  7 20:12:20 2008
+Subject: [Harbour-users] EVAL Question
+Message-ID: <000b01c8f897$9194b010$1200a8c0@PORTATIL3>
+
+
+Hi all:
+
+I have the following question:
+
+Suppose I have a method in some class, and I want to do something like the following code:
+
+cBlock := {||::Test()}
+
+where TEST is a method.
+
+When I run: r = EVAL(cBlock)
+
+I get an Error, because Test is a method, not a global function.
+
+How can I create a code block with methods inside, which can be EVAL'd ?
+
+TIA, Jan Sperling
+
+From harbour-users at harbour-project.org  Thu Aug 14 20:36:03 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Wed Aug 27 22:31:59 2008
+Subject: [Harbour-users] Observacion en At y ORDLISTCLEAR()
+Message-ID: <20080815003603.3F8E917B8DD3@smtp.latinmail.com>
+
+Que tal, team de harbour
+antes que todo felicitandos por esta contribucion a la comunidad
+de clipper, recien estoy utilizando Harbour y seriamente en esta
+ultima version, con la facilidad que esta brindando  sobre todo
+al adicional que se da con las tablas DBF, en el mecanismo de proteccion
+de poder de encriptarlo, de alguna forma que otro utilitario no pueda
+habrirlo. 
+
+Bueno, en la version
+HARBOUR 1.0.0RC2   Rev. 8928
+
+-----------------------------------------------------------------
+La funcion AT no funciona como la sintaxis lo menciona :
+
+function of_test1
+  x1 := "HARBOUR ES LO MAXIMO"
+
+  p := AT("ES",x1,8,2)
+  msginfo( str(p) )
+
+return
+
+Al compilar da el siguiente mensaje :
+Incorrect number of arguments: AT
+Passed: 4, expected: 2
+
+SYNTAX es
+
+   AT( <cSearch>, <cString>, [<nStart>], [<nEnd>] ) --> nPos
+
+
+La funcion  ORDLISTCLEAR() 
+------------------------------------------------
+function of_test2
+
+   use test
+   set index to test
+
+   msginfo( ordname( 1) )  ---> campo1
+
+   ORDLISTCLEAR()
+
+   msginfo( ordname( 1) )  ---> campo1   ??? deberia ser vacio 
+
+   use
+return
+-----------------------------------------------------
+
+Gracias.
+
+   Teodoro
+
+Los Juegos Ol?mpicos se viven en StarMedia. ?Visita el especial y sigue las competiciones en directo! http://us.segundosfuera.com/juegosolimpicos/

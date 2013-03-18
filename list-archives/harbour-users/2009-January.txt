@@ -1,0 +1,278 @@
+From harbour-users at harbour-project.org  Sun Jan  4 04:51:47 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sun Jan  4 04:51:49 2009
+Subject: [Harbour-users] Please verify your harbour subscription if not
+	receive messages from harbour mailing list
+Message-ID: <609353e70901040151t7f97ccd5x51f3e388f6c0f753@mail.gmail.com>
+
+A lot of user (like me) have found disabled sending incoming messages from
+mailing by incident
+goto harbour your suscription and veryfy
+Now all seem work fine
+
+-- 
+Massimo Belgrano
+From harbour-users at harbour-project.org  Tue Jan 27 06:25:13 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Tue Jan 27 06:25:17 2009
+Subject: [Harbour-users] create hbgd not possible
+Message-ID: <89c0927b0901270325k2fd00731x3ca35e5009b48b71@mail.gmail.com>
+
+Hi!
+No make hbgd with borland
+My envar set correct.
+With make_b32.bat install show 1 file copy but not copy hbgd.lib :-(
+
+Tks!
+Itamar M. Lins Jr.
+
+MAKE Version 5.2  Copyright (c) 1987, 2000 Borland
+    bcc32.exe -c -q -d -Q -w -w-sig- -4 -O2 -OS -Ov -Oi -Oc -I..\..\include
+-I"C:\gd\include"  -oobj\b32\gdwrp.obj .\gdwrp.c
+.\gdwrp.c:
+    ..\..\bin\b32\harbour.exe -i..\..\include -n -q0 -w3 -es2 -km -l
+-oobj\b32\\ .\gd.prg
+    bcc32.exe -c -q -d -Q -w -w-sig- -4 -O2 -OS -Ov -Oi -Oc -I..\..\include
+-I"C:\gd\include"  -oobj\b32\gd.obj obj\b32\\gd.c
+obj\b32\\gd.c:
+    ..\..\bin\b32\harbour.exe -i..\..\include -n -q0 -w3 -es2 -km -l
+-oobj\b32\\ .\gdimage.prg
+    bcc32.exe -c -q -d -Q -w -w-sig- -4 -O2 -OS -Ov -Oi -Oc -I..\..\include
+-I"C:\gd\include"  -oobj\b32\gdimage.obj obj\b32\\gdimage.c
+obj\b32\\gdimage.c:
+    ..\..\bin\b32\harbour.exe -i..\..\include -n -q0 -w3 -es2 -km -l
+-oobj\b32\\ .\gdchart.prg
+    bcc32.exe -c -q -d -Q -w -w-sig- -4 -O2 -OS -Ov -Oi -Oc -I..\..\include
+-I"C:\gd\include"  -oobj\b32\gdchart.obj obj\b32\\gdchart.c
+obj\b32\\gdchart.c:
+    ..\..\bin\b32\harbour.exe -i..\..\include -n -q0 -w3 -es2 -km -l
+-oobj\b32\\ .\gdbar.prg
+    bcc32.exe -c -q -d -Q -w -w-sig- -4 -O2 -OS -Ov -Oi -Oc -I..\..\include
+-I"C:\gd\include"  -oobj\b32\gdbar.obj obj\b32\\gdbar.c
+obj\b32\\gdbar.c:
+    ..\..\bin\b32\harbour.exe -i..\..\include -n -q0 -w3 -es2 -km -l
+-oobj\b32\\ .\gdbarcod.prg
+    bcc32.exe -c -q -d -Q -w -w-sig- -4 -O2 -OS -Ov -Oi -Oc -I..\..\include
+-I"C:\gd\include"  -oobj\b32\gdbarcod.obj obj\b32\\gdbarcod.c
+obj\b32\\gdbarcod.c:
+    tlib.exe "..\..\lib\b32\hbgd.lib" /P64  @MAKE0000.@@@
+TLIB 4.5 Copyright (c) 1987, 1999 Inprise Corporation
++obj\b32\gdwrp.obj &
++obj\b32\gd.obj &
++obj\b32\gdimage.obj &
++obj\b32\gdchart.obj &
++obj\b32\gdbar.obj &
++obj\b32\gdbarcod.obj &
++
+
+Borland Implib Version 3.0.22 Copyright (c) 1991, 2000 Inprise Corporation
+From harbour-users at harbour-project.org  Sat Jan 31 10:07:40 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sat Jan 31 10:07:44 2009
+Subject: [Harbour-users] Confuse for make gdlib and now tests with uHTTP.
+Message-ID: <89c0927b0901310707s768c20c9nd7448db140844031@mail.gmail.com>
+
+Hi!
+Exist one fail sintaxe below, HB_INC_GD="C:\..." not "-IC:\..."
+Because the line include "I".
+
+if "%HB_INC_GD%" == "" set HB_INC_GD=%HB_DIR_GD%\include
+set CFLAGS=-I"%HB_INC_GD%" ----------->Here! include "-I"
+set _HB_DLL_NAME=bgd
+set _HB_DLL_DIR=%HB_DIR_GD%\bin
+
+----------------------------->8---------------------
+if not "%HB_INC_GD%%HB_DIR_GD%" == "" goto DIR_OK
+echo ---------------------------------------------------------------
+echo IMPORTANT: You'll need GD lib package from www.libgd.org and this
+envvar
+echo            to be set to successfully build this library:
+echo            set HB_INC_GD=-IC:\gd\include
+echo            or
+echo            set HB_DIR_GD=-IC:\gd
+echo            if you want to generate .lib for the .dll.
+echo ---------------------------------------------------------------
+goto POST_EXIT
+-------------------------------8<------------------------
+
+
+And make hbgdlib, but get erro below. :-(
+
+TIA.
+Itamar M. Lins Jr.
+
+
+
+>Building uHTTPD server
+
+>Lib GD support enabled
+
+>Mindaugas socket
+
+>Borland C++ 5.5.1 for Win32 Copyright (c) 1993, 2000 Borland
+>uhttpd.c:
+>cgifunc.c:
+>cookie.c:
+>uhttpdc.c:
+>socket.c:
+>Turbo Incremental Link 5.00 Copyright (c) 1997, 2000 Borland
+>Error: Unresolved external 'gdImageDestroy' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageCreateFromJpegPtr' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageCreateFromGifPtr' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageCreateFromPngPtr' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageCreateFromWBMPPtr' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageCreateFromGdPtr' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageJpegPtr' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageGifPtr' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImagePngPtrEx' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageWBMPPtr' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageGdPtr' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdFree' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageCreate' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageCreateTrueColor' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageSetPixel' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageLine' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageDashedLine' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImagePolygon' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageRectangle' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageFilledPolygon' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageFilledRectangle' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageArc' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageFilledArc' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageFilledEllipse' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageFillToBorder' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageFill' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageSetAntiAliased' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageSetAntiAliasedDontBlend' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageSetBrush' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageSetTile' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageSetStyle' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageSetThickness' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageAlphaBlending' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageSaveAlpha' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageSetClip' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageGetClip' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageGetPixel' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageBoundsSafe' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageTrueColorToPalette' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageCreatePaletteFromTrueColor' referenced
+from D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdFontGetSmall' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdFontGetLarge' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdFontGetMediumBold' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdFontGetGiant' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdFontGetTiny' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageChar' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageString' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageCharUp' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageStringUp' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageStringFTEx' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageStringFTCircle' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdFontCacheSetup' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdFontCacheShutdown' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageColorAllocate' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageColorDeallocate' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageColorAllocateAlpha' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageColorClosest' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageColorClosestAlpha' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageColorClosestHWB' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageColorExact' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageColorResolve' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageColorResolveAlpha' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageColorTransparent' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageCopy' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageCopyResized' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageCopyResampled' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageCopyRotated' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageCopyMerge' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageCopyMergeGray' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImagePaletteCopy' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageSquareToCircle' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageSharpen' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageCompare' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Error: Unresolved external 'gdImageInterlace' referenced from
+D:\HARBOUR\TRUNK\HARBOUR\LIB\HBGD.LIB|gdwrp
+>Build error
+From harbour-users at harbour-project.org  Sat Jan 31 17:27:33 2009
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sat Jan 31 17:27:37 2009
+Subject: [Harbour-users] ActiveX
+Message-ID: <133778360901311427ub3c32c0lf661282a9cc8a9df@mail.gmail.com>
+
+Anybody knows if exists in harbour
+any kind of activex support ?
+
+
+Bruno

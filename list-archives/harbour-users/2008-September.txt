@@ -1,0 +1,234 @@
+From harbour-users at harbour-project.org  Fri Sep 12 12:59:16 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Sep 12 12:59:23 2008
+Subject: [Harbour-users] Case sensitive file extensions
+Message-ID: <75bfe90f0809120959x4e175144mf8bfb6f1a3b6e8a4@mail.gmail.com>
+
+Sirs:
+
+I work for a window manufacturing company.  The production software is
+written in clipper 5.2.  It has been running for 15 years or so, and
+is composed of multitudes of programs, most somewhat intertwined.  I
+have written most of it and modified the rest over the years.
+
+I use the standard dbfntx clipper files for storage.
+The file server is running ubuntu linux with samba 3.0.22.
+
+I am attempting to run some of the programs compiled with harbour from
+linux computers in a shared environment with a bunch of windows
+computers running programs compiled with 5.2
+
+There are a number of places where the programs create .dbf and .dbt
+files.  When you create a .dbf file with dbcreate(), clipper 5.2
+forces the filenames and extensions to uppercase.
+
+If the .dbf file has a memo file with it, I am unable to open it with
+harbour 1.0.  Harbour attempts to open the memo file with a .dbt in
+lowercase extension.
+
+Any notion about how to get around this problem?
+
+Given time, I can probably find the place in the harbour source that
+sets the file extension and make it try both upper and lower case when
+it adds an extension.
+
+Is there a better way?
+Is there any hope of getting one of you guys who know the code to
+either do it, or at least to point me to the correct file and
+function(s) where the changes would need to happen?
+
+Thanks in advance,
+Jim Hurlburt
+Yakima, WA  USA
+From harbour-users at harbour-project.org  Fri Sep 12 17:00:11 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Sep 12 17:00:19 2008
+Subject: [Harbour-users] Case sensitive file extensions
+In-Reply-To: <75bfe90f0809120959x4e175144mf8bfb6f1a3b6e8a4@mail.gmail.com>
+References: <75bfe90f0809120959x4e175144mf8bfb6f1a3b6e8a4@mail.gmail.com>
+Message-ID: <edff235e0809121400h5aa3ab71s4c19e82d36854b8b@mail.gmail.com>
+
+>From Harbour changelog these changes are very important...:
+
+2007-11-04 02:34 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+  * harbour/include/hbapi.h
+  * harbour/source/common/hbstr.c
+    + added hb_strlow()
+
+  * harbour/source/rtl/fstemp.c
+  * harbour/source/rtl/filesys.c
+    ! fixed _SET_DIRSEPARATOR behavior - now it's always set to default
+      OS directory separator what means no translations. If you want to
+      enable some translations then it should be set to other value, f.e.
+      in *nixes:
+         set( _SET_DIRSEPARATOR, "\" )
+      enables translations of "\" in paths to "/"
+
+  * harbour/source/main/harbour.c
+    + added support for new compiler switches:
+         - Filename casing:
+               -fn:l       (lower)
+               -fn:u       (upper)
+               -fn-        (disable - default)
+               -fn         (disable - default)
+         - Directory casing
+               -fd:l       (lower)
+               -fd:u       (upper)
+               -fd-        (disable - default)
+               -fd         (disable - default)
+         - Path separator:
+               -fp:<char>
+               -fp         (default: OS defined)
+         - Filename space trimming:
+               -fs         (enable)
+               -fs-        (disable - default)
+      These switches works only in standalone compiler.
+      When compiler is linked with HVM and RTL then corresponding
+      _SET_* switches are used instead.
+
+I hope this will help you.
+Adam
+
+2008/9/12  <harbour-users@harbour-project.org>:
+> Sirs:
+>
+> I work for a window manufacturing company.  The production software is
+> written in clipper 5.2.  It has been running for 15 years or so, and
+From harbour-users at harbour-project.org  Sat Sep 13 15:20:13 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Sat Sep 13 15:20:19 2008
+Subject: [Harbour-users] Re: Contents of Harbour-users digest...
+Message-ID: <f5ce776c0809131220t2f2b3d62uaf93e94dd4b24a0@mail.gmail.com>
+
+
+From harbour-users at harbour-project.org  Fri Sep 19 15:23:24 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Fri Sep 19 15:23:30 2008
+Subject: [Harbour-users] Print on windows OS
+Message-ID: <89c0927b0809191223h6ba7f76axe4f1471818ecb5fc@mail.gmail.com>
+
+Hi!
+These functions work fine with xHarbour but not run with Harbour.
+If remove "//" also does not work.
+
+*******************************
+Function Imprime(cArq,cPrint)
+*******************************
+*
+*
+Local oPrn, aPrn:=GetPrinters()
+if empty(aPrn)
+   MsgInfo( 'Not Print' )
+   return .f.
+endif
+If cPrint == Nil
+ cPrint := GetDefaultPrinter()
+EndIf
+
+  //Set Printer to (GetDefaultPrinter() )
+ //Set(_SET_PRINTER)
+ //Set(_SET_PRINTFILE)
+ //Set Console Off
+ //Set Printer On
+ nRet := PrintFileRaw(cPrint,cArq,'Pedido')
+ if nRet < 1
+   MsgStop('Error Printing: '+rtrim(str(nRet)))
+ EndIf
+
+ //Linhas := mlcount(txt,nCol)
+ //For i:=1 to Linhas
+ //   ? rTrim(MemoLine(txt,nCol,i,,,.f.))
+ //Next
+ //Set Printer Off
+ //Set Console On
+ //Set Printer to
+ Return .t.
+
+TIA
+Itamar M. Lins Jr.
+From harbour-users at harbour-project.org  Mon Sep 22 16:38:29 2008
+From: harbour-users at harbour-project.org (harbour-users@harbour-project.org)
+Date: Mon Sep 22 16:38:35 2008
+Subject: [Harbour-users] Case sensitive file extensions
+In-Reply-To: <edff235e0809121400h5aa3ab71s4c19e82d36854b8b@mail.gmail.com>
+References: <75bfe90f0809120959x4e175144mf8bfb6f1a3b6e8a4@mail.gmail.com>
+	<edff235e0809121400h5aa3ab71s4c19e82d36854b8b@mail.gmail.com>
+Message-ID: <75bfe90f0809221338q43f9d48en976c51b15ed88fe4@mail.gmail.com>
+
+Adam:
+
+I'm sorry, but I don't follow how to use the below.
+When I look at the source, I don't find any of it.  No doubt looking
+the the wrong places
+
+The compiler flags don't seem to work.
+I have it compiled, what seemed to be pretty much the default choices
+on a linux box running ubuntu 7.10  amd64.  Version is 1.0.0  The
+latest one
+
+I have hunted what I could and don't follow the reference to the
+_SET_* switches either.  I am probably missing something, but don't
+find them in the harbour docs.
+
+Perhaps a brief example of how to get a case insensitive dbusearea()
+to work or a pointer to such?
+Or any other help would be most appreciated.
+
+Main reason for the delay in reply is that I have been busy having a
+cold the last week.  Sorry for the delay.
+Jim Hurlburt
+Yakima
+
+On 9/12/08, harbour-users@harbour-project.org
+<harbour-users@harbour-project.org> wrote:
+> >From Harbour changelog these changes are very important...:
+>
+> 2007-11-04 02:34 UTC+0100 Przemyslaw Czerpak (druzus/at/priv.onet.pl)
+>   * harbour/include/hbapi.h
+>   * harbour/source/common/hbstr.c
+>     + added hb_strlow()
+>
+>   * harbour/source/rtl/fstemp.c
+>   * harbour/source/rtl/filesys.c
+>     ! fixed _SET_DIRSEPARATOR behavior - now it's always set to default
+>       OS directory separator what means no translations. If you want to
+>       enable some translations then it should be set to other value, f.e.
+>       in *nixes:
+>          set( _SET_DIRSEPARATOR, "\" )
+>       enables translations of "\" in paths to "/"
+>
+>   * harbour/source/main/harbour.c
+>     + added support for new compiler switches:
+>          - Filename casing:
+>                -fn:l       (lower)
+>                -fn:u       (upper)
+>                -fn-        (disable - default)
+>                -fn         (disable - default)
+>          - Directory casing
+>                -fd:l       (lower)
+>                -fd:u       (upper)
+>                -fd-        (disable - default)
+>                -fd         (disable - default)
+>          - Path separator:
+>                -fp:<char>
+>                -fp         (default: OS defined)
+>          - Filename space trimming:
+>                -fs         (enable)
+>                -fs-        (disable - default)
+>       These switches works only in standalone compiler.
+>       When compiler is linked with HVM and RTL then corresponding
+>       _SET_* switches are used instead.
+>
+> I hope this will help you.
+> Adam
+>
+> 2008/9/12  <harbour-users@harbour-project.org>:
+>> Sirs:
+>>
+>> I work for a window manufacturing company.  The production software is
+>> written in clipper 5.2.  It has been running for 15 years or so, and
+> _______________________________________________
+> Harbour-users mailing list
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>

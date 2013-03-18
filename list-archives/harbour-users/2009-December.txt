@@ -1,0 +1,3695 @@
+From doleynikov at gmail.com  Tue Dec  1 01:25:25 2009
+From: doleynikov at gmail.com (INETERA user)
+Date: Tue Dec  1 01:26:34 2009
+Subject: [Harbour-users] Re: SQL databases with Harbour
+In-Reply-To: <hf125b$k1r$1@ger.gmane.org>
+References: <1259583696.1732.61.camel@dmitry-desktop>
+	<hf125b$k1r$1@ger.gmane.org>
+Message-ID: <1259648725.1732.105.camel@dmitry-desktop>
+
+Hello!
+
+Actually in 1992-1994 I was from dBaseIII, then FoxBase, 1994-1997 I was
+using Clipper 87 - 5.1. I did not use any visual xBases. 
+
+
+? ???, 30/11/2009 ? 19:15 +0100, Antonio Martinez ?????:
+> >I just decided to return to the Clipper world. I have pretty good view
+> Where do you from ? v.foxpro ?
+> 
+> 
+> 
+> 
+> 
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+
+From mbelgrano at deltain.it  Tue Dec  1 08:27:11 2009
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Tue Dec  1 08:27:40 2009
+Subject: [Harbour-users] Re: SQL databases with Harbour
+In-Reply-To: <1259648725.1732.105.camel@dmitry-desktop>
+References: <1259583696.1732.61.camel@dmitry-desktop>
+	<hf125b$k1r$1@ger.gmane.org> 
+	<1259648725.1732.105.camel@dmitry-desktop>
+Message-ID: <609353e70912010527tc380909k448b74a42892ce5d@mail.gmail.com>
+
+WIch harbour you can use with little conversion DbaseIII program
+your prg can be compiled ugin easy command
+like
+hbmk2  my.prg prg2.prg prg3.prg
+that generate my.exe
+
+download last version beta 3 from
+http://sourceforge.net/projects/harbour-project/files/
+ <http://sourceforge.net/projects/harbour-project/files/>
+2009/12/1 INETERA user <doleynikov@gmail.com>
+
+> Hello!
+>
+> Actually in 1992-1994 I was from dBaseIII, then FoxBase, 1994-1997 I was
+> using Clipper 87 - 5.1. I did not use any visual xBases.
+>
+>
+> ? ???, 30/11/2009 ? 19:15 +0100, Antonio Martinez ?????:
+> > >I just decided to return to the Clipper world. I have pretty good view
+> > Where do you from ? v.foxpro ?
+> >
+> >
+> >
+> >
+> >
+> > _______________________________________________
+> > Harbour-users mailing list (attachment size limit: 40KB)
+> > Harbour-users@harbour-project.org
+> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+From alessandrobrunati at tiscali.it  Tue Dec  1 17:47:25 2009
+From: alessandrobrunati at tiscali.it (Alessandro Brunati)
+Date: Tue Dec  1 17:47:42 2009
+Subject: [Harbour-users] New basic user with problems
+Message-ID: <!&!AAAAAAAAAAAYAAAAAAAAAN24F/K6A3pGi2Ap0R1D6yLCgAAAEAAAABkvZ9j2/zhBl0D46uRuvscBAAAAAA==@tiscali.it>
+
+Good evening,
+I'm a basic clipper5.2 and clippertools user from 1995.
+I meet the harbour project two weeks ago. I'm very interested in your job
+and I appreciate it very much.
+Because I'm basic, I download the harbour-2.0.0beta3-win.exe version.
+I want convert my clip application with beta3 version.
+The application acquires data from field instrument using RS232.
+Which is the lib to link including RS232 commands?
+Where I can find it?
+The application converts the data into a HPGL file and I need to print it.
+The function PRINTFILE(NFILE,.T.) does not run. Now I substitute this
+function with __TypeFile(nfile,.T.)
+But, under Windows XP, it run only when you close the program. Do you know
+the problem?
+
+ 
+
+Thank you for your help
+
+ 
+
+Alessandro Brunati
+
+ 
+
+P Save a tree... please do not print this e-mail unless you really need to 
+
+ 
+
+ 
+
+From mbelgrano at deltain.it  Tue Dec  1 17:53:44 2009
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Tue Dec  1 17:54:12 2009
+Subject: [Harbour-users] New basic user with problems
+In-Reply-To: <!&!AAAAAAAAAAAYAAAAAAAAAN24F/K6A3pGi2Ap0R1D6yLCgAAAEAAAABkvZ9j2/zhBl0D46uRuvscBAAAAAA==@tiscali.it>
+References: <!&!AAAAAAAAAAAYAAAAAAAAAN24F/K6A3pGi2Ap0R1D6yLCgAAAEAAAABkvZ9j2/zhBl0D46uRuvscBAAAAAA==@tiscali.it>
+Message-ID: <609353e70912011453u46efccdcy8f18cccc9088d4fc@mail.gmail.com>
+
+You have a lib hbtpathy.lib, included in harbour distribution
+
+add to hbmk2 -lhbtpathy.lib
+hbmk2 prg.prg prg1.prg -lhbtpathy.lib
+
+2009/12/1 Alessandro Brunati <alessandrobrunati@tiscali.it>
+
+> Good evening,
+> I'm a basic clipper5.2 and clippertools user from 1995.
+> I meet the harbour project two weeks ago. I'm very interested in your job
+> and I appreciate it very much.
+> Because I'm basic, I download the harbour-2.0.0beta3-win.exe version.
+> I want convert my clip application with beta3 version.
+> The application acquires data from field instrument using RS232.
+> Which is the lib to link including RS232 commands?
+> Where I can find it?
+> The application converts the data into a HPGL file and I need to print it.
+> The function PRINTFILE(NFILE,.T.) does not run. Now I substitute this
+> function with __TypeFile(nfile,.T.)
+> But, under Windows XP, it run only when you close the program. Do you know
+> the problem?
+>
+>
+>
+> Thank you for your help
+>
+>
+>
+> Alessandro Brunati
+>
+>
+>
+> P Save a tree... please do not print this e-mail unless you really need to
+>
+>
+>
+>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+
+Iscritto all'albo dei CTU presso il Tribunale di Novara per materia
+Informatica
+Delta Informatica S.r.l. (http://www.deltain.it/) (+39 0321 455962)
+Analisi e sviluppo software per Lan e Web -  Consulenza informatica -
+Formazione
+From guillermohaad at hotmail.com  Wed Dec  2 07:40:11 2009
+From: guillermohaad at hotmail.com (GUILLERMO HAAD)
+Date: Wed Dec  2 07:40:20 2009
+Subject: [Harbour-users] Re: SQL databases with Harbour
+In-Reply-To: <609353e70912010527tc380909k448b74a42892ce5d@mail.gmail.com>
+References: <1259583696.1732.61.camel@dmitry-desktop>, <hf125b$k1r$1@ger.gmane.org>,
+	<1259648725.1732.105.camel@dmitry-desktop>,
+	<609353e70912010527tc380909k448b74a42892ce5d@mail.gmail.com>
+Message-ID: <SNT128-W1836326BDE9B7C978B082AD950@phx.gbl>
+
+
+
+hi my friend ... i not speaking inglish very god... 
+
+i need you help for compiler program make in clipper 5.2 and converter in harbour... 
+
+ 
+
+than you
+
+
+ 		 	   		  
+_________________________________________________________________
+Connect to the next generation of MSN Messenger?
+http://imagine-msn.com/messenger/launch80/default.aspx?locale=en-us&source=wlmailtagline
+From maufacc at adinet.com.uy  Wed Dec  2 08:27:04 2009
+From: maufacc at adinet.com.uy (Maurizio Faccio adinet)
+Date: Wed Dec  2 08:27:15 2009
+Subject: [Harbour-users] Re: SQL databases with Harbour
+In-Reply-To: <SNT128-W1836326BDE9B7C978B082AD950@phx.gbl>
+References: <1259583696.1732.61.camel@dmitry-desktop>,
+	<hf125b$k1r$1@ger.gmane.org>,
+	<1259648725.1732.105.camel@dmitry-desktop>,
+	<609353e70912010527tc380909k448b74a42892ce5d@mail.gmail.com>
+	<SNT128-W1836326BDE9B7C978B082AD950@phx.gbl>
+Message-ID: <4B166B28.1020605@adinet.com.uy>
+
+--------------
+
+Estimado, hablas espa?ol?
+Por favor contactame y tratare de ayudarte.
+-----------------
+
+Do you speak spanish?
+Please contact me and I will try to help you
+
+
+
+GUILLERMO HAAD escribi?:
+> hi my friend ... i not speaking inglish very god... 
+>
+> i need you help for compiler program make in clipper 5.2 and converter in harbour... 
+>
+>  
+>
+> than you
+>
+>
+>  		 	   		  
+> _________________________________________________________________
+> Connect to the next generation of MSN Messenger 
+> http://imagine-msn.com/messenger/launch80/default.aspx?locale=en-us&source=wlmailtagline_______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>
+>   
+From guillermohaad at hotmail.com  Wed Dec  2 13:20:01 2009
+From: guillermohaad at hotmail.com (GUILLERMO HAAD)
+Date: Wed Dec  2 13:20:07 2009
+Subject: [Harbour-users] Re: SQL databases with Harbour
+In-Reply-To: <4B166B28.1020605@adinet.com.uy>
+References: <1259583696.1732.61.camel@dmitry-desktop>, ,
+	<hf125b$k1r$1@ger.gmane.org>, ,
+	<1259648725.1732.105.camel@dmitry-desktop>, ,
+	<609353e70912010527tc380909k448b74a42892ce5d@mail.gmail.com>,
+	<SNT128-W1836326BDE9B7C978B082AD950@phx.gbl>,
+	<4B166B28.1020605@adinet.com.uy>
+Message-ID: <SNT128-W33E774A183373A565A6934AD950@phx.gbl>
+
+
+hola amigo  si hablo espa?ol....
+ 
+quiero saber como compilar un programa echo en clipper a Harbour... 
+entiendo que harbour compila y los vuelve graficos?
+ 
+me gustaria me pudiera ayudar....
+ 
+
+ 
+ 		 	   		  
+_________________________________________________________________
+Invite your mail contacts to join your friends list with Windows Live Spaces. It's easy!
+http://spaces.live.com/spacesapi.aspx?wx_action=create&wx_url=/friends.aspx&mkt=en-us
+From maufacc at adinet.com.uy  Wed Dec  2 15:21:43 2009
+From: maufacc at adinet.com.uy (Maurizio Faccio adinet)
+Date: Wed Dec  2 15:21:55 2009
+Subject: [Harbour-users] Re: SQL databases with Harbour
+In-Reply-To: <SNT128-W33E774A183373A565A6934AD950@phx.gbl>
+References: <1259583696.1732.61.camel@dmitry-desktop>, ,
+	<hf125b$k1r$1@ger.gmane.org>, ,
+	<1259648725.1732.105.camel@dmitry-desktop>, ,
+	<609353e70912010527tc380909k448b74a42892ce5d@mail.gmail.com>,
+	<SNT128-W1836326BDE9B7C978B082AD950@phx.gbl>,
+	<4B166B28.1020605@adinet.com.uy>
+	<SNT128-W33E774A183373A565A6934AD950@phx.gbl>
+Message-ID: <4B16CC57.8090204@adinet.com.uy>
+
+English readers: Excuse me that I will write in spanish the message, but 
+it may help another spanish speakers
+
+
+Mi experiencia es bastante nueva en harbour, no he experimentado la 
+parte gr?fica, lo que si he probado es la compilada nativa de codigo 
+clipper, obteniendo aplicaciones consola pero son nativas para el 
+sistema operativo que estes usando.
+Hay ejemplos en los contribs para cosas graficas.
+
+Lo que tenes que hacer para compilar el codigo clipper es agregarle al 
+prg principal
+#Esto primero no es estrictamente necesario pero si como yo  tenes el 
+clipper en version espa?ol, lo vas a precisar porque el harbour por 
+defecto esta en ingles, y no son compatibles las paginas de codigo
+# lo cual te va a dar problemas de indices.
+
+REQUEST HB_LANG_ES
+REQUEST HB_CODEPAGE_ES850C
+
+PROCEDURE MAIN ()
+
+#Esto por lo mismo
+HB_SETCODEPAGE('ES850C')
+HB_LANGSELECT('ES')
+
+
+harbour compila el codigo a C, y luego precisas un compilador de C para 
+que te genere el exe.
+Te podes instalar el mingw (C gnu) o BCC, ambos gratuitos, el mingw 
+aparte es software libre.
+Tambien instalado el harbour.
+En los paths tienen que estar el path al bin del C instalado , asi como 
+el path al bin del harbour.
+Creo que la version estable que te podes bajar tiene un dramita con la 
+pagina de codigo 850, tendrias que usar una version beta.
+
+
+Con hbmk2 creas el ejecutable.- Es una utilidad de make...
+Tienes que armarte un archivo .hbp en el cual pones los prgs que vas a 
+compilar y con el primer prg obtiene el nombre del primer prg, sino 
+ejecutando hbmk2 sin parametros podes ver como usarlo mejor con 
+parametros para cambiar el nombre del ejecutable, usar librerias, etc.
+
+
+GUILLERMO HAAD escribi?:
+> hola amigo  si hablo espa?ol....
+>  
+> quiero saber como compilar un programa echo en clipper a Harbour... 
+> entiendo que harbour compila y los vuelve graficos?
+>  
+> me gustaria me pudiera ayudar....
+>  
+>
+>  
+>  		 	   		  
+> _________________________________________________________________
+> Invite your mail contacts to join your friends list with Windows Live Spaces. It's easy!
+> http://spaces.live.com/spacesapi.aspx?wx_action=create&wx_url=/friends.aspx&mkt=en-us_______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>
+>   
+From anezch at gmail.com  Wed Dec  2 19:42:23 2009
+From: anezch at gmail.com (Agustianes Umbara Suwardi)
+Date: Wed Dec  2 19:42:37 2009
+Subject: [Harbour-users] Re: SQL databases with Harbour
+In-Reply-To: <4B16CC57.8090204@adinet.com.uy>
+References: <1259583696.1732.61.camel@dmitry-desktop>
+	, , <hf125b$k1r$1@ger.gmane.org>
+	, , <1259648725.1732.105.camel@dmitry-desktop>
+	, , <609353e70912010527tc380909k448b74a42892ce5d@mail.gmail.com>
+	, <SNT128-W1836326BDE9B7C978B082AD950@phx.gbl>
+	, <4B166B28.1020605@adinet.com.uy>
+	<SNT128-W33E774A183373A565A6934AD950@phx.gbl>
+	<4B16CC57.8090204@adinet.com.uy>
+Message-ID: <1259800943.3768.44.camel@anezch-desktop>
+
+Maybe you could try to add English translation to your conversation as
+it may also give advantages to non-Spanish members.
+
+Cheers,
+Agustianes U.S.
+
+
+On Wed, 2009-12-02 at 18:21 -0200, Maurizio Faccio adinet wrote:
+> English readers: Excuse me that I will write in spanish the message, but 
+> it may help another spanish speakers
+> 
+> 
+> Mi experiencia es bastante nueva en harbour, no he experimentado la 
+> parte gr?fica, lo que si he probado es la compilada nativa de codigo 
+> clipper, obteniendo aplicaciones consola pero son nativas para el 
+> sistema operativo que estes usando.
+> Hay ejemplos en los contribs para cosas graficas.
+> 
+> Lo que tenes que hacer para compilar el codigo clipper es agregarle al 
+> prg principal
+> #Esto primero no es estrictamente necesario pero si como yo  tenes el 
+> clipper en version espa?ol, lo vas a precisar porque el harbour por 
+> defecto esta en ingles, y no son compatibles las paginas de codigo
+> # lo cual te va a dar problemas de indices.
+> 
+> REQUEST HB_LANG_ES
+> REQUEST HB_CODEPAGE_ES850C
+> 
+> PROCEDURE MAIN ()
+> 
+> #Esto por lo mismo
+> HB_SETCODEPAGE('ES850C')
+> HB_LANGSELECT('ES')
+> 
+> 
+> harbour compila el codigo a C, y luego precisas un compilador de C para 
+> que te genere el exe.
+> Te podes instalar el mingw (C gnu) o BCC, ambos gratuitos, el mingw 
+> aparte es software libre.
+> Tambien instalado el harbour.
+> En los paths tienen que estar el path al bin del C instalado , asi como 
+> el path al bin del harbour.
+> Creo que la version estable que te podes bajar tiene un dramita con la 
+> pagina de codigo 850, tendrias que usar una version beta.
+> 
+> 
+> Con hbmk2 creas el ejecutable.- Es una utilidad de make...
+> Tienes que armarte un archivo .hbp en el cual pones los prgs que vas a 
+> compilar y con el primer prg obtiene el nombre del primer prg, sino 
+> ejecutando hbmk2 sin parametros podes ver como usarlo mejor con 
+> parametros para cambiar el nombre del ejecutable, usar librerias, etc.
+> 
+> 
+> GUILLERMO HAAD escribi?:
+> > hola amigo  si hablo espa?ol....
+> >  
+> > quiero saber como compilar un programa echo en clipper a Harbour... 
+> > entiendo que harbour compila y los vuelve graficos?
+> >  
+> > me gustaria me pudiera ayudar....
+> >  
+> >
+> >  
+> >  		 	   		  
+> > _________________________________________________________________
+> > Invite your mail contacts to join your friends list with Windows Live Spaces. It's easy!
+> > http://spaces.live.com/spacesapi.aspx?wx_action=create&wx_url=/friends.aspx&mkt=en-us_______________________________________________
+> > Harbour-users mailing list (attachment size limit: 40KB)
+> > Harbour-users@harbour-project.org
+> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >
+> >
+> >   
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+From bruno.luciani at gmail.com  Wed Dec  2 20:28:11 2009
+From: bruno.luciani at gmail.com (Bruno Luciani)
+Date: Wed Dec  2 20:28:18 2009
+Subject: [Harbour-users] Re: SQL databases with Harbour
+In-Reply-To: <SNT128-W33E774A183373A565A6934AD950@phx.gbl>
+References: <1259583696.1732.61.camel@dmitry-desktop>
+	<hf125b$k1r$1@ger.gmane.org>
+	<1259648725.1732.105.camel@dmitry-desktop>
+	<609353e70912010527tc380909k448b74a42892ce5d@mail.gmail.com>
+	<SNT128-W1836326BDE9B7C978B082AD950@phx.gbl>
+	<4B166B28.1020605@adinet.com.uy>
+	<SNT128-W33E774A183373A565A6934AD950@phx.gbl>
+Message-ID: <133778360912021728m4693e32ax4f028923f6155943@mail.gmail.com>
+
+*Spanish*
+
+Guillermo adicionalmente a lo comentado por Maurizio te puedo decir que la
+sintaxis del comando
+
+hbmk2 prg1 prg2 prgx  -llibreria -lotralibreria
+
+es una idea  de como funciona , podes ver un monton de ejemplos de como
+usarla en los fuentes de harbour
+
+Tambien podes crear una lista    llamada por ejemplo  tuprg.hbp  y llamarla
+hbmk2 tuprg.hbp
+
+donde pones los nombres de los prg a incluir como asi tambien
+
+las librerias a incluir.
+
+ejecutando hbmk2 sin modificadores te dara una lista de opciones del mismo
+
+Deberas buscar cuales de las librerias de harbour son las que cubren tus
+necesidades
+
+la mayoria de lo habitual de clipper esta cubierto.
+
+
+Algo que te quiero aclarar es que , harbour no convierte tu programa en modo
+grafico sino en 32 bits
+si necesitas programar en modo grafico deberas elegir alguna de las
+librerias adicionales y ver
+como se usan los comandos para las ventanas y demas controles.
+
+Por ejemplo  OOHG , MINIGUI , HMG  , HBQT , HBXBP y hay mas , las primeras
+son a mi criterio
+
+las mas faciles de usar aunque son solo para windows y las dos ultimas son
+multiplataforma.
+
+Espero que esta informacion te sea util.
+
+Saludos
+Bruno
+
+*English*
+
+Guillermo in addition to the comments of Maurizio I can tell you that the
+syntax is
+
+hbmk2 prg1 prg2 prgx -llibreria -lotralibreria
+
+is an idea of how it works , you a can see a lot of samples in Harbour
+sources
+
+You can also create a list and call it , tuprg.hbp eg: hbmk2 tuprg.hbp
+
+where you put the names of the prg to include as well also
+
+the libraries to include.
+
+Running hbmk2 without modifiers will give you a list of options
+
+Need to find which of the harbour are the libraries that cover your needs
+
+most usual of clipper is covered.
+
+
+Something that I want to clarify is that, harbour does not make your program
+in graphical mode but in 32-bit
+if you need to program the GUI need to pick any of the additional libraries
+and see
+commands as used for windows and other controls.
+
+For example ooHG, MiniGUI, HMG, HBQT, HBXBP and there are more, the former
+are in my opinion
+
+the easiest to use but are only for windows and the last two are cross
+platform.
+
+I hope this information is useful.
+
+Regards
+Bruno
+
+
+
+
+
+2009/12/2 GUILLERMO HAAD <guillermohaad@hotmail.com>
+
+>
+> hola amigo  si hablo espa?ol....
+>
+> quiero saber como compilar un programa echo en clipper a Harbour...
+> entiendo que harbour compila y los vuelve graficos?
+>
+> me gustaria me pudiera ayudar....
+>
+>
+>
+>
+> _________________________________________________________________
+> Invite your mail contacts to join your friends list with Windows Live
+> Spaces. It's easy!
+>
+> http://spaces.live.com/spacesapi.aspx?wx_action=create&wx_url=/friends.aspx&mkt=en-us_______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From guillermohaad at hotmail.com  Thu Dec  3 07:45:46 2009
+From: guillermohaad at hotmail.com (GUILLERMO HAAD)
+Date: Thu Dec  3 07:46:01 2009
+Subject: [Harbour-users] Re: SQL databases with Harbour
+In-Reply-To: <4B16CC57.8090204@adinet.com.uy>
+References: <1259583696.1732.61.camel@dmitry-desktop>,
+	,,<hf125b$k1r$1@ger.gmane.org>,
+	,,<1259648725.1732.105.camel@dmitry-desktop>,
+	, , <609353e70912010527tc380909k448b74a42892ce5d@mail.gmail.com>, ,
+	<SNT128-W1836326BDE9B7C978B082AD950@phx.gbl>, ,
+	<4B166B28.1020605@adinet.com.uy>,
+	<SNT128-W33E774A183373A565A6934AD950@phx.gbl>,
+	<4B16CC57.8090204@adinet.com.uy>
+Message-ID: <SNT128-W30637E04F0EA56007A2A58AD940@phx.gbl>
+
+
+Gracias amigo muy amable de su parte... estare en contacto para que me puedas colaborar...si tengo dudas..
+
+ 
+
+
+ 
+ 		 	   		  
+_________________________________________________________________
+Invite your mail contacts to join your friends list with Windows Live Spaces. It's easy!
+http://spaces.live.com/spacesapi.aspx?wx_action=create&wx_url=/friends.aspx&mkt=en-us
+From tcltkdev at aol.com  Fri Dec  4 23:53:10 2009
+From: tcltkdev at aol.com (tcltkdev@aol.com)
+Date: Fri Dec  4 23:53:30 2009
+Subject: [Harbour-users] Re: SQL databases with Harbour
+In-Reply-To: <SNT128-W30637E04F0EA56007A2A58AD940@phx.gbl>
+References: <1259583696.1732.61.camel@dmitry-desktop>, , ,
+	<hf125b$k1r$1@ger.gmane.org>, , ,
+	<1259648725.1732.105.camel@dmitry-desktop>, , ,
+	<609353e70912010527tc380909k448b74a42892ce5d@mail.gmail.com>, ,
+	<SNT128-W1836326BDE9B7C978B082AD950@phx.gbl>, ,
+	<4B166B28.1020605@adinet.com.uy>,
+	<SNT128-W33E774A183373A565A6934AD950@phx.gbl>,
+	<4B16CC57.8090204@adinet.com.uy>
+	<SNT128-W30637E04F0EA56007A2A58AD940@phx.gbl>
+Message-ID: <8CC437DFAC0A552-404C-129F9@webmail-m034.sysops.aol.com>
+
+
+ Ok
+
+
+> Thank you very kind friend of his part ... I will be in contact so that you me could to collaborate ... if I have doubts..
+
+ 
+
+-----Original Message-----
+From: GUILLERMO HAAD <guillermohaad@hotmail.com>
+To: harbour-users@harbour-project.org
+Sent: Thu, Dec 3, 2009 8:45 pm
+Subject: RE: [Harbour-users] Re: SQL databases with Harbour
+
+
+
+Gracias amigo muy amable de su parte... estare en contacto para que me puedas 
+colaborar...si tengo dudas..
+
+ 
+
+
+ 
+                      
+_________________________________________________________________
+Invite your mail contacts to join your friends list with Windows Live Spaces. 
+It's easy!
+http://spaces.live.com/spacesapi.aspx?wx_action=create&wx_url=/friends.aspx&mkt=en-us_______________________________________________
+Harbour-users mailing list (attachment size limit: 40KB)
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+ 
+From amigosam at adinet.com.uy  Tue Dec 15 11:36:11 2009
+From: amigosam at adinet.com.uy (Angel Pais)
+Date: Tue Dec 15 11:45:25 2009
+Subject: [Harbour-users] Compiling server
+Message-ID: <hg8dts$us0$1@ger.gmane.org>
+
+Now I have compiled a new version of harbour under UBUNTU, I'm tryng to 
+compile Mindaugas's uhttpd2 server and I'm getting this errors:
+
+> Harbour 2.0.0beta3 (Rev. 13153)
+> Copyright (c) 1999-2010, http://www.harbour-project.org/
+> Compiling 'uwidgets.prg'...
+> Lines 1267, Functions/Procedures 45
+> Generating C source output to 'uwidgets.c'... Done.
+> Compiling 'umain.prg'...
+> Lines 3397, Functions/Procedures 32
+> Generating C source output to 'umain.c'... Done.
+> Compiling 'uhbext.prg'...
+> Lines 3432, Functions/Procedures 2
+> Generating C source output to 'uhbext.c'... Done.
+> Compiling 'app.prg'...
+> Lines 4782, Functions/Procedures 9
+> Generating C source output to 'app.c'... Done.
+> /usr/lib/libgttrm.a(gttrm.o): In function `hb_gt_trm_mouse_Hide':
+> gttrm.c:(.text+0x16e): undefined reference to `gpm_visiblepointer'
+> /usr/lib/libgttrm.a(gttrm.o): In function `hb_gt_trm_mouse_Show':
+> gttrm.c:(.text+0x4c3): undefined reference to `gpm_zerobased'
+> gttrm.c:(.text+0x4c8): undefined reference to `_gpm_arg'
+> gttrm.c:(.text+0x4ce): undefined reference to `_gpm_buf'
+> gttrm.c:(.text+0x4d5): undefined reference to `gpm_visiblepointer'
+> gttrm.c:(.text+0x503): undefined reference to `gpm_consolefd'
+> gttrm.c:(.text+0x50b): undefined reference to `_gpm_buf'
+> /usr/lib/libgttrm.a(gttrm.o): In function `hb_gt_trm_mouse_SetPos':
+> gttrm.c:(.text+0x14f4): undefined reference to `gpm_visiblepointer'
+> gttrm.c:(.text+0x150b): undefined reference to `gpm_zerobased'
+> gttrm.c:(.text+0x1511): undefined reference to `_gpm_arg'
+> gttrm.c:(.text+0x1517): undefined reference to `_gpm_buf'
+> gttrm.c:(.text+0x1544): undefined reference to `_gpm_buf'
+> gttrm.c:(.text+0x1550): undefined reference to `gpm_consolefd'
+> /usr/lib/libgttrm.a(gttrm.o): In function `hb_gt_trm_Refresh':
+> gttrm.c:(.text+0x165e): undefined reference to `gpm_visiblepointer'
+> gttrm.c:(.text+0x1673): undefined reference to `gpm_zerobased'
+> gttrm.c:(.text+0x1678): undefined reference to `_gpm_arg'
+> gttrm.c:(.text+0x167e): undefined reference to `_gpm_buf'
+> gttrm.c:(.text+0x16a9): undefined reference to `gpm_consolefd'
+> gttrm.c:(.text+0x16b1): undefined reference to `_gpm_buf'
+> /usr/lib/libgttrm.a(gttrm.o): In function `set_gpmevt':
+> gttrm.c:(.text+0x2a91): undefined reference to `Gpm_GetEvent'
+> /usr/lib/libgttrm.a(gttrm.o): In function `hb_gt_trm_Exit':
+> gttrm.c:(.text+0x4f68): undefined reference to `gpm_fd'
+> gttrm.c:(.text+0x500a): undefined reference to `Gpm_Close'
+> /usr/lib/libgttrm.a(gttrm.o): In function `hb_gt_trm_Init':
+> gttrm.c:(.text+0x5fb4): undefined reference to `gpm_zerobased'
+> gttrm.c:(.text+0x5fbe): undefined reference to `gpm_visiblepointer'
+> gttrm.c:(.text+0x5fd2): undefined reference to `Gpm_Open'
+> gttrm.c:(.text+0x5fdf): undefined reference to `gpm_fd'
+> gttrm.c:(.text+0x6010): undefined reference to `gpm_fd'
+> gttrm.c:(.text+0x6031): undefined reference to `gpm_fd'
+> gttrm.c:(.text+0x6059): undefined reference to `gpm_fd'
+> gttrm.c:(.text+0x6079): undefined reference to `gpm_fd'
+> /usr/lib/libgttrm.a(gttrm.o):gttrm.c:(.text+0x6092): more undefined references to `gpm_fd' follow
+> collect2: ld returned 1 exit status
+> hbmk2: Error: Running linker. 1
+> gcc uwidgets.o umain.o uhbext.o app.o socket.o hbmk_jkq29z.o   -Wl,--start-group -lhbextern -lhbdebug -lhbvmmt -lhbrtl -lhblang -lhbcpage -lgtcgi -lgtpca -lgtstd -lgttrm -lhbrdd -lhbuddall -lhbusrrdd -lrddntx -lrddcdx -lrddnsx -lrddfpt -lhbrdd -lhbhsx -lhbsix -lhbmacro -lhbcplr -lhbpp -lhbcommon -lm -lpthread -ldl -lrt -lpcre -lz  -Wl,--end-group -ouhttpd2 -L/usr/lib
+
+Can anyone tell me what I'm missing ?
+I'm new to UBUNTU so sorry for my ignorance ;)
+
+TIA
+Angel Pais
+
+From druzus at acn.waw.pl  Tue Dec 15 13:27:31 2009
+From: druzus at acn.waw.pl (=?utf-8?Q?Przemys=C5=82aw?= Czerpak)
+Date: Tue Dec 15 13:27:39 2009
+Subject: [Harbour-users] Compiling server
+In-Reply-To: <hg8dts$us0$1@ger.gmane.org>
+References: <hg8dts$us0$1@ger.gmane.org>
+Message-ID: <20091215182731.GC21943@linux-4bod.home.aster.pl>
+
+On Tue, 15 Dec 2009, Angel Pais wrote:
+
+Hi,
+
+> Now I have compiled a new version of harbour under UBUNTU, I'm tryng
+> to compile Mindaugas's uhttpd2 server and I'm getting this errors:
+
+> >/usr/lib/libgttrm.a(gttrm.o): In function `hb_gt_trm_mouse_Hide':
+> >gttrm.c:(.text+0x16e): undefined reference to `gpm_visiblepointer'
+> >/usr/lib/libgttrm.a(gttrm.o): In function `hb_gt_trm_mouse_Show':
+> >gttrm.c:(.text+0x4c3): undefined reference to `gpm_zerobased'
+> >gttrm.c:(.text+0x4c8): undefined reference to `_gpm_arg'
+> >gttrm.c:(.text+0x4ce): undefined reference to `_gpm_buf'
+> >gttrm.c:(.text+0x4d5): undefined reference to `gpm_visiblepointer'
+> >gttrm.c:(.text+0x503): undefined reference to `gpm_consolefd'
+> >gttrm.c:(.text+0x50b): undefined reference to `_gpm_buf'
+[...]
+> Can anyone tell me what I'm missing ?
+
+Harbour was compiled with support for GPM but HBMK2 you are using
+does not know about it and does not add automatically -lgpm to
+linked library list.
+Just add it manually at command line. It should help.
+There is question why information about gpm was not
+stored in hbmk.cfg
+Have you edited or replaced this file?
+
+best regards,
+Przemek
+From amigosam at adinet.com.uy  Tue Dec 15 13:45:05 2009
+From: amigosam at adinet.com.uy (Angel Pais)
+Date: Tue Dec 15 13:45:43 2009
+Subject: [Harbour-users] Re: Compiling server
+In-Reply-To: <20091215182731.GC21943@linux-4bod.home.aster.pl>
+References: <hg8dts$us0$1@ger.gmane.org>
+	<20091215182731.GC21943@linux-4bod.home.aster.pl>
+Message-ID: <hg8lfn$rr1$1@ger.gmane.org>
+
+Przemys?aw Czerpak wrote:
+> On Tue, 15 Dec 2009, Angel Pais wrote:
+> 
+> Hi,
+> 
+>> Can anyone tell me what I'm missing ?
+> 
+> Harbour was compiled with support for GPM but HBMK2 you are using
+> does not know about it and does not add automatically -lgpm to
+> linked library list.
+> Just add it manually at command line. It should help.
+> There is question why information about gpm was not
+> stored in hbmk.cfg
+> Have you edited or replaced this file?
+> 
+> best regards,
+> Przemek
+
+Thank you Przemek !!
+I will ad this lib to hbp file.
+It's a plain yesterday's instalation from svn.
+The only file I've changed was detect.mk wich was avoiding me to compile 
+Harbour because moc-qt detection.
+Other than that I haven modified anything.
+
+Thanks again !
+Angel
+
+From lucasdebeltran at gmail.com  Wed Dec 16 03:01:07 2009
+From: lucasdebeltran at gmail.com (=?ISO-8859-1?Q?Lucas_De_Beltr=E1n?=)
+Date: Wed Dec 16 03:01:15 2009
+Subject: [Harbour-users] function for update dbf structure
+Message-ID: <eb96f4980912160001s4949fc81y5759e79d90a809f2@mail.gmail.com>
+
+Hi,
+
+Is there a function in Harbour that updates a DBF structure?. For example,
+updatedbf( dbffile, newstructure ).
+
+Thanks!!
+From maufacc at adinet.com.uy  Wed Dec 16 06:12:28 2009
+From: maufacc at adinet.com.uy (Maurizio Faccio adinet)
+Date: Wed Dec 16 06:12:23 2009
+Subject: [Harbour-users] Harbour freezes on Windows XP
+Message-ID: <4B28C09C.6090708@adinet.com.uy>
+
+Sometimes, I'm still cannot find why, my console applications in harbour 
+(clipper migrated code) freezes for about 4-5 seconds, and then works 
+fine , maybe for 5-6 hour and then again. I am really lost where to search.
+The environment :
+
+- Clipper native application, compiled with harbour 2.0beta3, i guess a 
+nightly version on 26/10/09
+- Linked with mysql support. But do not freeze related with connections 
+to the mysql database.
+- Code compiled with mingw.
+- Running on windows XP
+- Running over a samba share, exe from local drive. (nothing strange in 
+logs)
+
+I will keep searching more data to find where the trouble is
+
+Thank you in advance.
+
+Maurizio Faccio
+
+
+
+From mbelgrano at deltain.it  Wed Dec 16 10:01:17 2009
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Wed Dec 16 10:01:45 2009
+Subject: [Harbour-users] Harbour freezes on Windows XP
+In-Reply-To: <4B28C09C.6090708@adinet.com.uy>
+References: <4B28C09C.6090708@adinet.com.uy>
+Message-ID: <609353e70912160701l7333f894xdc326667ef08b6e8@mail.gmail.com>
+
+Wich part of your application freezes?
+Duriing this freezes how is % cpu use and wich process use?
+Maj be a problem due to
+swapping memory to disk
+in your prg inkey function with little bug
+Can you made a reduced version using few library as possible (eliminate mysql)
+to verify
+
+2009/12/16 Maurizio Faccio adinet <maufacc@adinet.com.uy>:
+> Sometimes, I'm still cannot find why, my console applications in harbour
+> (clipper migrated code) freezes for about 4-5 seconds, and then works fine ,
+> maybe for 5-6 hour and then again. I am really lost where to search.
+> The environment :
+>
+> - Clipper native application, compiled with harbour 2.0beta3, i guess a
+> nightly version on 26/10/09
+> - Linked with mysql support. But do not freeze related with connections to
+> the mysql database.
+> - Code compiled with mingw.
+> - Running on windows XP
+> - Running over a samba share, exe from local drive. (nothing strange in
+> logs)
+>
+> I will keep searching more data to find where the trouble is
+>
+> Thank you in advance.
+>
+> Maurizio Faccio
+>
+>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From sscc at mweb.co.za  Wed Dec 16 11:36:12 2009
+From: sscc at mweb.co.za (Alex Strickland)
+Date: Wed Dec 16 11:36:27 2009
+Subject: [Harbour-users] Harbour freezes on Windows XP
+In-Reply-To: <4B28C09C.6090708@adinet.com.uy>
+References: <4B28C09C.6090708@adinet.com.uy>
+Message-ID: <4B290C7C.1050103@mweb.co.za>
+
+Maurizio Faccio adinet wrote:
+
+> I will keep searching more data to find where the trouble is
+>
+> Thank you in advance.
+
+SysInternals has some nice logging tools (free), they were bought by Microsoft - 
+www.sysinternals.com will take you to MS site.
+
+Good luck.
+
+Regards
+Alex
+From szekely3 at enternet.hu  Wed Dec 16 17:45:20 2009
+From: szekely3 at enternet.hu (szekely)
+Date: Wed Dec 16 17:52:20 2009
+Subject: [Harbour-users] function for update dbf structure
+In-Reply-To: <eb96f4980912160001s4949fc81y5759e79d90a809f2@mail.gmail.com>
+Message-ID: <mailman.2.1261003940.3964.harbour-users@harbour-project.org>
+
+Hi !
+
+DBCREATE() ?
+
+Not too simple: you make a new table, from the old table copy the
+records into the new, and after rename it to the old name.
+
+Andras
+
+On Wed, 16 Dec 2009 09:01:07 +0100, Lucas De Beltr?n wrote:
+
+>Hi,
+>
+>Is there a function in Harbour that updates a DBF structure?. For example,
+>updatedbf( dbffile, newstructure ).
+>
+>Thanks!!
+>_______________________________________________
+>Harbour-users mailing list (attachment size limit: 40KB)
+>Harbour-users@harbour-project.org
+>http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+________________________________________________
+Szekely Andras <> szekely3@enternet.hu  <> eCS 1.2 <>
+http://www.scharenkreutzer.hu <> http://2Mai.dyndns.org
+
+From anezch at gmail.com  Wed Dec 16 21:44:56 2009
+From: anezch at gmail.com (Agustianes Umbara Suwardi)
+Date: Wed Dec 16 21:45:09 2009
+Subject: [Harbour-users] SetBlink() and Linux Terminals
+Message-ID: <1261017896.4259.17.camel@anezch-desktop>
+
+Hi,
+
+I wrote this code:
+
+function main()
+	*- Bright background
+	SetBlink(.f.)
+
+	clear
+
+	*- Fore: white, back: bright blue
+	SetColor('W*/B')
+	? 'Text 1'
+
+	*- Fore: white, back: blue
+	SetColor('W/B')
+	? 'Text2'
+return nil
+
+When I run it on Linux, the asterisk ('*') doesn't give any effect. I
+read on xHarbour guide that when we SetBlink() to .f. the asterisk
+effect is bright background. I tried the code on several terminal
+emulators, and the result is:
+
+Terminal Emulator       SetBlink(.t.)        SetBlink(.f.)
+----------------------------------------------------------
+gnome-terminal          no-effect            no-effect
+xterm                   blinking             no-effect
+rxvt                    bright-background &  no-effect
+                        bright-text
+linux-console           blinking             no-effect
+
+I'm using Harbour 1.1.0-dev-nightlybuild. Is there any workaround on the
+code or settings on the terminal to have a bright background?
+
+Thanks,
+(Sorry for my English)
+
+From druzus at acn.waw.pl  Wed Dec 16 22:56:31 2009
+From: druzus at acn.waw.pl (=?utf-8?Q?Przemys=C5=82aw?= Czerpak)
+Date: Wed Dec 16 22:56:38 2009
+Subject: [Harbour-users] SetBlink() and Linux Terminals
+In-Reply-To: <1261017896.4259.17.camel@anezch-desktop>
+References: <1261017896.4259.17.camel@anezch-desktop>
+Message-ID: <20091217035631.GD2098@linux-4bod.home.aster.pl>
+
+On Thu, 17 Dec 2009, Agustianes Umbara Suwardi wrote:
+
+Hi,
+
+> I wrote this code:
+> function main()
+> 	*- Bright background
+> 	SetBlink(.f.)
+> 	clear
+> 	*- Fore: white, back: bright blue
+> 	SetColor('W*/B')
+> 	? 'Text 1'
+> 	*- Fore: white, back: blue
+> 	SetColor('W/B')
+> 	? 'Text2'
+> return nil
+> When I run it on Linux, the asterisk ('*') doesn't give any effect.
+
+Yes it is. In terminal GTs like GTTRM, GTCRS or GTSLN
+   SetBlink(.f.)
+disable using BLINK attribute in output so '*' in color strings
+has no effect.
+
+> I read on xHarbour guide that when we SetBlink() to .f. the asterisk
+> effect is bright background.
+
+Some descriptions in xHarbour guide are not precise enough.
+Above it's standard Clipper behavior which works in programs
+having direct access to video adapter registers. In [x]Harbour
+only GTDOS has direct access to hardware and works exactly in
+such way. In graphics GTs like GTXWC or GTWVT SetBlink() settings
+are ignored and these GTs always highlight background color when
+'*' is used in color strings and as I said in remote terminal GTs
+(GTTRM, GTCRS or GTSLN) SetBlink(.f.) only disable using blink
+attribute. GTWIN ignores this setting and the final behavior
+depends on MS-Windows (in window mode it highlights background
+and in full screen mode it depends on the video adapter registers
+initialized by Windows for full screen text output. In OS2 there
+is special system API call which allow to control it in console
+window and GTOS2 uses it so it works like GTDOS (and Clipper)
+just like described in xHarbour guide.
+
+> I tried the code on several terminal
+> emulators, and the result is:
+> Terminal Emulator       SetBlink(.t.)        SetBlink(.f.)
+> ----------------------------------------------------------
+> gnome-terminal          no-effect            no-effect
+> xterm                   blinking             no-effect
+> rxvt                    bright-background &  no-effect
+>                         bright-text
+> linux-console           blinking             no-effect
+>
+> I'm using Harbour 1.1.0-dev-nightlybuild. Is there any workaround on the
+> code or settings on the terminal to have a bright background?
+
+There is no standard way to control remotely the behavior of BLINK
+attribute in different terminals. From popular terminals only
+PuTTY/PTerm (PTerm is stand alone terminal in *nix PuTTY ports)
+has escape sequence to control its behavior remotely. Some very
+old hardware terminals dedicated for SCO systems also had some
+escape sequences which allows to switch the blink bit in used
+hardware but it's not portable solution and termcap or terminfo
+do not have any entries for it so it can be only hardcoded inside
+the code and activated when type of remote terminal is well known
+(TERM envvar is not enough here). If you are using PuTTY (or PTerm)
+then you can use:
+   fwrite( 1, chr( 27 ) + "[=0E" )  /* disable blinking, highlight bkg */
+   fwrite( 1, chr( 27 ) + "[=1E" )  /* enable blinking */
+in your code.
+Anyhow in many terminals the behavior of BLINK attribute can be
+changed on user side. Just look at configuration switches.
+In Linux console if you are using frame buffer then BLINK attr
+always highlights bkg color. If you are using pure VGA text mode
+then it can be changed by some programs with root privileges which
+can switch blink bit in hardware video adapter registers, i.e.
+SVGATextMode has an option to control it (look for 'option "16color"'
+in configuration file).
+
+> (Sorry for my English)
+
+it's perfect for me and for sure not worse then mine.
+
+best regards,
+Przemek
+From anezch at gmail.com  Thu Dec 17 00:20:42 2009
+From: anezch at gmail.com (Agustianes Umbara Suwardi)
+Date: Thu Dec 17 00:20:59 2009
+Subject: [Harbour-users] SetBlink() and Linux Terminals
+In-Reply-To: <20091217035631.GD2098@linux-4bod.home.aster.pl>
+References: <1261017896.4259.17.camel@anezch-desktop>
+	<20091217035631.GD2098@linux-4bod.home.aster.pl>
+Message-ID: <1261027242.4259.40.camel@anezch-desktop>
+
+Thanks Przemek, I'm so happy for the quick reply. So it depends on the
+terminal configuration, right? I will try to find out the right
+configuration to make it work, because my app looks less-beautifull
+without bright backgrounds :)
+
+
+On Thu, 2009-12-17 at 04:56 +0100, Przemys?aw Czerpak wrote:
+> On Thu, 17 Dec 2009, Agustianes Umbara Suwardi wrote:
+> 
+> Hi,
+> 
+> > I wrote this code:
+> > function main()
+> > 	*- Bright background
+> > 	SetBlink(.f.)
+> > 	clear
+> > 	*- Fore: white, back: bright blue
+> > 	SetColor('W*/B')
+> > 	? 'Text 1'
+> > 	*- Fore: white, back: blue
+> > 	SetColor('W/B')
+> > 	? 'Text2'
+> > return nil
+> > When I run it on Linux, the asterisk ('*') doesn't give any effect.
+> 
+> Yes it is. In terminal GTs like GTTRM, GTCRS or GTSLN
+>    SetBlink(.f.)
+> disable using BLINK attribute in output so '*' in color strings
+> has no effect.
+> 
+> > I read on xHarbour guide that when we SetBlink() to .f. the asterisk
+> > effect is bright background.
+> 
+> Some descriptions in xHarbour guide are not precise enough.
+> Above it's standard Clipper behavior which works in programs
+> having direct access to video adapter registers. In [x]Harbour
+> only GTDOS has direct access to hardware and works exactly in
+> such way. In graphics GTs like GTXWC or GTWVT SetBlink() settings
+> are ignored and these GTs always highlight background color when
+> '*' is used in color strings and as I said in remote terminal GTs
+> (GTTRM, GTCRS or GTSLN) SetBlink(.f.) only disable using blink
+> attribute. GTWIN ignores this setting and the final behavior
+> depends on MS-Windows (in window mode it highlights background
+> and in full screen mode it depends on the video adapter registers
+> initialized by Windows for full screen text output. In OS2 there
+> is special system API call which allow to control it in console
+> window and GTOS2 uses it so it works like GTDOS (and Clipper)
+> just like described in xHarbour guide.
+> 
+> > I tried the code on several terminal
+> > emulators, and the result is:
+> > Terminal Emulator       SetBlink(.t.)        SetBlink(.f.)
+> > ----------------------------------------------------------
+> > gnome-terminal          no-effect            no-effect
+> > xterm                   blinking             no-effect
+> > rxvt                    bright-background &  no-effect
+> >                         bright-text
+> > linux-console           blinking             no-effect
+> >
+> > I'm using Harbour 1.1.0-dev-nightlybuild. Is there any workaround on the
+> > code or settings on the terminal to have a bright background?
+> 
+> There is no standard way to control remotely the behavior of BLINK
+> attribute in different terminals. From popular terminals only
+> PuTTY/PTerm (PTerm is stand alone terminal in *nix PuTTY ports)
+> has escape sequence to control its behavior remotely. Some very
+> old hardware terminals dedicated for SCO systems also had some
+> escape sequences which allows to switch the blink bit in used
+> hardware but it's not portable solution and termcap or terminfo
+> do not have any entries for it so it can be only hardcoded inside
+> the code and activated when type of remote terminal is well known
+> (TERM envvar is not enough here). If you are using PuTTY (or PTerm)
+> then you can use:
+>    fwrite( 1, chr( 27 ) + "[=0E" )  /* disable blinking, highlight bkg */
+>    fwrite( 1, chr( 27 ) + "[=1E" )  /* enable blinking */
+> in your code.
+> Anyhow in many terminals the behavior of BLINK attribute can be
+> changed on user side. Just look at configuration switches.
+> In Linux console if you are using frame buffer then BLINK attr
+> always highlights bkg color. If you are using pure VGA text mode
+> then it can be changed by some programs with root privileges which
+> can switch blink bit in hardware video adapter registers, i.e.
+> SVGATextMode has an option to control it (look for 'option "16color"'
+> in configuration file).
+> 
+> > (Sorry for my English)
+> 
+> it's perfect for me and for sure not worse then mine.
+> 
+> best regards,
+> Przemek
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+From lucasdebeltran at gmail.com  Thu Dec 17 08:04:52 2009
+From: lucasdebeltran at gmail.com (=?ISO-8859-2?Q?Lucas_De_Beltr=E1n?=)
+Date: Thu Dec 17 08:05:00 2009
+Subject: [Harbour-users] function for update dbf structure
+In-Reply-To: <4b2964aa.0802be0a.2111.ffff9c6bSMTPIN_ADDED@mx.google.com>
+References: <eb96f4980912160001s4949fc81y5759e79d90a809f2@mail.gmail.com>
+	<4b2964aa.0802be0a.2111.ffff9c6bSMTPIN_ADDED@mx.google.com>
+Message-ID: <eb96f4980912170504n3a08adb8p2f2fa18382a4753e@mail.gmail.com>
+
+Hi,
+
+Thanks, but it will be more powerful a funcion dbmodify( newstruct ).
+
+regards,
+
+2009/12/16 szekely <szekely3@enternet.hu>
+
+> Hi !
+>
+> DBCREATE() ?
+>
+> Not too simple: you make a new table, from the old table copy the
+> records into the new, and after rename it to the old name.
+>
+> Andras
+>
+> On Wed, 16 Dec 2009 09:01:07 +0100, Lucas De Beltr?n wrote:
+>
+> >Hi,
+> >
+> >Is there a function in Harbour that updates a DBF structure?. For example,
+> >updatedbf( dbffile, newstructure ).
+> >
+> >Thanks!!
+> >_______________________________________________
+> >Harbour-users mailing list (attachment size limit: 40KB)
+> >Harbour-users@harbour-project.org
+> >http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >
+>
+> ________________________________________________
+> Szekely Andras <> szekely3@enternet.hu  <> eCS 1.2 <>
+> http://www.scharenkreutzer.hu <> http://2Mai.dyndns.org<http://2mai.dyndns.org/>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From eyelagui at adinet.com.uy  Thu Dec 17 08:29:32 2009
+From: eyelagui at adinet.com.uy (Richard)
+Date: Thu Dec 17 08:29:44 2009
+Subject: [Harbour-users] function for update dbf structure
+In-Reply-To: <eb96f4980912170504n3a08adb8p2f2fa18382a4753e@mail.gmail.com>
+References: <eb96f4980912160001s4949fc81y5759e79d90a809f2@mail.gmail.com>	<4b2964aa.0802be0a.2111.ffff9c6bSMTPIN_ADDED@mx.google.com>
+	<eb96f4980912170504n3a08adb8p2f2fa18382a4753e@mail.gmail.com>
+Message-ID: <4B2A323C.5040409@adinet.com.uy>
+
+You can develop the new function by programming the necessary steps.
+
+
+Lucas De Beltr?n escribi?:
+> Hi,
+>
+> Thanks, but it will be more powerful a funcion dbmodify( newstruct ).
+>
+> regards,
+>
+> 2009/12/16 szekely <szekely3@enternet.hu>
+>
+>   
+>> Hi !
+>>
+>> DBCREATE() ?
+>>
+>> Not too simple: you make a new table, from the old table copy the
+>> records into the new, and after rename it to the old name.
+>>
+>> Andras
+>>
+>> On Wed, 16 Dec 2009 09:01:07 +0100, Lucas De Beltr?n wrote:
+>>
+>>     
+>>> Hi,
+>>>
+>>> Is there a function in Harbour that updates a DBF structure?. For example,
+>>> updatedbf( dbffile, newstructure ).
+>>>
+>>> Thanks!!
+>>> _______________________________________________
+>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>
+>>>       
+>> ________________________________________________
+>> Szekely Andras <> szekely3@enternet.hu  <> eCS 1.2 <>
+>> http://www.scharenkreutzer.hu <> http://2Mai.dyndns.org<http://2mai.dyndns.org/>
+>>
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>     
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>   
+
+From alcisoft at arrakis.es  Thu Dec 17 11:45:27 2009
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Thu Dec 17 11:47:52 2009
+Subject: [Harbour-users] Re: function for update dbf structure
+References: <eb96f4980912160001s4949fc81y5759e79d90a809f2@mail.gmail.com>	<4b2964aa.0802be0a.2111.ffff9c6bSMTPIN_ADDED@mx.google.com><eb96f4980912170504n3a08adb8p2f2fa18382a4753e@mail.gmail.com>
+	<4B2A323C.5040409@adinet.com.uy>
+Message-ID: <hgdnac$g71$1@ger.gmane.org>
+
+Hi,
+
+You must write it dbmodify thinking on errors protection;
+For example: Data width error, corruption detected, etc....
+
+Too possibillity to write init values for old records, etc...
+Too renamed memo file .fpt (or .dbt) associated
+
+Really its a complex function !
+
+Function is dbModStruct(cFile, aNewStruct)
+
+Regards
+
+
+
+
+Richard escribió en mensaje <4B2A323C.5040409@adinet.com.uy>...
+You can develop the new function by programming the necessary steps.
+
+
+Lucas De Beltrán escribió:
+> Hi,
+>
+> Thanks, but it will be more powerful a funcion dbmodify( newstruct ).
+>
+> regards,
+>
+> 2009/12/16 szekely <szekely3@enternet.hu>
+>
+>
+>> Hi !
+>>
+>> DBCREATE() ?
+>>
+>> Not too simple: you make a new table, from the old table copy the
+>> records into the new, and after rename it to the old name.
+>>
+>> Andras
+>>
+>> On Wed, 16 Dec 2009 09:01:07 +0100, Lucas De Beltrán wrote:
+>>
+>>
+>>> Hi,
+>>>
+>>> Is there a function in Harbour that updates a DBF structure?. For
+example,
+>>> updatedbf( dbffile, newstructure ).
+>>>
+>>> Thanks!!
+>>> _______________________________________________
+>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>
+>>>
+>> ________________________________________________
+>> Szekely Andras <> szekely3@enternet.hu  <>
+eCS 1.2 <>
+>> http://www.scharenkreutzer.hu <>
+http://2Mai.dyndns.org<http://2mai.dyndns.org/>
+>>
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>
+
+
+
+From maufacc at adinet.com.uy  Thu Dec 17 12:59:57 2009
+From: maufacc at adinet.com.uy (Maurizio Faccio adinet)
+Date: Thu Dec 17 13:00:06 2009
+Subject: [Harbour-users] Harbour freezes on Windows XP
+In-Reply-To: <4B290C7C.1050103@mweb.co.za>
+References: <4B28C09C.6090708@adinet.com.uy> <4B290C7C.1050103@mweb.co.za>
+Message-ID: <4B2A719D.7000603@adinet.com.uy>
+
+---
+Massimo:
+
+Usually while browsing.
+
+>>in your prg inkey function with little bug
+
+What do you mean, inkey of harbour buggy?
+
+Thank you
+---
+Alex:
+
+Really good tools.
+I've try the same program, running on local disk and cannot make 
+freeze... maybe a samba trouble. I will add more logging  to samba, so  
+maybe  i can find what is happening.
+
+Thank you
+
+With sysinternals. 3:02:02 hangs, and then 3:03:05 start working again. 
+Here I paste the sysinternals process monitor results.
+
+
+
+
+
+"03:02:02.1631029 
+p.m.","SQQQ41~Y.EXE","2000","ReadFile","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Offset: 
+0, Length: 1,024"
+"03:02:02.1636566 
+p.m.","SQQQ41~Y.EXE","2000","UnlockFileSingle","F:\MERBE\DATOS\REPUEST2.NTX","FAST 
+IO DISALLOWED","Offset: 1,000,000,000, Length: 1"
+"03:02:02.1636660 
+p.m.","SQQQ41~Y.EXE","2000","UnlockFileSingle","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Offset: 
+1,000,000,000, Length: 1"
+"03:02:02.1639187 
+p.m.","SQQQ41~Y.EXE","2000","ReadFile","F:\MERBE\DATOS\REPUESTO.DBF","SUCCESS","Offset: 
+543,630, Length: 119"
+"03:02:02.1642437 
+p.m.","SQQQ41~Y.EXE","2000","LockFile","F:\MERBE\DATOS\REPUEST2.NTX","FAST 
+IO DISALLOWED","Exclusive: False, Offset: 1,000,000,000, Length: 1, Fail 
+Immediately: False"
+"03:02:02.1642483 
+p.m.","SQQQ41~Y.EXE","2000","LockFile","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Exclusive: 
+False, Offset: 1,000,000,000, Length: 1, Fail Immediately: False"
+"03:02:02.1645279 
+p.m.","SQQQ41~Y.EXE","2000","ReadFile","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Offset: 
+0, Length: 1,024"
+"03:02:02.1650874 
+p.m.","SQQQ41~Y.EXE","2000","UnlockFileSingle","F:\MERBE\DATOS\REPUEST2.NTX","FAST 
+IO DISALLOWED","Offset: 1,000,000,000, Length: 1"
+"03:02:02.1650948 
+p.m.","SQQQ41~Y.EXE","2000","UnlockFileSingle","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Offset: 
+1,000,000,000, Length: 1"
+"03:02:02.1654132 
+p.m.","SQQQ41~Y.EXE","2000","ReadFile","F:\MERBE\DATOS\REPUESTO.DBF","SUCCESS","Offset: 
+551,365, Length: 119"
+"03:02:02.1658775 
+p.m.","SQQQ41~Y.EXE","2000","LockFile","F:\MERBE\DATOS\REPUEST2.NTX","FAST 
+IO DISALLOWED","Exclusive: False, Offset: 1,000,000,000, Length: 1, Fail 
+Immediately: False"
+"03:02:02.1658865 
+p.m.","SQQQ41~Y.EXE","2000","LockFile","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Exclusive: 
+False, Offset: 1,000,000,000, Length: 1, Fail Immediately: False"
+"03:02:03.0954907 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:04.0954770 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:05.0954623 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:06.0954604 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:07.0954293 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:08.0954055 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:09.0953959 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:10.0953865 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:11.0953737 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:12.0953595 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:13.0953369 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:14.0953387 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:15.0953060 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:16.0952909 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:17.0953261 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:18.0953672 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:19.0952421 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:20.0952378 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:21.0952222 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:22.0952018 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:23.0951851 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:24.0951632 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:25.0951529 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:26.0951414 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:27.0951138 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:28.0951187 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:29.0950970 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:30.0950723 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:31.0950562 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:32.0950560 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:33.0950418 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:34.0950023 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:35.0950069 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:36.0949699 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:37.0949443 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:38.0949313 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:39.0949221 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:40.0948816 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:41.0949088 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:42.0948790 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:43.0948700 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:44.0948507 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:45.0948306 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:46.0948139 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:47.0948173 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:48.0948045 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:49.0948279 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:50.0947667 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:51.0947246 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:52.0948041 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:53.0946992 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:54.0947194 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:55.0947439 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:56.0946553 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:57.0946324 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:58.0946211 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:02:59.0946108 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:03:00.0945903 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:03:01.0946679 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:03:02.0945633 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:03:03.0945350 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:03:04.0946091 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:03:05.0945163 p.m.","SQQQ41~Y.EXE","2000","Process 
+Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time: 
+34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+"03:03:05.2979679 
+p.m.","SQQQ41~Y.EXE","2000","ReadFile","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Offset: 
+0, Length: 1,024"
+"03:03:05.2988192 
+p.m.","SQQQ41~Y.EXE","2000","UnlockFileSingle","F:\MERBE\DATOS\REPUEST2.NTX","FAST 
+IO DISALLOWED","Offset: 1,000,000,000, Length: 1"
+"03:03:05.2988276 
+p.m.","SQQQ41~Y.EXE","2000","UnlockFileSingle","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Offset: 
+1,000,000,000, Length: 1"
+"03:03:05.2993297 
+p.m.","SQQQ41~Y.EXE","2000","ReadFile","F:\MERBE\DATOS\REPUESTO.DBF","SUCCESS","Offset: 
+546,605, Length: 119"
+"03:03:05.2999441 
+p.m.","SQQQ41~Y.EXE","2000","LockFile","F:\MERBE\DATOS\REPUEST2.NTX","FAST 
+IO DISALLOWED","Exclusive: False, Offset: 1,000,000,000, Length: 1, Fail 
+Immediately: False"
+"03:03:05.2999519 
+p.m.","SQQQ41~Y.EXE","2000","LockFile","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Exclusive: 
+False, Offset: 1,000,000,000, Length: 1, Fail Immediately: False"
+"03:03:05.3002514 
+p.m.","SQQQ41~Y.EXE","2000","ReadFile","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Offset: 
+0, Length: 1,024"
+
+Alex Strickland escribi?:
+> Maurizio Faccio adinet wrote:
+>
+>> I will keep searching more data to find where the trouble is
+>>
+>> Thank you in advance.
+>
+> SysInternals has some nice logging tools (free), they were bought by 
+> Microsoft - www.sysinternals.com will take you to MS site.
+>
+> Good luck.
+>
+> Regards
+> Alex
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>
+
+-- 
+________________________
+Ing. Maurizio Faccio
+Merbe Ltda.
+Av. Italia 2346. Paysand?, Uruguay
+web: www.merbe.com.uy
+Tel : 598-72-29043 Int. 130
+Fax: 598-72-22591 
+Cel: 598-99-007030
+
+
+
+
+
+From mbelgrano at deltain.it  Thu Dec 17 13:05:19 2009
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Thu Dec 17 13:05:47 2009
+Subject: [Harbour-users] Re: function for update dbf structure
+In-Reply-To: <hgdnac$g71$1@ger.gmane.org>
+References: <eb96f4980912160001s4949fc81y5759e79d90a809f2@mail.gmail.com> 
+	<4b2964aa.0802be0a.2111.ffff9c6bSMTPIN_ADDED@mx.google.com> 
+	<eb96f4980912170504n3a08adb8p2f2fa18382a4753e@mail.gmail.com> 
+	<4B2A323C.5040409@adinet.com.uy> <hgdnac$g71$1@ger.gmane.org>
+Message-ID: <609353e70912171005qfc28389j7b013bd8151a8afa@mail.gmail.com>
+
+dbcreate(D_APP,ADBF) // Create nes dbf with new structure
+use
+use &(D_APP) alias APPOGGIO && open it
+append from &(D_FDBF)          // append data
+use
+Now rename
+
+2009/12/17 Antonio Martinez <alcisoft@arrakis.es>:
+> Hi,
+>
+> You must write it dbmodify thinking on errors protection;
+> For example: Data width error, corruption detected, etc....
+>
+> Too possibillity to write init values for old records, etc...
+> Too renamed memo file .fpt (or .dbt) associated
+>
+> Really its a complex function !
+>
+> Function is dbModStruct(cFile, aNewStruct)
+>
+> Regards
+>
+>
+>
+>
+> Richard escribi? en mensaje <4B2A323C.5040409@adinet.com.uy>...
+> You can develop the new function by programming the necessary steps.
+>
+>
+> Lucas De Beltr?n escribi?:
+>> Hi,
+>>
+>> Thanks, but it will be more powerful a funcion dbmodify( newstruct ).
+>>
+>> regards,
+>>
+>> 2009/12/16 szekely <szekely3@enternet.hu>
+>>
+>>
+>>> Hi !
+>>>
+>>> DBCREATE() ?
+>>>
+>>> Not too simple: you make a new table, from the old table copy the
+>>> records into the new, and after rename it to the old name.
+>>>
+>>> Andras
+>>>
+>>> On Wed, 16 Dec 2009 09:01:07 +0100, Lucas De Beltr?n wrote:
+>>>
+>>>
+>>>> Hi,
+>>>>
+>>>> Is there a function in Harbour that updates a DBF structure?. For
+> example,
+>>>> updatedbf( dbffile, newstructure ).
+>>>>
+>>>> Thanks!!
+>>>> _______________________________________________
+>>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>>> Harbour-users@harbour-project.org
+>>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>>
+>>>>
+>>> ________________________________________________
+>>> Szekely Andras <> szekely3@enternet.hu ?<>
+> eCS 1.2 <>
+>>> http://www.scharenkreutzer.hu <>
+> http://2Mai.dyndns.org<http://2mai.dyndns.org/>
+>>>
+>>> _______________________________________________
+>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>
+>>>
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>
+>
+>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+From mbelgrano at deltain.it  Thu Dec 17 14:56:36 2009
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Thu Dec 17 14:57:04 2009
+Subject: [Harbour-users] Harbour freezes on Windows XP
+In-Reply-To: <4B2A719D.7000603@adinet.com.uy>
+References: <4B28C09C.6090708@adinet.com.uy> <4B290C7C.1050103@mweb.co.za> 
+	<4B2A719D.7000603@adinet.com.uy>
+Message-ID: <609353e70912171156h159a6449p6c27fdd78790038@mail.gmail.com>
+
+Maj be a samba problem, can you try on a shared folder by xp/2003 server?
+Can you reproduce a small sample that show problem so i can try
+2009/12/17 Maurizio Faccio adinet <maufacc@adinet.com.uy>:
+> ---
+> Massimo:
+>
+> Usually while browsing.
+>
+>>> in your prg inkey function with little bug
+>
+> What do you mean, inkey of harbour buggy?
+>
+> Thank you
+> ---
+> Alex:
+>
+> Really good tools.
+> I've try the same program, running on local disk and cannot make freeze...
+> maybe a samba trouble. I will add more logging ?to samba, so ?maybe ?i can
+> find what is happening.
+>
+> Thank you
+>
+> With sysinternals. 3:02:02 hangs, and then 3:03:05 start working again. Here
+> I paste the sysinternals process monitor results.
+>
+>
+>
+>
+>
+> "03:02:02.1631029
+> p.m.","SQQQ41~Y.EXE","2000","ReadFile","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Offset:
+> 0, Length: 1,024"
+> "03:02:02.1636566
+> p.m.","SQQQ41~Y.EXE","2000","UnlockFileSingle","F:\MERBE\DATOS\REPUEST2.NTX","FAST
+> IO DISALLOWED","Offset: 1,000,000,000, Length: 1"
+> "03:02:02.1636660
+> p.m.","SQQQ41~Y.EXE","2000","UnlockFileSingle","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Offset:
+> 1,000,000,000, Length: 1"
+> "03:02:02.1639187
+> p.m.","SQQQ41~Y.EXE","2000","ReadFile","F:\MERBE\DATOS\REPUESTO.DBF","SUCCESS","Offset:
+> 543,630, Length: 119"
+> "03:02:02.1642437
+> p.m.","SQQQ41~Y.EXE","2000","LockFile","F:\MERBE\DATOS\REPUEST2.NTX","FAST
+> IO DISALLOWED","Exclusive: False, Offset: 1,000,000,000, Length: 1, Fail
+> Immediately: False"
+> "03:02:02.1642483
+> p.m.","SQQQ41~Y.EXE","2000","LockFile","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Exclusive:
+> False, Offset: 1,000,000,000, Length: 1, Fail Immediately: False"
+> "03:02:02.1645279
+> p.m.","SQQQ41~Y.EXE","2000","ReadFile","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Offset:
+> 0, Length: 1,024"
+> "03:02:02.1650874
+> p.m.","SQQQ41~Y.EXE","2000","UnlockFileSingle","F:\MERBE\DATOS\REPUEST2.NTX","FAST
+> IO DISALLOWED","Offset: 1,000,000,000, Length: 1"
+> "03:02:02.1650948
+> p.m.","SQQQ41~Y.EXE","2000","UnlockFileSingle","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Offset:
+> 1,000,000,000, Length: 1"
+> "03:02:02.1654132
+> p.m.","SQQQ41~Y.EXE","2000","ReadFile","F:\MERBE\DATOS\REPUESTO.DBF","SUCCESS","Offset:
+> 551,365, Length: 119"
+> "03:02:02.1658775
+> p.m.","SQQQ41~Y.EXE","2000","LockFile","F:\MERBE\DATOS\REPUEST2.NTX","FAST
+> IO DISALLOWED","Exclusive: False, Offset: 1,000,000,000, Length: 1, Fail
+> Immediately: False"
+> "03:02:02.1658865
+> p.m.","SQQQ41~Y.EXE","2000","LockFile","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Exclusive:
+> False, Offset: 1,000,000,000, Length: 1, Fail Immediately: False"
+> "03:02:03.0954907 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:04.0954770 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:05.0954623 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:06.0954604 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:07.0954293 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:08.0954055 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:09.0953959 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:10.0953865 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:11.0953737 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:12.0953595 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:13.0953369 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:14.0953387 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:15.0953060 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:16.0952909 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:17.0953261 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:18.0953672 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:19.0952421 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:20.0952378 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:21.0952222 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:22.0952018 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:23.0951851 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:24.0951632 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:25.0951529 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:26.0951414 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:27.0951138 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:28.0951187 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:29.0950970 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:30.0950723 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:31.0950562 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:32.0950560 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:33.0950418 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:34.0950023 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:35.0950069 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:36.0949699 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:37.0949443 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:38.0949313 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:39.0949221 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:40.0948816 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:41.0949088 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:42.0948790 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:43.0948700 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:44.0948507 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:45.0948306 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:46.0948139 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:47.0948173 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:48.0948045 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:49.0948279 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:50.0947667 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:51.0947246 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:52.0948041 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:53.0946992 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:54.0947194 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:55.0947439 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:56.0946553 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:57.0946324 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:58.0946211 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:02:59.0946108 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:03:00.0945903 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:03:01.0946679 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:03:02.0945633 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:03:03.0945350 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:03:04.0946091 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:03:05.0945163 p.m.","SQQQ41~Y.EXE","2000","Process
+> Profiling","","SUCCESS","User Time: 7.9531250 seconds, Kernel Time:
+> 34.8906250 seconds, Private Bytes: 2,199,552, Working Set: 1,724,416"
+> "03:03:05.2979679
+> p.m.","SQQQ41~Y.EXE","2000","ReadFile","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Offset:
+> 0, Length: 1,024"
+> "03:03:05.2988192
+> p.m.","SQQQ41~Y.EXE","2000","UnlockFileSingle","F:\MERBE\DATOS\REPUEST2.NTX","FAST
+> IO DISALLOWED","Offset: 1,000,000,000, Length: 1"
+> "03:03:05.2988276
+> p.m.","SQQQ41~Y.EXE","2000","UnlockFileSingle","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Offset:
+> 1,000,000,000, Length: 1"
+> "03:03:05.2993297
+> p.m.","SQQQ41~Y.EXE","2000","ReadFile","F:\MERBE\DATOS\REPUESTO.DBF","SUCCESS","Offset:
+> 546,605, Length: 119"
+> "03:03:05.2999441
+> p.m.","SQQQ41~Y.EXE","2000","LockFile","F:\MERBE\DATOS\REPUEST2.NTX","FAST
+> IO DISALLOWED","Exclusive: False, Offset: 1,000,000,000, Length: 1, Fail
+> Immediately: False"
+> "03:03:05.2999519
+> p.m.","SQQQ41~Y.EXE","2000","LockFile","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Exclusive:
+> False, Offset: 1,000,000,000, Length: 1, Fail Immediately: False"
+> "03:03:05.3002514
+> p.m.","SQQQ41~Y.EXE","2000","ReadFile","F:\MERBE\DATOS\REPUEST2.NTX","SUCCESS","Offset:
+> 0, Length: 1,024"
+>
+> Alex Strickland escribi?:
+>>
+>> Maurizio Faccio adinet wrote:
+>>
+>>> I will keep searching more data to find where the trouble is
+>>>
+>>> Thank you in advance.
+>>
+>> SysInternals has some nice logging tools (free), they were bought by
+>> Microsoft - www.sysinternals.com will take you to MS site.
+>>
+>> Good luck.
+>>
+>> Regards
+>> Alex
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>
+>
+> --
+> ________________________
+> Ing. Maurizio Faccio
+>
+
+
+
+-- 
+Massimo Belgrano
+From alcisoft at arrakis.es  Fri Dec 18 04:02:56 2009
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Fri Dec 18 04:05:24 2009
+Subject: [Harbour-users] Re: Re: function for update dbf structure
+References: <eb96f4980912160001s4949fc81y5759e79d90a809f2@mail.gmail.com>
+	<4b2964aa.0802be0a.2111.ffff9c6bSMTPIN_ADDED@mx.google.com>
+	<eb96f4980912170504n3a08adb8p2f2fa18382a4753e@mail.gmail.com>
+	<4B2A323C.5040409@adinet.com.uy> <hgdnac$g71$1@ger.gmane.org>
+	<609353e70912171005qfc28389j7b013bd8151a8afa@mail.gmail.com>
+Message-ID: <hgfgjh$lag$1@ger.gmane.org>
+
+Massimo
+Imagine it:
+
+Scenario: Temp.Dbf     Struct is {{"NField", "N", 10, 0} } and 1000 records
+
+
+FUNCTION Main
+Local aNewStruct:= {{"NField", "N", 3, 0}}
+
+
+// This generates run time error data width error
+dbModStruct("Temp.Dbf", aNewStruct)
+
+RETURN NIL
+
+
+
+
+Massimo Belgrano escribió en mensaje
+<609353e70912171005qfc28389j7b013bd8151a8afa@mail.gmail.com>...
+dbcreate(D_APP,ADBF) // Create nes dbf with new structure
+use
+use &(D_APP) alias APPOGGIO && open it
+append from &(D_FDBF)          // append data
+use
+Now rename
+
+2009/12/17 Antonio Martinez
+<alcisoft@arrakis.es>:
+> Hi,
+>
+> You must write it dbmodify thinking on errors protection;
+> For example: Data width error, corruption detected, etc....
+>
+> Too possibillity to write init values for old records, etc...
+> Too renamed memo file .fpt (or .dbt) associated
+>
+> Really its a complex function !
+>
+> Function is dbModStruct(cFile, aNewStruct)
+>
+> Regards
+>
+>
+>
+>
+> Richard escribió en mensaje
+<4B2A323C.5040409@adinet.com.uy>...
+> You can develop the new function by programming the necessary steps.
+>
+>
+> Lucas De Beltrán escribió:
+>> Hi,
+>>
+>> Thanks, but it will be more powerful a funcion dbmodify( newstruct ).
+>>
+>> regards,
+>>
+>> 2009/12/16 szekely <szekely3@enternet.hu>
+>>
+>>
+>>> Hi !
+>>>
+>>> DBCREATE() ?
+>>>
+>>> Not too simple: you make a new table, from the old table copy the
+>>> records into the new, and after rename it to the old name.
+>>>
+>>> Andras
+>>>
+>>> On Wed, 16 Dec 2009 09:01:07 +0100, Lucas De Beltrán wrote:
+>>>
+>>>
+>>>> Hi,
+>>>>
+>>>> Is there a function in Harbour that updates a DBF structure?. For
+> example,
+>>>> updatedbf( dbffile, newstructure ).
+>>>>
+>>>> Thanks!!
+>>>> _______________________________________________
+>>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>>> Harbour-users@harbour-project.org
+>>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>>
+>>>>
+>>> ________________________________________________
+>>> Szekely Andras <> szekely3@enternet.hu <>
+> eCS 1.2 <>
+>>> http://www.scharenkreutzer.hu <>
+> http://2Mai.dyndns.org<http://2mai.dyndns.org/>
+>>>
+>>> _______________________________________________
+>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>
+>>>
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>
+>
+>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+--
+Massimo Belgrano
+
+
+
+From lucasdebeltran at gmail.com  Fri Dec 18 07:19:31 2009
+From: lucasdebeltran at gmail.com (=?ISO-8859-1?Q?Lucas_De_Beltr=E1n?=)
+Date: Fri Dec 18 07:19:40 2009
+Subject: [Harbour-users] Re: Re: function for update dbf structure
+In-Reply-To: <hgfgjh$lag$1@ger.gmane.org>
+References: <eb96f4980912160001s4949fc81y5759e79d90a809f2@mail.gmail.com>
+	<4b2964aa.0802be0a.2111.ffff9c6bSMTPIN_ADDED@mx.google.com>
+	<eb96f4980912170504n3a08adb8p2f2fa18382a4753e@mail.gmail.com>
+	<4B2A323C.5040409@adinet.com.uy> <hgdnac$g71$1@ger.gmane.org>
+	<609353e70912171005qfc28389j7b013bd8151a8afa@mail.gmail.com>
+	<hgfgjh$lag$1@ger.gmane.org>
+Message-ID: <eb96f4980912180419j5f9d74c5w50ccef5030fc7b4b@mail.gmail.com>
+
+I agree.
+
+It is a very complex fuction.
+
+First of all, the function should compare the exsisting structure with the
+new one and peform the changes.
+
+Next point, is data width checking.
+
+Last point, inherint existing data and adapting them to the new structure.
+
+We need a helping hand from the gurus!!!.
+
+
+best regards,
+
+2009/12/18 Antonio Martinez <alcisoft@arrakis.es>
+
+> Massimo
+> Imagine it:
+>
+> Scenario: Temp.Dbf     Struct is {{"NField", "N", 10, 0} } and 1000 records
+>
+>
+> FUNCTION Main
+> Local aNewStruct:= {{"NField", "N", 3, 0}}
+>
+>
+> // This generates run time error data width error
+> dbModStruct("Temp.Dbf", aNewStruct)
+>
+> RETURN NIL
+>
+>
+>
+>
+> Massimo Belgrano escribi? en mensaje
+> <609353e70912171005qfc28389j7b013bd8151a8afa@mail.gmail.com>...
+>  dbcreate(D_APP,ADBF) // Create nes dbf with new structure
+> use
+> use &(D_APP) alias APPOGGIO && open it
+> append from &(D_FDBF)          // append data
+> use
+> Now rename
+>
+> 2009/12/17 Antonio Martinez
+> <alcisoft@arrakis.es>:
+> > Hi,
+> >
+> > You must write it dbmodify thinking on errors protection;
+> > For example: Data width error, corruption detected, etc....
+> >
+> > Too possibillity to write init values for old records, etc...
+> > Too renamed memo file .fpt (or .dbt) associated
+> >
+> > Really its a complex function !
+> >
+> > Function is dbModStruct(cFile, aNewStruct)
+> >
+> > Regards
+> >
+> >
+> >
+> >
+> > Richard escribi? en mensaje
+> <4B2A323C.5040409@adinet.com.uy>...
+> > You can develop the new function by programming the necessary steps.
+> >
+> >
+> > Lucas De Beltr?n escribi?:
+> >> Hi,
+> >>
+> >> Thanks, but it will be more powerful a funcion dbmodify( newstruct ).
+> >>
+> >> regards,
+> >>
+> >> 2009/12/16 szekely <szekely3@enternet.hu>
+> >>
+> >>
+> >>> Hi !
+> >>>
+> >>> DBCREATE() ?
+> >>>
+> >>> Not too simple: you make a new table, from the old table copy the
+> >>> records into the new, and after rename it to the old name.
+> >>>
+> >>> Andras
+> >>>
+> >>> On Wed, 16 Dec 2009 09:01:07 +0100, Lucas De Beltr?n wrote:
+> >>>
+> >>>
+> >>>> Hi,
+> >>>>
+> >>>> Is there a function in Harbour that updates a DBF structure?. For
+> > example,
+> >>>> updatedbf( dbffile, newstructure ).
+> >>>>
+> >>>> Thanks!!
+> >>>> _______________________________________________
+> >>>> Harbour-users mailing list (attachment size limit: 40KB)
+> >>>> Harbour-users@harbour-project.org
+> >>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >>>>
+> >>>>
+> >>> ________________________________________________
+> >>> Szekely Andras <> szekely3@enternet.hu <>
+> > eCS 1.2 <>
+> >>> http://www.scharenkreutzer.hu <>
+> > http://2Mai.dyndns.org <http://2mai.dyndns.org/><http://2mai.dyndns.org/
+> >
+> >>>
+> >>> _______________________________________________
+> >>> Harbour-users mailing list (attachment size limit: 40KB)
+> >>> Harbour-users@harbour-project.org
+> >>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >>>
+> >>>
+> >> _______________________________________________
+> >> Harbour-users mailing list (attachment size limit: 40KB)
+> >> Harbour-users@harbour-project.org
+> >> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >>
+> >>
+> >
+> >
+> >
+> > _______________________________________________
+> > Harbour-users mailing list (attachment size limit: 40KB)
+> > Harbour-users@harbour-project.org
+> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >
+>
+>
+>
+> --
+> Massimo Belgrano
+>
+>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From alcisoft at arrakis.es  Fri Dec 18 10:36:52 2009
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Fri Dec 18 10:39:13 2009
+Subject: [Harbour-users] Re: Re: Re: function for update dbf structure
+References: <eb96f4980912160001s4949fc81y5759e79d90a809f2@mail.gmail.com><4b2964aa.0802be0a.2111.ffff9c6bSMTPIN_ADDED@mx.google.com><eb96f4980912170504n3a08adb8p2f2fa18382a4753e@mail.gmail.com><4B2A323C.5040409@adinet.com.uy>
+	<hgdnac$g71$1@ger.gmane.org><609353e70912171005qfc28389j7b013bd8151a8afa@mail.gmail.com><hgfgjh$lag$1@ger.gmane.org>
+	<eb96f4980912180419j5f9d74c5w50ccef5030fc7b4b@mail.gmail.com>
+Message-ID: <hgg7lr$2b1$1@ger.gmane.org>
+
+Lucas,
+
+On light thinking:
+
+dbModStruct(cFile, aNewStruct)
+
+1st. SET DELETED OFF    (For APPEND FROM)
+2st. cFile not in use
+3rd.  Renamed (.dbf and .ftp (or .dbt) files)
+4th. disk space available... minor question
+5th. init value on old records existing
+6th. during operation if error then renamed to original names (BEGIN
+SEQUENCE)
+7th  ... thinking.....
+
+Regards
+
+
+Lucas De Beltrán escribió en mensaje ...
+I agree.
+
+It is a very complex fuction.
+
+First of all, the function should compare the exsisting structure with the
+new one and peform the changes.
+
+Next point, is data width checking.
+
+Last point, inherint existing data and adapting them to the new structure.
+
+We need a helping hand from the gurus!!!.
+
+
+best regards,
+
+2009/12/18 Antonio Martinez
+<alcisoft@arrakis.es>
+
+> Massimo
+> Imagine it:
+>
+> Scenario: Temp.Dbf     Struct is {{"NField", "N", 10, 0} } and 1000
+records
+>
+>
+> FUNCTION Main
+> Local aNewStruct:= {{"NField", "N", 3, 0}}
+>
+>
+> // This generates run time error data width error
+> dbModStruct("Temp.Dbf", aNewStruct)
+>
+> RETURN NIL
+>
+>
+>
+>
+> Massimo Belgrano escribió en mensaje
+>
+<609353e70912171005qfc28389j7b013bd8151a8afa-JsoAwUIsXosN+BqQ9rBEUg@public.g
+mane.org>...
+>  dbcreate(D_APP,ADBF) // Create nes dbf with new structure
+> use
+> use &(D_APP) alias APPOGGIO && open it
+> append from &(D_FDBF)          // append data
+> use
+> Now rename
+>
+> 2009/12/17 Antonio Martinez
+> <alcisoft@arrakis.es>:
+> > Hi,
+> >
+> > You must write it dbmodify thinking on errors protection;
+> > For example: Data width error, corruption detected, etc....
+> >
+> > Too possibillity to write init values for old records, etc...
+> > Too renamed memo file .fpt (or .dbt) associated
+> >
+> > Really its a complex function !
+> >
+> > Function is dbModStruct(cFile, aNewStruct)
+> >
+> > Regards
+> >
+> >
+> >
+> >
+> > Richard escribió en mensaje
+> <4B2A323C.5040409@adinet.com.uy>...
+> > You can develop the new function by programming the necessary steps.
+> >
+> >
+> > Lucas De Beltrán escribió:
+> >> Hi,
+> >>
+> >> Thanks, but it will be more powerful a funcion dbmodify( newstruct ).
+> >>
+> >> regards,
+> >>
+> >> 2009/12/16 szekely <szekely3@enternet.hu>
+> >>
+> >>
+> >>> Hi !
+> >>>
+> >>> DBCREATE() ?
+> >>>
+> >>> Not too simple: you make a new table, from the old table copy the
+> >>> records into the new, and after rename it to the old name.
+> >>>
+> >>> Andras
+> >>>
+> >>> On Wed, 16 Dec 2009 09:01:07 +0100, Lucas De Beltrán wrote:
+> >>>
+> >>>
+> >>>> Hi,
+> >>>>
+> >>>> Is there a function in Harbour that updates a DBF structure?. For
+> > example,
+> >>>> updatedbf( dbffile, newstructure ).
+> >>>>
+> >>>> Thanks!!
+> >>>> _______________________________________________
+> >>>> Harbour-users mailing list (attachment size limit: 40KB)
+> >>>> Harbour-users@harbour-project.org
+> >>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >>>>
+> >>>>
+> >>> ________________________________________________
+> >>> Szekely Andras <> szekely3@enternet.hu <>
+> > eCS 1.2 <>
+> >>> http://www.scharenkreutzer.hu <>
+> > http://2Mai.dyndns.org <http://2mai.dyndns.org/><http://2mai.dyndns.org/
+> >
+> >>>
+> >>> _______________________________________________
+> >>> Harbour-users mailing list (attachment size limit: 40KB)
+> >>> Harbour-users@harbour-project.org
+> >>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >>>
+> >>>
+> >> _______________________________________________
+> >> Harbour-users mailing list (attachment size limit: 40KB)
+> >> Harbour-users@harbour-project.org
+> >> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >>
+> >>
+> >
+> >
+> >
+> > _______________________________________________
+> > Harbour-users mailing list (attachment size limit: 40KB)
+> > Harbour-users@harbour-project.org
+> > http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> >
+>
+>
+>
+> --
+> Massimo Belgrano
+>
+>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+From alcisoft at arrakis.es  Fri Dec 18 10:45:19 2009
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Fri Dec 18 10:47:33 2009
+Subject: [Harbour-users] Re: Re: function for update dbf structure
+References: <eb96f4980912160001s4949fc81y5759e79d90a809f2@mail.gmail.com><4b2964aa.0802be0a.2111.ffff9c6bSMTPIN_ADDED@mx.google.com><eb96f4980912170504n3a08adb8p2f2fa18382a4753e@mail.gmail.com><4B2A323C.5040409@adinet.com.uy>
+	<hgdnac$g71$1@ger.gmane.org><609353e70912171005qfc28389j7b013bd8151a8afa@mail.gmail.com>
+	<hgfgjh$lag$1@ger.gmane.org>
+Message-ID: <hgg85i$40a$1@ger.gmane.org>
+
+7th. previous test for neccessary or not to update dbf (looking at
+structures)
+
+
+Antonio Martinez escribió en mensaje ...
+>Massimo
+>Imagine it:
+>
+>Scenario: Temp.Dbf     Struct is {{"NField", "N", 10, 0} } and 1000 records
+>
+>
+>FUNCTION Main
+>Local aNewStruct:= {{"NField", "N", 3, 0}}
+>
+>
+>// This generates run time error data width error
+>dbModStruct("Temp.Dbf", aNewStruct)
+>
+>RETURN NIL
+>
+>
+>
+>
+>Massimo Belgrano escribió en mensaje
+><609353e70912171005qfc28389j7b013bd8151a8afa-JsoAwUIsXosN+BqQ9rBEUg@public.
+gmane.org>...
+>dbcreate(D_APP,ADBF) // Create nes dbf with new structure
+>use
+>use &(D_APP) alias APPOGGIO && open it
+>append from &(D_FDBF)          // append data
+>use
+>Now rename
+>
+>2009/12/17 Antonio Martinez
+><alcisoft@arrakis.es>:
+>> Hi,
+>>
+>> You must write it dbmodify thinking on errors protection;
+>> For example: Data width error, corruption detected, etc....
+>>
+>> Too possibillity to write init values for old records, etc...
+>> Too renamed memo file .fpt (or .dbt) associated
+>>
+>> Really its a complex function !
+>>
+>> Function is dbModStruct(cFile, aNewStruct)
+>>
+>> Regards
+>>
+>>
+>>
+>>
+>> Richard escribió en mensaje
+><4B2A323C.5040409@adinet.com.uy>...
+>> You can develop the new function by programming the necessary steps.
+>>
+>>
+>> Lucas De Beltrán escribió:
+>>> Hi,
+>>>
+>>> Thanks, but it will be more powerful a funcion dbmodify( newstruct ).
+>>>
+>>> regards,
+>>>
+>>> 2009/12/16 szekely <szekely3@enternet.hu>
+>>>
+>>>
+>>>> Hi !
+>>>>
+>>>> DBCREATE() ?
+>>>>
+>>>> Not too simple: you make a new table, from the old table copy the
+>>>> records into the new, and after rename it to the old name.
+>>>>
+>>>> Andras
+>>>>
+>>>> On Wed, 16 Dec 2009 09:01:07 +0100, Lucas De Beltrán wrote:
+>>>>
+>>>>
+>>>>> Hi,
+>>>>>
+>>>>> Is there a function in Harbour that updates a DBF structure?. For
+>> example,
+>>>>> updatedbf( dbffile, newstructure ).
+>>>>>
+>>>>> Thanks!!
+>>>>> _______________________________________________
+>>>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>>>> Harbour-users@harbour-project.org
+>>>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>>>
+>>>>>
+>>>> ________________________________________________
+>>>> Szekely Andras <> szekely3@enternet.hu <>
+>> eCS 1.2 <>
+>>>> http://www.scharenkreutzer.hu <>
+>> http://2Mai.dyndns.org<http://2mai.dyndns.org/>
+>>>>
+>>>> _______________________________________________
+>>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>>> Harbour-users@harbour-project.org
+>>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>>
+>>>>
+>>> _______________________________________________
+>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>
+>>>
+>>
+>>
+>>
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>
+>
+>
+>--
+>Massimo Belgrano
+
+
+
+From alcisoft at arrakis.es  Fri Dec 18 11:01:52 2009
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Fri Dec 18 11:10:46 2009
+Subject: [Harbour-users] Clipbar5.Lib, someone know ?
+Message-ID: <hgg9h3$8us$1@ger.gmane.org>
+
+Hi,
+
+I need sources from Clipbar5.Lib. I have Clipbar5 in Clipper program and i
+need recompile in (x)harbour ?
+
+Regards
+
+
+
+
+From eyelagui at adinet.com.uy  Fri Dec 18 10:39:14 2009
+From: eyelagui at adinet.com.uy (Richard)
+Date: Sat Dec 19 17:40:44 2009
+Subject: [Harbour-users] Re: Re: function for update dbf structure
+In-Reply-To: <eb96f4980912180419j5f9d74c5w50ccef5030fc7b4b@mail.gmail.com>
+References: <eb96f4980912160001s4949fc81y5759e79d90a809f2@mail.gmail.com>	<4b2964aa.0802be0a.2111.ffff9c6bSMTPIN_ADDED@mx.google.com>	<eb96f4980912170504n3a08adb8p2f2fa18382a4753e@mail.gmail.com>	<4B2A323C.5040409@adinet.com.uy>
+	<hgdnac$g71$1@ger.gmane.org>	<609353e70912171005qfc28389j7b013bd8151a8afa@mail.gmail.com>	<hgfgjh$lag$1@ger.gmane.org>
+	<eb96f4980912180419j5f9d74c5w50ccef5030fc7b4b@mail.gmail.com>
+Message-ID: <4B2BA222.707@adinet.com.uy>
+
+OK... now... you can write every one of the routines to make every one 
+of the steps needed.
+As you can think on the way to make every check, you can write a routine 
+that do it every check.
+As you can think on the way to make every change, you can write a 
+routine that do every change.
+
+So... is not that hard and once you have it writen you can:
+  a) Keep it and use it on every program you like
+  b) Share it with the world.
+
+The opensource planet is not only to go and ask, is also to go and give 
+but the most important thing is that you can go and think by yourself.
+
+I can?t call me a programmer if i'm not minded to write at least 1 
+routine by myself.
+If i don't do it, i'm only a puzzle assembler, where i'm always asking 
+others for pieces to complete my own endless puzzle.
+
+I'm sorry if this makes anyone bother or get angry, but is what i'm seing.
+You can't just go and ask for everything you "don't want/like to do".
+You can ask for something you don't know or you don't figure... but if 
+you know and/or you can figure, you can do it.
+
+Come on people, bring back to life the real programmers or go sell hot dogs.
+
+The "thing" you are asking is that someone else writes what you need 
+because you dont want to do it, and it will end by having a .prg writen 
+by someone just because someone else didn't want to do it and asked for it.
+
+And i say a .prg because you can do that with 100% dbase code.... yes, 
+dbase, not even 1 "new" function is needed.
+
+
+
+Lucas De Beltr?n escribi?:
+> I agree.
+>
+> It is a very complex fuction.
+>
+> First of all, the function should compare the exsisting structure with the
+> new one and peform the changes.
+>
+> Next point, is data width checking.
+>
+> Last point, inherint existing data and adapting them to the new structure.
+>
+> We need a helping hand from the gurus!!!.
+>
+>
+> best regards,
+>
+> 2009/12/18 Antonio Martinez <alcisoft@arrakis.es>
+>
+>   
+>> Massimo
+>> Imagine it:
+>>
+>> Scenario: Temp.Dbf     Struct is {{"NField", "N", 10, 0} } and 1000 records
+>>
+>>
+>> FUNCTION Main
+>> Local aNewStruct:= {{"NField", "N", 3, 0}}
+>>
+>>
+>> // This generates run time error data width error
+>> dbModStruct("Temp.Dbf", aNewStruct)
+>>
+>> RETURN NIL
+>>
+>>
+>>
+>>
+>> Massimo Belgrano escribi? en mensaje
+>> <609353e70912171005qfc28389j7b013bd8151a8afa@mail.gmail.com>...
+>>  dbcreate(D_APP,ADBF) // Create nes dbf with new structure
+>> use
+>> use &(D_APP) alias APPOGGIO && open it
+>> append from &(D_FDBF)          // append data
+>> use
+>> Now rename
+>>
+>> 2009/12/17 Antonio Martinez
+>> <alcisoft@arrakis.es>:
+>>     
+>>> Hi,
+>>>
+>>> You must write it dbmodify thinking on errors protection;
+>>> For example: Data width error, corruption detected, etc....
+>>>
+>>> Too possibillity to write init values for old records, etc...
+>>> Too renamed memo file .fpt (or .dbt) associated
+>>>
+>>> Really its a complex function !
+>>>
+>>> Function is dbModStruct(cFile, aNewStruct)
+>>>
+>>> Regards
+>>>
+>>>
+>>>
+>>>
+>>> Richard escribi? en mensaje
+>>>       
+>> <4B2A323C.5040409@adinet.com.uy>...
+>>     
+>>> You can develop the new function by programming the necessary steps.
+>>>
+>>>
+>>> Lucas De Beltr?n escribi?:
+>>>       
+>>>> Hi,
+>>>>
+>>>> Thanks, but it will be more powerful a funcion dbmodify( newstruct ).
+>>>>
+>>>> regards,
+>>>>
+>>>> 2009/12/16 szekely <szekely3@enternet.hu>
+>>>>
+>>>>
+>>>>         
+>>>>> Hi !
+>>>>>
+>>>>> DBCREATE() ?
+>>>>>
+>>>>> Not too simple: you make a new table, from the old table copy the
+>>>>> records into the new, and after rename it to the old name.
+>>>>>
+>>>>> Andras
+>>>>>
+>>>>> On Wed, 16 Dec 2009 09:01:07 +0100, Lucas De Beltr?n wrote:
+>>>>>
+>>>>>
+>>>>>           
+>>>>>> Hi,
+>>>>>>
+>>>>>> Is there a function in Harbour that updates a DBF structure?. For
+>>>>>>             
+>>> example,
+>>>       
+>>>>>> updatedbf( dbffile, newstructure ).
+>>>>>>
+>>>>>> Thanks!!
+>>>>>> _______________________________________________
+>>>>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>>>>> Harbour-users@harbour-project.org
+>>>>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>>>>
+>>>>>>
+>>>>>>             
+>>>>> ________________________________________________
+>>>>> Szekely Andras <> szekely3@enternet.hu <>
+>>>>>           
+>>> eCS 1.2 <>
+>>>       
+>>>>> http://www.scharenkreutzer.hu <>
+>>>>>           
+>>> http://2Mai.dyndns.org <http://2mai.dyndns.org/><http://2mai.dyndns.org/
+>>>
+>>>       
+>>>>> _______________________________________________
+>>>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>>>> Harbour-users@harbour-project.org
+>>>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>>>
+>>>>>
+>>>>>           
+>>>> _______________________________________________
+>>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>>> Harbour-users@harbour-project.org
+>>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>>
+>>>>
+>>>>         
+>>>
+>>> _______________________________________________
+>>> Harbour-users mailing list (attachment size limit: 40KB)
+>>> Harbour-users@harbour-project.org
+>>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>>
+>>>       
+>>
+>> --
+>> Massimo Belgrano
+>>
+>>
+>>
+>> _______________________________________________
+>> Harbour-users mailing list (attachment size limit: 40KB)
+>> Harbour-users@harbour-project.org
+>> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>>
+>>     
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>   
+
+From druzus at acn.waw.pl  Sun Dec 20 11:21:44 2009
+From: druzus at acn.waw.pl (=?utf-8?Q?Przemys=C5=82aw?= Czerpak)
+Date: Sun Dec 20 14:18:49 2009
+Subject: [Harbour-users] Clipbar5.Lib, someone know ?
+In-Reply-To: <hgg9h3$8us$1@ger.gmane.org>
+References: <hgg9h3$8us$1@ger.gmane.org>
+Message-ID: <20091220162144.GA15582@linux-4bod.home.aster.pl>
+
+On Fri, 18 Dec 2009, Antonio Martinez wrote:
+
+Hi,
+
+> I need sources from Clipbar5.Lib. I have Clipbar5 in Clipper program and i
+> need recompile in (x)harbour ?
+
+No. Harbour provides all CL5.2 and CL5.3 (with the excpetion to lightlib)
+functions.
+
+best regards,
+Przemek
+From mbelgrano at deltain.it  Sun Dec 20 13:44:52 2009
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Sun Dec 20 13:45:19 2009
+Subject: [Harbour-users] Clipbar5.Lib, someone know ?
+In-Reply-To: <hgg9h3$8us$1@ger.gmane.org>
+References: <hgg9h3$8us$1@ger.gmane.org>
+Message-ID: <609353e70912201044n7e57dc95u1f375d160f6b8f41@mail.gmail.com>
+
+I think that clipbar5 is a barcode library
+
+Try recompile in harbour simply with
+hbmk2 You.prg you01.prg you02.prg youNN.prg
+you have you.exe generated you.exe
+Or list of function undefined so you know wich function you are using of barcode
+
+
+
+2009/12/18 Antonio Martinez <alcisoft@arrakis.es>:
+> Hi,
+>
+> I need sources from Clipbar5.Lib. I have Clipbar5 in Clipper program and i
+> need recompile in (x)harbour ?
+>
+> Regards
+>
+>
+>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+From szekely3 at enternet.hu  Sun Dec 20 14:43:34 2009
+From: szekely3 at enternet.hu (szekely)
+Date: Sun Dec 20 14:43:43 2009
+Subject: [Harbour-users] Clipbar5.Lib, someone know ?
+In-Reply-To: <20091220162144.GA15582@linux-4bod.home.aster.pl>
+Message-ID: <mailman.0.1261338223.3962.harbour-users@harbour-project.org>
+
+Hello !
+
+>> I need sources from Clipbar5.Lib. I have Clipbar5 in Clipper program and i
+>> need recompile in (x)harbour ?
+
+If you make a try: place that Clipbar5.Lib to the dir where the other
+*.lib files are? 
+
+Andras
+________________________________________________
+Szekely Andras <> szekely3@enternet.hu  <> eCS 1.2 <>
+http://www.scharenkreutzer.hu <> http://2Mai.dyndns.org
+
+From alcisoft at arrakis.es  Mon Dec 21 03:22:22 2009
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Mon Dec 21 03:24:44 2009
+Subject: [Harbour-users] Re: Clipbar5.Lib, someone know ?
+References: <hgg9h3$8us$1@ger.gmane.org>
+Message-ID: <hgnbb9$btk$1@ger.gmane.org>
+
+Hi to all,
+
+Sorry my poor english.
+
+Clipbar5 is a codebar lib for Clipper 5 (16 bits)
+
+I obtain errors if add Clipbar5.lib to my (x)harbour project. I think that
+errors occurs because Clipbar5 is a 16 bits library
+
+Regards
+
+Antonio Martinez escribió en mensaje ...
+>Hi,
+>
+>I need sources from Clipbar5.Lib. I have Clipbar5 in Clipper program and i
+>need recompile in (x)harbour ?
+>
+>Regards
+
+
+
+From mbelgrano at deltain.it  Mon Dec 21 03:28:09 2009
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Mon Dec 21 03:28:36 2009
+Subject: [Harbour-users] Re: Clipbar5.Lib, someone know ?
+In-Reply-To: <hgnbb9$btk$1@ger.gmane.org>
+References: <hgg9h3$8us$1@ger.gmane.org> <hgnbb9$btk$1@ger.gmane.org>
+Message-ID: <609353e70912210028r5c705142uaeeecd0e406ebe84@mail.gmail.com>
+
+use hbmk2 to compile only your *.prg and post here List of undefined function
+
+2009/12/21 Antonio Martinez <alcisoft@arrakis.es>:
+> Hi to all,
+>
+> Sorry my poor english.
+>
+> Clipbar5 is a codebar lib for Clipper 5 (16 bits)
+>
+> I obtain errors if add Clipbar5.lib to my (x)harbour project. I think that
+> errors occurs because Clipbar5 is a 16 bits library
+>
+> Regards
+>
+> Antonio Martinez escribi? en mensaje ...
+>>Hi,
+>>
+>>I need sources from Clipbar5.Lib. I have Clipbar5 in Clipper program and i
+>>need recompile in (x)harbour ?
+>>
+>>Regards
+>
+>
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+
+
+
+-- 
+Massimo Belgrano
+From marcosgambeta at uol.com.br  Mon Dec 21 03:47:57 2009
+From: marcosgambeta at uol.com.br (Marcos Gambeta)
+Date: Mon Dec 21 03:48:07 2009
+Subject: [Harbour-users] Re: Clipbar5.Lib, someone know ?
+In-Reply-To: <hgnbb9$btk$1@ger.gmane.org>
+References: <hgg9h3$8us$1@ger.gmane.org> <hgnbb9$btk$1@ger.gmane.org>
+Message-ID: <4B2F363D.2000908@uol.com.br>
+
+Antonio Martinez escreveu:
+> Clipbar5 is a codebar lib for Clipper 5 (16 bits)
+> 
+> I obtain errors if add Clipbar5.lib to my (x)harbour project. I think that
+> errors occurs because Clipbar5 is a 16 bits library
+
+Binaries created with Clipper (.obj and .lib) are not compatible with 
+Harbour.
+
+You need the sources to recompile.
+
+
+-- 
+Regards,
+Marcos Antonio Gambeta
+From mbelgrano at deltain.it  Thu Dec 24 07:12:59 2009
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Thu Dec 24 07:13:26 2009
+Subject: [Harbour-users] Harbour 2.0 released
+Message-ID: <609353e70912240412h23fa6051vf74880bec98358a1@mail.gmail.com>
+
+Hi All,
+
+I'm glad to announce that after a very heavy 16 months
+of development, the final, stable version 2.0.0 is finally
+released.
+http://sourceforge.net/projects/harbour-project/files/
+
+Mary Christmas to everyone
+
+Belgrano Massimo
+From lucasdebeltran at gmail.com  Thu Dec 24 07:32:57 2009
+From: lucasdebeltran at gmail.com (=?ISO-8859-1?Q?Lucas_De_Beltr=E1n?=)
+Date: Thu Dec 24 07:33:05 2009
+Subject: [Harbour-users] Harbour 2.0 released
+In-Reply-To: <609353e70912240412h23fa6051vf74880bec98358a1@mail.gmail.com>
+References: <609353e70912240412h23fa6051vf74880bec98358a1@mail.gmail.com>
+Message-ID: <eb96f4980912240432u58748b84m3deb87ebeed230fe@mail.gmail.com>
+
+Thank?s a lot!!.
+
+Does it support a SQL RDD to handle SQL DB as dbfs?. For example select
+("aa"), dbskip() append blank, etc?
+
+Regards
+
+2009/12/24 Massimo Belgrano <mbelgrano@deltain.it>
+
+> Hi All,
+>
+> I'm glad to announce that after a very heavy 16 months
+> of development, the final, stable version 2.0.0 is finally
+> released.
+> http://sourceforge.net/projects/harbour-project/files/
+>
+> Mary Christmas to everyone
+>
+> Belgrano Massimo
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+From lucasdebeltran at gmail.com  Thu Dec 24 07:34:31 2009
+From: lucasdebeltran at gmail.com (=?ISO-8859-1?Q?Lucas_De_Beltr=E1n?=)
+Date: Thu Dec 24 07:34:38 2009
+Subject: [Harbour-users] VIA Nemo
+Message-ID: <eb96f4980912240434y22fe6309yc82dceb72e2844c6@mail.gmail.com>
+
+Hi,
+
+Does anyone know what happend with this proyect?. The web is dead...
+From amigosam at adinet.com.uy  Thu Dec 24 07:40:58 2009
+From: amigosam at adinet.com.uy (Angel Pais)
+Date: Thu Dec 24 07:41:26 2009
+Subject: [Harbour-users] Re: VIA Nemo
+In-Reply-To: <eb96f4980912240434y22fe6309yc82dceb72e2844c6@mail.gmail.com>
+References: <eb96f4980912240434y22fe6309yc82dceb72e2844c6@mail.gmail.com>
+Message-ID: <hgvngk$5uq$1@ger.gmane.org>
+
+Lucas De Beltr?n escribi?:
+> Hi,
+> 
+> Does anyone know what happend with this proyect?. The web is dead...
+
+Don't bet all your money on it...
+
+From mbelgrano at deltain.it  Thu Dec 24 07:44:24 2009
+From: mbelgrano at deltain.it (Massimo Belgrano)
+Date: Thu Dec 24 07:44:51 2009
+Subject: [Harbour-users] Harbour 2.0 released
+In-Reply-To: <eb96f4980912240432u58748b84m3deb87ebeed230fe@mail.gmail.com>
+References: <609353e70912240412h23fa6051vf74880bec98358a1@mail.gmail.com> 
+	<eb96f4980912240432u58748b84m3deb87ebeed230fe@mail.gmail.com>
+Message-ID: <609353e70912240444l44d26054rb36e1b1ad80d8cb@mail.gmail.com>
+
+Yes
+
+C:\hb20\contrib\rddsql\sddodbc\tests
+
+/*
+ * $Id: test1.prg 12948 2009-11-20 12:45:41Z vszakats $
+ */
+
+#include "hbrddsql.ch"
+
+REQUEST SDDODBC, SQLMIX
+
+PROC main()
+   RDDSETDEFAULT( "SQLMIX" )
+   SET( _SET_DATEFORMAT, "yyyy-mm-dd" )
+   ? "Connect:", RDDINFO( RDDI_CONNECT, { "ODBC", "DBQ="  +
+hb_DirBase() + "\..\..\..\hbodbc\tests\test.mdb;Driver={Microsoft
+Access Driver (*.mdb)}" } )
+   ? "Use:", DBUSEAREA( .T.,, "select * from test", "test" )
+   ? "Alias:", ALIAS()
+   ? "DB struct:", HB_VALTOEXP( DBSTRUCT() )
+   INKEY( 0 )
+   BROWSE()
+
+   INDEX ON FIELD->SALARY TO salary
+   DBGOTOP()
+   BROWSE()
+   DBCLOSEAREA()
+RETURN
+
+
+2009/12/24 Lucas De Beltr?n <lucasdebeltran@gmail.com>:
+> Thank?s a lot!!.
+>
+> Does it support a SQL RDD to handle SQL DB as dbfs?. For example select
+> ("aa"), dbskip() append blank, etc?
+>
+
+
+-- 
+Massimo Belgrano
+
+I
+From jparada_a at hotmail.com  Sat Dec 26 13:11:53 2009
+From: jparada_a at hotmail.com (javier)
+Date: Sat Dec 26 13:12:01 2009
+Subject: [Harbour-users] How to build hbqt lib on Linux
+Message-ID: <BLU0-SMTP8369EB8FA3B7FA26F6BDD09C7D0@phx.gbl>
+
+Hi,
+
+I'm just starting in Linux, specifically Ubuntu Karmic, and I want to
+create the hbqt lib.
+
+I have installed the SDK for Linux/X11 32 bits, and I set the following
+variables
+
+Export HB_INC_QT = "/home/javier/qtsdk-2009.05/qt/include"
+Export HB_QT_MOC_BIN = "/home/javier/qtsdk-2009.05/qt/bin"
+
+Then in harbour/contrib/hbqt
+
+make and get the following:
+
+! Using QT 'moc' bin: / home/javier/qtsdk-2009.05/qt/bin
+/ home/javier/qtsdk-2009.05/qt/bin .. / .. / .. / hbqt_events.h-or
+moc_hbqt_events.cpp
+make [1]: execvp: / home/javier/qtsdk-2009.05/qt/bin: Permission denied
+make [1]: *** [moc_hbqt_events.cpp] Error 127
+make: *** [descend] Error 2
+
+And if I try to sudo make, then I get the following:
+! HB_INSTALL_PREFIX automatically set to: / usr / local
+! 'hbqt' library skipped ( 'qt' not found)
+
+Why?
+
+Could you please tell me, what am I doing wrong or what else I need to
+generate the hbqt lib?
+
+I appreciate any help and comments.
+
+Thanks
+
+Best regards
+Javier Parada
+
+From alcisoft at arrakis.es  Mon Dec 28 03:13:38 2009
+From: alcisoft at arrakis.es (Antonio Martinez)
+Date: Mon Dec 28 03:16:57 2009
+Subject: [Harbour-users] Re: Re: Clipbar5.Lib, someone know ?
+References: <hgg9h3$8us$1@ger.gmane.org> <hgnbb9$btk$1@ger.gmane.org>
+	<4B2F363D.2000908@uol.com.br>
+Message-ID: <hh9pgk$8qq$1@ger.gmane.org>
+
+Marcos,
+
+My init message was:
+>
+Hi,
+I need sources from Clipbar5.Lib. I have Clipbar5 in Clipper program and i
+need recompile in (x)harbour ?
+Regards
+>
+
+
+Regards
+
+
+
+Marcos Gambeta escribió en mensaje <4B2F363D.2000908@uol.com.br>...
+>Antonio Martinez escreveu:
+>> Clipbar5 is a codebar lib for Clipper 5 (16 bits)
+>>
+>> I obtain errors if add Clipbar5.lib to my (x)harbour project. I think
+that
+>> errors occurs because Clipbar5 is a 16 bits library
+>
+>Binaries created with Clipper (.obj and .lib) are not compatible with
+>Harbour.
+>
+>You need the sources to recompile.
+>
+>
+>--
+>Regards,
+>Marcos Antonio Gambeta
+
+
+
+From danilo_seron at yahoo.com  Tue Dec 29 08:39:13 2009
+From: danilo_seron at yahoo.com (DANILO SERON)
+Date: Tue Dec 29 08:39:19 2009
+Subject: [Harbour-users] cuestion
+Message-ID: <771122.65152.qm@web30308.mail.mud.yahoo.com>
+
+i don't speak inglish
+some one manual of compilation of habour in linux?
+the information is very litle
+
+for example, "how to" of harbour (only examples de compilacion)
+
+(in spanish:
+"me salva de no morir de sed, pero igual tengo sed (de agua)")
+
+Thank you
+
+ha : feliz a?o nuevo (Happy new year)
+
+
+--- El lun 28-dic-09, harbour-users-request@harbour-project.org <harbour-users-request@harbour-project.org> escribi?:
+
+De: harbour-users-request@harbour-project.org <harbour-users-request@harbour-project.org>
+Asunto: Harbour-users Digest, Vol 18, Issue 13
+A: harbour-users@harbour-project.org
+Fecha: lunes, 28 diciembre, 2009, 1:00 pm
+
+Send Harbour-users mailing list submissions to
+??? harbour-users@harbour-project.org
+
+To subscribe or unsubscribe via the World Wide Web, visit
+??? http://lists.harbour-project.org/mailman/listinfo/harbour-users
+or, via email, send a message with subject or body 'help' to
+??? harbour-users-request@harbour-project.org
+
+You can reach the person managing the list at
+??? harbour-users-owner@harbour-project.org
+
+When replying, please edit your Subject line so it is more specific
+than "Re: Contents of Harbour-users digest..."
+
+
+Today's Topics:
+
+???1. Re: Re: Clipbar5.Lib, someone know ? (Antonio Martinez)
+
+
+----------------------------------------------------------------------
+
+Message: 1
+Date: Mon, 28 Dec 2009 09:13:38 +0100
+From: "Antonio Martinez" <alcisoft@arrakis.es>
+Subject: [Harbour-users] Re: Re: Clipbar5.Lib, someone know ?
+To: harbour-users@harbour-project.org
+Message-ID: <hh9pgk$8qq$1@ger.gmane.org>
+
+Marcos,
+
+My init message was:
+>
+Hi,
+I need sources from Clipbar5.Lib. I have Clipbar5 in Clipper program and i
+need recompile in (x)harbour ?
+Regards
+>
+
+
+Regards
+
+
+
+Marcos Gambeta escribi? en mensaje <4B2F363D.2000908@uol.com.br>...
+>Antonio Martinez escreveu:
+>> Clipbar5 is a codebar lib for Clipper 5 (16 bits)
+>>
+>> I obtain errors if add Clipbar5.lib to my (x)harbour project. I think
+that
+>> errors occurs because Clipbar5 is a 16 bits library
+>
+>Binaries created with Clipper (.obj and .lib) are not compatible with
+>Harbour.
+>
+>You need the sources to recompile.
+>
+>
+>--
+>Regards,
+>Marcos Antonio Gambeta
+
+
+
+
+
+------------------------------
+
+_______________________________________________
+Harbour-users mailing list (attachment size limit: 40KB)
+Harbour-users@harbour-project.org
+http://lists.harbour-project.org/mailman/listinfo/harbour-users
+
+
+End of Harbour-users Digest, Vol 18, Issue 13
+*********************************************
+
+
+
+      ____________________________________________________________________________________
+?Obt?n la mejor experiencia en la web!
+Descarga gratis el nuevo Internet Explorer 8. 
+http://downloads.yahoo.com/ieak8/?l=e1
+From eyelagui at adinet.com.uy  Tue Dec 29 16:12:10 2009
+From: eyelagui at adinet.com.uy (Richard)
+Date: Tue Dec 29 16:12:27 2009
+Subject: [Harbour-users] cuestion
+In-Reply-To: <771122.65152.qm@web30308.mail.mud.yahoo.com>
+References: <771122.65152.qm@web30308.mail.mud.yahoo.com>
+Message-ID: <4B3A70AA.8010602@adinet.com.uy>
+
+Danilo, no te entiendo ni en ingles ni en espa?ol
+
+Si dices claramente lo que necesitas, por lo menos te podr?a ayudar 
+traduciendo tu mensaje si es que no se como guiarte para solucionar tu 
+problema.
+
+Saludos.
+
+
+DANILO SERON escribi?:
+> i don't speak inglish
+> some one manual of compilation of habour in linux?
+> the information is very litle
+>
+> for example, "how to" of harbour (only examples de compilacion)
+>
+> (in spanish:
+> "me salva de no morir de sed, pero igual tengo sed (de agua)")
+>
+> Thank you
+>
+> ha : feliz a?o nuevo (Happy new year)
+>
+>
+> --- El lun 28-dic-09, harbour-users-request@harbour-project.org <harbour-users-request@harbour-project.org> escribi?:
+>
+> De: harbour-users-request@harbour-project.org <harbour-users-request@harbour-project.org>
+> Asunto: Harbour-users Digest, Vol 18, Issue 13
+> A: harbour-users@harbour-project.org
+> Fecha: lunes, 28 diciembre, 2009, 1:00 pm
+>
+> Send Harbour-users mailing list submissions to
+>     harbour-users@harbour-project.org
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+>     http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> or, via email, send a message with subject or body 'help' to
+>     harbour-users-request@harbour-project.org
+>
+> You can reach the person managing the list at
+>     harbour-users-owner@harbour-project.org
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of Harbour-users digest..."
+>
+>
+> Today's Topics:
+>
+>    1. Re: Re: Clipbar5.Lib, someone know ? (Antonio Martinez)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: Mon, 28 Dec 2009 09:13:38 +0100
+> From: "Antonio Martinez" <alcisoft@arrakis.es>
+> Subject: [Harbour-users] Re: Re: Clipbar5.Lib, someone know ?
+> To: harbour-users@harbour-project.org
+> Message-ID: <hh9pgk$8qq$1@ger.gmane.org>
+>
+> Marcos,
+>
+> My init message was:
+>   
+> Hi,
+> I need sources from Clipbar5.Lib. I have Clipbar5 in Clipper program and i
+> need recompile in (x)harbour ?
+> Regards
+>   
+>
+>
+> Regards
+>
+>
+>
+> Marcos Gambeta escribi? en mensaje <4B2F363D.2000908@uol.com.br>...
+>   
+>> Antonio Martinez escreveu:
+>>     
+>>> Clipbar5 is a codebar lib for Clipper 5 (16 bits)
+>>>
+>>> I obtain errors if add Clipbar5.lib to my (x)harbour project. I think
+>>>       
+> that
+>   
+>>> errors occurs because Clipbar5 is a 16 bits library
+>>>       
+>> Binaries created with Clipper (.obj and .lib) are not compatible with
+>> Harbour.
+>>
+>> You need the sources to recompile.
+>>
+>>
+>> --
+>> Regards,
+>> Marcos Antonio Gambeta
+>>     
+>
+>
+>
+>
+>
+> ------------------------------
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>
+> End of Harbour-users Digest, Vol 18, Issue 13
+> *********************************************
+>
+>
+>
+>       ____________________________________________________________________________________
+> ?Obt?n la mejor experiencia en la web!
+> Descarga gratis el nuevo Internet Explorer 8. 
+> http://downloads.yahoo.com/ieak8/?l=e1
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>   
+
+From bruno.luciani at gmail.com  Tue Dec 29 19:46:07 2009
+From: bruno.luciani at gmail.com (Bruno Luciani)
+Date: Tue Dec 29 19:46:15 2009
+Subject: [Harbour-users] cuestion
+In-Reply-To: <771122.65152.qm@web30308.mail.mud.yahoo.com>
+References: <771122.65152.qm@web30308.mail.mud.yahoo.com>
+Message-ID: <133778360912291646nc9f8075n1b5d15583e22a629@mail.gmail.com>
+
+Danilo que linux usas ?
+
+Estas descargando del CVS  ?
+
+Comentame
+
+Bruno
+
+2009/12/29 DANILO SERON <danilo_seron@yahoo.com>
+
+> i don't speak inglish
+> some one manual of compilation of habour in linux?
+> the information is very litle
+>
+> for example, "how to" of harbour (only examples de compilacion)
+>
+> (in spanish:
+> "me salva de no morir de sed, pero igual tengo sed (de agua)")
+>
+> Thank you
+>
+> ha : feliz a?o nuevo (Happy new year)
+>
+>
+> --- El lun 28-dic-09, harbour-users-request@harbour-project.org <
+> harbour-users-request@harbour-project.org> escribi?:
+>
+> De: harbour-users-request@harbour-project.org <
+> harbour-users-request@harbour-project.org>
+> Asunto: Harbour-users Digest, Vol 18, Issue 13
+> A: harbour-users@harbour-project.org
+> Fecha: lunes, 28 diciembre, 2009, 1:00 pm
+>
+> Send Harbour-users mailing list submissions to
+>     harbour-users@harbour-project.org
+>
+> To subscribe or unsubscribe via the World Wide Web, visit
+>     http://lists.harbour-project.org/mailman/listinfo/harbour-users
+> or, via email, send a message with subject or body 'help' to
+>     harbour-users-request@harbour-project.org
+>
+> You can reach the person managing the list at
+>     harbour-users-owner@harbour-project.org
+>
+> When replying, please edit your Subject line so it is more specific
+> than "Re: Contents of Harbour-users digest..."
+>
+>
+> Today's Topics:
+>
+>    1. Re: Re: Clipbar5.Lib, someone know ? (Antonio Martinez)
+>
+>
+> ----------------------------------------------------------------------
+>
+> Message: 1
+> Date: Mon, 28 Dec 2009 09:13:38 +0100
+> From: "Antonio Martinez" <alcisoft@arrakis.es>
+> Subject: [Harbour-users] Re: Re: Clipbar5.Lib, someone know ?
+> To: harbour-users@harbour-project.org
+> Message-ID: <hh9pgk$8qq$1@ger.gmane.org>
+>
+> Marcos,
+>
+> My init message was:
+> >
+> Hi,
+> I need sources from Clipbar5.Lib. I have Clipbar5 in Clipper program and i
+> need recompile in (x)harbour ?
+> Regards
+> >
+>
+>
+> Regards
+>
+>
+>
+> Marcos Gambeta escribi? en mensaje <4B2F363D.2000908@uol.com.br>...
+> >Antonio Martinez escreveu:
+> >> Clipbar5 is a codebar lib for Clipper 5 (16 bits)
+> >>
+> >> I obtain errors if add Clipbar5.lib to my (x)harbour project. I think
+> that
+> >> errors occurs because Clipbar5 is a 16 bits library
+> >
+> >Binaries created with Clipper (.obj and .lib) are not compatible with
+> >Harbour.
+> >
+> >You need the sources to recompile.
+> >
+> >
+> >--
+> >Regards,
+> >Marcos Antonio Gambeta
+>
+>
+>
+>
+>
+> ------------------------------
+>
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
+>
+> End of Harbour-users Digest, Vol 18, Issue 13
+> *********************************************
+>
+>
+>
+>
+>  ____________________________________________________________________________________
+> ?Obt?n la mejor experiencia en la web!
+> Descarga gratis el nuevo Internet Explorer 8.
+> http://downloads.yahoo.com/ieak8/?l=e1
+> _______________________________________________
+> Harbour-users mailing list (attachment size limit: 40KB)
+> Harbour-users@harbour-project.org
+> http://lists.harbour-project.org/mailman/listinfo/harbour-users
+>
