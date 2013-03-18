@@ -9,13 +9,13 @@ stm_aix("p1i0","p0i0",[0," About Harbour ","","",-1,-1,0,"/about.html","_self","
 stm_aix("p1i1","p1i0",[0," License ","","",-1,-1,0,"https://github.com/harbour/core/raw/master/COPYING.txt"]);
 stm_ep();
 stm_aix("p0i4","p0i2",[]);
-stm_aix("p0i5","p0i1",[2,"","documentation.png","documentation.png",90,65,0,"/doc/harbour.html","_self","","","","",0,0,0,"","",-1,-1,0,0,1,"#E6EFF9",1,"#FFD602"]);
+stm_aix("p0i5","p0i1",[2,"","documentation.png","documentation.png",90,65,0,"/doc/index.html","_self","","","","",0,0,0,"","",-1,-1,0,0,1,"#E6EFF9",1,"#FFD602"]);
 stm_bpx("p2","p1",[1,4,0,-3,3,0,0,0,100,"",-2,"",-2,50,0,0,"#CCCCCC"]);
 stm_aix("p2i0","p1i0",[0," Essential information (README.txt) ","","",-1,-1,0,"https://github.com/harbour/core/raw/master/README.txt"]);
 stm_aix("p2i1","p1i0",[0," ChangeLog.txt ","","",-1,-1,0,"https://github.com/harbour/core/raw/master/ChangeLog.txt"]);
 stm_aix("p2i2","p1i0",[0," Clipper 5.3 ","","",-1,-1,0,"http://x-hacker.org/ng/53guide/"]);
-stm_aix("p2i3","p1i0",[0," Harbour ","","",-1,-1,0,"/doc/harbour.html"]);
-stm_aix("p2i4","p1i0",[0," FAQ ","","",-1,-1,0,"/faq/harbour.html"]);
+stm_aix("p2i3","p1i0",[0," Harbour ","","",-1,-1,0,"/doc/index.html"]);
+stm_aix("p2i4","p1i0",[0," FAQ ","","",-1,-1,0,"/faq/index.html"]);
 stm_aix("p2i5","p1i0",[0," Samples ","","",-1,-1,0,"/samples.html"]);
 //stm_aix("p2i3","p1i0",[0," Tutorials & Articles ","","",-1,-1,0,"/tutorials.html"]);
 stm_ep();
