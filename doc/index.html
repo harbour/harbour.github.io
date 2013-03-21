@@ -2435,7 +2435,7 @@ derived from the FCreate() or FOpen() function.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 #include &quot;fileio.ch&quot;
-nHandle := FOpen( &quot;x.txt&quot; )
+nHandle := FOpen( &quot;test.txt&quot; )
 ? FSeek( nHandle, 0, FS_END )
 FClose( nHandle )
 </pre>
@@ -2612,7 +2612,7 @@ Note: Any file to be removed by FErase() must still be closed.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 #include &quot;fileio.ch&quot;
-IF FErase( &quot;test.txt&quot; ) != F_ERROR
+IF FErase( &quot;test.txt&quot; ) == 0
    ? &quot;File successfully erased&quot;
 ELSE
    ? &quot;File can not be deleted&quot;
@@ -2745,7 +2745,7 @@ values returned by the FError() function.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 #include &quot;fileio.ch&quot;
-nHandle := FCreate( &quot;temp.txt&quot;, FC_NORMAL )
+nHandle := FCreate( &quot;test.txt&quot;, FC_NORMAL )
 IF FError() != 0
    ? &quot;Cannot create file, OS error &quot;, FError()
 ENDIF
@@ -2931,7 +2931,7 @@ possible reasons for the error.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 #include &quot;fileio.ch&quot;
-IF ( nH := FOpen( &quot;x.txt&quot;, FO_READWRITE + FO_DENYNONE ) ) == F_ERROR
+IF ( nH := FOpen( &quot;test.txt&quot;, FO_READWRITE + FO_DENYNONE ) ) == F_ERROR
    ? &quot;File can't be opened&quot;
 ENDIF
 </pre>
@@ -3023,7 +3023,7 @@ an end-of-file condition has been reached.
 <pre class="examples">
 #include &quot;fileio.ch&quot;
 cBuffer := Space( 500 )
-IF ( nH := FOpen( &quot;x.txt&quot; ) ) == F_ERROR
+IF ( nH := FOpen( &quot;test.txt&quot; ) ) == F_ERROR
    FRead( nH, @cBuffer, 500 )
    ? cbuffer
 ENDIF
@@ -3112,7 +3112,7 @@ FReadStr() function.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 #include &quot;fileio.ch&quot;
-IF ( nH := FOpen( &quot;x.txt&quot; ) ) != F_ERROR
+IF ( nH := FOpen( &quot;test.txt&quot; ) ) != F_ERROR
    cStr := FReadStr( nH, 100 )
    ? cStr
    FClose( nH )
@@ -3203,8 +3203,8 @@ any error found.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 #include &quot;fileio.ch&quot;
-nResult := FRename( &quot;x.txt&quot;, &quot;x1.txt&quot; )
-IF nResult == F_ERROR
+nResult := FRename( &quot;test.txt&quot;, &quot;test1.txt&quot; )
+IF nResult != 0
    ? &quot;File could not be renamed.&quot;
 ENDIF
 </pre>
@@ -3414,7 +3414,7 @@ written to the file. To truncate a file, a call of FWrite( nHandle,
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-nHandle := FCreate( &quot;x.txt&quot; )
+nHandle := FCreate( &quot;test.txt&quot; )
 FOR X := 1 TO 10
    FWrite( nHandle, Str( x ) )
 NEXT
@@ -3582,7 +3582,7 @@ function returns .T. and sets the value returned by FError() to -1
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-nH := FOpen( &quot;file.txt&quot; )
+nH := FOpen( &quot;test.txt&quot; )
 ? FReadStr( nH, 80 )
 IF hb_FEof( nH )
    ? &quot;End-of-file reached.&quot;
@@ -15188,7 +15188,7 @@ __Keyboard()
 </h4>
 </div>
 <div class="oneliner">
-DO NOT CALL THIS FUNCTION DIRECTLY!
+Use hb_keyPut() instead
 <br />
 </div>
 <div class="itemtitle">Syntax</div>
@@ -16569,7 +16569,7 @@ Extracts the next key code from the Harbour keyboard buffer.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-Inkey( [&lt;nTimeout&gt;] [,&lt;nEvents&gt;] ) --&gt; nKey
+Inkey( [&lt;nTimeout&gt;] [, &lt;nEvents&gt;] ) --&gt; nKey
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -17106,7 +17106,7 @@ DO WHILE .T.
       EXIT
    ELSE
       IF nKey != 0
-         cChar := Chr( nKey )
+         cChar := hb_keyChar( nKey )
       ENDIF
    ENDIF
 ENDDO
@@ -28687,7 +28687,7 @@ command will not perform the desired operation.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-RENAME hello.txt TO hello.old
+RENAME test.txt TO test.old
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -28780,7 +28780,7 @@ SET CONSOLE OFF
 TYPE mytext.dat TO PRINTER
 SET CONSOLE ON
 // display mytext.dat file on screen and into a file myreport.txt
-TYPE mytext.dat TO FILE MyReport
+TYPE mytext.dat TO FILE myreport
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -28871,7 +28871,7 @@ command. The path may be specified, along, with (the drive letter, in
 <pre class="examples">
 PROCEDURE Main()
    USE test NEW
-   LABEL FORM EE
+   LABEL FORM test.lbl
    USE
    RETURN
 </pre>
@@ -29019,7 +29019,7 @@ turned off while this command is being executed.
 <pre class="examples">
 PROCEDURE Main()
    USE test NEW
-   REPORT FORM EE
+   REPORT FORM test.frm
    USE
    RETURN
 </pre>
