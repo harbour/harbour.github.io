@@ -2379,7 +2379,7 @@ runtime error 2018 will be raised.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 ? &quot;You can use : &quot; + hb_ntos( DiskSpace() ) + &quot; bytes &quot;
-Note: See tests/diskspac.prg for another example
+// NOTE: See tests/diskspac.prg for another example
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -2512,25 +2512,23 @@ function.
 <br />
 </div>
 <div class="itemtext">
-     &lt;nAttribute&gt;   fileio.ch     Meaning
+     &lt;nAttribute&gt;  Meaning
 <br />
 </div>
 <div class="itemtext">
-     0              FC_NORMAL     Normal/Default, Read/Write
+     FC_NORMAL     Normal/Default, Read/Write
 <br />
 </div>
 <div class="itemtext">
-     1              FC_READONLY   Read-only file attribute is set
+     FC_READONLY   Read-only file attribute is set
 <br />
 </div>
 <div class="itemtext">
-     2              FC_HIDDEN     Hidden, Excluded from normal DIR
-search
+     FC_HIDDEN     Hidden, Excluded from normal DIR search
 <br />
 </div>
 <div class="itemtext">
-     4              FC_SYSTEM     Create, Excluded from normal DIR
-search
+     FC_SYSTEM     Create, Excluded from normal DIR search
 <br />
 </div>
 <div class="itemtext">
@@ -2876,39 +2874,39 @@ value is 0. The file open modes are as follows:
 <br />
 </div>
 <div class="itemtext">
-     nMode   fileio.ch      Meaning
+     nMode          Meaning
 <br />
 </div>
 <div class="itemtext">
-     0       FO_READ        Read only
+     FO_READ        Read only
 <br />
 </div>
 <div class="itemtext">
-     1       FO_WRITE       Write only
+     FO_WRITE       Write only
 <br />
 </div>
 <div class="itemtext">
-     2       FO_READWRITE   Read/write
+     FO_READWRITE   Read/write
 <br />
 </div>
 <div class="itemtext">
-     16      FO_EXCLUSIVE   Exclusive read only
+     FO_EXCLUSIVE   Exclusive read only
 <br />
 </div>
 <div class="itemtext">
-     32      FO_DENYWRITE   Prevent others from writing
+     FO_DENYWRITE   Prevent others from writing
 <br />
 </div>
 <div class="itemtext">
-     48      FO_DENYREAD    Deny read only
+     FO_DENYREAD    Deny read only
 <br />
 </div>
 <div class="itemtext">
-     64      FO_DENYNONE    Not deny, Let to others Read / Write
+     FO_DENYNONE    Not deny, Let to others Read / Write
 <br />
 </div>
 <div class="itemtext">
-     64      FO_SHARED      same as FO_DENYNONE
+     FO_SHARED      same as FO_DENYNONE
 <br />
 </div>
 <div class="itemtext">
@@ -2947,7 +2945,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">File(s)</div>
 <div class="itemtext">
-Library is core Header  is fileio.ch
+Library is core Header is fileio.ch
 <br />
 </div>
 <div class="itemtitle">See also</div>
@@ -3289,19 +3287,19 @@ file pointer should he moved, as shown in the following table:
 <br />
 </div>
 <div class="itemtext">
-     &lt;nOrigin&gt;   fileio.ch     File position
+     &lt;nOrigin&gt;     File position
 <br />
 </div>
 <div class="itemtext">
-     0           FS_SET        Beginning of file
+     FS_SET        Beginning of file
 <br />
 </div>
 <div class="itemtext">
-     1           FS_RELATIVE   Current file pointer position
+     FS_RELATIVE   Current file pointer position
 <br />
 </div>
 <div class="itemtext">
-     2           FS_END        End of file
+     FS_END        End of file
 <br />
 </div>
 <div class="itemtext">
@@ -3523,7 +3521,7 @@ runtime error 2018 will be raised.
 #include &quot;fileio.ch&quot;
 ? &quot;You can use : &quot; + hb_ntos( hb_DiskSpace() ) + &quot; bytes &quot; +;
   &quot;Out of a total of &quot; + hb_ntos( hb_DiskSpace( &quot;C:&quot;, HB_FS_TOTAL ) )
-Note: See tests/diskspac.prg for another example
+// NOTE: See tests/diskspac.prg for another example
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -10162,7 +10160,7 @@ VAR to an object. &lt;oObject&gt; is unchanged if a symbol with the name
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // create a new THappy class and add a lHappy VAR
-oHappy  := HBClass():New( &quot;THappy&quot; )
+oHappy := HBClass():New( &quot;THappy&quot; )
 __objAddData( oHappy, &quot;lHappy&quot; )
 oHappy:lHappy := .T.
 IF oHappy:lHappy
@@ -10234,7 +10232,7 @@ the name &lt;cInlineName&gt; already exist in &lt;oObject&gt;.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // create a new THappy class and add a Smile INLINE method
-oHappy  := HBClass():New( &quot;THappy&quot; )
+oHappy := HBClass():New( &quot;THappy&quot; )
 bInline := {| nType | { &quot;:)&quot;, &quot;;)&quot;, &quot;*SMILE*&quot; }[ nType ] }
 __objAddInline( oHappy, &quot;Smile&quot;, bInline )
 ? oHappy:Smile( 1 )       // :)
@@ -10316,16 +10314,14 @@ __objAddMethod( oHappy, &quot;Smile&quot;, @MySmile() )
 ? oHappy:Smile( 2 )       // ;)
 ? oHappy:Smile( 3 )       // *SMILE*
 STATIC FUNCTION MySmile( nType )
-   LOCAL cSmile
-   DO CASE
-   CASE nType == 1
-      cSmile := &quot;:)&quot;
-   CASE nType == 2
-      cSmile := &quot;;)&quot;
-   CASE nType == 3
-      cSmile := &quot;*SMILE*&quot;
-   ENDCASE
-   RETURN cSmile
+   IF HB_ISNUMERIC( nType )
+      SWITCH nType
+      CASE 1 ; RETURN &quot;:)&quot;
+      CASE 2 ; RETURN &quot;;)&quot;
+      CASE 3 ; RETURN &quot;*SMILE*&quot;
+      ENDCASE
+   ENDIF
+   RETURN NIL
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -10388,7 +10384,7 @@ with the name &lt;cDataName&gt; does not exist in &lt;oObject&gt;.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // create a new THappy class and add a lHappy VAR
-oHappy  := HBClass():New( &quot;THappy&quot; )
+oHappy := HBClass():New( &quot;THappy&quot; )
 __objAddData( oHappy, &quot;lHappy&quot; )
 ? __objHasData( oHappy, &quot;lHappy&quot; )    // .T.
 // remove lHappy VAR
@@ -10772,12 +10768,12 @@ that allow you to distinguish between VAR and CLASS VAR:
 <br />
 </div>
 <div class="itemtext">
-table&gt; hboo.ch           Value   Meaning
+table&gt; hboo.ch           Meaning
 <br />
 </div>
 <div class="itemtext">
-HB_MSGLISTALL     0       All types HB_MSGLISTCLASS   1       CLASS
-VAR only HB_MSGLISTPURE    2       VAR only /table&gt;
+HB_MSGLISTALL     All types HB_MSGLISTCLASS   CLASS VAR only
+HB_MSGLISTPURE    VAR only /table&gt;
 <br />
 </div>
 <div class="itemtext">
@@ -11071,7 +11067,7 @@ mechanism.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // create a new THappy class and add a Smile INLINE method
-oHappy  := HBClass():New( &quot;THappy&quot; )
+oHappy := HBClass():New( &quot;THappy&quot; )
 bMyInline   := {| nType | { &quot;:)&quot;, &quot;;)&quot; }[ nType ] }
 bYourInline := {| nType | { &quot;*SMILE*&quot;, &quot;*WINK*&quot; }[ nType ] }
 __objAddInline( oHappy, &quot;Smile&quot;, bMyInline )
@@ -16363,19 +16359,19 @@ User function return codes:
 <br />
 </div>
 <div class="itemtext">
-     dbedit.ch    Value   Meaning
+     dbedit.ch    Meaning
 <br />
 </div>
 <div class="itemtext">
-     DE_ABORT     0       Abort dbEdit().
+     DE_ABORT     Abort dbEdit().
 <br />
 </div>
 <div class="itemtext">
-     DE_CONT      1       Continue dbEdit() as is.
+     DE_CONT      Continue dbEdit() as is.
 <br />
 </div>
 <div class="itemtext">
-     DE_REFRESH   2       Force reread/redisplay of all data rows.
+     DE_REFRESH   Force reread/redisplay of all data rows.
 <br />
 </div>
 <div class="itemtext">
@@ -21009,7 +21005,7 @@ Unknown 'COMPLIANCE' code: 'This function is not CA-Cl*pper compliant'
 </div>
 <div class="itemtitle">File(s)</div>
 <div class="itemtext">
-Library is rdd Header  is dbstruct.ch
+Library is rdd Header is dbstruct.ch
 <br />
 </div>
 <div class="itemtitle">See also</div>
@@ -21952,7 +21948,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">File(s)</div>
 <div class="itemtext">
-Library is rdd Header  is dbstruct.ch
+Library is rdd Header is dbstruct.ch
 <br />
 </div>
 <div class="itemtitle">See also</div>
