@@ -1071,8 +1071,8 @@ of how to call this function from your harbour code.
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-hb_gcAlloc(),hb_gcFree(),hb_gcCollectAll(),hb_gcItemRef(),hb_gcAll(),
-hb_idleState()
+hb_gcAlloc(), hb_gcFree(), hb_gcCollectAll(), hb_gcItemRef(),
+hb_gcAll(), hb_idleState()
 <br />
 </div>
 <div id="theidlestates">
@@ -1116,7 +1116,7 @@ function.
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-hb_idleAdd(),hb_idleDel()
+hb_idleAdd(), hb_idleDel()
 <br />
 </div>
 <div id="dbeval">
@@ -1242,7 +1242,7 @@ the code block, the last expression will be value of this function.
 <br />
 </div>
 <div class="itemtext">
-If the code block requires parameters to be passed to it,they are
+If the code block requires parameters to be passed to it, they are
 specified in the parameter list &lt;xVal&gt; and following. Each parameter
 is separated by a comma within the expression list.
 <br />
@@ -1280,7 +1280,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-AEval(),dbEval()
+AEval(), dbEval()
 <br />
 </div>
 <div id="hb_gcall">
@@ -1446,7 +1446,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-hb_gcAlloc(),hb_gcFree()
+hb_gcAlloc(), hb_gcFree()
 <br />
 </div>
 <div id="hb_gcfree">
@@ -1565,7 +1565,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-hb_gcAlloc(),hb_gcFree()
+hb_gcAlloc(), hb_gcFree()
 <br />
 </div>
 <div id="do">
@@ -1809,7 +1809,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-ProcName(),ProcLine()
+ProcName(), ProcLine()
 <br />
 </div>
 <div id="procline">
@@ -1867,7 +1867,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-ProcName(),ProcFile()
+ProcName(), ProcFile()
 <br />
 </div>
 <div id="procname">
@@ -1929,7 +1929,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-ProcLine(),ProcFile()
+ProcLine(), ProcFile()
 <br />
 </div>
 <div id="__dir">
@@ -2018,7 +2018,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-ADir(),Directory(),SET DEFAULT,DIR
+ADir(), Directory(), SET DEFAULT, DIR
 <br />
 </div>
 <div id="adir">
@@ -2136,7 +2136,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Array(),Directory(),SET DEFAULT
+Array(), Directory(), SET DEFAULT
 <br />
 </div>
 <div id="curdir">
@@ -2393,7 +2393,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">Platform(s)</div>
 <div class="itemtext">
-Unknown 'PLATFORMS' code: 'DOS,Win,OS2'
+Unknown 'PLATFORMS' code: 'DOS, Win, OS2'
 <br />
 </div>
 <div class="itemtitle">File(s)</div>
@@ -2456,7 +2456,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-FOpen(),FCreate(),FRead(),FWrite(),FError()
+FOpen(), FCreate(), FRead(), FWrite(), FError()
 <br />
 </div>
 <div id="fcreate">
@@ -2493,8 +2493,8 @@ This function creates a new file with a filename of &lt;cFile&gt;. The
 default value of &lt;nAttribute&gt; is 0 and is used to set the attribute
 byte for the file being created by this function. The return value
 will be a file handle that is associated with the new file. This
-number will be between zero to 65,535, inclusive. If an error occurs,
-the return value of this function will be -1.
+number will be between zero to 65535, inclusive. If an error occurs,
+the return value of this function will be F_ERROR.
 <br />
 </div>
 <div class="itemtext">
@@ -2516,7 +2516,7 @@ function.
 <br />
 </div>
 <div class="itemtext">
-     0              FC_NORMAL     Normal/Default,Read/Write
+     0              FC_NORMAL     Normal/Default, Read/Write
 <br />
 </div>
 <div class="itemtext">
@@ -2524,12 +2524,12 @@ function.
 <br />
 </div>
 <div class="itemtext">
-     2              FC_HIDDEN     Hidden,Excluded from normal DIR
+     2              FC_HIDDEN     Hidden, Excluded from normal DIR
 search
 <br />
 </div>
 <div class="itemtext">
-     4              FC_SYSTEM     Create,Excluded from normal DIR
+     4              FC_SYSTEM     Create, Excluded from normal DIR
 search
 <br />
 </div>
@@ -2561,7 +2561,7 @@ Library is core Header is fileio.ch
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-FClose(),FOpen(),FWrite(),FRead(),FError()
+FClose(), FOpen(), FWrite(), FRead(), FError()
 <br />
 </div>
 <div id="ferase">
@@ -2635,7 +2635,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-FError(),FRename()
+FError(), FRename()
 <br />
 </div>
 <div id="ferror">
@@ -2735,8 +2735,8 @@ FError() Return Values
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-After every low-level file function,this function will return a value
-that provides additional information on the status of the last
+After every low-level file function, this function will return a
+value that provides additional information on the status of the last
 low-level file functions's performance. If the FError() function
 returns a 0, no error was detected. Below is a table of possibles
 values returned by the FError() function.
@@ -2767,7 +2767,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-FClose(),FErase(),FOpen(),FWrite()
+FClose(), FErase(), FOpen(), FWrite()
 <br />
 </div>
 <div id="file">
@@ -2833,7 +2833,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-SET DEFAULT,SET PATH,Set()
+SET DEFAULT, SET PATH, Set()
 <br />
 </div>
 <div id="fopen">
@@ -2916,11 +2916,11 @@ value is 0. The file open modes are as follows:
 <br />
 </div>
 <div class="itemtext">
-If there is an error in opening a file, a -1 will be returned by the
-function. Files handles may be in the range of 0 to 65535. The status
-of the SET DEFAULT TO and SET PATH TO commands has no effect on this
-function. Directory names and paths must be specified along with the
-file that is to be opened.
+If there is an error in opening a file, a F_ERROR will be returned by
+the function. Files handles may be in the range of 0 to 65535. The
+status of the SET DEFAULT TO and SET PATH TO commands has no effect
+on this function. Directory names and paths must be specified along
+with the file that is to be opened.
 <br />
 </div>
 <div class="itemtext">
@@ -2952,7 +2952,7 @@ Library is core Header  is fileio.ch
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-FCreate(),FError(),FClose()
+FCreate(), FError(), FClose()
 <br />
 </div>
 <div id="fread">
@@ -3051,7 +3051,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2I(),Bin2L(),Bin2W(),FError(),FWrite()
+Bin2I(), Bin2L(), Bin2W(), FError(), FWrite()
 <br />
 </div>
 <div id="freadstr">
@@ -3140,7 +3140,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2I(),Bin2L(),Bin2W(),FError(),FRead(),FSeek()
+Bin2I(), Bin2L(), Bin2W(), FError(), FRead(), FSeek()
 <br />
 </div>
 <div id="frename">
@@ -3194,9 +3194,9 @@ by the PATH environment variable.
 <div class="itemtext">
 If the file specified in &lt;cNewFile&gt; exists or the file is open, the
 function will be unable to rename the file. If the function is unable
-to complete its operation,it will return a value of -1. If it is able
-to rename the file, the return value for the function will be 0. A
-call to FError() function will give additional infor- mation about
+to complete its operation, it will return a value of -1. If it is
+able to rename the file, the return value for the function will be 0.
+A call to FError() function will give additional infor- mation about
 any error found.
 <br />
 </div>
@@ -3225,7 +3225,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-ERASE,FErase(),FError(),File(),RENAME
+ERASE, FErase(), FError(), File(), RENAME
 <br />
 </div>
 <div id="fseek">
@@ -3319,16 +3319,16 @@ the file pointer from the beginning of the file.
 // nH = file handle obtained from FOpen()
 // cB = a string buffer passed-by-reference to hold the result
 // nMaxLine = maximum number of bytes to read
-FUNCTION FREADln( nH, cB, nMaxLine )
+FUNCTION FReadLn( nH, cB, nMaxLine )
    LOCAL cLine, nSavePos, nEol, nNumRead
    cLine := Space( nMaxLine )
    cB := &quot;&quot;
    nSavePos := FSeek( nH, 0, FS_RELATIVE )
    nNumRead := FRead( nH, @cLine, nMaxLine )
-   IF ( nEol := At( hb_eol(), SubStr( cLine, 1, nNumRead ) ) ) == 0
+   IF ( nEol := hb_BAt( hb_eol(), hb_BSubStr( cLine, 1, nNumRead ) ) ) == 0
       cB := cLine
    ELSE
-      cB := SubStr( cLine, 1, nEol - 1 )
+      cB := hb_BSubStr( cLine, 1, nEol - 1 )
       FSeek( nH, nSavePos + nEol + 1, FS_SET )
    ENDIF
    RETURN nNumRead != 0
@@ -3350,7 +3350,7 @@ Library is core Header is fileio.ch
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-FCreate(),FError(),FOpen(),FRead(),FReadStr(),FWrite()
+FCreate(), FError(), FOpen(), FRead(), FReadStr(), FWrite()
 <br />
 </div>
 <div id="fwrite">
@@ -3537,7 +3537,7 @@ This is Harbour specific
 </div>
 <div class="itemtitle">Platform(s)</div>
 <div class="itemtext">
-Unknown 'PLATFORMS' code: 'DOS,Win,OS2,Unix'
+Unknown 'PLATFORMS' code: 'DOS, Win, OS2, Unix'
 <br />
 </div>
 <div class="itemtitle">File(s)</div>
@@ -3577,7 +3577,7 @@ This function checks an open file handle to see if it is at EOF.
 <div class="itemtext">
 If the file handle is missing, not numeric, or not open, then this
 function returns .T. and sets the value returned by FError() to -1
-(FS_ERROR) or a C-compiler dependent errno value (EBADF or EINVAL).
+(F_ERROR) or a C-compiler dependent errno value (EBADF or EINVAL).
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
@@ -3706,7 +3706,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-hb_FUnlock(),FOpen(),FCreate(),FError(),FClose()
+hb_FUnlock(), FOpen(), FCreate(), FError(), FClose()
 <br />
 </div>
 <div id="hb_funlock">
@@ -3789,7 +3789,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-hb_FLock(),FOpen(),FCreate(),FError(),FClose()
+hb_FLock(), FOpen(), FCreate(), FError(), FClose()
 <br />
 </div>
 <div id="isdisk">
@@ -5055,7 +5055,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-hb_idleDel(),hb_idleState()
+hb_idleDel(), hb_idleState()
 <br />
 </div>
 <div id="hb_idledel">
@@ -5119,7 +5119,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-hb_idleAdd(),hb_idleState()
+hb_idleAdd(), hb_idleState()
 <br />
 </div>
 <div id="hb_idlestate">
@@ -5184,7 +5184,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-hb_idleAdd(),hb_idleDel()
+hb_idleAdd(), hb_idleDel()
 <br />
 </div>
 <div id="hb_inetaccept">
@@ -7201,7 +7201,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__XHelp(),SET KEY,SetKey()
+__XHelp(), SET KEY, SetKey()
 <br />
 </div>
 <div id="__textrestore">
@@ -7253,7 +7253,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Set(),SET ALTERNATE,SET PRINTER,TEXT,__TextSave()
+Set(), SET ALTERNATE, SET PRINTER, TEXT, __TextSave()
 <br />
 </div>
 <div id="__textsave">
@@ -7307,7 +7307,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Set(),SET ALTERNATE,SET PRINTER,TEXT,__TextRestore()
+Set(), SET ALTERNATE, SET PRINTER, TEXT, __TextRestore()
 <br />
 </div>
 <div id="__xhelp">
@@ -7481,7 +7481,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-AIns(),ASize()
+AIns(), ASize()
 <br />
 </div>
 <div id="aclone">
@@ -7521,11 +7521,11 @@ array &lt;aSource&gt;
 <pre class="examples">
 LOCAL aOne, aTwo
 aOne := { &quot;Harbour&quot;, &quot; is &quot;, &quot;POWER&quot; }
-aTwo := AClone( aOne )       // Result: aTwo is {&quot;Harbour&quot;,&quot; is &quot;,&quot;POWER&quot;}
+aTwo := AClone( aOne )       // Result: aTwo is { &quot;Harbour&quot;, &quot; is &quot;, &quot;POWER&quot; }
 aOne[ 1 ] := &quot;The Harbour Compiler&quot;
 // Result:
 // aOne is { &quot;The Harbour Compiler&quot;, &quot; is &quot;, &quot;POWER&quot; }
-// aTwo is { &quot;Harbour&quot;,&quot; is &quot;,&quot;POWER&quot; }
+// aTwo is { &quot;Harbour&quot;, &quot; is &quot;, &quot;POWER&quot; }
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -7545,7 +7545,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-ACopy(),ADel(),AIns(),ASize()
+ACopy(), ADel(), AIns(), ASize()
 <br />
 </div>
 <div id="acopy">
@@ -7606,7 +7606,7 @@ default is the entire array.
 <br />
 </div>
 <div class="itemtext">
-&lt;nTargetPos&gt; is the subscript number in the target array,&lt;aTarget&gt;,
+&lt;nTargetPos&gt; is the subscript number in the target array, &lt;aTarget&gt;,
 <br />
 </div>
 <div class="itemtext">
@@ -7656,7 +7656,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-AClone(),ADel(),AEval(),AFill(),AIns(),ASort()
+AClone(), ADel(), AEval(), AFill(), AIns(), ASort()
 <br />
 </div>
 <div id="adel">
@@ -7694,7 +7694,7 @@ in the array &lt;aArray&gt;. All elements in the array &lt;aArray&gt; below the
 given subscript position &lt;nPos&gt; will move up one position in the
 array. In other words, what was formerly the sixth subscript position
 will become the fifth subscript position. The length of the array
-&lt;aArray&gt; will remain unchanged,as the last element in the array will
+&lt;aArray&gt; will remain unchanged, as the last element in the array will
 become a NIL data type.
 <br />
 </div>
@@ -7720,7 +7720,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-ACopy(),AIns(),AFill()
+ACopy(), AIns(), AFill()
 <br />
 </div>
 <div id="aeval">
@@ -7798,7 +7798,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Eval(),dbEval()
+Eval(), dbEval()
 <br />
 </div>
 <div id="afill">
@@ -7877,7 +7877,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-AAdd(),AEval(),dbStruct(),Directory()
+AAdd(), AEval(), dbStruct(), Directory()
 <br />
 </div>
 <div id="ains">
@@ -7946,7 +7946,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-AAdd(),ACopy(),ADel(),AEval(),AFill(),ASize()
+AAdd(), ACopy(), ADel(), AEval(), AFill(), ASize()
 <br />
 </div>
 <div id="array">
@@ -8020,7 +8020,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-AAdd(),ADel(),AFill(),AIns()
+AAdd(), ADel(), AFill(), AIns()
 <br />
 </div>
 <div id="ascan">
@@ -8180,7 +8180,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-AAdd(),ADel(),AFill(),AIns()
+AAdd(), ADel(), AFill(), AIns()
 <br />
 </div>
 <div id="asort">
@@ -8274,7 +8274,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-AScan(),Eval(),SORT
+AScan(), Eval(), SORT
 <br />
 </div>
 <div id="atail">
@@ -8330,7 +8330,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Len(),Array(),ASize(),AAdd()
+Len(), Array(), ASize(), AAdd()
 <br />
 </div>
 <div id="hb_cdpselect">
@@ -8640,7 +8640,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-hb_langName(),hb_langSelect(),hb_Translate(),NationMsg(),REQUEST
+hb_langName(), hb_langSelect(), hb_Translate(), NationMsg(), REQUEST
 <br />
 </div>
 <div id="hb_langerrmsg">
@@ -8709,7 +8709,7 @@ Header is error.ch
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-hb_langSelect(),NationMsg()
+hb_langSelect(), NationMsg()
 <br />
 </div>
 <div id="hb_langmessage">
@@ -8787,7 +8787,7 @@ Header is hblang.ch
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-hb_langSelect(),NationMsg(),REQUEST
+hb_langSelect(), NationMsg(), REQUEST
 <br />
 </div>
 <div id="hb_langname">
@@ -8863,7 +8863,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-hb_langSelect(),NationMsg()
+hb_langSelect(), NationMsg()
 <br />
 </div>
 <div id="hb_langselect">
@@ -9085,7 +9085,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-hb_langName(),hb_cdpSelect(),NationMsg(),REQUEST
+hb_langName(), hb_cdpSelect(), NationMsg(), REQUEST
 <br />
 </div>
 <div id="hb_translate">
@@ -9170,7 +9170,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-hb_langSelect(),hb_cdpSelect(),NationMsg(),REQUEST
+hb_langSelect(), hb_cdpSelect(), NationMsg(), REQUEST
 <br />
 </div>
 <div id="isaffirm">
@@ -9234,7 +9234,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-IsNegative(),NationMsg()
+IsNegative(), NationMsg()
 <br />
 </div>
 <div id="isnegative">
@@ -9298,7 +9298,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-IsAffirm(),NationMsg()
+IsAffirm(), NationMsg()
 <br />
 </div>
 <div id="languageandnationmsg">
@@ -9360,7 +9360,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-IsAffirm(),IsNegative()
+IsAffirm(), IsNegative()
 <br />
 </div>
 <div id="hb_setmacro">
@@ -9733,7 +9733,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Round(),StrZero()
+Round(), StrZero()
 <br />
 </div>
 <div id="log">
@@ -10005,7 +10005,7 @@ Rounds off a numeric expression.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-Round( &lt;nNumber&gt;,&lt;nPlace&gt; ) --&gt; &lt;nResult&gt;
+Round( &lt;nNumber&gt;, &lt;nPlace&gt; ) --&gt; &lt;nResult&gt;
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -10058,7 +10058,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Int(),Str(),Val(),SET FIXED
+Int(), Str(), Val(), SET FIXED
 <br />
 </div>
 <div id="sqrt">
@@ -10188,8 +10188,8 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__objAddInline(),__objAddMethod(),__objDelData(),__objGetMsgList(),
-__objGetValueList(),__objHasData(),__objSetValueList()
+__objAddInline(), __objAddMethod(), __objDelData(), __objGetMsgList(),
+__objGetValueList(), __objHasData(), __objSetValueList()
 <br />
 </div>
 <div id="__objaddinline">
@@ -10258,8 +10258,9 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__objAddData(),__objAddMethod(),__objDelInline(),__objGetMethodList(),
-__objGetMsgList(),__objHasMethod() ,__objModInline()
+__objAddData(), __objAddMethod(), __objDelInline(),
+__objGetMethodList(), __objGetMsgList(), __objHasMethod() ,
+__objModInline()
 <br />
 </div>
 <div id="__objaddmethod">
@@ -10343,8 +10344,9 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__objAddInline(),__objAddData(),__objDelMethod(),__objGetMethodList(),
-__objGetMsgList(),__objHasMethod(),__objModMethod()
+__objAddInline(), __objAddData(), __objDelMethod(),
+__objGetMethodList(), __objGetMsgList(), __objHasMethod(),
+__objModMethod()
 <br />
 </div>
 <div id="__objdeldata">
@@ -10410,8 +10412,8 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__objAddData(),__objGetMsgList(),__objGetValueList(),__objHasData(),
-__objSetValueList()
+__objAddData(), __objGetMsgList(), __objGetValueList(),
+__objHasData(), __objSetValueList()
 <br />
 </div>
 <div id="__objdelinline">
@@ -10487,8 +10489,9 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__objAddInline(),__objAddMethod(),__objGetMethodList(),
-__objGetMsgList(),__objHasMethod(),__objModInline(),__objModMethod()
+__objAddInline(), __objAddMethod(), __objGetMethodList(),
+__objGetMsgList(), __objHasMethod(), __objModInline(),
+__objModMethod()
 <br />
 </div>
 <div id="__objdelmethod">
@@ -10568,8 +10571,9 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__objAddInline(),__objAddMethod(),__objGetMethodList(),
-__objGetMsgList(),__objHasMethod(),__objModInline(),__objModMethod()
+__objAddInline(), __objAddMethod(), __objGetMethodList(),
+__objGetMsgList(), __objHasMethod(), __objModInline(),
+__objModMethod()
 <br />
 </div>
 <div id="__objderivedfrom">
@@ -10651,7 +10655,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__objHasData(),__objHasMethod()
+__objHasData(), __objHasMethod()
 <br />
 </div>
 <div id="__objgetmethodlist">
@@ -10713,7 +10717,8 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__objGetMsgList(),__objGetValueList(),__objHasData(),__objHasMethod()
+__objGetMsgList(), __objGetValueList(), __objHasData(),
+__objHasMethod()
 <br />
 </div>
 <div id="__objgetmsglist">
@@ -10820,7 +10825,7 @@ Header file is hboo.ch Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__objGetMethodList(),__objGetValueList(),__objHasData(),
+__objGetMethodList(), __objGetValueList(), __objHasData(),
 __objHasMethod()
 <br />
 </div>
@@ -10894,8 +10899,8 @@ Header file is hboo.ch Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__objGetMethodList(),__objGetMsgList(),__objHasData(),
-__objHasMethod(),__objSetValueList()
+__objGetMethodList(), __objGetMsgList(), __objHasData(),
+__objHasMethod(), __objSetValueList()
 <br />
 </div>
 <div id="__objhasdata">
@@ -10957,7 +10962,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__objGetMethodList(),__objGetMsgList(),__objHasMethod()
+__objGetMethodList(), __objGetMsgList(), __objHasMethod()
 <br />
 </div>
 <div id="__objhasmethod">
@@ -11019,7 +11024,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__objGetMethodList(),__objGetMsgList(),__objHasData()
+__objGetMethodList(), __objGetMsgList(), __objHasData()
 <br />
 </div>
 <div id="__objmodinline">
@@ -11094,8 +11099,8 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__objAddInline(),__objDelInline(),__objGetMethodList(),
-__objGetMsgList(),__objHasMethod()
+__objAddInline(), __objDelInline(), __objGetMethodList(),
+__objGetMsgList(), __objHasMethod()
 <br />
 </div>
 <div id="__objmodmethod">
@@ -11191,8 +11196,8 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__objAddMethod(),__objDelMethod(),__objGetMethodList(),
-__objGetMsgList(),__objHasMethod()
+__objAddMethod(), __objDelMethod(), __objGetMethodList(),
+__objGetMsgList(), __objHasMethod()
 <br />
 </div>
 <div id="__objsetvaluelist">
@@ -11348,7 +11353,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Eval(),FieldWBlock(),MemVarBlock()
+Eval(), FieldWBlock(), MemVarBlock()
 <br />
 </div>
 <div id="fieldwblock">
@@ -11437,7 +11442,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Eval(),FieldBlock(),MemVarBlock()
+Eval(), FieldBlock(), MemVarBlock()
 <br />
 </div>
 <div id="alltrim">
@@ -11499,7 +11504,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-LTrim(),RTrim(),Trim()
+LTrim(), RTrim(), Trim()
 <br />
 </div>
 <div id="asc">
@@ -11881,7 +11886,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-MemoEdit(),hb_MemoWrit(),REPLACE,MemoRead()
+MemoEdit(), hb_MemoWrit(), REPLACE, MemoRead()
 <br />
 </div>
 <div id="hb_memowrit">
@@ -12000,7 +12005,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-MemoEdit(),MemoRead(),hb_MemoWrit()
+MemoEdit(), MemoRead(), hb_MemoWrit()
 <br />
 </div>
 <div id="hb_rat">
@@ -12207,7 +12212,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-MemoTran(),StrTran()
+MemoTran(), StrTran()
 <br />
 </div>
 <div id="isalpha">
@@ -12268,7 +12273,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-IsDigit(),IsLower(),IsUpper(),Lower(),Upper()
+IsDigit(), IsLower(), IsUpper(), Lower(), Upper()
 <br />
 </div>
 <div id="isdigit">
@@ -12330,7 +12335,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-IsAlpha(),IsLower(),IsUpper(),Lower(),Upper()
+IsAlpha(), IsLower(), IsUpper(), Lower(), Upper()
 <br />
 </div>
 <div id="islower">
@@ -12392,7 +12397,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-IsAlpha(),IsDigit(),IsUpper(),Lower(),Upper()
+IsAlpha(), IsDigit(), IsUpper(), Lower(), Upper()
 <br />
 </div>
 <div id="isupper">
@@ -12453,7 +12458,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-IsAlpha(),IsLower(),IsDigit(),Lower(),Upper()
+IsAlpha(), IsLower(), IsDigit(), Lower(), Upper()
 <br />
 </div>
 <div id="left">
@@ -12520,7 +12525,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-SubStr(),Right(),At(),RAt()
+SubStr(), Right(), At(), RAt()
 <br />
 </div>
 <div id="lower">
@@ -12581,7 +12586,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Upper(),IsLower(),IsUpper()
+Upper(), IsLower(), IsUpper()
 <br />
 </div>
 <div id="ltrim">
@@ -12640,7 +12645,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Trim(),RTrim(),AllTrim()
+Trim(), RTrim(), AllTrim()
 <br />
 </div>
 <div id="memoread">
@@ -12740,7 +12745,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-MemoEdit(),MemoWrit(),REPLACE,hb_MemoRead()
+MemoEdit(), MemoWrit(), REPLACE, hb_MemoRead()
 <br />
 </div>
 <div id="memotran">
@@ -12804,7 +12809,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-HardCR(),StrTran()
+HardCR(), StrTran()
 <br />
 </div>
 <div id="memowrit">
@@ -12901,7 +12906,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-MemoEdit(),MemoRead(),hb_MemoWrit()
+MemoEdit(), MemoRead(), hb_MemoWrit()
 <br />
 </div>
 <div id="padc">
@@ -12979,7 +12984,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-AllTrim(),PadL(),PadR()
+AllTrim(), PadL(), PadR()
 <br />
 </div>
 <div id="padl">
@@ -12998,7 +13003,7 @@ PadL( &lt;xVal&gt;, &lt;nWidth&gt;, &lt;cFill&gt; ) --&gt; cString
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;xVal&gt; An number,Character or date to pad
+&lt;xVal&gt; An number, Character or date to pad
 <br />
 </div>
 <div class="itemtext">
@@ -13016,11 +13021,11 @@ PadL( &lt;xVal&gt;, &lt;nWidth&gt;, &lt;cFill&gt; ) --&gt; cString
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-This function takes an date,number,or character expression &lt;xVal&gt; and
-attempt to left-justify it within a string of a given width expressed
-as &lt;nWidth&gt;. The default character used to pad left side of &lt;xVal&gt;
-will be an blank space; however, this character may be explicitly
-specified the value of &lt;cFill&gt;.
+This function takes an date, number, or character expression &lt;xVal&gt;
+and attempt to left-justify it within a string of a given width
+expressed as &lt;nWidth&gt;. The default character used to pad left side of
+&lt;xVal&gt; will be an blank space; however, this character may be
+explicitly specified the value of &lt;cFill&gt;.
 <br />
 </div>
 <div class="itemtext">
@@ -13057,7 +13062,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-AllTrim(),PadC(),PadR()
+AllTrim(), PadC(), PadR()
 <br />
 </div>
 <div id="padr">
@@ -13094,8 +13099,8 @@ PadR( &lt;xVal&gt;, &lt;nWidth&gt;, &lt;cFill&gt; ) --&gt; cString
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-This function takes an date,number,or character expression &lt;xVal&gt; and
-attempt to right-justify it within a string of a given width
+This function takes an date, number, or character expression &lt;xVal&gt;
+and attempt to right-justify it within a string of a given width
 expressed as &lt;nWidth&gt;. The default character used to pad right side
 of &lt;xVal&gt; will be an blank space; however, this character may be
 explicitly specified the value of &lt;cFill&gt;.
@@ -13135,7 +13140,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-AllTrim(),PadC(),PadL()
+AllTrim(), PadC(), PadL()
 <br />
 </div>
 <div id="rat">
@@ -13273,7 +13278,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Space(),PadC(),PadL(),PadR()
+Space(), PadC(), PadL(), PadR()
 <br />
 </div>
 <div id="right">
@@ -13344,7 +13349,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-SubStr(),Left(),At(),RAt()
+SubStr(), Left(), At(), RAt()
 <br />
 </div>
 <div id="rtrim">
@@ -13412,7 +13417,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-AllTrim(),LTrim(),Trim()
+AllTrim(), LTrim(), Trim()
 <br />
 </div>
 <div id="space">
@@ -13508,7 +13513,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-PadC(),PadL(),PadR(),Replicate()
+PadC(), PadL(), PadR(), Replicate()
 <br />
 </div>
 <div id="str">
@@ -13652,7 +13657,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-StrZero(),Transform(),Val()
+StrZero(), Transform(), Val()
 <br />
 </div>
 <div id="strtran">
@@ -13742,7 +13747,7 @@ Libraty is rtl
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-SubStr(),At()
+SubStr(), At()
 <br />
 </div>
 <div id="strzero">
@@ -13971,7 +13976,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Left(),At(),Right()
+Left(), At(), Right()
 <br />
 </div>
 <div id="transform">
@@ -14177,7 +14182,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-@...SAY,DevOutPict()
+@...SAY, DevOutPict()
 <br />
 </div>
 <div id="trim">
@@ -14245,7 +14250,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-RTrim(),LTrim(),AllTrim()
+RTrim(), LTrim(), AllTrim()
 <br />
 </div>
 <div id="upper">
@@ -14305,7 +14310,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Lower(),IsUpper(),IsLower()
+Lower(), IsUpper(), IsLower()
 <br />
 </div>
 <div id="val">
@@ -14368,7 +14373,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Str(),Transform()
+Str(), Transform()
 <br />
 </div>
 <div id="__typefile">
@@ -14455,7 +14460,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-COPY FILE,SET DEFAULT,SET PATH,SET PRINTER,TYPE
+COPY FILE, SET DEFAULT, SET PATH, SET PRINTER, TYPE
 <br />
 </div>
 <div id="col">
@@ -14514,7 +14519,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Row(),MaxRow(),MaxCol()
+Row(), MaxRow(), MaxCol()
 <br />
 </div>
 <div id="devoutpict">
@@ -14575,7 +14580,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-DevOut(),Transform()
+DevOut(), Transform()
 <br />
 </div>
 <div id="hb_colorindex">
@@ -14690,7 +14695,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">Platform(s)</div>
 <div class="itemtext">
-Unknown 'PLATFORMS' code: 'Linux(GT),OS2(GT),Win(GT)'
+Unknown 'PLATFORMS' code: 'Linux(GT), OS2(GT), Win(GT)'
 <br />
 </div>
 <div class="itemtitle">File(s)</div>
@@ -14700,7 +14705,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Row(),MaxRow(),Col()
+Row(), MaxRow(), Col()
 <br />
 </div>
 <div id="maxrow">
@@ -14749,7 +14754,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">Platform(s)</div>
 <div class="itemtext">
-Unknown 'PLATFORMS' code: 'Linux(GT),OS2(GT),Win(GT)'
+Unknown 'PLATFORMS' code: 'Linux(GT), OS2(GT), Win(GT)'
 <br />
 </div>
 <div class="itemtitle">File(s)</div>
@@ -14759,7 +14764,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Col(),Row(),MaxCol()
+Col(), Row(), MaxCol()
 <br />
 </div>
 <div id="restorescreen">
@@ -14819,7 +14824,7 @@ This part of the GT API and supported only by some platforms.
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__XRestScreen(),SAVE SCREEN,__XSaveScreen()
+__XRestScreen(), SAVE SCREEN, __XSaveScreen()
 <br />
 </div>
 <div id="row">
@@ -14878,7 +14883,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Col(),MaxRow(),MaxCol()
+Col(), MaxRow(), MaxCol()
 <br />
 </div>
 <div id="savescreen">
@@ -14939,7 +14944,7 @@ This part of the GT API and supported only by some platforms.
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-RESTORE SCREEN,__XRestScreen(),__XSaveScreen()
+RESTORE SCREEN, __XRestScreen(), __XSaveScreen()
 <br />
 </div>
 <div id="hbclass">
@@ -14953,7 +14958,7 @@ HBClass() is used in the creation of all classes
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-oClass := HBClass():New(&quot;TMyClass&quot;)
+oClass := HBClass():New( &quot;TMyClass&quot; )
 <br />
 </div>
 <div class="itemtext">
@@ -14962,11 +14967,12 @@ oClass := HBClass():New(&quot;TMyClass&quot;)
 </div>
 <div class="itemtext">
 HBClass() is usually accessed by defining a class with the commands
-defined in hbclass.h:
+defined in hbclass.ch:
 <br />
 </div>
 <div class="itemtext">
-CLASS HBGetList    // Calls HBClass() to create the HBGetList class
+CREATE CLASS HBGetList    // Calls HBClass() to create the HBGetList
+class
 <br />
 </div>
 <div class="itemtext">
@@ -15034,7 +15040,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__objHasData(),Object Oriented Programming,CLASS
+__objHasData(), Object Oriented Programming, CLASS
 <br />
 </div>
 <div id="__atprompt">
@@ -15129,7 +15135,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-AChoice(),MENU TO,SET MESSAGE,SET INTENSITY,SET WRAP,__MenuTo()
+AChoice(), MENU TO, SET MESSAGE, SET INTENSITY, SET WRAP, __MenuTo()
 <br />
 </div>
 <div id="__input">
@@ -15179,7 +15185,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__Wait(),__Accept()
+__Wait(), __Accept()
 <br />
 </div>
 <div id="__keyboard">
@@ -15242,7 +15248,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-CLEAR TYPEAHEAD,KEYBOARD
+CLEAR TYPEAHEAD, KEYBOARD
 <br />
 </div>
 <div id="__menuto">
@@ -15409,7 +15415,8 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-@...PROMPT,AChoice(),SET MESSAGE,SET INTENSITY,SET WRAP,__AtPrompt()
+@...PROMPT, AChoice(), SET MESSAGE, SET INTENSITY, SET WRAP,
+__AtPrompt()
 <br />
 </div>
 <div id="__nonoalert">
@@ -15527,7 +15534,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__XRestScreen(),SAVE SCREEN,__XSaveScreen()
+__XRestScreen(), SAVE SCREEN, __XSaveScreen()
 <br />
 </div>
 <div id="__xsavescreen">
@@ -15599,7 +15606,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-RESTORE SCREEN,RestScreen(),SaveScreen()
+RESTORE SCREEN, RestScreen(), SaveScreen()
 <br />
 </div>
 <div id="achoice">
@@ -15898,7 +15905,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-@...PROMPT,MENU TO,OutStd(),__NoNoAlert()
+@...PROMPT, MENU TO, OutStd(), __NoNoAlert()
 <br />
 </div>
 <div id="browse">
@@ -16076,7 +16083,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbEdit()*,TBrowse class
+dbEdit()*, TBrowse class
 <br />
 </div>
 <div id="dbedit">
@@ -16431,7 +16438,7 @@ Header files are dbedit.ch, inkey.ch Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-@...SAY,Browse(),TBrowse class,Transform()
+@...SAY, Browse(), TBrowse class, Transform()
 <br />
 </div>
 <div id="dbskipper">
@@ -16496,7 +16503,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbSkip(),SKIP
+dbSkip(), SKIP
 <br />
 </div>
 <div id="hb_keyput">
@@ -16555,7 +16562,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-KEYBOARD,CLEAR TYPEAHEAD,Inkey()
+KEYBOARD, CLEAR TYPEAHEAD, Inkey()
 <br />
 </div>
 <div id="inkey">
@@ -16783,7 +16790,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Inkey(),LastKey()
+Inkey(), LastKey()
 <br />
 </div>
 <div id="mcol">
@@ -16999,7 +17006,8 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-@...PROMPT,AChoice(),SET MESSAGE,SET INTENSITY,SET WRAP,__AtPrompt()
+@...PROMPT, AChoice(), SET MESSAGE, SET INTENSITY, SET WRAP,
+__AtPrompt()
 <br />
 </div>
 <div id="mrow">
@@ -17131,7 +17139,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Inkey(),LastKey()
+Inkey(), LastKey()
 <br />
 </div>
 <div id="outerr">
@@ -17198,8 +17206,8 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-?,??,DevOut(),DevOutPict(),DispOut(),DispOutAt(),OutStd(),QOut(),
-QQOut(),Str()
+?, ??, DevOut(), DevOutPict(), DispOut(), DispOutAt(), OutStd(),
+QOut(), QQOut(), Str()
 <br />
 </div>
 <div id="outstd">
@@ -17264,8 +17272,8 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-?,??,DevOut(),DevOutPict(),DispOut(),DispOutAt(),OutErr(),QOut(),
-QQOut(),Str()
+?, ??, DevOut(), DevOutPict(), DispOut(), DispOutAt(), OutErr(),
+QOut(), QQOut(), Str()
 <br />
 </div>
 <div id="readkey">
@@ -17384,7 +17392,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-@...GET,Inkey(),LastKey(),READ,ReadExit(),Updated()
+@...GET, Inkey(), LastKey(), READ, ReadExit(), Updated()
 <br />
 </div>
 <div id="readvar">
@@ -17464,7 +17472,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-@...GET,@...PROMPT,MENU TO,READ,SET KEY,__AtPrompt(),__MenuTo()
+@...GET, @...PROMPT, MENU TO, READ, SET KEY, __AtPrompt(), __MenuTo()
 <br />
 </div>
 <div id="tbrowsedb">
@@ -17535,7 +17543,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Browse(),TBColumn class,TBrowse class,TBrowseNew()
+Browse(), TBColumn class, TBrowse class, TBrowseNew()
 <br />
 </div>
 <div id="__mvclear">
@@ -18292,7 +18300,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Empty(),RTrim(),LTrim(),AAdd(),ASize()
+Empty(), RTrim(), LTrim(), AAdd(), ASize()
 <br />
 </div>
 <div id="memvarblock">
@@ -18356,7 +18364,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__mvGet(),__mvPut()
+__mvGet(), __mvPut()
 <br />
 </div>
 <div id="type001">
@@ -18746,7 +18754,8 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2L(),Bin2U(),Bin2W(),I2Bin(),L2Bin(),W2Bin(),Word(),U2Bin(),FRead()
+Bin2L(), Bin2U(), Bin2W(), I2Bin(), L2Bin(), W2Bin(), Word(), U2Bin(),
+FRead()
 <br />
 </div>
 <div id="bin2l">
@@ -18829,7 +18838,8 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2I(),Bin2U(),Bin2W(),I2Bin(),L2Bin(),W2Bin(),Word(),U2Bin(),FRead()
+Bin2I(), Bin2U(), Bin2W(), I2Bin(), L2Bin(), W2Bin(), Word(), U2Bin(),
+FRead()
 <br />
 </div>
 <div id="bin2u">
@@ -18912,7 +18922,8 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2I(),Bin2L(),Bin2W(),I2Bin(),L2Bin(),W2Bin(),Word(),U2Bin(),FRead()
+Bin2I(), Bin2L(), Bin2W(), I2Bin(), L2Bin(), W2Bin(), Word(), U2Bin(),
+FRead()
 <br />
 </div>
 <div id="bin2w">
@@ -18995,7 +19006,8 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2I(),Bin2L(),Bin2U(),I2Bin(),L2Bin(),W2Bin(),Word(),U2Bin(),FRead()
+Bin2I(), Bin2L(), Bin2U(), I2Bin(), L2Bin(), W2Bin(), Word(), U2Bin(),
+FRead()
 <br />
 </div>
 <div id="descend">
@@ -19141,7 +19153,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2I(),Bin2L(),Bin2U(),Bin2W(),L2Bin(),W2Bin(),Word(),U2Bin(),
+Bin2I(), Bin2L(), Bin2U(), Bin2W(), L2Bin(), W2Bin(), Word(), U2Bin(),
 FWrite()
 <br />
 </div>
@@ -19206,7 +19218,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2I(),Bin2L(),Bin2U(),Bin2W(),I2Bin(),W2Bin(),Word(),U2Bin(),
+Bin2I(), Bin2L(), Bin2U(), Bin2W(), I2Bin(), W2Bin(), Word(), U2Bin(),
 FWrite()
 <br />
 </div>
@@ -19272,7 +19284,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2I(),Bin2L(),Bin2U(),Bin2W(),I2Bin(),L2Bin(),W2Bin(),Word(),
+Bin2I(), Bin2L(), Bin2U(), Bin2W(), I2Bin(), L2Bin(), W2Bin(), Word(),
 FWrite()
 <br />
 </div>
@@ -19338,7 +19350,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2I(),Bin2L(),Bin2U(),Bin2W(),I2Bin(),L2Bin(),Word(),U2Bin(),
+Bin2I(), Bin2L(), Bin2U(), Bin2W(), I2Bin(), L2Bin(), Word(), U2Bin(),
 FWrite()
 <br />
 </div>
@@ -19471,8 +19483,8 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-COPY STRUCTURE,COPY STRUCTURE EXTENDED,dbCreate(),dbStruct(),
-__dbCopyXStruct(),__dbCreate(),__dbStructFilter()
+COPY STRUCTURE, COPY STRUCTURE EXTENDED, dbCreate(), dbStruct(),
+__dbCopyXStruct(), __dbCreate(), __dbStructFilter()
 <br />
 </div>
 <div id="__dbcopyxstruct">
@@ -19606,8 +19618,8 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-COPY STRUCTURE,COPY STRUCTURE EXTENDED,CREATE,CREATE FROM,dbCreate(),
-dbStruct(),__dbCopyStruct(),__dbCreate()
+COPY STRUCTURE, COPY STRUCTURE EXTENDED, CREATE, CREATE FROM,
+dbCreate(), dbStruct(), __dbCopyStruct(), __dbCreate()
 <br />
 </div>
 <div id="__dbcreate">
@@ -19781,8 +19793,8 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-COPY STRUCTURE,COPY STRUCTURE EXTENDED,CREATE,CREATE FROM,dbCreate(),
-dbStruct(),__dbCopyStruct(),__dbCopyXStruct()
+COPY STRUCTURE, COPY STRUCTURE EXTENDED, CREATE, CREATE FROM,
+dbCreate(), dbStruct(), __dbCopyStruct(), __dbCopyXStruct()
 <br />
 </div>
 <div id="__dbdelim">
@@ -20111,7 +20123,7 @@ Header file is dbstruct.ch Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbCreate(),dbStruct(),__dbCopyStruct(),__FLedit()*
+dbCreate(), dbStruct(), __dbCopyStruct(), __FLedit()*
 <br />
 </div>
 <div id="__fledit">
@@ -20252,7 +20264,7 @@ Header file is dbstruct.ch Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbCreate(),dbStruct(),__dbCopyStruct(),__dbStructFilter()
+dbCreate(), dbStruct(), __dbCopyStruct(), __dbStructFilter()
 <br />
 </div>
 <div id="afields">
@@ -20482,7 +20494,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Eof(),Found(),LastRec()
+Eof(), Found(), LastRec()
 <br />
 </div>
 <div id="dbappend">
@@ -20514,7 +20526,7 @@ dbAppend() always returns NIL
 This function add a new record to the end of the database in the
 selected or aliased work area. All fields in that database will be
 given empty data values - character fields will be filled with blank
-spaces,date fields with CToD('//'), numeric fields with 0, logical
+spaces, date fields with CToD('//'), numeric fields with 0, logical
 fields with .F., and memo fields with NULL bytes. The header of the
 database is not updated until the record is flushed from the buffer
 and the contents are written to the disk.
@@ -20563,7 +20575,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbUnlock(),dbUnlockAll()
+dbUnlock(), dbUnlockAll()
 <br />
 </div>
 <div id="dbclearfilter">
@@ -20618,7 +20630,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbSetFilter(),dbFilter()
+dbSetFilter(), dbFilter()
 <br />
 </div>
 <div id="dbcloseall">
@@ -20675,7 +20687,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbUseArea(),dbCloseArea()
+dbUseArea(), dbCloseArea()
 <br />
 </div>
 <div id="dbclosearea">
@@ -20724,7 +20736,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbUseArea(),dbCloseAll()
+dbUseArea(), dbCloseAll()
 <br />
 </div>
 <div id="dbcommit">
@@ -20743,7 +20755,7 @@ dbCommit()
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-This function updates all of the information for a give,selected, or
+This function updates all of the information for a give, selected, or
 active workarea. This operation includes all database and index
 buffers for that work area only. This function does not update all
 open work areas.
@@ -20785,7 +20797,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbCloseAll(),dbCommitAll(),dbUnlock()
+dbCloseAll(), dbCommitAll(), dbUnlock()
 <br />
 </div>
 <div id="dbcommitall">
@@ -20805,7 +20817,7 @@ dbCommit()
 <div class="itemtitle">Description</div>
 <div class="itemtext">
 This function performs a hard-disk write for all work areas. Before
-the disk write is performed,all buffers are flushed. open work areas.
+the disk write is performed, all buffers are flushed. open work areas.
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
@@ -20849,7 +20861,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbCloseAll(),dbCommit(),dbUnlock()
+dbCloseAll(), dbCommit(), dbUnlock()
 <br />
 </div>
 <div id="dbcreate">
@@ -20950,10 +20962,10 @@ proper value.
 <div class="itemtext">
 The dbCreate( ) function does not use the decimal field to calculate
 the length of a character held longer than 256. Values up to the
-maximum length of a character field (which is 65,519 bytes) are
-stored directly in the database in the length attribute if that
-database was created via this function. However, a file containing
-fields longer than 256 bytes is not compatible with any interpreter.
+maximum length of a character field (which is 65519 bytes) are stored
+directly in the database in the length attribute if that database was
+created via this function. However, a file containing fields longer
+than 256 bytes is not compatible with any interpreter.
 <br />
 </div>
 <div class="itemtext">
@@ -21002,7 +21014,7 @@ Library is rdd Header  is dbstruct.ch
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-AFields()*,dbStruct()
+AFields()*, dbStruct()
 <br />
 </div>
 <div id="dbdelete">
@@ -21117,7 +21129,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbRelation(),dbRSelect()
+dbRelation(), dbRSelect()
 <br />
 </div>
 <div id="dbgobottom">
@@ -21169,7 +21181,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bof(),Eof(),dbSkip(),dbSeek(),dbGoTop()
+Bof(), Eof(), dbSkip(), dbSeek(), dbGoTop()
 <br />
 </div>
 <div id="dbgoto">
@@ -21240,7 +21252,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bof(),Eof(),dbGoTop(),dbGoBottom(),dbSeek(),dbSkip()
+Bof(), Eof(), dbGoTop(), dbGoBottom(), dbSeek(), dbSkip()
 <br />
 </div>
 <div id="dbgotop">
@@ -21292,7 +21304,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bof(),Eof(),dbSkip(),dbSeek(),dbGoBottom()
+Bof(), Eof(), dbSkip(), dbSeek(), dbGoBottom()
 <br />
 </div>
 <div id="dbrecall">
@@ -21412,7 +21424,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbUnlock(),dbUnlockAll(),FLock(),RLock()
+dbUnlock(), dbUnlockAll(), FLock(), RLock()
 <br />
 </div>
 <div id="dbrlocklist">
@@ -21476,7 +21488,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-RLock(),dbRLock(),dbRUnlock()
+RLock(), dbRLock(), dbRUnlock()
 <br />
 </div>
 <div id="dbrunlock">
@@ -21534,7 +21546,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-RLock(),dbRLock(),dbRLockList()
+RLock(), dbRLock(), dbRLockList()
 <br />
 </div>
 <div id="dbseek">
@@ -21592,7 +21604,7 @@ If the SOFTSEEK flag is on or if &lt;lSoftSeek&gt; is set to a logical true
 false if there is an item in the index key with a greater value than
 the key expression &lt;expKey&gt;; at this point the record pointer will
 position itself on that record. However, if there is no greater key
-in the index,Eof() will return a logical true (.T.) value. If
+in the index, Eof() will return a logical true (.T.) value. If
 &lt;lSoftSeek&gt; is not passed, the function will look to the internal
 status of SOFTSEEK before performing the operation. The default of
 &lt;lSoftSeek&gt; is a logical false (.F.)
@@ -21637,7 +21649,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbGoBottom(),dbGoTop(),dbSkip(),Eof(),Bof(),Found()
+dbGoBottom(), dbGoTop(), dbSkip(), Eof(), Bof(), Found()
 <br />
 </div>
 <div id="dbselectarea">
@@ -21663,7 +21675,7 @@ dbSelectArea( &lt;xArea&gt; ) -
 <div class="itemtext">
 This function moves the Harbour internal primary focus to the work
 area designated by &lt;xArea&gt;. If &lt;xArea&gt; is numeric, then it will
-select the numeric work area; if &lt;xArea&gt; is character,then it will
+select the numeric work area; if &lt;xArea&gt; is character, then it will
 select the work area with the alias name.
 <br />
 </div>
@@ -21706,7 +21718,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbUseArea(),Select()
+dbUseArea(), Select()
 <br />
 </div>
 <div id="dbsetdriver">
@@ -21739,7 +21751,7 @@ This function returns the name of the current database driver for the
 selected work area. The default will be &quot;DBFNTX&quot;. If specified,
 &lt;cDriver&gt; contains the name of the database driver that should be
 used to activate and manage the work area. If the specified driver is
-not avaliable,this function will have no effect.
+not avaliable, this function will have no effect.
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
@@ -21794,9 +21806,9 @@ dbSetFilter( &lt;bCondition&gt;, [&lt;cCondition&gt;] )
 This function masks a database so that only those records that meet
 the condition prescribed by the expression in the code block
 &lt;bCondition&gt; and literally expressed as &lt;cCondition&gt; are visible. If
-&lt;cCondition&gt; is not passed to this function,then the dbFilter()
+&lt;cCondition&gt; is not passed to this function, then the dbFilter()
 function will return an empty string showing no filter in that work
-area which in fact,would be not correct.
+area which in fact, would be not correct.
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
@@ -21823,7 +21835,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbFilter(),dbClearFilter()
+dbFilter(), dbClearFilter()
 <br />
 </div>
 <div id="dbskip">
@@ -21883,7 +21895,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bof(),dbGoBottom(),dbGoTop(),dbSeek(),Eof()
+Bof(), dbGoBottom(), dbGoTop(), dbSeek(), Eof()
 <br />
 </div>
 <div id="dbstruct">
@@ -21908,9 +21920,9 @@ dbStruct() returns an array pointer to database structure
 <div class="itemtitle">Description</div>
 <div class="itemtext">
 This function returns a multidimensional array. This array has array
-pointers to other arrays,each of which contains the characteristic of
-a field in the active work area. The lenght of this array is based in
-the number of fields in that particular work area. In other words,
+pointers to other arrays, each of which contains the characteristic
+of a field in the active work area. The lenght of this array is based
+in the number of fields in that particular work area. In other words,
 Len(dbStruct()) is equal to the value obtained from FCount(). Each
 subscript position
 <br />
@@ -21999,7 +22011,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbUnlockAll(),FLock(),RLock()
+dbUnlockAll(), FLock(), RLock()
 <br />
 </div>
 <div id="dbunlockall">
@@ -22054,7 +22066,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbUnlock(),FLock(),RLock()
+dbUnlock(), FLock(), RLock()
 <br />
 </div>
 <div id="dbusearea">
@@ -22150,7 +22162,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbCloseArea(),dbSetDriver(),Select(),Set()
+dbCloseArea(), dbSetDriver(), Select(), Set()
 <br />
 </div>
 <div id="dbf">
@@ -22332,7 +22344,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bof(),Found(),LastRec()
+Bof(), Found(), LastRec()
 <br />
 </div>
 <div id="fcount">
@@ -22386,7 +22398,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-FieldName(),Type()
+FieldName(), Type()
 <br />
 </div>
 <div id="fieldget">
@@ -22509,7 +22521,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbStruct(),FCount(),Len(),ValType()
+dbStruct(), FCount(), Len(), ValType()
 <br />
 </div>
 <div id="fieldpos">
@@ -22569,7 +22581,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-FieldGet(),FieldPut()
+FieldGet(), FieldPut()
 <br />
 </div>
 <div id="fieldput">
@@ -22806,7 +22818,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-DiskSpace(),LastRec(),RecSize()
+DiskSpace(), LastRec(), RecSize()
 <br />
 </div>
 <div id="indexext">
@@ -22869,7 +22881,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-IndexKey(),IndexOrd()
+IndexKey(), IndexOrd()
 <br />
 </div>
 <div id="indexkey">
@@ -23123,7 +23135,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-FieldName(),LastRec(),RecSize()
+FieldName(), LastRec(), RecSize()
 <br />
 </div>
 <div id="neterr">
@@ -23193,7 +23205,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-FLock(),RLock()
+FLock(), RLock()
 <br />
 </div>
 <div id="ordbagext">
@@ -23262,7 +23274,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-IndexExt(),ordBagName()
+IndexExt(), ordBagName()
 <br />
 </div>
 <div id="ordbagname">
@@ -23336,7 +23348,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-IndexOrd(),ordBagExt(),Alias()
+IndexOrd(), ordBagExt(), Alias()
 <br />
 </div>
 <div id="ordcondset">
@@ -23498,7 +23510,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbCreateIndex(),ordName(),ordSetFocus()
+dbCreateIndex(), ordName(), ordSetFocus()
 <br />
 </div>
 <div id="orddestroy">
@@ -23588,7 +23600,7 @@ ordFor( &lt;xOrder&gt;[, &lt;cOrderBagName&gt;] ) --&gt; cForExp
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;xOrder&gt;  It the name of the target order,or the numeric position of
+&lt;xOrder&gt;  It the name of the target order, or the numeric position of
 the order.
 <br />
 </div>
@@ -23606,7 +23618,7 @@ order.
 <div class="itemtext">
 This function returns a character string that is the expression for
 the FOR condition for the specified order. The order may be specified
-if &lt;xOrder&gt; is the name of the order.However,&lt;xOrder&gt; may be an
+if &lt;xOrder&gt; is the name of the order.However, &lt;xOrder&gt; may be an
 numeric which represent the position in the order list of the desired
 Order.
 <br />
@@ -23643,7 +23655,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-ordKey(),ordCreate(),ordName(),ordNumber()
+ordKey(), ordCreate(), ordName(), ordNumber()
 <br />
 </div>
 <div id="ordkey">
@@ -23662,7 +23674,7 @@ ordKey( &lt;cOrderName&gt; | &lt;nOrder&gt; [, &lt;cOrderBagName&gt;] ) --&gt; c
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;xOrder&gt;  It the name of the target order,or the numeric position of
+&lt;xOrder&gt;  It the name of the target order, or the numeric position of
 the order.
 <br />
 </div>
@@ -23710,7 +23722,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-ordFor(),ordName(),ordNumber(),ordKey()
+ordFor(), ordName(), ordNumber(), ordKey()
 <br />
 </div>
 <div id="reccount">
@@ -23767,7 +23779,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Eof(),LastRec(),RecNo(),dbGoBottom()
+Eof(), LastRec(), RecNo(), dbGoBottom()
 <br />
 </div>
 <div id="recno">
@@ -23830,7 +23842,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-dbGoto(),dbGoTop(),dbGoBottom(),LastRec(),Eof(),Bof()
+dbGoto(), dbGoTop(), dbGoBottom(), LastRec(), Eof(), Bof()
 <br />
 </div>
 <div id="recsize">
@@ -23890,7 +23902,7 @@ Library is rdd
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-DiskSpace(),FieldName(),Header(),LastRec()
+DiskSpace(), FieldName(), Header(), LastRec()
 <br />
 </div>
 <div id="rlock">
@@ -24159,7 +24171,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Day(),DoW(),Date(),CMonth()
+Day(), DoW(), Date(), CMonth()
 <br />
 </div>
 <div id="cmonth">
@@ -24188,7 +24200,7 @@ CMonth( &lt;dDate&gt; ) --&gt; cMonth
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-This function returns the name of the month (January,February,etc.)
+This function returns the name of the month (January, February, etc.)
 from a date expression &lt;dDate&gt; passed to it. If a NULL date is passed
 to the function, the value of the function will be a NULL byte.
 <br />
@@ -24222,7 +24234,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-CDoW(),Date(),Month(),Year(),DoW(),DToC()
+CDoW(), Date(), Month(), Year(), DoW(), DToC()
 <br />
 </div>
 <div id="ctod">
@@ -24241,7 +24253,7 @@ CToD( &lt;cDateString&gt; ) --&gt; dDate
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;cDateString&gt; A character date in format 'mm/dd/yy'
+&lt;cDateString&gt; A character date in format &quot;mm/dd/yy&quot;
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -24286,7 +24298,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-SET DATE,Date(),DToS()
+SET DATE, Date(), DToS()
 <br />
 </div>
 <div id="date">
@@ -24345,7 +24357,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-CToD(),DToS(),DToC(),Day(),Month(),CMonth()
+CToD(), DToS(), DToC(), Day(), Month(), CMonth()
 <br />
 </div>
 <div id="day">
@@ -24405,7 +24417,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-CToD(),DToS(),DToC(),Date(),Month(),CMonth()
+CToD(), DToS(), DToC(), Date(), Month(), CMonth()
 <br />
 </div>
 <div id="days">
@@ -24465,7 +24477,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Seconds(),Secs(),ElapTime()
+Seconds(), Secs(), ElapTime()
 <br />
 </div>
 <div id="dow">
@@ -24525,7 +24537,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-DToC(),CDoW(),Date(),DToS(),Day()
+DToC(), CDoW(), Date(), DToS(), Day()
 <br />
 </div>
 <div id="dtoc">
@@ -24586,7 +24598,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-SET DATE,Date(),DToS()
+SET DATE, Date(), DToS()
 <br />
 </div>
 <div id="dtos">
@@ -24646,7 +24658,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-DToC(),Date(),DToS()
+DToC(), Date(), DToS()
 <br />
 </div>
 <div id="elaptime">
@@ -24714,7 +24726,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Secs(),Seconds(),Time(),Day()
+Secs(), Seconds(), Time(), Day()
 <br />
 </div>
 <div id="month">
@@ -24748,7 +24760,7 @@ Month( &lt;dDate&gt; ) --&gt; nMonth
 <div class="itemtitle">Description</div>
 <div class="itemtext">
 This function returns a number that represents the month of a given
-date expression &lt;dDate&gt;. If a NULL date (CToD('')) is passed to the
+date expression &lt;dDate&gt;. If a NULL date (CToD( &quot;&quot; )) is passed to the
 function, the value of the function will be 0.
 <br />
 </div>
@@ -24778,7 +24790,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-CDoW(),DoW(),Year(),CMonth()
+CDoW(), DoW(), Year(), CMonth()
 <br />
 </div>
 <div id="seconds">
@@ -24900,7 +24912,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Seconds(),ElapTime(),Time()
+Seconds(), ElapTime(), Time()
 <br />
 </div>
 <div id="time">
@@ -24959,7 +24971,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Date(),Seconds()
+Date(), Seconds()
 <br />
 </div>
 <div id="year">
@@ -25021,7 +25033,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Day(),Month()
+Day(), Month()
 <br />
 </div>
 <div id="__run">
@@ -25328,7 +25340,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-OS(),OutStd(),OutErr()
+OS(), OutStd(), OutErr()
 <br />
 </div>
 <div id="hb_getenv">
@@ -25608,7 +25620,7 @@ _SET_COLOR       &lt;cColorSet&gt;
 </div>
 <div class="itemtext">
 Sets the current color scheme, using color pairs in the sequence
-&quot;&lt;standard&gt;,&lt;enhanced&gt;,&lt;border&gt;,&lt;background&gt;, &lt;unselected&gt;&quot;. Each
+&quot;&lt;standard&gt;, &lt;enhanced&gt;, &lt;border&gt;, &lt;background&gt;, &lt;unselected&gt;&quot;. Each
 color pair uses the format &quot;&lt;foreground&gt;/&lt;background&gt;&quot;. The color
 codes are space or &quot;N&quot; for black, &quot;B&quot; for blue, &quot;G&quot; for green, &quot;BG&quot;
 for Cyan, &quot;R&quot; for red, &quot;RB&quot; for magenta, &quot;GR&quot; for brown, &quot;W&quot; for
@@ -26191,12 +26203,12 @@ CA-Cl*pper'
 </div>
 <div class="itemtitle">Platform(s)</div>
 <div class="itemtext">
-Unknown 'PLATFORMS' code: 'DOS,Win'
+Unknown 'PLATFORMS' code: 'DOS, Win'
 <br />
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-MaxCol(),MaxRow()
+MaxCol(), MaxRow()
 <br />
 </div>
 <div id="settypeahead">
@@ -26251,7 +26263,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__Accept(),__Input()
+__Accept(), __Input()
 <br />
 </div>
 <div id="tone">
@@ -26334,7 +26346,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Chr(),SET BELL
+Chr(), SET BELL
 <br />
 </div>
 <div id="version">
@@ -26493,7 +26505,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-ErrorBlock(),Error class
+ErrorBlock(), Error class
 <br />
 </div>
 <div id="__quit">
@@ -26654,7 +26666,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Inkey(),SetKey(),__Keyboard(),SET KEY
+Inkey(), SetKey(), __Keyboard(), SET KEY
 <br />
 </div>
 <div id="__wait">
@@ -26713,7 +26725,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-__Accept(),__Input()
+__Accept(), __Input()
 <br />
 </div>
 <div id="hb_setkeycheck">
@@ -26787,7 +26799,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-SetKey(),hb_SetKeySave()
+SetKey(), hb_SetKeySave()
 <br />
 </div>
 <div id="hb_setkeyget">
@@ -26849,7 +26861,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-SetKey(),hb_SetKeySave(),hb_SetKeyCheck()
+SetKey(), hb_SetKeySave(), hb_SetKeyCheck()
 <br />
 </div>
 <div id="hb_setkeysave">
@@ -27050,7 +27062,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-hb_idleAdd(),hb_idleDel(),hb_idleState()
+hb_idleAdd(), hb_idleDel(), hb_idleState()
 <br />
 </div>
 <div id="hb_mathgeterrmode">
@@ -27676,7 +27688,7 @@ Define a CLASS VAR variable for a class (NOT for an Object!)
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-CLASS VAR &lt;DataName1&gt; [,&lt;DataNameN&gt;] [ AS &lt;type&gt; ] [ INIT &lt;uValue&gt; ]
+CLASS VAR &lt;DataName1&gt; [, &lt;DataNameN&gt;] [ AS &lt;type&gt; ] [ INIT &lt;uValue&gt; ]
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -27738,7 +27750,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Object Oriented Programming,CLASS,METHOD,VAR
+Object Oriented Programming, CLASS, METHOD, VAR
 <br />
 </div>
 <div id="var">
@@ -27752,7 +27764,7 @@ Alternate syntax for VAR: instance variable for the objects.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-VAR &lt;DataName1&gt; [,&lt;DataNameN&gt;] [ AS &lt;type&gt; ] [ INIT &lt;uValue&gt; ]
+VAR &lt;DataName1&gt; [, &lt;DataNameN&gt;] [ AS &lt;type&gt; ] [ INIT &lt;uValue&gt; ]
 [[EXPORTED | VISIBLE] | [PROTECTED] | [HIDDEN]] [READONLY | RO]
 <br />
 </div>
@@ -27864,7 +27876,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Object Oriented Programming,CLASS,METHOD,CLASS VAR,VAR
+Object Oriented Programming, CLASS, METHOD, CLASS VAR, VAR
 <br />
 </div>
 <div id="class">
@@ -27879,7 +27891,7 @@ Define a Class for Object Oriented Programming
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
 [CREATE] CLASS &lt;ClassName&gt; [ &lt;FROM, INHERIT&gt; &lt;SuperClass1&gt; [,
-&lt;SuperClassN&gt;] ]  [STATIC]
+&lt;SuperClassN&gt;] ] [STATIC]
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -27980,7 +27992,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-HBClass(),Object Oriented Programming,VAR,METHOD
+HBClass(), Object Oriented Programming, VAR, METHOD
 <br />
 </div>
 <div id="endclass">
@@ -28031,7 +28043,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Object Oriented Programming,CLASS,METHOD,VAR
+Object Oriented Programming, CLASS, METHOD, VAR
 <br />
 </div>
 <div id="errorhandler">
@@ -28086,7 +28098,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Object Oriented Programming,ON ERROR,CLASS,METHOD,VAR
+Object Oriented Programming, ON ERROR, CLASS, METHOD, VAR
 <br />
 </div>
 <div id="message">
@@ -28173,7 +28185,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-METHOD,VAR,CLASS,Object Oriented Programming
+METHOD, VAR, CLASS, Object Oriented Programming
 <br />
 </div>
 <div id="method">
@@ -28360,7 +28372,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-HBClass(),Object Oriented Programming,VAR,CLASS
+HBClass(), Object Oriented Programming, VAR, CLASS
 <br />
 </div>
 <div id="onerror">
@@ -28415,7 +28427,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Object Oriented Programming,ERROR HANDLER,CLASS,METHOD,VAR
+Object Oriented Programming, ERROR HANDLER, CLASS, METHOD, VAR
 <br />
 </div>
 <div id="copyfile">
@@ -28464,7 +28476,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-ERASE,RENAME,FRename(),FErase()
+ERASE, RENAME, FRename(), FErase()
 <br />
 </div>
 <div id="deletefile">
@@ -28489,7 +28501,7 @@ DELETE FILE &lt;xcFile&gt;
 <div class="itemtitle">Description</div>
 <div class="itemtext">
 This command removes a file from the disk. The use of a drive,
-directo- ry,and wild-card skeleton operator is allowed for the root
+directo- ry, and wild-card skeleton operator is allowed for the root
 of the filename. The file extension is required. The SET DEFAULT and
 SET PATH commands do not affect this command.
 <br />
@@ -28594,7 +28606,7 @@ consistent with CA-Cl*pper
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-ADir(),Directory(),SET DEFAULT,__Dir()*
+ADir(), Directory(), SET DEFAULT, __Dir()*
 <br />
 </div>
 <div id="erase">
@@ -28706,7 +28718,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-CurDir(),ERASE,File(),FErase(),FRename()
+CurDir(), ERASE, File(), FErase(), FRename()
 <br />
 </div>
 <div id="type">
@@ -28794,7 +28806,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-COPY FILE,SET DEFAULT,SET PATH,SET PRINTER,__TypeFile()
+COPY FILE, SET DEFAULT, SET PATH, SET PRINTER, __TypeFile()
 <br />
 </div>
 <div id="labelform">
@@ -28840,7 +28852,7 @@ If no file extension is specified a .txt extension is added. &lt;cScope&gt;
 is the scope condition for this command. Valid scopes include NEXT
 &lt;expN&gt; (number of records to be displayed, where &lt;expN&gt; is the number
 of records), RECORD &lt;expN&gt; (a specific record to be printed), REST
-(all records starting from the current record position,and ALL (all
+(all records starting from the current record position, and ALL (all
 records). The default is ALL.
 <br />
 </div>
@@ -28857,7 +28869,7 @@ If the SAMPLE clause is specified, test labels will be generated.
 <br />
 </div>
 <div class="itemtext">
-If the NOCONSOLE clause is specified,the console will be turned off
+If the NOCONSOLE clause is specified, the console will be turned off
 while this command is being executed.
 <br />
 </div>
@@ -29011,7 +29023,7 @@ item information will be ignored.
 <br />
 </div>
 <div class="itemtext">
-If the NOCONSOLE clause is specified,output to the console will be
+If the NOCONSOLE clause is specified, output to the console will be
 turned off while this command is being executed.
 <br />
 </div>
@@ -29070,15 +29082,15 @@ None
 <div class="itemtitle">Description</div>
 <div class="itemtext">
 This command issue an form-feed command to the printer. If the
-printer is not properly hooked up to the computer,an error will not
+printer is not properly hooked up to the computer, an error will not
 be generated and the command will be ignored.
 <br />
 </div>
 <div class="itemtext">
-Once completed,the values of PRow() and PCol(),the row and column
-indicators to the printer,will be set to 0. Their values,however,may
-be manipulated before or after ussuing an EJECT by using the DevPos()
-function.
+Once completed, the values of PRow() and PCol(), the row and column
+indicators to the printer, will be set to 0. Their values, however,
+may be manipulated before or after ussuing an EJECT by using the
+DevPos() function.
 <br />
 </div>
 <div class="itemtext">
@@ -29118,7 +29130,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-DevPos(),SET PRINTER,PRow(),PCol()
+DevPos(), SET PRINTER, PRow(), PCol()
 <br />
 </div>
 <div id="field">
@@ -29132,7 +29144,7 @@ Declares a list of database field names.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-FIELD &lt;xField&gt; [,&lt;xFieldn...&gt;  [in &lt;cDatabase&gt;]
+FIELD &lt;xField&gt; [, &lt;xFieldn...&gt; [IN &lt;cDatabase&gt;]
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -29194,7 +29206,7 @@ None.
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-MEMVAR,PRIVATE,PUBLIC,STATIC
+MEMVAR, PRIVATE, PUBLIC, STATIC
 <br />
 </div>
 <div id="get">
@@ -29208,9 +29220,9 @@ Creates a GET object and displays it to the screen
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-@ &lt;nRow&gt;,&lt;nCol&gt; [SAY &lt;cSay&gt; [PICTURE &lt;cSayPict&gt;] COLOR &lt;cSayColor&gt; ]
+@ &lt;nRow&gt;, &lt;nCol&gt; [SAY &lt;cSay&gt; [PICTURE &lt;cSayPict&gt;] COLOR &lt;cSayColor&gt; ]
 GET &lt;xVar&gt; [PICTURE &lt;cGetPict&gt;] [WHEN &lt;lWhen&gt;] [COLOR &lt;cGetColor&gt;]
-[VALID &lt;lValid&gt; / RANGE &lt;xStart&gt;,&lt;xEnd&gt;]
+[VALID &lt;lValid&gt; / RANGE &lt;xStart&gt;, &lt;xEnd&gt;]
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -29285,11 +29297,11 @@ below for GET formatting rules.
 <br />
 </div>
 <div class="itemtext">
-If the WHEN clause is specified,when &lt;lWhen&gt; evaluates to a logical
+If the WHEN clause is specified, when &lt;lWhen&gt; evaluates to a logical
 true (.T.) condition, the GET object will he activated otherwise the
 GET object will be skipped and no information will be obtained via
 the screen. The name of a user-defined function returning a logical
-true (.T.) or false ( F.) or a code block may be ,specified in
+true (.T.) or false ( F.) or a code block may be, specified in
 &lt;lWhen&gt; This clause not activated until a READ command or ReadModal()
 function call is issued.
 <br />
@@ -29309,7 +29321,7 @@ issued.
 <div class="itemtext">
 If the RANGE clause is specified instead of the VALID clause, the two
 inclusive range values for &lt;xVar&gt; must be specified in &lt;xStart&gt; and
-&lt;xEnd&gt;. Id &lt;xVar&gt; is a date data type,&lt;xStart&gt; and &lt;xEnd&gt; must also
+&lt;xEnd&gt;. Id &lt;xVar&gt; is a date data type, &lt;xStart&gt; and &lt;xEnd&gt; must also
 be date data types; if &lt;xVar&gt; is a numeric data type &lt;xStart&gt; and
 &lt;xEnd&gt; must also be numeric data types. If a value fails the RANGE
 test ,a message of OUT OF RANGE will appear in the SCOREBOARD area
@@ -29501,7 +29513,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-@...SAY,READ,Transform()
+@...SAY, READ, Transform()
 <br />
 </div>
 <div id="prompt">
@@ -29586,7 +29598,7 @@ arrays) in Harbour can have an unlimited number of elements
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-AChoice(),MENU TO,SET MESSAGE,SET INTENSITY,SET WRAP,__MenuTo()
+AChoice(), MENU TO, SET MESSAGE, SET INTENSITY, SET WRAP, __MenuTo()
 <br />
 </div>
 <div id="say">
@@ -29600,7 +29612,7 @@ Displays data at specified coordinates of the current device.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-@ &lt;nRow&gt;,&lt;nCol&gt; SAY &lt;xValue&gt; [ PICTURE &lt;cPict&gt; ] [COLOR &lt;cColor&gt;]
+@ &lt;nRow&gt;, &lt;nCol&gt; SAY &lt;xValue&gt; [ PICTURE &lt;cPict&gt; ] [COLOR &lt;cColor&gt;]
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -29663,7 +29675,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-@...GET,SET DEVICE,Transform()
+@...GET, SET DEVICE, Transform()
 <br />
 </div>
 <div id="keyboard">
@@ -29693,8 +29705,8 @@ This command stuffs the input buffer with &lt;cString&gt;.
 </div>
 <div class="itemtext">
 The number of characters that can be stuffed into the keyboard buffer
-is controlled by the SET TYPEAHEAD command and may range from 0 to 32,
-622, with each character being in the ASCII range of 0 to 255.
+is controlled by the SET TYPEAHEAD command and may range from 0 to
+32622, with each character being in the ASCII range of 0 to 255.
 <br />
 </div>
 <div class="itemtext">
@@ -29727,7 +29739,7 @@ Unknown 'COMPLIANCE' code: 'KEYBOARD is compliant with CA-Cl*pper 5.3'
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-CLEAR TYPEAHEAD,__Keyboard()
+CLEAR TYPEAHEAD, __Keyboard()
 <br />
 </div>
 <div id="local">
@@ -29757,8 +29769,8 @@ LOCAL &lt;xVar&gt; [:= &lt;xInit&gt; ]
 <div class="itemtext">
 This command created a LOCAL memory variable or array. The name of
 either is specified in &lt;xVar&gt;. If more then one variable is being
-initialized with the LOCAL command,separate each entry with a comma.
-If a variable or an array is to be assingned a start-up value,that
+initialized with the LOCAL command, separate each entry with a comma.
+If a variable or an array is to be assingned a start-up value, that
 expression may be specified in &lt;xInit&gt; and folling. Is Strong type
 compile mode is used, the Compiler will check if the value recived
 matchs the type specified in &lt;xType&gt;.
@@ -29822,7 +29834,7 @@ None
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-FIELD,PRIVATE,PUBLIC,STATIC,MEMVAR
+FIELD, PRIVATE, PUBLIC, STATIC, MEMVAR
 <br />
 </div>
 <div id="memvar">
@@ -29856,7 +29868,7 @@ expansions are not affected by this command.
 </div>
 <div class="itemtext">
 The MEMVAR declaration must apear before any executable commands;it
-is similat to the LOCAL,STATIC,FIELD,PARAMETERS,FUNCTION, and
+is similat to the LOCAL, STATIC, FIELD, PARAMETERS, FUNCTION, and
 PROCEDURE commands statements.
 <br />
 </div>
@@ -29896,7 +29908,7 @@ None.
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-LOCAL,STATIC,FIELD,PRIVATE,PUBLIC
+LOCAL, STATIC, FIELD, PRIVATE, PUBLIC
 <br />
 </div>
 <div id="copystructure">
@@ -29969,8 +29981,8 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-COPY STRUCTURE EXTENDED,dbCreate(),dbStruct(),__dbCopyStruct(),
-__dbCopyXStruct(),__dbCreate(),__dbStructFilter()
+COPY STRUCTURE EXTENDED, dbCreate(), dbStruct(), __dbCopyStruct(),
+__dbCopyXStruct(), __dbCreate(), __dbStructFilter()
 <br />
 </div>
 <div id="copystructureextended">
@@ -30094,8 +30106,8 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-COPY STRUCTURE,CREATE,CREATE FROM,dbCreate(),dbStruct(),
-__dbCopyStruct(),__dbCopyXStruct(),__dbCreate()
+COPY STRUCTURE, CREATE, CREATE FROM, dbCreate(), dbStruct(),
+__dbCopyStruct(), __dbCopyXStruct(), __dbCreate()
 <br />
 </div>
 <div id="create">
@@ -30211,8 +30223,8 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-COPY STRUCTURE,COPY STRUCTURE EXTENDED,CREATE FROM,dbCreate(),
-dbStruct(),__dbCopyStruct(),__dbCopyXStruct(),__dbCreate()
+COPY STRUCTURE, COPY STRUCTURE EXTENDED, CREATE FROM, dbCreate(),
+dbStruct(), __dbCopyStruct(), __dbCopyXStruct(), __dbCreate()
 <br />
 </div>
 <div id="createfrom">
@@ -30311,8 +30323,8 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-COPY STRUCTURE,COPY STRUCTURE EXTENDED,CREATE,dbCreate(),dbStruct(),
-__dbCopyStruct(),__dbCopyXStruct(),__dbCreate()
+COPY STRUCTURE, COPY STRUCTURE EXTENDED, CREATE, dbCreate(),
+dbStruct(), __dbCopyStruct(), __dbCopyXStruct(), __dbCreate()
 <br />
 </div>
 <div id="pack">
@@ -30416,7 +30428,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-DELETE,PACK,USE
+DELETE, PACK, USE
 <br />
 </div>
 <div id="setalternate">
@@ -30482,7 +30494,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-CLOSE,SET PRINTER,SET CONSOLE,Set()
+CLOSE, SET PRINTER, SET CONSOLE, Set()
 <br />
 </div>
 <div id="setbell">
@@ -30585,7 +30597,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-SET DATE,SET EPOCH,CToD(),Date(),DToC(),Set()
+SET DATE, SET EPOCH, CToD(), Date(), DToC(), Set()
 <br />
 </div>
 <div id="setconsole">
@@ -30615,7 +30627,7 @@ the &lt;-&gt; DevOut() function.
 <br />
 </div>
 <div class="itemtext">
-If &lt;lConsole&gt; is a logical true (.T.),the console will be turned ON;
+If &lt;lConsole&gt; is a logical true (.T.), the console will be turned ON;
 otherwise, the console will be turned off.
 <br />
 </div>
@@ -30638,7 +30650,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-SET DEVICE,Set()
+SET DEVICE, Set()
 <br />
 </div>
 <div id="setdate">
@@ -30737,7 +30749,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-SET DATE,SET EPOCH,CToD(),Date(),DToC(),Set()
+SET DATE, SET EPOCH, CToD(), Date(), DToC(), Set()
 <br />
 </div>
 <div id="setdecimals">
@@ -30787,7 +30799,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-SET FIXED,Set()
+SET FIXED, Set()
 <br />
 </div>
 <div id="setdefault">
@@ -30812,7 +30824,7 @@ SET DEFAULT TO [&lt;cPath&gt;]
 <div class="itemtitle">Description</div>
 <div class="itemtext">
 This command changes the drive and directory used for reading and
-writing database,index,memory, and alternate files. Specifying no
+writing database, index, memory, and alternate files. Specifying no
 parameters with this command will default the operation to the
 current logged drive and directory.
 <br />
@@ -30833,7 +30845,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-SET PATH,CurDir(),Set()
+SET PATH, CurDir(), Set()
 <br />
 </div>
 <div id="setdevice">
@@ -30863,7 +30875,7 @@ printer.
 <br />
 </div>
 <div class="itemtext">
-When the device is set to the PRINTER,the SET MARGIN value adjusts
+When the device is set to the PRINTER, the SET MARGIN value adjusts
 the position of the column values accordingly. Also, an automatic
 page eject will be issued when the current printhead position is less
 than the last printed row. Finally, if used in conjunction with the @.
@@ -30892,7 +30904,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-@...SAY,SET PRINTER,SetPRC(),Set()
+@...SAY, SET PRINTER, SetPRC(), Set()
 <br />
 </div>
 <div id="setepoch">
@@ -30937,7 +30949,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-SET DATE,SET CENTURY,CToD(),Date(),DToC(),Set()
+SET DATE, SET CENTURY, CToD(), Date(), DToC(), Set()
 <br />
 </div>
 <div id="setfixed">
@@ -31035,7 +31047,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-SET DECIMALS,Exp(),Log(),Sqrt(),Val(),Set()
+SET DECIMALS, Exp(), Log(), Sqrt(), Val(), Set()
 <br />
 </div>
 <div id="setfunction">
@@ -31133,7 +31145,7 @@ This is available on all platforms
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Inkey(),SetKey(),__Keyboard()
+Inkey(), SetKey(), __Keyboard()
 <br />
 </div>
 <div id="setintensity">
@@ -31178,7 +31190,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-@...GET,@...PROMPT,@...SAY,Set()
+@...GET,@...PROMPT,@...SAY, Set()
 <br />
 </div>
 <div id="setkey001">
@@ -31309,7 +31321,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Set(),SET WRAP,@...PROMPT,MENU TO
+Set(), SET WRAP, @...PROMPT, MENU TO
 <br />
 </div>
 <div id="setpath">
@@ -31357,7 +31369,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-SET DEFAULT,CurDir(),Set()
+SET DEFAULT, CurDir(), Set()
 <br />
 </div>
 <div id="setprinter">
@@ -31388,7 +31400,7 @@ SET PRINTER on | OFF SET PRINTER ( &lt;lPrinter&gt; ) SET PRINTER TO
 <div class="itemtext">
 This command can direct all output that is not controlled by the @...
 SAY command and the DevPos() and DevOut() functions to the printer.
-If specified,the condition &lt;lPrinter&gt; toggles the printer ON if a
+If specified, the condition &lt;lPrinter&gt; toggles the printer ON if a
 logical true (.T.) and OFF if a logical false (.F.). If no argument
 is specified in the command, the alternate file (if one is open) is
 closed, or the device is reselected and the PRINTER option is turned
@@ -31463,7 +31475,7 @@ SET WRAP on | OFF | ( &lt;lWrap&gt; )
 This command toggles the highlighted bars in a @...PROMPT command to
 wrap around in a bottom-to-top and top-to-bottom manner. If the value
 of the logical expression &lt;lWrap&gt; is a logical false (.F.), the
-wrapping mode is set OFF; otherwise,it is set ON.
+wrapping mode is set OFF; otherwise, it is set ON.
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
@@ -31482,7 +31494,7 @@ This is CA-Cl*pper v5.2 compliant
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-@...PROMPT,MENU TO
+@...PROMPT, MENU TO
 <br />
 </div>
 <div id="base1003">
