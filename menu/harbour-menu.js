@@ -11,7 +11,7 @@ stm_ep();
 stm_aix("p0i4","p0i2",[]);
 stm_aix("p0i5","p0i1",[2,"","documentation.png","documentation.png",90,65,0,"/doc/index.html","_self","","","","",0,0,0,"","",-1,-1,0,0,1,"#E6EFF9",1,"#FFD602"]);
 stm_bpx("p2","p1",[1,4,0,-3,3,0,0,0,100,"",-2,"",-2,50,0,0,"#CCCCCC"]);
-stm_aix("p2i0","p1i0",[0," Readme ","","",-1,-1,0,"https://github.com/harbour/core/blob/master/README.md"]);
+stm_aix("p2i0","p1i0",[0," Readme ","","",-1,-1,0,"https://github.com/harbour/core/#readme"]);
 stm_aix("p2i1","p1i0",[0," ChangeLog ","","",-1,-1,0,"https://github.com/harbour/core/raw/master/ChangeLog.txt"]);
 stm_aix("p2i2","p1i0",[0," Clipper 5.3 ","","",-1,-1,0,"http://x-hacker.org/ng/53guide/"]);
 stm_aix("p2i3","p1i0",[0," Harbour ","","",-1,-1,0,"/doc/index.html"]);
