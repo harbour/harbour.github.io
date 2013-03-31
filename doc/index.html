@@ -31162,8 +31162,8 @@ subscript positions to the target array, the size of the target array
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 LOCAL nCount := 2, nStart := 1, aOne, aTwo
-aOne := { &quot;HARBOUR&quot;, &quot; is &quot;, &quot;POWER&quot; }
-aTwo := { &quot;CLIPPER&quot;, &quot; was &quot;, &quot;POWER&quot; }
+aOne := { &quot;Harbour&quot;, &quot; is &quot;, &quot;Power&quot; }
+aTwo := { &quot;Clipper&quot;, &quot; was &quot;, &quot;Power&quot; }
 ACopy( aOne, aTwo, nStart, nCount )
 </pre>
 <div class="itemtitle">Status</div>
@@ -34999,10 +34999,10 @@ trailing blank spaces removed.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? AllTrim( &quot;HELLO HARBOUR&quot; )
-? AllTrim( &quot;     HELLO HARBOUR&quot; )
-? AllTrim( &quot;HELLO HARBOUR     &quot; )
-? AllTrim( &quot;     HELLO HARBOUR     &quot; )
+? AllTrim( &quot;Hello Harbour&quot; )
+? AllTrim( &quot;     Hello Harbour&quot; )
+? AllTrim( &quot;Hello Harbour     &quot; )
+? AllTrim( &quot;     hello Harbour     &quot; )
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -35648,7 +35648,7 @@ conversions.
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-HB_VALTOSTR can be used to convert any scalar value to a string.
+hb_ValToStr() can be used to convert any scalar value to a string.
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
@@ -36022,7 +36022,7 @@ SubStr( &lt;cString&gt;, 1, &lt;nLen&gt; )
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Left( &quot;HELLO HARBOUR&quot;, 5 )    // HELLO
+? Left( &quot;Hello Harbour&quot;, 5 )    // Hello
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -36846,7 +36846,7 @@ SubStr( &lt;cString&gt;, Len( &lt;cString&gt; ) - &lt;nLen&gt; + 1, &lt;nLen&gt;
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Right( &quot;HELLO HARBOUR&quot;, 5 )     // RBOUR
+? Right( &quot;Hello Harbour&quot;, 5 )     // rbour
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -37471,9 +37471,9 @@ less than &lt;nLen&gt; the rest are ignored.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? SubStr( &quot;HELLO HARBOUR&quot; ,  7, 4 )      // HARB
-? SubStr( &quot;HELLO HARBOUR&quot; , -3, 3 )      // OUR
-? SubStr( &quot;HELLO HARBOUR&quot; ,  7    )      // HARBOUR
+? SubStr( &quot;Hello Harbour&quot; ,  7, 4 )      // Harb
+? SubStr( &quot;Hello Harbour&quot; , -3, 3 )      // our
+? SubStr( &quot;Hello Harbour&quot; ,  7    )      // Harbour
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -42152,7 +42152,7 @@ the argument.
 PROCEDURE Main()
    ? ValType( Array( 1 ) )   // &quot;A&quot;
    ? ValType( {|| 1 + 1 } )  // &quot;B&quot;
-   ? ValType( &quot;HARBOUR&quot; )    // &quot;C&quot;
+   ? ValType( &quot;Harbour&quot; )    // &quot;C&quot;
    ? ValType( Date() )       // &quot;D&quot;
    ? ValType( .T. )          // &quot;L&quot;
    ? ValType( 1 )            // &quot;N&quot;
@@ -43898,7 +43898,7 @@ Returns the alias name of a work area
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-Alias([&lt;nWorkArea&gt;]) --&gt; &lt;cWorkArea&gt;
+Alias( [&lt;nWorkArea&gt;] ) --&gt; &lt;cWorkArea&gt;
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -44038,7 +44038,7 @@ dbAppend() always returns NIL
 This function add a new record to the end of the database in the
 selected or aliased work area. All fields in that database will be
 given empty data values - character fields will be filled with blank
-spaces, date fields with CToD('//'), numeric fields with 0, logical
+spaces, date fields with hb_SToD(), numeric fields with 0, logical
 fields with .F., and memo fields with NULL bytes. The header of the
 database is not updated until the record is flushed from the buffer
 and the contents are written to the disk.
@@ -44048,7 +44048,7 @@ and the contents are written to the disk.
 Under a networking enviroment, dbAppend() performs an additional
 operation: It attrmps to lock the newly added record. If the database
 file is currently locked or if a locking assignment if made to
-LastRec()+1, NetErr() will return a logical true (.T.) immediately
+LastRec() + 1, NetErr() will return a logical true (.T.) immediately
 after the dbAppend() function. This function does not unlock the
 locked records.
 <br />
@@ -44063,7 +44063,7 @@ parameter is a logical false (.F.).
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 PROCEDURE Main()
-   LOCAL cName := &quot;HARBOUR&quot;, nId := 10
+   LOCAL cName := &quot;Harbour&quot;, nId := 10
    USE test
    test-&gt;( dbAppend() )
    REPLACE test-&gt;Name WITH cName, test-&gt;Id WITH nId
@@ -44885,7 +44885,7 @@ This function locks the record based on identity
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-dbRLock([&lt;xIdentity&gt;]) --&gt; lSuccess
+dbRLock( [&lt;xIdentity&gt;] ) --&gt; lSuccess
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -45014,7 +45014,7 @@ Unlocks a record based on its identifier
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-dbRUnlock([&lt;xIdentity&gt;])
+dbRUnlock( [&lt;xIdentity&gt;] )
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -45360,7 +45360,7 @@ Moves the record pointer in the selected work area.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-dbSkip([&lt;nRecords&gt;])
+dbSkip( [&lt;nRecords&gt;] )
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -46660,7 +46660,7 @@ Tests the success of a network function
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-NetErr([&lt;lNewError&gt;]) --&gt; lError
+NetErr( [&lt;lNewError&gt;] ) --&gt; lError
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -46690,11 +46690,14 @@ certain errors are handled.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE test NEW INDEX test
+USE test NEW
 IF ! NetErr()
-   SEEK test-&gt;Name := &quot;HARBOUR&quot;
+   INDEX ON field-&gt;First TO test
+   SET INDEX TO test
+   test-&gt;First := &quot;Harbour&quot;
+   SEEK &quot;Harbour&quot;
    IF Found()
-      ? test-&gt;Name
+      ? test-&gt;First
    ENDIF
 ENDIF
 USE
@@ -47510,7 +47513,7 @@ Returns the work area number for a specified alias.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-Select([&lt;cAlias&gt;]) --&gt; nWorkArea
+Select( [&lt;cAlias&gt;] ) --&gt; nWorkArea
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -51720,7 +51723,7 @@ METHOD &lt;MethodName&gt;( [&lt;params,...&gt;] ) BLOCK  &lt;CodeBlock&gt;
 <br />
 </div>
 <div class="itemtext">
-METHOD &lt;MethodName&gt;( [&lt;params,...&gt;] ) EXTERN &lt;NAME&gt;([&lt;args,...&gt;])
+METHOD &lt;MethodName&gt;( [&lt;params,...&gt;] ) EXTERN &lt;NAME&gt;( [&lt;args,...&gt;] )
 <br />
 </div>
 <div class="itemtext">
