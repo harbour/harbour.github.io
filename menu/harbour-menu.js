@@ -15,7 +15,7 @@ stm_aix("p2i0","p1i0",[0," Readme ","","",-1,-1,0,"https://github.com/harbour/co
 stm_aix("p2i1","p1i0",[0," ChangeLog ","","",-1,-1,0,"https://github.com/harbour/core/raw/master/ChangeLog.txt"]);
 stm_aix("p2i2","p1i0",[0," Clipper 5.3 ","","",-1,-1,0,"http://x-hacker.org/ng/53guide/"]);
 stm_aix("p2i3","p1i0",[0," Harbour ","","",-1,-1,0,"/doc/index.html"]);
-stm_aix("p2i4","p1i0",[0," FAQ ","","",-1,-1,0,"/faq/index.html"]);
+stm_aix("p2i4","p1i0",[0," FAQ (outdated) ","","",-1,-1,0,"/faq/index.html"]);
 stm_aix("p2i5","p1i0",[0," Samples ","","",-1,-1,0,"/samples.html"]);
 //stm_aix("p2i3","p1i0",[0," Tutorials & Articles ","","",-1,-1,0,"/tutorials.html"]);
 stm_ep();
