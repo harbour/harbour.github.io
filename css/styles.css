@@ -75,10 +75,10 @@ a:active {
 	color: #FF0000;
 }
 
-.tabela_box_trans_TL { width: 6px; height: 6px; background-image: url('/images/table-azul-top-left.gif');     background-position: 0 0;             background-repeat: no-repeat; }
-.tabela_box_trans_TR { width: 6px; height: 6px; background-image: url('/images/table-azul-top-right.gif');    background-position: top right;       background-repeat: no-repeat; }
-.tabela_box_trans_BR { width: 6px; height: 6px; background-image: url('/images/table-azul-bottom-right.gif'); background-position: bottom right;    background-repeat: no-repeat; }
-.tabela_box_trans_BL { width: 6px; height: 6px; background-image: url('/images/table-azul-bottom-left.gif');  background-position: bottom left;     background-repeat: no-repeat; }
+.tabela_box_trans_TL { width: 6px; height: 6px; background-image: url('/images/table-azul-top-left.png');     background-position: 0 0;             background-repeat: no-repeat; }
+.tabela_box_trans_TR { width: 6px; height: 6px; background-image: url('/images/table-azul-top-right.png');    background-position: top right;       background-repeat: no-repeat; }
+.tabela_box_trans_BR { width: 6px; height: 6px; background-image: url('/images/table-azul-bottom-right.png'); background-position: bottom right;    background-repeat: no-repeat; }
+.tabela_box_trans_BL { width: 6px; height: 6px; background-image: url('/images/table-azul-bottom-left.png');  background-position: bottom left;     background-repeat: no-repeat; }
 
 /*
  * From xDevStudio export HTML tool...
@@ -157,7 +157,7 @@ a:active {
 }
 .crew_page_top {
 	width: 7px;
-	background-image: url(/images/arrow_up.gif);
+	background-image: url(/images/arrow_up.png);
 	background-position: right bottom;
 	background-repeat: no-repeat;
 }
