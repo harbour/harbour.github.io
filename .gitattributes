@@ -8,7 +8,6 @@
 *.txt     text
 
 # Binary files
-*.gif     binary
 *.ico     binary
 *.jpg     binary
 *.png     binary
