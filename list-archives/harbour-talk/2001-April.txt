@@ -1,0 +1,2872 @@
+From harbourtalk@matrixlist.com  Sun Apr  8 23:22:46 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Sun, 8 Apr 2001 23:22:46 +0100
+Subject: [HarbourTalk] Just when you thought the passport thing was sorted...
+Message-ID: <20010408232246.G25357@hagbard.davep.org>
+
+<URL:http://www.theregister.co.uk/content/4/18165.html> should bemuse and
+amuse.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Sun Apr  8 22:14:00 2001
+From: harbourtalk@matrixlist.com (Andrzej P. Wozniak)
+Date: Sun, 8 Apr 2001 23:14:00 +0200
+Subject: [HarbourTalk] Short story of SPAM
+Message-ID: <001301c0c0c4$b4031dc0$3b0db33e@chello.pl>
+
+...by Bruce Sterling
+
+Year   Term
+  Month
+
+85  8  Chain letters via e-mail (quickly stamped out until 1993)
+
+91  2  Craig Shergold wants cards
+91  2  Craig Shergold doesn't want cards
+
+93  6  The $5 -> $50,000 chain letter on news, some titled MAKE.MONEY.FAST
+93  9  The $5 -> $50,000 chain letter on news mentioning Dave Rhodes
+
+94  3  "MMF" (any chain letter, after classic subject line
+       "MAKE.MONEY.FAST")
+94  3  unsolicited commercial e-mail (now called e-mail spam)
+94  4  The "green card lawyers" (Canter & Siegel) newsgroup spam
+94  4  "spam" (meaning mass sending of netnews)
+94 11  CancelMoose
+94 12  "spam" (meaning mass sending of mail to legitimate mailing lists)
+94 12  The "good times" e-mail virus hoax
+
+95  1  "Krazy" Kevin Lipsitz (notorious newsgroup spammer)
+95  3  "velveeta" (crossposting an article to too many newsgroups)
+95  4  "Briedbart Index" to decide which newsgroup posts are spam
+95  4  Jeff Slaton (notorious spammer, "the Spam King")
+95  5  Floodgate (spamware)
+95  5  news.admin.net-abuse newsgroup
+95  6  "spamvertise" (to advertise via spam)
+95  6  "spamware" (spamming software)
+95  6  UDP (Usenet Death Penalty -- all newsgroup postings from site are
+       nuked)
+95  7  "spam" (meaning mass sending of mail to all addresses one can
+       scrounge)
+95  7  NoCeM
+95  8  Sanford Wallace (uber-spammer -- cyberpromo, savetrees, ispam,
+       answerme, spamford, etc)
+95  8  List of 2 million e-mail addresses offered for sale
+95 10  abuse@ addresses
+95 11  "remove list" (the first (?) of many that were intended to be
+       universal)
+95 11  "LART"
+95 11  Cyber Promotions, aka CyberPromo (notorious spam outfit)
+
+96  1  "rogue domain"
+96  1  Freedom Knights ("anti-censorship" pro-spam group)
+96  3  Spamblocks (e.g. REMOVE.TO.REPLY) added to addesses to foil spammers
+96  3  Yuri Rutman (notorious spammer)
+96  4  "UCE" (meaning Unsolicited Commercial E-mail)
+96  4  Lightning Bolt (spamware)
+96  4  X-No-Archive: header lines
+96  5  Walt Rines (notorious spammer -- Quantcom, IEMMC, etc)
+96  6  IDP (Internet Death Penalty -- all packets from site are nuked)
+96  6  Whack-a-Mole (spammers who quickly lose accounts but keep reappearing
+       at different sites)
+96  7  "spamhaus" (a spamming site)
+96  7  news.admin.net-abuse.email newsgroup
+96  7  List of 7 million e-mail addresses offered for sale
+96  8  "UBE" (meaning Unsolicited Bulk E-mail)
+96  9  "Spamford" (nickname for uber-spammer Sanford Wallace)
+96  9  "munging" (another term for spamblocking)
+96 10  "spamblock"
+96 10  Ready-Aim-Fire (spamware)
+96 10  List of 11 million e-mail addresses offered for sale
+96 11  "Four Reports" chain letter mentioning Christopher Erickson
+96 11  "Teergrube" (a relay which discards everything) proposed
+96 12  Dave Mustachi (notorious spammer -- Floodgate spamware)
+96 12  Earthstar (rogue domain)
+96 12  Nancynet (rogue domain)
+96 12  E-mail Blaster (spamware)
+
+97  1  Quantcom (rogue domain)
+97  1  Extractor Pro (spamware)
+97  3  "open relay"
+97  3  Dan Huffnal (notorious spammer)
+97  3  Stealth (spamware)
+97  4  IEMMC (e-mail spammers' organization, claimed to have "universal"
+       remove list)
+97  5  CAUCE (an organization that favors a law banning UCE but not UBE)
+97  5  Smith bill (would ban UCE but not UBE)
+97  6  Spam hearings at the FTC
+97  6  "SMTP hijacking" (first use was apparently in a message from *me*)
+97  6  "relay rape"
+97  6  List of 31 million e-mail addresses offered for sale
+97  6  abuse-email@ and abuse-news@ addresses
+97  7  "Picklejar" (nickname for spammer Walt Rines)
+97  7  mallet (weapon metaphorically used against spammers)
+97  7  BulkMate (spamware)
+97  7  List of 57 million e-mail addresses offered for sale
+97  8  "relay hijacking"
+97  8  Goldrush (spamware)
+97  9  "Four Reports" chain letter mentioning Karen Liddell
+97  9  E-mail Platinum (spamware)
+97 10  AGIS (last major spam-friendly site) kicks off CyberPromo, Quantcom,
+       Nancynet, and other spammers.  IEMMC dead.  Whack-a-Mole epoch
+       begins.
+97 10  Joe Melle (notorious spammer -- NOIC, TSF-industries, etc)
+97 10  RBL (Realtime Blackhole List) of spam sites, run by Paul Vixie
+97 10  Golden Mallet award
+97 12  List of 80 million e-mail addresses offered for sale
+
+98  1  "E-Rage" (what spammers claim spam opponents suffer from)
+98  1  "Lumber Cartel" (what spammers claim spam opponents are being
+       paid by)
+98  2  Rapidfire (spamware)
+98  3  Express Mail Server (spamware)
+98  3  remove-list.com (yet another "universal" remove list, was
+       finally disconnected in September but is still (10/98) often being
+       touted in spams).
+98  4  ISOC (Internet Society) meeting on spam
+98  4  Netcom (last major holdout) finally agrees to stop hosting
+       spamvertised web sites
+98  6  "Murking" (spamming while citing the proposed Murkowski
+       spam law as "proof" that this spam is ok).
+98  7  HyperOrbit (spamware)
+98  7  List of 91 million e-mail addresses offered for sale
+98  8  "404 compliant" said of a spammer's web page which has been
+       deleted, analogous to murkers claiming to be "301 compliant"
+98 10  SAFEeps, yet another universal remove list.  Sigh.
+98 11  Dotless numeric web sites (e.g. http://3448157907/xx12),
+       to make tracing harder.
+
+99 11  DMA announces a new global remove list (e-mps.org).  Idiots.
+
+-- 
+Regards from the Harbour mirror in Poland
+Andrzej P. Wozniak
+alias@polnet.cc   harbour@harbour.pl.eu.org
+
+
+
+
+
+From harbourtalk@matrixlist.com  Fri Apr 13 02:15:31 2001
+From: harbourtalk@matrixlist.com (Tom Bokma)
+Date: Fri, 13 Apr 2001 03:15:31 +0200
+Subject: [HarbourTalk] HarbourTalk -- confirmation of subscription -- request 933605
+Message-ID: <045d01c0c3b7$3bb011c0$a0748418@a2000.nl>
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_045A_01C0C3C7.FF068720
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+HarbourTalk -- confirmation of subscription -- request 933605
+
+------=_NextPart_000_045A_01C0C3C7.FF068720
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type>
+<META content=3D"MSHTML 5.00.2614.3500" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>HarbourTalk -- confirmation of =
+subscription --=20
+request 933605</FONT></DIV></BODY></HTML>
+
+------=_NextPart_000_045A_01C0C3C7.FF068720--
+
+
+From harbourtalk@matrixlist.com  Mon Apr 16 22:49:40 2001
+From: harbourtalk@matrixlist.com (harbourtalk@matrixlist.com)
+Date: Tue, 17 Apr 2001 01:49:40 +0400
+Subject: [HarbourTalk] Seeking for software development projects
+Message-ID: <200104162149.BAA11457@mail.sura.ru>
+
+Dear Sir:
+
+I am the head of a group of software developers. We are seeking for software
+development projects that we could implement. 
+
+Our offshore location alllows us to charge only 10 dollars per hour. Nonetheless, 
+we provide competitive quality and reasonably short development terms. 
+
+Our fields of development include Web sites, e-commerce systems, Internet programming
+and many more. You can assess our vast knowledge and expertise by looking at the 
+brief summary of skills in the enclosure in the end of this letter.
+
+We have already worked on telecommute basis and can provide you with our references and
+previous projects.
+
+If interested, please send your offers and inquiries to MineevMax@yahoo.com
+
+Sincerely yours,
+Mineev, Max N.
+
+Enclosure.
+
+Brief summary of our skills and expertise.
+
+
+Hardware:      PC
+
+Operating
+systems:       MS Windows 3.x/95/98/2000/NT, MS DOS, Linux
+
+DBMS:          SQL Server, FoxPro, Interbase, MS Access, Oracle
+
+Languages:     C/C++, Pascal, Java, SQL, Basic, Prolog,
+               Assembler
+Internet
+technologies:  HTML/DHTML, XML, JavaScript, VBScript, ASP,
+               SSI, Windows Sockets, ColdFusion, CGI, Perl,
+               PHP
+Other
+technologies:  COM/OLE, ActiveX, ODBC, DAO, ADO, WinAPI
+
+Software:      MS Visual C++, C++ Builder, Borland C++,
+               Delphi, Borland Pascal, MS Visual J++,
+               JBuilder, Visual Basic, VBA, PhotoShop,
+               Turbo Assembler, IIS, MS Office
+
+
+From harbourtalk@matrixlist.com  Wed Apr 18 19:08:15 2001
+From: harbourtalk@matrixlist.com (Patrick Mast)
+Date: Wed, 18 Apr 2001 20:08:15 +0200
+Subject: [HarbourTalk] ASP Question
+In-Reply-To: <200104162149.BAA11457@mail.sura.ru>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIOEAIGCAA.harbour@winfakt.com>
+
+Hi,
+
+I have a web site where my clients can download upgrades of my software.
+The pages uses ASP and are hosted on my own server that has Windows 2000 on
+it.
+
+Does anyone know how it is possible to know if my client has actualy
+downloaded the upgrade?
+I need to update a database that marks a file as "downloaded".
+I need to know for SURE if the file is downloaded by my client. So actualy,
+the ASP page needs to wait till the file is downloaded. If succefull
+downloaded, update the database.
+
+Thanks!
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+
+From harbourtalk@matrixlist.com  Wed Apr 18 19:29:58 2001
+From: harbourtalk@matrixlist.com (Ron Pinkas)
+Date: Wed, 18 Apr 2001 11:29:58 -0700
+Subject: [HarbourTalk] ASP Question
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIOEAIGCAA.harbour@winfakt.com>
+Message-ID: <LOBBKAFMMFGJIKLMEPAKMEFPDLAA.Ron@Profit-Master.com>
+
+Patrick,
+
+I think you can send an HTTP POST message from the Installation Exe. This is
+slightly different than marking a download it actually marks successful
+download, followed by installation of such download.
+
+Please let me know when you finalize this issue, as I would be interested in
+same.
+
+Ron
+
+> Hi,
+>
+> I have a web site where my clients can download upgrades of my software.
+> The pages uses ASP and are hosted on my own server that has
+> Windows 2000 on
+> it.
+>
+> Does anyone know how it is possible to know if my client has actualy
+> downloaded the upgrade?
+> I need to update a database that marks a file as "downloaded".
+> I need to know for SURE if the file is downloaded by my client.
+> So actualy,
+> the ASP page needs to wait till the file is downloaded. If succefull
+> downloaded, update the database.
+>
+> Thanks!
+>
+> Regards,
+>
+> Patrick Mast
+> www.Patrick.Be.kz (By Bekz.net)
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+From harbourtalk@matrixlist.com  Wed Apr 18 19:46:11 2001
+From: harbourtalk@matrixlist.com (Felipe Coury)
+Date: Wed, 18 Apr 2001 15:46:11 -0300
+Subject: [HarbourTalk] ASP Question
+References: <LOBBKAFMMFGJIKLMEPAKMEFPDLAA.Ron@Profit-Master.com>
+Message-ID: <00cc01c0c837$db9d75e0$3c01a8c0@creation>
+
+Patrick,
+
+> Does anyone know how it is possible to know if my client has
+> actualy downloaded the upgrade?
+> I need to update a database that marks a file as "downloaded".
+> I need to know for SURE if the file is downloaded by my client.
+> So actualy, the ASP page needs to wait till the file is downloaded.
+> If succefull downloaded, update the database.
+It's a hard task Patrick. I don't think any implementation will be 100%
+failproof. I think we should discuss the method first. Why do you need to
+mark the file as downloaded on the database? In order to avoid duplicate
+downloads? But what if the user copies the downloaded file?
+
+Best regards,
+
+Felipe G. Coury
+Gerente de Desenvolvimento
+Creation Internet Business
+http://www.creation.com.br
+
+--------------------------------------------
+Visite o GuiaBrasil.Net:
+http://www.guiabrasil.net
+--------------------------------------------
+
+
+From harbourtalk@matrixlist.com  Wed Apr 18 20:00:20 2001
+From: harbourtalk@matrixlist.com (Patrick Mast)
+Date: Wed, 18 Apr 2001 21:00:20 +0200
+Subject: [HarbourTalk] ASP Question
+In-Reply-To: <00cc01c0c837$db9d75e0$3c01a8c0@creation>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIAEAKGCAA.harbour@winfakt.com>
+
+Felipe,
+
+> > Does anyone know how it is possible to know if my client has
+> > actualy downloaded the upgrade?
+> > I need to update a database that marks a file as "downloaded".
+> > I need to know for SURE if the file is downloaded by my client.
+> > So actualy, the ASP page needs to wait till the file is downloaded.
+> > If succefull downloaded, update the database.
+> It's a hard task Patrick. I don't think any implementation will be 100%
+> failproof. I think we should discuss the method first. Why do you need to
+> mark the file as downloaded on the database? In order to avoid duplicate
+> downloads? But what if the user copies the downloaded file?
+
+I just want to know if he already downloaded the file. Just to inform the
+client at next visit that he already has the file.
+But I want to avoid that the user presses the download button by accedent,
+and than presses the cancel button. In a "normal" APS solution this way the
+file would be marked as "downloaded".
+
+So I need to know. "Is the file successfull downloaded by the user"?
+It is not a matter of copy protection.
+
+Can the server KNOW in some way that the file is downloaded?
+Via it's statistics??
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+
+From harbourtalk@matrixlist.com  Thu Apr 19 00:37:53 2001
+From: harbourtalk@matrixlist.com (Andrzej P. Wozniak)
+Date: Thu, 19 Apr 2001 01:37:53 +0200
+Subject: [HarbourTalk] ASP Question
+References: <NCBBJKNMIDPJNLJCHCHIAEAKGCAA.harbour@winfakt.com>
+Message-ID: <2ef201c0c860$b487fb00$3b0db33e@chello.pl>
+
+----- Original Message -----
+From: "Patrick Mast" <harbour@winfakt.com>
+To: <harbourtalk@matrixlist.com>
+Sent: Wednesday, April 18, 2001 9:00 PM
+Subject: RE: [HarbourTalk] ASP Question
+
+
+> I just want to know if he already downloaded the file. Just to inform the
+> client at next visit that he already has the file.
+> But I want to avoid that the user presses the download button by accedent,
+> and than presses the cancel button. In a "normal" APS solution this way
+> the file would be marked as "downloaded".
+
+Patrick,
+It is no sense of your job. The file could be downloaded and broken because
+of some errors. What then?
+Ron is right. The only way to solve your problem is to make some
+self-extracting installer in .exe file.
+
+-- 
+Regards from the Harbour mirror in Poland
+Andrzej P. Wozniak
+alias@polnet.cc   harbour@harbour.pl.eu.org
+
+
+
+From harbourtalk@matrixlist.com  Thu Apr 19 06:28:23 2001
+From: harbourtalk@matrixlist.com (Chen Kedem)
+Date: Thu, 19 Apr 2001 08:28:23 +0300
+Subject: [HarbourTalk] missing Harbour digest
+Message-ID: <3ADE7777.369E@synel.co.il>
+
+Wonder if it a fault in my mail server or Harbour digest, Vol 1 #312
+(should probably have a date stamp like: Tue, 17 Apr 2001 19:01:51 +0300)
+was failed to be sent out. I've got #311 and #313 but this one is missing.
+
+I can see the messages in the archive, Oh well...
+
+  Chen.
+
+From harbourtalk@matrixlist.com  Thu Apr 19 06:29:58 2001
+From: harbourtalk@matrixlist.com (Chen Kedem)
+Date: Thu, 19 Apr 2001 08:29:58 +0300
+Subject: [HarbourTalk] Re: missing Harbour digest
+References: <3ADE7777.369E@synel.co.il>
+Message-ID: <3ADE77D6.5C03@synel.co.il>
+
+(time stamp should be 06:01:08 -0000) the other was my local time
+
+  Chen.
+
+From harbourtalk@matrixlist.com  Thu Apr 19 14:05:49 2001
+From: harbourtalk@matrixlist.com (Felipe G. Coury)
+Date: Thu, 19 Apr 2001 10:05:49 -0300
+Subject: [HarbourTalk] ASP Question
+References: <NCBBJKNMIDPJNLJCHCHIAEAKGCAA.harbour@winfakt.com>
+Message-ID: <002301c0c8d1$76123a40$0e01a8c0@uol.com.br>
+
+Patrick,
+
+> I just want to know if he already downloaded the file. Just
+> to inform the client at next visit that he already has the file.
+> But I want to avoid that the user presses the download
+> button by accedent, and than presses the cancel button.
+> In a "normal" APS solution this way the file would be
+> marked as "downloaded".
+> So I need to know. "Is the file successfull downloaded by
+> the user"? It is not a matter of copy protection.
+> Can the server KNOW in some way that the file is
+> downloaded? Via it's statistics??
+No. You can never guarantee that the user has downloaded the whole file.
+What you can do is create a download page where you have a link "Click here
+when the download ends" and redirect to the file download. Later you can
+have an explanation, something like "(this will prevent you from downloading
+this version again)" or something.
+
+IMHO, this is the best approach.
+
+Best regards,
+
+Felipe Coury
+
+
+From harbourtalk@matrixlist.com  Thu Apr 19 18:02:12 2001
+From: harbourtalk@matrixlist.com (Ron Pinkas)
+Date: Thu, 19 Apr 2001 10:02:12 -0700
+Subject: [HarbourTalk] ASP Question
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIOEAIGCAA.harbour@winfakt.com>
+Message-ID: <LOBBKAFMMFGJIKLMEPAKGEGJDLAA.Ron@Profit-Master.com>
+
+Patrick,
+
+There is another way, you can definitely know FOR SURE if the Download
+COMPLTEED. Look for example at the Microsoft Windows Update page. Microsoft
+knows what you downloaded, and their page will even show automatically a
+"Finished" message when you are done.
+
+To do this Microsoft uses an ActiveX component, that downloads the file,
+installs it, and reports back to the site when completed.
+
+Ron
+
+
+From harbourtalk@matrixlist.com  Thu Apr 19 18:16:17 2001
+From: harbourtalk@matrixlist.com (Felipe Coury)
+Date: Thu, 19 Apr 2001 14:16:17 -0300
+Subject: [HarbourTalk] ASP Question
+References: <LOBBKAFMMFGJIKLMEPAKGEGJDLAA.Ron@Profit-Master.com>
+Message-ID: <010f01c0c8f4$75c11f20$3c01a8c0@creation>
+
+Ron,
+
+> There is another way, you can definitely know FOR SURE
+> if the Download COMPLTEED. Look for example at the
+> Microsoft Windows Update page. Microsoft knows what
+> you downloaded, and their page will even show automatically
+> a "Finished" message when you are done.
+> To do this Microsoft uses an ActiveX component, that downloads
+> the file, installs it, and reports back to the site when completed.
+100% agreed, but some considerations: ActiveX are harder to develop and
+harder to deploy (since you need to have licensing stuff otherwise your
+client browser won't accept it), not cross platform (only works with IE 3+
+and Windows OS) and such... I think it's not worth. I go for the KISS way:
+"click here when the download finishes".
+
+But that's just my personal opinion.
+
+Regards,
+
+Felipe G. Coury
+Gerente de Desenvolvimento
+Creation Internet Business
+http://www.creation.com.br
+
+--------------------------------------------
+Visite o GuiaBrasil.Net:
+http://www.guiabrasil.net
+--------------------------------------------
+
+
+
+
+From harbourtalk@matrixlist.com  Thu Apr 19 18:19:00 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Thu, 19 Apr 2001 18:19:00 +0100
+Subject: [HarbourTalk] ASP Question
+In-Reply-To: <010f01c0c8f4$75c11f20$3c01a8c0@creation>; from fcoury@creation.com.br on Thu, Apr 19, 2001 at 02:16:17PM -0300
+References: <LOBBKAFMMFGJIKLMEPAKGEGJDLAA.Ron@Profit-Master.com> <010f01c0c8f4$75c11f20$3c01a8c0@creation>
+Message-ID: <20010419181900.E20026@hagbard.davep.org>
+
+On Thu, Apr 19, 2001 at 02:16:17PM -0300, Felipe Coury wrote:
+
+> 100% agreed, but some considerations: ActiveX are harder to develop and
+> harder to deploy (since you need to have licensing stuff otherwise your
+> client browser won't accept it), not cross platform (only works with IE 3+
+> and Windows OS) and such... I think it's not worth. I go for the KISS way:
+> "click here when the download finishes".
+
+By way of illustration: Almost everything I download for use on my Windows
+boxes is actually downloaded on my Linux box (either using netscape or
+wget). A download procedure that requires that a) I have to be using a
+specific operating system to do the download (or worse, a specific web
+browser) and/or b) I install the software there and then, while I'm still
+connected to the net (dial-up connection here are davep.org) is a download
+procedure that is, IMO, broken.
+
+That said, "click here when the download finishes" feels inelegant too.
+
+. o O ( Mumble mumble spyware mumble )
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Fri Apr 20 13:16:16 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Fri, 20 Apr 2001 09:16:16 -0300
+Subject: [HarbourTalk] Configurating APache server
+Message-ID: <001901c0c994$4f276ae0$18d4d7c8@luizguim>
+
+Dear friends
+
+I need some help of users that run the apache server.
+I´m running appache under win98 se
+.
+How can associate .hs files with hscript.exe under apache
+
+Regards
+
+Luiz Rafael Culik
+
+
+From harbourtalk@matrixlist.com  Fri Apr 20 15:47:22 2001
+From: harbourtalk@matrixlist.com (Marek Horodyski)
+Date: Fri, 20 Apr 2001 16:47:22 +0200
+Subject: [HarbourTalk] Configurating APache server
+References: <001901c0c994$4f276ae0$18d4d7c8@luizguim>
+Message-ID: <015801c0c9a8$d56e53c0$1321000a@altkomhomar>
+
+----- Original Message -----
+From: "Luiz Rafael Culik Guimaraes" <culik@nh.conex.com.br>
+To: <HarbourTalk@matrixlist.com>
+Sent: Friday, April 20, 2001 2:16 PM
+Subject: [HarbourTalk] Configurating APache server
+
+
+> Dear friends
+>
+> I need some help of users that run the apache server.
+> I´m running appache under win98 se
+> .
+> How can associate .hs files with hscript.exe under apache
+>
+> Regards
+>
+> Luiz Rafael Culik
+>
+
+Luiz, on saite
+http://webmaster.pckurier.pl/1999/listopad/felsztukier/serwer.html
+is instruction, wahat maybe put apache with mySql and php on Local W98
+Serwer (all in one). But she is on polish :-((
+
+Marek Horodyski
+
+
+
+From harbourtalk@matrixlist.com  Sat Apr 21 14:48:01 2001
+From: harbourtalk@matrixlist.com (Patrick Mast)
+Date: Sat, 21 Apr 2001 15:48:01 +0200
+Subject: [HarbourTalk] Win2000 SP2
+In-Reply-To: <015801c0c9a8$d56e53c0$1321000a@altkomhomar>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIOEDAGCAA.harbour@winfakt.com>
+
+http://www.activewin.com/win2000/sp2bugs.shtml
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+From harbourtalk@matrixlist.com  Sat Apr 21 18:40:30 2001
+From: harbourtalk@matrixlist.com (=?iso-8859-1?Q?Horacio_Rold=E1n?=)
+Date: Sat, 21 Apr 2001 14:40:30 -0300
+Subject: [HarbourTalk] Configurating APache server
+References: <001901c0c994$4f276ae0$18d4d7c8@luizguim>
+Message-ID: <01cb01c0ca8a$299a75a0$f003a8c0@ksoft20000507>
+
+Luiz:
+In your httpd.conf add this outside any structure (eg: at the end of the
+file)
+
+ScriptAlias /hs/ "C:/path to hscript dir/"
+Action application/x-httpd-hscript "/hs/hscript.exe"
+AddType application/x-httpd-hscript .hs
+
+The /hs/ may be whatever you want, it's a virtual dir to hold your
+executable.
+I haven't tested it, it's a rewrite of what I have for PHP.
+I hope it works.
+
+regards (from Mercosur :-) )
+Horacio
+
+----- Original Message -----
+From: "Luiz Rafael Culik Guimaraes" <culik@nh.conex.com.br>
+To: <HarbourTalk@matrixlist.com>
+Sent: Friday, April 20, 2001 9:16 AM
+Subject: [HarbourTalk] Configurating APache server
+
+
+> Dear friends
+>
+> I need some help of users that run the apache server.
+> I´m running appache under win98 se
+> .
+> How can associate .hs files with hscript.exe under apache
+>
+> Regards
+>
+> Luiz Rafael Culik
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>
+
+
+From harbourtalk@matrixlist.com  Sun Apr 22 00:55:25 2001
+From: harbourtalk@matrixlist.com (George G.)
+Date: Sun, 22 Apr 2001 01:55:25 +0200
+Subject: [HarbourTalk] Win2000 SP2
+References: <NCBBJKNMIDPJNLJCHCHIOEDAGCAA.harbour@winfakt.com>
+Message-ID: <004d01c0cabe$d17e0d70$96be16c4@joro>
+
+Patrick,
+
+www.microsoft.com still invites the visitors to download SP1. Weird ? May be
+the link you posted is internal information for the upcoming SP2.
+
+Regards,
+George.
+
+
+
+----- Original Message -----
+From: "Patrick Mast" <harbour@winfakt.com>
+To: <harbourtalk@matrixlist.com>
+Sent: Saturday, April 21, 2001 3:48 PM
+Subject: [HarbourTalk] Win2000 SP2
+
+
+> http://www.activewin.com/win2000/sp2bugs.shtml
+>
+> Regards,
+>
+> Patrick Mast
+> www.Patrick.Be.kz (By Bekz.net)
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>
+
+
+From harbourtalk@matrixlist.com  Sun Apr 22 04:28:07 2001
+From: harbourtalk@matrixlist.com (=?iso-8859-1?Q?Gustavo_A._Gonz=E1lez_M.?=)
+Date: Sat, 21 Apr 2001 23:28:07 -0400
+Subject: [HarbourTalk] Help in C
+Message-ID: <001801c0cadc$9dbe8aa0$5ef4c4a1@gustavo>
+
+Hi...
+
+Excuse me for this question ( so basic for you ).......  if i have..
+
+char * cCad = "ABCDE" ;
+
+thefun( cCad ) ;
+
+***
+ How i can send letter by letter the cCad to "thefun".... so like clipper
+ substr(cCad,n,1) ) .
+
+Regards.
+
+
+From harbourtalk@matrixlist.com  Sun Apr 22 04:41:31 2001
+From: harbourtalk@matrixlist.com (Brian Hays)
+Date: Sat, 21 Apr 2001 20:41:31 -0700
+Subject: [HarbourTalk] Help in C
+References: <001801c0cadc$9dbe8aa0$5ef4c4a1@gustavo>
+Message-ID: <001301c0cade$1f79f290$921a5e18@bh>
+
+In C, you can reference strings as arrays of characters, so it's even easier
+than clipper (just remember it's 0-based):
+
+thefun( cCad[0] ) ;  // A
+thefun( cCad[1] ) ;  // B
+
+Brian
+
+----- Original Message -----
+From: "Gustavo A. González M." <gonzalezgustavo@cantv.net>
+To: "Grupo harbour off topic" <harbourtalk@lists.harbour-project.org>
+Sent: Saturday, April 21, 2001 8:28 PM
+Subject: [HarbourTalk] Help in C
+
+
+> Hi...
+>
+> Excuse me for this question ( so basic for you ).......  if i have..
+>
+> char * cCad = "ABCDE" ;
+>
+> thefun( cCad ) ;
+>
+> ***
+>  How i can send letter by letter the cCad to "thefun".... so like clipper
+>  substr(cCad,n,1) ) .
+>
+> Regards.
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+From harbourtalk@matrixlist.com  Sun Apr 22 05:14:38 2001
+From: harbourtalk@matrixlist.com (=?iso-8859-1?Q?Gustavo_A._Gonz=E1lez_M.?=)
+Date: Sun, 22 Apr 2001 00:14:38 -0400
+Subject: [HarbourTalk] Help in C
+References: <001801c0cadc$9dbe8aa0$5ef4c4a1@gustavo> <001301c0cade$1f79f290$921a5e18@bh>
+Message-ID: <037501c0cae2$ee7d90c0$5ef4c4a1@gustavo>
+
+Brian...
+
+In my old knowledge about C... i know that, but i try to use but dont work..
+
+I am receive a char far from _param(n,-1), after, use the _putc( cCad ), tu
+put in the stack, but have errors in runtime.
+
+example.
+
+char * cCad = _param( 1,-1);
+_putc( cCad ); // Work Ok.
+
+_putc( cCad[1] ) ; /// Don't Work.
+
+Have any idea ?
+
+I send after all the code.
+
+Regards
+
+--
+Gustavo A. González M.
+gonzalezgustavo@cantv.net
+Caracas - Venezuela
+
+----- Original Message -----
+From: Brian Hays <bhays@abacuslaw.com>
+To: <harbourtalk@matrixlist.com>
+Sent: Saturday, April 21, 2001 11:41 PM
+Subject: Re: [HarbourTalk] Help in C
+
+
+> In C, you can reference strings as arrays of characters, so it's even
+easier
+> than clipper (just remember it's 0-based):
+>
+> thefun( cCad[0] ) ;  // A
+> thefun( cCad[1] ) ;  // B
+>
+> Brian
+>
+> ----- Original Message -----
+> From: "Gustavo A. González M." <gonzalezgustavo@cantv.net>
+> To: "Grupo harbour off topic" <harbourtalk@lists.harbour-project.org>
+> Sent: Saturday, April 21, 2001 8:28 PM
+> Subject: [HarbourTalk] Help in C
+>
+>
+> > Hi...
+> >
+> > Excuse me for this question ( so basic for you ).......  if i have..
+> >
+> > char * cCad = "ABCDE" ;
+> >
+> > thefun( cCad ) ;
+> >
+> > ***
+> >  How i can send letter by letter the cCad to "thefun".... so like
+clipper
+> >  substr(cCad,n,1) ) .
+> >
+> > Regards.
+> >
+> > _______________________________________________
+> > HarbourTalk mailing list
+> > HarbourTalk@matrixlist.com
+> > http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+From harbourtalk@matrixlist.com  Sun Apr 22 07:13:15 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Sun, 22 Apr 2001 07:13:15 +0100
+Subject: [HarbourTalk] Help in C
+In-Reply-To: <037501c0cae2$ee7d90c0$5ef4c4a1@gustavo>; from gonzalezgustavo@cantv.net on Sun, Apr 22, 2001 at 12:14:38AM -0400
+References: <001801c0cadc$9dbe8aa0$5ef4c4a1@gustavo> <001301c0cade$1f79f290$921a5e18@bh> <037501c0cae2$ee7d90c0$5ef4c4a1@gustavo>
+Message-ID: <20010422071315.I28537@hagbard.davep.org>
+
+On Sun, Apr 22, 2001 at 12:14:38AM -0400, Gustavo A. Gonz=E1lez M. wrote:
+
+> I am receive a char far from _param(n,-1), after, use the _putc( cCad ),
+> tu put in the stack, but have errors in runtime.
+>=20
+> example.
+>=20
+> char * cCad =3D _param( 1,-1);
+> _putc( cCad ); // Work Ok.
+>=20
+> _putc( cCad[1] ) ; /// Don't Work.
+>=20
+> Have any idea ?
+
+It would help if you said how it "don't work". Do you get a compiler error,
+some form of run-time error? No error but it doesn't do what you'd expect?
+
+Here's a stand alone bit of C code that does what you're doing, it compiles
+ok and runs just fine:
+
+,----
+| davep@hagbard:~/temp$ cat foo.c
+| #include <stdio.h>
+|=20
+| char *getstringthing( void )
+| {
+|     return( "Hello, World" );
+| }
+|=20
+| int main( void )
+| {
+|     char *p =3D getstringthing();
+|=20
+|     putc( p[ 1 ], stdout );
+|=20
+|     return( 0 );
+| }
+| davep@hagbard:~/temp$ make foo
+| cc     foo.c   -o foo
+| davep@hagbard:~/temp$ ./foo
+| e
+`----
+
+--=20
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Sun Apr 22 08:57:51 2001
+From: harbourtalk@matrixlist.com (Brian Hays)
+Date: Sun, 22 Apr 2001 00:57:51 -0700
+Subject: [HarbourTalk] Help in C
+References: <001801c0cadc$9dbe8aa0$5ef4c4a1@gustavo> <001301c0cade$1f79f290$921a5e18@bh> <037501c0cae2$ee7d90c0$5ef4c4a1@gustavo>
+Message-ID: <000f01c0cb01$ee492230$921a5e18@bh>
+
+Gustavo:
+The main thing here is knowing clearly what your function parameter types
+are.
+Are we talking about the harbour API for receiving a parameter (using FWH
+headers to convert _param to hb_param)?
+
+> _putc( cCad ); // Work Ok.
+_putc is receiving a pointer to a string
+> _putc( cCad[1] ) ; /// Don't Work.
+_putc is receiving a single byte.
+
+Which is it supposed to get?
+Is _putc one of the old DOS putchar type of functions for stdout?  If so,
+there's probably a better choice of function there.
+
+Brian
+
+----- Original Message -----
+From: "Gustavo A. González M." <gonzalezgustavo@cantv.net>
+To: <harbourtalk@matrixlist.com>
+Sent: Saturday, April 21, 2001 9:14 PM
+Subject: RE: [HarbourTalk] Help in C
+
+
+> Brian...
+>
+> In my old knowledge about C... i know that, but i try to use but dont
+work..
+>
+> I am receive a char far from _param(n,-1), after, use the _putc( cCad ),
+tu
+> put in the stack, but have errors in runtime.
+>
+> example.
+>
+> char * cCad = _param( 1,-1);
+> _putc( cCad ); // Work Ok.
+>
+> _putc( cCad[1] ) ; /// Don't Work.
+>
+> Have any idea ?
+>
+> I send after all the code.
+>
+> Regards
+>
+> --
+> Gustavo A. González M.
+> gonzalezgustavo@cantv.net
+> Caracas - Venezuela
+>
+> ----- Original Message -----
+> From: Brian Hays <bhays@abacuslaw.com>
+> To: <harbourtalk@matrixlist.com>
+> Sent: Saturday, April 21, 2001 11:41 PM
+> Subject: Re: [HarbourTalk] Help in C
+>
+>
+> > In C, you can reference strings as arrays of characters, so it's even
+> easier
+> > than clipper (just remember it's 0-based):
+> >
+> > thefun( cCad[0] ) ;  // A
+> > thefun( cCad[1] ) ;  // B
+> >
+> > Brian
+> >
+> > ----- Original Message -----
+> > From: "Gustavo A. González M." <gonzalezgustavo@cantv.net>
+> > To: "Grupo harbour off topic" <harbourtalk@lists.harbour-project.org>
+> > Sent: Saturday, April 21, 2001 8:28 PM
+> > Subject: [HarbourTalk] Help in C
+> >
+> >
+> > > Hi...
+> > >
+> > > Excuse me for this question ( so basic for you ).......  if i have..
+> > >
+> > > char * cCad = "ABCDE" ;
+> > >
+> > > thefun( cCad ) ;
+> > >
+> > > ***
+> > >  How i can send letter by letter the cCad to "thefun".... so like
+> clipper
+> > >  substr(cCad,n,1) ) .
+> > >
+> > > Regards.
+> > >
+> > > _______________________________________________
+> > > HarbourTalk mailing list
+> > > HarbourTalk@matrixlist.com
+> > > http://www.matrixlist.com/mailman/listinfo/harbourtalk
+> >
+> > _______________________________________________
+> > HarbourTalk mailing list
+> > HarbourTalk@matrixlist.com
+> > http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+From harbourtalk@matrixlist.com  Sun Apr 22 13:21:32 2001
+From: harbourtalk@matrixlist.com (Marek Paliwoda)
+Date: Sun, 22 Apr 2001 14:21:32 +0200
+Subject: [HarbourTalk] Linux console terminal emulator
+Message-ID: <000001c0cb38$4d31f2a0$e7b472c3@map>
+
+Hi,
+
+    Does anyone know about terminal emulator which can emulate
+linux console and is available under GPL (except that from Cygwin
+environment) ?
+
+Thanks in advance.
+
+Marek Paliwoda
+
+
+
+From harbourtalk@matrixlist.com  Sun Apr 22 16:15:03 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Sun, 22 Apr 2001 16:15:03 +0100
+Subject: [HarbourTalk] Linux console terminal emulator
+In-Reply-To: <000001c0cb38$4d31f2a0$e7b472c3@map>; from paliwoda@inetia.pl on Sun, Apr 22, 2001 at 02:21:32PM +0200
+References: <000001c0cb38$4d31f2a0$e7b472c3@map>
+Message-ID: <20010422161503.Q28537@hagbard.davep.org>
+
+On Sun, Apr 22, 2001 at 02:21:32PM +0200, Marek Paliwoda wrote:
+
+>     Does anyone know about terminal emulator which can emulate linux
+> console and is available under GPL (except that from Cygwin environment) ?
+
+What are you after when you say you want it to emulate a "Linux console"?
+Are you after a telnet client that requires that $TERM is "linux"? Have a
+search for "Dave's Telnet" (no, nothing to do with me) AKA "dtelnet". It
+seems to do a pretty good job of it.
+
+I can't recall what the licence terms are.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Sun Apr 22 17:41:18 2001
+From: harbourtalk@matrixlist.com (Ron Pinkas)
+Date: Sun, 22 Apr 2001 09:41:18 -0700
+Subject: [HarbourTalk] Help in C
+In-Reply-To: <037501c0cae2$ee7d90c0$5ef4c4a1@gustavo>
+Message-ID: <LOBBKAFMMFGJIKLMEPAKOEIFDLAA.Ron@Profit-Master.com>
+
+Gustavo,
+
+> char * cCad = _param( 1,-1);
+> _putc( cCad ); // Work Ok.
+>
+> _putc( cCad[1] ) ; /// Don't Work.
+>
+> Have any idea ?
+
+Appears to be because unlike Clipper, in C a string is NOT the same as a
+char, it is an ARRAY of char. You need to convert your single char to a
+string of 1 char, that means an array of 2 chars, your required char + '\0'.
+Like this:
+
+char sTmp[2]
+char * cCad = _param( 1,-1);
+
+/* Set once */
+aTmp[1] = 0;
+
+_putc( cCad ); // Work Ok.
+
+_putc( cCad[1] ) ; /// Don't Work.
+
+aTmp[0] = cCad[1];
+_putc( (char *) aTmp ); // Should Work.
+
+
+Or you could:
+
+int i, nLen = strlen( cCad );
+
+for( i = 0; i++; i < nLen )
+{
+   aTmp[0] = cCad[i];
+   _putc( (char *) aTmp ); // Should Work.
+}
+
+Ron
+
+
+From harbourtalk@matrixlist.com  Sun Apr 22 18:13:42 2001
+From: harbourtalk@matrixlist.com (Ron Pinkas)
+Date: Sun, 22 Apr 2001 10:13:42 -0700
+Subject: [HarbourTalk] Help in C
+In-Reply-To: <LOBBKAFMMFGJIKLMEPAKOEIFDLAA.Ron@Profit-Master.com>
+Message-ID: <LOBBKAFMMFGJIKLMEPAKEEIGDLAA.Ron@Profit-Master.com>
+
+Had a Typo, all aTmp should read sTmp
+
+Ron
+
+
+From harbourtalk@matrixlist.com  Sun Apr 22 20:06:33 2001
+From: harbourtalk@matrixlist.com (=?iso-8859-1?Q?Gustavo_A._Gonz=E1lez_M.?=)
+Date: Sun, 22 Apr 2001 15:06:33 -0400
+Subject: [HarbourTalk] Help in C
+References: <LOBBKAFMMFGJIKLMEPAKOEIFDLAA.Ron@Profit-Master.com>
+Message-ID: <010001c0cb5f$8708b3c0$58f4c4a1@gustavo>
+
+Hi,
+
+The examples are compiled ok in C, but dont do the correct work.
+
+I have in Clipper:
+
+CLS
+? Test()
+
+I have in C:
+
+extern void  _retc( char * );
+
+void pascal TEST()
+{
+  char * cCad1 = "ABC" ; // any string from clipper like  _parc(n)
+  _retc( cCad1 ); // Obiously work ok, sending all the string
+
+  // _retc( cCadx ); // I need pass A
+  // _retc( cCadx ); // I need pass B
+  // _retc( cCadx ); // I need pass C .. and so forth... ( char by char )
+}
+***
+I need pass to clipper any string received char by char ( letter by
+letter )..
+
+I try to use:
+
+_retc( cCad1[1] ) // Dont work
+_retc( ( char * ) cCad1[1] ) // Compiled ok, but send trash to clipper.
+
+I try to create other var and pass only a letter but too..
+
+char cCad2[1];
+
+cCad2[1] = ( char ) cCad1[1] ;
+
+_retc( ( char * ) cCad2[1] ) // compiled ok, but send trash to clipper.
+
+****
+
+Gustavo
+
+--
+Gustavo A. González M.
+gonzalezgustavo@cantv.net
+Caracas - Venezuela
+
+----- Original Message -----
+From: Ron Pinkas <Ron@Profit-Master.com>
+To: <harbourtalk@matrixlist.com>
+Sent: Sunday, April 22, 2001 12:41 PM
+Subject: RE: [HarbourTalk] Help in C
+
+
+> Gustavo,
+>
+> > char * cCad = _param( 1,-1);
+> > _putc( cCad ); // Work Ok.
+> >
+> > _putc( cCad[1] ) ; /// Don't Work.
+> >
+> > Have any idea ?
+>
+> Appears to be because unlike Clipper, in C a string is NOT the same as a
+> char, it is an ARRAY of char. You need to convert your single char to a
+> string of 1 char, that means an array of 2 chars, your required char +
+'\0'.
+> Like this:
+>
+> char sTmp[2]
+> char * cCad = _param( 1,-1);
+>
+> /* Set once */
+> aTmp[1] = 0;
+>
+> _putc( cCad ); // Work Ok.
+>
+> _putc( cCad[1] ) ; /// Don't Work.
+>
+> aTmp[0] = cCad[1];
+> _putc( (char *) aTmp ); // Should Work.
+>
+>
+> Or you could:
+>
+> int i, nLen = strlen( cCad );
+>
+> for( i = 0; i++; i < nLen )
+> {
+>    aTmp[0] = cCad[i];
+>    _putc( (char *) aTmp ); // Should Work.
+> }
+>
+> Ron
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+
+
+From harbourtalk@matrixlist.com  Sun Apr 22 20:39:39 2001
+From: harbourtalk@matrixlist.com (Brian Hays)
+Date: Sun, 22 Apr 2001 12:39:39 -0700
+Subject: [HarbourTalk] Help in C
+References: <LOBBKAFMMFGJIKLMEPAKOEIFDLAA.Ron@Profit-Master.com> <010001c0cb5f$8708b3c0$58f4c4a1@gustavo>
+Message-ID: <00a301c0cb63$f92cfd90$921a5e18@bh>
+
+Gustavo:
+OK! There's a big difference between putc types of functions and _retc() to
+return a string back upt to clipper (is this for harbour ?)
+
+You have three choices as I see it.  Easiest is to stop trying to return a
+string and just use _retni(cCad1[n]) to return the ascii character value,
+and have the PRG code receive that value:
+
+? Test() >> 65
+? chr(Test()) >> "A"
+
+Or, you can return the string pointer starting at the desired offset in the
+string, and let the PRG code worry about limiting to one character:
+
+_retc(cCad)    >> returns whole string
+_retc(cCad + 1)    >> returns pointer to string starting at second
+character, so
+? Test() >> "BCD"
+But you have to careful if you start messing with pointers this way--if you
+get out of range you get nasty errors.
+
+Better yet, use
+_retclen(cCad + n, 1);
+
+...which will return only 1 character.
+
+Brian
+
+
+----- Original Message -----
+From: "Gustavo A. González M." <gonzalezgustavo@cantv.net>
+To: <harbourtalk@matrixlist.com>
+Sent: Sunday, April 22, 2001 12:06 PM
+Subject: RE: [HarbourTalk] Help in C
+
+
+> Hi,
+>
+> The examples are compiled ok in C, but dont do the correct work.
+>
+> I have in Clipper:
+>
+> CLS
+> ? Test()
+>
+> I have in C:
+>
+> extern void  _retc( char * );
+>
+> void pascal TEST()
+> {
+>   char * cCad1 = "ABC" ; // any string from clipper like  _parc(n)
+>   _retc( cCad1 ); // Obiously work ok, sending all the string
+>
+>   // _retc( cCadx ); // I need pass A
+>   // _retc( cCadx ); // I need pass B
+>   // _retc( cCadx ); // I need pass C .. and so forth... ( char by char )
+> }
+> ***
+> I need pass to clipper any string received char by char ( letter by
+> letter )..
+>
+> I try to use:
+>
+> _retc( cCad1[1] ) // Dont work
+> _retc( ( char * ) cCad1[1] ) // Compiled ok, but send trash to clipper.
+>
+> I try to create other var and pass only a letter but too..
+>
+> char cCad2[1];
+>
+> cCad2[1] = ( char ) cCad1[1] ;
+>
+> _retc( ( char * ) cCad2[1] ) // compiled ok, but send trash to clipper.
+>
+> ****
+>
+> Gustavo
+>
+> --
+> Gustavo A. González M.
+> gonzalezgustavo@cantv.net
+> Caracas - Venezuela
+>
+> ----- Original Message -----
+> From: Ron Pinkas <Ron@Profit-Master.com>
+> To: <harbourtalk@matrixlist.com>
+> Sent: Sunday, April 22, 2001 12:41 PM
+> Subject: RE: [HarbourTalk] Help in C
+>
+>
+> > Gustavo,
+> >
+> > > char * cCad = _param( 1,-1);
+> > > _putc( cCad ); // Work Ok.
+> > >
+> > > _putc( cCad[1] ) ; /// Don't Work.
+> > >
+> > > Have any idea ?
+> >
+> > Appears to be because unlike Clipper, in C a string is NOT the same as a
+> > char, it is an ARRAY of char. You need to convert your single char to a
+> > string of 1 char, that means an array of 2 chars, your required char +
+> '\0'.
+> > Like this:
+> >
+> > char sTmp[2]
+> > char * cCad = _param( 1,-1);
+> >
+> > /* Set once */
+> > aTmp[1] = 0;
+> >
+> > _putc( cCad ); // Work Ok.
+> >
+> > _putc( cCad[1] ) ; /// Don't Work.
+> >
+> > aTmp[0] = cCad[1];
+> > _putc( (char *) aTmp ); // Should Work.
+> >
+> >
+> > Or you could:
+> >
+> > int i, nLen = strlen( cCad );
+> >
+> > for( i = 0; i++; i < nLen )
+> > {
+> >    aTmp[0] = cCad[i];
+> >    _putc( (char *) aTmp ); // Should Work.
+> > }
+> >
+> > Ron
+> >
+> > _______________________________________________
+> > HarbourTalk mailing list
+> > HarbourTalk@matrixlist.com
+> > http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>
+>
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+From harbourtalk@matrixlist.com  Sun Apr 22 20:47:55 2001
+From: harbourtalk@matrixlist.com (=?iso-8859-1?Q?Gustavo_A._Gonz=E1lez_M.?=)
+Date: Sun, 22 Apr 2001 15:47:55 -0400
+Subject: [HarbourTalk] Help in C
+References: <LOBBKAFMMFGJIKLMEPAKOEIFDLAA.Ron@Profit-Master.com> <010001c0cb5f$8708b3c0$58f4c4a1@gustavo> <00a301c0cb63$f92cfd90$921a5e18@bh>
+Message-ID: <003801c0cb65$83475740$49f4c4a1@gustavo>
+
+Brian,
+
+Well your are right, is so different _retc() and _putc().
+
+In my new example i use _retc() only to demonstrate/ask how i can send only
+a character from a string get from clipper, to a function that receive a
+ char * ) or ( char far * ).
+
+Really i dont need _retc(), i need _putc().... excuseme i only wish write
+the example with other function.
+
+Your open my mind and have an idea.... i try to do it and comment after.
+
+Regards
+
+--
+Gustavo A. González M.
+gonzalezgustavo@cantv.net
+Caracas - Venezuela
+
+----- Original Message -----
+From: Brian Hays <bhays@abacuslaw.com>
+To: <harbourtalk@matrixlist.com>
+Sent: Sunday, April 22, 2001 3:39 PM
+Subject: Re: [HarbourTalk] Help in C
+
+
+> Gustavo:
+> OK! There's a big difference between putc types of functions and _retc()
+to
+> return a string back upt to clipper (is this for harbour ?)
+>
+> You have three choices as I see it.  Easiest is to stop trying to return a
+> string and just use _retni(cCad1[n]) to return the ascii character value,
+> and have the PRG code receive that value:
+>
+> ? Test() >> 65
+> ? chr(Test()) >> "A"
+>
+> Or, you can return the string pointer starting at the desired offset in
+the
+> string, and let the PRG code worry about limiting to one character:
+>
+> _retc(cCad)    >> returns whole string
+> _retc(cCad + 1)    >> returns pointer to string starting at second
+> character, so
+> ? Test() >> "BCD"
+> But you have to careful if you start messing with pointers this way--if
+you
+> get out of range you get nasty errors.
+>
+> Better yet, use
+> _retclen(cCad + n, 1);
+>
+> ...which will return only 1 character.
+>
+> Brian
+>
+>
+> ----- Original Message -----
+> From: "Gustavo A. González M." <gonzalezgustavo@cantv.net>
+> To: <harbourtalk@matrixlist.com>
+> Sent: Sunday, April 22, 2001 12:06 PM
+> Subject: RE: [HarbourTalk] Help in C
+>
+>
+> > Hi,
+> >
+> > The examples are compiled ok in C, but dont do the correct work.
+> >
+> > I have in Clipper:
+> >
+> > CLS
+> > ? Test()
+> >
+> > I have in C:
+> >
+> > extern void  _retc( char * );
+> >
+> > void pascal TEST()
+> > {
+> >   char * cCad1 = "ABC" ; // any string from clipper like  _parc(n)
+> >   _retc( cCad1 ); // Obiously work ok, sending all the string
+> >
+> >   // _retc( cCadx ); // I need pass A
+> >   // _retc( cCadx ); // I need pass B
+> >   // _retc( cCadx ); // I need pass C .. and so forth... ( char by
+char )
+> > }
+> > ***
+> > I need pass to clipper any string received char by char ( letter by
+> > letter )..
+> >
+> > I try to use:
+> >
+> > _retc( cCad1[1] ) // Dont work
+> > _retc( ( char * ) cCad1[1] ) // Compiled ok, but send trash to clipper.
+> >
+> > I try to create other var and pass only a letter but too..
+> >
+> > char cCad2[1];
+> >
+> > cCad2[1] = ( char ) cCad1[1] ;
+> >
+> > _retc( ( char * ) cCad2[1] ) // compiled ok, but send trash to clipper.
+> >
+> > ****
+> >
+> > Gustavo
+> >
+> > --
+> > Gustavo A. González M.
+> > gonzalezgustavo@cantv.net
+> > Caracas - Venezuela
+> >
+> > ----- Original Message -----
+> > From: Ron Pinkas <Ron@Profit-Master.com>
+> > To: <harbourtalk@matrixlist.com>
+> > Sent: Sunday, April 22, 2001 12:41 PM
+> > Subject: RE: [HarbourTalk] Help in C
+> >
+> >
+> > > Gustavo,
+> > >
+> > > > char * cCad = _param( 1,-1);
+> > > > _putc( cCad ); // Work Ok.
+> > > >
+> > > > _putc( cCad[1] ) ; /// Don't Work.
+> > > >
+> > > > Have any idea ?
+> > >
+> > > Appears to be because unlike Clipper, in C a string is NOT the same as
+a
+> > > char, it is an ARRAY of char. You need to convert your single char to
+a
+> > > string of 1 char, that means an array of 2 chars, your required char +
+> > '\0'.
+> > > Like this:
+> > >
+> > > char sTmp[2]
+> > > char * cCad = _param( 1,-1);
+> > >
+> > > /* Set once */
+> > > aTmp[1] = 0;
+> > >
+> > > _putc( cCad ); // Work Ok.
+> > >
+> > > _putc( cCad[1] ) ; /// Don't Work.
+> > >
+> > > aTmp[0] = cCad[1];
+> > > _putc( (char *) aTmp ); // Should Work.
+> > >
+> > >
+> > > Or you could:
+> > >
+> > > int i, nLen = strlen( cCad );
+> > >
+> > > for( i = 0; i++; i < nLen )
+> > > {
+> > >    aTmp[0] = cCad[i];
+> > >    _putc( (char *) aTmp ); // Should Work.
+> > > }
+> > >
+> > > Ron
+> > >
+> > > _______________________________________________
+> > > HarbourTalk mailing list
+> > > HarbourTalk@matrixlist.com
+> > > http://www.matrixlist.com/mailman/listinfo/harbourtalk
+> >
+> >
+> >
+> > _______________________________________________
+> > HarbourTalk mailing list
+> > HarbourTalk@matrixlist.com
+> > http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+From harbourtalk@matrixlist.com  Sun Apr 22 21:01:45 2001
+From: harbourtalk@matrixlist.com (=?iso-8859-1?Q?Gustavo_A._Gonz=E1lez_M.?=)
+Date: Sun, 22 Apr 2001 16:01:45 -0400
+Subject: [HarbourTalk] Help in C
+References: <LOBBKAFMMFGJIKLMEPAKOEIFDLAA.Ron@Profit-Master.com> <010001c0cb5f$8708b3c0$58f4c4a1@gustavo> <00a301c0cb63$f92cfd90$921a5e18@bh>
+Message-ID: <001101c0cb67$5b5c0080$5ff4c4a1@gustavo>
+
+Brian,
+
+All work ok... i didn't know that i can move the offset in a pointer and
+return a string from that point....   >:-o
+
+I dont know C ( i am writting a few funcion but modifying other)..... :-)
+
+I send you a big thank you from this caribbean land... <|>
+
+Regards
+
+--
+Gustavo A. González M.
+gonzalezgustavo@cantv.net
+Caracas - Venezuela
+
+----- Original Message -----
+From: Brian Hays <bhays@abacuslaw.com>
+To: <harbourtalk@matrixlist.com>
+Sent: Sunday, April 22, 2001 3:39 PM
+Subject: Re: [HarbourTalk] Help in C
+
+
+> Gustavo:
+> OK! There's a big difference between putc types of functions and _retc()
+to
+> return a string back upt to clipper (is this for harbour ?)
+>
+> You have three choices as I see it.  Easiest is to stop trying to return a
+> string and just use _retni(cCad1[n]) to return the ascii character value,
+> and have the PRG code receive that value:
+>
+> ? Test() >> 65
+> ? chr(Test()) >> "A"
+>
+> Or, you can return the string pointer starting at the desired offset in
+the
+> string, and let the PRG code worry about limiting to one character:
+>
+> _retc(cCad)    >> returns whole string
+> _retc(cCad + 1)    >> returns pointer to string starting at second
+> character, so
+> ? Test() >> "BCD"
+> But you have to careful if you start messing with pointers this way--if
+you
+> get out of range you get nasty errors.
+>
+> Better yet, use
+> _retclen(cCad + n, 1);
+>
+> ...which will return only 1 character.
+>
+> Brian
+>
+
+
+
+From harbourtalk@matrixlist.com  Mon Apr 23 06:22:02 2001
+From: harbourtalk@matrixlist.com (Brian Hays)
+Date: Sun, 22 Apr 2001 22:22:02 -0700
+Subject: [HarbourTalk] Help in C
+References: <LOBBKAFMMFGJIKLMEPAKOEIFDLAA.Ron@Profit-Master.com> <010001c0cb5f$8708b3c0$58f4c4a1@gustavo> <00a301c0cb63$f92cfd90$921a5e18@bh> <001101c0cb67$5b5c0080$5ff4c4a1@gustavo>
+Message-ID: <004201c0cbb5$541eaef0$921a5e18@bh>
+
+You're welcome!
+
+Brian Hays
+
+----- Original Message -----
+From: "Gustavo A. González M." <gonzalezgustavo@cantv.net>
+To: <harbourtalk@matrixlist.com>
+Sent: Sunday, April 22, 2001 1:01 PM
+Subject: RE: [HarbourTalk] Help in C
+
+
+> Brian,
+>
+> All work ok... i didn't know that i can move the offset in a pointer and
+> return a string from that point....   >:-o
+>
+> I dont know C ( i am writting a few funcion but modifying other)..... :-)
+>
+> I send you a big thank you from this caribbean land... <|>
+>
+> Regards
+>
+> --
+> Gustavo A. González M.
+> gonzalezgustavo@cantv.net
+> Caracas - Venezuela
+>
+> ----- Original Message -----
+> From: Brian Hays <bhays@abacuslaw.com>
+> To: <harbourtalk@matrixlist.com>
+> Sent: Sunday, April 22, 2001 3:39 PM
+> Subject: Re: [HarbourTalk] Help in C
+>
+>
+> > Gustavo:
+> > OK! There's a big difference between putc types of functions and _retc()
+> to
+> > return a string back upt to clipper (is this for harbour ?)
+> >
+> > You have three choices as I see it.  Easiest is to stop trying to return
+a
+> > string and just use _retni(cCad1[n]) to return the ascii character
+value,
+> > and have the PRG code receive that value:
+> >
+> > ? Test() >> 65
+> > ? chr(Test()) >> "A"
+> >
+> > Or, you can return the string pointer starting at the desired offset in
+> the
+> > string, and let the PRG code worry about limiting to one character:
+> >
+> > _retc(cCad)    >> returns whole string
+> > _retc(cCad + 1)    >> returns pointer to string starting at second
+> > character, so
+> > ? Test() >> "BCD"
+> > But you have to careful if you start messing with pointers this way--if
+> you
+> > get out of range you get nasty errors.
+> >
+> > Better yet, use
+> > _retclen(cCad + n, 1);
+> >
+> > ...which will return only 1 character.
+> >
+> > Brian
+> >
+>
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+From harbourtalk@matrixlist.com  Mon Apr 23 17:21:19 2001
+From: harbourtalk@matrixlist.com (Marek Paliwoda)
+Date: Mon, 23 Apr 2001 18:21:19 +0200
+Subject: [HarbourTalk] Linux console terminal emulator
+References: <000001c0cb38$4d31f2a0$e7b472c3@map>
+ <20010422161503.Q28537@hagbard.davep.org>
+Message-ID: <001501c0cc11$74f50960$1db572c3@map>
+
+----- Original Message -----
+From: "Dave Pearson" <davep@davep.org>
+To: <HarbourTalk@matrixlist.com>
+Sent: Sunday, April 22, 2001 5:15 PM
+Subject: Re: [HarbourTalk] Linux console terminal emulator
+
+
+> On Sun, Apr 22, 2001 at 02:21:32PM +0200, Marek Paliwoda wrote:
+>
+> >     Does anyone know about terminal emulator which can emulate linux
+> > console and is available under GPL (except that from Cygwin environment) ?
+>
+> What are you after when you say you want it to emulate a "Linux console"?
+> Are you after a telnet client that requires that $TERM is "linux"? Have a
+> search for "Dave's Telnet" (no, nothing to do with me) AKA "dtelnet". It
+> seems to do a pretty good job of it.
+
+Yes, I though about a telnet program which could emulate a linux console.
+
+> I can't recall what the licence terms are.
+
+I will try to find it.
+
+Thanks,  Dave.
+
+Regards
+Marek Paliwoda
+
+
+
+From harbourtalk@matrixlist.com  Mon Apr 23 17:42:50 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Mon, 23 Apr 2001 17:42:50 +0100
+Subject: [HarbourTalk] Linux console terminal emulator
+In-Reply-To: <001501c0cc11$74f50960$1db572c3@map>; from paliwoda@inetia.pl on Mon, Apr 23, 2001 at 06:21:19PM +0200
+References: <000001c0cb38$4d31f2a0$e7b472c3@map> <20010422161503.Q28537@hagbard.davep.org> <001501c0cc11$74f50960$1db572c3@map>
+Message-ID: <20010423174250.W28537@hagbard.davep.org>
+
+On Mon, Apr 23, 2001 at 06:21:19PM +0200, Marek Paliwoda wrote:
+
+> > I can't recall what the licence terms are.
+> 
+> I will try to find it.
+
+Try <URL:http://www.dccs.com.au/~dave/dtelnet.html>.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Tue Apr 24 18:49:25 2001
+From: harbourtalk@matrixlist.com (Marek Paliwoda)
+Date: Tue, 24 Apr 2001 19:49:25 +0200
+Subject: [HarbourTalk] Linux console terminal emulator
+References: <000001c0cb38$4d31f2a0$e7b472c3@map>
+ <20010422161503.Q28537@hagbard.davep.org> <001501c0cc11$74f50960$1db572c3@map>
+ <20010423174250.W28537@hagbard.davep.org>
+Message-ID: <008b01c0cce8$be0d5e40$20b572c3@map>
+
+Dave Pearson wrote on Monday, April 23, 2001 6:42 PM
+ 
+> Try <URL:http://www.dccs.com.au/~dave/dtelnet.html>.
+
+Thanks again,  Dave
+
+Marek Paliwoda
+
+
+
+From harbourtalk@matrixlist.com  Wed Apr 25 12:24:09 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Wed, 25 Apr 2001 12:24:09 +0100
+Subject: [HarbourTalk] how to find out whether the device is removable on Linux/Unix
+In-Reply-To: <001701a8ea4d$d9224000$78d4d7c8@luizguim>; from culik@nh.conex.com.br on Fri, Jan 04, 1980 at 07:47:58AM -0200
+References: <001701a8ea4d$d9224000$78d4d7c8@luizguim>
+Message-ID: <20010425122409.B4029@hagbard.davep.org>
+
+On Fri, Jan 04, 1980 at 07:47:58AM -0200, Luiz Rafael Culik Guimaraes wrote:
+
+> As Subject Says.
+
+Depends, do you really mean device or do you mean a mounted "device"? In the
+latter case the answer is, to some degree, that everything is removable
+because you can umount anything that's mounted.
+
+> Also i need help on this
+> How  to retreive the free space on a device pointed by the filepath.
+
+That depends. Do you mean from the command line or from code? In the former
+case you'd use df(1), in the latter case you'd use statfs(2).
+
+I've already implemented the latter as part of harbour-glibc (see my harbour
+page):
+
+,----
+| davep@hagbard:~/temp$ cat foo.prg
+| #include "statfs.ch"
+| 
+| Function Main()
+| Local aFS := statfs( "/home/davep" )
+| 
+|   ? aFS[ HB_GLC_STATFS_BAVAIL ]
+| 
+| Return( NIL )
+|
+| davep@hagbard:~/temp$ ./foo
+| 
+|    1301190
+`----
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Wed Apr 25 14:54:39 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Wed, 25 Apr 2001 15:54:39 +0200
+Subject: [HarbourTalk] DBFCDX problem
+In-Reply-To: <20010425122409.B4029@hagbard.davep.org>
+Message-ID: <001301c0cd8f$455fd660$0f2aa8c0@antonio>
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0014_01C0CDA0.08E8A660
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+
+A Harbour tester reports a problem with DBFCDX
+management. Sample is attached.
+
+Thanks!
+
+Antonio
+
+------=_NextPart_000_0014_01C0CDA0.08E8A660
+Content-Type: application/octet-stream;
+	name="pru2.prg"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+	filename="pru2.prg"
+
+#define DB_NAME  "User.Dbf"
+#define CDX_NAME "User1.Cdx"
+
+FUNCTION Main( cParam )
+
+	LOCAL aDir, nI
+
+	SET EPOCH TO ( Year( date() ) - 50 )
+   REQUEST DBFCDX
+	RddSetDefault( "DBFCDX" )
+
+	SET DELETE ON
+
+	IF !File( DB_NAME )
+		DBCreate( DB_NAME, { { "Login",      "C",  8, 0 },;
+									{ "Pasword",    "C",  8, 0 },;
+									{ "Apellido1",  "C", 25, 0 },;
+									{ "Apellido2",  "C", 25, 0 },;
+									{ "Nombre",     "C", 25, 0 },;
+									{ "Domicilio",  "C", 40, 0 },;
+									{ "CPostal",    "C",  5, 0 },;
+									{ "Poblacion",  "C", 40, 0 },;
+									{ "Provincia",  "C", 40, 0 },;
+									{ "Pais",       "C", 40, 0 },;
+									{ "Telefono",   "C", 15, 0 },;
+									{ "Fax",        "C", 15, 0 },;
+									{ "DNI",        "C", 15, 0 },;
+									{ "EMail",      "C", 40, 0 },;
+									{ "EnvioInf",   "L",  1, 0 },;
+									{ "FPago",      "C",  1, 0 },;
+									{ "CCC",        "C", 20, 0 },;
+									{ "Titular",    "C", 40, 0 },;
+									{ "TipoTjta",   "C",  1, 0 },;
+									{ "NTjta",      "C", 16, 0 },;
+									{ "CadTjta",    "C",  4, 0 },;
+									{ "AutCargo",   "L",  1, 0 },;
+									{ "Alta",       "D",  8, 0 },;
+									{ "Variacion",  "D",  8, 0 },;
+									{ "Caja",       "C",  2, 0 } } )
+	ENDIF
+
+	IF !File( CDX_NAME )
+		USE ( DB_NAME ) NEW EXCLUSIVE ALIAS Usuarios
+		INDEX ON Upper( Usuarios->APELLIDO1 ) + ;
+					Upper( Usuarios->APELLIDO2 ) + ;
+					Upper( Usuarios->NOMBRE )  TAG USR1      TO ( CDX_NAME )
+		INDEX ON Usuarios->Login            TAG USR2      TO ( CDX_NAME )
+		INDEX ON Usuarios->DNI              TAG USR3      TO ( CDX_NAME )
+		INDEX ON Usuarios->EMAIL            TAG USR4      TO ( CDX_NAME )
+		CLOSE Usuarios
+	END IF
+
+	USE ( DB_NAME )        ;
+		NEW                 ;
+		SHARED              ;
+		INDEX ( CDX_NAME )  ;
+		ALIAS Usuarios
+
+	SELECT Usuarios
+
+	Browse()
+
+	CLOSE ALL
+	QUIT
+
+RETURN NIL
+
+
+------=_NextPart_000_0014_01C0CDA0.08E8A660--
+
+
+
+From harbourtalk@matrixlist.com  Wed Apr 25 15:12:48 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Wed, 25 Apr 2001 16:12:48 +0200
+Subject: [HarbourTalk] What an impressive Clipper and FW application
+In-Reply-To: <001701a8ea4d$d9224000$78d4d7c8@luizguim>
+Message-ID: <001901c0cd91$ce5fa2e0$0f2aa8c0@antonio>
+
+I have just been reviewing a Clipper and FW
+application developed for some customers of
+us and I may say I am impressed for such an 
+elegant and well designed app.
+
+Have a look at it: (you must see it! :-)
+
+http://www.arrakis.es/~wdinf
+
+select download
+
+Antonio
+
+
+
+From harbourtalk@matrixlist.com  Wed Apr 25 15:18:59 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Wed, 25 Apr 2001 15:18:59 +0100
+Subject: [HarbourTalk] DBFCDX problem
+In-Reply-To: <001301c0cd8f$455fd660$0f2aa8c0@antonio>; from alinares@fivetech.com on Wed, Apr 25, 2001 at 03:54:39PM +0200
+References: <20010425122409.B4029@hagbard.davep.org> <001301c0cd8f$455fd660$0f2aa8c0@antonio>
+Message-ID: <20010425151859.H4029@hagbard.davep.org>
+
+On Wed, Apr 25, 2001 at 03:54:39PM +0200, Antonio Linares wrote:
+
+> A Harbour tester reports a problem with DBFCDX management. Sample is
+> attached.
+
+Wouldn't it make more sense to report it on the developer's list (and
+perhaps document the nature of the problem too)?
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Wed Apr 25 15:24:18 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Wed, 25 Apr 2001 16:24:18 +0200
+Subject: [HarbourTalk] DBFCDX problem
+In-Reply-To: <20010425151859.H4029@hagbard.davep.org>
+Message-ID: <001a01c0cd93$69fdc820$0f2aa8c0@antonio>
+
+My mistake, Dave.
+
+Could you please forward it to Harbour list ? Thanks!
+
+The app simply GPFs.
+
+Antonio
+
+
+
+From harbourtalk@matrixlist.com  Wed Apr 25 15:41:57 2001
+From: harbourtalk@matrixlist.com (Patrick Mast)
+Date: Wed, 25 Apr 2001 16:41:57 +0200
+Subject: [HarbourTalk] What an impressive Clipper and FW application
+In-Reply-To: <001901c0cd91$ce5fa2e0$0f2aa8c0@antonio>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIKEGEGCAA.harbour@winfakt.com>
+
+Antonio,
+
+The app is protected...
+I can only see the opening screen. It than aksks for a code.
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+> I have just been reviewing a Clipper and FW
+> application developed for some customers of
+> us and I may say I am impressed for such an 
+> elegant and well designed app.
+> Have a look at it: (you must see it! :-)
+> http://www.arrakis.es/~wdinf
+> select download
+
+From harbourtalk@matrixlist.com  Wed Apr 25 15:56:56 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Wed, 25 Apr 2001 16:56:56 +0200
+Subject: [HarbourTalk] What an impressive Clipper and FW application
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIKEGEGCAA.harbour@winfakt.com>
+Message-ID: <002201c0cd97$f8cfd620$0f2aa8c0@antonio>
+
+Patrick,
+
+> The app is protected...
+> I can only see the opening screen. It than aksks for a code.
+
+Press esc there... and prepare yourself for
+a really impressive app!!!! :-)
+
+Antonio
+
+
+From harbourtalk@matrixlist.com  Wed Apr 25 16:25:38 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Wed, 25 Apr 2001 16:25:38 +0100
+Subject: [HarbourTalk] DBFCDX problem
+In-Reply-To: <001a01c0cd93$69fdc820$0f2aa8c0@antonio>; from alinares@fivetech.com on Wed, Apr 25, 2001 at 04:24:18PM +0200
+References: <20010425151859.H4029@hagbard.davep.org> <001a01c0cd93$69fdc820$0f2aa8c0@antonio>
+Message-ID: <20010425162538.K4029@hagbard.davep.org>
+
+On Wed, Apr 25, 2001 at 04:24:18PM +0200, Antonio Linares wrote:
+
+> Could you please forward it to Harbour list ? Thanks!
+
+It appears that you have.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Wed Apr 25 20:15:13 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Wed, 25 Apr 2001 16:15:13 -0300
+Subject: [HarbourTalk] how to find out whether the device is removable on Linux/Unix
+References: <001701a8ea4d$d9224000$78d4d7c8@luizguim> <20010425122409.B4029@hagbard.davep.org>
+Message-ID: <001401c0cdbc$88c484a0$39d4d7c8@luizguim>
+
+Dave
+
+
+> On Fri, Jan 04, 1980 at 07:47:58AM -0200, Luiz Rafael Culik Guimaraes
+wrote:
+>
+> > As Subject Says.
+>
+> Depends, do you really mean device or do you mean a mounted "device"? In
+the
+> latter case the answer is, to some degree, that everything is removable
+> because you can umount anything that's mounted.
+I mean here Flopply drives and Zip Drives
+> > How  to retreive the free space on a device pointed by the filepath.
+>
+> That depends. Do you mean from the command line or from code? In the
+former
+> case you'd use df(1), in the latter case you'd use statfs(2).
+> I've already implemented the latter as part of harbour-glibc (see my
+harbour
+> page):
+Ok thanks
+
+Regards
+
+Luiz Rafael Culik
+
+
+From harbourtalk@matrixlist.com  Wed Apr 25 20:39:18 2001
+From: harbourtalk@matrixlist.com (harbourtalk@matrixlist.com)
+Date: Wed, 25 Apr 2001 15:39:18 -0400
+Subject: [HarbourTalk] What an impressive Clipper and FW application
+In-Reply-To: <001901c0cd91$ce5fa2e0$0f2aa8c0@antonio>
+References: <001701a8ea4d$d9224000$78d4d7c8@luizguim>
+Message-ID: <3AE6EFA6.9990.A304E77@localhost>
+
+On 25 Apr 2001, at 16:12, Antonio Linares wrote:
+
+> I have just been reviewing a Clipper and FW
+> application developed for some customers of
+> us and I may say I am impressed for such an 
+> elegant and well designed app.
+> 
+> Have a look at it: (you must see it! :-)
+> 
+> http://www.arrakis.es/~wdinf
+
+Most impressive!
+
+
+From harbourtalk@matrixlist.com  Wed Apr 25 22:01:57 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Wed, 25 Apr 2001 22:01:57 +0100
+Subject: [HarbourTalk] how to find out whether the device is removable on Linux/Unix
+In-Reply-To: <001401c0cdbc$88c484a0$39d4d7c8@luizguim>; from culik@nh.conex.com.br on Wed, Apr 25, 2001 at 04:15:13PM -0300
+References: <001701a8ea4d$d9224000$78d4d7c8@luizguim> <20010425122409.B4029@hagbard.davep.org> <001401c0cdbc$88c484a0$39d4d7c8@luizguim>
+Message-ID: <20010425220157.O4029@hagbard.davep.org>
+
+On Wed, Apr 25, 2001 at 04:15:13PM -0300, Luiz Rafael Culik Guimaraes wrote:
+
+> > Depends, do you really mean device or do you mean a mounted "device"? In
+> > the latter case the answer is, to some degree, that everything is
+> > removable because you can umount anything that's mounted.
+>
+> I mean here Flopply drives and Zip Drives
+
+I'm now aware of a portable method of doing this. Actually, I'm not aware of
+a method of doing this just for Linux. Keep in mind what I said about how
+any "device" (I'm thinking filesystem here really) is "removable" because
+you can unmount them.
+
+Failing that, /usr/src/linux/Documentation (assuming you've got the kernel
+source installed) might hold some clues, as might the source for the various
+device drivers.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Wed Apr 25 22:04:17 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Wed, 25 Apr 2001 22:04:17 +0100
+Subject: [HarbourTalk] What an impressive Clipper and FW application
+In-Reply-To: <001901c0cd91$ce5fa2e0$0f2aa8c0@antonio>; from alinares@fivetech.com on Wed, Apr 25, 2001 at 04:12:48PM +0200
+References: <001701a8ea4d$d9224000$78d4d7c8@luizguim> <001901c0cd91$ce5fa2e0$0f2aa8c0@antonio>
+Message-ID: <20010425220417.P4029@hagbard.davep.org>
+
+On Wed, Apr 25, 2001 at 04:12:48PM +0200, Antonio Linares wrote:
+
+> Have a look at it: (you must see it! :-)
+> 
+> http://www.arrakis.es/~wdinf
+> 
+> select download
+
+What is it exactly? 
+
+[No, I didn't download. I don't speak Spanish and I obviously don't download
+ random software off the net and run it, especially when I don't know the
+ source and I don't know what it's supposed to do.]
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Wed Apr 25 22:47:06 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Wed, 25 Apr 2001 22:47:06 +0100
+Subject: [HarbourTalk] how to find out whether the device is removable on Linux/Unix
+In-Reply-To: <20010425220157.O4029@hagbard.davep.org>; from davep@davep.org on Wed, Apr 25, 2001 at 10:01:57PM +0100
+References: <001701a8ea4d$d9224000$78d4d7c8@luizguim> <20010425122409.B4029@hagbard.davep.org> <001401c0cdbc$88c484a0$39d4d7c8@luizguim> <20010425220157.O4029@hagbard.davep.org>
+Message-ID: <20010425224706.Q4029@hagbard.davep.org>
+
+On Wed, Apr 25, 2001 at 10:01:57PM +0100, Dave Pearson wrote:
+
+> I'm now aware of a portable method of doing this. 
+
+s/now/not/
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Thu Apr 26 10:02:40 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Thu, 26 Apr 2001 11:02:40 +0200
+Subject: [HarbourTalk] What an impressive Clipper and FW application
+In-Reply-To: <20010425220417.P4029@hagbard.davep.org>
+Message-ID: <000301c0ce2f$a5663ea0$0f2aa8c0@antonio>
+
+Dave,
+
+It is a bussiness management software.
+
+The language does not matter, it is the design
+of the app.
+
+regards,
+
+Antonio
+
+> What is it exactly? 
+> 
+> [No, I didn't download. I don't speak Spanish and I obviously 
+> don't download
+>  random software off the net and run it, especially when I don't know the
+>  source and I don't know what it's supposed to do.]
+
+
+
+From harbourtalk@matrixlist.com  Fri Apr 27 19:48:15 2001
+From: harbourtalk@matrixlist.com (Felipe Coury)
+Date: Fri, 27 Apr 2001 15:48:15 -0300
+Subject: [HarbourTalk] What's this?
+Message-ID: <011201c0cf4a$9fcb6350$3c01a8c0@creation>
+
+Look what came to me:
+
+---
+
+Return-Path: <harbour-admin@matrixlist.com>
+Delivered-To: creation-fcoury@creation.com.br
+Received: (qmail 19107 invoked from network); 27 Apr 2001 18:22:25 -0000
+Received: from unknown (HELO taz2.fiberhosting.com) (206.132.232.94)
+  by hm20.locaweb.com.br with SMTP; 27 Apr 2001 18:22:25 -0000
+Received: (qmail 5501 invoked from network); 27 Apr 2001 17:52:30 -0000
+Received: from ns.dios.net (HELO taz2.fiberhosting.com) (mailman@127.0.0.1)
+  by ns.dios.net with SMTP; 27 Apr 2001 17:52:30 -0000
+Return-Path: <postmaster@xnetcuyo.com.ar>
+Delivered-To: mailman-harbour@matrixlist.com
+Received: (qmail 5452 invoked from network); 27 Apr 2001 17:51:57 -0000
+Received: from unknown (HELO server1.xnetcuyo.com.ar)
+(qmailr@200.51.165.230)
+  by taz.fiberhosting.com with SMTP; 27 Apr 2001 17:51:57 -0000
+Received: (qmail 690 invoked by uid 2004); 27 Apr 2001 17:51:40 -0000
+Received: from postmaster@xnetcuyo.com.ar by server1 with scan4virus-0.53
+(uvscan: v4.0.70/v4090. . Clean. Processed in 0.17458 secs); 27/04/2001
+14:51:39
+Message-ID: <20010427175139.684.qmail@server1.xnetcuyo.com.ar>
+From: "Administrador del sistema Anti-Virus" <postmaster@xnetcuyo.com.ar>
+To: <harbour@matrixlist.com>
+Subject: un archivo adjunto de tipo no permitido encontrado en un mensaje
+para usted con asunto "RE: [Harbour] Thunking from 32 to 16 bits..."
+X-Tnz-Problem-Type: 40
+MIME-Version: 1.0
+Content-type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Sender: harbour-admin@matrixlist.com
+Errors-To: harbour-admin@matrixlist.com
+X-BeenThere: harbour@matrixlist.com
+X-Mailman-Version: 2.0
+Precedence: bulk
+Reply-To: harbour@matrixlist.com
+List-Help: <mailto:harbour-request@matrixlist.com?subject=help>
+List-Post: <mailto:harbour@matrixlist.com>
+List-Subscribe: <http://www.matrixlist.com/mailman/listinfo/harbour>,
+ <mailto:harbour-request@matrixlist.com?subject=subscribe>
+List-Id: A developers discussion list for the Harbour Project
+<harbour.matrixlist.com>
+List-Unsubscribe: <http://www.matrixlist.com/mailman/listinfo/harbour>,
+ <mailto:harbour-request@matrixlist.com?subject=unsubscribe>
+List-Archive: <http://www.matrixlist.com/pipermail/harbour/>
+X-Original-Date: 27 Apr 2001 17:51:39 -0000
+Date: 27 Apr 2001 17:51:39 -0000
+
+Atencion <harbour@matrixlist.com>, "Antonio Linares" <alinares@fivetech.com>
+le ha
+enviado un mensaje que fue retenido por el sistema antivirus.
+
+Se ha encontrado un archivo adjunto de tipo no permitido en el mensaje
+destinado a usted.
+El programa antivirus ha interceptado el mensaje completo
+y no le llegara. El remitente ya fue avisado de esta situacion
+y se envio copia de dicho aviso al "Administrador del sistema Anti-Virus".
+
+Para evitar el ataque de virus de e-mail, se recomienda NO usar
+Outlook ya que es el único cliente de mail vulnerable a estos virus.
+El antivirus reporta que el un archivo adjunto de tipo no permitido es:
+
+Archivo .EXE: No se aceptan ejecutables adjuntos a mensajes porque podrian
+comprometer la seguridad o contener virus.
+
+
+
+Pongase en contacto con el Administrador del sistema Anti-Virus si necesita
+mas informacion sobre
+el mensaje o las politicas de control antivirus implementadas en su sistema.
+Su mensaje llego con las siguientes instrucciones:
+
+MAIL FROM: harbour-admin@matrixlist.com
+RCPT TO:   anv@xnetcuyo.com.ar
+
+... y las siguientescabeceras:
+
+De:         "Antonio Linares" <alinares@fivetech.com>
+Para:       <harbour@matrixlist.com>
+Asunto:     RE: [Harbour] Thunking from 32 to 16 bits...
+ID-Message: <001901c0cf40$b70fdaa0$0f2aa8c0@antonio>
+Fecha:      Fri, 27 Apr 2001 19:37:22 +0200
+
+
+El mensaje original ha quedado guardado en:
+
+  server1:/var/spool/qmailscan/viruses
+
+donde el Administrador del sistema Anti-Virus puede verificar su contenido.
+
+El programa antivirus reporto lo siguiente al revisar el mensaje:
+
+---
+
+---perlscanner results ---
+un archivo adjunto de tipo no permitido 'Archivo .EXE: No se aceptan
+ejecutables adjuntos a mensajes porque podrian comprometer la seguridad o
+contener virus.' estaba en
+/var/spool/qmailscan/server1988393895667/FSR32.exe
+---
+[Procesado por qmail-scan usando McAfee/NA uvscan en GNU/Linux]
+
+_______________________________________________
+Harbour mailing list
+Harbour@matrixlist.com
+http://www.matrixlist.com/mailman/listinfo/harbour
+
+Thank you for participating in The Harbour Project.  Be sure to check
+http://www.Harbour-Project.org
+
+
+
+
+From harbourtalk@matrixlist.com  Fri Apr 27 20:01:50 2001
+From: harbourtalk@matrixlist.com (Patrick Mast)
+Date: Fri, 27 Apr 2001 21:01:50 +0200
+Subject: [HarbourTalk] What's this?
+In-Reply-To: <011201c0cf4a$9fcb6350$3c01a8c0@creation>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIKEIPGCAA.harbour@winfakt.com>
+
+Felipe,
+
+I also got this...
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+> -----Oorspronkelijk bericht-----
+> Van: harbourtalk-admin@matrixlist.com
+> [mailto:harbourtalk-admin@matrixlist.com]Namens Felipe Coury
+> Verzonden: vrijdag 27 april 2001 20:48
+> Aan: harbourtalk@matrixlist.com
+> Onderwerp: [HarbourTalk] What's this?
+>
+>
+> Look what came to me:
+>
+> ---
+>
+> Return-Path: <harbour-admin@matrixlist.com>
+> Delivered-To: creation-fcoury@creation.com.br
+> Received: (qmail 19107 invoked from network); 27 Apr 2001 18:22:25 -0000
+> Received: from unknown (HELO taz2.fiberhosting.com) (206.132.232.94)
+>   by hm20.locaweb.com.br with SMTP; 27 Apr 2001 18:22:25 -0000
+> Received: (qmail 5501 invoked from network); 27 Apr 2001 17:52:30 -0000
+> Received: from ns.dios.net (HELO taz2.fiberhosting.com)
+> (mailman@127.0.0.1)
+>   by ns.dios.net with SMTP; 27 Apr 2001 17:52:30 -0000
+> Return-Path: <postmaster@xnetcuyo.com.ar>
+> Delivered-To: mailman-harbour@matrixlist.com
+> Received: (qmail 5452 invoked from network); 27 Apr 2001 17:51:57 -0000
+> Received: from unknown (HELO server1.xnetcuyo.com.ar)
+> (qmailr@200.51.165.230)
+>   by taz.fiberhosting.com with SMTP; 27 Apr 2001 17:51:57 -0000
+> Received: (qmail 690 invoked by uid 2004); 27 Apr 2001 17:51:40 -0000
+> Received: from postmaster@xnetcuyo.com.ar by server1 with scan4virus-0.53
+> (uvscan: v4.0.70/v4090. . Clean. Processed in 0.17458 secs); 27/04/2001
+> 14:51:39
+> Message-ID: <20010427175139.684.qmail@server1.xnetcuyo.com.ar>
+> From: "Administrador del sistema Anti-Virus" <postmaster@xnetcuyo.com.ar>
+> To: <harbour@matrixlist.com>
+> Subject: un archivo adjunto de tipo no permitido encontrado en un mensaje
+> para usted con asunto "RE: [Harbour] Thunking from 32 to 16 bits..."
+> X-Tnz-Problem-Type: 40
+> MIME-Version: 1.0
+> Content-type: text/plain; charset="iso-8859-1"
+> Content-Transfer-Encoding: quoted-printable
+> Sender: harbour-admin@matrixlist.com
+> Errors-To: harbour-admin@matrixlist.com
+> X-BeenThere: harbour@matrixlist.com
+> X-Mailman-Version: 2.0
+> Precedence: bulk
+> Reply-To: harbour@matrixlist.com
+> List-Help: <mailto:harbour-request@matrixlist.com?subject=help>
+> List-Post: <mailto:harbour@matrixlist.com>
+> List-Subscribe: <http://www.matrixlist.com/mailman/listinfo/harbour>,
+>  <mailto:harbour-request@matrixlist.com?subject=subscribe>
+> List-Id: A developers discussion list for the Harbour Project
+> <harbour.matrixlist.com>
+> List-Unsubscribe: <http://www.matrixlist.com/mailman/listinfo/harbour>,
+>  <mailto:harbour-request@matrixlist.com?subject=unsubscribe>
+> List-Archive: <http://www.matrixlist.com/pipermail/harbour/>
+> X-Original-Date: 27 Apr 2001 17:51:39 -0000
+> Date: 27 Apr 2001 17:51:39 -0000
+>
+> Atencion <harbour@matrixlist.com>, "Antonio Linares"
+> <alinares@fivetech.com>
+> le ha
+> enviado un mensaje que fue retenido por el sistema antivirus.
+>
+> Se ha encontrado un archivo adjunto de tipo no permitido en el mensaje
+> destinado a usted.
+> El programa antivirus ha interceptado el mensaje completo
+> y no le llegara. El remitente ya fue avisado de esta situacion
+> y se envio copia de dicho aviso al "Administrador del sistema Anti-Virus".
+>
+> Para evitar el ataque de virus de e-mail, se recomienda NO usar
+> Outlook ya que es el único cliente de mail vulnerable a estos virus.
+> El antivirus reporta que el un archivo adjunto de tipo no permitido es:
+>
+> Archivo .EXE: No se aceptan ejecutables adjuntos a mensajes porque podrian
+> comprometer la seguridad o contener virus.
+>
+>
+>
+> Pongase en contacto con el Administrador del sistema Anti-Virus
+> si necesita
+> mas informacion sobre
+> el mensaje o las politicas de control antivirus implementadas en
+> su sistema.
+> Su mensaje llego con las siguientes instrucciones:
+>
+> MAIL FROM: harbour-admin@matrixlist.com
+> RCPT TO:   anv@xnetcuyo.com.ar
+>
+> ... y las siguientescabeceras:
+>
+> De:         "Antonio Linares" <alinares@fivetech.com>
+> Para:       <harbour@matrixlist.com>
+> Asunto:     RE: [Harbour] Thunking from 32 to 16 bits...
+> ID-Message: <001901c0cf40$b70fdaa0$0f2aa8c0@antonio>
+> Fecha:      Fri, 27 Apr 2001 19:37:22 +0200
+>
+>
+> El mensaje original ha quedado guardado en:
+>
+>   server1:/var/spool/qmailscan/viruses
+>
+> donde el Administrador del sistema Anti-Virus puede verificar su
+> contenido.
+>
+> El programa antivirus reporto lo siguiente al revisar el mensaje:
+>
+> ---
+>
+> ---perlscanner results ---
+> un archivo adjunto de tipo no permitido 'Archivo .EXE: No se aceptan
+> ejecutables adjuntos a mensajes porque podrian comprometer la seguridad o
+> contener virus.' estaba en
+> /var/spool/qmailscan/server1988393895667/FSR32.exe
+> ---
+> [Procesado por qmail-scan usando McAfee/NA uvscan en GNU/Linux]
+>
+> _______________________________________________
+> Harbour mailing list
+> Harbour@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbour
+>
+> Thank you for participating in The Harbour Project.  Be sure to check
+> http://www.Harbour-Project.org
+>
+>
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>
+
+
+From harbourtalk@matrixlist.com  Sat Apr 28 03:44:08 2001
+From: harbourtalk@matrixlist.com (=?iso-8859-1?Q?Gustavo_A._Gonz=E1lez_M.?=)
+Date: Fri, 27 Apr 2001 22:44:08 -0400
+Subject: [HarbourTalk] RamDisk for Windows..
+Message-ID: <009e01c0cf8d$34136ac0$22f4c4a1@gustavo>
+
+Hi.
+
+Any one of you know a RamDisk for Windows "FREE" ? ( the ramdrive.sys have
+limitations ).
+
+Regards
+
+--
+Gustavo A. González M.
+gonzalezgustavo@cantv.net
+Caracas - Venezuela
+
+
+From harbourtalk@matrixlist.com  Sat Apr 28 10:21:21 2001
+From: harbourtalk@matrixlist.com (Andrzej P. Wozniak)
+Date: Sat, 28 Apr 2001 11:21:21 +0200
+Subject: [HarbourTalk] What's this?
+References: <011201c0cf4a$9fcb6350$3c01a8c0@creation>
+Message-ID: <003001c0cfc4$b99a2300$500db33e@chello.pl>
+
+----- Original Message -----
+From: "Felipe Coury" <fcoury@creation.com.br>
+To: <harbourtalk@matrixlist.com>
+Sent: Friday, April 27, 2001 8:48 PM
+Subject: [HarbourTalk] What's this?
+
+> Look what came to me:
+[...]
+> From: "Administrador del sistema Anti-Virus" <postmaster@xnetcuyo.com.ar>
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+> To: <harbour@matrixlist.com>
+> Subject: un archivo adjunto de tipo no permitido encontrado en un mensaje
+> para usted con asunto "RE: [Harbour] Thunking from 32 to 16 bits..."
+> X-Tnz-Problem-Type: 40
+[...]
+> El programa antivirus ha interceptado el mensaje completo
+> y no le llegara. El remitente ya fue avisado de esta situacion
+> y se envio copia de dicho aviso al "Administrador del sistema Anti-Virus".
+>
+> Para evitar el ataque de virus de e-mail, se recomienda NO usar
+                                                          ^^^^^^^
+> Outlook ya que es el único cliente de mail vulnerable a estos virus.
+  ^^^^^^^
+> El antivirus reporta que el un archivo adjunto de tipo no permitido es:
+>
+> Archivo .EXE: No se aceptan ejecutables adjuntos a mensajes porque podrian
+  ^^^^^^^^^^^^
+> comprometer la seguridad o contener virus.
+[...]
+>[Procesado por qmail-scan usando McAfee/NA uvscan en GNU/Linux]
+[...]                             ^^^^^^^^^^^^^^^^
+
+It seems to be FALSE ALERT!
+I tested the exe with AVP and Polish Antivir MkS_Vir using the latest
+updates and found 0 infected files.
+I think that uvscan is too sensitive and warns every Outlook/OutlookExpress
+user of every exe attached in a mail - but that exe was in a zip file.
+Someone (admin/postmaster of xnetcuyo.com.ar server) should change uvscan
+settings or maybe change antivirus to AVP.
+
+--
+}Regards from the Harbour mirror in Poland
+Andrzej P. Wozniak
+alias@polnet.cc   harbour@harbour.pl.eu.org
+
+
+
+From harbourtalk@matrixlist.com  Sat Apr 28 14:04:55 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Sat, 28 Apr 2001 10:04:55 -0300
+Subject: [HarbourTalk] An tip of how to speed up harbour app
+Message-ID: <004901c0cfe4$213b4740$52d4d7c8@luizguim>
+
+Dear Friends
+
+I´ve seen this on th borland.public.cppbuilder.commandlinetools
+
+The default behavior when using bcc32 , is that he automaticaly defines
+_WIN32_WINNT=0x500 and WINVER=0x0500, witch defined that the app will run on
+an WINME or WIN2K.
+
+if you define _WIN32_WINNT=0x400 and WINVER=0x400 , the compiler know that
+the targer app is for the Win95/98/NT4 windows OS
+
+I´ve done this test and got about 5-10% os speed on the apps
+
+Regards
+
+Luiz Rafael Culik
+
+
+From harbourtalk@matrixlist.com  Sat Apr 28 14:47:06 2001
+From: harbourtalk@matrixlist.com (Phil Barnett)
+Date: Sat, 28 Apr 2001 09:47:06 -0400
+Subject: [HarbourTalk] Virus stuff
+Message-ID: <3AEA919A.16632.4A407D3D@localhost>
+
+Mailman has been catching viruses headed for the list for the last 
+two weeks.
+
+I've just been deleting them.
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@matrixlist.com  Sat Apr 28 16:31:36 2001
+From: harbourtalk@matrixlist.com (=?iso-8859-1?Q?Gustavo_A._Gonz=E1lez_M.?=)
+Date: Sat, 28 Apr 2001 11:31:36 -0400
+Subject: [HarbourTalk] API Information
+Message-ID: <003401c0cffb$388a42e0$6df4c4a1@gustavo>
+
+Hi.
+
+I need suppress the sound ( beep ) in the EDIT class of the API when is
+pressed the combination Ctrl + ( any key ).
+
+Any one of you can help me or in any case, send me information where i can
+found related info ?
+
+Regards
+
+--
+Gustavo A. González M.
+gonzalezgustavo@cantv.net
+Caracas - Venezuela
+
+
+From harbourtalk@matrixlist.com  Sat Apr 28 21:51:44 2001
+From: harbourtalk@matrixlist.com (Phil Barnett)
+Date: Sat, 28 Apr 2001 16:51:44 -0400
+Subject: [HarbourTalk] In the Beginning was the Command Line
+Message-ID: <3AEAF520.24626.4BC54031@localhost>
+
+Very interesting but long essay. Good reading, even if a couple of 
+years old.
+
+http://www-
+classic.be.com/users/cryptonomicon/beginning_print.html
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@matrixlist.com  Sun Apr 29 00:01:02 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Sat, 28 Apr 2001 20:01:02 -0300
+Subject: [HarbourTalk] Re: ODBC 32 Explorer
+References: <200104281022.f3SAMGP07358@pa08.conex.com.br>
+Message-ID: <001701c0d037$80de39c0$a8d4d7c8@luizguim>
+
+  Dear Friend
+>
+> I would like to obtain a position of software developer appropriate for my
+experience and knowledge. Distance work from Moscow is prefer.
+
+If you´d like to join Harbour Project, you are welcome
+see http://www.harbour-project.org
+
+Btw, your knowloge of ODBC can be very useful to the Harbour project
+
+> P.S. I have read your message in <microsoft.public.vc.mfc>
+> These sole message for you. No mail list.
+Btw, what message are you refering about
+
+Regards
+
+Luiz Rafael Culik
+
+
+
+From harbourtalk@matrixlist.com  Sun Apr 29 00:05:42 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Sat, 28 Apr 2001 20:05:42 -0300
+Subject: [HarbourTalk] Need your comments on this
+Message-ID: <003901c0d039$dee162c0$a8d4d7c8@luizguim>
+
+Dear Friends
+
+I´m working with Harbour +htmllib to create full cgi apps with Harbour. I
+has already created my of our home pages as an CGI apps.
+Also i have examples on use DBFCDX with CGI.
+Maurilio and Alexander, Btw do you have an example of the use mysql with DBF
+
+Regards
+
+Luiz Rafael Culik
+
+
+
+
+From harbourtalk@matrixlist.com  Sun Apr 29 07:30:48 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Sun, 29 Apr 2001 07:30:48 +0100
+Subject: [HarbourTalk] Need your comments on this
+In-Reply-To: <003901c0d039$dee162c0$a8d4d7c8@luizguim>; from culik@nh.conex.com.br on Sat, Apr 28, 2001 at 08:05:42PM -0300
+References: <003901c0d039$dee162c0$a8d4d7c8@luizguim>
+Message-ID: <20010429073048.O16745@hagbard.davep.org>
+
+On Sat, Apr 28, 2001 at 08:05:42PM -0300, Luiz Rafael Culik Guimaraes wrote:
+
+> Im working with Harbour +htmllib to create full cgi apps with Harbour. I
+> has already created my of our home pages as an CGI apps.
+> Also i have examples on use DBFCDX with CGI.
+
+You don't quite say what you were hoping for comments on.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Sun Apr 29 09:34:54 2001
+From: harbourtalk@matrixlist.com (Patrick Mast)
+Date: Sun, 29 Apr 2001 10:34:54 +0200
+Subject: [HarbourTalk] NT 4.0 SP7 IS available!
+In-Reply-To: <20010429073048.O16745@hagbard.davep.org>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIAEKBGCAA.harbour@winfakt.com>
+
+http://www.theregister.co.uk/content/4/18582.html
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+From harbourtalk@matrixlist.com  Sun Apr 29 16:16:22 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Sun, 29 Apr 2001 12:16:22 -0300
+Subject: [HarbourTalk] Harbour Cgi program accessing DBF
+Message-ID: <000e01c0d0c0$34ee3ae0$efd4d7c8@luizguim>
+
+Dear Friends
+
+I´ve has created an Harbour CGI program that access an DBF file index with
+DBFCDX.
+
+If some one like to see the app, email me so i can send the binaries(Tested
+under Apache 1.3.19/Win32 and PWS 4.0)
+
+Regards
+
+Luiz Rafael Culik
+
+
+From harbourtalk@matrixlist.com  Sun Apr 29 16:31:13 2001
+From: harbourtalk@matrixlist.com (Patrick Mast)
+Date: Sun, 29 Apr 2001 17:31:13 +0200
+Subject: [HarbourTalk] Harbour Cgi program accessing DBF
+In-Reply-To: <000e01c0d0c0$34ee3ae0$efd4d7c8@luizguim>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIAEKHGCAA.harbour@winfakt.com>
+
+Luiz,
+
+I'm intrested!
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+> -----Oorspronkelijk bericht-----
+> Van: harbourtalk-admin@matrixlist.com
+> [mailto:harbourtalk-admin@matrixlist.com]Namens Luiz Rafael Culik
+> Guimaraes
+> Verzonden: zondag 29 april 2001 17:16
+> Aan: HarbourTalk@matrixlist.com
+> Onderwerp: [HarbourTalk] Harbour Cgi program accessing DBF
+>
+>
+> Dear Friends
+>
+> I´ve has created an Harbour CGI program that access an DBF file index with
+> DBFCDX.
+>
+> If some one like to see the app, email me so i can send the
+> binaries(Tested
+> under Apache 1.3.19/Win32 and PWS 4.0)
+>
+> Regards
+>
+> Luiz Rafael Culik
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>
+
+
+From harbourtalk@matrixlist.com  Mon Apr 30 03:41:20 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Sun, 29 Apr 2001 23:41:20 -0300
+Subject: [HarbourTalk] Harbour Cgi program accessing DBF
+References: <NCBBJKNMIDPJNLJCHCHIAEKHGCAA.harbour@winfakt.com>
+Message-ID: <001101c0d11f$e0d32820$49d4d7c8@luizguim>
+
+Patrick
+
+
+> Luiz,
+>
+> I'm intrested!
+
+Ok. It is possible to you find an place to host this win32 CGi programs, I
+think this is an Sample that every one will ask about.  also I will send
+another Harbour CGI program that generate the Function list page on the fly.
+On My system.(Pentium MMX/200Mhz/16Mb) is take 70s to load the page.
+
+I also will work on an page with Harbour CGI+MYSQL
+
+Regards
+
+Luiz Rafael Culik
+
+
+From harbourtalk@matrixlist.com  Mon Apr 30 16:53:04 2001
+From: harbourtalk@matrixlist.com (David G. Holm)
+Date: Mon, 30 Apr 2001 11:53:04 -0400
+Subject: [HarbourTalk] What's this?
+In-Reply-To: <003001c0cfc4$b99a2300$500db33e@chello.pl>
+References: <011201c0cf4a$9fcb6350$3c01a8c0@creation>
+Message-ID: <200104301551.f3UFp3w13151@smtp.parrett.net>
+
+** Reply to message from "Andrzej P. Wozniak" <alias@polnet.cc> on Sat,
+28 Apr 2001 11:21:21 +0200
+
+> It seems to be FALSE ALERT!
+
+It is not an alert in the first place, so it can't be a false alert. It
+is actually a notice that the message was not delivered to the final
+destination, because the ISP has a policy of not delivering any email
+that has executable attachments. But the message is available from a
+holding directory, in case the recipient wishes to risk virus
+contamination by receiving the email anyway. I discovered this by using
+copy and paste between the original message and
+http://babelfish.altavista.com/ and selecting spanish to english.
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+

@@ -1,0 +1,2769 @@
+From harbourtalk@matrixlist.com  Tue May  1 03:01:51 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Mon, 30 Apr 2001 23:01:51 -0300
+Subject: [HarbourTalk] Harbour Cgi program accessing DBF
+References: <NCBBJKNMIDPJNLJCHCHIAEKHGCAA.harbour@winfakt.com>
+Message-ID: <002201c0d1e2$cc14c060$f5d4d7c8@luizguim>
+
+Patrick
+
+
+> Luiz,
+>
+> I'm intrested!
+The files need are in the Harbour ftp site in the upload directory with the
+name of patcgi.zip
+
+
+Btw , is it possible to publish this files to the inet
+I´ve done an small test with addbook.exe on my dynamic internet conection.
+Computer of test
+Server Apache 1.3.19(win32)
+Computer Pentium MMX/200 16MB
+here is the time.
+
+Page loading 2min 25s
+To add an new record 35s
+
+Parameters to the CGIAPPS
+addbook.exe?BLDPAGE
+funclist.exe?LIST
+
+you will love both , especialy the first, and the redirect capbilities of
+the second
+Regards
+
+Luiz Rafael Culik
+
+
+From harbourtalk@matrixlist.com  Tue May  1 16:33:35 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Tue, 1 May 2001 12:33:35 -0300
+Subject: [HarbourTalk] Fw: Virus alert/alleged worst ever!!!!
+Message-ID: <004101c0d257$2c83d980$90d4d7c8@luizguim>
+
+
+> SEND THIS TO EVERYONE YOU KNOW!!
+>
+> > > > ----- Original Message -----
+> > > > From: julian harrison <julians@cwcom.net>
+> > > > To: james forest <JF@tinyworld.co.uk>
+> > > > Sent: Monday, April 30, 2001 12:33 PM
+> > > > Subject: Fw: Virus alert/alleged worst ever
+> > > >
+> > > >
+> > > > >
+> > > > > > >
+> > > > > > >
+> > > > > > >
+> > > > > > > Please read the info below!
+> > > > > > >
+> > > > > > > > >A new virus has just been discovered that has been
+classified
+> >by
+> > > > > > > Microsoft
+> > > > > > > > >www.microsoft.com ) and by McAfee (www.mcafee.com ) as the
+> >most
+> > > > > > > destructive
+> > > > > > > > >ever! This virus was discovered yesterday afternoon by
+McAfee
+> >and
+> > > > no
+> > > > > > > > >vaccine has yet been developed. This virus simply destroys
+> >Sector
+> > > > > Zero
+> > > > > > > from
+> > > > > > > > >the hard disk, where vital information for its functioning
+> >are
+> > > > > stored.
+> > > > > > > This
+> > > > > > > > >virus acts in the  following manner: It sends itself
+> > > automatically
+> > > > to
+> > > > > > all
+> > > > > > >
+> > > > > > > > >contacts on your list with the title "A Virtual Card for
+> >You".
+> >As
+> > > > > soon
+> > > > > > as
+> > > > > > >
+> > > > > > > > >the supposed virtual card is opened, the computer freezes
+so
+> >that
+> > > > the
+> > > > > > > user
+> > > > > > > > >has to reboot. When the ctrl+alt+del keys or the reset
+button
+> >are
+> > > > > > > pressed,
+> > > > > > > > >the virus destroys Sector Zero, thus permanently destroying
+> >the
+> > > > hard
+> > > > > > > disk.
+> > > > > > > > >Yesterday in just a few hours this virus caused panic in
+New
+> > > York,
+> > > > > > > > >according to news broadcast by CNN (www.cnn.com /
+> > > > http://www.cnn.com
+> > > > > > > <http://www.cnn.com> ).
+> > > > > > > This
+> > > > > > > > >alert was received by an employee of Microsoft itself.  So
+> >don't
+> > > > open
+> > > > > > any
+> > > > > > >
+> > > > > > > > >mails with subject "A Virtual Card for You".
+> > > > > > > > >  As soon as you get the mail, delete it. Please pass on
+this
+> > > mail
+> > > > to
+> > > > > > all
+> > > > > > >
+> > > > > > > > >your friends and co-workers. Forward  this to  everyone in
+> >your
+> > > > > address
+> > > > > > > > >book.I would rather receive this 25 times than not at all.
+> > > > > > > > >
+> > > > > > > > >  Also: Intel announced that a new and very  destructive
+> >virus
+> >
+> > > was
+> > > > > > > > >discovered  recently. If you receive an email called "An
+> >Internet
+> > > > > > Flower
+> > > > > > > > >For You" do not open it. Delete it right away! This virus
+> >removes
+> > > > all
+> > > > > > > > >dynamic link libraries(.dll files) from your computer.
+Your
+> > > > computer
+> > > > > > > will
+> > > > > > > > >not be able to boot up.! !
+> > > > > > > > >
+> > > > > > > > >SEND THIS TO EVERYONE ON YOUR CONTACT LIST!!
+> > > > > > > > >
+> > > > > > > > >
+> > > > > > > >
+> > > > > > > >
+> > > > > >
+> > > >
+> >_________________________________________________________________________
+> > > > > > > > Get Your Private, Free E-mail from MSN Hotmail at
+> > > > > http://www.hotmail.com
+> > > > > > > <http://www.hotmail.com> .
+> > > > > > > >
+> > > > > > > >
+> > > > > > > >
+> _________________________________________________________________________
+> Get Your Private, Free E-mail from MSN Hotmail at http://www.hotmail.com.
+>
+
+
+From harbourtalk@matrixlist.com  Tue May  1 17:12:28 2001
+From: harbourtalk@matrixlist.com (David G. Holm)
+Date: Tue, 1 May 2001 12:12:28 -0400
+Subject: [HarbourTalk] Fw: Virus alert/alleged worst ever!!!!
+In-Reply-To: <004101c0d257$2c83d980$90d4d7c8@luizguim>
+Message-ID: <200105011610.f41GAPw24856@smtp.parrett.net>
+
+** Reply to message from "Luiz Rafael Culik Guimaraes"
+<culik@nh.conex.com.br> on Tue, 1 May 2001 12:33:35 -0300
+
+Both of these are fraudulent virus hoaxes! See
+http://chekware.com/hoax/Virtual_Card.htm and
+http://www.umich.edu/~virus-busters/hoaxes/flower.html
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@matrixlist.com  Tue May  1 17:52:24 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 1 May 2001 17:52:24 +0100
+Subject: [HarbourTalk] Fw: Virus alert/alleged worst ever!!!!
+In-Reply-To: <004101c0d257$2c83d980$90d4d7c8@luizguim>; from culik@nh.conex.com.br on Tue, May 01, 2001 at 12:33:35PM -0300
+References: <004101c0d257$2c83d980$90d4d7c8@luizguim>
+Message-ID: <20010501175224.S16745@hagbard.davep.org>
+
+On Tue, May 01, 2001 at 12:33:35PM -0300, Luiz Rafael Culik Guimaraes wrote:
+
+> > [Yet another virus hoax]
+
+<URL:http://antivirus.about.com/compute/antivirus/library/blenhoax.htm>
+should always be your first port of call before you pass on one of these
+"virus warnings". You'll see the one you've helped to perpetuate is
+<URL:http://antivirus.about.com/compute/antivirus/library/hoaxes/blencard.htm>.
+
+Luiz, this isn't the first chain/hoax you've sent to people by the harbour
+mailing lists (the "Solidariedade com Adilsinho" hoax was your last one on
+April 7). Perhaps you could drop the harbour lists from your target audience
+when sending out stuff like this in future?
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Tue May  1 19:24:22 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Tue, 1 May 2001 15:24:22 -0300
+Subject: [HarbourTalk] Fw: Virus alert/alleged worst ever!!!!
+References: <004101c0d257$2c83d980$90d4d7c8@luizguim> <20010501175224.S16745@hagbard.davep.org>
+Message-ID: <009d01c0d26d$d78bb760$07d4d7c8@luizguim>
+
+Dear Friends
+> [Yet another virus hoax]
+>
+> <URL:http://antivirus.about.com/compute/antivirus/library/blenhoax.htm>
+> should always be your first port of call before you pass on one of these
+> "virus warnings". You'll see the one you've helped to perpetuate is
+>
+<URL:http://antivirus.about.com/compute/antivirus/library/hoaxes/blencard.ht
+m>.
+>
+> Luiz, this isn't the first chain/hoax you've sent to people by the harbour
+> mailing lists (the "Solidariedade com Adilsinho" hoax was your last one on
+> April 7). Perhaps you could drop the harbour lists from your target
+audience
+> when sending out stuff like this in future?
+>
+Sorry.I didn´t know that this was an false virus alarm,I´ve has read on an
+Brazilian Computer magazine ,  that was an virus with an powerfull
+destructive content, and i think that was this one.
+
+Sorry, for the umpleasent email
+
+Regards
+
+Luiz Rafael Culik
+
+
+From harbourtalk@matrixlist.com  Tue May  1 19:47:05 2001
+From: harbourtalk@matrixlist.com (Mark W. Schumann)
+Date: Tue, 1 May 2001 14:47:05 -0400
+Subject: [HarbourTalk] Fw: Virus alert/alleged worst ever!!!!
+In-Reply-To: <009d01c0d26d$d78bb760$07d4d7c8@luizguim>; from culik@nh.conex.com.br on Tue, May 01, 2001 at 03:24:22PM -0300
+References: <004101c0d257$2c83d980$90d4d7c8@luizguim> <20010501175224.S16745@hagbard.davep.org> <009d01c0d26d$d78bb760$07d4d7c8@luizguim>
+Message-ID: <20010501144705.C15637@columbus.private.underflap.com>
+
+On Tue, May 01, 2001 at 03:24:22PM -0300, Luiz Rafael Culik Guimaraes wrote:
+> Sorry.I didn´t know that this was an false virus alarm,I´ve has read on an
+> Brazilian Computer magazine ,  that was an virus with an powerfull
+> destructive content, and i think that was this one.
+
+I'm mostly just lurking and have hardly touched any Harbour code, so
+count this for what it's worth.
+
+But, in my opinion, a developers' mailing list should be free of all
+kinds of virus alerts.  I suppose one possible exception would be to
+warn when an email virus may have actually been spread by the list itself.
+
+I would guess that people who develop Harbour tend to get a _lot_
+of email.  If the virus alerts are making the rounds, we'll get them
+elsewhere without having to read about them on harbourtalk.
+
+-- 
+"I am Bob the Tomato in a 'Larry the Cucumber' world."
+                                                  --me
+
+From harbourtalk@matrixlist.com  Tue May  1 20:02:03 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 1 May 2001 20:02:03 +0100
+Subject: [HarbourTalk] Fw: Virus alert/alleged worst ever!!!!
+In-Reply-To: <20010501144705.C15637@columbus.private.underflap.com>; from catfood@underflap.com on Tue, May 01, 2001 at 02:47:05PM -0400
+References: <004101c0d257$2c83d980$90d4d7c8@luizguim> <20010501175224.S16745@hagbard.davep.org> <009d01c0d26d$d78bb760$07d4d7c8@luizguim> <20010501144705.C15637@columbus.private.underflap.com>
+Message-ID: <20010501200203.U16745@hagbard.davep.org>
+
+On Tue, May 01, 2001 at 02:47:05PM -0400, Mark W. Schumann wrote:
+
+> But, in my opinion, a developers' mailing list should be free of all kinds
+> of virus alerts. I suppose one possible exception would be to warn when an
+> email virus may have actually been spread by the list itself.
+
+Presumably this is the reason he sent the email to the social list, not the
+developers list?
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Tue May  1 20:30:09 2001
+From: harbourtalk@matrixlist.com (Mark W. Schumann)
+Date: Tue, 1 May 2001 15:30:09 -0400
+Subject: [HarbourTalk] Fw: Virus alert/alleged worst ever!!!!
+In-Reply-To: <20010501200203.U16745@hagbard.davep.org>; from davep@davep.org on Tue, May 01, 2001 at 08:02:03PM +0100
+References: <004101c0d257$2c83d980$90d4d7c8@luizguim> <20010501175224.S16745@hagbard.davep.org> <009d01c0d26d$d78bb760$07d4d7c8@luizguim> <20010501144705.C15637@columbus.private.underflap.com> <20010501200203.U16745@hagbard.davep.org>
+Message-ID: <20010501153009.D15637@columbus.private.underflap.com>
+
+On Tue, May 01, 2001 at 08:02:03PM +0100, Dave Pearson wrote:
+> On Tue, May 01, 2001 at 02:47:05PM -0400, Mark W. Schumann wrote:
+> 
+> > But, in my opinion, a developers' mailing list should be free of all kinds
+> > of virus alerts. I suppose one possible exception would be to warn when an
+> > email virus may have actually been spread by the list itself.
+> 
+> Presumably this is the reason he sent the email to the social list, not the
+> developers list?
+
+Yeah, you're right.
+
+I meant to say something like "a social list made up of developers."
+
+My point is that the kind of people who would be on this list are likely
+to be the kind of people who always get these alerts on every _other_
+list they read too.  And they include people like you and me, who are
+very, very rarely affected by even the "true" alerts.
+
+-- 
+"I am Bob the Tomato in a 'Larry the Cucumber' world."
+                                                  --me
+
+From harbourtalk@matrixlist.com  Wed May  2 07:48:54 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Wed, 2 May 2001 07:48:54 +0100
+Subject: [HarbourTalk] Fw: Virus alert/alleged worst ever!!!!
+In-Reply-To: <20010501153009.D15637@columbus.private.underflap.com>; from catfood@underflap.com on Tue, May 01, 2001 at 03:30:09PM -0400
+References: <004101c0d257$2c83d980$90d4d7c8@luizguim> <20010501175224.S16745@hagbard.davep.org> <009d01c0d26d$d78bb760$07d4d7c8@luizguim> <20010501144705.C15637@columbus.private.underflap.com> <20010501200203.U16745@hagbard.davep.org> <20010501153009.D15637@columbus.private.underflap.com>
+Message-ID: <20010502074854.X16745@hagbard.davep.org>
+
+On Tue, May 01, 2001 at 03:30:09PM -0400, Mark W. Schumann wrote:
+
+> My point is that the kind of people who would be on this list are likely
+> to be the kind of people who always get these alerts on every _other_ list
+> they read too. 
+
+<strong>Agree</strong>
+
+>                And they include people like you and me, who are very, very
+> rarely affected by even the "true" alerts.
+
+AKA cynical about most alerts and using the wrong OS for others. ;>
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Wed May  2 09:47:20 2001
+From: harbourtalk@matrixlist.com (Patrick Mast)
+Date: Wed, 2 May 2001 10:47:20 +0200
+Subject: [HarbourTalk] Support for the Linux OS with ADS
+In-Reply-To: <20010502074854.X16745@hagbard.davep.org>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIGELKGCAA.harbour@winfakt.com>
+
+http://www.advantagedatabase.com/ADS/News+-+Events/PressDetail.htm?newsID=20
+010501
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+
+From harbourtalk@matrixlist.com  Wed May  2 14:55:19 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Wed, 2 May 2001 14:55:19 +0100
+Subject: [HarbourTalk] Beating the Averages
+Message-ID: <20010502145519.H16745@hagbard.davep.org>
+
+Anyone here who reads Slashdot <URL:http://slashdot.org/> will (hopefully)
+have seen <URL:http://www.paulgraham.com/paulgraham/avg.html>. I'd urge
+anyone who hasn't seen it to follow the link and have a read of the paper.
+
+I think it's interesting for Clipper/harbour programmers on a couple of
+levels. _The Blub Paradox_ will probably resonate with many Clipper
+programmers for a couple of reasons (both positive and negative). I think
+the whole of the paper will resonate with Clipper/Harbour programmers too,
+especially now that Clipper is much less the norm and heading into
+historical exception territory (talk about the rise of garbage collection
+usage should also have a few heads nodding).
+
+For me I found that the paper did a good job of explaining why I like
+Clipper (the language) and Lisp.
+
+-- 
+Dave Pearson:                   |     lbdb.el - LBDB interface.
+http://www.davep.org/           |  sawfish.el - Sawfish mode.
+Emacs:                          |  uptimes.el - Record emacs uptimes.
+http://www.davep.org/emacs/     | quickurl.el - Recall lists of URLs.
+
+From harbourtalk@matrixlist.com  Thu May  3 10:06:16 2001
+From: harbourtalk@matrixlist.com (Alexander S.Kresin)
+Date: Thu, 3 May 2001 13:06:16 +0400
+Subject: [HarbourTalk] Re: Beating the Averages
+In-Reply-To: <20010502145519.H16745@hagbard.davep.org>
+References: <20010502145519.H16745@hagbard.davep.org>
+Message-ID: <10111626430.20010503130616@belacy.belgorod.su>
+
+On 02.05.2001 17:55, Dave Pearson <davep@davep.org> wrote:
+
+DP> Anyone here who reads Slashdot <URL:http://slashdot.org/> will (hopefully)
+DP> have seen <URL:http://www.paulgraham.com/paulgraham/avg.html>. I'd urge
+DP> anyone who hasn't seen it to follow the link and have a read of the paper.
+
+ Really interesting.
+ I ever tell that Clipper is a higher-level language than C, Pascal,
+ etc. Now I believe, that Lisp is, too.
+
+DP> I think it's interesting for Clipper/harbour programmers on a couple of
+DP> levels. _The Blub Paradox_ will probably resonate with many Clipper
+DP> programmers for a couple of reasons (both positive and negative). I think
+DP> the whole of the paper will resonate with Clipper/Harbour programmers too,
+DP> especially now that Clipper is much less the norm and heading into
+DP> historical exception territory (talk about the rise of garbage collection
+DP> usage should also have a few heads nodding).
+
+DP> For me I found that the paper did a good job of explaining why I like
+DP> Clipper (the language) and Lisp.
+
+ I'd include Forth to this good company, too.
+
+
+Best regards,
+ Alexander
+http://members.xoom.com/alkresin/
+
+
+
+From harbourtalk@matrixlist.com  Thu May  3 22:50:42 2001
+From: harbourtalk@matrixlist.com (Patrick Mast)
+Date: Thu, 3 May 2001 23:50:42 +0200
+Subject: [HarbourTalk] Please help on SLOW network access
+In-Reply-To: <10111626430.20010503130616@belacy.belgorod.su>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIIENJGCAA.harbour@winfakt.com>
+
+Hi,
+
+I have noticed that database access on a Windows 2000, acting
+as a server, is VERY slow...
+
+I have made is a little application to test the speed of the network
+traffic on accessing database files. Please find it here:
+http://www.FiveWin.Be.kz/files/Test_Network_Speed.zip
+
+Unzip these files and place them on a networkdrive.
+
+Run tServer.exe on the server computer, and run tClient on the
+clients computer. When tServer.exe is run, it will create a "TEST.DBF"
+file and put some data in it. It opens the TEST.DBF in shared mode.
+
+Now, if you run tClient.exe on the clients computer, it wil open and
+close the TEST.DBF 10 times. As a result it will report how long it
+needed to do this.
+
+On my system (Windows 2000 Professional on the server and clients
+computer) I have these results:
+
+,-[ NOT RUNNING tServer ]---------------
+|0.68 second to open TEST.DBF 10 times
+`---------------------------------------
+
+,-[ RUNNING tServer ]-------------------
+|10.38 second to open TEST.DBF 10 times!!
+`---------------------------------------
+That's 10 seconds longer!!
+
+What can be the cause, and more important, how can we solve it?
+
+Please run the test and let me know the result.
+Thanks for your cooperation!
+
+Regards,
+
+Patrick Mast
+http://www.Patrick.Be.kz (By Bekz.net)
+http://www.FiveWin.Be.kz (By Bekz.net)
+http://www.Harbour-Project.org
+
+P.S. I have also tried this with Harbour (32 bits exe files) and got
+the same result...
+
+
+From harbourtalk@matrixlist.com  Thu May  3 23:04:36 2001
+From: harbourtalk@matrixlist.com (Andrzej P. Wozniak)
+Date: Fri, 4 May 2001 00:04:36 +0200
+Subject: [HarbourTalk] What's this?
+References: <011201c0cf4a$9fcb6350$3c01a8c0@creation> <200104301551.f3UFp3w13151@smtp.parrett.net>
+Message-ID: <000f01c0d41e$0b105120$500db33e@chello.pl>
+
+----- Original Message -----
+From: "David G. Holm" <dholm@jsd-llc.com>
+To: <harbourtalk@matrixlist.com>
+Sent: Monday, April 30, 2001 5:53 PM
+Subject: Re: [HarbourTalk] What's this?
+
+
+> ** Reply to message from "Andrzej P. Wozniak" <alias@polnet.cc> on Sat,
+> 28 Apr 2001 11:21:21 +0200
+>
+> > It seems to be FALSE ALERT!
+>
+> It is not an alert in the first place, so it can't be a false alert. It
+> is actually a notice that the message was not delivered to the final
+> destination, because the ISP has a policy of not delivering any email
+> that has executable attachments. But the message is available from a
+> holding directory, in case the recipient wishes to risk virus
+> contamination by receiving the email anyway. I discovered this by using
+> copy and paste between the original message and
+> http://babelfish.altavista.com/ and selecting spanish to english.
+
+Thanks for clarification. Still it seems to be erroneous policy and source
+of misunderstandings.
+(I think, some stupid people clicking on everything should be fired long
+time ago :-)
+
+-- 
+Regards from the Harbour mirror in Poland
+Andrzej P. Wozniak
+alias@polnet.cc   harbour@harbour.pl.eu.org
+
+
+
+From harbourtalk@matrixlist.com  Fri May  4 06:22:03 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Fri, 4 May 2001 06:22:03 +0100
+Subject: [HarbourTalk] Re: Beating the Averages
+In-Reply-To: <10111626430.20010503130616@belacy.belgorod.su>; from alex@belacy.belgorod.su on Thu, May 03, 2001 at 01:06:16PM +0400
+References: <20010502145519.H16745@hagbard.davep.org> <10111626430.20010503130616@belacy.belgorod.su>
+Message-ID: <20010504062203.J16745@hagbard.davep.org>
+
+On Thu, May 03, 2001 at 01:06:16PM +0400, Alexander S.Kresin wrote:
+> On 02.05.2001 17:55, Dave Pearson <davep@davep.org> wrote:
+> 
+> DP> For me I found that the paper did a good job of explaining why I like
+> DP> Clipper (the language) and Lisp.
+> 
+>  I'd include Forth to this good company, too.
+
+Now there's a language I've been meaning to really get into for a long time.
+I dabbled with it many years ago but never got serious about it. Do you have
+any recommendations for a good book on the language?
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Fri May  4 15:40:27 2001
+From: harbourtalk@matrixlist.com (Alexander S.Kresin)
+Date: Fri, 4 May 2001 18:40:27 +0400
+Subject: [HarbourTalk] Re: Beating the Averages
+In-Reply-To: <20010504062203.J16745@hagbard.davep.org>
+References: <20010502145519.H16745@hagbard.davep.org>
+ <10111626430.20010503130616@belacy.belgorod.su>
+ <20010504062203.J16745@hagbard.davep.org>
+Message-ID: <152852615.20010504184027@belacy.belgorod.su>
+
+ On 04.05.2001 Dave Pearson <davep@davep.org> wrote:
+
+>>  I'd include Forth to this good company, too.
+
+DP> Now there's a language I've been meaning to really get into for a long time.
+DP> I dabbled with it many years ago but never got serious about it. Do you have
+DP> any recommendations for a good book on the language?
+
+ The only book which I have is 'Starting FORTH. An introduction to the
+ FORTH language and operating system for beginners and professionals' by
+ Leo Brodie and FORTH,INC. This is an excellent book, I read it with a
+ great pleasure.
+
+
+Best regards,
+ Alexander
+http://members.xoom.com/alkresin/
+
+
+
+From harbourtalk@matrixlist.com  Fri May  4 16:08:41 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Fri, 4 May 2001 16:08:41 +0100
+Subject: [HarbourTalk] Re: Beating the Averages
+In-Reply-To: <152852615.20010504184027@belacy.belgorod.su>; from alex@belacy.belgorod.su on Fri, May 04, 2001 at 06:40:27PM +0400
+References: <20010502145519.H16745@hagbard.davep.org> <10111626430.20010503130616@belacy.belgorod.su> <20010504062203.J16745@hagbard.davep.org> <152852615.20010504184027@belacy.belgorod.su>
+Message-ID: <20010504160841.H1231@hagbard.davep.org>
+
+On Fri, May 04, 2001 at 06:40:27PM +0400, Alexander S.Kresin wrote:
+
+>  The only book which I have is 'Starting FORTH. An introduction to the
+>  FORTH language and operating system for beginners and professionals' by
+>  Leo Brodie and FORTH,INC. This is an excellent book, I read it with a
+>  great pleasure.
+
+Thanks Alexander, I'll have a look out for this (sounds like a good one to
+add to my Amazon wishlist).
+
+Hey, hang on a moment, "operating system". Operating system? Really? There's
+a Forth operating system? At this point I'm reminded of the Jupiter Ace (you
+might recall that while other micro computers were bundling BASIC in ROM it
+came with FORTH, I really wish I'd gone for one of them at the time instead
+of saving up for a ZX81).
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Fri May  4 19:52:41 2001
+From: harbourtalk@matrixlist.com (Alexander S.Kresin)
+Date: Fri, 4 May 2001 22:52:41 +0400
+Subject: [HarbourTalk] Re: Beating the Averages
+In-Reply-To: <20010504160841.H1231@hagbard.davep.org>
+References: <20010502145519.H16745@hagbard.davep.org>
+ <10111626430.20010503130616@belacy.belgorod.su>
+ <20010504062203.J16745@hagbard.davep.org>
+ <152852615.20010504184027@belacy.belgorod.su>
+ <20010504160841.H1231@hagbard.davep.org>
+Message-ID: <14915946160.20010504225241@belacy.belgorod.su>
+
+On 04.05.2001 Dave Pearson <davep@davep.org> wrote:
+ 
+DP> Hey, hang on a moment, "operating system". Operating system? Really? There's
+DP> a Forth operating system? At this point I'm reminded of the Jupiter Ace (you
+DP> might recall that while other micro computers were bundling BASIC in ROM it
+DP> came with FORTH, I really wish I'd gone for one of them at the time instead
+DP> of saving up for a ZX81).
+
+ Yes, Forth really was used as operating system for microcomputers,
+ controllers, embedded systems. There was also Forth computers with
+ processors, designed specially for Forth.
+ The first ( and last ) time when I saw it and had a possibility to play
+ with it was special terminals for one of IBM 360/370 clones, these
+ terminals was based on 8086 processor and had some internal software.
+ Couple of years ago I downloaded some free Forth compiler, but hadn't
+ time yet to look at it.
+
+
+Best regards,
+ Alexander
+http://members.xoom.com/alkresin/
+
+
+
+From harbourtalk@matrixlist.com  Mon May  7 00:44:44 2001
+From: harbourtalk@matrixlist.com (harbourtalk@matrixlist.com)
+Date: Mon, 7 May 2001 09:44:44 +1000
+Subject: [HarbourTalk] ADS for Linux
+Message-ID: <OF43ADFD86.CD127CA1-ONCA256A44.00823E5B@cor.bmi.bunge.com.au>
+
+Sorry if this has already been posted:
+
+BOISE, Idaho?(May 1, 2001)?Extended Systems (Nasdaq: XTND), a leading
+provider of mobile data management and wireless connectivity solutions,=
+
+announced today that its Advantage Database Server will support the Lin=
+ux
+operating system. Beta version of Advantage Database Server for Linux i=
+s
+expected to be available in June 2001 with the full release scheduled t=
+o
+ship in August 2001.
+
+http://www.advantagedatabase.com/ADS/News+-+Events/PressDetail.htm?news=
+ID=3D20010501
+
+Sounds very interesting!
+
+Mabster=
+
+
+
+
+From harbourtalk@matrixlist.com  Mon May  7 07:16:10 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Mon, 7 May 2001 07:16:10 +0100
+Subject: [HarbourTalk] Re: Beating the Averages
+In-Reply-To: <14915946160.20010504225241@belacy.belgorod.su>; from alex@belacy.belgorod.su on Fri, May 04, 2001 at 10:52:41PM +0400
+References: <20010502145519.H16745@hagbard.davep.org> <10111626430.20010503130616@belacy.belgorod.su> <20010504062203.J16745@hagbard.davep.org> <152852615.20010504184027@belacy.belgorod.su> <20010504160841.H1231@hagbard.davep.org> <14915946160.20010504225241@belacy.belgorod.su>
+Message-ID: <20010507071610.L1231@hagbard.davep.org>
+
+On Fri, May 04, 2001 at 10:52:41PM +0400, Alexander S.Kresin wrote:
+> On 04.05.2001 Dave Pearson <davep@davep.org> wrote:
+>  
+> DP> Hey, hang on a moment, "operating system". Operating system? Really? There's
+> DP> a Forth operating system? At this point I'm reminded of the Jupiter Ace (you
+> DP> might recall that while other micro computers were bundling BASIC in ROM it
+> DP> came with FORTH, I really wish I'd gone for one of them at the time instead
+> DP> of saving up for a ZX81).
+> 
+>  Yes, Forth really was used as operating system for microcomputers,
+>  controllers, embedded systems. There was also Forth computers with
+>  processors, designed specially for Forth.
+
+Very cool. That reminds me of the Lisp machines like Symbolics and the TI
+Explorer. I take it these sorts of machines are very rare?
+
+>  Couple of years ago I downloaded some free Forth compiler, but hadn't
+>  time yet to look at it.
+
+I'm told that GNU Forth is highly respected and I've got a copy kicking
+around here waiting for me to find a good book and some spare time.
+
+-- 
+Dave Pearson:                   |     lbdb.el - LBDB interface.
+http://www.davep.org/           |  sawfish.el - Sawfish mode.
+Emacs:                          |  uptimes.el - Record emacs uptimes.
+http://www.davep.org/emacs/     | quickurl.el - Recall lists of URLs.
+
+From harbourtalk@matrixlist.com  Tue May  8 20:34:54 2001
+From: harbourtalk@matrixlist.com (David G. Holm)
+Date: Tue, 8 May 2001 15:34:54 -0400
+Subject: [HarbourTalk] Re: Beating the Averages
+In-Reply-To: <20010504160841.H1231@hagbard.davep.org>
+References: <20010502145519.H16745@hagbard.davep.org> <10111626430.20010503130616@belacy.belgorod.su>
+ <20010504062203.J16745@hagbard.davep.org> <152852615.20010504184027@belacy.belgorod.su>
+ <20010504160841.H1231@hagbard.davep.org>
+Message-ID: <200105081932.f48JWd528108@smtp.parrett.net>
+
+** Reply to message from Dave Pearson <davep@davep.org> on Fri, 4 May
+2001 16:08:41 +0100
+
+> There's a Forth operating system?
+
+Forth started out as a stand-alone operating environment, because it
+was written to run out of ROM on bare hardware. Later, Forth was adapted
+to run out of RAM on systems that already had an operating system
+installed.
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@matrixlist.com  Tue May  8 21:53:36 2001
+From: harbourtalk@matrixlist.com (Felipe Coury)
+Date: Tue, 8 May 2001 17:53:36 -0300
+Subject: [HarbourTalk] Going to United States
+Message-ID: <00d001c0d800$f410df80$3c01a8c0@creation>
+
+Hi,
+
+I am going to be in Redmond, WA in the period of May 11 ~ May 21 and would
+like to know if is there anybody from the Harbour Project that lives near
+the place in order to meet each other.
+
+And for those who are wondering yes, I will be at Microsoft Campus doing a
+ASP.Net course. I was chosen for this tech preview course among 25 other
+people in the world... I am very happy!
+
+Best regards,
+
+Felipe G. Coury
+Gerente de Desenvolvimento
+Creation Internet Business
+http://www.creation.com.br
+
+--------------------------------------------
+Visite o GuiaBrasil.Net:
+http://www.guiabrasil.net
+--------------------------------------------
+
+
+From harbourtalk@matrixlist.com  Tue May  8 22:03:10 2001
+From: harbourtalk@matrixlist.com (Brian Hays)
+Date: Tue, 8 May 2001 14:03:10 -0700
+Subject: [HarbourTalk] Going to United States
+References: <00d001c0d800$f410df80$3c01a8c0@creation>
+Message-ID: <006101c0d802$4a93fa80$2400a8c0@local>
+
+Well I'm on the right coast at least!  If you have any stopovers in Southern
+California there are a few of us here....
+Brian
+
+----- Original Message -----
+From: Felipe Coury <fcoury@creation.com.br>
+To: <harbourtalk@matrixlist.com>
+Sent: Tuesday, May 08, 2001 1:53 PM
+Subject: [HarbourTalk] Going to United States
+
+
+> Hi,
+>
+> I am going to be in Redmond, WA in the period of May 11 ~ May 21 and would
+> like to know if is there anybody from the Harbour Project that lives near
+> the place in order to meet each other.
+>
+> And for those who are wondering yes, I will be at Microsoft Campus doing a
+> ASP.Net course. I was chosen for this tech preview course among 25 other
+> people in the world... I am very happy!
+>
+> Best regards,
+>
+> Felipe G. Coury
+> Gerente de Desenvolvimento
+> Creation Internet Business
+> http://www.creation.com.br
+>
+> --------------------------------------------
+> Visite o GuiaBrasil.Net:
+> http://www.guiabrasil.net
+> --------------------------------------------
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>
+
+
+
+From harbourtalk@matrixlist.com  Wed May  9 08:09:30 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Wed, 9 May 2001 08:09:30 +0100
+Subject: [HarbourTalk] Going to United States
+In-Reply-To: <00d001c0d800$f410df80$3c01a8c0@creation>; from fcoury@creation.com.br on Tue, May 08, 2001 at 05:53:36PM -0300
+References: <00d001c0d800$f410df80$3c01a8c0@creation>
+Message-ID: <20010509080930.F1231@hagbard.davep.org>
+
+On Tue, May 08, 2001 at 05:53:36PM -0300, Felipe Coury wrote:
+
+> And for those who are wondering yes, I will be at Microsoft Campus doing a
+> ASP.Net course. I was chosen for this tech preview course among 25 other
+> people in the world... I am very happy!
+
+Sounds like someone's setting up a Microsoft a coven to me. ;>
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Wed May  9 08:08:06 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Wed, 9 May 2001 08:08:06 +0100
+Subject: [HarbourTalk] Re: Beating the Averages
+In-Reply-To: <200105081932.f48JWd528108@smtp.parrett.net>; from dholm@jsd-llc.com on Tue, May 08, 2001 at 03:34:54PM -0400
+References: <20010502145519.H16745@hagbard.davep.org> <10111626430.20010503130616@belacy.belgorod.su> <20010504062203.J16745@hagbard.davep.org> <152852615.20010504184027@belacy.belgorod.su> <20010504160841.H1231@hagbard.davep.org> <200105081932.f48JWd528108@smtp.parrett.net>
+Message-ID: <20010509080806.E1231@hagbard.davep.org>
+
+On Tue, May 08, 2001 at 03:34:54PM -0400, David G. Holm wrote:
+> ** Reply to message from Dave Pearson <davep@davep.org> on Fri, 4 May
+> 2001 16:08:41 +0100
+> 
+> > There's a Forth operating system?
+> 
+> Forth started out as a stand-alone operating environment, because it was
+> written to run out of ROM on bare hardware. Later, Forth was adapted to
+> run out of RAM on systems that already had an operating system installed.
+
+I'm aware of this (see my comment about the _Jupiter Ace_), I was wondering
+about an actual Forth operating system. That is, that there is an OS written
+in Forth and that can be extended using Forth (much like the Lisp Operating
+systems of the likes of Symbolics).
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Wed May  9 19:27:22 2001
+From: harbourtalk@matrixlist.com (David G. Holm)
+Date: Wed, 9 May 2001 14:27:22 -0400
+Subject: [HarbourTalk] Re: Beating the Averages
+In-Reply-To: <20010509080806.E1231@hagbard.davep.org>
+References: <20010502145519.H16745@hagbard.davep.org> <10111626430.20010503130616@belacy.belgorod.su>
+ <20010504062203.J16745@hagbard.davep.org> <152852615.20010504184027@belacy.belgorod.su>
+ <20010504160841.H1231@hagbard.davep.org> <200105081932.f48JWd528108@smtp.parrett.net>
+ <20010509080806.E1231@hagbard.davep.org>
+Message-ID: <200105091825.f49IPh503044@smtp.parrett.net>
+
+** Reply to message from Dave Pearson <davep@davep.org> on Wed, 9 May
+2001 08:08:06 +0100
+
+> I'm aware of this (see my comment about the _Jupiter Ace_), I was wondering
+> about an actual Forth operating system. That is, that there is an OS written
+> in Forth and that can be extended using Forth (much like the Lisp Operating
+> systems of the likes of Symbolics).
+
+I'm not aware of any. (But then again, the last time I was involved in
+using Forth was probably 1986.)
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@matrixlist.com  Wed May  9 19:34:15 2001
+From: harbourtalk@matrixlist.com (David G. Holm)
+Date: Wed, 9 May 2001 14:34:15 -0400
+Subject: [HarbourTalk] Re: Beating the Averages
+In-Reply-To: <20010507071610.L1231@hagbard.davep.org>
+References: <20010502145519.H16745@hagbard.davep.org> <10111626430.20010503130616@belacy.belgorod.su>
+ <20010504062203.J16745@hagbard.davep.org> <152852615.20010504184027@belacy.belgorod.su>
+ <20010504160841.H1231@hagbard.davep.org> <14915946160.20010504225241@belacy.belgorod.su>
+ <20010507071610.L1231@hagbard.davep.org>
+Message-ID: <200105091832.f49IWZ503782@smtp.parrett.net>
+
+** Reply to message from Dave Pearson <davep@davep.org> on Mon, 7 May
+2001 07:16:10 +0100
+
+> I'm told that GNU Forth is highly respected and I've got a copy kicking
+> around here waiting for me to find a good book and some spare time.
+
+I liked Fifth myself. It claimed to be "One better than Forth", was
+targeted at IBM PCs and clones running DOS, gave you a runtime
+environment in which to work, and made saving and restoring programs
+much easier than Forth did.
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@matrixlist.com  Sun May 13 00:27:58 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Sat, 12 May 2001 20:27:58 -0300
+Subject: [HarbourTalk] =?iso-8859-1?Q?Hd=B4s__which_one_is_the_best?=
+Message-ID: <000901c0db3b$6d470c20$f2dad7c8@luizguim>
+
+Dear Friends
+
+I need you comments here.
+
+I know that the Quantum HD´s are the best ones, but i´d like to know from
+the other HD´s manufaturater
+
+As i search, an 40GB Quantum HD is about US$ 169,00
+while an 40GB Maxtor HD is US$ 139,00
+
+Regards
+
+Luiz Rafael  Culik
+
+
+From harbourtalk@matrixlist.com  Sun May 13 05:00:35 2001
+From: harbourtalk@matrixlist.com (Phil Barnett)
+Date: Sun, 13 May 2001 00:00:35 -0400
+Subject: [HarbourTalk] =?ISO-8859-1?Q?Re:_[HarbourTalk]_Hd=B4s__which_one_is_the_best?=
+In-Reply-To: <000901c0db3b$6d470c20$f2dad7c8@luizguim>
+Message-ID: <3AFDCEA3.24716.95675F77@localhost>
+
+On 12 May 2001, at 20:27, Luiz Rafael Culik Guimaraes wrote:
+
+> Dear Friends
+> 
+> I need you comments here.
+> 
+> I know that the Quantum HD=B4s are the best ones, but i=B4d like to know=
+ from
+> the other HD=B4s manufaturater
+> 
+> As i search, an 40GB Quantum HD is about US$ 169,00
+> while an 40GB Maxtor HD is US$ 139,00
+
+I use only Maxtor's. They work great.
+
+I've had terrible luck with Quantums.
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@matrixlist.com  Sun May 13 13:17:20 2001
+From: harbourtalk@matrixlist.com (Vlademiro Landim Junior)
+Date: Sun, 13 May 2001 09:17:20 -0300
+Subject: [HarbourTalk] Dicas sobre site
+References: <000901c0db3b$6d470c20$f2dad7c8@luizguim>
+Message-ID: <001e01c0dba6$aa7014a0$40b8fdc8@baydenet.com.br>
+
+Estou desenvolvendo dois sites em harbour, o primeiro em www.sucesuce.com.br
+(Para a Sucesu aqui do Ceará-Brasil) e outro um projeto pessoal
+(www.meuceara.com.br). Esta ficando legal e gostaria de obter dicas sobre
+acesso a banco de dados (mysql, oracle, interbase, etc.).  Tambem gostaria
+de obter contato com pessoas de lingua portuguesa para troca de
+experiencias. Se alguem ai entendeu essa mensagem por favor me responda pois
+a minha experiencia tem se mostrado produtiva.
+
+
+From harbourtalk@matrixlist.com  Sun May 13 13:23:16 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Sun, 13 May 2001 09:23:16 -0300
+Subject: [HarbourTalk] Dicas sobre site
+References: <000901c0db3b$6d470c20$f2dad7c8@luizguim> <001e01c0dba6$aa7014a0$40b8fdc8@baydenet.com.br>
+Message-ID: <001a01c0dba8$131c8a00$19dad7c8@luizguim>
+
+Prezado Amigo,
+
+
+
+> Estou desenvolvendo dois sites em harbour, o primeiro em
+www.sucesuce.com.br
+> (Para a Sucesu aqui do Ceará-Brasil) e outro um projeto pessoal
+> (www.meuceara.com.br). Esta ficando legal e gostaria de obter dicas sobre
+> acesso a banco de dados (mysql, oracle, interbase, etc.).  Tambem gostaria
+> de obter contato com pessoas de lingua portuguesa para troca de
+> experiencias. Se alguem ai entendeu essa mensagem por favor me responda
+pois
+> a minha experiencia tem se mostrado produtiva.
+O harbour pode accessar normalmente arquivos dbf. voce pode usar odbc para
+acesso a esses formatos , ou baixar as fontes de contribuicao de dar uma
+olhada nos diretorios mysql e odbc.
+
+Vou dar um olhada no seu site. Por outro lado, voce esta usando a htmllib
+que esta disponivel no site do harbour
+
+Atenciosamente
+
+Luiz Rafael Culik
+
+
+From harbourtalk@matrixlist.com  Mon May 14 04:33:17 2001
+From: harbourtalk@matrixlist.com (Robert Haley)
+Date: Sun, 13 May 2001 23:33:17 -0400
+Subject: [HarbourTalk] =?iso-8859-1?Q?=5BHarbourTalk=5D_Hd=B4s_which_one_is_the_best_?=
+Message-ID: <000701c0dc26$9e5655a0$5d3b99d0@thinkpad390x>
+
+Greetings Luiz,
+
+>I know that the Quantum HD´s are the best ones, but i´d like to know from
+>the other HD´s manufaturater
+>As i search, an 40GB Quantum HD is about US$ 169,00
+>while an 40GB Maxtor HD is US$ 139,00
+
+The Maxtor DiamondMax Plus 40 (ATA/100) series are a great value for the
+money.  It is a quiet, *fast* drive, (7,200) rotational speed is a plus, the
+drive handles Peer Networking, Video streaming, burning to CDR, etc. without
+a problem.
+
+(The DiamondMax Plus 20 (ATA/66) is also an excellent choice, if you find
+one available.)
+
+I hope the info. helps.
+
+Regards,
+Bob
+
+
+
+From harbourtalk@matrixlist.com  Mon May 14 11:56:51 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Mon, 14 May 2001 07:56:51 -0300
+Subject: [HarbourTalk] =?iso-8859-1?Q?Re:_=5BHarbourTalk=5D_=5BHarbourTalk=5D_Hd=B4s_which_o?=
+ =?iso-8859-1?Q?ne_is_the_best_?=
+References: <000701c0dc26$9e5655a0$5d3b99d0@thinkpad390x>
+Message-ID: <002401c0dc65$60f747c0$93dad7c8@luizguim>
+
+Dear Friend
+
+
+> Greetings Luiz,
+>
+> The Maxtor DiamondMax Plus 40 (ATA/100) series are a great value for the
+> money.  It is a quiet, *fast* drive, (7,200) rotational speed is a plus,
+the
+> drive handles Peer Networking, Video streaming, burning to CDR, etc.
+without
+> a problem.
+Do you know , what is the average price for this model
+
+Regards
+
+Luiz Rafael Culik
+
+
+From harbourtalk@matrixlist.com  Mon May 14 16:32:18 2001
+From: harbourtalk@matrixlist.com (Robert Haley)
+Date: Mon, 14 May 2001 11:32:18 -0400
+Subject: [HarbourTalk] =?iso-8859-1?Q?Re:_=5BHarbourTalk=5D_=5BHarbourTalk=5D_Hd=B4s_which_o?=
+ =?iso-8859-1?Q?ne_is_the_best_?=
+Message-ID: <000701c0dc8b$105a6ba0$4e3b99d0@thinkpad390x>
+
+Luiz,
+
+>Do you know , what is the average price for this model
+
+http://www.pricewatch.com/
+
+Enter "DiamondMax Plus" (without quotes) in the [Enter Keywords] Search @
+top of the page,
+
+For the (40)gb model looks to be about ( $ 135.00 ) US dollars, www
+discounted, not including shipping/handling.
+
+For retail (store purchase) add $15-$20 dollars (US) to above amount
+(typical retail markup), if you find it locally for less I would consider
+that a good price.
+
+Regards,
+Bob
+
+
+From harbourtalk@matrixlist.com  Mon May 14 17:50:42 2001
+From: harbourtalk@matrixlist.com (David G. Holm)
+Date: Mon, 14 May 2001 12:50:42 -0400
+Subject: [HarbourTalk] =?ISO-8859-1?Q?Hd=b4s__which_one_is_the_best?=
+In-Reply-To: <000901c0db3b$6d470c20$f2dad7c8@luizguim>
+References: <000901c0db3b$6d470c20$f2dad7c8@luizguim>
+Message-ID: <200105141648.f4EGmqj30126@smtp.parrett.net>
+
+** Reply to message from "Luiz Rafael Culik Guimaraes"
+<culik@nh.conex.com.br> on Sat, 12 May 2001 20:27:58 -0300
+
+> I know that the Quantum HD=B4s are the best ones, but i=B4d like to know f=
+rom
+> the other HD=B4s manufaturater
+
+Per http://www.neoseeker.com/Products/best_of.html?sid=3D64 the best hard
+drive currently available is the Seagate Barracuda ATA II. Slots 9 to 10
+(out of 25) are occupied by four Quantum drives, a couple of Seagates, a
+Western Digital, a Maxtor, and an IBM.
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@matrixlist.com  Tue May 15 19:08:02 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 15 May 2001 19:08:02 +0100
+Subject: [HarbourTalk] Proper compatability is such a wonderful thing
+Message-ID: <20010515190802.M7900@hagbard.davep.org>
+
+I've just made a post to comp.lang.clipper regarding custom get readers and,
+as part of the example code (see below), there was a simple use of the
+Clipper pre-processor to provide a command that made for easy use of the
+custom get reader. Exactly this sort of pre-processor trick totally defeated
+the pre-preprocessor of a another Clipper clone that shall remain nameless
+but suffice to say that it was Clipper 5.2 compatible and was capable of
+producing GNU/Linux binaries.
+
+Not only did this sort of code defeat its pre-processor but a long battle
+with their tech support guys followed before I could get a reason out of
+them as to why it wouldn't work ("our pre-processor isn't really compatible
+with the one in CA-Clipper").
+
+The test code in question is this:
+
+-- cut here ----------------------------------------------------------------
+#include "inkey.ch"
+#include "getexit.ch"
+
+#xcommand @ <nRow>,<nCol> Get Read Only [<Stuff,...>] ;
+          =>                                          ;
+          @ <nRow>,<nCol> Get [<Stuff>]               ;
+            Send reader := {|o| ReadOnlyReader( o ) }
+
+Function Main()
+Local GetList   := {}
+Local cCanEdit1 := space( 20 )
+Local cReadOnly := padr( "This is read-only", 20 )
+Local cCanEdit2 := space( 20 )
+
+   Cls
+
+   @ 10, 10 Say "Can Edit 1:" Get cCanEdit1
+   @ 11, 10 Say " Read Only:" Get Read Only cReadOnly
+   @ 12, 10 Say "Can Edit 2:" Get cCanEdit2
+   Read
+
+Return( NIL )
+
+Function ReadOnlyReader( oGet )
+Local aMoveKeys := { K_UP, K_DOWN }
+Local nKey
+
+   If GetPreValidate( oGet )
+
+      oGet:setFocus()
+
+      Do While oGet:exitState == GE_NOEXIT
+
+         If ascan( aMoveKeys, nKey := inkey( 0 ) ) != 0
+            GetApplyKey( oGet, nKey )
+         EndIf
+
+      EndDo
+
+      oGet:killFocus()
+
+   EndIf
+
+Return( NIL )
+-- cut here ----------------------------------------------------------------
+
+The point of this email? I did a quick compile with harbour and it built and
+ran like a charm. No fuss, no hassle, it just worked. Had it failed I know I
+could have posted the problem to the developer's mailing list and the bug
+would have been looked at as a bug and not as an email from one of those
+pesky users who always want the bloody thing to actually *work* ($DEITY
+forbid that we should actually have to deliver on promises or expectations,
+think of the state of the industry if that started happening).
+
+Am I surprised that harbour "just worked"? No. I'm a chuffed that it "just
+worked". You bet.
+
+As a matter of interest, does anyone out there have Xbase++ to hand? How
+does it cope with the above code?
+
+-- 
+Dave Pearson                        |  OSLib - Timeslice release functions.
+http://www.davep.org/               |     eg - Norton Guide reader for Linux.
+http://www.davep.org/clipper/       |    weg - Norton Guide reader for Windows.
+http://www.davep.org/norton-guides/ | dgscan - DGROUP scanner for Clipper.
+
+From harbourtalk@matrixlist.com  Wed May 16 01:20:40 2001
+From: harbourtalk@matrixlist.com (Robert Haley)
+Date: Tue, 15 May 2001 20:20:40 -0400
+Subject: [HarbourTalk] re: Proper compatability is such a wonderful thing
+Message-ID: <000701c0dd9e$0a677ee0$9e7161ce@thinkpad390x>
+
+>As a matter of interest, does anyone out there have Xbase++ to hand? How
+does it cope with the above code?
+
+Greetings Dave,
+
+It worked as intended, no problems compiling or running the supplied code,
+using Xbase++ 1.3 .
+
+Regards,
+Bob
+
+
+From harbourtalk@matrixlist.com  Wed May 16 07:19:48 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Wed, 16 May 2001 07:19:48 +0100
+Subject: [HarbourTalk] re: Proper compatability is such a wonderful thing
+In-Reply-To: <000701c0dd9e$0a677ee0$9e7161ce@thinkpad390x>; from rhaley@cheshire.net on Tue, May 15, 2001 at 08:20:40PM -0400
+References: <000701c0dd9e$0a677ee0$9e7161ce@thinkpad390x>
+Message-ID: <20010516071948.O7900@hagbard.davep.org>
+
+On Tue, May 15, 2001 at 08:20:40PM -0400, Robert Haley wrote:
+
+> >As a matter of interest, does anyone out there have Xbase++ to hand? How
+> >does it cope with the above code?
+> 
+> It worked as intended, no problems compiling or running the supplied code,
+> using Xbase++ 1.3 .
+
+Thanks for testing that Bob.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Thu May 17 12:39:42 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Thu, 17 May 2001 08:39:42 -0300
+Subject: [HarbourTalk] Need help from MSVC  users
+Message-ID: <000901c0dec6$5ecc1da0$a1d4d7c8@luizguim>
+
+Dear Friend
+
+I need some help of the mscv users
+
+What is the values for the follow constans. since is not declared in Bcc33
+_O_SHORT_LIVED
+_O_TEMPORARY
+O_RANDOM
+_O_SEQUENTIAL
+
+Regards
+
+Luiz Rafael Culik
+
+
+From harbourtalk@matrixlist.com  Thu May 17 18:24:21 2001
+From: harbourtalk@matrixlist.com (=?iso-8859-1?Q?Gustavo_A._Gonz=E1lez_M.?=)
+Date: Thu, 17 May 2001 13:24:21 -0400
+Subject: [HarbourTalk] Help with DLL
+Message-ID: <000b01c0def6$67aebd80$4b492cc8@gustavo>
+
+Hi All.
+
+I have an old old program writted in c (have all the source) that create an
+.exe (normally).
+
+I can change it to be embedded inside a DLL and after call it from a Clipper
+program.. well more expecificaly, an Clipper+FW program !
+
+I am learning with the examples, and can call a function writted in C inside
+a DLL from Clipper, work Ok, but i try to do a printf() and dont work ?
+
+Apart from rename the main() function to be called from Clipper, is
+necessary other adjust ?
+
+Regards
+--
+Gustavo A. González M.
+gonzalezgustavo@cantv.net
+Caracas - Venezuela
+
+
+From harbourtalk@matrixlist.com  Fri May 18 00:13:29 2001
+From: harbourtalk@matrixlist.com (Paul Tucker)
+Date: Thu, 17 May 2001 19:13:29 -0400
+Subject: [HarbourTalk] Need help from MSVC  users
+References: <000901c0dec6$5ecc1da0$a1d4d7c8@luizguim>
+Message-ID: <004f01c0df26$fcd5df80$b6122a0a@chasechevy>
+
+Luiz,
+
+_O_RANDOM  0x0010  // access is mostly random
+_O_SEQUENTIAL  0x0020  // acciss is mostly sequential
+_O_TEMPORARY  0x0040  // a temporary file
+_O_SHORT_LIVED  0x1000  // system will not write to disk if not needed
+
+
+----- Original Message -----
+From: "Luiz Rafael Culik Guimaraes" <culik@nh.conex.com.br>
+To: <HarbourTalk@matrixlist.com>
+Sent: Thursday, May 17, 2001 7:39 AM
+Subject: [HarbourTalk] Need help from MSVC users
+
+
+> Dear Friend
+>
+> I need some help of the mscv users
+>
+> What is the values for the follow constans. since is not declared in Bcc33
+> _O_SHORT_LIVED
+> _O_TEMPORARY
+> O_RANDOM
+> _O_SEQUENTIAL
+>
+> Regards
+>
+> Luiz Rafael Culik
+
+
+
+From harbourtalk@matrixlist.com  Fri May 18 01:16:42 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Thu, 17 May 2001 21:16:42 -0300
+Subject: [HarbourTalk] Need help from MSVC  users
+References: <000901c0dec6$5ecc1da0$a1d4d7c8@luizguim> <004f01c0df26$fcd5df80$b6122a0a@chasechevy>
+Message-ID: <000201c0df84$aeecb740$97d4d7c8@luizguim>
+
+Paul
+
+
+
+> Luiz,
+> 
+> _O_RANDOM  0x0010  // access is mostly random
+> _O_SEQUENTIAL  0x0020  // acciss is mostly sequential
+> _O_TEMPORARY  0x0040  // a temporary file
+> _O_SHORT_LIVED  0x1000  // system will not write to disk if not needed
+> 
+
+Thanks
+
+Regards
+
+Luiz Rafael Culik
+
+
+From harbourtalk@matrixlist.com  Fri May 18 18:05:45 2001
+From: harbourtalk@matrixlist.com (David G. Holm)
+Date: Fri, 18 May 2001 13:05:45 -0400
+Subject: [HarbourTalk] Palm and Extended Systems Merger Off!
+Message-ID: <200105181704.f4IH4GO14215@smtp.parrett.net>
+
+Palm and Extended Systems have called off their merger, but will
+continue to collaborate as separate companies, according to a press
+release issued by Extended Systems today. You can see the full press
+release at http://www.extendedsystems.com/
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@matrixlist.com  Fri May 18 19:38:00 2001
+From: harbourtalk@matrixlist.com (Patrick Mast)
+Date: Fri, 18 May 2001 20:38:00 +0200
+Subject: [HarbourTalk] Palm and Extended Systems Merger Off!
+In-Reply-To: <200105181704.f4IH4GO14215@smtp.parrett.net>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIKEILGDAA.harbour@winfakt.com>
+
+David,
+
+> Palm and Extended Systems have called off their merger, but will
+> continue to collaborate as separate companies, according to a press
+> release issued by Extended Systems today. You can see the full press
+> release at http://www.extendedsystems.com/
+When the merger was announced they all said that it was good news.
+So, ius this bad news than?
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+From harbourtalk@matrixlist.com  Fri May 18 20:13:24 2001
+From: harbourtalk@matrixlist.com (David G. Holm)
+Date: Fri, 18 May 2001 15:13:24 -0400
+Subject: [HarbourTalk] Palm and Extended Systems Merger Off!
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIKEILGDAA.harbour@winfakt.com>
+References: <200105181704.f4IH4GO14215@smtp.parrett.net> <NCBBJKNMIDPJNLJCHCHIKEILGDAA.harbour@winfakt.com>
+Message-ID: <200105181911.f4IJBsO27255@smtp.parrett.net>
+
+** Reply to message from "Patrick Mast" <harbour@winfakt.com> on Fri,
+18 May 2001 20:38:00 +0200
+
+> When the merger was announced they all said that it was good news.
+> So, ius this bad news than?
+
+No, I don't think it's bad news. I think it just means that Extended
+Systems will continue to develop Advantage at the same pace as before
+the merger talks, whereas if the merger conditions had remained
+favorable and the merger had gone through, then I think that they would
+have been able to develop at a more aggressive pace.
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@matrixlist.com  Sun May 20 21:18:52 2001
+From: harbourtalk@matrixlist.com (Patrick Mast)
+Date: Sun, 20 May 2001 22:18:52 +0200
+Subject: [HarbourTalk] New wfBackup available
+In-Reply-To: <200105181911.f4IJBsO27255@smtp.parrett.net>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIOEJOGDAA.harbour@winfakt.com>
+
+Hi,
+
+A a new version of wfBackup is available at
+http://www.FiveWin.be.kz
+
+wfBackup is a backup programme written with the Harbour compiler
+and "FiveWin for Harbour". Source code is available for registered users.
+See the wfBackup webpage for details.
+
+Thank you:
+Luiz for HBZLib!
+Antonio and FiveTech for FiveWin for Harbour!
+Felipe for some great wfBackup skins!
+The Harbour Crew for The Harbour Compiler! THANK YOU!
+
+Regards,
+
+Patrick Mast
+http://www.Patrick.Be.kz
+http://www.FiveWin.Be.kz
+http://www.Harbour-Project.org
+
+From harbourtalk@matrixlist.com  Mon May 21 00:07:21 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Sun, 20 May 2001 20:07:21 -0300
+Subject: [HarbourTalk] New wfBackup available
+References: <NCBBJKNMIDPJNLJCHCHIOEJOGDAA.harbour@winfakt.com>
+Message-ID: <000d01c0e182$44043b60$e1d4d7c8@luizguim>
+
+Patrick
+
+> A a new version of wfBackup is available at
+> http://www.FiveWin.be.kz
+
+I has downloaded the last version, and it dont work.
+
+Also i was giving an look on the wfbackup.ini  , and you are setting both
+path and drive on.
+Store pathnames in ZIP=Yes
+Store WHOLE path in ZIP=Yes
+
+If the whole path is set to true, it save both path and drive letter to the
+zip file.
+the store pathname in zip should only be enable , if the whole path is off
+
+Also. and dumb question.
+Why you distribute hbzlib.dll since you are linking the static
+library(ziparchive.lib)
+(ziparchive1.lib for use hbzlib.dll)
+
+Regards
+
+Luiz Rafael Culik
+
+
+
+From harbourtalk@matrixlist.com  Mon May 21 07:57:15 2001
+From: harbourtalk@matrixlist.com (Patrick Mast)
+Date: Mon, 21 May 2001 08:57:15 +0200
+Subject: [HarbourTalk] New wfBackup available
+In-Reply-To: <000d01c0e182$44043b60$e1d4d7c8@luizguim>
+Message-ID: <NCBBJKNMIDPJNLJCHCHICEKCGDAA.harbour@winfakt.com>
+
+Luiz,
+
+> > A a new version of wfBackup is available at
+> > http://www.FiveWin.be.kz
+> I has downloaded the last version, and it dont work.
+What exactly does not work?
+
+> Also i was giving an look on the wfbackup.ini  , and you are setting both
+> path and drive on.
+> Store pathnames in ZIP=Yes
+> Store WHOLE path in ZIP=Yes
+> If the whole path is set to true, it save both path and drive
+> letter to the zip file.
+> the store pathname in zip should only be enable , if the whole path is off
+I know. In the source code, if "Store WHOLE path in ZIP" is set to YES, the
+entry "Store path in ZIP" is automaticly set to FALSE.
+
+> Also. and dumb question.
+> Why you distribute hbzlib.dll since you are linking the static
+> library(ziparchive.lib)
+> (ziparchive1.lib for use hbzlib.dll)
+Let me check it... ;-)
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+
+From harbourtalk@matrixlist.com  Mon May 21 12:16:30 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Mon, 21 May 2001 08:16:30 -0300
+Subject: [HarbourTalk] New wfBackup available
+References: <NCBBJKNMIDPJNLJCHCHICEKCGDAA.harbour@winfakt.com>
+Message-ID: <002701c0e1e9$c69a3b80$06d4d7c8@luizguim>
+
+Patrick
+
+
+> Luiz,
+>
+> What exactly does not work?
+For me , i recieve an GPF on the follow
+Directory(0)
+Main(329)
+
+> I know. In the source code, if "Store WHOLE path in ZIP" is set to YES,
+the
+> entry "Store path in ZIP" is automaticly set to FALSE.
+ok
+> > Also. and dumb question.
+> > Why you distribute hbzlib.dll since you are linking the static
+> > library(ziparchive.lib)
+> > (ziparchive1.lib for use hbzlib.dll)
+> Let me check it... ;-)
+Ok
+
+Regards
+
+Luiz Rafael Culik
+
+
+From harbourtalk@matrixlist.com  Mon May 21 14:22:04 2001
+From: harbourtalk@matrixlist.com (Patrick Mast)
+Date: Mon, 21 May 2001 15:22:04 +0200
+Subject: [HarbourTalk] New wfBackup available
+In-Reply-To: <002701c0e1e9$c69a3b80$06d4d7c8@luizguim>
+Message-ID: <NCBBJKNMIDPJNLJCHCHICEKKGDAA.harbour@winfakt.com>
+
+Luiz,
+
+Maybe you want to add MANY files to the zip?
+What are your wfBackup.ini settings?
+
+Patrick
+
+> -----Oorspronkelijk bericht-----
+> Van: harbourtalk-admin@matrixlist.com
+> [mailto:harbourtalk-admin@matrixlist.com]Namens Luiz Rafael Culik
+> Guimaraes
+> Verzonden: maandag 21 mei 2001 13:17
+> Aan: harbourtalk@matrixlist.com
+> Onderwerp: Re: [HarbourTalk] New wfBackup available
+> 
+> 
+> Patrick
+> 
+> 
+> > Luiz,
+> >
+> > What exactly does not work?
+> For me , i recieve an GPF on the follow
+> Directory(0)
+> Main(329)
+> 
+> > I know. In the source code, if "Store WHOLE path in ZIP" is set to YES,
+> the
+> > entry "Store path in ZIP" is automaticly set to FALSE.
+> ok
+> > > Also. and dumb question.
+> > > Why you distribute hbzlib.dll since you are linking the static
+> > > library(ziparchive.lib)
+> > > (ziparchive1.lib for use hbzlib.dll)
+> > Let me check it... ;-)
+> Ok
+> 
+> Regards
+> 
+> Luiz Rafael Culik
+> 
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+> 
+
+From harbourtalk@matrixlist.com  Mon May 21 14:27:04 2001
+From: harbourtalk@matrixlist.com (Patrick Mast)
+Date: Mon, 21 May 2001 15:27:04 +0200
+Subject: [HarbourTalk] New wfBackup available
+In-Reply-To: <002701c0e1e9$c69a3b80$06d4d7c8@luizguim>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIIEKKGDAA.harbour@winfakt.com>
+
+Luiz,
+
+> > What exactly does not work?
+> For me , i recieve an GPF on the follow
+> Directory(0)
+> Main(329)
+
+This is line 329:
+aTmp:=Directory(cFrom+"*.*","D"+If(lHiddenFiles,"H",""))
+
+So the GPF occurs in the Directory() function.
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+From harbourtalk@matrixlist.com  Mon May 21 23:41:42 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Mon, 21 May 2001 19:41:42 -0300
+Subject: [HarbourTalk] New wfBackup available
+References: <NCBBJKNMIDPJNLJCHCHICEKKGDAA.harbour@winfakt.com>
+Message-ID: <001401c0e247$540f0600$f2d4d7c8@luizguim>
+
+Patrick
+
+
+> Luiz,
+> 
+> Maybe you want to add MANY files to the zip?
+> What are your wfBackup.ini settings?
+The default one that is instaled with no changes
+
+Regards
+
+Luiz Rafael Culik
+
+
+
+
+From harbourtalk@matrixlist.com  Tue May 22 19:28:02 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 22 May 2001 19:28:02 +0100
+Subject: [HarbourTalk] Can anyone translate the attached?
+Message-ID: <20010522192802.B21127@hagbard.davep.org>
+
+--pf9I7BMVVzbSWLtt
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+>From what I can tell the language of the attached email is Spanish.
+Babelfish <URL:http://babelfish.altavista.com/> comes up with this:
+
+,----
+| Friend programmer, I am programmer of clipper and desire to receive
+| informacin and orientacin. Story with a system of inventories and not as
+| to implement the handling of im presin of cdigo of bars they podrian to me
+| to orient where to find algn example or lib rera. Or bin if you can
+| suggest algn software. Agradecera much if you answered to me,
+`----
+
+but that leaves me none the wiser. I think I can tell from the above that it
+isn't an item of Spanish UCE so I thought it best to see if someone could
+give me a clue as to how I might reply to the author.
+
+Thanks in advance.
+
+-- 
+Dave Pearson
+http://www.davep.org/
+
+--pf9I7BMVVzbSWLtt
+Content-Type: message/rfc822
+Content-Disposition: inline
+
+Return-Path: <aacc701012@latinmail.com>
+Received: from punt-11.mail.demon.net (punt-11.mail.demon.net [194.217.242.34])
+	by hagbard.davep.org (8.9.3/8.9.3) with SMTP id TAA27871
+	for <davep@hagbard.demon.co.uk>; Tue, 22 May 2001 19:20:56 +0100
+Received: from punt-1.mail.demon.net by mailstore for davep@hagbard.demon.co.uk
+          id 990553461:10:04467:4; Tue, 22 May 2001 17:44:21 GMT
+Received: from haybaler.sackheads.org ([209.133.38.16]) by punt-1.mail.demon.net
+           id aa1003599; 22 May 2001 17:43 GMT
+Received: from web1363.dn.net (unknown [216.167.63.81])
+	by haybaler.sackheads.org (Postfix) with ESMTP id 8E3803803
+	for <davep@davep.org>; Tue, 22 May 2001 10:43:29 -0700 (PDT)
+Received: from latinmail.com [216.167.63.56] by web1363.dn.net
+  (SMTPD32-6.00) id A53D35D011C; Tue, 22 May 2001 13:43:25 -0400
+To: davep@davep.org
+From: CARLOS ALVAREZ <aacc701012@LatinMail.com>
+Date: Tue, 22 May 2001 13:43:28 -0400
+Subject: Solicitud de informacin cdigo de barras
+X-Mailer: LatinMail v3.0 -- http://www.latinmail.com
+Message-Id: <200105221343321.SM00155@latinmail.com>
+
+Culiacn, Sinaloa. Mxico. Mayo 22 del 2001.
+
+
+Amigo programador,
+
+
+Soy programador de clipper y deseo recibir informacin y orientacin.
+
+Cuento con un sistema de inventarios y no se como implementar el manejo de la impresin de cdigo de barras me podrian orientar donde encontrar algn ejemplo o librera.
+
+O bin si puedes sugerir algn software.
+
+
+Agradecera mucho si me contestaras,
+
+
+
+Gracias.
+
+
+
+Atentamente
+
+
+________________
+Carlos Alvarez
+Programador
+
+
+
+_________________________________________________________
+http://www.latinmail.com.  Gratuito, latino y en espaol.
+
+--pf9I7BMVVzbSWLtt--
+
+From harbourtalk@matrixlist.com  Tue May 22 19:54:03 2001
+From: harbourtalk@matrixlist.com (harbourtalk@matrixlist.com)
+Date: Tue, 22 May 2001 14:54:03 -0400
+Subject: [HarbourTalk] Can anyone translate the attached?
+In-Reply-To: <20010522192802.B21127@hagbard.davep.org>
+Message-ID: <3B0A7D8B.24744.3864E1F4@localhost>
+
+On 22 May 2001, at 19:28, Dave Pearson wrote:
+
+> From what I can tell the language of the attached email is Spanish.
+> Babelfish <URL:http://babelfish.altavista.com/> comes up with this:
+> 
+> ,----
+> | Friend programmer, I am programmer of clipper and desire to receive
+> | informacin and orientacin. Story with a system of inventories and not as
+> | to implement the handling of im presin of cdigo of bars they podrian to me
+> | to orient where to find algn example or lib rera. Or bin if you can
+> | suggest algn software. Agradecera much if you answered to me,
+> `----
+> 
+> but that leaves me none the wiser. I think I can tell from the above that it
+> isn't an item of Spanish UCE so I thought it best to see if someone could
+> give me a clue as to how I might reply to the author.
+
+I'd hazard a guess that he's looking for (in preferred order)
+
+1: barcode algorithms.
+2: barcode libraries
+3: binary barcode utilities.
+
+
+From harbourtalk@matrixlist.com  Tue May 22 21:19:15 2001
+From: harbourtalk@matrixlist.com (=?iso-8859-1?Q?Horacio_Rold=E1n?=)
+Date: Tue, 22 May 2001 17:19:15 -0300
+Subject: [HarbourTalk] Can anyone translate the attached?
+References: <20010522192802.B21127@hagbard.davep.org>
+Message-ID: <004601c0e2fc$79c910b0$f004a8c0@ksoft20000507>
+
+Dave, here is  my best. The translation of Babelfish is quite impresive but
+it gets messed with some errors in the writing and the missing of accented
+chars. (is it possible that your PC erased them?)
+Horacio
+
+------
+Sinaloa. México. May 22, 2001.
+Friend programmer,
+I am a Clipper's programmer and desire to receive information and
+orientation.
+I have an inventory system (or I should say stock system?) and I don't know
+how to implement the handling of the bar-code printing.
+Could you tell me where to find some example or library?
+Or suggest some software?
+I'll appreciate very much if you anwser me.
+________________
+Carlos Alvarez
+Programador
+---
+
+----- Original Message -----
+From: "Dave Pearson" <davep@davep.org>
+To: "Harbour Waffle" <harbourtalk@lists.harbour-project.org>
+Sent: Tuesday, May 22, 2001 3:28 PM
+Subject: [HarbourTalk] Can anyone translate the attached?
+
+
+> From what I can tell the language of the attached email is Spanish.
+> Babelfish <URL:http://babelfish.altavista.com/> comes up with this:
+>
+> ,----
+> | Friend programmer, I am programmer of clipper and desire to receive
+> | informacin and orientacin. Story with a system of inventories and not as
+> | to implement the handling of im presin of cdigo of bars they podrian to
+me
+> | to orient where to find algn example or lib rera. Or bin if you can
+> | suggest algn software. Agradecera much if you answered to me,
+> `----
+>
+> but that leaves me none the wiser. I think I can tell from the above that
+it
+> isn't an item of Spanish UCE so I thought it best to see if someone could
+> give me a clue as to how I might reply to the author.
+>
+> Thanks in advance.
+>
+> --
+> Dave Pearson
+> http://www.davep.org/
+>
+
+
+From harbourtalk@matrixlist.com  Wed May 23 07:29:50 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Wed, 23 May 2001 07:29:50 +0100
+Subject: [HarbourTalk] Can anyone translate the attached?
+In-Reply-To: <3B0A7D8B.24744.3864E1F4@localhost>; from midnight@the-oasis.net on Tue, May 22, 2001 at 02:54:03PM -0400
+References: <20010522192802.B21127@hagbard.davep.org> <004601c0e2fc$79c910b0$f004a8c0@ksoft20000507> <20010522192802.B21127@hagbard.davep.org> <3B0A7D8B.24744.3864E1F4@localhost>
+Message-ID: <20010523072950.D21127@hagbard.davep.org>
+
+On Tue, May 22, 2001 at 02:54:03PM -0400, midnight@the-oasis.net wrote:
+> On 22 May 2001, at 19:28, Dave Pearson wrote:
+>=20
+> I'd hazard a guess that he's looking for (in preferred order)
+>=20
+> 1: barcode algorithms.
+> 2: barcode libraries
+> 3: binary barcode utilities.
+
+Thanks Phil, I'm happy to report that I'd guessed at something to do with
+barcodes but knowing nothing at all about Spanish it could so easily have
+been anything else.
+
+On Tue, May 22, 2001 at 05:19:15PM -0300, Horacio Rold=E1n wrote:
+
+> Dave, here is my best. The translation of Babelfish is quite impresive but
+> it gets messed with some errors in the writing and the missing of accented
+> chars. (is it possible that your PC erased them?)
+
+My PC shouldn't and doesn't have a problem with accented characters as I'm
+in the UK so I run everything ISO-8859-1. The original email didn't appear
+to contain any accented characters and there's no charset or transfer
+encoding information in there header.
+
+Thanks to both of you for taking the time to translate.
+
+--=20
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Wed May 23 08:32:12 2001
+From: harbourtalk@matrixlist.com (Patrick Mast)
+Date: Wed, 23 May 2001 09:32:12 +0200
+Subject: [HarbourTalk] Free CA-Clipper ADS Local Server RDD?!!
+In-Reply-To: <20010523072950.D21127@hagbard.davep.org>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIAEMJGDAA.harbour@winfakt.com>
+
+Hi,
+
+There is a interesting treat going on on the ADS newsgroup (
+news://207.70.7.8/advantage.clipper )
+Look for the "Subindex" subject and start at 01/05/22 (Messages from Greg
+Chavelier)
+
+It's about "ADS 6.0 for CA-Clipper". In this version it will be possible to
+access databases with Local drive-letter. So actually we can do this in ADS:
+USE "C:\TEST\TEST.DBF"
+
+This means that in our app we can have ADS RDD as the *ONLY* ADS linked in.
+Only downside is that the Server version of ADS needs to be installed on the
+Local PC.
+
+This is what I said to Brad Smidt:
+> So, If other programming languages get such possibilities for *free*
+> why should we, Clipper programmers, pay for it?
+> Is it possible to make a ADS server this way that it only accepts ONE
+> user to access the databases? This way we, as Clipper programmers,
+> also can have a free ADS RDD Local Server! ;-))
+> There has to be a commercial solution to this, not?
+
+Please go to the newsgroup and help us to get a "Free CA-Clipper ADS Local
+Server RDD"!!
+
+Regards,
+
+Patrick Mast
+http://www.Patrick.Be.kz
+http://www.FiveWin.Be.kz
+http://www.Harbour-Project.org
+
+
+From harbourtalk@matrixlist.com  Fri May 25 08:20:27 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Fri, 25 May 2001 08:20:27 +0100
+Subject: [HarbourTalk] Re: Beating the Averages
+In-Reply-To: <200105091825.f49IPh503044@smtp.parrett.net>; from dholm@jsd-llc.com on Wed, May 09, 2001 at 02:27:22PM -0400
+References: <20010502145519.H16745@hagbard.davep.org> <10111626430.20010503130616@belacy.belgorod.su> <20010504062203.J16745@hagbard.davep.org> <152852615.20010504184027@belacy.belgorod.su> <20010504160841.H1231@hagbard.davep.org> <200105081932.f48JWd528108@smtp.parrett.net> <20010509080806.E1231@hagbard.davep.org> <200105091825.f49IPh503044@smtp.parrett.net>
+Message-ID: <20010525082027.A21127@hagbard.davep.org>
+
+On Wed, May 09, 2001 at 02:27:22PM -0400, David G. Holm wrote:
+> ** Reply to message from Dave Pearson <davep@davep.org> on Wed, 9 May
+> 2001 08:08:06 +0100
+> 
+> > I'm aware of this (see my comment about the _Jupiter Ace_), I was
+> > wondering about an actual Forth operating system. That is, that there is
+> > an OS written in Forth and that can be extended using Forth (much like
+> > the Lisp Operating systems of the likes of Symbolics).
+> 
+> I'm not aware of any. (But then again, the last time I was involved in
+> using Forth was probably 1986.)
+
+I'm not entirely sure if this counts, or even if it comes close to what we
+were talking about, but I thought that the following post from the newsgroup
+<URL:news:comp.os.linux.announce> was in some way apropos the above.
+
+,----[ <pycola.990738720.50786@vision.maze.invalid> ]
+| From: Rick Hohensee <humbubba@smarty.smart.net>
+| Newsgroups: comp.os.linux.announce
+| Subject: Linux/Forth kernel hybrid
+| Date: Thu, 24 May 2001 21:11:59 GMT
+| Organization: none
+| 
+| ftp://ftp.gwdg.de/pub/linux/install/clienux/interim/H3rL
+| is an x86 Linux 2.4.0test10 kernel image with the unprecedented property
+| of having a Forth-like system running as a kernel daemon, with user
+| interaction on vt 1. "H3rL" is "Hohensee's 3-ring Linux". A user
+| interface into kernelspace constitutes "0wnerland". The Forth-like
+| system in question is H3sm 1.5, Hohensee's 3-stack machine. It is
+| written entirely in assembly and enlarges a bzImage by about 8k.
+| It can hexdump or otherwise access kernel structures, and can invoke
+| Linux commands that take no arguments or switches. It is also a
+| subroutine-threaded extensible programming language.
+| 
+| The image in question is rdev'd to /dev/hda1. There are many different
+| harddrive drivers in the image. It does not use modules. The System.map
+| and .config for the image are cat'ed onto the end of the file itself.
+| 
+| H3rL can boot to a Linux partition if /dev/console is a plain file.
+| It is also best if the partition in question doesn't open a getty or
+| similar on tty1. If you attempt to boot H3rL and have any trouble by
+| all means email me. A fairly detailed description of how this
+| convergence was achieved has been posted to Usenet comp.lang.forth.
+| 
+| The userland H3sm is in the same directory as H3rL, along with other
+| novelties.
+| 
+| Rick Hohensee
+| www.clienux.com
+`----
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Tue May 29 08:10:14 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 29 May 2001 08:10:14 +0100
+Subject: [HarbourTalk] New adventures in Pascal
+Message-ID: <20010529081014.G28090@hagbard.davep.org>
+
+A copy of Borland's Kylix (Desktop Developer edition) has just turned up at
+my house. Time for some fun and time to see how easily WEG will port to
+GNU/Linux (blast! WEG will need a new name, unless I can think of something
+else that the W can stand for <g>).
+
+All of this is assuming that my GNU/Linux box is meaty enough to run Kylix.
+
+So, anyone else out there playing with it? Thoughts?
+
+-- 
+Dave Pearson:                   |     lbdb.el - LBDB interface.
+http://www.davep.org/           |  sawfish.el - Sawfish mode.
+Emacs:                          |  uptimes.el - Record emacs uptimes.
+http://www.davep.org/emacs/     | quickurl.el - Recall lists of URLs.
+
+From harbourtalk@matrixlist.com  Tue May 29 08:19:38 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Tue, 29 May 2001 09:19:38 +0200
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <20010529081014.G28090@hagbard.davep.org>
+Message-ID: <002201c0e80f$b8a5c900$0f2aa8c0@antonio>
+
+Dave,
+
+> So, anyone else out there playing with it? Thoughts?
+
+I am sure it will help to increase the amount of apps
+available for Linux,
+
+but I can't imagine how a non open-source development
+tool will fit into a open-source stream of thinking and
+working...
+
+
+Antonio
+
+
+From harbourtalk@matrixlist.com  Tue May 29 08:19:38 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Tue, 29 May 2001 09:19:38 +0200
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <20010529081014.G28090@hagbard.davep.org>
+Message-ID: <002201c0e80f$b8a5c900$0f2aa8c0@antonio>
+
+Dave,
+
+> So, anyone else out there playing with it? Thoughts?
+
+I am sure it will help to increase the amount of apps
+available for Linux,
+
+but I can't imagine how a non open-source development
+tool will fit into a open-source stream of thinking and
+working...
+
+
+Antonio
+
+
+From harbourtalk@matrixlist.com  Tue May 29 08:31:49 2001
+From: harbourtalk@matrixlist.com (Patrick Mast)
+Date: Tue, 29 May 2001 09:31:49 +0200
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <002201c0e80f$b8a5c900$0f2aa8c0@antonio>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIMEBPGEAA.harbour@winfakt.com>
+
+Antonio,
+
+> -----Oorspronkelijk bericht-----
+> Van: harbourtalk-admin@matrixlist.com
+> [mailto:harbourtalk-admin@matrixlist.com]Namens Antonio Linares
+> Verzonden: dinsdag 29 mei 2001 09:20
+> Aan: harbourtalk@matrixlist.com; Harbour Waffle
+                                   ^^^^^^^^^^^^^^
+
+Harbour Waffle?? ;-)
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+
+From harbourtalk@matrixlist.com  Tue May 29 08:32:55 2001
+From: harbourtalk@matrixlist.com (harbourtalk@matrixlist.com)
+Date: Tue, 29 May 2001 17:32:55 +1000
+Subject: [HarbourTalk] New adventures in Pascal
+Message-ID: <OFBD0DC7FD.C9B6376B-ONCA256A5B.00294520@dingoblue.net.au>
+
+I don't know enough about Linux yet to bother grabbing Kylix, but I've 
+seen live demos at last year's Borcon, and it looked awesome. Particularly 
+the fact that it was interoperable with Delphi 6 (since they both use 
+CLX).
+
+You ought to rename your app GrEG (graphical expert guide) :-)
+
+Mabster
+
+harbourtalk-admin@matrixlist.com wrote on 29/05/2001 05:10:14 PM:
+
+> A copy of Borland's Kylix (Desktop Developer edition) has just turned up 
+at
+> my house. Time for some fun and time to see how easily WEG will port to
+> GNU/Linux (blast! WEG will need a new name, unless I can think of 
+something
+> else that the W can stand for <g>).
+> 
+> All of this is assuming that my GNU/Linux box is meaty enough to run 
+Kylix.
+> 
+> So, anyone else out there playing with it? Thoughts?
+> 
+> -- 
+> Dave Pearson:                   |     lbdb.el - LBDB interface.
+> http://www.davep.org/           |  sawfish.el - Sawfish mode.
+> Emacs:                          |  uptimes.el - Record emacs uptimes.
+> http://www.davep.org/emacs/     | quickurl.el - Recall lists of URLs.
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+From harbourtalk@matrixlist.com  Tue May 29 08:34:12 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Tue, 29 May 2001 09:34:12 +0200
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIMEBPGEAA.harbour@winfakt.com>
+Message-ID: <002501c0e811$c13778a0$0f2aa8c0@antonio>
+
+Patrick,
+
+I don't know :-)
+
+It was on Dave msg,
+
+(What does it mean "Waffle" ? )
+
+Antonio
+
+> > Aan: harbourtalk@matrixlist.com; Harbour Waffle
+>                                    ^^^^^^^^^^^^^^
+> 
+> Harbour Waffle?? ;-)
+
+
+
+
+From harbourtalk@matrixlist.com  Tue May 29 10:16:10 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 29 May 2001 10:16:10 +0100
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <OFBD0DC7FD.C9B6376B-ONCA256A5B.00294520@dingoblue.net.au>; from mabster@dingoblue.net.au on Tue, May 29, 2001 at 05:32:55PM +1000
+References: <OFBD0DC7FD.C9B6376B-ONCA256A5B.00294520@dingoblue.net.au>
+Message-ID: <20010529101610.O28090@hagbard.davep.org>
+
+On Tue, May 29, 2001 at 05:32:55PM +1000, mabster@dingoblue.net.au wrote:
+
+> You ought to rename your app GrEG (graphical expert guide) :-)
+
+While talking to Nick Ramsay on the phone this morning he came up with the
+perfect name: XEG. When it's under X the X means X and when it's running
+anywhere else the X means "anywhere".
+
+That said, "Greg" has some appeal and it lends itself really well to being
+turned into a recursive acronym.
+
+. o O ( _G_reg (is a) )
+      ( _R_e-written  )
+      ( _E_xpert      )
+      ( _G_uide       )
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Tue May 29 10:12:44 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 29 May 2001 10:12:44 +0100
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIMEBPGEAA.harbour@winfakt.com>; from harbour@winfakt.com on Tue, May 29, 2001 at 09:31:49AM +0200
+References: <NCBBJKNMIDPJNLJCHCHIMEBPGEAA.harbour@winfakt.com> <002501c0e811$c13778a0$0f2aa8c0@antonio> <002201c0e80f$b8a5c900$0f2aa8c0@antonio> <NCBBJKNMIDPJNLJCHCHIMEBPGEAA.harbour@winfakt.com>
+Message-ID: <20010529101244.N28090@hagbard.davep.org>
+
+On Tue, May 29, 2001 at 09:31:49AM +0200, Patrick Mast wrote:
+> Antonio,
+> 
+> > -----Oorspronkelijk bericht-----
+> > Aan: harbourtalk@matrixlist.com; Harbour Waffle
+>                                    ^^^^^^^^^^^^^^
+> Harbour Waffle?? ;-)
+
+That's not Antonio, that's me. That's the entry that the Harbour Talk
+mailing list has in my aliases file:
+
+,----
+| davep@hagbard:~$ grep Waffle .mutt/aliases
+| alias harbourtalk  harbourtalk@lists.harbour-project.org (Harbour Waffle)
+`----
+
+On Tue, May 29, 2001 at 09:34:12AM +0200, Antonio Linares wrote:
+
+> (What does it mean "Waffle" ? )
+
+,----
+| From WordNet (r) 1.6[wn]:
+| 
+| waffle
+|      n : pancake batter baked in a waffle iron
+|      v : talk through one's hat [syn: bullshit, bull, fake]
+| 
+`----
+
+It's the second sense I'm using, although, here in the UK at least, Waffle
+isn't quite so disparaging (IOW it's more about chatting and nattering for
+the fun of it).
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Tue May 29 10:09:33 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 29 May 2001 10:09:33 +0100
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <002201c0e80f$b8a5c900$0f2aa8c0@antonio>; from alinares@fivetech.com on Tue, May 29, 2001 at 09:19:38AM +0200
+References: <20010529081014.G28090@hagbard.davep.org> <002201c0e80f$b8a5c900$0f2aa8c0@antonio>
+Message-ID: <20010529100933.M28090@hagbard.davep.org>
+
+On Tue, May 29, 2001 at 09:19:38AM +0200, Antonio Linares wrote:
+
+> but I can't imagine how a non open-source development tool will fit into a
+> open-source stream of thinking and working...
+
+FiveWin seems to cope.
+
+Besides, CLX is available under the GPL:
+
+-- cut here ----------------------------------------------------------------
+davep@hagbard:~/kylix/source/clx$ head Classes.pas 
+{ *************************************************************************** }
+{                                                                             }
+{ Kylix and Delphi Cross-Platform Visual Component Library                    }
+{                                                                             }
+{ Copyright (c) 1995, 2001 Borland Software Corporation                       }
+{                                                                             }
+{ This file may be distributed and/or modified under the terms of the GNU     }
+{ General Public License (GPL) version 2 as published by the Free Software    }
+{ Software Foundation and appearing at http://www.borland.com/kylix/gpl.html. }
+-- cut here ----------------------------------------------------------------
+
+so, if FiveWin for Harbour (it being a non-Free application framework) fits
+into an "Open Source stream of thinking" I'm sure Kylix and, more
+importantly CLX, will fit in.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Tue May 29 10:38:00 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Tue, 29 May 2001 11:38:00 +0200
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <20010529100933.M28090@hagbard.davep.org>
+Message-ID: <003a01c0e823$0cfbc5a0$0f2aa8c0@antonio>
+
+Dave,
+
+> FiveWin seems to cope.
+
+FW is for Windows, not for Linux.
+
+(unless you use Wine)
+
+And Windows is far away from an open-source stream...
+
+
+Antonio
+
+
+From harbourtalk@matrixlist.com  Tue May 29 10:43:39 2001
+From: harbourtalk@matrixlist.com (Alex Schaft)
+Date: Tue, 29 May 2001 11:43:39 +0200
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <003a01c0e823$0cfbc5a0$0f2aa8c0@antonio>
+Message-ID: <NFBBINAHKLPIGKPGGJCGMELHCEAA.alexs@quicksoftware.co.za>
+
+How about FWH?
+
+
+-----Original Message-----
+From: harbourtalk-admin@matrixlist.com
+[mailto:harbourtalk-admin@matrixlist.com]On Behalf Of Antonio Linares
+Sent: 29 May 2001 11:38
+To: harbourtalk@matrixlist.com
+Subject: RE: [HarbourTalk] New adventures in Pascal
+
+
+Dave,
+
+> FiveWin seems to cope.
+
+FW is for Windows, not for Linux.
+
+(unless you use Wine)
+
+And Windows is far away from an open-source stream...
+
+
+Antonio
+
+_______________________________________________
+HarbourTalk mailing list
+HarbourTalk@matrixlist.com
+http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+From harbourtalk@matrixlist.com  Tue May 29 10:58:54 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Tue, 29 May 2001 11:58:54 +0200
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <NFBBINAHKLPIGKPGGJCGMELHCEAA.alexs@quicksoftware.co.za>
+Message-ID: <003b01c0e825$f8655b80$0f2aa8c0@antonio>
+
+Alex,
+
+> How about FWH?
+
+FWH is just for Windows. 
+
+Anyhow, you may run a Windows app on Linux
+using free Wine emulator (or translator).
+
+. o O ( and you can't run a Linux app under Windows...)
+
+Antonio
+
+
+
+
+From harbourtalk@matrixlist.com  Tue May 29 11:27:06 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 29 May 2001 11:27:06 +0100
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <003a01c0e823$0cfbc5a0$0f2aa8c0@antonio>; from alinares@fivetech.com on Tue, May 29, 2001 at 11:38:00AM +0200
+References: <20010529100933.M28090@hagbard.davep.org> <003a01c0e823$0cfbc5a0$0f2aa8c0@antonio>
+Message-ID: <20010529112706.U28090@hagbard.davep.org>
+
+On Tue, May 29, 2001 at 11:38:00AM +0200, Antonio Linares wrote:
+> Dave,
+> 
+> > FiveWin seems to cope.
+> 
+> FW is for Windows, not for Linux.
+> 
+> (unless you use Wine)
+> 
+> And Windows is far away from an open-source stream...
+
+So what is your point then? Kylix is the GNU/Linux targeting version of
+Delphi, Delphi 6 is the Windows equivalent. Both systems use CLX. Either
+development tool can be used to write free software or non-free software.
+What difference does it matter if the underlying operating system kernel is
+free software or not?
+
+Non-free software exists for GNU/Linux, it has for quite some time. People
+buy non-free software for GNU/Linux. The fact that I'm playing with Kylix
+demonstrates that if nothing else.
+
+So what do you mean when you say:
+
+,----
+| but I can't imagine how a non open-source development
+| tool will fit into a open-source stream of thinking and
+| working...
+`----
+
+What is it that you can't imagine? I thought you were having a hard time
+imagining that people would write non-free software using free software
+tools and environments (something you must be able to imagine because you're
+company is doing that right now). Now it seems that you can't imagine that
+people can write non-free software that runs on free software kernels, you
+should be able to imagine that as it's been happening for ages.
+
+-- 
+Dave Pearson:                   |     lbdb.el - LBDB interface.
+http://www.davep.org/           |  sawfish.el - Sawfish mode.
+Emacs:                          |  uptimes.el - Record emacs uptimes.
+http://www.davep.org/emacs/     | quickurl.el - Recall lists of URLs.
+
+From harbourtalk@matrixlist.com  Tue May 29 11:33:04 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Tue, 29 May 2001 12:33:04 +0200
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <NFBBINAHKLPIGKPGGJCGMELHCEAA.alexs@quicksoftware.co.za>
+Message-ID: <004401c0e82a$be50a300$0f2aa8c0@antonio>
+
+What I mean is that it is hard for me to
+understand how the Linux community is going
+to accept Kylix, when they claim so strong
+the open source way.
+
+Is the Kylix compiler and linker source code
+included ?
+
+Under the visual (and always pleasant way) layer,
+there is a huge complexity that only Borland understands.
+
+Antonio
+
+
+From harbourtalk@matrixlist.com  Tue May 29 11:45:37 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 29 May 2001 11:45:37 +0100
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <003b01c0e825$f8655b80$0f2aa8c0@antonio>; from alinares@fivetech.com on Tue, May 29, 2001 at 11:58:54AM +0200
+References: <NFBBINAHKLPIGKPGGJCGMELHCEAA.alexs@quicksoftware.co.za> <003b01c0e825$f8655b80$0f2aa8c0@antonio>
+Message-ID: <20010529114537.X28090@hagbard.davep.org>
+
+On Tue, May 29, 2001 at 11:58:54AM +0200, Antonio Linares wrote:
+
+> . o O ( and you can't run a Linux app under Windows...)
+
+The last I knew there was a project like Wine but the other way round, it'd
+let you run GNU/Linux compiled applications on Windows. I don't think it's
+as far advanced as Wine though.
+
+-- 
+Dave Pearson:                   |     lbdb.el - LBDB interface.
+http://www.davep.org/           |  sawfish.el - Sawfish mode.
+Emacs:                          |  uptimes.el - Record emacs uptimes.
+http://www.davep.org/emacs/     | quickurl.el - Recall lists of URLs.
+
+From harbourtalk@matrixlist.com  Tue May 29 12:06:22 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 29 May 2001 12:06:22 +0100
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <004401c0e82a$be50a300$0f2aa8c0@antonio>; from alinares@fivetech.com on Tue, May 29, 2001 at 12:33:04PM +0200
+References: <NFBBINAHKLPIGKPGGJCGMELHCEAA.alexs@quicksoftware.co.za> <004401c0e82a$be50a300$0f2aa8c0@antonio>
+Message-ID: <20010529120622.Z28090@hagbard.davep.org>
+
+On Tue, May 29, 2001 at 12:33:04PM +0200, Antonio Linares wrote:
+
+> What I mean is that it is hard for me to understand how the Linux
+> community is going to accept Kylix, when they claim so strong the open
+> source way.
+
+That's like saying that it's hard to understand how the harbour community is
+going to accept FiveWin for Harbour when they "claim so string the open
+source way". First you've got to justify your claims that there is a "Linux
+community" that claims such at thing. Free software, as with anything
+political, really isn't that simple or that black and white.
+
+I'm part of the "Linux community" and have been since 1995, I see no problem
+in accepting Kylix. I mean, I wouldn't have installed it to have a look at
+it otherwise would I?
+
+Anyway, I think you'll find that Kylix will be most popular with people
+wanting to port their Delphi applications to Linux and one of the freedoms
+you get is the freedom to run non-free software.
+
+> Is the Kylix compiler and linker source code included ?
+
+Not that I can see at the moment, I think it's the application framework
+that is the thing that's under the GPL.
+
+> Under the visual (and always pleasant way) layer,
+> there is a huge complexity that only Borland understands.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Tue May 29 12:38:35 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 29 May 2001 12:38:35 +0100
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <20010529120622.Z28090@hagbard.davep.org>; from davep@davep.org on Tue, May 29, 2001 at 12:06:22PM +0100
+References: <NFBBINAHKLPIGKPGGJCGMELHCEAA.alexs@quicksoftware.co.za> <004401c0e82a$be50a300$0f2aa8c0@antonio> <20010529120622.Z28090@hagbard.davep.org>
+Message-ID: <20010529123835.B28090@hagbard.davep.org>
+
+[I sent before commenting on this final point]
+
+On Tue, May 29, 2001 at 12:33:04PM +0200, Antonio Linares wrote:
+
+> Under the visual (and always pleasant way) layer,
+> there is a huge complexity that only Borland understands.
+
+While this is most likely true, it's also true of the tools you use (or do
+you have the source for all of Borland's C++ compiler?) and, presumably,
+also true of some of the tools you yourself produce (or is all of the source
+for every single part of FiveWin available for download and reading by
+anyone who cares to take a look?).
+
+Kylix, in total, isn't free software, there's no sense in expecting it to
+behave like free software. Likewise, FiveWin isn't free software, there'd be
+no sense in expecting it to behave like free software either.
+
+BTW, how complex is this "complexity" you speak of? How do you know how
+complex it is if you've never seen it?
+
+Also, don't forget, there are free software Pascal compilers out there too.
+There's even a free software Object Pascal compiler. No doubt people are
+working right now to ensure that such compilers can make use of CLX.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Tue May 29 12:56:42 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Tue, 29 May 2001 13:56:42 +0200
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <20010529123835.B28090@hagbard.davep.org>
+Message-ID: <000501c0e836$6d80a7c0$0f2aa8c0@antonio>
+
+Dave,
+
+FW users provide around 70% of FW enhancements and bug fixes.
+
+That means that FW source code is available to them and 
+really easy to understand.
+
+> BTW, how complex is this "complexity" you speak of? How do you know how
+> complex it is if you've never seen it?
+
+I am very familiar to Delphi. Under its visual layer (so friendly)
+there is a scaring complexity that only a very few guys
+do understand.
+
+In fact, I have never seen a VCL bug fixed by a Delphi user.
+And there have been bugs around, as on all software products.
+
+Antonio
+
+
+From harbourtalk@matrixlist.com  Tue May 29 13:11:45 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Tue, 29 May 2001 14:11:45 +0200
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <000501c0e836$6d80a7c0$0f2aa8c0@antonio>
+Message-ID: <000d01c0e838$876c2cc0$0f2aa8c0@antonio>
+
+Dave,
+
+Anyhow, I may understand you have a new toy to
+play with and that makes you excited :-)
+
+
+Antonio
+
+
+
+From harbourtalk@matrixlist.com  Tue May 29 13:27:16 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Tue, 29 May 2001 09:27:16 -0300
+Subject: [HarbourTalk] New adventures in Pascal
+References: <000501c0e836$6d80a7c0$0f2aa8c0@antonio>
+Message-ID: <007501c0e83b$06085de0$f8d4d7c8@luizguim>
+
+Dave,Antonio
+
+As far I know, Borland Kylix will have an Open Source version that will
+probaly be released on the end of june
+
+Regards
+
+Luiz Rafael Culik
+
+
+From harbourtalk@matrixlist.com  Tue May 29 14:00:54 2001
+From: harbourtalk@matrixlist.com (W.H. Kok)
+Date: Tue, 29 May 2001 15:00:54 +0200
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <20010529081014.G28090@hagbard.davep.org>
+Message-ID: <3B13B9A6.16161.4DD60F6F@localhost>
+
+WEG will need a new name, unless I can think of something else that the W can stand for <g>
+
+What an
+Expert
+Guide (?)
+
+
+W.H. Kok
+Beheerder Informatie Voorziening
+afdeling Informatiebeleid en Automatisering
+Dienst SoZaWe Rotterdam
+e-mail: w.kok@sozawe.rotterdam.nl
+Telefoon: 010 - 4533 270
+Fax: 010 - 4533 578
+
+From harbourtalk@matrixlist.com  Tue May 29 13:41:28 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 29 May 2001 13:41:28 +0100
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <000501c0e836$6d80a7c0$0f2aa8c0@antonio>; from alinares@fivetech.com on Tue, May 29, 2001 at 01:56:42PM +0200
+References: <000501c0e836$6d80a7c0$0f2aa8c0@antonio> <000d01c0e838$876c2cc0$0f2aa8c0@antonio> <20010529123835.B28090@hagbard.davep.org> <000501c0e836$6d80a7c0$0f2aa8c0@antonio>
+Message-ID: <20010529134128.G28090@hagbard.davep.org>
+
+On Tue, May 29, 2001 at 01:56:42PM +0200, Antonio Linares wrote:
+> Dave,
+> 
+> FW users provide around 70% of FW enhancements and bug fixes.
+> 
+> That means that FW source code is available to them and really easy to
+> understand.
+
+All the source code, or only some of the source code?
+
+Remember, your confusion about Kylix is that it isn't open source but I've
+shown to you that the heart of it (CLX) isn't just open source, it's free
+software in the FSF sense of the term. The last time I looked FiveWin didn't
+even ship with an open source licence, let alone a free software licence.
+Despite this I've seen very few people get confused about how FiveWin for
+Harbour might survive.
+
+IOW, Kylix is much more free than FiveWin for Harbour (for example) so if
+you can imagine that FiveWin for harbour (a non-OpenSource product) can work
+in an open source world then you should have no problems imagining that
+Kylix can exist there too.
+
+Obviously, the question about people wanting to use it at all is a different
+and, arguably, much more interesting.
+
+> > BTW, how complex is this "complexity" you speak of? How do you know how
+> > complex it is if you've never seen it?
+> 
+> I am very familiar to Delphi. Under its visual layer (so friendly) there
+> is a scaring complexity that only a very few guys do understand.
+
+I'm very familiar with Delphi too but I've never seen the source code for
+the compiler. Where is this complexity that people can't see that bothers
+you?
+
+> In fact, I have never seen a VCL bug fixed by a Delphi user. And there
+> have been bugs around, as on all software products.
+
+Hmm, I've seen VCL bug fixes, by users, discussed before.
+
+On Tue, May 29, 2001 at 02:11:45PM +0200, Antonio Linares wrote:
+
+> Anyhow, I may understand you have a new toy to
+> play with and that makes you excited :-)
+
+Excited would be taking it a little too far, I've been discussing the issue
+of freedom here, not talking up Delphi.
+
+I'm much more excited by the new _Manic Street Preachers_ CD that I'm
+listening to today.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Tue May 29 14:07:14 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 29 May 2001 14:07:14 +0100
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <007501c0e83b$06085de0$f8d4d7c8@luizguim>; from culik@nh.conex.com.br on Tue, May 29, 2001 at 09:27:16AM -0300
+References: <000501c0e836$6d80a7c0$0f2aa8c0@antonio> <007501c0e83b$06085de0$f8d4d7c8@luizguim>
+Message-ID: <20010529140714.H28090@hagbard.davep.org>
+
+On Tue, May 29, 2001 at 09:27:16AM -0300, Luiz Rafael Culik Guimaraes wrote:
+
+> As far I know, Borland Kylix will have an Open Source version that will
+> probaly be released on the end of june
+
+That's welcome news. I knew that there was going to be some "'free as in
+beer' as long as you're writing 'free as in freedom' software with it"
+version but I didn't know that they were thinking of making the compiler
+open source or free in some way.
+
+I wonder if the same will be done with a version of Delphi 6?
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@matrixlist.com  Wed May 30 20:59:14 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Wed, 30 May 2001 21:59:14 +0200
+Subject: [HarbourTalk] LPT1 check utility
+In-Reply-To: <20010529140714.H28090@hagbard.davep.org>
+Message-ID: <001801c0e943$0020bcc0$0f2aa8c0@antonio>
+
+Do you know any tool I may use to check if
+a LPT1 or LPT2 port is working ok ?
+
+many thanks,
+
+Antonio
+
+
+
+From harbourtalk@matrixlist.com  Wed May 30 21:44:22 2001
+From: harbourtalk@matrixlist.com (David G. Holm)
+Date: Wed, 30 May 2001 16:44:22 -0400
+Subject: [HarbourTalk] LPT1 check utility
+In-Reply-To: <001801c0e943$0020bcc0$0f2aa8c0@antonio>
+References: <20010529140714.H28090@hagbard.davep.org> <001801c0e943$0020bcc0$0f2aa8c0@antonio>
+Message-ID: <200105302042.f4UKgo428973@smtp.parrett.net>
+
+** Reply to message from "Antonio Linares" <alinares@fivetech.com> on
+Wed, 30 May 2001 21:59:14 +0200
+
+> Do you know any tool I may use to check if
+> a LPT1 or LPT2 port is working ok ?
+
+Norton Utilities with a loop-back connector.
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@matrixlist.com  Thu May 31 12:46:54 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Thu, 31 May 2001 12:46:54 +0100
+Subject: [HarbourTalk] New adventures in Pascal
+In-Reply-To: <20010529081014.G28090@hagbard.davep.org>; from davep@davep.org on Tue, May 29, 2001 at 08:10:14AM +0100
+References: <20010529081014.G28090@hagbard.davep.org>
+Message-ID: <20010531124654.X28090@hagbard.davep.org>
+
+On Tue, May 29, 2001 at 08:10:14AM +0100, Dave Pearson wrote:
+
+> A copy of Borland's Kylix (Desktop Developer edition) has just turned up
+> at my house. Time for some fun and time to see how easily WEG will port to
+> GNU/Linux (blast! WEG will need a new name, unless I can think of
+> something else that the W can stand for <g>).
+
+I just had a go at building WEG with Kylix. It took around 3/4 hour of
+source modifications, mostly sprinkling the source with {$IFDEF WINDOWS} to
+remove the Windows specific stuff (Registry, Windows D&D, DDE, etc...),
+before I had something that looked like WEG running on my GNU/Linux box.
+
+I wouldn't want to release it into the wild in this state and I think I
+really need a copy of Delphi 6 before I could think of having a supportable
+dual-platform set of sources but I'm impressed at how quickly I managed to
+move it over.
+
+I'd estimate a couple of days of hacking with a copy of Delphi 6 and Kylix
+to get a working set of dual-platform sources. It looks like the VCL and CLX
+have a number of significant (and understandable) differences that need to
+be dealt with. Also, as I say above, some parts of WEG rely on Windows
+specific stuff, that'd have to be properly dealt with too.
+
+Still, a couple of days to port something like WEG to GNU/Linux isn't too
+shabby.
+
+-- 
+Dave Pearson:                   |     lbdb.el - LBDB interface.
+http://www.davep.org/           |  sawfish.el - Sawfish mode.
+Emacs:                          |  uptimes.el - Record emacs uptimes.
+http://www.davep.org/emacs/     | quickurl.el - Recall lists of URLs.
+
+From harbourtalk@matrixlist.com  Thu May 31 12:58:51 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Thu, 31 May 2001 13:58:51 +0200
+Subject: [HarbourTalk] LPT1 check utility
+In-Reply-To: <200105302042.f4UKgo428973@smtp.parrett.net>
+Message-ID: <002d01c0e9c9$0f2a42a0$0f2aa8c0@antonio>
+
+David,
+
+> > Do you know any tool I may use to check if
+> > a LPT1 or LPT2 port is working ok ?
+> 
+> Norton Utilities with a loop-back connector.
+
+Thanks!
+
+Antonio
+
+
+

@@ -1,0 +1,2465 @@
+From harbourtalk@matrixlist.com  Tue Aug  7 17:17:22 2001
+From: harbourtalk@matrixlist.com (=?iso-8859-1?q?Horacio=20Roldan?=)
+Date: Tue, 7 Aug 2001 13:17:22 -0300 (ART)
+Subject: [HarbourTalk] Antivirus for Linux ?
+Message-ID: <20010807161722.54928.qmail@web14704.mail.yahoo.com>
+
+Hi,
+I know that this is not harbour related but I wnted to
+ask some advices from the linux guys:
+
+Which are the antivirus most suitable for a Linux box
+acting as a gateway to Internet (via ADSL) and running
+a mail server.
+
+It should provide antivirus protection for the mail
+exchange and (if possible) for the web traffic.
+
+I'll appreciate any comments.
+
+regards
+Horacio
+
+_________________________________________________________
+¿Lo probaste?
+Correo gratis y para toda la vida en http://correo.yahoo.com.ar
+
+From harbourtalk@matrixlist.com  Tue Aug  7 20:44:21 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 7 Aug 2001 20:44:21 +0100
+Subject: [HarbourTalk] Antivirus for Linux ?
+In-Reply-To: <20010807161722.54928.qmail@web14704.mail.yahoo.com>; from harbour_ar@yahoo.com.ar on Tue, Aug 07, 2001 at 01:17:22PM -0300
+References: <20010807161722.54928.qmail@web14704.mail.yahoo.com>
+Message-ID: <20010807204421.H30092@hagbard.davep.org>
+
+On Tue, Aug 07, 2001 at 01:17:22PM -0300, Horacio Roldan wrote:
+
+> I know that this is not harbour related but I wnted to ask some advices
+> from the linux guys:
+> 
+> Which are the antivirus most suitable for a Linux box acting as a gateway
+> to Internet (via ADSL) and running a mail server.
+> 
+> It should provide antivirus protection for the mail exchange and (if
+> possible) for the web traffic.
+> 
+> I'll appreciate any comments.
+
+Have you tried searching Freshmeat <URL:http://freshmeat.net/>?
+
+-- 
+Land of the free? Yeah, right.
+                                                http://www.freesklyarov.org/
+                                                http://www.boycottadobe.org/
+
+From harbourtalk@matrixlist.com  Thu Aug  9 16:42:09 2001
+From: harbourtalk@matrixlist.com (Gerald Drouillard)
+Date: Thu, 9 Aug 2001 11:42:09 -0400
+Subject: [HarbourTalk] Antivirus for Linux ?
+In-Reply-To: <20010807161722.54928.qmail@web14704.mail.yahoo.com>
+Message-ID: <MPBBILHIPLONKKMKNLIPEEOCBFAB.gerrylist@ask-services.com>
+
+I use postfix as the SMTP server and http://www.kaspersky.com as the
+antivirus to check the mail on the servers I configure.  The combination has
+been working great for us.
+
+> -----Original Message-----
+> From: harbourtalk-admin@matrixlist.com
+> [mailto:harbourtalk-admin@matrixlist.com]On Behalf Of Horacio Roldan
+> Sent: Tuesday, August 07, 2001 12:17
+> To: harbourtalk@matrixlist.com
+> Subject: [HarbourTalk] Antivirus for Linux ?
+>
+>
+> Hi,
+> I know that this is not harbour related but I wnted to
+> ask some advices from the linux guys:
+>
+> Which are the antivirus most suitable for a Linux box
+> acting as a gateway to Internet (via ADSL) and running
+> a mail server.
+>
+> It should provide antivirus protection for the mail
+> exchange and (if possible) for the web traffic.
+>
+> I'll appreciate any comments.
+>
+> regards
+> Horacio
+>
+> _________________________________________________________
+> ¿Lo probaste?
+> Correo gratis y para toda la vida en http://correo.yahoo.com.ar
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+From harbourtalk@matrixlist.com  Thu Aug  9 21:07:15 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Thu, 9 Aug 2001 22:07:15 +0200
+Subject: [HarbourTalk] Final Fantasy
+Message-ID: <000101c1210e$e2804380$0f2aa8c0@first>
+
+"The spirits within"...
+
+Could someone explain me what that does means ?
+My english is so limited...
+
+
+. o O ( "I believe the key is in my dreams..." )
+
+Harbour zen
+
+
+From harbourtalk@matrixlist.com  Thu Aug  9 21:24:35 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Thu, 9 Aug 2001 17:24:35 -0300
+Subject: [HarbourTalk] Final Fantasy
+References: <000101c1210e$e2804380$0f2aa8c0@first>
+Message-ID: <003701c12111$e244b9c0$acd4d7c8@culik>
+
+Antonio
+
+Let see if I can Help
+
+
+> "The spirits within"...
+Starting on Final Fantasy 7, an Person with special powers can make an kind
+of Contract with Certain spirits, where you use the Summon to Call this
+spirits.
+
+Translating the expression to portugues , it come to "Os espiritos Contigo"
+, witch means that the spirits  with you
+
+ --
+
+Regards
+
+Luiz Rafael Culik
+
+
+From harbourtalk@matrixlist.com  Thu Aug  9 21:39:04 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Thu, 9 Aug 2001 22:39:04 +0200
+Subject: [HarbourTalk] Final Fantasy
+In-Reply-To: <003701c12111$e244b9c0$acd4d7c8@culik>
+Message-ID: <000201c12113$54409b60$0f2aa8c0@first>
+
+Luiz,
+
+Many thanks! :-)
+
+
+Antonio
+
+
+
+From harbourtalk@matrixlist.com  Thu Aug  9 21:43:09 2001
+From: harbourtalk@matrixlist.com (Felipe Coury)
+Date: Thu, 9 Aug 2001 17:43:09 -0300
+Subject: [HarbourTalk] Final Fantasy
+References: <000101c1210e$e2804380$0f2aa8c0@first>
+Message-ID: <038001c12114$04633e80$3c01a8c0@creation>
+
+Antonio,
+
+> "The spirits within"...
+I think it means the spirits inside you. "Los espíritos de dentro de usted".
+
+HTH
+
+Felipe
+
+
+
+
+From harbourtalk@matrixlist.com  Sat Aug 11 13:57:46 2001
+From: harbourtalk@matrixlist.com (Alexander S.Kresin)
+Date: Sat, 11 Aug 2001 16:57:46 +0400
+Subject: [HarbourTalk] Xoom/Nbci
+Message-ID: <4544844.20010811165746@belacy.belgorod.su>
+
+Is someone knows here, what happened with NBCI ( XOOM ) ?
+ For about a week already I cannot upload new files to my web page -
+ get a message: "Ftp uploads are turned off" .
+ I had wrote them, but had no answer...
+
+
+Best regards,
+ Alexander
+http://members.xoom.com/alkresin/
+
+
+
+From harbourtalk@matrixlist.com  Sat Aug 11 14:16:43 2001
+From: harbourtalk@matrixlist.com (Wouter Dijkslag)
+Date: Sat, 11 Aug 2001 15:16:43 +0200
+Subject: [HarbourTalk] Xoom/Nbci
+In-Reply-To: <4544844.20010811165746@belacy.belgorod.su>
+References: <4544844.20010811165746@belacy.belgorod.su>
+Message-ID: <cvbant0lvf0g33mk6m6m3365jfr48sd9eu@4ax.com>
+
+Hello,
+
+
+On Sat, 11 Aug 2001 16:57:46 +0400, you wrote:
+
+>Is someone knows here, what happened with NBCI ( XOOM ) ?
+
+Yes, all web-site-hosting services have been terminated since july 15th, =
+you can
+find this out at http://wwwx.nbci.com/mywebsite/
+
+Greetings,
+Wouter Dijkslag
+
+From harbourtalk@matrixlist.com  Sat Aug 11 21:10:29 2001
+From: harbourtalk@matrixlist.com (Alexander S.Kresin)
+Date: Sun, 12 Aug 2001 00:10:29 +0400
+Subject: [HarbourTalk] Re[2]: Xoom/Nbci
+In-Reply-To: <cvbant0lvf0g33mk6m6m3365jfr48sd9eu@4ax.com>
+References: <4544844.20010811165746@belacy.belgorod.su>
+ <cvbant0lvf0g33mk6m6m3365jfr48sd9eu@4ax.com>
+Message-ID: <17317864210.20010812001029@belacy.belgorod.su>
+
+>>Is someone knows here, what happened with NBCI ( XOOM ) ?
+
+WD> Yes, all web-site-hosting services have been terminated since july 15th, you can
+WD> find this out at http://wwwx.nbci.com/mywebsite/
+
+ Yes, it's really so, and they aren't the only, who close free hosting
+ service ...
+ So, I just moved to the Yahoo Geocities.
+
+
+Best regards,
+ Alexander
+http://www.geocities.com/alkresin/
+
+
+
+From harbourtalk@matrixlist.com  Sun Aug 12 18:16:09 2001
+From: harbourtalk@matrixlist.com (Chen Kedem)
+Date: Sun, 12 Aug 2001 20:16:09 +0300 (EET DST)
+Subject: [HarbourTalk] TError()
+Message-ID: <Pine.GSU.4.30_heb2.09.0108122009280.5417-100000@actcom.co.il>
+
+About 2 hours ago a suicide bomber splash itself on a small
+coffee shop just UNDER my bedroom window, it seems that the
+bomber was the only one that got killed, about 20 wounded
+all of them evacuated already to hospitals in the region.
+Me and my family are Ok.
+
+
+    Chen.
+
+
+From harbourtalk@matrixlist.com  Sun Aug 12 18:41:04 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Sun, 12 Aug 2001 19:41:04 +0200
+Subject: [HarbourTalk] TError()
+In-Reply-To: <Pine.GSU.4.30_heb2.09.0108122009280.5417-100000@actcom.co.il>
+Message-ID: <000001c12355$f5fbd980$0f2aa8c0@first>
+
+Chen,
+
+Glad to hear that you and your family are ok.
+
+Where are you living at ?
+
+
+Antonio
+
+
+
+From harbourtalk@matrixlist.com  Sun Aug 12 18:48:45 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Sun, 12 Aug 2001 19:48:45 +0200
+Subject: [HarbourTalk] TError()
+In-Reply-To: <000001c12355$f5fbd980$0f2aa8c0@first>
+Message-ID: <000101c12357$087692c0$0f2aa8c0@first>
+
+Chen,
+
+I just checked www.elmundo.es, possibly the best
+newspaper from Spain, this is what I just found:
+
+>>
+ORIENTE PROXIMO | NUEVO BALANCE
+Al menos un muerto y 20 heridos en un atentado suicida en un café cerca de
+Haifa
+
+Al menos una persona murió y otras 20 resultaron heridas, tres de ellas de
+gravedad, en un atentado perpetrado por un terrorista suicida palestino en
+un céntrico restaurante de la localidad de Kiriat Motzkin, en el norte de
+Israel, según el primer balance oficial. No obstante, el servicio de
+ambulancias israelí había informado de al menos 50 heridos, varios de
+gravedad. La Yihad islámica palestina ha reivindicado el hecho
+>>
+
+So sorry for such a cruel and absurd action,
+
+regards,
+
+Antonio
+
+
+
+From harbourtalk@matrixlist.com  Sun Aug 12 19:27:02 2001
+From: harbourtalk@matrixlist.com (Patrick Mast, Harbour)
+Date: Sun, 12 Aug 2001 20:27:02 +0200
+Subject: [HarbourTalk] TError()
+In-Reply-To: <Pine.GSU.4.30_heb2.09.0108122009280.5417-100000@actcom.co.il>
+Message-ID: <004b01c1235c$61e89380$6400a8c0@patrick2>
+
+Chen,
+
+> About 2 hours ago a suicide bomber splash itself on a small 
+> coffee shop just UNDER my bedroom window, it seems that the 
+> bomber was the only one that got killed, about 20 wounded all 
+> of them evacuated already to hospitals in the region. Me and 
+> my family are Ok.
+
+WOW, glad to hear you are ok!
+This thing is coming very close to us...
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+
+From harbourtalk@matrixlist.com  Sun Aug 12 22:16:43 2001
+From: harbourtalk@matrixlist.com (Martin Vogel)
+Date: Sun, 12 Aug 2001 23:16:43 +0200
+Subject: [HarbourTalk] TError()
+Message-ID: <000601c12374$2fe80d80$f5cbce81@martinvogel>
+
+Chen,
+
+this is really awful !! When will people understand that violence is the
+wrong way...
+But I am glad to hear that you and your family are ok. My best wishes for
+you and let's hope for better days in the near future.
+
+Martin
+
+>About 2 hours ago a suicide bomber splash itself on a small
+>coffee shop just UNDER my bedroom window, it seems that the
+>bomber was the only one that got killed, about 20 wounded
+>all of them evacuated already to hospitals in the region.
+
+>Me and my family are Ok.
+>
+>
+>    Chen.
+
+
+
+From harbourtalk@matrixlist.com  Mon Aug 13 08:11:37 2001
+From: harbourtalk@matrixlist.com (Chen Kedem)
+Date: Mon, 13 Aug 2001 10:11:37 +0300
+Subject: [HarbourTalk] TError()
+References: <000001c12355$f5fbd980$0f2aa8c0@first>
+Message-ID: <3B777DA9.4E64@synel.co.il>
+
+Antonio,
+
+> Where are you living at ?
+
+Kiryat Motzin, which is a small city in the Haifa bay in the northern
+part of Israel.
+
+Exact zoomed location (Hebrew):
+http://maps.walla.co.il/AtlasNetlocator.dll?CMD=LoadPage&PageName=AtlasMain.html&NavCmd=Out&HorzPos=58024&VertPos=43342&ZoomLevel=-1&ImageWidth=450&ImageHeight=300&TargetPosX=58474&TargetPosY=43642&TargetVisible=&OVW=136&OVH=116&Pos=74&SessionID=46474359&LayerVisible1=&LayerVisible2=&LayerVisible3=
+
+General map view (Hebrew):
+http://maps.walla.co.il/AtlasNetlocator.dll?Cmd=GetMap&HorzPos=31000&VertPos=20000&ZoomLevel=-7&ImageWidth=600&ImageHeight=1000&TargetPosX=58474&TargetPosY=43642&TargetVisible=&OVW=136&OVH=116&Pos=74&SessionID=46474359&LayerVisible1=&LayerVisible2=&LayerVisible3=
+
+Site with some maps (English)
+[religious emphasis, but this is the first one I've found]:
+http://www.templebuilders.com/maps/maphtm.htm
+
+
+  Chen.
+
+From harbourtalk@matrixlist.com  Mon Aug 13 08:23:35 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Mon, 13 Aug 2001 08:23:35 +0100
+Subject: [HarbourTalk] TError()
+In-Reply-To: <000601c12374$2fe80d80$f5cbce81@martinvogel>; from martin.vogel@urz.uni-heidelberg.de on Sun, Aug 12, 2001 at 11:16:43PM +0200
+References: <000601c12374$2fe80d80$f5cbce81@martinvogel>
+Message-ID: <20010813082335.Q30092@hagbard.davep.org>
+
+On Sun, Aug 12, 2001 at 11:16:43PM +0200, Martin Vogel wrote:
+
+> When will people understand that violence is the wrong way...
+
+When all forms of political, economic and religious difference have been
+eradicated.
+
+AKA "never".
+
+-- 
+Land of the free? Yeah, right.
+                                                http://www.freesklyarov.org/
+
+From harbourtalk@matrixlist.com  Mon Aug 13 08:21:05 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Mon, 13 Aug 2001 08:21:05 +0100
+Subject: [HarbourTalk] TError()
+In-Reply-To: <Pine.GSU.4.30_heb2.09.0108122009280.5417-100000@actcom.co.il>; from niki@actcom.co.il on Sun, Aug 12, 2001 at 08:16:09PM +0300
+References: <Pine.GSU.4.30_heb2.09.0108122009280.5417-100000@actcom.co.il>
+Message-ID: <20010813082105.P30092@hagbard.davep.org>
+
+On Sun, Aug 12, 2001 at 08:16:09PM +0300, Chen Kedem wrote:
+
+> About 2 hours ago a suicide bomber splash itself on a small coffee shop
+> just UNDER my bedroom window, it seems that the bomber was the only one
+> that got killed, about 20 wounded all of them evacuated already to
+> hospitals in the region. Me and my family are Ok.
+
+Wow! Glad to hear you're all ok Chen. It seemed "close to home" when one of
+the London bombs early this year went off round the corner from a friend's
+flat. This is even closer.
+
+I'm still totally bemused by this spiral of violence. It seems to me that it
+in no way serves the purposes of ordinary people while, at the same time,
+the "opinion" of "ordinary people" demand that the violence continue. Sad,
+very sad.
+
+-- 
+Land of the free? Yeah, right.
+                                                http://www.freesklyarov.org/
+
+From harbourtalk@matrixlist.com  Mon Aug 13 10:06:53 2001
+From: harbourtalk@matrixlist.com (Martin Vogel)
+Date: Mon, 13 Aug 2001 11:06:53 +0200
+Subject: [HarbourTalk] TError()
+References: <000601c12374$2fe80d80$f5cbce81@martinvogel> <20010813082335.Q30092@hagbard.davep.org>
+Message-ID: <3B7798AD.3709B0E4@urz.uni-heidelberg.de>
+
+Dave,
+
+> > When will people understand that violence is the wrong way...
+> 
+> When all forms of political, economic and religious difference have been
+> eradicated.
+> 
+> AKA "never".
+
+Political, economic or religious differences do not give reason for
+violence alone. Think of the many examples where people have lived (and
+live) together in peace although there have been (and are) such
+differences between them. Violence exists when one group does not
+respect and tolerate the other or feels superior to them. And if people
+would stop hating people because of things that happened hundreds of
+years ago. Doesn't lead to nowhere. Live and let live, despite all
+differences. 
+
+Martin
+
+From harbourtalk@matrixlist.com  Mon Aug 13 11:00:20 2001
+From: harbourtalk@matrixlist.com (Chen Kedem)
+Date: Mon, 13 Aug 2001 13:00:20 +0300
+Subject: [HarbourTalk] TError()
+References: <000001c12355$f5fbd980$0f2aa8c0@first> <3B777DA9.4E64@synel.co.il>
+Message-ID: <3B77A534.1885@synel.co.il>
+
+Martin,
+
+> ...And if people would stop hating people because of things that
+> happened hundreds of years ago.
+
+And then they will not be human any more. Guess that the first
+neanderthal figure how to use a stone also tested it on the guys
+next cave.
+
+   Chen.
+
+From harbourtalk@matrixlist.com  Mon Aug 13 11:17:58 2001
+From: harbourtalk@matrixlist.com (Martin Vogel)
+Date: Mon, 13 Aug 2001 12:17:58 +0200
+Subject: [HarbourTalk] TError()
+References: <000001c12355$f5fbd980$0f2aa8c0@first> <3B777DA9.4E64@synel.co.il> <3B77A534.1885@synel.co.il>
+Message-ID: <3B77A956.8EF64DB@urz.uni-heidelberg.de>
+
+Chen,
+
+> > ...And if people would stop hating people because of things that
+> > happened hundreds of years ago.
+> 
+> And then they will not be human any more. 
+
+Violence as necessary part of a human being ? I don't believe that.
+
+From harbourtalk@matrixlist.com  Mon Aug 13 11:30:44 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Mon, 13 Aug 2001 12:30:44 +0200
+Subject: [HarbourTalk] TError()
+In-Reply-To: <3B77A956.8EF64DB@urz.uni-heidelberg.de>
+Message-ID: <000601c123e3$02003180$0f2aa8c0@first>
+
+Martin,
+
+> Violence as necessary part of a human being ? 
+> I don't believe that.
+
+Like it or not, it is part of our gens.
+
+Violence does not only express itself as physical damage.
+There are so many kinds of psichological violence and
+abuse.
+
+Instead of closing our eyes and dreaming about a non
+real world, it is much better to be aware to recognize
+it in so many different ways... 
+
+Antonio
+
+
+From harbourtalk@matrixlist.com  Mon Aug 13 12:02:33 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Mon, 13 Aug 2001 12:02:33 +0100
+Subject: [HarbourTalk] TError()
+In-Reply-To: <3B7798AD.3709B0E4@urz.uni-heidelberg.de>; from martin.vogel@urz.uni-heidelberg.de on Mon, Aug 13, 2001 at 11:06:53AM +0200
+References: <000601c12374$2fe80d80$f5cbce81@martinvogel> <20010813082335.Q30092@hagbard.davep.org> <3B7798AD.3709B0E4@urz.uni-heidelberg.de>
+Message-ID: <20010813120233.A30092@hagbard.davep.org>
+
+On Mon, Aug 13, 2001 at 11:06:53AM +0200, Martin Vogel wrote:
+> Dave,
+> 
+> > > When will people understand that violence is the wrong way...
+> > 
+> > When all forms of political, economic and religious difference have been
+> > eradicated.
+> > 
+> > AKA "never".
+> 
+> Political, economic or religious differences do not give reason for
+> violence alone.
+
+Agreed, but as long as such differences exist (and I hope they always do)
+they give violent people "justification" for their antisocial behaviour.
+Sadly such differences also give the state reasons to misuse "public
+opinion" and commit acts of violence for the "common good" too. One man's
+terrorist is another man's hero and all that...
+
+>                 Think of the many examples where people have lived (and
+> live) together in peace although there have been (and are) such
+> differences between them. Violence exists when one group does not respect
+> and tolerate the other or feels superior to them.
+
+More often than not it seems to me that it's never "one group" but is,
+instead, a subset of dishonest, intolerant idiots within both groups. You
+suggest that I think of the "many examples" where people with differences
+live in peace but, I must admit, I'm having a hard time of thinking of such
+examples because there always seems to be a tiny minority of people who want
+to blame someone else for their own problems.
+
+>                                                           And if people
+> would stop hating people because of things that happened hundreds of years
+> ago. Doesn't lead to nowhere. Live and let live, despite all differences.
+
+That'd put the arms industry out of business, not to mention the fact that
+most forms of media would have nothing to report. On top of that it would
+mean that most states would have nothing to use to control the thinking of
+their populations. "They" can't allow that.
+
+Cynical? Moi?
+
+-- 
+Land of the free? Yeah, right.
+                                                http://www.freesklyarov.org/
+
+From harbourtalk@matrixlist.com  Mon Aug 13 12:46:59 2001
+From: harbourtalk@matrixlist.com (Martin Vogel)
+Date: Mon, 13 Aug 2001 13:46:59 +0200
+Subject: [HarbourTalk] TError()
+References: <000601c123e3$02003180$0f2aa8c0@first>
+Message-ID: <3B77BE33.6595CAB4@urz.uni-heidelberg.de>
+
+Antonio,
+
+> > Violence as necessary part of a human being ?
+> > I don't believe that.
+> 
+> Like it or not, it is part of our gens.
+
+There is much evidence at the moment that most part of our personality
+as a human being is NOT determined by our genes but by "education". If
+you learn that it is okay to kill people to get to your aim, you might
+do that. Or if you learn that you get to paradise if you kill
+non-believers of your religion...This is not determined by the genes.
+
+> Instead of closing our eyes and dreaming about a non
+> real world, it is much better to be aware to recognize
+> it in so many different ways...
+
+I am not closing my eyes nor am I dreaming...a world without violence
+will never exist, this is clear. But in the situation here, we are not
+talking about isolated violence (rape and so on) committed by
+individuals, but about planned violence committed by a group, i.e. a war
+situation. This is different. And I don't accept wars being an integral
+part of my life.
+
+Martin
+
+-- 
+Dipl.-Phys. Martin Vogel, Medical Biophysics Group
+Institute of Physiology and Pathophysiology, Ruprecht-Karls-Universitaet
+Im Neuenheimer Feld 326, 69120 Heidelberg, Germany
+Tel.: +49 6221 54 4089, Fax.: +49 6221 54 4123
+EMail: martin.vogel@urz.uni-heidelberg.de
+
+From harbourtalk@matrixlist.com  Mon Aug 13 12:51:10 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Mon, 13 Aug 2001 12:51:10 +0100
+Subject: [HarbourTalk] TError()
+In-Reply-To: <3B77A956.8EF64DB@urz.uni-heidelberg.de>; from martin.vogel@urz.uni-heidelberg.de on Mon, Aug 13, 2001 at 12:17:58PM +0200
+References: <000001c12355$f5fbd980$0f2aa8c0@first> <3B777DA9.4E64@synel.co.il> <3B77A534.1885@synel.co.il> <3B77A956.8EF64DB@urz.uni-heidelberg.de>
+Message-ID: <20010813125110.A28839@hagbard.davep.org>
+
+On Mon, Aug 13, 2001 at 12:17:58PM +0200, Martin Vogel wrote:
+> Chen,
+> 
+> > And then they will not be human any more. 
+> 
+> Violence as necessary part of a human being ? I don't believe that.
+
+I believe it's an unavoidable side-effect of life in general, not just human
+life. At the macro level anyway. While many of us might strive to live a
+violence free life that only operates at the micro level.
+
+The irony, of course, is that the only way to stop general violence and
+disorder is the threat of violence. We generally call that approach to
+violence "the rule of law".
+
+-- 
+Land of the free? Yeah, right.
+                                                http://www.freesklyarov.org/
+
+From harbourtalk@matrixlist.com  Mon Aug 13 13:04:06 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Mon, 13 Aug 2001 14:04:06 +0200
+Subject: [HarbourTalk] TError()
+In-Reply-To: <3B77BE33.6595CAB4@urz.uni-heidelberg.de>
+Message-ID: <000701c123f0$0d73ca60$0f2aa8c0@first>
+
+Martin,
+
+> And I don't accept wars being an integral part of my life.
+
+Our inmunological system it is all based on war.
+Our body fights viruses constantly. On a higher level,
+inteligence means adaptation, and adaptation -again- requires
+to fight.
+
+Universe life is based on the depredators piramid. Life is
+based on the death. That is a fact.
+
+I am not saying I am in favor or against this. I am just
+saying it is a scientifically proved fact.
+
+
+Antonio
+
+
+From harbourtalk@matrixlist.com  Mon Aug 13 13:41:07 2001
+From: harbourtalk@matrixlist.com (Martin Vogel)
+Date: Mon, 13 Aug 2001 14:41:07 +0200
+Subject: [HarbourTalk] TError()
+References: <000601c12374$2fe80d80$f5cbce81@martinvogel> <20010813082335.Q30092@hagbard.davep.org> <3B7798AD.3709B0E4@urz.uni-heidelberg.de> <20010813120233.A30092@hagbard.davep.org>
+Message-ID: <3B77CAE3.1E9418BF@urz.uni-heidelberg.de>
+
+Dave,
+
+> >                 Think of the many examples where people have lived (and
+> > live) together in peace although there have been (and are) such
+> > differences between them. Violence exists when one group does not respect
+> > and tolerate the other or feels superior to them.
+> 
+> More often than not it seems to me that it's never "one group" but is,
+> instead, a subset of dishonest, intolerant idiots within both groups. You
+
+Yup, and the most important thing is to keep this group as small as
+possible. I agree that they will alwys exist but they simply must not
+take over leadership.
+
+> suggest that I think of the "many examples" where people with differences
+> live in peace but, I must admit, I'm having a hard time of thinking of such
+> examples because there always seems to be a tiny minority of people who want
+> to blame someone else for their own problems.
+
+Yes, but don't let this minority control the thoughts of the majority.
+And to give some examples: Catholics and Protestants here in Germany
+(not to be taken for granted looking at history), German and French
+people (not too long ago, the French were the Germans' "inherited
+enemies"), rich and poor people in many countries (as long as the poor
+get the at least the chance to get some prosperity, of course)...
+
+> That'd put the arms industry out of business, not to mention the fact that
+> most forms of media would have nothing to report. On top of that it would
+> mean that most states would have nothing to use to control the thinking of
+> their populations. "They" can't allow that.
+> 
+> Cynical? Moi?
+
+Mais non, mon ami, a simple description of people also being referred to
+as unscrupulous.
+
+Martin
+
+From harbourtalk@matrixlist.com  Mon Aug 13 14:28:40 2001
+From: harbourtalk@matrixlist.com (Mark W. Schumann)
+Date: Mon, 13 Aug 2001 09:28:40 -0400
+Subject: [HarbourTalk] TError()
+In-Reply-To: <20010813120233.A30092@hagbard.davep.org>; from davep@davep.org on Mon, Aug 13, 2001 at 12:02:33PM +0100
+References: <000601c12374$2fe80d80$f5cbce81@martinvogel> <20010813082335.Q30092@hagbard.davep.org> <3B7798AD.3709B0E4@urz.uni-heidelberg.de> <20010813120233.A30092@hagbard.davep.org>
+Message-ID: <20010813092840.B1581@columbus.private.underflap.com>
+
+On Mon, Aug 13, 2001 at 12:02:33PM +0100, Dave Pearson wrote:
+> That'd put the arms industry out of business, not to mention the fact that
+> most forms of media would have nothing to report. On top of that it would
+> mean that most states would have nothing to use to control the thinking of
+> their populations. "They" can't allow that.
+
+"We are at war with Eastasia.  We have ALWAYS been at war with Eastasia."
+
+
+From harbourtalk@matrixlist.com  Mon Aug 13 14:29:53 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Mon, 13 Aug 2001 14:29:53 +0100
+Subject: [HarbourTalk] TError()
+In-Reply-To: <000701c123f0$0d73ca60$0f2aa8c0@first>; from alinares@fivetech.com on Mon, Aug 13, 2001 at 02:04:06PM +0200
+References: <3B77BE33.6595CAB4@urz.uni-heidelberg.de> <000701c123f0$0d73ca60$0f2aa8c0@first>
+Message-ID: <20010813142953.F30092@hagbard.davep.org>
+
+On Mon, Aug 13, 2001 at 02:04:06PM +0200, Antonio Linares wrote:
+
+> Universe life is based on the depredators piramid. Life is based on the
+> death. That is a fact.
+> 
+> I am not saying I am in favor or against this. I am just saying it is a
+> scientifically proved fact.
+
+Not to detract from your main point but I seriously doubt that there's
+scientific proof that this is the basis of all life in the universe (all
+*known* life, yes, not speaking of all life in the universe is something
+different).
+
+-- 
+Land of the free? Yeah, right.
+                                                http://www.freesklyarov.org/
+
+From harbourtalk@matrixlist.com  Mon Aug 13 14:41:23 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Mon, 13 Aug 2001 14:41:23 +0100
+Subject: [HarbourTalk] TError()
+In-Reply-To: <3B77CAE3.1E9418BF@urz.uni-heidelberg.de>; from martin.vogel@urz.uni-heidelberg.de on Mon, Aug 13, 2001 at 02:41:07PM +0200
+References: <000601c12374$2fe80d80$f5cbce81@martinvogel> <20010813082335.Q30092@hagbard.davep.org> <3B7798AD.3709B0E4@urz.uni-heidelberg.de> <20010813120233.A30092@hagbard.davep.org> <3B77CAE3.1E9418BF@urz.uni-heidelberg.de>
+Message-ID: <20010813144123.G30092@hagbard.davep.org>
+
+On Mon, Aug 13, 2001 at 02:41:07PM +0200, Martin Vogel wrote:
+> Dave,
+> 
+> > More often than not it seems to me that it's never "one group" but is,
+> > instead, a subset of dishonest, intolerant idiots within both groups.
+> > You
+> 
+> Yup, and the most important thing is to keep this group as small as
+> possible. I agree that they will alwys exist but they simply must not take
+> over leadership.
+
+[Thread drift, but this is harbour-talk after all] Of course, the desire to
+keep "this group as small as possible" is one of the methods employed by the
+state to control the population as a whole. Once you've scared the
+population with the threat of what such small groups can do the population
+will then allow all sorts of invasive measures to be employed. Privacy then
+suffers.
+
+Also, the methods employed to stop the "violent minority" are themselves
+forms of violence. Or, if they're not forms of violence they employ the
+threat of violence. As I said in another email, that threat of violence is
+generally known as "the rule of law". AKA "Do as the 'majority' says or
+suffer the consequences".
+
+> > suggest that I think of the "many examples" where people with
+> > differences live in peace but, I must admit, I'm having a hard time of
+> > thinking of such examples because there always seems to be a tiny
+> > minority of people who want to blame someone else for their own
+> > problems.
+> 
+> Yes, but don't let this minority control the thoughts of the majority.
+
+Unfortunately this generally means that the majority has to either control
+the thoughts of the majority and/or the minority. Perhaps they'll even seek
+to eradicate the minority? Again, that either requires violence or the
+threat of violence. Either way, violence exists.
+
+> And to give some examples: Catholics and Protestants here in Germany (not
+> to be taken for granted looking at history), German and French people (not
+> too long ago, the French were the Germans' "inherited enemies"), rich and
+> poor people in many countries (as long as the poor get the at least the
+> chance to get some prosperity, of course)...
+
+I do honestly wonder if these examples you give really are examples. Can you
+say with certainty that in those example communities that nobody harbour's
+thoughts of violence against members of the other group? Sure, I know you
+can't, but my point here is that, for some within those groups, I'd be
+willing that it's the threat of violence that stops the violence from
+happening.
+
+> > Cynical? Moi?
+> 
+> Mais non, mon ami, 
+
+Ha, you've lost me already. I'm a lazy English speaker, "Moi", "Oui" and
+"Non" is about as far as my vocabulary goes I'm afraid. :(
+
+>                    a simple description of people also being referred to
+> as unscrupulous.
+
+Sadly it's also a description of how states generally work.
+
+-- 
+Harbour is a free   | Harbour Web Site: http://www.harbour-project.org/
+software, cross     | Harbour FAQ.....: http://www.harbour-project.org/faq/
+platform, Clipper   | My Harbour Pages: http://www.davep.org/harbour/
+compatible compiler | Harbour News....: http://www.davep.org/harbour/news/
+
+From harbourtalk@matrixlist.com  Mon Aug 13 15:46:19 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Mon, 13 Aug 2001 15:46:19 +0100
+Subject: [HarbourTalk] TError()
+In-Reply-To: <20010813092840.B1581@columbus.private.underflap.com>; from catfood@underflap.com on Mon, Aug 13, 2001 at 09:28:40AM -0400
+References: <000601c12374$2fe80d80$f5cbce81@martinvogel> <20010813082335.Q30092@hagbard.davep.org> <3B7798AD.3709B0E4@urz.uni-heidelberg.de> <20010813120233.A30092@hagbard.davep.org> <20010813092840.B1581@columbus.private.underflap.com>
+Message-ID: <20010813154619.M30092@hagbard.davep.org>
+
+On Mon, Aug 13, 2001 at 09:28:40AM -0400, Mark W. Schumann wrote:
+> On Mon, Aug 13, 2001 at 12:02:33PM +0100, Dave Pearson wrote:
+>
+> > That'd put the arms industry out of business, not to mention the fact
+> > that most forms of media would have nothing to report. On top of that it
+> > would mean that most states would have nothing to use to control the
+> > thinking of their populations. "They" can't allow that.
+> 
+> "We are at war with Eastasia.  We have ALWAYS been at war with Eastasia."
+
+There's a book everyone should read. We read it at school (which would
+probably have unnerved Orwell <g>) and I've read it a couple of times since.
+
+I've been mulling all of this over this afternoon and I guess this is all
+part of the "it's for the good of the children" problem. Find a reason that
+no "good" person could argue against and milk it for all it's worth.
+
+<URL:http://www.theregister.co.uk/content/6/20966.html> seems quite apt at
+this point. Be afraid. Be very afraid.
+
+-- 
+Land of the free? Yeah, right.
+                                                http://www.freesklyarov.org/
+
+From harbourtalk@matrixlist.com  Mon Aug 13 10:51:03 2001
+From: harbourtalk@matrixlist.com (gabor salai)
+Date: (No, or invalid, date.)
+Subject: [HarbourTalk] TError()
+In-Reply-To: <000701c123f0$0d73ca60$0f2aa8c0@first>
+References: Conversation <3B77BE33.6595CAB4@urz.uni-heidelberg.de> with last message <000701c123f0$0d73ca60$0f2aa8c0@first>
+Message-ID: <MAPI.Id.0016.0073616c5f6872203030303730303037@MAPI.to.RFC822>
+
+this is not a matter of harbour but the war, and I'm quallified to say:
+point is in the CHOICE
+there is no choice in relation between lion/antillope, virus/antivirus
+(they are all hardcoded)
+but on "higher" level someone must seek the opportunity...
+
+
+----------
+> Martin,
+>
+> > And I don't accept wars being an integral part of my life.
+>
+> Our inmunological system it is all based on war.
+> Our body fights viruses constantly. On a higher level,
+> inteligence means adaptation, and adaptation -again- requires
+> to fight.
+>
+> Universe life is based on the depredators piramid. Life is
+> based on the death. That is a fact.
+>
+> I am not saying I am in favor or against this. I am just
+> saying it is a scientifically proved fact.
+>
+>
+> Antonio
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>
+
+
+
+From harbourtalk@matrixlist.com  Mon Aug 13 16:37:59 2001
+From: harbourtalk@matrixlist.com (Martin Vogel)
+Date: Mon, 13 Aug 2001 17:37:59 +0200
+Subject: [HarbourTalk] TError()
+References: <000601c12374$2fe80d80$f5cbce81@martinvogel> <20010813082335.Q30092@hagbard.davep.org> <3B7798AD.3709B0E4@urz.uni-heidelberg.de> <20010813120233.A30092@hagbard.davep.org> <20010813092840.B1581@columbus.private.underflap.com> <20010813154619.M30092@hagbard.davep.org>
+Message-ID: <3B77F457.EF641B5B@urz.uni-heidelberg.de>
+
+> > "We are at war with Eastasia.  We have ALWAYS been at war with Eastasia."
+> 
+> There's a book everyone should read. We read it at school (which would
+> probably have unnerved Orwell <g>) and I've read it a couple of times since.
+
+A very good book, indeed. We have read it at school, too. And now
+looking at what comes to daylight about how the "Stasi" worked in
+Eastern Germany - you can see some analogies. The psychological methods
+they used to "break" the "enemies of the republic" (taking them to
+prison, let them go but prevent that they get a job, take them to prison
+again and so on...), how they perverted the facts in their newspaper
+articles and how they even lied while drawing maps (the "official" east
+german map of Berlin showed no single building and two roads only for
+the western part, West-Berlin should look like a field and forest
+territory)...
+
+> <URL:http://www.theregister.co.uk/content/6/20966.html> seems quite apt at
+> this point. Be afraid. Be very afraid.
+
+Reading this makes me shiver. Really! They are installing cameras at
+many bus stops here, too, and I am not feeling very glad about that. But
+I'm afraid many people are willing to give up a big part of their
+freedom just for a feeling of "security" since,  like you said, no
+"good" person can be against preventing crimes. 
+
+Martin
+
+From harbourtalk@matrixlist.com  Mon Aug 13 16:43:53 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Mon, 13 Aug 2001 12:43:53 -0300
+Subject: [HarbourTalk] TError()
+References: <Pine.GSU.4.30_heb2.09.0108122009280.5417-100000@actcom.co.il>
+Message-ID: <000f01c1240e$f6275740$88d4d7c8@culik>
+
+Chen
+
+
+> About 2 hours ago a suicide bomber splash itself on a small
+> coffee shop just UNDER my bedroom window, it seems that the
+> bomber was the only one that got killed, about 20 wounded
+> all of them evacuated already to hospitals in the region.
+> Me and my family are Ok.
+> 
+
+Glad to hear that you are well and alive
+
+ --
+
+Regards
+
+Luiz Rafael Culik
+
+
+From harbourtalk@matrixlist.com  Mon Aug 13 17:07:58 2001
+From: harbourtalk@matrixlist.com (Mark W. Schumann)
+Date: Mon, 13 Aug 2001 12:07:58 -0400
+Subject: [HarbourTalk] TError()
+In-Reply-To: <3B77F457.EF641B5B@urz.uni-heidelberg.de>; from martin.vogel@urz.uni-heidelberg.de on Mon, Aug 13, 2001 at 05:37:59PM +0200
+References: <000601c12374$2fe80d80$f5cbce81@martinvogel> <20010813082335.Q30092@hagbard.davep.org> <3B7798AD.3709B0E4@urz.uni-heidelberg.de> <20010813120233.A30092@hagbard.davep.org> <20010813092840.B1581@columbus.private.underflap.com> <20010813154619.M30092@hagbard.davep.org> <3B77F457.EF641B5B@urz.uni-heidelberg.de>
+Message-ID: <20010813120758.A2253@columbus.private.underflap.com>
+
+On Mon, Aug 13, 2001 at 05:37:59PM +0200, Martin Vogel wrote:
+> Reading this makes me shiver. Really! They are installing cameras at
+> many bus stops here, too, and I am not feeling very glad about that. But
+> I'm afraid many people are willing to give up a big part of their
+> freedom just for a feeling of "security" since,  like you said, no
+> "good" person can be against preventing crimes. 
+
+Agreed.  Another amazing example:
+
+Around 15 years ago (!) a local[0] lieutenant organized a police operation
+to protect the business of a known cocaine dealer.  The plan was that
+the police would save up a share of the profits in a special fund that
+would be used to make a spectacular "buy" in Florida[1] in order to get
+evidence to arrest and convict a major supplier.  The project "succeeded."
+The lieutenant was praised by the mayor[2] for "innovative police work"
+and soon promoted to Chief.
+
+When the details of this plan were revealed by an investigative reporter,
+the four police officers who could be shown to have had something to do
+with the plan were tried on charges of, um, something like conspiring
+to sell illegal drugs.
+
+They were all acquitted without having to present a defense because, as
+the judge ruled, that even if all the accusations were true, what they
+did would not have been considered illegal anyway.
+
+The reaction of most media and political types to this scandal amounted
+to the old saying, "If you want an omelette, you have to break some eggs."
+
+So in .us, ANYTHING is okay if it's supposed to be against selling drugs.
+Even if it's... selling drugs.  Surely no good person could be against
+that if the intention is right?
+
+
+[0] .cleveland.oh.us
+[1] southeastern .us state, often considered a primary importation point
+    for illegal substances
+[2] now US Senator George Voinovich, don't you feel better now?
+
+-- 
+"You know you're a bad influence on the neighborhood when your kids
+ walk around the block singing The Cheeseburger Song just to annoy
+ the drug dealers."                                          --me
+
+From harbourtalk@matrixlist.com  Mon Aug 13 19:45:31 2001
+From: harbourtalk@matrixlist.com (Alexander S.Kresin)
+Date: Mon, 13 Aug 2001 22:45:31 +0400
+Subject: [HarbourTalk] Re: TError()
+In-Reply-To: <3B77F457.EF641B5B@urz.uni-heidelberg.de>
+References: <000601c12374$2fe80d80$f5cbce81@martinvogel>
+ <20010813082335.Q30092@hagbard.davep.org>
+ <3B7798AD.3709B0E4@urz.uni-heidelberg.de>
+ <20010813120233.A30092@hagbard.davep.org>
+ <20010813092840.B1581@columbus.private.underflap.com>
+ <20010813154619.M30092@hagbard.davep.org>
+ <3B77F457.EF641B5B@urz.uni-heidelberg.de>
+Message-ID: <7114280557.20010813224531@belacy.belgorod.su>
+
+>> > "We are at war with Eastasia.  We have ALWAYS been at war with Eastasia."
+>> 
+>> There's a book everyone should read. We read it at school (which would
+>> probably have unnerved Orwell <g>) and I've read it a couple of times since.
+
+MV> A very good book, indeed. We have read it at school, too. And now
+MV> looking at what comes to daylight about how the "Stasi" worked in
+MV> Eastern Germany - you can see some analogies.
+
+ There is a lot of analogies in modern world, too.
+ I thought about Orwell's 'Ministry of Peace' and 'Ministry of Truth'
+ every time when I heard speeches of some Nato officials, especially
+ while last Yugoslavia's company. ( I could give many examples from
+ Russian inner politic, too, but they aren't known enough aboard ).
+ But Orwell's novel is much more deep than simple analogies ...
+ Just my 2 cents :).
+
+Best regards,
+ Alexander
+http://www.geocities.com/alkresin/
+
+
+
+From harbourtalk@matrixlist.com  Mon Aug 13 21:45:35 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Mon, 13 Aug 2001 21:45:35 +0100
+Subject: [HarbourTalk] TError()
+In-Reply-To: <3B77F457.EF641B5B@urz.uni-heidelberg.de>; from martin.vogel@urz.uni-heidelberg.de on Mon, Aug 13, 2001 at 05:37:59PM +0200
+References: <000601c12374$2fe80d80$f5cbce81@martinvogel> <20010813082335.Q30092@hagbard.davep.org> <3B7798AD.3709B0E4@urz.uni-heidelberg.de> <20010813120233.A30092@hagbard.davep.org> <20010813092840.B1581@columbus.private.underflap.com> <20010813154619.M30092@hagbard.davep.org> <3B77F457.EF641B5B@urz.uni-heidelberg.de>
+Message-ID: <20010813214535.S30092@hagbard.davep.org>
+
+On Mon, Aug 13, 2001 at 05:37:59PM +0200, Martin Vogel wrote:
+
+> > There's a book everyone should read. We read it at school (which would
+> > probably have unnerved Orwell <g>) and I've read it a couple of times
+> > since.
+> 
+> A very good book, indeed. We have read it at school, too. And now
+> looking at what comes to daylight about how the "Stasi" worked in
+> Eastern Germany - you can see some analogies. [SNIP]
+
+Funny you should mention that, I was watching a documentary on TV (here in
+the UK) last night about how states keep tabs on their populations. In
+particular they were looking at the "cold war" era and how the US, UK and
+DDR did things. As you might imagine the Stasi got a good mention.
+
+There was a fascinating statistic that said that one person in two hundred
+was involved in keep tabs on the rest of the population.
+
+> > <URL:http://www.theregister.co.uk/content/6/20966.html> seems quite apt
+> > at this point. Be afraid. Be very afraid.
+> 
+> Reading this makes me shiver. Really! [SNIP]
+
+You and me both. CCTV is big business here in the UK now and we're
+constantly told how it's for our own good and how "no honest person could
+possibly have anything to worry about". Next it'll be ID cards (already
+partly there with the new format of the driving licence).
+
+-- 
+Land of the free? Yeah, right.
+                                                http://www.freesklyarov.org/
+
+From harbourtalk@matrixlist.com  Mon Aug 13 21:58:27 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Mon, 13 Aug 2001 21:58:27 +0100
+Subject: [HarbourTalk] Re: TError()
+In-Reply-To: <7114280557.20010813224531@belacy.belgorod.su>; from alex@belacy.belgorod.su on Mon, Aug 13, 2001 at 10:45:31PM +0400
+References: <000601c12374$2fe80d80$f5cbce81@martinvogel> <20010813082335.Q30092@hagbard.davep.org> <3B7798AD.3709B0E4@urz.uni-heidelberg.de> <20010813120233.A30092@hagbard.davep.org> <20010813092840.B1581@columbus.private.underflap.com> <20010813154619.M30092@hagbard.davep.org> <3B77F457.EF641B5B@urz.uni-heidelberg.de> <7114280557.20010813224531@belacy.belgorod.su>
+Message-ID: <20010813215827.T30092@hagbard.davep.org>
+
+On Mon, Aug 13, 2001 at 10:45:31PM +0400, Alexander S.Kresin wrote:
+
+>  There is a lot of analogies in modern world, too.
+>  I thought about Orwell's 'Ministry of Peace' and 'Ministry of Truth'
+>  every time when I heard speeches of some Nato officials, especially
+>  while last Yugoslavia's company. [SNIP]
+
+Well put, that's an excellent comparison IMO.
+
+During one of the bombing campaigns in the former Yugoslavia (sorry, I'm
+awful at remembering the details), on the first night of a heavy bombing
+campaign, I can remember sitting there flicking thru the news channels on
+Sky[1] and being horrified at how all the reports were praising the
+precision of the bombing and how "clean" the whole thing was. Plenty of
+presenters could give me all sorts of information about the yield of the
+weapon and how the target was justified and the like, nobody seemed to be
+reporting in a neutral sense.
+
+I was very heartened when, on the BBC news IIRC, there was a "round table"
+discussion involving Tony Benn[2]. I forget who else was in the discussion
+but I do recall that there was some young military "expert" getting all
+excited about the pictures and some equally young presenter egging him on.
+
+Benn exploded into an amazing rant, pointing out to them that *real* people
+with *real* lives were on the receiving end of that action. He pointed out
+that nobody seemed to be questioning the morality of the action, let alone
+the legality of it. Having been called on their thoughtless praise of the
+spectacle of the bombing they all seemed lost for anything useful to say.
+
+I was really heartened by that. Sadly, the following day, most people I
+spoke to didn't see it and those that did thought that Benn was missing the
+point because "of course" the action was justified.
+
+I've got a lot of time for Tony Benn.
+
+>                                   ( I could give many examples from
+>  Russian inner politic, too, but they aren't known enough aboard ). But
+>  Orwell's novel is much more deep than simple analogies ... Just my 2
+>  cents :).
+
+Agreed, there's a lot more than just analogies, but the analogies are useful
+in themselves. _Animal Farm_ is enjoyable from this POV too.
+
+-----
+[1]  Satellite TV provider I use in the UK.
+
+[2]  Very famous left-wing MP in the UK. Probably best known for his
+anti-nuke stance.
+
+-- 
+Land of the free? Yeah, right.
+                                                http://www.freesklyarov.org/
+
+From harbourtalk@matrixlist.com  Mon Aug 13 23:48:43 2001
+From: harbourtalk@matrixlist.com (Mark W. Schumann)
+Date: Mon, 13 Aug 2001 18:48:43 -0400
+Subject: [HarbourTalk] TError()
+In-Reply-To: <20010813214535.S30092@hagbard.davep.org>; from davep@davep.org on Mon, Aug 13, 2001 at 09:45:35PM +0100
+References: <000601c12374$2fe80d80$f5cbce81@martinvogel> <20010813082335.Q30092@hagbard.davep.org> <3B7798AD.3709B0E4@urz.uni-heidelberg.de> <20010813120233.A30092@hagbard.davep.org> <20010813092840.B1581@columbus.private.underflap.com> <20010813154619.M30092@hagbard.davep.org> <3B77F457.EF641B5B@urz.uni-heidelberg.de> <20010813214535.S30092@hagbard.davep.org>
+Message-ID: <20010813184843.A3711@columbus.private.underflap.com>
+
+On Mon, Aug 13, 2001 at 09:45:35PM +0100, Dave Pearson wrote:
+> Funny you should mention that, I was watching a documentary on TV (here in
+> the UK) last night about how states keep tabs on their populations. In
+> particular they were looking at the "cold war" era and how the US, UK and
+> DDR did things. As you might imagine the Stasi got a good mention.
+> 
+> There was a fascinating statistic that said that one person in two hundred
+> was involved in keep tabs on the rest of the population.
+
+I seem to recall it was more like one in twenty.
+
+Either way, the number is shocking.
+
+-- 
+"You know you're a bad influence on the neighborhood when your kids
+ walk around the block singing The Cheeseburger Song just to annoy
+ the drug dealers."                                          --me
+
+From harbourtalk@matrixlist.com  Tue Aug 14 00:02:39 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 14 Aug 2001 00:02:39 +0100
+Subject: [HarbourTalk] TError()
+In-Reply-To: <20010813184843.A3711@columbus.private.underflap.com>; from catfood@underflap.com on Mon, Aug 13, 2001 at 06:48:43PM -0400
+References: <000601c12374$2fe80d80$f5cbce81@martinvogel> <20010813082335.Q30092@hagbard.davep.org> <3B7798AD.3709B0E4@urz.uni-heidelberg.de> <20010813120233.A30092@hagbard.davep.org> <20010813092840.B1581@columbus.private.underflap.com> <20010813154619.M30092@hagbard.davep.org> <3B77F457.EF641B5B@urz.uni-heidelberg.de> <20010813214535.S30092@hagbard.davep.org> <20010813184843.A3711@columbus.private.underflap.com>
+Message-ID: <20010814000239.A1437@hagbard.davep.org>
+
+On Mon, Aug 13, 2001 at 06:48:43PM -0400, Mark W. Schumann wrote:
+> On Mon, Aug 13, 2001 at 09:45:35PM +0100, Dave Pearson wrote:
+>
+> > [SNIP "Stasi" got a good mention in documentary I watched]
+> > 
+> > There was a fascinating statistic that said that one person in two
+> > hundred was involved in keep tabs on the rest of the population.
+> 
+> I seem to recall it was more like one in twenty.
+
+You recall from the documentary I mentioned or from some other source?
+
+> Either way, the number is shocking.
+
+One in twenty would be almost unbelievable.
+
+-- 
+Land of the free? Yeah, right.
+                                                http://www.freesklyarov.org/
+
+From harbourtalk@matrixlist.com  Tue Aug 14 10:28:37 2001
+From: harbourtalk@matrixlist.com (Martin Vogel)
+Date: Tue, 14 Aug 2001 11:28:37 +0200
+Subject: [HarbourTalk] TError()
+References: <000601c12374$2fe80d80$f5cbce81@martinvogel> <20010813082335.Q30092@hagbard.davep.org> <3B7798AD.3709B0E4@urz.uni-heidelberg.de> <20010813120233.A30092@hagbard.davep.org> <20010813092840.B1581@columbus.private.underflap.com> <20010813154619.M30092@hagbard.davep.org> <3B77F457.EF641B5B@urz.uni-heidelberg.de> <20010813214535.S30092@hagbard.davep.org> <20010813184843.A3711@columbus.private.underflap.com> <20010814000239.A1437@hagbard.davep.org>
+Message-ID: <3B78EF45.FB4E87CE@urz.uni-heidelberg.de>
+
+> > I seem to recall it was more like one in twenty.
+> 
+> You recall from the documentary I mentioned or from some other source?
+> 
+> > Either way, the number is shocking.
+> 
+> One in twenty would be almost unbelievable.
+
+<http://www.stasiopfer.de/mfsbig.html> (german site, sorry) states that
+in 1989 there have been 85,500 official and 174,200 "unofficial", i.e.
+inner spies, employed by the Stasi. For a population of 16 millions,
+that would be 1 in 60. The total number is larger, since many IM
+(inoffizielle Mitarbeiter - "unofficial co-workers") have only worked
+some years for the Stasi (as long as they could deliver interesting
+information), so that there have been many fluctuations.
+
+From harbourtalk@matrixlist.com  Tue Aug 14 14:16:49 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 14 Aug 2001 14:16:49 +0100
+Subject: [HarbourTalk] TError()
+In-Reply-To: <3B78EF45.FB4E87CE@urz.uni-heidelberg.de>; from martin.vogel@urz.uni-heidelberg.de on Tue, Aug 14, 2001 at 11:28:37AM +0200
+References: <20010813082335.Q30092@hagbard.davep.org> <3B7798AD.3709B0E4@urz.uni-heidelberg.de> <20010813120233.A30092@hagbard.davep.org> <20010813092840.B1581@columbus.private.underflap.com> <20010813154619.M30092@hagbard.davep.org> <3B77F457.EF641B5B@urz.uni-heidelberg.de> <20010813214535.S30092@hagbard.davep.org> <20010813184843.A3711@columbus.private.underflap.com> <20010814000239.A1437@hagbard.davep.org> <3B78EF45.FB4E87CE@urz.uni-heidelberg.de>
+Message-ID: <20010814141649.M1437@hagbard.davep.org>
+
+On Tue, Aug 14, 2001 at 11:28:37AM +0200, Martin Vogel wrote:
+
+> <http://www.stasiopfer.de/mfsbig.html> (german site, sorry) states that in
+> 1989 there have been 85,500 official and 174,200 "unofficial", i.e. inner
+> spies, employed by the Stasi. For a population of 16 millions, that would
+> be 1 in 60. The total number is larger, since many IM (inoffizielle
+> Mitarbeiter - "unofficial co-workers") have only worked some years for the
+> Stasi (as long as they could deliver interesting information), so that
+> there have been many fluctuations.
+
+So one in two hundred would be about right for official Stasi employees and
+it's closer to Mark's figure if we include unofficial workers and informants
+and the like?
+
+Fascinating, and almost unbelievable, stuff.
+
+Still, I've never actually looked at how many people work for and with the
+security service in the UK.
+
+-- 
+Land of the free? Yeah, right.
+                                                http://www.freesklyarov.org/
+
+From harbourtalk@matrixlist.com  Tue Aug 14 23:02:08 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Wed, 15 Aug 2001 00:02:08 +0200
+Subject: [HarbourTalk] hypocrisy
+In-Reply-To: <20010814141649.M1437@hagbard.davep.org>
+Message-ID: <000101c1250c$c2e976c0$0f2aa8c0@first>
+
+David,
+
+>>
+I should have looked the word up in the dictionary *before* sending
+that message. It's actually spelled "hypocrisy" (and someone who
+practices hypocrisy is a "hypocrite").
+>>
+
+100% right :-)
+
+Thanks!
+
+
+Antonio
+
+
+From harbourtalk@matrixlist.com  Tue Aug 14 23:02:01 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Wed, 15 Aug 2001 00:02:01 +0200
+Subject: [HarbourTalk] =?iso-8859-1?B?aGlwb2NyZXPtYQ==?=
+In-Reply-To: <20010814141649.M1437@hagbard.davep.org>
+Message-ID: <000001c1250c$bf716700$0f2aa8c0@first>
+
+David,
+
+>>
+That looks like the english work "hypocrasy", which in laymans terms
+means "do as I say, not as I do."
+>>
+
+No, that is not the meaning.
+
+"Hipocresía" means that you act with _aparently_ good behavior
+and self control, meanwhile -in fact- your inner feelings are totally
+the opposite...
+
+
+Antonio
+
+
+
+From harbourtalk@matrixlist.com  Sat Aug 18 19:44:45 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Sat, 18 Aug 2001 20:44:45 +0200
+Subject: [HarbourTalk] mini,s
+In-Reply-To: <001c01c127fe$10ae4f40$6400a8c0@patrick2>
+Message-ID: <000801c12815$d9a9e960$0f2aa8c0@first>
+
+> (and I don't like mini-coopers too ;-)))
+
+Well, here the most popular "mini" was
+called "mini-cooper" (besides, recently, 
+Austin Powers "mini-me" :-)
+
+Anyhow, I don't like "mini"s, neither "mini-cooper"s...
+(though I respect that some people may enjoy them, including
+Mr. Bean :-)
+
+you see, Dave, we are all different :-)
+
+
+Antonio
+
+
+From harbourtalk@matrixlist.com  Sat Aug 18 22:36:26 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Sat, 18 Aug 2001 23:36:26 +0200
+Subject: [HarbourTalk] compiler warnings
+In-Reply-To: <000801c12815$d9a9e960$0f2aa8c0@first>
+Message-ID: <000c01c1282d$d592eda0$0f2aa8c0@first>
+
+>> Antonio, is there a new fwh?
+>> if so may i have it?
+
+Sid, not yet.
+
+We have been busy finishing a new FiveTech
+product named FiveMap. You may download a
+working demo from here: 
+
+http://www.btlink.net/~Btlink915752047/FiveMapDemo.exe
+
+best regards,
+
+Antonio
+
+
+From harbourtalk@matrixlist.com  Sun Aug 19 08:28:01 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Sun, 19 Aug 2001 08:28:01 +0100
+Subject: [HarbourTalk] mini,s
+In-Reply-To: <000801c12815$d9a9e960$0f2aa8c0@first>; from alinares@fivetech.com on Sat, Aug 18, 2001 at 08:44:45PM +0200
+References: <001c01c127fe$10ae4f40$6400a8c0@patrick2> <000801c12815$d9a9e960$0f2aa8c0@first>
+Message-ID: <20010819082801.B1437@hagbard.davep.org>
+
+On Sat, Aug 18, 2001 at 08:44:45PM +0200, Antonio Linares wrote:
+
+> you see, Dave, we are all different :-)
+
+You say this like this is news to me. Please spare me the pop philosophy
+Antonio Linares. If you've got something to say about me, simply say it.
+Preferably not using the harbour developer's mailing list.
+
+-- 
+Harbour is a free   | Harbour Web Site: http://www.harbour-project.org/
+software, cross     | Harbour FAQ.....: http://www.harbour-project.org/faq/
+platform, Clipper   | My Harbour Pages: http://www.davep.org/harbour/
+compatible compiler | Harbour News....: http://www.davep.org/harbour/news/
+
+From harbourtalk@matrixlist.com  Sun Aug 19 10:17:31 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Sun, 19 Aug 2001 11:17:31 +0200
+Subject: [HarbourTalk] mini,s
+In-Reply-To: <20010819082801.B1437@hagbard.davep.org>
+Message-ID: <001001c1288f$c670cc40$0f2aa8c0@first>
+
+Dave,
+
+> If you've got something to say about me, simply say it.
+
+You see, Dave, again you are pushing people 
+to express themselves using the way you enjoy.
+
+That is the reason why your legal and picky style
+has filled the list and made all of us talk and feel
+as lawyers.
+
+We are all free to express ourselves the way
+we want.
+
+
+Antonio
+
+
+From harbourtalk@matrixlist.com  Sun Aug 19 10:38:48 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Sun, 19 Aug 2001 10:38:48 +0100
+Subject: [HarbourTalk] mini,s
+In-Reply-To: <001001c1288f$c670cc40$0f2aa8c0@first>; from alinares@fivetech.com on Sun, Aug 19, 2001 at 11:17:31AM +0200
+References: <20010819082801.B1437@hagbard.davep.org> <001001c1288f$c670cc40$0f2aa8c0@first>
+Message-ID: <20010819103848.H1437@hagbard.davep.org>
+
+On Sun, Aug 19, 2001 at 11:17:31AM +0200, Antonio Linares wrote:
+
+> We are all free to express ourselves the way we want.
+
+I've dealt with your other points in private email as there's little point
+in muddying the harbour lists any more with rebuttals of your insults.
+However, I did want to say, in response to the above, that I fully and
+totally agree with this, hence the reason that I express myself and hence
+the reason I show an active interest in what other people have to say.
+
+-- 
+Harbour is a free   | Harbour Web Site: http://www.harbour-project.org/
+software, cross     | Harbour FAQ.....: http://www.harbour-project.org/faq/
+platform, Clipper   | My Harbour Pages: http://www.davep.org/harbour/
+compatible compiler | Harbour News....: http://www.davep.org/harbour/news/
+
+From harbourtalk@matrixlist.com  Sun Aug 19 10:45:11 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Sun, 19 Aug 2001 11:45:11 +0200
+Subject: [HarbourTalk] mini,s
+In-Reply-To: <20010819103848.H1437@hagbard.davep.org>
+Message-ID: <001401c12893$a386ab60$0f2aa8c0@first>
+
+Dave,
+
+> ... and suggest that harbour's problems are down to me ...
+
+I never said that.
+
+You see, another sample of your picky style.
+
+On a next step you will start saying I am insulting
+you and then... we all know what's next :-)
+
+
+Antonio
+
+
+
+From harbourtalk@matrixlist.com  Sun Aug 19 20:36:15 2001
+From: harbourtalk@matrixlist.com (Marek Paliwoda)
+Date: Sun, 19 Aug 2001 21:36:15 +0200
+Subject: [HarbourTalk] Class syntax help
+Message-ID: <004a01c128e6$77992980$93b472c3@map>
+
+This is a multi-part message in MIME format.
+
+--Boundary_(ID_wXZFQxKP0FJGEBgmqoPeUg)
+Content-type: text/plain; charset=iso-8859-2
+Content-transfer-encoding: 7BIT
+
+Hi,
+
+I am looking for a way how to do something like this :
+
+SomeClassName:SomeClassMethod()
+
+where SomeClassName is a class name, not an object name.
+
+In C++ I can do (not very interesting example):
+
+class SomeClassA {
+    friend class SomeClassB;
+
+public:
+    int MethodA() { return SomeClassB::MethodB() };
+}
+
+class SomeClassB : public SomeClassB {
+    static int SomeVar;
+protected:
+    static int MethodB() {return SomeVar};
+}
+
+How could it be simulated in Harbour ?
+
+Also could someone give me a short example of a working code which
+uses CLASSMETHOD <MethodName> clause ? I don't know the exact syntax.
+
+Many thanks in advance.
+
+-- 
+
+  Marek Paliwoda
+paliwoda@inetia.pl
+
+
+
+--Boundary_(ID_wXZFQxKP0FJGEBgmqoPeUg)
+Content-type: text/x-vcard; name="Marek Paliwoda - NETIA.vcf"
+Content-disposition: attachment; filename="Marek Paliwoda - NETIA.vcf"
+Content-transfer-encoding: 7BIT
+
+BEGIN:VCARD
+VERSION:2.1
+N:Paliwoda;Marek
+FN:Marek Paliwoda - NETIA
+NICKNAME:MaP
+ADR;HOME;ENCODING=QUOTED-PRINTABLE:;;ul. Wyszy=F1skiego 11/41=0D=0A;Chrzan=F3w;ma=B3opolskie;32-500;Polska
+LABEL;HOME;ENCODING=QUOTED-PRINTABLE:ul. Wyszy=F1skiego 11/41=0D=0A=0D=0AChrzan=F3w, ma=B3opolskie 32-500=0D=0APo=
+lska
+EMAIL;PREF;INTERNET:paliwoda@inetia.pl
+REV:20010819T193222Z
+END:VCARD
+
+--Boundary_(ID_wXZFQxKP0FJGEBgmqoPeUg)--
+
+From harbourtalk@matrixlist.com  Mon Aug 20 07:20:19 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Mon, 20 Aug 2001 07:20:19 +0100
+Subject: [HarbourTalk] mini,s
+In-Reply-To: <001401c12893$a386ab60$0f2aa8c0@first>; from alinares@fivetech.com on Sun, Aug 19, 2001 at 11:45:11AM +0200
+References: <20010819103848.H1437@hagbard.davep.org> <001401c12893$a386ab60$0f2aa8c0@first>
+Message-ID: <20010820072019.Q1437@hagbard.davep.org>
+
+On Sun, Aug 19, 2001 at 11:45:11AM +0200, Antonio Linares wrote:
+> Dave,
+> 
+> > ... and suggest that harbour's problems are down to me ...
+> 
+> I never said that.
+>
+> [SNIP]
+
+Why have you sent a reply to a private email to a public mailing list? Why
+are you trying to keep your little campaign on the harbour lists?
+
+-- 
+Harbour is a free   | Harbour Web Site: http://www.harbour-project.org/
+software, cross     | Harbour FAQ.....: http://www.harbour-project.org/faq/
+platform, Clipper   | My Harbour Pages: http://www.davep.org/harbour/
+compatible compiler | Harbour News....: http://www.davep.org/harbour/news/
+
+From harbourtalk@matrixlist.com  Mon Aug 20 07:43:43 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Mon, 20 Aug 2001 07:43:43 +0100
+Subject: [HarbourTalk] Class syntax help
+In-Reply-To: <004a01c128e6$77992980$93b472c3@map>; from paliwoda@inetia.pl on Sun, Aug 19, 2001 at 09:36:15PM +0200
+References: <004a01c128e6$77992980$93b472c3@map>
+Message-ID: <20010820074343.R1437@hagbard.davep.org>
+
+[This would probably have been better on the harbour user's mailing list]
+
+On Sun, Aug 19, 2001 at 09:36:15PM +0200, Marek Paliwoda wrote:
+
+> I am looking for a way how to do something like this :
+> 
+> SomeClassName:SomeClassMethod()
+> 
+> where SomeClassName is a class name, not an object name.
+> 
+> In C++ I can do (not very interesting example):
+> 
+> class SomeClassA {
+>     friend class SomeClassB;
+> 
+> public:
+>     int MethodA() { return SomeClassB::MethodB() };
+> }
+> 
+> class SomeClassB : public SomeClassB {
+>     static int SomeVar;
+> protected:
+>     static int MethodB() {return SomeVar};
+> }
+> 
+> How could it be simulated in Harbour ?
+
+Perhaps I'm missing something here but you seem to be asking how to have
+class variables and class methods in harbour (see below) but the important
+part of your example seems to revolve around the idea of friend classes. Is
+the idea of friend class supposed to be important in the above?
+
+> Also could someone give me a short example of a working code which uses
+> CLASSMETHOD <MethodName> clause ? I don't know the exact syntax.
+
+Here's a quick and dirty example that simply works with class variables:
+
+-- cut here ----------------------------------------------------------------
+#include "hbclass.ch"
+
+Class NothingSpecial
+
+   Exported:
+
+      ClassVar nCount Init 0
+
+      Method init
+
+End Class
+
+/////
+
+Method init Class NothingSpecial
+
+   ::nCount++
+
+Return( self )
+
+/////
+
+Function Main()
+Local n
+
+   For n := 1 to 10
+
+      // Create, and throw away, an instance of NothingSpecial.
+      NothingSpecial():new()
+
+      // Print the instance count class variable
+      ? NothingSpecial():nCount
+
+   Next
+
+Return( NIL )
+-- cut here ----------------------------------------------------------------
+
+However, in playing with the above I can't get class methods to work how I'd
+expect either. I suspect there might be a compiler bug lurking around here
+some place.
+
+I was expecting something like this:
+
+-- cut here ----------------------------------------------------------------
+#include "hbclass.ch"
+
+Class NothingSpecial
+
+   Exported:
+
+      ClassVar nCount Init 0
+
+      Method init
+
+      Class Method sayInstanceCount
+
+End Class
+
+/////
+
+Method init Class NothingSpecial
+
+   ::nCount++
+
+Return( self )
+
+/////
+
+Method sayInstanceCount Class NothingSpecial
+
+   ? "We've had " + alltrim( str( ::nCount ) ) + " instances."
+
+Return( self )
+
+/////
+
+Function Main()
+Local n
+
+   For n := 1 to 10
+
+      // Create, and throw away, an instance of NothingSpecial.
+      NothingSpecial():new()
+
+      // Print the instance count class variable
+      ? NothingSpecial():nCount
+
+   Next
+
+Return( NIL )
+-- cut here ----------------------------------------------------------------
+
+to work but that won't compile:
+
+,----
+| foo.prg(25) Error E0010 'Method "sayInstanceCount" not declared in class:
+|                          NothingSpecial '
+`----
+
+Either I've got the above syntax wrong or the compiler has a problem with
+class methods.
+
+I'll CC this to the developer's list for their comments.
+
+-- 
+Harbour is a free   | Harbour Web Site: http://www.harbour-project.org/
+software, cross     | Harbour FAQ.....: http://www.harbour-project.org/faq/
+platform, Clipper   | My Harbour Pages: http://www.davep.org/harbour/
+compatible compiler | Harbour News....: http://www.davep.org/harbour/news/
+
+From harbourtalk@matrixlist.com  Mon Aug 20 12:20:18 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Mon, 20 Aug 2001 12:20:18 +0100
+Subject: [HarbourTalk] Class syntax help
+In-Reply-To: <20010820074343.R1437@hagbard.davep.org>; from davep@davep.org on Mon, Aug 20, 2001 at 07:43:43AM +0100
+References: <004a01c128e6$77992980$93b472c3@map> <20010820074343.R1437@hagbard.davep.org>
+Message-ID: <20010820122018.F1437@hagbard.davep.org>
+
+On Mon, Aug 20, 2001 at 07:43:43AM +0100, Dave Pearson wrote:
+
+> Either I've got the above syntax wrong or the compiler has a problem with
+> class methods.
+> 
+> I'll CC this to the developer's list for their comments.
+
+Marek, the word has come back from the developer who looks after the class
+system side of harbour: class methods aren't fully working yet. They are on
+his "TODO list".
+
+-- 
+Harbour is a free   | Harbour Web Site: http://www.harbour-project.org/
+software, cross     | Harbour FAQ.....: http://www.harbour-project.org/faq/
+platform, Clipper   | My Harbour Pages: http://www.davep.org/harbour/
+compatible compiler | Harbour News....: http://www.davep.org/harbour/news/
+
+From harbourtalk@matrixlist.com  Mon Aug 20 20:10:23 2001
+From: harbourtalk@matrixlist.com (Marek Paliwoda)
+Date: Mon, 20 Aug 2001 21:10:23 +0200
+Subject: [HarbourTalk] Class syntax help
+References: <004a01c128e6$77992980$93b472c3@map>
+ <20010820074343.R1437@hagbard.davep.org>
+ <20010820122018.F1437@hagbard.davep.org>
+Message-ID: <011201c129ac$06c25f80$4eb572c3@map>
+
+Dave Pearson wrote on Monday, August 20, 2001 1:20 PM
+
+> On Mon, Aug 20, 2001 at 07:43:43AM +0100, Dave Pearson wrote:
+> 
+> > Either I've got the above syntax wrong or the compiler has a problem with
+> > class methods.
+> > 
+> > I'll CC this to the developer's list for their comments.
+> 
+> Marek, the word has come back from the developer who looks after the class
+> system side of harbour: class methods aren't fully working yet. They are on
+> his "TODO list".
+
+I will wait, thanks.
+
+-- 
+
+Marek Paliwoda
+
+
+
+
+From harbourtalk@matrixlist.com  Mon Aug 20 20:11:02 2001
+From: harbourtalk@matrixlist.com (Marek Paliwoda)
+Date: Mon, 20 Aug 2001 21:11:02 +0200
+Subject: [HarbourTalk] Class syntax help
+References: <004a01c128e6$77992980$93b472c3@map>
+ <20010820074343.R1437@hagbard.davep.org>
+Message-ID: <011301c129ac$07be24a0$4eb572c3@map>
+
+Dave Pearson wrote on Monday, August 20, 2001 8:43 AM
+
+> [This would probably have been better on the harbour user's mailing list]
+
+OK, Sorry.
+
+[...snip...]
+
+> Perhaps I'm missing something here but you seem to be asking how to have
+> class variables and class methods in harbour (see below) but the important
+> part of your example seems to revolve around the idea of friend classes. Is
+> the idea of friend class supposed to be important in the above?
+
+No, It is not important here at all. The example was simply based on a code
+from one of a GNU C++ library, and my question was about class methods.
+
+> > Also could someone give me a short example of a working code which uses
+> > CLASSMETHOD <MethodName> clause ? I don't know the exact syntax.
+>
+> Here's a quick and dirty example that simply works with class variables:
+
+[...snip...]
+
+I was asking rather about class methods, not class vars.
+
+[...snip...]
+
+> ...................................I can't get class methods to work how I'd
+> expect either. I suspect there might be a compiler bug lurking around here
+> some place.
+[...snip...]
+> to work but that won't compile:
+>
+> ,----
+> | foo.prg(25) Error E0010 'Method "sayInstanceCount" not declared in class:
+> |                          NothingSpecial '
+> `----
+>
+> Either I've got the above syntax wrong or the compiler has a problem with
+> class methods.
+
+The same for me. This is why I asked.
+
+> I'll CC this to the developer's list for their comments.
+
+OK.
+
+Many THANKS for Your help.
+
+--
+
+Marek Paliwoda
+
+
+
+
+From harbourtalk@matrixlist.com  Tue Aug 21 18:39:45 2001
+From: harbourtalk@matrixlist.com (Alexander S.Kresin)
+Date: Tue, 21 Aug 2001 21:39:45 +0400
+Subject: [HarbourTalk] HWGUI uploaded
+Message-ID: <8413470031.20010821213945@belacy.belgorod.su>
+
+Hi,
+ sorry for using the list for announcements, but this is only for the
+ first release.
+ I just uploaded HWGUI library to my web site, it is released under
+ the same license, as Harbour. The package includes sources, short
+ description, samples. Makefiles included are for BC.
+
+Best regards,
+ Alexander
+http://www.geocities.com/alkresin/
+
+
+
+From harbourtalk@matrixlist.com  Tue Aug 21 20:26:52 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Tue, 21 Aug 2001 20:26:52 +0100
+Subject: [HarbourTalk] HWGUI uploaded
+In-Reply-To: <8413470031.20010821213945@belacy.belgorod.su>; from alex@belacy.belgorod.su on Tue, Aug 21, 2001 at 09:39:45PM +0400
+References: <8413470031.20010821213945@belacy.belgorod.su>
+Message-ID: <20010821202652.V1437@hagbard.davep.org>
+
+On Tue, Aug 21, 2001 at 09:39:45PM +0400, Alexander S.Kresin wrote:
+
+>  sorry for using the list for announcements, but this is only for the
+>  first release.
+
+There's no harm in announcing harbour related free software on the harbour
+mailing lists. You might actually want to drop a note into the developer's
+mailing list too in case there are any developers who don't take this list.
+
+-- 
+Harbour is a free   | Harbour Web Site: http://www.harbour-project.org/
+software, cross     | Harbour FAQ.....: http://www.harbour-project.org/faq/
+platform, Clipper   | My Harbour Pages: http://www.davep.org/harbour/
+compatible compiler | Harbour News....: http://www.davep.org/harbour/news/
+
+From harbourtalk@matrixlist.com  Wed Aug 22 17:22:15 2001
+From: harbourtalk@matrixlist.com (=?iso-8859-1?Q?Gustavo_A._Gonz=E1lez_M.?=)
+Date: Wed, 22 Aug 2001 12:22:15 -0400
+Subject: [HarbourTalk] Off Topic - License of Windw
+Message-ID: <00cc01c12b26$ef98ba80$02f4c4a1@gustavo>
+
+Hi everybody.
+
+Any one know how to detect the license number of window, course with any
+function of API ?
+
+Regards
+
+--
+Gustavo A. González M.
+gonzalezgustavo@cantv.net
+Caracas - Venezuela
+
+
+From harbourtalk@matrixlist.com  Thu Aug 23 11:54:06 2001
+From: harbourtalk@matrixlist.com (Antonio Linares)
+Date: Thu, 23 Aug 2001 12:54:06 +0200
+Subject: [HarbourTalk] Inter-platform
+In-Reply-To: <00cc01c12b26$ef98ba80$02f4c4a1@gustavo>
+Message-ID: <000301c12bc1$edf7b140$0f2aa8c0@first>
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0004_01C12BD2.B1808140
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+
+Maurilio,
+
+I just found this little sample we used to
+distribute, so Windows users could have a 
+look at FiveOS2 :-)
+
+Antonio
+
+------=_NextPart_000_0004_01C12BD2.B1808140
+Content-Type: application/octet-stream;
+	name="RUNME.ZIP"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="RUNME.ZIP"
+
+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
+
+------=_NextPart_000_0004_01C12BD2.B1808140--
+
+
+
+From harbourtalk@matrixlist.com  Fri Aug 24 09:27:10 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Fri, 24 Aug 2001 09:27:10 +0100
+Subject: [HarbourTalk] VA (SourceForge), six months to live?
+Message-ID: <20010824092710.J1437@hagbard.davep.org>
+
+<URL:http://www.theregister.co.uk/content/4/21253.html> might be interesting
+reading for those who wonder how VA can afford to make SourceForge
+available.
+
+-- 
+Land of the free? Yeah, right.
+                                                http://www.freesklyarov.org/
+
+From harbourtalk@matrixlist.com  Fri Aug 24 19:18:08 2001
+From: harbourtalk@matrixlist.com (Luiz Rafael Culik Guimaraes)
+Date: Fri, 24 Aug 2001 15:18:08 -0300
+Subject: [HarbourTalk] Qemm 8.0
+Message-ID: <001401c12cca$f6af8b00$08d4d7c8@culik>
+
+Dear Friends
+
+Has any one used the QEMM 8.0(US english version) on the past. I need the
+optimize.qip from the 3 instalation disket since mine is damaged
+
+ --
+
+Regards
+
+Luiz Rafael Culik
+
+
+From harbourtalk@matrixlist.com  Sat Aug 25 14:47:27 2001
+From: harbourtalk@matrixlist.com (=?iso-8859-1?Q?Gustavo_A._Gonz=E1lez_M.?=)
+Date: Sat, 25 Aug 2001 09:47:27 -0400
+Subject: [HarbourTalk] Qemm 8.0
+References: <001401c12cca$f6af8b00$08d4d7c8@culik>
+Message-ID: <00d901c12d6c$7f216f20$6f562cc8@gustavo>
+
+Luiz,
+
+Tell me what file do you need and i send you that.
+
+I dont loose my old disk of instalation, but, have backups of my old's
+application....... one of them is the Super Qemm :-)
+
+Regards
+
+--
+Gustavo A. González M.
+gonzalezgustavo@cantv.net
+Caracas - Venezuela
+
+----- Original Message -----
+From: Luiz Rafael Culik Guimaraes <culik@nh.conex.com.br>
+To: <harbourtalk@matrixlist.com>
+Sent: Friday, August 24, 2001 2:18 PM
+Subject: [HarbourTalk] Qemm 8.0
+
+
+> Dear Friends
+>
+> Has any one used the QEMM 8.0(US english version) on the past. I need the
+> optimize.qip from the 3 instalation disket since mine is damaged
+>
+>  --
+>
+> Regards
+>
+> Luiz Rafael Culik
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@matrixlist.com
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+From harbourtalk@matrixlist.com  Wed Aug 29 06:24:37 2001
+From: harbourtalk@matrixlist.com (Alexander S.Kresin)
+Date: Wed, 29 Aug 2001 09:24:37 +0400
+Subject: [HarbourTalk] legacy ?
+Message-ID: <562438202.20010829092437@belacy.belgorod.su>
+
+Hi,
+ can someone explain me, what is "Internet enabling legacy Clipper
+ systems" ?
+
+
+Best regards,
+ Alexander
+http://www.geocities.com/alkresin/
+
+
+
+From harbourtalk@matrixlist.com  Wed Aug 29 06:29:01 2001
+From: harbourtalk@matrixlist.com (harbourtalk@matrixlist.com)
+Date: Wed, 29 Aug 2001 15:29:01 +1000
+Subject: [HarbourTalk] legacy ?
+Message-ID: <OFDE0CB99D.27BF2362-ONCA256AB7.001DF45D@cor.bmi.bunge.com.au>
+
+On 29/08/2001 03:24:37 PM harbourtalk-admin wrote:
+
+>Hi,
+> can someone explain me, what is "Internet enabling legacy Clipper
+> systems" ?
+
+I guess it's referring to the fact that often DOS applications are regarded
+as "legacy" applications (ie ones which are kept for historical or
+practical reasons, but are really outdated).
+
+Of course, many of us are still using DOS apps out of necessity (hardware
+which won't run anything better, for example) so we can't treat them as
+"legacy" apps.
+
+The idea of "internet enabling" a "legacy" system seems to suggest that
+it's not the fact that it's running on DOS that makes it outmoded, rather
+the fact that it's not running in a browser or some-such. A strange
+philosophy, to be sure.
+
+Mabster
+
+
+From harbourtalk@matrixlist.com  Wed Aug 29 13:01:47 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Wed, 29 Aug 2001 13:01:47 +0100
+Subject: [HarbourTalk] legacy ?
+In-Reply-To: <562438202.20010829092437@belacy.belgorod.su>; from alex@belacy.belgorod.su on Wed, Aug 29, 2001 at 09:24:37AM +0400
+References: <562438202.20010829092437@belacy.belgorod.su>
+Message-ID: <20010829130147.P1437@hagbard.davep.org>
+
+On Wed, Aug 29, 2001 at 09:24:37AM +0400, Alexander S.Kresin wrote:
+
+>  can someone explain me, what is "Internet enabling legacy Clipper
+>  systems" ?
+
+Let me guess, you've been mailed with an advert for a job in Holland.
+
+-- 
+Land of the free? Yeah, right.
+                                                http://www.freesklyarov.org/
+
+From harbourtalk@matrixlist.com  Wed Aug 29 13:57:31 2001
+From: harbourtalk@matrixlist.com (Jan-Dirk Schuitemaker)
+Date: Wed, 29 Aug 2001 14:57:31 +0200
+Subject: Betr.: Re: [HarbourTalk] legacy ?
+Message-ID: <sb8d02e8.042@mail.hrs.getronics.com>
+
+Dave,
+
+>>  can someone explain me, what is "Internet enabling legacy Clipper
+>>  systems" ?
+
+>Let me guess, you've been mailed with an advert for a job in Holland.
+
+Why do you think Alexander has been mailed with an advert for a job in Holl=
+and? Did you get such an e-mail?
+
+I am from Holland and I know that it is hard to get a permit to work in The=
+ Netherlands for non-EU residents. That's why I ask!
+
+Regards,
+
+Jan-Dirk Schuitemaker
+
+--=20
+Land of the free? Yeah, right.
+                                                http://www.freesklyarov.org=
+/=20
+_______________________________________________
+HarbourTalk mailing list
+HarbourTalk@matrixlist.com=20
+http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+From harbourtalk@matrixlist.com  Wed Aug 29 14:19:15 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Wed, 29 Aug 2001 14:19:15 +0100
+Subject: Betr.: Re: [HarbourTalk] legacy ?
+In-Reply-To: <sb8d02e8.042@mail.hrs.getronics.com>; from J.D.Schuitemaker@hrs.getronics.com on Wed, Aug 29, 2001 at 02:57:31PM +0200
+References: <sb8d02e8.042@mail.hrs.getronics.com>
+Message-ID: <20010829141915.Q1437@hagbard.davep.org>
+
+On Wed, Aug 29, 2001 at 02:57:31PM +0200, Jan-Dirk Schuitemaker wrote:
+> Dave,
+> 
+> >>  can someone explain me, what is "Internet enabling legacy Clipper
+> >>  systems" ?
+> 
+> >Let me guess, you've been mailed with an advert for a job in Holland.
+> 
+> Why do you think Alexander has been mailed with an advert for a job in
+> Holland? Did you get such an e-mail?
+
+Yup. By coincidence I also got an email from a job agency in the UK asking
+if I'd be interested in relocation to .nl for a job there. I suspect they're
+one in the same.
+
+Presumably many people with a Clipper background and visibility on the web
+and/or usenet got a copy of the email.
+
+> I am from Holland and I know that it is hard to get a permit to work in
+> The Netherlands for non-EU residents. That's why I ask!
+
+I'm an EU resident so that wouldn't be a problem for me.
+
+Curiously the email from the UK agency (I'm putting two and two together and
+guessing that it's for the same position(s)) said:
+
+,----
+| We will look after the relocation and the work permits (for non EU
+| citizens).
+`----
+
+so perhaps they too are mailing outside of the EU.
+
+-- 
+Dave Pearson                        |  OSLib - Timeslice release functions.
+http://www.davep.org/               |     eg - Norton Guide reader for Linux.
+http://www.davep.org/clipper/       |    weg - Norton Guide reader for Windows.
+http://www.davep.org/norton-guides/ | dgscan - DGROUP scanner for Clipper.
+
+From harbourtalk@matrixlist.com  Wed Aug 29 14:39:59 2001
+From: harbourtalk@matrixlist.com (Jan-Dirk Schuitemaker)
+Date: Wed, 29 Aug 2001 15:39:59 +0200
+Subject: Betr.: Re: [HarbourTalk] legacy ?
+Message-ID: <sb8d0cd2.008@mail.hrs.getronics.com>
+
+Dave,
+
+Clipper programmers are hard to get these days in The Netherlands and I thi=
+nk it's the same for most countries in Western Europe. Most of them are ofc=
+ourse switched to a Windows development environment.=20
+
+I don't know about the situation in the former Soviet countries. I think th=
+e money is better here, so that could attract some people from these countr=
+ies.
+
+Do you know the name of the company in The Netherlands that is looking for =
+Clipper programmers?
+
+Jan-Dirk
+
+
+From harbourtalk@matrixlist.com  Wed Aug 29 15:04:26 2001
+From: harbourtalk@matrixlist.com (Dave Pearson)
+Date: Wed, 29 Aug 2001 15:04:26 +0100
+Subject: Betr.: Re: [HarbourTalk] legacy ?
+In-Reply-To: <sb8d0cd2.008@mail.hrs.getronics.com>; from J.D.Schuitemaker@hrs.getronics.com on Wed, Aug 29, 2001 at 03:39:59PM +0200
+References: <sb8d0cd2.008@mail.hrs.getronics.com>
+Message-ID: <20010829150426.A3012@hagbard.davep.org>
+
+On Wed, Aug 29, 2001 at 03:39:59PM +0200, Jan-Dirk Schuitemaker wrote:
+
+> Do you know the name of the company in The Netherlands that is looking for
+> Clipper programmers?
+
+I'm not sure if the details I've got are for the company in question or for
+an agency. Would you like me to pass your details onto the agency that
+contacted me?
+
+-- 
+Land of the free? Yeah, right.
+                                                http://www.freesklyarov.org/
+
+From harbourtalk@matrixlist.com  Wed Aug 29 15:33:24 2001
+From: harbourtalk@matrixlist.com (Alexander S.Kresin)
+Date: Wed, 29 Aug 2001 18:33:24 +0400
+Subject: [HarbourTalk] Re: legacy ?
+In-Reply-To: <20010829130147.P1437@hagbard.davep.org>
+References: <562438202.20010829092437@belacy.belgorod.su>
+ <20010829130147.P1437@hagbard.davep.org>
+Message-ID: <1293005055.20010829183324@belacy.belgorod.su>
+
+ñðåäà, 29 àâãóñòà 2001 ã. Dave davep@davep.org wrote:
+
+DP> On Wed, Aug 29, 2001 at 09:24:37AM +0400, Alexander S.Kresin wrote:
+
+>>  can someone explain me, what is "Internet enabling legacy Clipper
+>>  systems" ?
+
+DP> Let me guess, you've been mailed with an advert for a job in Holland.
+
+ Yes, it is.
+
+Best regards,
+ Alexander
+http://www.geocities.com/alkresin/
+
+
+
+From harbourtalk@matrixlist.com  Wed Aug 29 16:15:55 2001
+From: harbourtalk@matrixlist.com (Jan-Dirk Schuitemaker)
+Date: Wed, 29 Aug 2001 17:15:55 +0200
+Subject: Betr.: Re: [HarbourTalk] legacy ?
+Message-ID: <sb8d236a.020@mail.hrs.getronics.com>
+
+Dave,
+
+>I'm not sure if the details I've got are for the company in question or for
+>an agency. Would you like me to pass your details onto the agency that
+>contacted me?
+
+No thanks, I only was curious!
+
+Regards,
+
+Jan-Dirk Schuitemaker
+
+--=20
+Land of the free? Yeah, right.
+                                                http://www.freesklyarov.org=
+/=20
+_______________________________________________
+HarbourTalk mailing list
+HarbourTalk@matrixlist.com=20
+http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+

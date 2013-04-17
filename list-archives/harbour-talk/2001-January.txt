@@ -1,0 +1,1887 @@
+From harbourtalk@lists.harbour-project.org  Thu Jan  4 06:27:41 2001
+From: harbourtalk@lists.harbour-project.org (Phil Barnett)
+Date: Thu, 4 Jan 2001 01:27:41 -0500
+Subject: [HarbourTalk] Programmers Rock!
+Message-ID: <3A53D18D.30139.240FF52C@localhost>
+
+
+Quoted from 
+http://troubleshooters.com/tpromag/199912/199912.htm
+
+We Rock!
+
+By Steve Litt
+
+My first copy of "The C Programming Language" disintegrated in 
+1995 when the duct tape that held together finally gave up. It had 
+been a constant backpack companion since 1984 when I used it to 
+first learn C. Back in the days when I programmed professionally 
+all day, then went home and banged out Turbo Pascal on my 
+Kaypro 2x just for fun. 
+
+Back in those days I used to laugh at the old guys whose every 
+thought involved a goto. Today I'm amazed at the arrogance of my 
+youth. 
+
+It didn't cross my mind those guys didn't grow up with the luxury of 
+64K of memory to save subroutine states and return addresses. 
+They had to make do with 1K or less, and they did it admirably. 
+Older and wiser, today I know I don't have the intelligence to write 
+such code. My generation was the first who could afford to 
+substitute RAM for intelligence. The guys who came before us 
+established programming as an activity and a profession. They did 
+their job superbly. 
+
+The structured guys took programming from the research facility to 
+the business, then to the home, and finally to what would someday 
+be called "the enterprise". With their truly prolific functional 
+decomposition design paradigm and their cowboy mentality, they 
+could write programs with double the functionality in half the time. 
+Their language of choice? C! By the time their era ended, their 
+code was everywhere, including the architecture of the Internet. 
+
+Somewhere in the early or mid 1990's the structured crew handed 
+the baton to the OOP guys. These guys could assemble a serious 
+app out of a bunch of prefabricated object before functional 
+decomposition got down to the fourth level. When they couldn't find 
+an object, they built their own. They built objects independent of 
+any language, that could be linked in at run time. They were called 
+"developers", "application developers", and "software engineers", 
+but they continued the proud tradition of "programmers". They run 
+the world, and run it well. On the way, the OOP era took a detour. 
+Many OOP development environments were created to fill 
+marketing needs, not to produce robust code. Serious bugs 
+cropped up. 
+
+Open Source to the rescue. Using the ancient C language 
+combined with their knowledge of modern OOP concepts, they 
+created small, fast, modular and robust software. Others used new 
+Open Source programming languages such as Python and Perl to 
+achieve remarkable productivity. Programmers have always loved to 
+make money in the day and program at night (some vice versa). 
+They were quick to join Open Source projects. Armed with the 
+surprisingly versatile and long lived C language, and the best of 
+modern OOP concepts (devoid of the cow pies that often 
+accompanied popular OOP), they produced spectacularly clean 
+code. 
+
+We rocked in the 50's, when you could list the worlds programmers 
+in an address book. We rocked in the 60's, when geniuses plied 
+their gotos in assembler, Cobol and Fortran. We rocked in the 70's, 
+when we codified design concepts in preparation for large projects 
+yet to come. We rocked in the structured 80's with our conquest of 
+every business with more than 10 employees. And we rock in the 
+90's with our OOP, web, and Open Source programming. We eat 
+too much pizza and drink too much coffee. We fly airplanes and 
+ride skateboards. We have long gray beards and faces devoid of 
+peach fuzz. We live in every nation on this earth, and we work 
+together on a daily basis. And most of all, we pound out great 
+code. From the first guy to boot a computer with patch cords, to 
+the guy starting a Free Software project in his basement, we take 
+pride in this world we've built. 
+
+Steve Litt can be reached at slitt@troubleshooters.com.
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@lists.harbour-project.org  Thu Jan  4 08:48:34 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Thu, 4 Jan 2001 08:48:34 +0000
+Subject: [HarbourTalk] Programmers Rock!
+In-Reply-To: <3A53D18D.30139.240FF52C@localhost>; from midnight@the-oasis.net on Thu, Jan 04, 2001 at 01:27:41AM -0500
+References: <3A53D18D.30139.240FF52C@localhost>
+Message-ID: <20010104084834.N15915@hagbard.davep.org>
+
+On Thu, Jan 04, 2001 at 01:27:41AM -0500, Phil Barnett wrote:
+
+> Somewhere in the early or mid 1990's the structured crew handed 
+> the baton to the OOP guys. [SNIP]
+> 
+> Open Source to the rescue. Using the ancient C language 
+> combined with their knowledge of modern OOP concepts, they 
+> created small, fast, modular and robust software. Others used new 
+> Open Source programming languages such as Python and Perl to 
+> achieve remarkable productivity. Programmers have always loved to 
+> make money in the day and program at night (some vice versa). 
+> They were quick to join Open Source projects. Armed with the 
+> surprisingly versatile and long lived C language, and the best of 
+> modern OOP concepts (devoid of the cow pies that often 
+> accompanied popular OOP), they produced spectacularly clean 
+> code. 
+
+That's a good attempt at rewriting history, considering that languages like
+python and perl existed before the mid 1990s.
+
+> We rocked in the 50's, when you could list the worlds programmers in an
+> address book. We rocked in the 60's, when geniuses plied their gotos in
+> assembler, Cobol and Fortran. We rocked in the 70's, when we codified
+> design concepts in preparation for large projects yet to come. We rocked
+> in the structured 80's with our conquest of every business with more than
+> 10 employees. And we rock in the 90's with our OOP, web, and Open Source
+> programming. We eat too much pizza and drink too much coffee. We fly
+> airplanes and ride skateboards. We have long gray beards and faces devoid
+> of peach fuzz. We live in every nation on this earth, and we work together
+> on a daily basis. And most of all, we pound out great code. From the first
+> guy to boot a computer with patch cords, to the guy starting a Free
+> Software project in his basement, we take pride in this world we've built.
+
+Why do I get this feeling of "those who can, code. Those who can't,
+stereotype"?
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Thu Jan  4 19:37:24 2001
+From: harbourtalk@lists.harbour-project.org (Felipe G. Coury)
+Date: Thu, 4 Jan 2001 16:37:24 -0300
+Subject: [HarbourTalk] IVR Software
+Message-ID: <04f901c07685$c62cda10$3c01a8c0@creation>
+
+Hi,
+
+Does anyone know where to find IVR (Interactive Voice Response) components
+in order to automate telephone based applications?
+
+What I mean is is that if the user calls to a specific number, my computer
+modem must answer and then a recording must say:
+
+"Hi, you're at the main menu. Press 1 for cinema, 2 for theaters."
+
+Then users chooses one of the options by pressing the telephone key and then
+is guided to a sub menu and so on...
+
+Is there such component on the market?
+
+Felipe G. Coury
+Gerente de Desenvolvimento
+Creation Internet Business
+http://www.creation.com.br
+
+--------------------------------------------
+Visite o GuiaBrasil.Net:
+http://www.guiabrasil.net
+--------------------------------------------
+
+
+
+From harbourtalk@lists.harbour-project.org  Thu Jan  4 22:15:40 2001
+From: harbourtalk@lists.harbour-project.org (Ron Pinkas)
+Date: Thu, 4 Jan 2001 14:15:40 -0800
+Subject: [HarbourTalk] IVR Software
+In-Reply-To: <04f901c07685$c62cda10$3c01a8c0@creation>
+Message-ID: <LOBBKAFMMFGJIKLMEPAKMEGEDIAA.ron@profit-master.com>
+
+Felipe,
+
+You'll need a DIALOGIC (an Intel company) board, and there are many software
+tools. You can get referrals from
+http://www.dialogic.com/partners/americas/index5.htm
+
+Ron
+
+> Hi,
+>
+> Does anyone know where to find IVR (Interactive Voice Response) components
+> in order to automate telephone based applications?
+>
+> What I mean is is that if the user calls to a specific number, my computer
+> modem must answer and then a recording must say:
+>
+> "Hi, you're at the main menu. Press 1 for cinema, 2 for theaters."
+>
+> Then users chooses one of the options by pressing the telephone
+> key and then
+> is guided to a sub menu and so on...
+>
+> Is there such component on the market?
+>
+> Felipe G. Coury
+> Gerente de Desenvolvimento
+> Creation Internet Business
+> http://www.creation.com.br
+
+
+From harbourtalk@lists.harbour-project.org  Thu Jan  4 22:28:54 2001
+From: harbourtalk@lists.harbour-project.org (Ron Pinkas)
+Date: Thu, 4 Jan 2001 14:28:54 -0800
+Subject: [HarbourTalk] IVR Software
+In-Reply-To: <LOBBKAFMMFGJIKLMEPAKMEGEDIAA.ron@profit-master.com>
+Message-ID: <LOBBKAFMMFGJIKLMEPAKCEGFDIAA.ron@profit-master.com>
+
+Also www.Parity.com
+
+> Felipe,
+> 
+> You'll need a DIALOGIC (an Intel company) board, and there are 
+> many software
+> tools. You can get referrals from
+> http://www.dialogic.com/partners/americas/index5.htm
+> 
+> Ron
+> 
+> > Hi,
+> >
+> > Does anyone know where to find IVR (Interactive Voice Response) 
+> components
+> > in order to automate telephone based applications?
+> >
+> > What I mean is is that if the user calls to a specific number, 
+> my computer
+> > modem must answer and then a recording must say:
+> >
+> > "Hi, you're at the main menu. Press 1 for cinema, 2 for theaters."
+> >
+> > Then users chooses one of the options by pressing the telephone
+> > key and then
+> > is guided to a sub menu and so on...
+> >
+> > Is there such component on the market?
+> >
+> > Felipe G. Coury
+> > Gerente de Desenvolvimento
+> > Creation Internet Business
+> > http://www.creation.com.br
+
+
+From harbourtalk@lists.harbour-project.org  Fri Jan  5 06:56:31 2001
+From: harbourtalk@lists.harbour-project.org (Phil Barnett)
+Date: Fri, 5 Jan 2001 01:56:31 -0500
+Subject: [HarbourTalk] Linux releases kernel 2.4.0
+Message-ID: <3A5529CF.24689.2950BDD9@localhost>
+
+http://linuxtoday.com/news_story.php3?ltsn=2001-01-05-001-04-
+NW-LF-KN
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@lists.harbour-project.org  Fri Jan  5 07:54:51 2001
+From: harbourtalk@lists.harbour-project.org (harbourtalk@lists.harbour-project.org)
+Date: Fri, 5 Jan 2001 18:54:51 +1100
+Subject: [HarbourTalk] Linux releases kernel 2.4.0
+Message-ID: <OF821003E2.CBAA035A-ONCA2569CB.002B6A52@dingoblue.net.au>
+
+If that's the same "press release" that I read earlier today, it's damn 
+funny! That's the first thing I've read of Mr. Torvalds', and I'm most 
+impressed with his style! :-)
+
+
+
+
+
+"Phil Barnett" <midnight@the-oasis.net>
+Sent by: harbourtalk-admin@lists.harbour-project.org
+05/01/01 05:56 PM
+Please respond to harbourtalk
+
+ 
+        To:     harbourtalk@lists.harbour-project.org
+        cc: 
+        Subject:        [HarbourTalk] Linux releases kernel 2.4.0
+
+
+http://linuxtoday.com/news_story.php3?ltsn=2001-01-05-001-04-
+NW-LF-KN
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+_______________________________________________
+HarbourTalk mailing list
+HarbourTalk@lists.harbour-project.org
+http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+
+
+From harbourtalk@lists.harbour-project.org  Fri Jan  5 10:03:12 2001
+From: harbourtalk@lists.harbour-project.org (Antonio Linares)
+Date: Fri, 5 Jan 2001 11:03:12 +0100
+Subject: [HarbourTalk] Linux releases kernel 2.4.0
+In-Reply-To: <OF821003E2.CBAA035A-ONCA2569CB.002B6A52@dingoblue.net.au>
+Message-ID: <000e01c076fe$b6a1c640$0f2aa8c0@antonio>
+
+Lets not go into the same old mistake...
+
+What is really impressive is not his style...
+
+Is the amount -and quality- of people that is contributing.
+
+Antonio
+
+> If that's the same "press release" that I read earlier today, it's damn 
+> funny! That's the first thing I've read of Mr. Torvalds', and I'm most 
+> impressed with his style! :-)
+
+
+From harbourtalk@lists.harbour-project.org  Fri Jan  5 10:31:25 2001
+From: harbourtalk@lists.harbour-project.org (harbourtalk@lists.harbour-project.org)
+Date: Fri, 5 Jan 2001 21:31:25 +1100
+Subject: [HarbourTalk] Linux releases kernel 2.4.0
+Message-ID: <OFFEAFB806.E9F06183-ONCA2569CB.0039C291@dingoblue.net.au>
+
+>Lets not go into the same old mistake...
+
+>What is really impressive is not his style...
+
+>Is the amount -and quality- of people that is contributing.
+
+Granted, but I was really talking about his style of writing.
+
+Mab
+
+From harbourtalk@lists.harbour-project.org  Fri Jan  5 10:46:10 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Fri, 5 Jan 2001 10:46:10 +0000
+Subject: [HarbourTalk] Linux releases kernel 2.4.0
+In-Reply-To: <000e01c076fe$b6a1c640$0f2aa8c0@antonio>; from alinares@fivetech.com on Fri, Jan 05, 2001 at 11:03:12AM +0100
+References: <OF821003E2.CBAA035A-ONCA2569CB.002B6A52@dingoblue.net.au> <000e01c076fe$b6a1c640$0f2aa8c0@antonio>
+Message-ID: <20010105104610.H15915@hagbard.davep.org>
+
+On Fri, Jan 05, 2001 at 11:03:12AM +0100, Antonio Linares wrote:
+
+> Lets not go into the same old mistake...
+> 
+> What is really impressive is not his style...
+> 
+> Is the amount -and quality- of people that is contributing.
+
+I think you'll find that the subject under discussion was Linus' writing
+style, something which is of his own doing. For as long as I can remember
+Linus has always had a knack of writing amusing release announcements for
+kernel releases.
+
+Why is acknowledging Linus' ability to write amusing text "the same old
+mistake"?
+
+-- 
+And 1.1.81 is officially BugFree(tm), so if you receive any bug-reports
+on it, you know they are just evil lies."
+(By Linus Torvalds, Linus.Torvalds@cs.helsinki.fi)
+
+From harbourtalk@lists.harbour-project.org  Fri Jan  5 10:48:56 2001
+From: harbourtalk@lists.harbour-project.org (Antonio Linares)
+Date: Fri, 5 Jan 2001 11:48:56 +0100
+Subject: [HarbourTalk] Linux releases kernel 2.4.0
+In-Reply-To: <20010105104610.H15915@hagbard.davep.org>
+Message-ID: <001801c07705$1a539140$0f2aa8c0@antonio>
+
+Well, I may be influenced by a recent reading I did from
+the reader's digest magazine 2001 January -where Linus is
+on the cover page with the Linux pet and a guru smile- and
+where you can read "The solitaire genius of Linus Torvalds..."
+(Reader's Digest has elected him as the European of the year).
+
+When you read the entire article you read a -huge- lot of
+stupidities, one after another, and you find a clear sign 
+of trying to turn him into an hero.
+
+That is the same old story I am refering to. People love to 
+have heroes, heroes they can adore, and heroes they can 
+later through to the mud.
+
+We don't need heroes. We just need to better know ourselves
+(and that is something really difficult, too difficult).
+
+Antonio
+
+
+From harbourtalk@lists.harbour-project.org  Fri Jan  5 11:37:59 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Fri, 5 Jan 2001 11:37:59 +0000
+Subject: [HarbourTalk] Linux releases kernel 2.4.0
+In-Reply-To: <001801c07705$1a539140$0f2aa8c0@antonio>; from alinares@fivetech.com on Fri, Jan 05, 2001 at 11:48:56AM +0100
+References: <20010105104610.H15915@hagbard.davep.org> <001801c07705$1a539140$0f2aa8c0@antonio>
+Message-ID: <20010105113759.L15915@hagbard.davep.org>
+
+On Fri, Jan 05, 2001 at 11:48:56AM +0100, Antonio Linares wrote:
+
+> Well, I may be influenced by a recent reading I did from the reader's
+> digest magazine 2001 January -where Linus is on the cover page with the
+> Linux pet and a guru smile- and where you can read "The solitaire genius
+> of Linus Torvalds..." (Reader's Digest has elected him as the European of
+> the year).
+> 
+> When you read the entire article you read a -huge- lot of stupidities, one
+> after another, and you find a clear sign of trying to turn him into an
+> hero.
+
+I don't think that crap reporting on the part of Reader's Digest really says
+anything about Linus' obvious ability to write amusing things.
+
+> We don't need heroes. We just need to better know ourselves (and that is
+> something really difficult, too difficult).
+
+You can actually be "better" and have heros. Not that I see Linus as one,
+far from it. I still don't see how acknowledgement of Linus' amusing release
+announcements really has anything to do with the obvious lack of reporting
+skills of those who write articles about him in dodgy magazines.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Fri Jan  5 16:34:21 2001
+From: harbourtalk@lists.harbour-project.org (Antonio Linares)
+Date: Fri, 5 Jan 2001 17:34:21 +0100
+Subject: [HarbourTalk] Linux releases kernel 2.4.0
+In-Reply-To: <20010105113759.L15915@hagbard.davep.org>
+Message-ID: <000401c07735$5b821e40$0f2aa8c0@antonio>
+
+Dave,
+
+> I still don't see how acknowledgement of Linus' 
+> amusing release announcements really has anything to do with 
+> the obvious lack of reporting skills of those who write articles 
+> about him in dodgy magazines.
+
+Amazing how the mind works, eh ? :-)
+
+It goes beyond cause and effect...
+
+
+Antonio
+
+
+From harbourtalk@lists.harbour-project.org  Fri Jan  5 17:35:43 2001
+From: harbourtalk@lists.harbour-project.org (Ron Pinkas)
+Date: Fri, 5 Jan 2001 09:35:43 -0800
+Subject: [HarbourTalk] Linux releases kernel 2.4.0
+In-Reply-To: <000401c07735$5b821e40$0f2aa8c0@antonio>
+Message-ID: <LOBBKAFMMFGJIKLMEPAKIEGKDIAA.ron@profit-master.com>
+
+Antonio,
+
+Indeed amazing, I'm still trying to understand what makes this subject more
+interesting than  the message from Shashkov yesterday on the Harbour list.
+
+I somehow hope the reason you choose to engage in this conversation, while
+ignoring what to me appear far more important, may simply be, you didn't see
+that message. If this is the case, here is a link to the message on the
+Harbour Archives:
+
+http://www.matrixlist.com/pipermail/harbour/2001-January/002085.html
+
+Ron
+
+> Dave,
+>
+> > I still don't see how acknowledgement of Linus'
+> > amusing release announcements really has anything to do with
+> > the obvious lack of reporting skills of those who write articles
+> > about him in dodgy magazines.
+>
+> Amazing how the mind works, eh ? :-)
+>
+> It goes beyond cause and effect...
+>
+>
+> Antonio
+
+
+From harbourtalk@lists.harbour-project.org  Fri Jan  5 18:09:12 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Fri, 5 Jan 2001 18:09:12 +0000
+Subject: [HarbourTalk] Linux releases kernel 2.4.0
+In-Reply-To: <LOBBKAFMMFGJIKLMEPAKIEGKDIAA.ron@profit-master.com>; from ron@profit-master.com on Fri, Jan 05, 2001 at 09:35:43AM -0800
+References: <000401c07735$5b821e40$0f2aa8c0@antonio> <LOBBKAFMMFGJIKLMEPAKIEGKDIAA.ron@profit-master.com>
+Message-ID: <20010105180912.B15915@hagbard.davep.org>
+
+On Fri, Jan 05, 2001 at 09:35:43AM -0800, Ron Pinkas wrote:
+> Antonio,
+> 
+> Indeed amazing, I'm still trying to understand what makes this subject
+> more interesting than the message from Shashkov yesterday on the Harbour
+> list.
+
+Perhaps you should ponder the difference between "more interesting" and
+"easier to respond to". I mean, I can't and won't speak for Antonio but I'll
+often leave interesting or important emails a few days while I'll happily
+muck about with the trivial.
+
+Antonio's allowed some trivial mucking about isn't he?
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Fri Jan  5 19:27:32 2001
+From: harbourtalk@lists.harbour-project.org (Ron Pinkas)
+Date: Fri, 5 Jan 2001 11:27:32 -0800
+Subject: [HarbourTalk] Linux releases kernel 2.4.0
+In-Reply-To: <20010105180912.B15915@hagbard.davep.org>
+Message-ID: <LOBBKAFMMFGJIKLMEPAKMEGMDIAA.ron@profit-master.com>
+
+Dave,
+
+Indeed possible. I still think it is very important to, at least acknowledge
+an important message, in a timely manner.
+
+Like you I can't speak for Antonio, but *I* would post something, like:
+Thanks for the input, I can't review the details at this point, but will do
+so in the next few ...
+
+I think it is extremely important to do so, especially, if at the same time
+you seem to respond to other messages. I mean, if you don't seem active at
+the time, one can assume you didn't get to see the message yet, but if you
+respond to other messages, one might wonder, whether you missed his/her
+message.
+
+As to not create ambiguity, or even worse discouragement, *I* would, as a
+matter of courtesy, at least indicate, that I saw a message, that is likely
+to warrant my delayed response.
+
+Yes, we are all "allowed" some trivial mucking around, but the "recruiting"
+of someone like that guy, to *me*, appears far more important.
+
+Ron
+
+> Perhaps you should ponder the difference between "more interesting" and
+> "easier to respond to". I mean, I can't and won't speak for
+> Antonio but I'll
+> often leave interesting or important emails a few days while I'll happily
+> muck about with the trivial.
+>
+> Antonio's allowed some trivial mucking about isn't he?
+
+
+From harbourtalk@lists.harbour-project.org  Fri Jan  5 22:20:07 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Fri, 5 Jan 2001 22:20:07 +0000
+Subject: [HarbourTalk] Linux releases kernel 2.4.0
+In-Reply-To: <LOBBKAFMMFGJIKLMEPAKMEGMDIAA.ron@profit-master.com>; from ron@profit-master.com on Fri, Jan 05, 2001 at 11:27:32AM -0800
+References: <20010105180912.B15915@hagbard.davep.org> <LOBBKAFMMFGJIKLMEPAKMEGMDIAA.ron@profit-master.com>
+Message-ID: <20010105222007.D15915@hagbard.davep.org>
+
+On Fri, Jan 05, 2001 at 11:27:32AM -0800, Ron Pinkas wrote:
+
+> Yes, we are all "allowed" some trivial mucking around, but the
+> "recruiting" of someone like that guy, to *me*, appears far more
+> important.
+
+But when did it become Antonio's responsibility?
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 00:42:39 2001
+From: harbourtalk@lists.harbour-project.org (Ron Pinkas)
+Date: Fri, 5 Jan 2001 16:42:39 -0800
+Subject: [HarbourTalk] Linux releases kernel 2.4.0
+In-Reply-To: <20010105222007.D15915@hagbard.davep.org>
+Message-ID: <LOBBKAFMMFGJIKLMEPAKOEGODIAA.ron@profit-master.com>
+
+Dave,
+
+> > Yes, we are all "allowed" some trivial mucking around, but the
+> > "recruiting" of someone like that guy, to *me*, appears far more
+> > important.
+>
+> But when did it become Antonio's responsibility?
+
+Never! I simply shared his amazement at how different we all are. I was sure
+he would be more interested in the technical details brought by Shashkov,
+than the writing style, and/or hero status, of Linus.
+
+Ron
+
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 06:07:44 2001
+From: harbourtalk@lists.harbour-project.org (Ron Pinkas)
+Date: Fri, 5 Jan 2001 22:07:44 -0800
+Subject: [HarbourTalk] DGScan & WEG
+In-Reply-To: <LOBBKAFMMFGJIKLMEPAKOEGODIAA.ron@profit-master.com>
+Message-ID: <LOBBKAFMMFGJIKLMEPAKGEGPDIAA.ron@profit-master.com>
+
+Dave,
+
+Just a small note to tell you I've finally, visited your homepage.
+
+Enjoyed reading your "THE PROJECT" articles, and downloaded DGScan & WEG.
+Both programs worked flawlessly. I really like WEG and expect to never again
+use my NG reader :-).
+
+Thanks,
+
+Ron
+
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 06:09:41 2001
+From: harbourtalk@lists.harbour-project.org (Patrick Mast)
+Date: Sat, 6 Jan 2001 07:09:41 +0100
+Subject: [HarbourTalk] DGScan & WEG
+In-Reply-To: <LOBBKAFMMFGJIKLMEPAKGEGPDIAA.ron@profit-master.com>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIOEBAFMAA.harbour@winfakt.com>
+
+Ron,
+
+I also use WEG and love it. Thanks Dave!!
+
+> Enjoyed reading your "THE PROJECT" articles, and downloaded DGScan & WEG.
+> Both programs worked flawlessly. I really like WEG and expect to 
+> never again use my NG reader :-).
+
+regards,
+
+Patrick Mast
+www.Patrick.Be.kz
+
+
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 06:15:09 2001
+From: harbourtalk@lists.harbour-project.org (harbourtalk@lists.harbour-project.org)
+Date: Sat, 6 Jan 2001 17:15:09 +1100
+Subject: [HarbourTalk] DGScan & WEG
+Message-ID: <OF4155DE4A.6B9A78B9-ONCA2569CC.00224EAA@dingoblue.net.au>
+
+I'd just like to echo those comments about WEG - I haven't used NG.EXE for 
+years, now. WEG is fantastic!
+
+Mab
+
+
+
+
+
+"Ron Pinkas" <ron@profit-master.com>
+Sent by: harbourtalk-admin@lists.harbour-project.org
+06/01/01 05:07 PM
+Please respond to harbourtalk
+
+ 
+        To:     <harbourtalk@lists.harbour-project.org>
+        cc: 
+        Subject:        [HarbourTalk] DGScan & WEG
+
+Dave,
+
+Just a small note to tell you I've finally, visited your homepage.
+
+Enjoyed reading your "THE PROJECT" articles, and downloaded DGScan & WEG.
+Both programs worked flawlessly. I really like WEG and expect to never 
+again
+use my NG reader :-).
+
+Thanks,
+
+Ron
+
+_______________________________________________
+HarbourTalk mailing list
+HarbourTalk@lists.harbour-project.org
+http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 06:19:26 2001
+From: harbourtalk@lists.harbour-project.org (Phil Barnett)
+Date: Sat, 6 Jan 2001 01:19:26 -0500
+Subject: [HarbourTalk] DGScan & WEG
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIOEBAFMAA.harbour@winfakt.com>
+References: <LOBBKAFMMFGJIKLMEPAKGEGPDIAA.ron@profit-master.com>
+Message-ID: <3A56729E.5726.2E552FC8@localhost>
+
+On 6 Jan 2001, at 7:09, Patrick Mast wrote:
+
+> Ron,
+> 
+> I also use WEG and love it. Thanks Dave!!
+> 
+> > Enjoyed reading your "THE PROJECT" articles, and downloaded DGScan & WEG.
+> > Both programs worked flawlessly. I really like WEG and expect to 
+> > never again use my NG reader :-).
+
+I can't remember the last time I used NG.EXE.
+
+I use WEG exclusively. Awesome product!
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 06:30:48 2001
+From: harbourtalk@lists.harbour-project.org (Ron Pinkas)
+Date: Fri, 5 Jan 2001 22:30:48 -0800
+Subject: [HarbourTalk] DGScan & WEG
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIOEBAFMAA.harbour@winfakt.com>
+Message-ID: <LOBBKAFMMFGJIKLMEPAKCEHADIAA.ron@profit-master.com>
+
+Patrick,
+
+Got your New Year Greeting Card, few days ago - Thank You. Best wishes to
+you and your family for this new year, and new millennium.
+
+Ron
+
+> Ron,
+>
+> I also use WEG and love it. Thanks Dave!!
+>
+> > Enjoyed reading your "THE PROJECT" articles, and downloaded
+> DGScan & WEG.
+> > Both programs worked flawlessly. I really like WEG and expect to
+> > never again use my NG reader :-).
+>
+> regards,
+>
+> Patrick Mast
+> www.Patrick.Be.kz
+
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 08:04:08 2001
+From: harbourtalk@lists.harbour-project.org (Patrick Mast)
+Date: Sat, 6 Jan 2001 09:04:08 +0100
+Subject: [HarbourTalk] DGScan & WEG
+In-Reply-To: <LOBBKAFMMFGJIKLMEPAKCEHADIAA.ron@profit-master.com>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIKEBCFMAA.harbour@winfakt.com>
+
+Ron,
+
+> Got your New Year Greeting Card, few days ago - Thank You.
+> Best wishes to you and your family for this new year, and
+> new millennium.
+Thanks.
+
+regards,
+
+Patrick Mast
+www.Patrick.Be.kz
+
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 08:42:46 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Sat, 6 Jan 2001 08:42:46 +0000
+Subject: [HarbourTalk] DGScan & WEG
+In-Reply-To: <OF4155DE4A.6B9A78B9-ONCA2569CC.00224EAA@dingoblue.net.au>; from mabster@dingoblue.net.au on Sat, Jan 06, 2001 at 05:15:09PM +1100
+References: <OF4155DE4A.6B9A78B9-ONCA2569CC.00224EAA@dingoblue.net.au>
+Message-ID: <20010106084246.H15915@hagbard.davep.org>
+
+On Sat, Jan 06, 2001 at 05:15:09PM +1100, mabster@dingoblue.net.au wrote:
+
+> I'd just like to echo those comments about WEG - I haven't used NG.EXE for 
+> years, now. WEG is fantastic!
+
+<URL:http://www.apollodatabase.com/sixdriver_download.asp> was pointed out
+to me a couple of days ago. Quite a surprise that.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 08:40:23 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Sat, 6 Jan 2001 08:40:23 +0000
+Subject: [HarbourTalk] DGScan & WEG
+In-Reply-To: <LOBBKAFMMFGJIKLMEPAKGEGPDIAA.ron@profit-master.com>; from ron@profit-master.com on Fri, Jan 05, 2001 at 10:07:44PM -0800
+References: <LOBBKAFMMFGJIKLMEPAKOEGODIAA.ron@profit-master.com> <LOBBKAFMMFGJIKLMEPAKGEGPDIAA.ron@profit-master.com>
+Message-ID: <20010106084023.G15915@hagbard.davep.org>
+
+On Fri, Jan 05, 2001 at 10:07:44PM -0800, Ron Pinkas wrote:
+
+> Enjoyed reading your "THE PROJECT" articles, and downloaded DGScan & WEG.
+> Both programs worked flawlessly. I really like WEG and expect to never
+> again use my NG reader :-).
+
+Glad you like it, thanks for the kind words. I've actually got a directory
+here with a tiny bit of code in it for WEG2, WEG done properly (the first
+WEG started as a four day get-to-know-delphi hack), but WEG "works for me"
+so I keep lacking the motivation to really get it going. :)
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 09:03:19 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Sat, 6 Jan 2001 09:03:19 +0000
+Subject: [HarbourTalk] DGScan & WEG
+In-Reply-To: <3A56729E.5726.2E552FC8@localhost>; from midnight@the-oasis.net on Sat, Jan 06, 2001 at 01:19:26AM -0500
+References: <LOBBKAFMMFGJIKLMEPAKGEGPDIAA.ron@profit-master.com> <NCBBJKNMIDPJNLJCHCHIOEBAFMAA.harbour@winfakt.com> <3A56729E.5726.2E552FC8@localhost>
+Message-ID: <20010106090319.J15915@hagbard.davep.org>
+
+On Sat, Jan 06, 2001 at 01:19:26AM -0500, Phil Barnett wrote:
+
+> I use WEG exclusively. Awesome product!
+
+With this much praise I might give in this free software lark and start
+toying with the idea of shareware. ;>
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 09:18:46 2001
+From: harbourtalk@lists.harbour-project.org (Phil Barnett)
+Date: Sat, 6 Jan 2001 04:18:46 -0500
+Subject: [HarbourTalk] DGScan & WEG
+In-Reply-To: <20010106090319.J15915@hagbard.davep.org>
+References: <3A56729E.5726.2E552FC8@localhost>; from midnight@the-oasis.net on Sat, Jan 06, 2001 at 01:19:26AM -0500
+Message-ID: <3A569CA6.11164.2EF95D1F@localhost>
+
+On 6 Jan 2001, at 9:03, Dave Pearson wrote:
+
+> On Sat, Jan 06, 2001 at 01:19:26AM -0500, Phil Barnett wrote:
+> 
+> > I use WEG exclusively. Awesome product!
+> 
+> With this much praise I might give in this free software lark and start
+> toying with the idea of shareware. ;>
+
+Actually I almost added that if Clipper was still a viable marketing 
+target, WEG would be a marketable product.
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 09:37:52 2001
+From: harbourtalk@lists.harbour-project.org (Antonio Linares)
+Date: Sat, 6 Jan 2001 10:37:52 +0100
+Subject: [HarbourTalk] DGScan & WEG
+In-Reply-To: <20010106090319.J15915@hagbard.davep.org>
+Message-ID: <000801c077c4$56fb9ec0$0f2aa8c0@antonio>
+
+I am using WEG for years and thanks to Dave, we do include it 
+in our distribution CDs.
+
+> With this much praise I might give in this free software lark and start
+> toying with the idea of shareware. ;>
+
+bah, it is not good enough :-P
+
+Antonio
+
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 10:03:16 2001
+From: harbourtalk@lists.harbour-project.org (Antonio Linares)
+Date: Sat, 6 Jan 2001 11:03:16 +0100
+Subject: [HarbourTalk] Linux releases kernel 2.4.0
+In-Reply-To: <LOBBKAFMMFGJIKLMEPAKOEGODIAA.ron@profit-master.com>
+Message-ID: <000b01c077c7$e344ad60$0f2aa8c0@antonio>
+
+Ron,
+
+> Never! I simply shared his amazement at how different we all are. 
+> I was sure
+> he would be more interested in the technical details brought by Shashkov,
+> than the writing style, and/or hero status, of Linus.
+
+I did not realized there was source code at the bottom of his msg!!! :-)
+
+Antonio
+
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 09:47:42 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Sat, 6 Jan 2001 09:47:42 +0000
+Subject: [HarbourTalk] DGScan & WEG
+In-Reply-To: <3A569CA6.11164.2EF95D1F@localhost>; from midnight@the-oasis.net on Sat, Jan 06, 2001 at 04:18:46AM -0500
+References: <3A56729E.5726.2E552FC8@localhost>; <20010106090319.J15915@hagbard.davep.org> <3A569CA6.11164.2EF95D1F@localhost>
+Message-ID: <20010106094742.L15915@hagbard.davep.org>
+
+On Sat, Jan 06, 2001 at 04:18:46AM -0500, Phil Barnett wrote:
+> On 6 Jan 2001, at 9:03, Dave Pearson wrote:
+> 
+> > With this much praise I might give in this free software lark and start
+> > toying with the idea of shareware. ;>
+> 
+> Actually I almost added that if Clipper was still a viable marketing
+> target, WEG would be a marketable product.
+
+Well, WEG is actually shipped with at least one product that I know of. Hmm,
+I'm not sure that actually counts as "being sold". Yeah, thanks for the
+compliment though, I do think WEG would have been a "goer" way back when.
+
+Knowing what I know now I'd still have made it free software, which doesn't
+actually stop people paying the author, it simply means they get to decide
+if they appreciate the code enough to pay the author. Pretty fair really.
+
+DGSCAN was free-of-cost but lacked source for a long time. <slap>
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 10:44:31 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Sat, 6 Jan 2001 10:44:31 +0000
+Subject: [HarbourTalk] DGScan & WEG
+In-Reply-To: <000801c077c4$56fb9ec0$0f2aa8c0@antonio>; from alinares@fivetech.com on Sat, Jan 06, 2001 at 10:37:52AM +0100
+References: <20010106090319.J15915@hagbard.davep.org> <000801c077c4$56fb9ec0$0f2aa8c0@antonio>
+Message-ID: <20010106104431.O15915@hagbard.davep.org>
+
+On Sat, Jan 06, 2001 at 10:37:52AM +0100, Antonio Linares wrote:
+
+> > With this much praise I might give in this free software lark and start
+> > toying with the idea of shareware. ;>
+> 
+> bah, it is not good enough :-P
+
+Shareware isn't good enough for WEG or WEG isn't good enough for shareware?
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 10:43:47 2001
+From: harbourtalk@lists.harbour-project.org (Antonio Linares)
+Date: Sat, 6 Jan 2001 11:43:47 +0100
+Subject: [HarbourTalk] DGScan & WEG
+In-Reply-To: <20010106104431.O15915@hagbard.davep.org>
+Message-ID: <000c01c077cd$8c5bc780$0f2aa8c0@antonio>
+
+Dave,
+
+> Shareware isn't good enough for WEG or WEG isn't good enough for 
+> shareware ?
+
+<bg>
+
+jokes apart...
+
+You should add new fatures to WEG that would justify an upgrade,
+so you may have an oportunity to ask money for it.
+
+What about exporting a NG to a RTF format, so it may turned easily
+into a Windows help file ?
+
+Also, something I always dreamed of was a NG reader (like WEG) that
+would allow to modify on-line the NG contents...
+
+Antonio
+
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 10:51:09 2001
+From: harbourtalk@lists.harbour-project.org (Antonio Linares)
+Date: Sat, 6 Jan 2001 11:51:09 +0100
+Subject: [HarbourTalk] DGScan & WEG
+In-Reply-To: <000c01c077cd$8c5bc780$0f2aa8c0@antonio>
+Message-ID: <000d01c077ce$93ee2500$0f2aa8c0@antonio>
+
+> What about exporting a NG to a RTF format, so it may turned easily
+> into a Windows help file ?
+
+I have here a very simple NgToHlp.prg I wrote for myself. 
+
+I am happy to give it to you if you want it.
+
+
+Antonio
+
+
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 17:10:34 2001
+From: harbourtalk@lists.harbour-project.org (Ron Pinkas)
+Date: Sat, 6 Jan 2001 09:10:34 -0800
+Subject: [HarbourTalk] Linux releases kernel 2.4.0
+In-Reply-To: <000b01c077c7$e344ad60$0f2aa8c0@antonio>
+Message-ID: <LOBBKAFMMFGJIKLMEPAKCEHDDIAA.ron@profit-master.com>
+
+Antonio,
+
+I guessed so! I am very happy that I pressed the point then.
+
+Ron
+
+> Ron,
+> 
+> > Never! I simply shared his amazement at how different we all are. 
+> > I was sure
+> > he would be more interested in the technical details brought by 
+> Shashkov,
+> > than the writing style, and/or hero status, of Linus.
+> 
+> I did not realized there was source code at the bottom of his msg!!! :-)
+> 
+> Antonio
+
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 17:41:09 2001
+From: harbourtalk@lists.harbour-project.org (Antonio Linares)
+Date: Sat, 6 Jan 2001 18:41:09 +0100
+Subject: [HarbourTalk] Linux releases kernel 2.4.0
+In-Reply-To: <LOBBKAFMMFGJIKLMEPAKCEHDDIAA.ron@profit-master.com>
+Message-ID: <001701c07807$dac19dc0$0f2aa8c0@antonio>
+
+Ron,
+
+> I guessed so! I am very happy that I pressed the point then.
+
+Thanks a lot, my friend! :-)
+
+Antonio
+
+
+From harbourtalk@lists.harbour-project.org  Sat Jan  6 16:02:06 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Sat, 6 Jan 2001 16:02:06 +0000
+Subject: [HarbourTalk] DGScan & WEG
+In-Reply-To: <000c01c077cd$8c5bc780$0f2aa8c0@antonio>; from alinares@fivetech.com on Sat, Jan 06, 2001 at 11:43:47AM +0100
+References: <20010106104431.O15915@hagbard.davep.org> <000c01c077cd$8c5bc780$0f2aa8c0@antonio>
+Message-ID: <20010106160206.P15915@hagbard.davep.org>
+
+On Sat, Jan 06, 2001 at 11:43:47AM +0100, Antonio Linares wrote:
+> Dave,
+> 
+> > Shareware isn't good enough for WEG or WEG isn't good enough for 
+> > shareware ?
+> 
+> <bg>
+> 
+> jokes apart...
+> 
+> You should add new fatures to WEG that would justify an upgrade, so you
+> may have an oportunity to ask money for it.
+
+WEG is free software.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Wed Jan 24 09:57:05 2001
+From: harbourtalk@lists.harbour-project.org (Antonio Linares)
+Date: Wed, 24 Jan 2001 10:57:05 +0100
+Subject: [HarbourTalk] The Clipper Museum
+In-Reply-To: <20010106160206.P15915@hagbard.davep.org>
+Message-ID: <000701c085ec$01b83780$0f2aa8c0@antonio>
+
+A nice idea from a friend. Don't miss this collection
+of Clipper adds:
+
+http://olivares2000.webhostme.com/museo.htm
+
+In particular, I found there the one
+I was looking for so many time:
+
+http://olivares2000.webhostme.com/museo/images/clip7.jpg
+
+Antonio
+
+
+
+From harbourtalk@lists.harbour-project.org  Wed Jan 24 16:20:47 2001
+From: harbourtalk@lists.harbour-project.org (aacker)
+Date: Wed, 24 Jan 2001 09:20:47 -0700
+Subject: [HarbourTalk] The Clipper Museum
+References: <000701c085ec$01b83780$0f2aa8c0@antonio>
+Message-ID: <096301c08621$9c3844f0$6601a8c0@c765036b>
+
+He should expand it to include third party ads!  It would be quite a
+collection!
+
+Al
+
+Al Acker,President,  Editor
+Acker Consulting, Inc.
+http://www.afaonline.com
+The Xbase Files Magazine
+http://www.thexbasefiles.com
+
+----- Original Message -----
+From: "Antonio Linares" <alinares@fivetech.com>
+To: <harbourtalk@lists.harbour-project.org>
+Sent: Wednesday, January 24, 2001 2:57 AM
+Subject: [HarbourTalk] The Clipper Museum
+
+
+> A nice idea from a friend. Don't miss this collection
+> of Clipper adds:
+>
+> http://olivares2000.webhostme.com/museo.htm
+>
+> In particular, I found there the one
+> I was looking for so many time:
+>
+> http://olivares2000.webhostme.com/museo/images/clip7.jpg
+>
+> Antonio
+>
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@lists.harbour-project.org
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>
+>
+
+
+From harbourtalk@lists.harbour-project.org  Wed Jan 24 16:35:46 2001
+From: harbourtalk@lists.harbour-project.org (Antonio Linares)
+Date: Wed, 24 Jan 2001 17:35:46 +0100
+Subject: [HarbourTalk] The Clipper Museum
+In-Reply-To: <096301c08621$9c3844f0$6601a8c0@c765036b>
+Message-ID: <000101c08623$b42254a0$0f2aa8c0@antonio>
+
+Hi Al,
+
+I know this may sounds a silly question but...
+
+The other day I saw a good bunch of Reference(Clipper)
+magazines I have here and I asked myself...
+
+Do you think is there a chance to get all Reference(Clipper)
+magazines and place them on the web ? (PDF format?)
+
+Or may it be a copyright infringement ?
+
+Antonio
+
+
+From harbourtalk@lists.harbour-project.org  Wed Jan 24 16:58:57 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Wed, 24 Jan 2001 16:58:57 +0000
+Subject: [HarbourTalk] The Clipper Museum
+In-Reply-To: <000101c08623$b42254a0$0f2aa8c0@antonio>; from alinares@fivetech.com on Wed, Jan 24, 2001 at 05:35:46PM +0100
+References: <096301c08621$9c3844f0$6601a8c0@c765036b> <000101c08623$b42254a0$0f2aa8c0@antonio>
+Message-ID: <20010124165857.R20904@hagbard.davep.org>
+
+On Wed, Jan 24, 2001 at 05:35:46PM +0100, Antonio Linares wrote:
+
+> I know this may sounds a silly question but...
+> 
+> The other day I saw a good bunch of Reference(Clipper) magazines I have
+> here and I asked myself...
+> 
+> Do you think is there a chance to get all Reference(Clipper) magazines and
+> place them on the web ? (PDF format?)
+> 
+> Or may it be a copyright infringement ?
+
+I'd have thought that it would be very likely that it would infringe on
+someone's copyright. Is there a copyright message in the mag?
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Wed Jan 24 17:14:36 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Wed, 24 Jan 2001 17:14:36 +0000
+Subject: [HarbourTalk] The Clipper Museum
+In-Reply-To: <000701c085ec$01b83780$0f2aa8c0@antonio>; from alinares@fivetech.com on Wed, Jan 24, 2001 at 10:57:05AM +0100
+References: <20010106160206.P15915@hagbard.davep.org> <000701c085ec$01b83780$0f2aa8c0@antonio>
+Message-ID: <20010124171436.U20904@hagbard.davep.org>
+
+On Wed, Jan 24, 2001 at 10:57:05AM +0100, Antonio Linares wrote:
+
+> A nice idea from a friend. Don't miss this collection of Clipper adds:
+> 
+> http://olivares2000.webhostme.com/museo.htm
+
+Great heads-up Antonio. It's enough to make a bloke nostalgic.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Wed Jan 24 17:57:55 2001
+From: harbourtalk@lists.harbour-project.org (Antonio Linares)
+Date: Wed, 24 Jan 2001 18:57:55 +0100
+Subject: [HarbourTalk] The Clipper Museum
+In-Reply-To: <20010124165857.R20904@hagbard.davep.org>
+Message-ID: <000701c0862f$2d907280$0f2aa8c0@antonio>
+
+Dave,
+
+> I'd have thought that it would be very likely that it would infringe on
+> someone's copyright. 
+
+But what happens if the owner company is out of bussiness ?
+
+Antonio
+
+
+From harbourtalk@lists.harbour-project.org  Wed Jan 24 18:05:50 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Wed, 24 Jan 2001 18:05:50 +0000
+Subject: [HarbourTalk] The Clipper Museum
+In-Reply-To: <000701c0862f$2d907280$0f2aa8c0@antonio>; from alinares@fivetech.com on Wed, Jan 24, 2001 at 06:57:55PM +0100
+References: <20010124165857.R20904@hagbard.davep.org> <000701c0862f$2d907280$0f2aa8c0@antonio>
+Message-ID: <20010124180550.X20904@hagbard.davep.org>
+
+On Wed, Jan 24, 2001 at 06:57:55PM +0100, Antonio Linares wrote:
+> Dave,
+> 
+> > I'd have thought that it would be very likely that it would infringe on
+> > someone's copyright.
+> 
+> But what happens if the owner company is out of bussiness ?
+
+Then you check that the rights weren't passed onto another company or
+individual. It's also probably worth checking that the individual articles
+aren't the copyright of their authors.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Wed Jan 24 22:36:41 2001
+From: harbourtalk@lists.harbour-project.org (=?iso-8859-1?Q?F=E9lix_Pablo_Grande_Ramos?=)
+Date: Wed, 24 Jan 2001 23:36:41 +0100
+Subject: [HarbourTalk] The Clipper Museum
+Message-ID: <006501c08656$1fa39ea0$0101a8c0@urkiola>
+
+Hi to all,
+
+i have update The Clipper Museum. If you have one that no exist in the
+collection, you can send me to fpgrande@terra.es and i'll update the page.
+
+Thanks a lot.
+
+Regards,
+
+Félix Pablo Grande Ramos
+Grupo Olivares 2000
+http://olivares2000.webhostme.com
+
+
+
+From harbourtalk@lists.harbour-project.org  Thu Jan 25 09:31:26 2001
+From: harbourtalk@lists.harbour-project.org (aacker)
+Date: Thu, 25 Jan 2001 02:31:26 -0700
+Subject: [HarbourTalk] The Clipper Museum
+References: <096301c08621$9c3844f0$6601a8c0@c765036b> <000101c08623$b42254a0$0f2aa8c0@antonio> <20010124165857.R20904@hagbard.davep.org>
+Message-ID: <02f601c086b1$97d27760$6601a8c0@c765036b>
+
+Yes, there is a copyright problem.... ( for sure <G> )
+
+Al
+
+Al Acker,President,  Editor
+Acker Consulting, Inc.
+http://www.afaonline.com
+The Xbase Files Magazine
+http://www.thexbasefiles.com
+
+----- Original Message -----
+From: "Dave Pearson" <davep@davep.org>
+To: <harbourtalk@lists.harbour-project.org>
+Sent: Wednesday, January 24, 2001 9:58 AM
+Subject: Re: [HarbourTalk] The Clipper Museum
+
+
+> On Wed, Jan 24, 2001 at 05:35:46PM +0100, Antonio Linares wrote:
+>
+> > I know this may sounds a silly question but...
+> >
+> > The other day I saw a good bunch of Reference(Clipper) magazines I have
+> > here and I asked myself...
+> >
+> > Do you think is there a chance to get all Reference(Clipper) magazines
+and
+> > place them on the web ? (PDF format?)
+> >
+> > Or may it be a copyright infringement ?
+>
+> I'd have thought that it would be very likely that it would infringe on
+> someone's copyright. Is there a copyright message in the mag?
+>
+> --
+> The Harbour Project: A free software Clipper compatible compiler
+> Home Page..........: http://www.harbour-project.org/
+> FAQ................: http://www.harbour-project.org/faq/harbour.html
+> My harbour page....: http://www.davep.org/harbour/
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@lists.harbour-project.org
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>
+
+
+From harbourtalk@lists.harbour-project.org  Thu Jan 25 09:32:23 2001
+From: harbourtalk@lists.harbour-project.org (aacker)
+Date: Thu, 25 Jan 2001 02:32:23 -0700
+Subject: [HarbourTalk] The Clipper Museum
+References: <000101c08623$b42254a0$0f2aa8c0@antonio>
+Message-ID: <02fd01c086b1$b9213af0$6601a8c0@c765036b>
+
+>> would there be a copyright problem.
+
+How much money do you have?  I'd hate to sue someone when it's not worth it!
+<G>.
+
+Al
+
+Al Acker,President,  Editor
+Acker Consulting, Inc.
+http://www.afaonline.com
+The Xbase Files Magazine
+http://www.thexbasefiles.com
+
+----- Original Message -----
+From: "Antonio Linares" <alinares@fivetech.com>
+To: <harbourtalk@lists.harbour-project.org>
+Sent: Wednesday, January 24, 2001 9:35 AM
+Subject: RE: [HarbourTalk] The Clipper Museum
+
+
+> Hi Al,
+>
+> I know this may sounds a silly question but...
+>
+> The other day I saw a good bunch of Reference(Clipper)
+> magazines I have here and I asked myself...
+>
+> Do you think is there a chance to get all Reference(Clipper)
+> magazines and place them on the web ? (PDF format?)
+>
+> Or may it be a copyright infringement ?
+>
+> Antonio
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@lists.harbour-project.org
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>
+
+
+From harbourtalk@lists.harbour-project.org  Mon Jan 29 07:21:47 2001
+From: harbourtalk@lists.harbour-project.org (Chen Kedem)
+Date: Mon, 29 Jan 2001 09:21:47 +0200
+Subject: [HarbourTalk] ClipperFlashNews is back
+Message-ID: <3A751A0B.35B@synel.co.il>
+
+Hmmm, just got an eGroups invitation to ClipperFlashNews
+to an account I use ONLY for Harbour related mail list.
+
+was thinking that after last month fiasco the too enthusiastic
+would-be-moderator had come down, Oh well, another complain to
+eGroups admins...
+
+  Chen.
+
+From harbourtalk@lists.harbour-project.org  Mon Jan 29 09:46:54 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Mon, 29 Jan 2001 09:46:54 +0000
+Subject: [HarbourTalk] ClipperFlashNews is back
+In-Reply-To: <3A751A0B.35B@synel.co.il>; from niki@synel.co.il on Mon, Jan 29, 2001 at 09:21:47AM +0200
+References: <3A751A0B.35B@synel.co.il>
+Message-ID: <20010129094654.Z15200@hagbard.davep.org>
+
+On Mon, Jan 29, 2001 at 09:21:47AM +0200, Chen Kedem wrote:
+
+> Hmmm, just got an eGroups invitation to ClipperFlashNews to an account I
+> use ONLY for Harbour related mail list.
+
+During the last "fiasco" I only got an invitation (which I ignored). This
+morning I find that I've actually been subscribed to the list without my
+permission.
+
+> was thinking that after last month fiasco the too enthusiastic
+> would-be-moderator had come down, Oh well, another complain to eGroups
+> admins...
+
+Yep, I've sent a strongly worded email to the abuse department at Yahoo,
+pointing out that this isn't the first time that this has happened and
+unless they pull the privileges of the list owner it's obvious that they
+condone his actions and, given this, Yahoo will be seen as a company that
+support opt-out mailing lists.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Mon Jan 29 14:05:05 2001
+From: harbourtalk@lists.harbour-project.org (Mark W. Schumann)
+Date: Mon, 29 Jan 2001 09:05:05 -0500
+Subject: [HarbourTalk] ClipperFlashNews is back
+In-Reply-To: <20010129094654.Z15200@hagbard.davep.org>; from davep@davep.org on Mon, Jan 29, 2001 at 09:46:54AM +0000
+References: <3A751A0B.35B@synel.co.il> <20010129094654.Z15200@hagbard.davep.org>
+Message-ID: <20010129090505.A2237@columbus.private.underflap.com>
+
+On Mon, Jan 29, 2001 at 09:46:54AM +0000, Dave Pearson wrote:
+> During the last "fiasco" I only got an invitation (which I ignored). This
+> morning I find that I've actually been subscribed to the list without my
+> permission.
+
+"Me too."
+
+> Yep, I've sent a strongly worded email to the abuse department at Yahoo,
+> pointing out that this isn't the first time that this has happened and
+> unless they pull the privileges of the list owner it's obvious that they
+> condone his actions and, given this, Yahoo will be seen as a company that
+> support opt-out mailing lists.
+
+"Me too."
+
+From harbourtalk@lists.harbour-project.org  Mon Jan 29 15:42:25 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Mon, 29 Jan 2001 15:42:25 +0000
+Subject: [HarbourTalk] ClipperFlashNews is back
+In-Reply-To: <20010129090505.A2237@columbus.private.underflap.com>; from catfood@underflap.com on Mon, Jan 29, 2001 at 09:05:05AM -0500
+References: <3A751A0B.35B@synel.co.il> <20010129094654.Z15200@hagbard.davep.org> <20010129090505.A2237@columbus.private.underflap.com>
+Message-ID: <20010129154225.I15200@hagbard.davep.org>
+
+On Mon, Jan 29, 2001 at 09:05:05AM -0500, Mark W. Schumann wrote:
+
+> "Me too."
+> "Me too."
+
+Perhaps the trick to combating this is to subscribe an address to the list
+that is an alias for the eGroups abuse email address? That might get some
+action. ;>
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Mon Jan 29 17:27:15 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Mon, 29 Jan 2001 17:27:15 +0000
+Subject: [HarbourTalk] ClipperFlashNews is back
+In-Reply-To: <20010129154225.I15200@hagbard.davep.org>; from davep@davep.org on Mon, Jan 29, 2001 at 03:42:25PM +0000
+References: <3A751A0B.35B@synel.co.il> <20010129094654.Z15200@hagbard.davep.org> <20010129090505.A2237@columbus.private.underflap.com> <20010129154225.I15200@hagbard.davep.org>
+Message-ID: <20010129172715.K15200@hagbard.davep.org>
+
+On Mon, Jan 29, 2001 at 03:42:25PM +0000, Dave Pearson wrote:
+
+> Perhaps the trick to combating this is to subscribe an address to the list
+> that is an alias for the eGroups abuse email address? That might get some
+> action. ;>
+
+Of course, I've just realised that their so-called abuse address is nothing
+more than an auto-responder that says "yeah, ok, so someone signed you up
+when you didn't want to, hard cheese, unsubscribe you winging fool". Talk
+about supporting opt-out lists.
+
+So, I'm wondering, does anyone happen to have an email address for a real
+live human who I can register a formal complaint with?
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Mon Jan 29 17:41:16 2001
+From: harbourtalk@lists.harbour-project.org (David G. Holm)
+Date: Mon, 29 Jan 2001 12:41:16 -0500
+Subject: [HarbourTalk] ClipperFlashNews is back
+In-Reply-To: <3A751A0B.35B@synel.co.il>
+Message-ID: <200101291741.f0THfO211075@thor.parrett.net>
+
+** Reply to message from Chen Kedem <niki@synel.co.il> on Mon, 29 Jan
+2001 09:21:47 +0200
+
+> Hmmm, just got an eGroups invitation to ClipperFlashNews
+
+Are you sure it wasn't from Yahoo? What I got was a statement that I
+had already been joined to the list. The message listed the new Yahoo
+address (Yahoo bought eGroups). I forwarded the message to Yahoo's abuse
+address.
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@lists.harbour-project.org  Mon Jan 29 17:45:38 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Mon, 29 Jan 2001 17:45:38 +0000
+Subject: [HarbourTalk] ClipperFlashNews is back
+In-Reply-To: <200101291741.f0THfO211075@thor.parrett.net>; from dholm@jsd-llc.com on Mon, Jan 29, 2001 at 12:41:16PM -0500
+References: <3A751A0B.35B@synel.co.il> <200101291741.f0THfO211075@thor.parrett.net>
+Message-ID: <20010129174538.P15200@hagbard.davep.org>
+
+On Mon, Jan 29, 2001 at 12:41:16PM -0500, David G. Holm wrote:
+
+> Are you sure it wasn't from Yahoo? What I got was a statement that I had
+> already been joined to the list. The message listed the new Yahoo address
+> (Yahoo bought eGroups). I forwarded the message to Yahoo's abuse address.
+
+...which gets you an automated response along the lines of "don't be such a
+cry-baby, just go and unsubscribe while we allow the abuser to get away with
+it to do it again".
+
+Some abuse reporting system. <sigh>
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Mon Jan 29 17:52:32 2001
+From: harbourtalk@lists.harbour-project.org (David G. Holm)
+Date: Mon, 29 Jan 2001 12:52:32 -0500
+Subject: [HarbourTalk] ClipperFlashNews is back
+In-Reply-To: <20010129174538.P15200@hagbard.davep.org>
+References: <3A751A0B.35B@synel.co.il> <200101291741.f0THfO211075@thor.parrett.net>
+ <200101291741.f0THfO211075@thor.parrett.net> ; from dholm@jsd-llc.com on Mon, Jan 29, 2001 at 12:41:16PM -0500
+Message-ID: <200101291752.f0THqe212027@thor.parrett.net>
+
+** Reply to message from Dave Pearson <davep@davep.org> on Mon, 29 Jan
+2001 17:45:38 +0000
+
+> Some abuse reporting system. <sigh>
+
+And apparently it's either overloaded or not automatic. I sent my
+complaint 10 minutes ago and haven't received a reply yet.
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@lists.harbour-project.org  Mon Jan 29 18:34:58 2001
+From: harbourtalk@lists.harbour-project.org (Bill Smith)
+Date: Mon, 29 Jan 2001 10:34:58 -0800
+Subject: [HarbourTalk] ClipperFlashNews is back
+References: <3A751A0B.35B@synel.co.il> <200101291741.f0THfO211075@thor.parrett.net> <200101291741.f0THfO211075@thor.parrett.net> ; from dholm@jsd-llc.com on Mon, Jan 29, 2001 at 12:41:16PM -0500 <200101291752.f0THqe212027@thor.parrett.net>
+Message-ID: <025301c08a22$307a0c80$73c5efd1@k6bw>
+
+I stumbled into this frame in which to complain:
+
+http://add.yahoo.com/fast/help/us/mb/cgi_abuse
+
+Also, notice this statement found in small print at the bottom of the
+screen:
+
+"NOTICE: We collect personal information on this site."
+
+It is a great thing that the Harbour reflector is no longer on egroups.
+
+Thank you.
+
+Bill
+
+
+----- Original Message -----
+From: "David G. Holm" <dholm@jsd-llc.com>
+To: <harbourtalk@lists.harbour-project.org>
+Sent: Monday, January 29, 2001 9:52 AM
+Subject: Re: [HarbourTalk] ClipperFlashNews is back
+
+
+> ** Reply to message from Dave Pearson <davep@davep.org> on Mon, 29 Jan
+> 2001 17:45:38 +0000
+>
+> > Some abuse reporting system. <sigh>
+>
+> And apparently it's either overloaded or not automatic. I sent my
+> complaint 10 minutes ago and haven't received a reply yet.
+> --
+> David G. Holm, Set Captain and all around
+> Harbour Project Clipper Compatibility fanatic.
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@lists.harbour-project.org
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>
+
+
+From harbourtalk@lists.harbour-project.org  Tue Jan 30 03:37:04 2001
+From: harbourtalk@lists.harbour-project.org (Phil Barnett)
+Date: Mon, 29 Jan 2001 22:37:04 -0500
+Subject: [HarbourTalk] ClipperFlashNews is back
+In-Reply-To: <20010129090505.A2237@columbus.private.underflap.com>
+References: <20010129094654.Z15200@hagbard.davep.org>; from davep@davep.org on Mon, Jan 29, 2001 at 09:46:54AM +0000
+Message-ID: <3A75F090.23007.13ED3C5C@localhost>
+
+On 29 Jan 2001, at 9:05, Mark W. Schumann wrote:
+
+> On Mon, Jan 29, 2001 at 09:46:54AM +0000, Dave Pearson wrote:
+> > During the last "fiasco" I only got an invitation (which I ignored). This
+> > morning I find that I've actually been subscribed to the list without my
+> > permission.
+> 
+> "Me too."
+> 
+> > Yep, I've sent a strongly worded email to the abuse department at Yahoo,
+> > pointing out that this isn't the first time that this has happened and
+> > unless they pull the privileges of the list owner it's obvious that they
+> > condone his actions and, given this, Yahoo will be seen as a company that
+> > support opt-out mailing lists.
+> 
+> "Me too."
+
+And, me.
+
+This is tiring.
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@lists.harbour-project.org  Tue Jan 30 08:14:52 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Tue, 30 Jan 2001 08:14:52 +0000
+Subject: [HarbourTalk] ClipperFlashNews is back
+In-Reply-To: <3A75F090.23007.13ED3C5C@localhost>; from midnight@the-oasis.net on Mon, Jan 29, 2001 at 10:37:04PM -0500
+References: <20010129094654.Z15200@hagbard.davep.org>; <20010129090505.A2237@columbus.private.underflap.com> <3A75F090.23007.13ED3C5C@localhost>
+Message-ID: <20010130081452.W15200@hagbard.davep.org>
+
+On Mon, Jan 29, 2001 at 10:37:04PM -0500, Phil Barnett wrote:
+> On 29 Jan 2001, at 9:05, Mark W. Schumann wrote:
+> 
+> > "Me too."
+> > "Me too."
+> 
+> And, me.
+> 
+> This is tiring.
+
+Well, I've now sent emails asking for a proper abuse address to the support
+address and to <URL:mailto:privacypolicy@yahoo-inc.com>. The reason for the
+latter address is:
+
+,----
+| SPECIAL NOTE FROM Yahoo! Groups: Because Yahoo! Groups values your
+| privacy, it is a violation of our service rules for moderators to add
+| subscribers to a group against their wishes. If you feel this has
+| happened, please notify us at egroups-abuse@yahoo-inc.com
+`----
+
+It seems quite clear from the automated abuse responses that they *don't*
+value my privacy so I think it makes sense to ask the privacy "officer" (I'm
+assuming there's a human at the end of that message) why this is the case
+and how we can go about either a) getting the list shut down or b) getting
+the list owner's account pulled.
+
+BTW, see <URL:http://www.theregister.co.uk/content/6/16447.html>. Evidence,
+if any more was required, that our move away from eGroups didn't come a
+moment too soon.
+
+CC: The usual suspects.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Tue Jan 30 08:31:21 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Tue, 30 Jan 2001 08:31:21 GMT
+Subject: [HarbourTalk] Re: More unsolicited email list membership
+References: <slrn97a705.eqs.davep.news@hagbard.davep.org>
+Message-ID: <slrn97cuuo.eqs.davep.news@hagbard.davep.org>
+
+[This message has also been posted.]
+* Dave Pearson <davep.news@davep.org>:
+
+> Well, despite the claims by the owner of ClipperFlashNews@egroups.com that
+> is was "all a mistake" that he'd added people to the list without their
+> permission I sit down to read my email this morning and what do I find:
+>
+> [SNIP]
+
+Well, I had an email from Goran this morning. I won't quote it word for word
+as quoting private email without permission is rude. In summary, he's
+claiming that he didn't subscribe anyone in the last couple of days but that
+he did send out some more invitations. He also claims that I wasn't amongst
+that invitation list as I'd turned down the previous invitation. Presumably
+the same is true of everyone else who had been resubscribed against their
+wishes.
+
+He suggests that the cause of this unfortunate turn of events is the eGroups
+to Yahoo conversion that happened over the weekend. While it's true that
+there are problems <URL:http://www.theregister.co.uk/content/6/16447.html>
+with the move I find it really hard to believe that this is the case of this
+abuse of the eGroup system and our email addresses.
+
+-- 
+Dave Pearson                        |   w3ng - The WWW Norton Guide reader.
+http://www.davep.org/               |     eg - Norton Guide reader for Linux.
+http://www.davep.org/clipper/       |    weg - Norton Guide reader for Windows.
+http://www.davep.org/norton-guides/ | dgscan - DGROUP scanner for Clipper.
+
+From harbourtalk@lists.harbour-project.org  Tue Jan 30 21:33:02 2001
+From: harbourtalk@lists.harbour-project.org (Tim Stone)
+Date: Tue, 30 Jan 2001 15:33:02 -0600
+Subject: [HarbourTalk] ClipperFlashNews is back
+In-Reply-To: <20010129172715.K15200@hagbard.davep.org>
+Message-ID: <NCBBIAEKOJJDNDKOKHMJGEGBDAAA.mrtimstone@home.com>
+
+Dave,
+
+Well, I used to fire off emails on abuse for all unsolicited email.  I find
+that I usually get a response in a couple of days, and the offender no
+longer has an account.  SO ... when you send in the complaint, it gets
+handled, but it takes time.
+
+I have been getting messages recently that boast 150 million email accounts
+on a mailing list.  The guys who have these lists certainly make enough
+money.  Over here there are seminars every weekend about how to get rich
+quick using the internet.  Every one that signs up gets a sample letter, and
+the name of a source for an email list.  Same letter, same source, to
+everyone.  So the people run home, and use their credit card to pay for a
+bulk email ... and all these people get the same message, different person,
+several times in a short period of time.
+
+The money is significant enough that everytime the list guy gets shut down,
+he simply signs up somewhere else.
+
+So ... I finally gave up and just hit the delete button.  I know we
+shouldn't have to do this, but the scam scum will always have a way to find
+us !
+
+Thankfully I have a virus scan because some emails now bring unwanted gifts
+... my very own happy virus !
+
+Tim
+
+
+
+>  -----Original Message-----
+>  From: harbourtalk-admin@lists.harbour-project.org
+>  [mailto:harbourtalk-admin@lists.harbour-project.org]On Behalf Of Dave
+>  Pearson
+>  Sent: Monday, January 29, 2001 11:27 AM
+>  To: harbourtalk@lists.harbour-project.org
+>  Subject: Re: [HarbourTalk] ClipperFlashNews is back
+>
+>
+>  On Mon, Jan 29, 2001 at 03:42:25PM +0000, Dave Pearson wrote:
+>
+>  > Perhaps the trick to combating this is to subscribe an address
+>  to the list
+>  > that is an alias for the eGroups abuse email address? That
+>  might get some
+>  > action. ;>
+>
+>  Of course, I've just realised that their so-called abuse address
+>  is nothing
+>  more than an auto-responder that says "yeah, ok, so someone signed you up
+>  when you didn't want to, hard cheese, unsubscribe you winging fool". Talk
+>  about supporting opt-out lists.
+>
+>  So, I'm wondering, does anyone happen to have an email address for a real
+>  live human who I can register a formal complaint with?
+>
+>  --
+>  The Harbour Project: A free software Clipper compatible compiler
+>  Home Page..........: http://www.harbour-project.org/
+>  FAQ................: http://www.harbour-project.org/faq/harbour.html
+>  My harbour page....: http://www.davep.org/harbour/
+>  _______________________________________________
+>  HarbourTalk mailing list
+>  HarbourTalk@lists.harbour-project.org
+>  http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>
+
+
+From harbourtalk@lists.harbour-project.org  Wed Jan 31 07:28:59 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Wed, 31 Jan 2001 07:28:59 +0000
+Subject: [HarbourTalk] The old eGroups harbour lists
+Message-ID: <20010131072859.X15200@hagbard.davep.org>
+
+I received an email from the old eGroups harbourtalk mailing list this
+morning. Seems someone didn't know we'd moved to our own (trustworthy) list
+server.
+
+Can we in some way close down the old lists at eGroups? Or, at the very
+least, bulk unsubscribe everyone from it?
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Wed Jan 31 11:38:47 2001
+From: harbourtalk@lists.harbour-project.org (Douglas Woodrow)
+Date: Wed, 31 Jan 2001 11:38:47 +0000
+Subject: [HarbourTalk] The old eGroups harbour lists
+In-Reply-To: <20010131072859.X15200@hagbard.davep.org>
+References: <20010131072859.X15200@hagbard.davep.org>
+Message-ID: <d4TvIiAHl$d6EwoC@acuity-ltd.demon.co.uk>
+
+On Wed, 31 Jan 2001 07:28:59  Dave Pearson <davep@davep.org> wrote
+>I received an email from the old eGroups harbourtalk mailing list this
+>morning. Seems someone didn't know we'd moved to our own (trustworthy) list
+>server.
+>
+>Can we in some way close down the old lists at eGroups? Or, at the very
+>least, bulk unsubscribe everyone from it?
+>
+
+Me too, ditto, seconded...
+-- 
+Douglas Woodrow
+
+
+From harbourtalk@lists.harbour-project.org  Wed Jan 31 15:41:40 2001
+From: harbourtalk@lists.harbour-project.org (Tim Stone)
+Date: Wed, 31 Jan 2001 09:41:40 -0600
+Subject: [HarbourTalk] The old eGroups harbour lists
+In-Reply-To: <20010131072859.X15200@hagbard.davep.org>
+Message-ID: <NCBBIAEKOJJDNDKOKHMJEEGFDAAA.mrtimstone@home.com>
+
+Sorry ... I'll do that today.
+
+Tim
+
+>  -----Original Message-----
+>  From: harbourtalk-admin@lists.harbour-project.org
+>  [mailto:harbourtalk-admin@lists.harbour-project.org]On Behalf Of Dave
+>  Pearson
+>  Sent: Wednesday, January 31, 2001 1:29 AM
+>  To: Harbour Waffle
+>  Subject: [HarbourTalk] The old eGroups harbour lists
+>  
+>  
+>  I received an email from the old eGroups harbourtalk mailing list this
+>  morning. Seems someone didn't know we'd moved to our own 
+>  (trustworthy) list
+>  server.
+>  
+>  Can we in some way close down the old lists at eGroups? Or, at the very
+>  least, bulk unsubscribe everyone from it?
+>  
+>  -- 
+>  The Harbour Project: A free software Clipper compatible compiler
+>  Home Page..........: http://www.harbour-project.org/
+>  FAQ................: http://www.harbour-project.org/faq/harbour.html
+>  My harbour page....: http://www.davep.org/harbour/
+>  _______________________________________________
+>  HarbourTalk mailing list
+>  HarbourTalk@lists.harbour-project.org
+>  http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>  
+

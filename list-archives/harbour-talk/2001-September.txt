@@ -1,0 +1,50 @@
+From harbourtalk@matrixlist.com  Sat Sep  1 00:02:43 2001
+From: harbourtalk@matrixlist.com (Azriel)
+Date: Sat, 1 Sep 2001 01:02:43 +0200
+Subject: [HarbourTalk] ramdisk for windows?
+Message-ID: <000801c13271$0bee1490$0101c80a@azriel2>
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0005_01C13281.CDFE4E50
+Content-Type: text/plain;
+	charset="windows-1255"
+Content-Transfer-Encoding: quoted-printable
+
+re:
+http://www.matrixlist.com/pipermail/harbourtalk/2001-April/000276.html
+hi Gustavo.
+did you find a ramdisk for windows.
+I'm looking too.
+regards,
+Azriel.
+
+
+------=_NextPart_000_0005_01C13281.CDFE4E50
+Content-Type: text/html;
+	charset="windows-1255"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content=3D"text/html; charset=3Dwindows-1255" =
+http-equiv=3DContent-Type>
+<META content=3D"MSHTML 5.00.3315.2870" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#fcfaa8>
+<DIV><FONT size=3D4>re:</FONT></DIV>
+<DIV><FONT size=3D4><A=20
+href=3D"http://www.matrixlist.com/pipermail/harbourtalk/2001-April/000276=
+.html">http://www.matrixlist.com/pipermail/harbourtalk/2001-April/000276.=
+html</A></FONT></DIV>
+<DIV><FONT size=3D4>hi Gustavo.</FONT></DIV>
+<DIV><FONT size=3D4>did you find a ramdisk for windows.</FONT></DIV>
+<DIV><FONT size=3D4>I'm looking too.</FONT></DIV>
+<DIV><FONT size=3D4>regards,</FONT></DIV>
+<DIV><FONT size=3D4>Azriel.</FONT></DIV>
+<DIV>&nbsp;</DIV></BODY></HTML>
+
+------=_NextPart_000_0005_01C13281.CDFE4E50--
+
+

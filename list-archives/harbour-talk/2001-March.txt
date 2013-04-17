@@ -1,0 +1,1146 @@
+From harbourtalk@lists.harbour-project.org  Sun Mar  4 04:11:23 2001
+From: harbourtalk@lists.harbour-project.org (Phil Barnett)
+Date: Sat, 3 Mar 2001 23:11:23 -0500
+Subject: [HarbourTalk] Oh, is that what it was...
+Message-ID: <3AA17A1B.28417.18E92489@localhost>
+
+----------  Forwarded Message  ----------
+Subject: Oh, is that what it was...
+Date: Fri, 2 Mar 2001 13:30:56 -0800
+
+MICROSOFT TESTS NUCLEAR DEVICE AT SECRET OLYMPIA 
+FACILITY YESTERDAY
+
+REDMOND (BNN)--World leaders reacted with stunned silence as 
+Microsoft Corp. (MSFT) conducted an underground nuclear test at 
+a secret facility in Washington state. The device, exploded at 10:55 
+am PDT (1:55 pm EDT) today, was timed to coincide with talks 
+between Microsoft and the US Department of Justice over possible 
+antitrust action.
+
+"Microsoft is going to defend its right to market its products by any 
+and all necessary means," said Microsoft CEO Bill Gates. "Not 
+that I'm anti-government" he continued, "but there would be few 
+tears shed in the computer industry if Washington were engulfed in 
+a bath of nuclear fire."
+
+Scientists pegged the explosion at around 100 kilotons. "I nearly 
+dropped my latte when I saw the seismometer" explained 
+University of Washington geophysicist Dr. Whoops Blammover, "At 
+first I thought it was Mt. Rainier, and I was thinking, damn, there 
+goes the mountain bike vacation."
+
+In Washington, President Bush announced the US Government 
+would boycott all Microsoft products indefinitely.  Minutes later, the 
+President reversed his decision. "We've tried sanctions since 
+lunchtime, and they don't work," said the President.  Instead, the 
+administration will initiate a policy of "constructive engagement" 
+with Microsoft.
+
+Microsoft's Chief Technology Officer Nathan Myrhvold said the test 
+justified Microsoft's recent acquisition of the Hanford Nuclear 
+Reservation from the US Government. Not only did Microsoft 
+acquire "kilograms of weapons grade plutonium" in the deal, said 
+Myrhvold, "but we've finally found a place to dump those millions of 
+unsold copies of Microsoft Bob."
+
+Myrhvold warned users not to replace Microsoft NT products with rival operating systems. "I can neither confirm nor deny the existence of a radioisotope thermoelectric generator inside of every Pentium III microprocessor,
+" said Myrhvold, "but anyone who installs an OS written by a bunch of long-hairs on the Internet is going to get what they deserve."
+
+The existence of an RTG in each Pentium III microprocessor would explain why the microprocessors, made by the Intel Corporation, run so hot.  The  Intel chips "put out more heat than they draw in electrical power" said Pr
+of. E. E. Thymes of MIT. "This should finally dispell those stories 
+about cold fusion." 
+
+Rumors suggest a second weapons development project is 
+underway in California, headed by Microsoft rival Sun 
+Microsystems. "They're doing all of the development work in Java," 
+said one source close to the project.  The development of a delivery 
+system is said to be holding up progress. "Write once, bomb 
+anywhere is still a dream at the moment."
+
+Meanwhile, in Cupertino, California, Apple interim-CEO Steve Jobs 
+was rumored to be in discussion with Oracle CEO Larry Ellison 
+about deploying Apple's Newton technology against Microsoft. 
+"Newton was the biggest bomb the Valley has developed in years," 
+said one hardware engineer. "I'd hate to be around when they drop 
+that product a second time."
+
+**********************************************************************
+This communication is intended solely for the addressee and is 
+confidential. If you are not the intended recipient, any disclosure, 
+copying, distribution or any action taken or omitted to be taken in 
+reliance on it, is prohibited and may be unlawful.
+
+-------------------------------------------------------
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@lists.harbour-project.org  Mon Mar  5 20:50:08 2001
+From: harbourtalk@lists.harbour-project.org (Patrick Mast)
+Date: Mon, 5 Mar 2001 21:50:08 +0100
+Subject: [HarbourTalk] Advantage Client Engine Release 6.0
+In-Reply-To: <3AA17A1B.28417.18E92489@localhost>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIEEFPGAAA.harbour@winfakt.com>
+
+Hi,
+
+See http://www.advantagedatabase.com/ADS/default.htm
+Do we need to update the ADS support for Harbour?
+
+Alexander?
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz 
+
+From harbourtalk@lists.harbour-project.org  Mon Mar  5 20:56:10 2001
+From: harbourtalk@lists.harbour-project.org (David G. Holm)
+Date: Mon, 5 Mar 2001 15:56:10 -0500
+Subject: [HarbourTalk] Advantage Client Engine Release 6.0
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIEEFPGAAA.harbour@winfakt.com>
+References: <3AA17A1B.28417.18E92489@localhost>
+Message-ID: <200103052056.f25KuI504457@thor.parrett.net>
+
+** Reply to message from "Patrick Mast" <harbour@winfakt.com> on Mon, 5
+Mar 2001 21:50:08 +0100
+
+> See http://www.advantagedatabase.com/ADS/default.htm
+> Do we need to update the ADS support for Harbour?
+
+Highly unlikely, because Extended Systems has designed ADS 6 to fully
+support 5.x client software. For example, there will not be a version 6
+Clipper client, because Clipper can use the 5.x client to access both
+5.x servers and 6.x servers.
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@lists.harbour-project.org  Tue Mar  6 03:29:11 2001
+From: harbourtalk@lists.harbour-project.org (Brian Hays)
+Date: Mon, 5 Mar 2001 19:29:11 -0800
+Subject: [HarbourTalk] Advantage Client Engine Release 6.0
+References: <NCBBJKNMIDPJNLJCHCHIEEFPGAAA.harbour@winfakt.com>
+Message-ID: <001301c0a5ed$9c913c90$921a5e18@bh>
+
+Patrick:
+I've been using the 6.0 beta for a few weeks; there isn't anything needed to
+upgrade in rddads.
+
+Brian
+
+----- Original Message -----
+From: "Patrick Mast" <harbour@winfakt.com>
+To: <harbourtalk@lists.harbour-project.org>
+Sent: Monday, March 05, 2001 12:50 PM
+Subject: [HarbourTalk] Advantage Client Engine Release 6.0
+
+
+> Hi,
+>
+> See http://www.advantagedatabase.com/ADS/default.htm
+> Do we need to update the ADS support for Harbour?
+>
+> Alexander?
+>
+> Regards,
+>
+> Patrick Mast
+> www.Patrick.Be.kz
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@lists.harbour-project.org
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+From harbourtalk@lists.harbour-project.org  Tue Mar  6 03:25:22 2001
+From: harbourtalk@lists.harbour-project.org (harbourtalk@lists.harbour-project.org)
+Date: Tue, 6 Mar 2001 14:25:22 +1100
+Subject: [HarbourTalk] Advantage Client Engine Release 6.0
+Message-ID: <OF654FC2D0.412B74C0-ONCA256A07.0012BC77@cor.bmi.bunge.com.au>
+
+Brian,
+
+Any good? What's been improved? I mean, I can always read the list of
+additions/improvments on the website, but it's nice to hear it from a
+developer's perspective.
+
+Mabster
+
+On 06/03/2001 02:29:11 PM harbourtalk-admin wrote:
+
+>Patrick:
+>I've been using the 6.0 beta for a few weeks; there isn't anything needed
+to
+>upgrade in rddads.
+>
+>Brian
+
+
+
+From harbourtalk@lists.harbour-project.org  Tue Mar  6 06:14:28 2001
+From: harbourtalk@lists.harbour-project.org (Alexander S.Kresin)
+Date: Tue, 6 Mar 2001 09:14:28 +0300
+Subject: [HarbourTalk] Re: Advantage Client Engine Release 6.0
+In-Reply-To: <001301c0a5ed$9c913c90$921a5e18@bh>
+References: <NCBBJKNMIDPJNLJCHCHIEEFPGAAA.harbour@winfakt.com>
+ <001301c0a5ed$9c913c90$921a5e18@bh>
+Message-ID: <301230853.20010306091428@belacy.belgorod.su>
+
+On 06.03.2001 6:29, Brian Hays <bhays@abacuslaw.com> wrote:
+
+BH> Patrick:
+BH> I've been using the 6.0 beta for a few weeks; there isn't anything needed to
+BH> upgrade in rddads.
+
+>> See http://www.advantagedatabase.com/ADS/default.htm
+>> Do we need to update the ADS support for Harbour?
+>>
+>> Alexander?
+
+ We should think about adding new possibilities of 6.0 to RDDADS and
+ how it would be better to support both versions.
+
+
+Best regards,
+ Alexander
+http://members.xoom.com/alkresin/
+
+
+
+From harbourtalk@lists.harbour-project.org  Tue Mar  6 07:23:31 2001
+From: harbourtalk@lists.harbour-project.org (Patrick Mast)
+Date: Tue, 6 Mar 2001 08:23:31 +0100
+Subject: [HarbourTalk] Advantage Client Engine Release 6.0
+In-Reply-To: <001301c0a5ed$9c913c90$921a5e18@bh>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIMEGCGAAA.harbour@winfakt.com>
+
+Brian,
+
+> I've been using the 6.0 beta for a few weeks; there isn't 
+> anything needed to upgrade in rddads.
+
+Is ADS *fully* working with Harbour now?
+Are there any parts of ADS that are not finished yet in Harbour?
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz 
+
+From harbourtalk@lists.harbour-project.org  Tue Mar  6 20:13:33 2001
+From: harbourtalk@lists.harbour-project.org (Brian Hays)
+Date: Tue, 6 Mar 2001 12:13:33 -0800
+Subject: [HarbourTalk] Advantage Client Engine Release 6.0
+References: <NCBBJKNMIDPJNLJCHCHIMEGCGAAA.harbour@winfakt.com>
+Message-ID: <002d01c0a679$ec5b6480$921a5e18@bh>
+
+Mabster and Patrick:
+
+ADS 6 does have new features that we could support.  They have a new Data
+Dictionary that gives server-side enforcement of referential integrity...
+* Complete referential integrity support including primary/foreign key
+definition and cascaded updates and deletes
+* Full server-based transaction processing eliminates database
+corruption, drastically reducing support costs
+* Advantage Extended Procedures provide easy-to-develop stored
+procedures that are executed at the server
+
+The Extended Procedures are the only element of interest for me at the
+moment.  I have not been able to take the time to investigate the new
+features as it is crunch time to get a product out the door here.
+
+As for this:
+> Is ADS *fully* working with Harbour now?
+> Are there any parts of ADS that are not finished yet in Harbour?
+...that's a bigger target than I've been able to shoot for.  My first goal
+In adding on to Alexander's excellent start
+was to get ADS fully integrated into the RDD (so straight RDD Harbour code
+that is interchangeable with other RDDs would be fully supported without the
+need for explicit ADS calls).
+On this point we are *very* close with CDXs.  There are still a couple bugs
+with scoping numeric indexes and relations that I will clean up soon, but
+other than that it seems pretty solid, including automatic implementation of
+AOFs.
+There are undoubtedly several problems switching to ADT tables as they have
+restrictions that can generate errors that we need to handle better (e.g.
+deleted records are handled different, and record counts do NOT include
+them).
+Also, I haven't used Alexander's SQL support yet.
+
+There are many functions in ADS that go beyond normal RDD activities.
+Transaction processing and rollbacks should get done, and there's a handfull
+of ads management functions that I'll do wrappers for.  But I doubt we
+really need every available function available in Harbour.
+
+Brian
+
+
+From harbourtalk@lists.harbour-project.org  Wed Mar  7 15:15:50 2001
+From: harbourtalk@lists.harbour-project.org (Felipe Coury)
+Date: 7 Mar 2001 15:15:50 -0000
+Subject: [HarbourTalk] Re: [Harbour] Harbour and (Microsoft .NET x Java)
+Message-ID: <20010307151550.14322.qmail@hm20.locaweb.com.br>
+
+Luiz,
+
+> Some time ago their was as thread asking if Harbour would 
+> support the New microsoft .NET. After reading many magazines 
+> about Microsoft .NET and Java, and also doing research on the 
+> internet I`ve come to the Follow.
+> 1 ) Microsoft .NET is noting more then an Tool to try to recover 
+> the place that Java from Sun Microsystem Got.
+I don't know what magazines you read but .NET architecture is far more than 
+only a tool to gain market share. The .NET architecture is really a 
+wonderful, time-saving and flexible way to develop. You can code (so far) 
+in VB, C# (C Sharp), Cobol, ... There's no limit to this list since you can 
+write a CLR compiler for any language.
+
+> 2 ) Apps created by Microsoft .NET will , in my understand, 
+> Do the same thing that Java do today , as accesssing Databases, 
+> commercial apps,
+Well, what things a language or technology does is not the issue. In my 
+opinion the issue is *how* it does. And if it adds powerful features both 
+to the programmer and for the user, why not? .NET is far more than Java.
+
+> 3 ) Java is more solid, Have many years of life. I have seen 
+> incredible websites(Home banking) using Java apps to get  
+> what an client has in his bank account, to recieve payments 
+> of docs, and other things, along that today has many Java 
+> programmer as C programmers.
+Using Java trough the Internet is a great overhead. In ASP.Net you will 
+have all the flexibility and power of VB.Net mixed with Classic ASP. About 
+solidness, I think no language is solid until it reaches a mass of 
+programmers. If solidness was the strong point on a starting up language, 
+all the language developers should cease their work and I am including us. 
+How solid is Harbour? See?
+
+> 4 ) If we should choice between one of this too, I`ve 
+> choose to say with java. We already has the java output 
+> support ready.
+In my POV, Java and .NET implementations can live together and there's no 
+need to choose between them. Once you see .NET running, I am sure you'll 
+change your mind about the concept.
+
+Best regards,
+
+Felipe Coury
+
+
+
+
+
+Felipe G. Coury
+Gerente de Desenvolvimento
+Creation Internet Business
+http://www.creation.com.br
+
+--------------------------------------------
+Visite o GuiaBrasil.Net:
+http://www.guiabrasil.net
+--------------------------------------------
+
+
+From harbourtalk@lists.harbour-project.org  Wed Mar  7 17:34:10 2001
+From: harbourtalk@lists.harbour-project.org (Patrick Mast)
+Date: Wed, 7 Mar 2001 18:34:10 +0100
+Subject: [HarbourTalk] Advantage Client Engine Release 6.0
+In-Reply-To: <002d01c0a679$ec5b6480$921a5e18@bh>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIGEHDGAAA.harbour@winfakt.com>
+
+Brian,
+
+Can we make a list of ADS functions that are ready in Harbour?
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+> -----Oorspronkelijk bericht-----
+> Van: harbourtalk-admin@lists.harbour-project.org
+> [mailto:harbourtalk-admin@lists.harbour-project.org]Namens Brian Hays
+> Verzonden: dinsdag 6 maart 2001 21:14
+> Aan: harbourtalk@lists.harbour-project.org
+> Onderwerp: Re: [HarbourTalk] Advantage Client Engine Release 6.0
+>
+>
+> Mabster and Patrick:
+>
+> ADS 6 does have new features that we could support.  They have a new Data
+> Dictionary that gives server-side enforcement of referential integrity...
+> * Complete referential integrity support including primary/foreign key
+> definition and cascaded updates and deletes
+> * Full server-based transaction processing eliminates database
+> corruption, drastically reducing support costs
+> * Advantage Extended Procedures provide easy-to-develop stored
+> procedures that are executed at the server
+>
+> The Extended Procedures are the only element of interest for me at the
+> moment.  I have not been able to take the time to investigate the new
+> features as it is crunch time to get a product out the door here.
+>
+> As for this:
+> > Is ADS *fully* working with Harbour now?
+> > Are there any parts of ADS that are not finished yet in Harbour?
+> ...that's a bigger target than I've been able to shoot for.  My first goal
+> In adding on to Alexander's excellent start
+> was to get ADS fully integrated into the RDD (so straight RDD Harbour code
+> that is interchangeable with other RDDs would be fully supported
+> without the
+> need for explicit ADS calls).
+> On this point we are *very* close with CDXs.  There are still a
+> couple bugs
+> with scoping numeric indexes and relations that I will clean up soon, but
+> other than that it seems pretty solid, including automatic
+> implementation of
+> AOFs.
+> There are undoubtedly several problems switching to ADT tables as
+> they have
+> restrictions that can generate errors that we need to handle better (e.g.
+> deleted records are handled different, and record counts do NOT include
+> them).
+> Also, I haven't used Alexander's SQL support yet.
+>
+> There are many functions in ADS that go beyond normal RDD activities.
+> Transaction processing and rollbacks should get done, and there's
+> a handfull
+> of ads management functions that I'll do wrappers for.  But I doubt we
+> really need every available function available in Harbour.
+>
+> Brian
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@lists.harbour-project.org
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>
+
+
+From harbourtalk@lists.harbour-project.org  Wed Mar  7 18:15:53 2001
+From: harbourtalk@lists.harbour-project.org (David G. Holm)
+Date: Wed, 7 Mar 2001 13:15:53 -0500
+Subject: [HarbourTalk] Palm to buy Extended Systems!
+Message-ID: <200103071815.f27IFu202549@smtp.parrett.net>
+
+The full press release is at:
+
+http://www.extendedsystems.com/ESI/Company+Info/News+-+Events/PressDetail.htm?NewsID=20010306
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@lists.harbour-project.org  Wed Mar  7 18:13:19 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Wed, 7 Mar 2001 18:13:19 +0000
+Subject: [HarbourTalk] Re: [Harbour] Harbour and (Microsoft .NET x Java)
+In-Reply-To: <20010307151550.14322.qmail@hm20.locaweb.com.br>; from fcoury@creation.com.br on Wed, Mar 07, 2001 at 03:15:50PM -0000
+References: <20010307151550.14322.qmail@hm20.locaweb.com.br>
+Message-ID: <20010307181319.E5326@hagbard.davep.org>
+
+On Wed, Mar 07, 2001 at 03:15:50PM -0000, Felipe Coury wrote:
+
+> I don't know what magazines you read but .NET architecture is far more
+> than only a tool to gain market share. The .NET architecture is really a
+> wonderful, time-saving and flexible way to develop. You can code (so far)
+> in VB, C# (C Sharp), Cobol, ... There's no limit to this list since you
+> can write a CLR compiler for any language.
+
+More or less like using any language to target the JVM then?
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Wed Mar  7 19:29:00 2001
+From: harbourtalk@lists.harbour-project.org (Patrick Mast)
+Date: Wed, 7 Mar 2001 20:29:00 +0100
+Subject: [HarbourTalk] Palm to buy Extended Systems!
+In-Reply-To: <200103071815.f27IFu202549@smtp.parrett.net>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIKEHGGAAA.harbour@winfakt.com>
+
+Is this GOOD or BAD for ADS?
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+> -----Oorspronkelijk bericht-----
+> Van: harbourtalk-admin@lists.harbour-project.org
+> [mailto:harbourtalk-admin@lists.harbour-project.org]Namens David G. Holm
+> Verzonden: woensdag 7 maart 2001 19:16
+> Aan: harbourtalk@lists.harbour-project.org
+> Onderwerp: [HarbourTalk] Palm to buy Extended Systems!
+> 
+> 
+> The full press release is at:
+> 
+> http://www.extendedsystems.com/ESI/Company+Info/News+-+Events/Pres
+> sDetail.htm?NewsID=20010306
+> -- 
+> David G. Holm, Set Captain and all around
+> Harbour Project Clipper Compatibility fanatic.
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@lists.harbour-project.org
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+> 
+
+From harbourtalk@lists.harbour-project.org  Wed Mar  7 20:01:48 2001
+From: harbourtalk@lists.harbour-project.org (Brian Hays)
+Date: Wed, 7 Mar 2001 12:01:48 -0800
+Subject: [HarbourTalk] Advantage Client Engine Release 6.0
+References: <NCBBJKNMIDPJNLJCHCHIGEHDGAAA.harbour@winfakt.com>
+Message-ID: <001101c0a741$7169b600$6d01a8c0@local>
+
+How would you want to document all the functions that are used by the RDD
+but not called by the app programmer directly?
+There's probably no point in saying "adsGoTop" is done since you can't call
+that function directly, you just call dbGoTop.
+We could make a list of those functions used by the rdd, but it's probably
+more useful to say "all table and index functions are used by the rdd except
+..." and list any that aren't supported yet.
+
+I can try to create a list of supported funcs from the other categories...
+
+Brian
+
+----- Original Message -----
+From: Patrick Mast <harbour@winfakt.com>
+To: <harbourtalk@lists.harbour-project.org>
+Sent: Wednesday, March 07, 2001 9:34 AM
+Subject: RE: [HarbourTalk] Advantage Client Engine Release 6.0
+
+
+> Brian,
+>
+> Can we make a list of ADS functions that are ready in Harbour?
+>
+> Regards,
+>
+> Patrick Mast
+> www.Patrick.Be.kz (By Bekz.net)
+>
+> > -----Oorspronkelijk bericht-----
+> > Van: harbourtalk-admin@lists.harbour-project.org
+> > [mailto:harbourtalk-admin@lists.harbour-project.org]Namens Brian Hays
+> > Verzonden: dinsdag 6 maart 2001 21:14
+> > Aan: harbourtalk@lists.harbour-project.org
+> > Onderwerp: Re: [HarbourTalk] Advantage Client Engine Release 6.0
+> >
+> >
+> > Mabster and Patrick:
+> >
+> > ADS 6 does have new features that we could support.  They have a new
+Data
+> > Dictionary that gives server-side enforcement of referential
+integrity...
+> > * Complete referential integrity support including primary/foreign key
+> > definition and cascaded updates and deletes
+> > * Full server-based transaction processing eliminates database
+> > corruption, drastically reducing support costs
+> > * Advantage Extended Procedures provide easy-to-develop stored
+> > procedures that are executed at the server
+> >
+> > The Extended Procedures are the only element of interest for me at the
+> > moment.  I have not been able to take the time to investigate the new
+> > features as it is crunch time to get a product out the door here.
+> >
+> > As for this:
+> > > Is ADS *fully* working with Harbour now?
+> > > Are there any parts of ADS that are not finished yet in Harbour?
+> > ...that's a bigger target than I've been able to shoot for.  My first
+goal
+> > In adding on to Alexander's excellent start
+> > was to get ADS fully integrated into the RDD (so straight RDD Harbour
+code
+> > that is interchangeable with other RDDs would be fully supported
+> > without the
+> > need for explicit ADS calls).
+> > On this point we are *very* close with CDXs.  There are still a
+> > couple bugs
+> > with scoping numeric indexes and relations that I will clean up soon,
+but
+> > other than that it seems pretty solid, including automatic
+> > implementation of
+> > AOFs.
+> > There are undoubtedly several problems switching to ADT tables as
+> > they have
+> > restrictions that can generate errors that we need to handle better
+(e.g.
+> > deleted records are handled different, and record counts do NOT include
+> > them).
+> > Also, I haven't used Alexander's SQL support yet.
+> >
+> > There are many functions in ADS that go beyond normal RDD activities.
+> > Transaction processing and rollbacks should get done, and there's
+> > a handfull
+> > of ads management functions that I'll do wrappers for.  But I doubt we
+> > really need every available function available in Harbour.
+> >
+> > Brian
+> >
+> > _______________________________________________
+> > HarbourTalk mailing list
+> > HarbourTalk@lists.harbour-project.org
+> > http://www.matrixlist.com/mailman/listinfo/harbourtalk
+> >
+>
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@lists.harbour-project.org
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+
+From harbourtalk@lists.harbour-project.org  Wed Mar  7 19:52:22 2001
+From: harbourtalk@lists.harbour-project.org (David G. Holm)
+Date: Wed, 7 Mar 2001 14:52:22 -0500
+Subject: [HarbourTalk] Palm to buy Extended Systems!
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIKEHGGAAA.harbour@winfakt.com>
+References: <200103071815.f27IFu202549@smtp.parrett.net>
+Message-ID: <200103071952.f27JqO213261@smtp.parrett.net>
+
+** Reply to message from "Patrick Mast" <harbour@winfakt.com> on Wed, 7
+Mar 2001 20:29:00 +0100
+
+> Is this GOOD or BAD for ADS?
+
+I don't see how it could possibly be bad for ADS, but it has great
+potential to be good for ADS.
+
+According to the Extended Systems email that was sent to their esinews
+mailing list, this is fantastic for Palm, who's primary purpose in
+acquiring Extended Systems is to acquire their "leading handheld [sic]
+synchronization and management software" (which includes ADS), and is
+good for ES, who will gain "access to additional resources and a strong
+brand to reach and deliver solutions to enterprises and the development
+community more effectively."
+
+A follow up email, that was only sent to ADS partners, states that it
+is "business as usual" for ADS partners and that ES will "continue to
+develop and market [ADS] with a broadened set of resources and partners."
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@lists.harbour-project.org  Tue Mar 13 20:26:50 2001
+From: harbourtalk@lists.harbour-project.org (David G. Holm)
+Date: Tue, 13 Mar 2001 15:26:50 -0500
+Subject: [HarbourTalk] SourceForge group member roles
+Message-ID: <200103132027.f2DKR2124290@smtp.parrett.net>
+
+When I added Mark W. Schumann as a Harbour group member on SourceForge,
+I noticed that they have some new features, such as listing each members
+role in the group. All roles were displayed as "???", so I set all roles
+to "Developer", with the following exceptions:
+
+Dave Pearson: "Doc Writer" (the closest they had to "FAQ Maintainer").
+Patrick Mast: "Web Designer" (the closest they had to "Web Master").
+Phil Barnett: "Project Manager"
+
+If anyone feels that they should be assigned a different role, please
+speak up. The available roles are: Undefined, Developer, Project
+Manager, Unix Admin, Support Manager, Doc Writer, Tester, Graphic/Other
+Designer, Doc Translator, Editorial/Content Writer, Packager (.rpm,
+.deb, etc.), Analysis/Design, Advisor / Mentor / Consultant, Distributor
+/ Promoter, Content Managment, Requirements Engineering, Porter (Cross
+Platform Devel.), and No Specific Role.
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@lists.harbour-project.org  Tue Mar 13 21:15:48 2001
+From: harbourtalk@lists.harbour-project.org (Patrick Mast)
+Date: Tue, 13 Mar 2001 22:15:48 +0100
+Subject: [HarbourTalk] SourceForge group member roles
+In-Reply-To: <200103132027.f2DKR2124290@smtp.parrett.net>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIOELNGAAA.harbour@winfakt.com>
+
+Thanks David.
+If we can have 2 tites, please add "Tester" for me also.
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+> -----Oorspronkelijk bericht-----
+> Van: harbourtalk-admin@lists.harbour-project.org
+> [mailto:harbourtalk-admin@lists.harbour-project.org]Namens David G. Holm
+> Verzonden: dinsdag 13 maart 2001 21:27
+> Aan: harbourtalk@lists.harbour-project.org
+> Onderwerp: [HarbourTalk] SourceForge group member roles
+> 
+> 
+> When I added Mark W. Schumann as a Harbour group member on SourceForge,
+> I noticed that they have some new features, such as listing each members
+> role in the group. All roles were displayed as "???", so I set all roles
+> to "Developer", with the following exceptions:
+> 
+> Dave Pearson: "Doc Writer" (the closest they had to "FAQ Maintainer").
+> Patrick Mast: "Web Designer" (the closest they had to "Web Master").
+> Phil Barnett: "Project Manager"
+> 
+> If anyone feels that they should be assigned a different role, please
+> speak up. The available roles are: Undefined, Developer, Project
+> Manager, Unix Admin, Support Manager, Doc Writer, Tester, Graphic/Other
+> Designer, Doc Translator, Editorial/Content Writer, Packager (.rpm,
+> .deb, etc.), Analysis/Design, Advisor / Mentor / Consultant, Distributor
+> / Promoter, Content Managment, Requirements Engineering, Porter (Cross
+> Platform Devel.), and No Specific Role.
+> -- 
+> David G. Holm, Set Captain and all around
+> Harbour Project Clipper Compatibility fanatic.
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@lists.harbour-project.org
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+> 
+
+From harbourtalk@lists.harbour-project.org  Tue Mar 13 22:29:22 2001
+From: harbourtalk@lists.harbour-project.org (David G. Holm)
+Date: Tue, 13 Mar 2001 17:29:22 -0500
+Subject: [HarbourTalk] SourceForge group member roles
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIOELNGAAA.harbour@winfakt.com>
+References: <200103132027.f2DKR2124290@smtp.parrett.net>
+Message-ID: <200103132229.f2DMTZ104583@smtp.parrett.net>
+
+** Reply to message from "Patrick Mast" <harbour@winfakt.com> on Tue, 13 Mar 2001 22:15:48 +0100
+
+> If we can have 2 tites,
+
+I tried, but they don't support Ctrl+Click to select multiple roles.
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@lists.harbour-project.org  Wed Mar 14 07:20:01 2001
+From: harbourtalk@lists.harbour-project.org (Patrick Mast)
+Date: Wed, 14 Mar 2001 08:20:01 +0100
+Subject: [HarbourTalk] SourceForge group member roles
+In-Reply-To: <200103132229.f2DMTZ104583@smtp.parrett.net>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIKEMDGAAA.harbour@winfakt.com>
+
+Ok, thanks for trying! ;-))
+
+> > If we can have 2 tites,
+> I tried, but they don't support Ctrl+Click to select multiple roles.
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+From harbourtalk@lists.harbour-project.org  Wed Mar 14 17:48:40 2001
+From: harbourtalk@lists.harbour-project.org (Patrick Mast)
+Date: Wed, 14 Mar 2001 18:48:40 +0100
+Subject: [HarbourTalk] Help with Linux
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIKEMDGAAA.harbour@winfakt.com>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIKEMMGAAA.harbour@winfakt.com>
+
+Hi,
+
+I have a Linux machine. I have installed a new Hard disk.
+I have partitioned it (Fdisk) and formatted it.
+
+How can I make it available on the network (Samba)
+It is /dev/hdb1
+
+I have already a shared HD partition on the linux machine.
+So, Samba is alraedy installed.
+The new drive is appended in the system.
+
+How can I do that?
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+From harbourtalk@lists.harbour-project.org  Wed Mar 14 18:21:52 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Wed, 14 Mar 2001 18:21:52 +0000
+Subject: [HarbourTalk] Help with Linux
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIKEMMGAAA.harbour@winfakt.com>; from harbour@winfakt.com on Wed, Mar 14, 2001 at 06:48:40PM +0100
+References: <NCBBJKNMIDPJNLJCHCHIKEMDGAAA.harbour@winfakt.com> <NCBBJKNMIDPJNLJCHCHIKEMMGAAA.harbour@winfakt.com>
+Message-ID: <20010314182152.E5326@hagbard.davep.org>
+
+On Wed, Mar 14, 2001 at 06:48:40PM +0100, Patrick Mast wrote:
+
+> I have already a shared HD partition on the linux machine. So, Samba is
+> alraedy installed. The new drive is appended in the system.
+> 
+> How can I do that?
+
+You edit /etc/smb.conf to tell it about the share, "man 5 smb.conf" tells
+you all about what goes in that file.
+
+Failing that, the chances are that your distribution (which one are you
+using?) comes with a utility called `linuxconf'. It usually provides a
+point-n-shoot interface for doing this sort of thing:
+
+,----
+| Config>Networking>Server Tasks>Samba File Server>Disk Shares
+`----
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Wed Mar 14 20:06:49 2001
+From: harbourtalk@lists.harbour-project.org (Patrick Mast)
+Date: Wed, 14 Mar 2001 21:06:49 +0100
+Subject: [HarbourTalk] Help with Linux
+In-Reply-To: <20010314182152.E5326@hagbard.davep.org>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIIEMNGAAA.harbour@winfakt.com>
+
+Dave,
+
+What's the command to copy the "smb.conf" file to a diskette?
+
+Patrick
+
+
+From harbourtalk@lists.harbour-project.org  Wed Mar 14 22:54:53 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Wed, 14 Mar 2001 22:54:53 +0000
+Subject: [HarbourTalk] Help with Linux
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIIEMNGAAA.harbour@winfakt.com>; from harbour@winfakt.com on Wed, Mar 14, 2001 at 09:06:49PM +0100
+References: <20010314182152.E5326@hagbard.davep.org> <NCBBJKNMIDPJNLJCHCHIIEMNGAAA.harbour@winfakt.com>
+Message-ID: <20010314225453.F5326@hagbard.davep.org>
+
+On Wed, Mar 14, 2001 at 09:06:49PM +0100, Patrick Mast wrote:
+
+> What's the command to copy the "smb.conf" file to a diskette?
+
+That depends on the type of filesystem you've got on the diskette in
+question. Assuming you've aiming to use a FAT formatted disk, take a look at
+the mtools ("man mtools" for details). In particular, take a look at mcopy
+("man mcopy").
+
+Out of interest, why the desire to copy it to a floppy?
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Thu Mar 15 05:07:46 2001
+From: harbourtalk@lists.harbour-project.org (Phil Barnett)
+Date: Thu, 15 Mar 2001 00:07:46 -0500
+Subject: [HarbourTalk] Help with Linux
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIKEMMGAAA.harbour@winfakt.com>
+References: <NCBBJKNMIDPJNLJCHCHIKEMDGAAA.harbour@winfakt.com>
+Message-ID: <3AB007D2.8347.23C5BF13@localhost>
+
+On 14 Mar 2001, at 18:48, Patrick Mast wrote:
+
+> Hi,
+> 
+> I have a Linux machine. I have installed a new Hard disk.
+> I have partitioned it (Fdisk) and formatted it.
+> 
+> How can I make it available on the network (Samba)
+> It is /dev/hdb1
+> 
+> I have already a shared HD partition on the linux machine.
+> So, Samba is alraedy installed.
+> The new drive is appended in the system.
+> 
+> How can I do that?
+
+Well, personally, I would install webmin and the samba interface is 
+quite excellent.
+
+Or, there is direct editing of smb.conf.
+
+There is probably an editor named joe. It emulated the old wordstar 
+keystrokes.
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@lists.harbour-project.org  Thu Mar 15 06:57:01 2001
+From: harbourtalk@lists.harbour-project.org (Patrick Mast)
+Date: Thu, 15 Mar 2001 07:57:01 +0100
+Subject: [HarbourTalk] Help with Linux
+In-Reply-To: <20010314225453.F5326@hagbard.davep.org>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIOENCGAAA.harbour@winfakt.com>
+
+Dave,
+
+> That depends on the type of filesystem you've got on the diskette in
+> question. Assuming you've aiming to use a FAT formatted disk,
+> take a look at
+> the mtools ("man mtools" for details). In particular, take a look at mcopy
+> ("man mcopy").
+Why is it always so hard... ;-((
+I just want to copy... N more no less ;-))
+
+> Out of interest, why the desire to copy it to a floppy?
+So I can send it to you for review! ;-))
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net)
+
+
+From harbourtalk@lists.harbour-project.org  Thu Mar 15 07:01:07 2001
+From: harbourtalk@lists.harbour-project.org (Patrick Mast)
+Date: Thu, 15 Mar 2001 08:01:07 +0100
+Subject: [HarbourTalk] Help with Linux
+In-Reply-To: <3AB007D2.8347.23C5BF13@localhost>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIEENDGAAA.harbour@winfakt.com>
+
+Phil,
+
+> > I have a Linux machine. I have installed a new Hard disk.
+> > I have partitioned it (Fdisk) and formatted it.
+> > How can I make it available on the network (Samba)
+> > It is /dev/hdb1
+> > I have already a shared HD partition on the linux machine.
+> > So, Samba is alraedy installed.
+> > The new drive is appended in the system.
+> > How can I do that?
+> Well, personally, I would install webmin and the samba interface is 
+> quite excellent.
+There is already Samba installed. It is a extra disk that is installed.
+ 
+> Or, there is direct editing of smb.conf.
+Yes, but how?
+ 
+> There is probably an editor named joe. It emulated the old wordstar 
+> keystrokes.
+I use Pico. Is this also ok?
+
+Regards,
+
+Patrick Mast
+www.Patrick.Be.kz (By Bekz.net) 
+
+From harbourtalk@lists.harbour-project.org  Thu Mar 15 07:36:47 2001
+From: harbourtalk@lists.harbour-project.org (Alexander S.Kresin)
+Date: Thu, 15 Mar 2001 10:36:47 +0300
+Subject: [HarbourTalk] Re: Help with Linux
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIEENDGAAA.harbour@winfakt.com>
+References: <NCBBJKNMIDPJNLJCHCHIEENDGAAA.harbour@winfakt.com>
+Message-ID: <1226959347.20010315103647@belacy.belgorod.su>
+
+Patrick,
+
+>> There is probably an editor named joe. It emulated the old wordstar 
+>> keystrokes.
+PM> I use Pico. Is this also ok?
+
+ Aren't you have mc ( Midnight Commander - Linux replacement of Norton
+ Commander ) ? I think that it is the most convenient tool for Dos
+ users.
+
+Best regards,
+ Alexander
+
+
+
+From harbourtalk@lists.harbour-project.org  Thu Mar 15 07:53:30 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Thu, 15 Mar 2001 07:53:30 +0000
+Subject: [HarbourTalk] Help with Linux
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIOENCGAAA.harbour@winfakt.com>; from harbour@winfakt.com on Thu, Mar 15, 2001 at 07:57:01AM +0100
+References: <20010314225453.F5326@hagbard.davep.org> <NCBBJKNMIDPJNLJCHCHIOENCGAAA.harbour@winfakt.com>
+Message-ID: <20010315075330.L5326@hagbard.davep.org>
+
+On Thu, Mar 15, 2001 at 07:57:01AM +0100, Patrick Mast wrote:
+> Dave,
+> 
+> > That depends on the type of filesystem you've got on the diskette in
+> > question. Assuming you've aiming to use a FAT formatted disk, take a
+> > look at the mtools ("man mtools" for details). In particular, take a
+> > look at mcopy ("man mcopy").
+>
+> Why is it always so hard... ;-((
+> I just want to copy... N more no less ;-))
+
+What's so hard about using a copy command? There is a more consistent method
+(which I guess is what you'd consider "not hard") but that requires a little
+more explanation and learning, it seemed sensible to point you to a direct
+route if you were using FAT formatted floppy disks. Learn how to mount and
+you've got the problem cracked no matter the type of filesystem.
+
+Extra power requires a little bit of extra learning, that's all.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Thu Mar 15 07:57:13 2001
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Thu, 15 Mar 2001 07:57:13 +0000
+Subject: [HarbourTalk] Help with Linux
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIEENDGAAA.harbour@winfakt.com>; from harbour@winfakt.com on Thu, Mar 15, 2001 at 08:01:07AM +0100
+References: <3AB007D2.8347.23C5BF13@localhost> <NCBBJKNMIDPJNLJCHCHIEENDGAAA.harbour@winfakt.com>
+Message-ID: <20010315075713.M5326@hagbard.davep.org>
+
+On Thu, Mar 15, 2001 at 08:01:07AM +0100, Patrick Mast wrote:
+> Phil,
+> 
+> > Well, personally, I would install webmin and the samba interface is
+> > quite excellent.
+>
+> There is already Samba installed. It is a extra disk that is installed.
+
+He's suggesting that you install webmin, not samba (which you've obviously
+already got installed). If you encounter the name of an item of free
+software and you don't know what it is or where to find it you should always
+consult <URL:http://freshmeat.net/>.
+
+> > Or, there is direct editing of smb.conf.
+>
+> Yes, but how?
+
+I pointed you at the information that documents the file. I've pointed to
+one possible tool for editing it (you've not said if it's available to you
+or not) and Phil's pointed you to another. On top of that Samba comes with
+lots of excellent documentation, it even comes with example configuration
+files that demonstrates what you need to do and how you need to do it (and
+it has done since 1996, which is when I first read that documentation and
+first shared a directory off my Linux box).
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.davep.org/harbour/
+
+From harbourtalk@lists.harbour-project.org  Thu Mar 15 08:00:18 2001
+From: harbourtalk@lists.harbour-project.org (Guy Roussin)
+Date: Thu, 15 Mar 2001 09:00:18 +0100
+Subject: [HarbourTalk] Help with Linux
+References: <NCBBJKNMIDPJNLJCHCHIEENDGAAA.harbour@winfakt.com>
+Message-ID: <3AB07692.F56C7D34@teledetection.fr>
+
+Hello,
+To configure samba (smb.conf) i use http://127.0.0.1:901
+Guy
+Patrick Mast wrote:
+> 
+> Phil,
+> 
+> > > I have a Linux machine. I have installed a new Hard disk.
+> > > I have partitioned it (Fdisk) and formatted it.
+> > > How can I make it available on the network (Samba)
+> > > It is /dev/hdb1
+> > > I have already a shared HD partition on the linux machine.
+> > > So, Samba is alraedy installed.
+> > > The new drive is appended in the system.
+> > > How can I do that?
+> > Well, personally, I would install webmin and the samba interface is
+> > quite excellent.
+> There is already Samba installed. It is a extra disk that is installed.
+> 
+> > Or, there is direct editing of smb.conf.
+> Yes, but how?
+> 
+> > There is probably an editor named joe. It emulated the old wordstar
+> > keystrokes.
+> I use Pico. Is this also ok?
+> 
+> Regards,
+> 
+> Patrick Mast
+> www.Patrick.Be.kz (By Bekz.net)
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@lists.harbour-project.org
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+From harbourtalk@lists.harbour-project.org  Fri Mar 16 05:28:58 2001
+From: harbourtalk@lists.harbour-project.org (Phil Barnett)
+Date: Fri, 16 Mar 2001 00:28:58 -0500
+Subject: [HarbourTalk] Help with Linux
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIEENDGAAA.harbour@winfakt.com>
+References: <3AB007D2.8347.23C5BF13@localhost>
+Message-ID: <3AB15E4A.16976.28FF86D2@localhost>
+
+On 15 Mar 2001, at 8:01, Patrick Mast wrote:
+
+> Phil,
+> 
+> > > I have a Linux machine. I have installed a new Hard disk.
+> > > I have partitioned it (Fdisk) and formatted it.
+> > > How can I make it available on the network (Samba)
+> > > It is /dev/hdb1
+> > > I have already a shared HD partition on the linux machine.
+> > > So, Samba is alraedy installed.
+> > > The new drive is appended in the system.
+> > > How can I do that?
+> > Well, personally, I would install webmin and the samba interface is 
+> > quite excellent.
+> There is already Samba installed. It is a extra disk that is installed.
+>  
+> > Or, there is direct editing of smb.conf.
+> Yes, but how?
+
+man smb.conf to start. Look in the file for clues on how the first 
+drive was shared and emulate it.
+  
+> > There is probably an editor named joe. It emulated the old wordstar 
+> > keystrokes.
+> I use Pico. Is this also ok?
+
+Absolutely fine. 
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@lists.harbour-project.org  Tue Mar 20 17:26:37 2001
+From: harbourtalk@lists.harbour-project.org (Marek Horodyski)
+Date: Tue, 20 Mar 2001 18:26:37 +0100
+Subject: [HarbourTalk] error list
+Message-ID: <012001c0b162$f47259a0$1321000a@altkomhomar>
+
+this is test - sorry
+
+MH
+
+
+From harbourtalk@matrixlist.com  Fri Mar 23 05:10:50 2001
+From: harbourtalk@matrixlist.com (Phil Barnett)
+Date: Fri, 23 Mar 2001 00:10:50 -0500
+Subject: [HarbourTalk] New list address, same location
+Message-ID: <3ABA948A.12489.4CFBB9F1@localhost>
+
+Because of mail filtering policies in place around the world today, it 
+becomes increasingly important to have an address that will do a 
+reverse lookup.
+
+lists.harbour-project.org does not, and was an alias for 
+matrixlist.com, which will do reverse lookups.
+
+Therefore I have changed this mailing list replyto address to 
+
+harbourtalk@matrixlist.com as of today.
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+

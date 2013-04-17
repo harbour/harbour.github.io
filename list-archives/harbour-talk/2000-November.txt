@@ -1,0 +1,2255 @@
+From harbourtalk@lists.harbour-project.org  Wed Nov  1 14:37:37 2000
+Date: Wed, 1 Nov 2000 10:37:37 -0400
+From: =?iso-8859-1?Q?Gustavo_A._Gonz=E1lez_M.?= harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] CopyRight
+
+<PRE>Hi.
+
+A question about Copy Right.
+
+One header File have copy right ?
+
+GOTO END IF NO TRUE  : )))
+
+It is true, i can do a new header and put my own copy right, changing,
+adding or renaming any commands and voala ?
+
+If not is possible, how harbour have a own table of defines (inside course),
+idem like clipper, and dont says, &quot;Copy right of clipper (CA)&quot;. The defines
+used by harbour differs a little from clipper.
+
+What is the different ?
+
+Can any one explain me ?
+
+END
+
+***********************************
+Gustavo A. González M.
+<A HREF="mailto:gonzalezgustavo@cantv.net">gonzalezgustavo@cantv.net</A>
+Caracas - Venezuela
+***********************************
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  1 14:30:06 2000
+Date: Wed, 1 Nov 2000 10:30:06 -0400
+From: =?iso-8859-1?Q?Gustavo_A._Gonz=E1lez_M.?= harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Question Yacc
+
+<PRE>Hi.
+
+I dont now what is the means Yacc.
+
+Where i can found information about this topic ?
+
+***********************************
+Gustavo A. González M.
+<A HREF="mailto:gonzalezgustavo@cantv.net">gonzalezgustavo@cantv.net</A>
+Caracas - Venezuela
+***********************************
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  1 15:43:33 2000
+Date: Wed, 1 Nov 2000 15:43:33 +0000
+From: Dave Pearson harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] CopyRight
+
+<PRE>On Wed, Nov 01, 2000 at 10:37:37AM -0400, Gustavo A. González M. wrote:
+
+&gt;<i> A question about Copy Right.
+</I>&gt;<i> 
+</I>&gt;<i> One header File have copy right ?
+</I>&gt;<i> 
+</I>&gt;<i> GOTO END IF NO TRUE  : )))
+</I>
+I'm not certain about what you're asking here.
+
+&gt;<i> It is true, i can do a new header and put my own copy right, changing,
+</I>&gt;<i> adding or renaming any commands and voala ?
+</I>
+Neither am I certain about what you're asking here either. Are you asking if
+you can take someone's copyrighted work, make some modification and replace
+the copyright message with your own?
+
+&gt;<i> If not is possible, how harbour have a own table of defines (inside
+</I>&gt;<i> course), idem like clipper, and dont says, &quot;Copy right of clipper (CA)&quot;.
+</I>&gt;<i> The defines used by harbour differs a little from clipper.
+</I>
+If the defines were copied directly out of the CA-Clipper files then there
+is a problem. Is there any evidence that these rules were not cleanly
+implemented but were instead cut and pasted from the CA-Clipper code?
+
+-- 
+Take a look in Hagbard's World: |   w3ng - The WWW Norton Guide reader.
+<A HREF="http://www.hagbard.demon.co.uk/">http://www.hagbard.demon.co.uk/</A> |     eg - Norton Guide reader for Linux.
+<A HREF="http://www.acemake.com/hagbard/">http://www.acemake.com/hagbard/</A> |    weg - Norton Guide reader for Windows.
+Free software, including........| dgscan - DGROUP scanner for Clipper.
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  1 15:40:59 2000
+Date: Wed, 1 Nov 2000 15:40:59 +0000
+From: Dave Pearson harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Question Yacc
+
+<PRE>On Wed, Nov 01, 2000 at 10:30:06AM -0400, Gustavo A. González M. wrote:
+
+&gt;<i> I dont now what is the means Yacc.
+</I>
+,----[ From The Free On-line Dictionary of Computing ]
+|<i> Yet Another Compiler Compiler
+</I>|<i> 
+</I>|<i>    &lt;tool, language&gt; (yacc) The LALR parser generator found on
+</I>|<i>    most Unix systems.  Also, the language used to describe the
+</I>|<i>    syntax of another language to yacc (the program).
+</I>|<i> 
+</I>|<i>    Implementations: ayacc, YAY, perln-byacc,
+</I>|<i> 
+</I>|<i>    SASL-Yacc - &quot;Yacc in SASL - An Exercise in Functional
+</I>|<i>    Programming&quot;, Simon Peyton-Jones, Software Prac &amp; Exp
+</I>|<i>    15:807-820 (1985).  Mentions also a BCPL implementation.
+</I>|<i> 
+</I>|<i>    Yacc++ - 1990.  An object-oriented rewrite of yacc, supports
+</I>|<i>    regular expressions, produces an LR1 grammar parser.
+</I>|<i> 
+</I>|<i>    [&quot;YACC Meets C++&quot;, S.C. Johnson, USENIX Spring '88 Conf].
+</I>|<i> 
+</I>|<i>    Chris Clark, Compiler Resources Inc,
+</I>|<i>    &lt;bz%<A HREF="mailto:compres.UUCP@primerd.cv.com">compres.UUCP@primerd.cv.com</A>&gt; (508) 435-5016.
+</I>|<i> 
+</I>|<i>    MLYACC - Implementation and output in SML/NJ.
+</I>|<i>    (ftp:research.att.com/dist/ml/75.tools.tar.Z).
+</I>|<i> 
+</I>|<i>    A version, by David Poole &lt;<A HREF="mailto:dpoole@hydrogen.oscs.montana.edu">dpoole@hydrogen.oscs.montana.edu</A>&gt;,
+</I>|<i>    has been retargeted to Turbo Pascal.
+</I>|<i>    (<A HREF="ftp://iecc.com/pub/file/lyprg.zip">ftp://iecc.com/pub/file/lyprg.zip</A>).
+</I>|<i> 
+</I>|<i>    See also Bison, yet another, Yet Another Yacc.
+</I>|<i> 
+</I>|<i>    Unix manual page: yacc(1).
+</I>|<i> 
+</I>|<i>    [&quot;YACC - Yet Another Compiler Compiler&quot;, S.C. Johnson, CS TR
+</I>|<i>    32, Bell Labs (Jul 1975)].
+</I>|<i> 
+</I>|<i>    [Was there ever an &quot;ACC&quot; - &quot;Another Compiler Compiler&quot;?  If
+</I>|<i>    so, what was the first compiler compiler called?]
+</I>|<i> 
+</I>|<i>    (21 Jan 1997)
+</I>`----
+
+&gt;<i> Where i can found information about this topic ?
+</I>
+I'd have thought a quick search via your web search engine of choice would
+have given you a number of useful hits. You might also find the
+documentation for bison &lt;URL:<A HREF="http://www.gnu.org/software/bison/bison.html">http://www.gnu.org/software/bison/bison.html</A>&gt;
+(a free yacc implementation) of some use.
+
+-- 
+Take a look in Hagbard's World: |     lbdb.el - LBDB interface.
+<A HREF="http://www.hagbard.demon.co.uk/">http://www.hagbard.demon.co.uk/</A> |  sawfish.el - Sawfish mode.
+<A HREF="http://www.acemake.com/hagbard/">http://www.acemake.com/hagbard/</A> |  uptimes.el - Record emacs uptimes.
+emacs software, including.......| quickurl.el - Recall lists of URLs.
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  1 19:01:29 2000
+Date: Wed, 1 Nov 2000 15:01:29 -0400
+From: =?iso-8859-1?Q?Gustavo_A._Gonz=E1lez_M.?= harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] CopyRight
+
+<PRE>----- Original Message -----
+From: Dave Pearson &lt;<A HREF="mailto:davep@davep.org">davep@davep.org</A>&gt;
+To: &lt;<A HREF="mailto:harbourtalk@lists.harbour-project.org">harbourtalk@lists.harbour-project.org</A>&gt;
+Sent: Wednesday, November 01, 2000 11:43 AM
+Subject: Re: [HarbourTalk] CopyRight
+
+
+&gt;<i> On Wed, Nov 01, 2000 at 10:37:37AM -0400, Gustavo A. González M. wrote:
+</I>&gt;<i>
+</I>&gt;<i> &gt; A question about Copy Right.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; One header File have copy right ?
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; GOTO END IF NO TRUE  : )))
+</I>&gt;<i>
+</I>&gt;<i> I'm not certain about what you're asking here.
+</I>
+I try to ask, if one header file ( xxx.ch xxx.h ) have copyright ?
+
+&gt;<i>
+</I>&gt;<i> &gt; It is true, i can do a new header and put my own copy right, changing,
+</I>&gt;<i> &gt; adding or renaming any commands and voala ?
+</I>&gt;<i>
+</I>&gt;<i> Neither am I certain about what you're asking here either. Are you asking
+</I>if
+&gt;<i> you can take someone's copyrighted work, make some modification and
+</I>replace
+&gt;<i> the copyright message with your own?
+</I>
+No so so. I try to say that if there are any work with copyrigh like a
+header file, i can take it or learn it and build my own headers.
+
+&gt;<i>
+</I>&gt;<i> &gt; If not is possible, how harbour have a own table of defines (inside
+</I>&gt;<i> &gt; course), idem like clipper, and dont says, &quot;Copy right of clipper (CA)&quot;.
+</I>&gt;<i> &gt; The defines used by harbour differs a little from clipper.
+</I>&gt;<i>
+</I>&gt;<i> If the defines were copied directly out of the CA-Clipper files then there
+</I>&gt;<i> is a problem. Is there any evidence that these rules were not cleanly
+</I>&gt;<i> implemented but were instead cut and pasted from the CA-Clipper code?
+</I>&gt;<i>
+</I>Dave, i put you an example in two commands for a compiler.
+
+File1.ch
+
+//
+// CopyRight of Clipper (CA)
+//
+#command DISPLAY [&lt;list,...&gt;][&lt;off:OFF&gt;][&lt;toPrint: TO PRINTER&gt;][TO FILE
+&lt;(toFile)&gt;] ;
+[FOR &lt;for&gt;][WHILE &lt;while&gt;][NEXT &lt;next&gt;][RECORD
+&lt;rec&gt;][&lt;rest:REST&gt;][&lt;all:ALL&gt;]   ;
+=&gt; __DBList(&lt;.off.&gt;, { &lt;{list}&gt; }, &lt;.all.&gt;,&lt;{for}&gt;, &lt;{while}&gt;, &lt;next&gt;,
+&lt;rec&gt;, &lt;.rest.&gt;,  &lt;.toPrint.&gt;, &lt;(toFile)&gt; )
+
+And then Gustavo or xxx person, read, learn an do it....
+
+//
+// XXX
+//
+#command DISPLAY [&lt;lista,...&gt;][&lt;off:OFF&gt;][&lt;toPrint: TO PRINTER&gt;][TO FILE
+&lt;(toArc)&gt;] ;
+[FOR &lt;for&gt;][WHILE &lt;mientras&gt;][NEXT &lt;prox&gt;][RECORD
+&lt;rec&gt;][&lt;rest:REST&gt;][&lt;todo:ALL&gt;]   ;
+=&gt; __DBList(&lt;.off.&gt;, { &lt;{lista}&gt; }, &lt;.todo.&gt;,&lt;{for}&gt;, &lt;{mientras}&gt;, &lt;prox&gt;,
+&lt;rec&gt;, &lt;.rest.&gt;,  &lt;.toPrint.&gt;, &lt;(toArc)&gt; )
+
+You think that the new command DISPLAY, have been &quot;cleanly implemented&quot; ?
+
+What you think about it new command ?
+
+Like the XXX person, need compatibility with the old command (clipper CA),
+obviuosly the principal clausules are idem, certain vars are changed and
+newly implemented. ?
+
+***
+
+Dave, please don't take my question from a bad side, i only need to be
+clear, and know to where i can do.
+
+I ask you, because you know more than me about licences and so forth.
+
+Hey, where is the direction of  [ From The Free On-line Dictionary of
+Computing ]
+
+*** Again....
+
+You think that may be posible that i can include a header file (xx.ch), in
+any program, but without the copyright text from it original creator ?
+
+I can put in any programs (like an example), the inkey.ch ?, or, std.ch, or
+any header ?
+
+What do you think about this ?
+
+
+&gt;<i> --
+</I>&gt;<i> Take a look in Hagbard's World: |   w3ng - The WWW Norton Guide reader.
+</I>&gt;<i> <A HREF="http://www.hagbard.demon.co.uk/">http://www.hagbard.demon.co.uk/</A> |     eg - Norton Guide reader for Linux.
+</I>&gt;<i> <A HREF="http://www.acemake.com/hagbard/">http://www.acemake.com/hagbard/</A> |    weg - Norton Guide reader for
+</I>Windows.
+&gt;<i> Free software, including........| dgscan - DGROUP scanner for Clipper.
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> HarbourTalk mailing list
+</I>&gt;<i> <A HREF="mailto:HarbourTalk@lists.harbour-project.org">HarbourTalk@lists.harbour-project.org</A>
+</I>&gt;<i> <A HREF="http://www.matrixlist.com/mailman/listinfo/harbourtalk">http://www.matrixlist.com/mailman/listinfo/harbourtalk</A>
+</I>
+
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  1 22:16:45 2000
+Date: Wed, 1 Nov 2000 22:16:45 +0000
+From: Dave Pearson harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] CopyRight
+
+<PRE>On Wed, Nov 01, 2000 at 03:01:29PM -0400, Gustavo A. González M. wrote:
+
+&gt;<i> &gt; On Wed, Nov 01, 2000 at 10:37:37AM -0400, Gustavo A. Gonzlez M. wrote:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; &gt; A question about Copy Right.
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; One header File have copy right ?
+</I>&gt;<i> &gt; &gt;
+</I>&gt;<i> &gt; &gt; GOTO END IF NO TRUE  : )))
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; I'm not certain about what you're asking here.
+</I>&gt;<i> 
+</I>&gt;<i> I try to ask, if one header file ( xxx.ch xxx.h ) have copyright ?
+</I>
+Sorry, but I'm still not sure what you are asking here. Are you asking if it
+is possible for a header file to be controlled by copyright? Are you asking
+if any of the header files that are part of harbour are controlled by
+copyright? Or are you asking something else?
+
+&gt;<i> &gt; Neither am I certain about what you're asking here either. Are you
+</I>&gt;<i> &gt; asking if you can take someone's copyrighted work, make some
+</I>&gt;<i> &gt; modification and replace the copyright message with your own?
+</I>&gt;<i> 
+</I>&gt;<i> No so so. I try to say that if there are any work with copyrigh like a
+</I>&gt;<i> header file, i can take it or learn it and build my own headers.
+</I>
+Sorry, I'm afraid I still don't understand what you're asking.
+
+&gt;<i> File1.ch
+</I>&gt;<i> 
+</I>&gt;<i> //
+</I>&gt;<i> // CopyRight of Clipper (CA)
+</I>&gt;<i> //
+</I>&gt;<i> [SNIP some text]
+</I>&gt;<i> 
+</I>&gt;<i> And then Gustavo or xxx person, read, learn an do it....
+</I>&gt;<i> 
+</I>&gt;<i> //
+</I>&gt;<i> // XXX
+</I>&gt;<i> //
+</I>&gt;<i> [SNIP some similar text]
+</I>&gt;<i> 
+</I>&gt;<i> You think that the new command DISPLAY, have been &quot;cleanly implemented&quot; ?
+</I>
+It's impossible for me to say.
+
+&gt;<i> What you think about it new command ?
+</I>
+Sorry, I don't think I understand the relevance of the question.
+
+&gt;<i> I ask you, because you know more than me about licences and so forth.
+</I>
+Licences and copyright, although related, are slightly different issues. For
+starters, your questions will have different answers depending on the
+licences terms granted by the copyright holder.
+
+&gt;<i> Hey, where is the direction of [ From The Free On-line Dictionary of
+</I>&gt;<i> Computing ]
+</I>
+I'm not sure where the original version lives (I'm betting that a search
+using your web-search engine of choice will point you in the right
+direction). The version I've got here is rendered as a source file for use
+with the dictionary server dictd &lt;URL:<A HREF="http://www.dictd.org/">http://www.dictd.org/</A>&gt;.
+
+&gt;<i> You think that may be posible that i can include a header file (xx.ch), in
+</I>&gt;<i> any program, but without the copyright text from it original creator ?
+</I>
+What do you mean by include? What are the terms of the licence for the file?
+Have you asked the copyright holder what they think about it? Have you asked
+the copyright holder if they'll grant you a licence tailored for your needs?
+
+&gt;<i> I can put in any programs (like an example), the inkey.ch ?, or, std.ch,
+</I>&gt;<i> or any header ?
+</I>
+Sorry, I don't understand this question.
+
+Given the complexity of the issues you raise I'm concerned that I can't
+answer your questions correctly due to the language barrier. Even then, if
+we shared the same native language I'd be unhappy to answer the kinds of
+questions you seem to be asking. It seems that you're asking these questions
+because you want to act on them. If this is the case you should be talking
+to both a) the copyright holder of the files in question and b) your legal
+resource.
+
+-- 
+Take a look in Hagbard's World: |   w3ng - The WWW Norton Guide reader.
+<A HREF="http://www.hagbard.demon.co.uk/">http://www.hagbard.demon.co.uk/</A> |     eg - Norton Guide reader for Linux.
+<A HREF="http://www.acemake.com/hagbard/">http://www.acemake.com/hagbard/</A> |    weg - Norton Guide reader for Windows.
+Free software, including........| dgscan - DGROUP scanner for Clipper.
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  1 22:54:22 2000
+Date: Wed, 1 Nov 2000 22:54:22 +0000
+From: Dave Pearson harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] CopyRight
+
+<PRE>On Wed, Nov 01, 2000 at 10:16:45PM +0000, Dave Pearson wrote:
+
+&gt;<i>             The version I've got here is rendered as a source file for use
+</I>&gt;<i> with the dictionary server dictd &lt;URL:<A HREF="http://www.dictd.org/">http://www.dictd.org/</A>&gt;.
+</I>
+Apologies, that URL should read &lt;URL:<A HREF="http://www.dict.org/">http://www.dict.org/</A>&gt;.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: <A HREF="http://www.harbour-project.org/">http://www.harbour-project.org/</A>
+FAQ................: <A HREF="http://www.harbour-project.org/faq/harbour.html">http://www.harbour-project.org/faq/harbour.html</A>
+My harbour page....: <A HREF="http://www.hagbard.demon.co.uk/harbour/">http://www.hagbard.demon.co.uk/harbour/</A>
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  1 23:02:35 2000
+Date: Wed, 1 Nov 2000 23:02:35 +0000
+From: Dave Pearson harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] CopyRight
+
+<PRE>On Wed, Nov 01, 2000 at 10:16:45PM +0000, Dave Pearson wrote:
+
+&gt;<i> &gt; Hey, where is the direction of [ From The Free On-line Dictionary of
+</I>&gt;<i> &gt; Computing ]
+</I>&gt;<i> 
+</I>&gt;<i> I'm not sure where the original version lives 
+</I>
+See &lt;URL:<A HREF="http://www.foldoc.org/">http://www.foldoc.org/</A>&gt;. And, just in case you don't know of it,
+have a look at &lt;URL:<A HREF="http://www.tuxedo.org/~esr/jargon/">http://www.tuxedo.org/~esr/jargon/</A>&gt;. And if you like it
+then consider &lt;URL:<A HREF="http://www.tuxedo.org/~esr/jargon/jargbook.html">http://www.tuxedo.org/~esr/jargon/jargbook.html</A>&gt; (I've
+got the second and third editions, I'd love to get my hands on a first
+edition).
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: <A HREF="http://www.harbour-project.org/">http://www.harbour-project.org/</A>
+FAQ................: <A HREF="http://www.harbour-project.org/faq/harbour.html">http://www.harbour-project.org/faq/harbour.html</A>
+My harbour page....: <A HREF="http://www.hagbard.demon.co.uk/harbour/">http://www.hagbard.demon.co.uk/harbour/</A>
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Thu Nov  2 10:02:43 2000
+Date: Thu, 2 Nov 2000 06:02:43 -0400
+From: =?iso-8859-1?Q?Gustavo_A._Gonz=E1lez_M.?= harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Dave / directions
+
+<PRE>Dave, in me last mail i send you drectly by an error.
+
+All your comments have been understad by me (well with all the difficult
+from a different language).
+
+So, i am here, and if i need use the header files like say in old past
+mail's, i contact her author for this.
+
+When i say relax, was a word for &quot;take it easy&quot;, if not was the best choice,
+excuse me. If have time, explain me why you say &quot;I don't relaxed&quot;
+
+The topic is ready, thanks.
+
+Regard.
+
+***********************************
+Gustavo A. González M.
+<A HREF="mailto:gonzalezgustavo@cantv.net">gonzalezgustavo@cantv.net</A>
+Caracas - Venezuela
+***********************************
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Thu Nov  2 12:20:45 2000
+Date: Thu, 2 Nov 2000 13:20:45 +0100
+From: Victor Szakats harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Re: HarbourTalk -- confirmation of subscription -- request 223753
+
+<PRE>----- Original Message ----- 
+From: &lt;<A HREF="mailto:harbourtalk-request@lists.harbour-project.org">harbourtalk-request@lists.harbour-project.org</A>&gt;
+To: &lt;<A HREF="mailto:vector@mail.matav.hu">vector@mail.matav.hu</A>&gt;
+Sent: Thursday, November 02, 2000 11:40 AM
+Subject: HarbourTalk -- confirmation of subscription -- request 223753
+
+
+&gt;<i> HarbourTalk -- confirmation of subscription -- request 223753
+</I>&gt;<i> 
+</I>&gt;<i> We have received a request from 145.236.112.54 for subscription of
+</I>&gt;<i> your email address, &lt;<A HREF="mailto:vector@mail.matav.hu">vector@mail.matav.hu</A>&gt;, to the
+</I>&gt;<i> <A HREF="mailto:harbourtalk@lists.harbour-project.org">harbourtalk@lists.harbour-project.org</A> mailing list.  To confirm the
+</I>&gt;<i> request, please send a message to
+</I>&gt;<i> <A HREF="mailto:harbourtalk-request@lists.harbour-project.org">harbourtalk-request@lists.harbour-project.org</A>, and either:
+</I>&gt;<i> 
+</I>&gt;<i> - maintain the subject line as is (the reply's additional &quot;Re:&quot; is
+</I>&gt;<i> ok),
+</I>&gt;<i> 
+</I>&gt;<i> - or include the following line - and only the following line - in the
+</I>&gt;<i> message body: 
+</I>&gt;<i> 
+</I>&gt;<i> confirm 223753
+</I>&gt;<i> 
+</I>&gt;<i> (Simply sending a 'reply' to this message should work from most email
+</I>&gt;<i> interfaces, since that usually leaves the subject line in the right
+</I>&gt;<i> form.)
+</I>&gt;<i> 
+</I>&gt;<i> If you do not wish to subscribe to this list, please simply disregard
+</I>&gt;<i> this message.  Send questions to
+</I>&gt;<i> <A HREF="mailto:harbourtalk-admin@lists.harbour-project.org.">harbourtalk-admin@lists.harbour-project.org.</A>
+</I>&gt;<i> 
+</I>
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Thu Nov  2 18:38:57 2000
+Date: Thu, 2 Nov 2000 19:38:57 +0100
+From: Patrick Mast, Harbour harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Off Topic. Need help...
+
+<PRE>Hi,
+
+I'm setting up my own server.
+I have a user in canada that cannot retreive mail.
+
+I need a tester that can test an email address for me.
+If you are online NOW and ready to help me, mail me at
+<A HREF="mailto:patrick@winfakt.com">patrick@winfakt.com</A>
+
+Thanks!
+
+Patrick Mast
+www.Patrick.Be.kz
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Sat Nov  4 10:44:31 2000
+Date: Sat, 4 Nov 2000 11:44:31 +0100
+From: Victor Szakats harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Re: HarbourTalk -- confirmation of subscription -- request 509028
+
+<PRE>confirm 509028
+
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Sat Nov  4 10:54:36 2000
+Date: Sat, 4 Nov 2000 11:54:36 +0100
+From: Victor Szakats harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Subscription confirmation question
+
+<PRE>Phil,
+
+First of all apologize for the confirmation mails (probably) sent to the list.
+
+But:
+
+Why is that if I simply reply to the confirmation request mail, the reply address 
+is the list itself instead of the request confirmation email address ? I think this way 
+it's very easy to make a mistake. Now I also understand why I've seen several 
+such messages appearing on the list. I'm using Outlook Express 5.5.
+
+Could you please check this ?
+
+Victor Szakats
+
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Sun Nov  5 06:09:24 2000
+Date: Sun, 5 Nov 2000 01:09:24 -0500
+From: Phil Barnett harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Subscription confirmation question
+
+<PRE>On 4 Nov 2000, at 11:54, Victor Szakats wrote:
+
+&gt;<i> Phil,
+</I>&gt;<i> 
+</I>&gt;<i> First of all apologize for the confirmation mails (probably) sent to
+</I>&gt;<i> the list.
+</I>&gt;<i> 
+</I>&gt;<i> But:
+</I>&gt;<i> 
+</I>&gt;<i> Why is that if I simply reply to the confirmation request mail, the
+</I>&gt;<i> reply address is the list itself instead of the request confirmation
+</I>&gt;<i> email address ? I think this way it's very easy to make a mistake. Now
+</I>&gt;<i> I also understand why I've seen several such messages appearing on the
+</I>&gt;<i> list. I'm using Outlook Express 5.5.
+</I>&gt;<i> 
+</I>&gt;<i> Could you please check this ?
+</I>
+It's a known bug in mailman, fixed in CVS, and I'm patiently waiting 
+for the CVS to be in a stable state before I put it in production.
+
+
+-- 
+              Phil Barnett  mailto:<A HREF="mailto:midnight@the-oasis.net">midnight@the-oasis.net</A>
+                       WWW  <A HREF="http://www.the-oasis.net/">http://www.the-oasis.net/</A>
+                  FTP Site  <A HREF="ftp://ftp.the-oasis.net">ftp://ftp.the-oasis.net</A>
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Sun Nov  5 10:06:53 2000
+Date: Sun, 5 Nov 2000 11:06:53 +0100
+From: Victor Szakats harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Subscription confirmation question
+
+<PRE>Phil,
+
+&gt;<i> It's a known bug in mailman, fixed in CVS, and I'm patiently waiting 
+</I>&gt;<i> for the CVS to be in a stable state before I put it in production.
+</I>
+Thanks for the info.
+
+Victor Szakats
+
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Mon Nov  6 14:21:22 2000
+Date: Mon, 6 Nov 2000 15:21:22 +0100
+From: Patrick Mast, Harbour harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] About Eddie Runia
+
+<PRE>Hi,
+
+I just got a call from Eddie Runia! (Our first Class Captain)
+Just to let us know that all is OK with him.
+
+He has put his computer aside for a moment.
+
+regards,
+
+Patrick Mast
+www.Patrick.Be.kz 
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 06:38:47 2000
+Date: Wed, 08 Nov 2000 08:38:47 +0200
+From: Chen Kedem harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] snail mail
+
+<PRE>Patrick,
+Yesterday I received your postcard (thanks),
+can I asked when did you sent it? the mail stamp suspiciously
+looks like 7-8-00, could it be that it was detained for some
+time for, Hmmm, close inspection along the way ? :)
+
+  Chen.
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 07:42:24 2000
+Date: Wed, 8 Nov 2000 08:42:24 +0100
+From: Patrick Mast, Harbour harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] snail mail
+
+<PRE>Chen,
+
+&gt;<i> Yesterday I received your postcard (thanks),
+</I>&gt;<i> can I asked when did you sent it? the mail stamp suspiciously
+</I>&gt;<i> looks like 7-8-00, could it be that it was detained for some
+</I>&gt;<i> time for, Hmmm, close inspection along the way ? :)
+</I>You got it!!
+
+Maybe the postman delivered it with his bicycle... ;-))
+Yes, it is send in beginning of August 2000!
+I had a vacation than in Italy.
+
+regards,
+
+Patrick Mast
+www.Patrick.Be.kz
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 13:24:33 2000
+Date: Wed, 8 Nov 2000 08:24:33 -0500
+From: Phil Barnett harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] An article that I want to submit to Linux Journal
+
+<PRE>Please review this for technical accuracy. I'd like to submit it to 
+Linux Journal asap. 
+
+Thanks for your input, and Thanks, Chen Kedem for the help types. 
+It was getting late...
+
+-----------------------------------------------
+
+
+For nearly two years, I've been managing an open source project 
+named the Harbour Project. (Source Forge CVS)
+
+In this letter, I'd like to introduce you to some of the advanced 
+capabilities we have been working on and some enhancements we 
+have made to the Harbour Project compiler and our implementation 
+of the xBase language.
+
+The Harbour Project is a cross platform Clipper 5.x workalike 
+compiler with major additions since Computer Associates has 
+stopped upgrading the Clipper language.
+
+With the strong foundation inherited from one of the most popular 
+business xBase language compilers and the recent advances in 
+language and compiler features and technology, we feel that we 
+have embraced the entire capabilities of the original Clipper 
+compiler and enhanced it with an open architecture that will extend 
+the life of this language for years to come.
+
+One of the many strong features of Clipper and now, Harbour 
+Project is the language preprocessor. While we were in the early 
+stages of designing the Harbour Project, I requested that we create 
+the preprocessor in a way that would allow it to be split off from our 
+compiler and capable of standalone execution. This allows other 
+languages to use this powerful addition to create plain english 
+language with tagged parameterization capabilities. In plain 
+english, this means that you can create a directive in your header 
+files that will transform 'arbitrary order instructions' into 'functional 
+parameter lists'. 
+
+Phew, what the heck does that mean???
+
+Let's see an example:  
+
+Using a snippet of the the built in preprocessor header file, 
+(normally included in every compile automatically) STD.CH, we see 
+this directive:  
+
+(you may need to switch this to Courier font)
+
+#command USE &lt;(db)&gt;                             ;
+             [VIA &lt;rdd&gt;]                        ;
+             [ALIAS &lt;a&gt;]                        ;
+             [&lt;new: NEW&gt;]                       ;
+             [&lt;ex: EXCLUSIVE&gt;]                  ;
+             [&lt;sh: SHARED&gt;]                     ;
+             [&lt;ro: READONLY&gt;]                   ;
+             [INDEX &lt;(index1)&gt; [, &lt;(indexn)&gt;]]  ;
+                                     ;
+      =&gt; dbUseArea(                             ;
+             &lt;.new.&gt;, &lt;rdd&gt;, &lt;(db)&gt;, &lt;(a)&gt;,     ;
+  if(&lt;.sh.&gt; .or. &lt;.ex.&gt;, !&lt;.ex.&gt;, NIL), &lt;.ro.&gt;  ;
+                  )                             ;
+                                     ;
+      [; dbSetIndex( &lt;(index1)&gt; )]              ;
+      [; dbSetIndex( &lt;(indexn)&gt; )]
+
+
+This preprocessor directive begins with a #command, which 
+signifies the beginning of the directive, and in the middle, we see 
+the =&gt; which signifies the break between $command and directive 
+target. In the command area we see parameters surrounded with [], 
+which means they are optional.  
+
+In real life use, this #command makes it much easier to remember 
+how to use the 'USE' command.  
+
+We can use either of the following commands to perform the same 
+functions.  
+
+USE foobar EXCLUSIVE INDEX foodex READONLY
+
+or
+
+USE foobar INDEX foodex READONLY EXCLUSIVE  
+
+Notice that the parameters in the above example do not have to be 
+in any specific order. The preprocessor will read either of the above 
+two lines of code and translate them both to the identical:  
+
+dbUseArea( .f.,, 'foobar', .t., .t. )
+dbSetIndex( 'foodex' )
+
+We no longer have to remember the order of the parameters of a 
+function, nor what they stand for. Instead, we can use a more 
+englishlike substitute and let the preprocessor sort it out.  
+
+Over the years, many parts of the Clipper language and now 
+Harbour Project 'functions' have been transformed into arbitrary 
+order 'commands'. Often, this means that you no longer have to 
+look up the function in a manual to see what order the parameters 
+should be used. This makes any language more natural and easier 
+to remember and use. In fact, our Object Orientation makes heavy 
+use of the preprocessor to turn englishlike commands into complex 
+OO functions.
+
+This is only one of the features of what will soon be one of the most 
+feature laden and powerful compilers available on the Linux platform.
+
+Harbour Project is still in alpha status and is nearly two years into 
+development. Currently, Source Forge shows us as #117 of over 
+11,000 projects. Often, we have been as high as #20. A team of 
+dedicated programmers are working around the clock and 
+worldwide to make this one of the best third generation compilers 
+available anywhere.
+
+Some other features that we have added to the Harbour Project 
+above and beyond where Nantucket and Computer Associates left 
+Clipper...
+
+Strong or weak variable typing
+Dynamic Garbage collection
+Dynamic Stack
+Replacable data drivers beyond .DBF files
+Full object orientation including Polymorphism, Encapsulation, 
+multiple inheritance, scoping, forwarding and delegating
+Scripting (Runtime Compiling)
+Compile time expression optimizer
+Idle state handling
+
+...and, we have worked very hard on several other initiatives during 
+this process:
+
+Currently, there are 36 different language modules, so it is easy to 
+have the basic runtime library text interfaces available in any 
+language. Support for other languages is a tranlation away for 
+anyone who is interested. That's the glory of Open Source!
+
+Harbour Project compiles and runs on 5 target platforms. Linux, 
+DOS, OS/2, Win16, Win32, and there has been effort to support 
+Macintosh but that effort is not current.
+
+The Harbour Project team members have been impressive 
+participants, both in their outstanding coding talent and their 
+dedication to sticking with this until we have a viable product.  This 
+international team is currently working on integrating the RDD 
+(Replacable Data Driver) layers. We are working on native .DBF, 
+MySQL on Linux, MSQL, ADS, ODBC and there is an aftermarket 
+company developing Oracle, Sybase and MS SQL support.
+
+There are also aftermarket companies developing very advanced 
+GUI libraries. Many of  these aftermarket companies are drawing 
+from over a decade of experience with serious commercial 
+development in Clipper.
+
+Our help system is capable of outputting the following types of help 
+files:
+
+TXT - plain ASCII text format
+    - plain ASCII text format without Form-Feed
+RTF - Rich text format
+NGI - Norton Guide source
+IPF - OS/2 help source code
+PDF - Adobe Portable Document
+HTM - HTML output
+CHM - HTML source files for Windows .CHM Help files
+HPC - HelpC source file
+TRF - Linux TROFF code
+
+I'm really excited as the capabilities of the Harbour Project 
+compiler takes on a very professional and capable look and feel. I 
+expect to see beta status soon, but being open source, that will 
+depend on volunteer participation. This is a feature rich compiler. It 
+takes time.
+
+You can visit the Harbour Project home page at <A HREF="http://www.harbour-">http://www.harbour-</A>
+project.org, where you will find links to the native c compilers that 
+we use to create our compiler and other language tools that are 
+necessary to build the language parser. If any of you are C coders 
+and are interested in participating in the continuing development 
+process, please feel free to join our developers mailing list and help 
+us out.
+
+Harbour Power!
+
+
+-- 
+              Phil Barnett  mailto:<A HREF="mailto:midnight@the-oasis.net">midnight@the-oasis.net</A>
+                       WWW  <A HREF="http://www.the-oasis.net/">http://www.the-oasis.net/</A>
+                  FTP Site  <A HREF="ftp://ftp.the-oasis.net">ftp://ftp.the-oasis.net</A>
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 13:54:02 2000
+Date: Wed, 8 Nov 2000 13:54:02 +0000
+From: Dave Pearson harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] An article that I want to submit to Linux Journal
+
+<PRE>On Wed, Nov 08, 2000 at 08:24:33AM -0500, Phil Barnett wrote:
+
+&gt;<i> For nearly two years, I've been managing an open source project named the
+</I>&gt;<i> Harbour Project. (Source Forge CVS)
+</I>
+Can we say &quot;Free Software&quot; instead of &quot;Open Source&quot;?
+
+&gt;<i> The Harbour Project is a cross platform Clipper 5.x workalike compiler
+</I>&gt;<i> with major additions since Computer Associates has stopped upgrading the
+</I>&gt;<i> Clipper language.
+</I>
+I'd suggest &quot;compatible&quot; instead of &quot;workalike&quot; and I'd also suggest
+emphasising that it's the language that is compatible. I'd also not mention
+the but about Computer Associates. I'd simply state that harbour is also a
+superset of the base implementation of the language.
+
+&gt;<i> One of the many strong features of Clipper and now, Harbour 
+</I>&gt;<i> Project is the language preprocessor. 
+</I>
+That sentence doesn't parse too well.
+
+&gt;<i>                                       While we were in the early 
+</I>&gt;<i> stages of designing the Harbour Project, 
+</I>
+I don't think that the comma is required here.
+
+&gt;<i>                                          I requested that we create the
+</I>&gt;<i> preprocessor in a way that would allow it to be split off from our
+</I>&gt;<i> compiler and capable of standalone execution. 
+</I>
+&quot;and *be* capable&quot;. I'd also suggest you might not want to personalise this
+and, instead, simply state that the pre-processor can be used as a
+stand-alone tool (I seem to recall more than one person suggesting such a
+design).
+
+&gt;<i> Using a snippet of the the built in preprocessor header file, (normally
+</I>&gt;<i> included in every compile automatically) STD.CH, we see this directive:
+</I>
+Correct me if I'm wrong but STD.CH is, for all intents and purposes, empty
+(I'll admit that it's been a few weeks since I refreshed from CVS).
+
+&gt;<i> This is only one of the features of what will soon be one of the most
+</I>&gt;<i> feature laden and powerful compilers available on the Linux platform.
+</I>
+Marketing hype.
+
+&gt;<i> Harbour Project is still in alpha status and is nearly two years into
+</I>&gt;<i> development. 
+</I>
+Can I also suggest that &quot;Harbour Project&quot; sounds more than a little silly.
+It's either &quot;The Harbour Project&quot; (the project to develop harbour) or
+&quot;Harbour&quot; (the compiler and attendant tools and libraries).
+
+&gt;<i>              Currently, Source Forge shows us as #117 of over 11,000
+</I>&gt;<i> projects. Often, we have been as high as #20. A team of dedicated
+</I>&gt;<i> programmers are working around the clock and worldwide to make this one of
+</I>&gt;<i> the best third generation compilers available anywhere.
+</I>
+Marketing hype.
+
+&gt;<i> Some other features that we have added to the Harbour Project above and
+</I>&gt;<i> beyond where Nantucket and Computer Associates left Clipper...
+</I>&gt;<i> 
+</I>&gt;<i> Replacable data drivers beyond .DBF files
+</I>
+Nantucket and CA had this.
+
+&gt;<i> Currently, there are 36 different language modules, so it is easy to have
+</I>&gt;<i> the basic runtime library text interfaces available in any language.
+</I>&gt;<i> Support for other languages is a tranlation away for anyone who is
+</I>&gt;<i> interested. That's the glory of Open Source!
+</I>
+s/Open Source/Free Software/.
+
+&gt;<i> The Harbour Project team members have been impressive participants, both
+</I>&gt;<i> in their outstanding coding talent and their dedication to sticking with
+</I>&gt;<i> this until we have a viable product. 
+</I>
+Descending into marketing hype.
+
+&gt;<i> Harbour Power!
+</I>
+Marketing hype and a little too 3l33t3 dUdE.
+
+~~~~~
+
+I see where you're coming from with this but I'm not sure that highlighting
+the pre-processor (for example) makes much sense. Personally I'd talk about
+how Harbour is a free software effort to keep alive a language that seems to
+have lost the support of non-free implementors. I'd probably also talk about
+how a community has used free software principles to create and maintain
+it's own implementation so as to free itself from any single non-free
+vendor.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: <A HREF="http://www.harbour-project.org/">http://www.harbour-project.org/</A>
+FAQ................: <A HREF="http://www.harbour-project.org/faq/harbour.html">http://www.harbour-project.org/faq/harbour.html</A>
+My harbour page....: <A HREF="http://www.hagbard.demon.co.uk/harbour/">http://www.hagbard.demon.co.uk/harbour/</A>
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 16:41:22 2000
+Date: Wed, 8 Nov 2000 17:41:22 +0100
+From: Victor Szakats harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] An article that I want to submit to Linux Journal
+
+<PRE>Phil,
+
+&gt;<i> &gt;              Currently, Source Forge shows us as #117 of over 11,000
+</I>&gt;<i> &gt; projects. Often, we have been as high as #20. A team of dedicated
+</I>&gt;<i> &gt; programmers are working around the clock and worldwide to make this one of
+</I>&gt;<i> &gt; the best third generation compilers available anywhere.
+</I>
+The topmost position was 10 or 11 for some months (a year ago).
+
+Victor Szakats
+
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 17:07:22 2000
+Date: Wed, 8 Nov 2000 17:07:22 +0000
+From: Dave Pearson harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] An article that I want to submit to Linux Journal
+
+<PRE>On Wed, Nov 08, 2000 at 05:41:22PM +0100, Victor Szakats wrote:
+&gt;<i> Phil,
+</I>&gt;<i> 
+</I>&gt;<i> &gt; &gt;              Currently, Source Forge shows us as #117 of over 11,000
+</I>&gt;<i> &gt; &gt; projects. Often, we have been as high as #20. A team of dedicated
+</I>&gt;<i> &gt; &gt; programmers are working around the clock and worldwide to make this one of
+</I>&gt;<i> &gt; &gt; the best third generation compilers available anywhere.
+</I>&gt;<i> 
+</I>&gt;<i> The topmost position was 10 or 11 for some months (a year ago).
+</I>
+The question then becomes: what is this a measure of?
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: <A HREF="http://www.harbour-project.org/">http://www.harbour-project.org/</A>
+FAQ................: <A HREF="http://www.harbour-project.org/faq/harbour.html">http://www.harbour-project.org/faq/harbour.html</A>
+My harbour page....: <A HREF="http://www.hagbard.demon.co.uk/harbour/">http://www.hagbard.demon.co.uk/harbour/</A>
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 18:24:11 2000
+Date: Wed, 8 Nov 2000 19:24:11 +0100
+From: Victor Szakats harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] An article that I want to submit to Linux Journal
+
+<PRE>Dave,
+
+&gt;<i> On Wed, Nov 08, 2000 at 05:41:22PM +0100, Victor Szakats wrote:
+</I>&gt;<i> &gt; Phil,
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; &gt; &gt;              Currently, Source Forge shows us as #117 of over 11,000
+</I>&gt;<i> &gt; &gt; &gt; projects. Often, we have been as high as #20. A team of dedicated
+</I>&gt;<i> &gt; &gt; &gt; programmers are working around the clock and worldwide to make this one of
+</I>&gt;<i> &gt; &gt; &gt; the best third generation compilers available anywhere.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; The topmost position was 10 or 11 for some months (a year ago).
+</I>&gt;<i> 
+</I>&gt;<i> The question then becomes: what is this a measure of?
+</I>
+(if I understand your question correctly)
+
+The measure was some kind of combined activity factor on 
+the CVS server and the SourceForge page of the project.
+
+The exact measuring method was discussed somewhere in the 
+SourceForge host software development mailing list.
+
+Victor Szakats
+
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 18:24:30 2000
+Date: Wed, 8 Nov 2000 10:24:30 -0800
+From: Brian Hays harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] An article that I want to submit to Linux Journal
+
+<PRE>Phil:
+Looks good! FWIW, I doubt anyone will know what &quot;ADS&quot; means, so you might
+mention either Advantage or Extended Systems.
+
+Brian Hays
+Abacus Data Systems, Inc
+
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 19:32:29 2000
+Date: Wed, 8 Nov 2000 16:32:29 -0300
+From: Felipe G. Coury harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Boston
+
+<PRE>Hi,
+
+Is there anyone on the list that lives in Boston?
+
+Regards,
+
+Felipe G. Coury
+Gerente de Desenvolvimento
+Creation Internet Business
+<A HREF="http://www.creation.com.br">http://www.creation.com.br</A>
+
+--------------------------------------------
+Visite o GuiaBrasil.Net:
+<A HREF="http://www.guiabrasil.net">http://www.guiabrasil.net</A>
+--------------------------------------------
+
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 19:06:57 2000
+Date: Wed, 8 Nov 2000 14:06:57 -0500
+From: David G. Holm harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] An article that I want to submit to Linux Journal
+
+<PRE>** Reply to message from &quot;Phil Barnett&quot; &lt;<A HREF="mailto:midnight@the-oasis.net">midnight@the-oasis.net</A>&gt; on
+Wed, 8 Nov 2000 08:24:33 -0500
+
+Looks impressive!
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 19:07:52 2000
+Date: Wed, 8 Nov 2000 14:07:52 -0500
+From: David G. Holm harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] An article that I want to submit to Linux Journal
+
+<PRE>** Reply to message from Dave Pearson &lt;<A HREF="mailto:davep@davep.org">davep@davep.org</A>&gt; on Wed, 8 Nov 2000 13:54:02 +0000
+
+&gt;<i> Correct me if I'm wrong but STD.CH is, for all intents and purposes, empty
+</I>
+Well, yes, but only because it is hard-coded in the pre-processor...
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 18:09:17 2000
+Date: Wed, 8 Nov 2000 10:09:17 -0800
+From: Bill Smith harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] An article that I want to submit to Linux Journal
+
+<PRE>Looks Great, Phil.  But please drop the &quot;phew!&quot;  (Nuts to nonsense - Phew!)
+
+Also, the example, while informative seems to be summarized well by a
+following paragraph.  The example is a beautiful candidate for an addendum
+or a sidecar.
+
+Bill
+
+----- Original Message -----
+From: &quot;Phil Barnett&quot; &lt;<A HREF="mailto:midnight@the-oasis.net">midnight@the-oasis.net</A>&gt;
+To: &lt;<A HREF="mailto:harbourtalk@lists.harbour-project.org">harbourtalk@lists.harbour-project.org</A>&gt;
+Sent: Wednesday, November 08, 2000 5:24 AM
+Subject: [HarbourTalk] An article that I want to submit to Linux Journal
+
+
+&gt;<i>
+</I>&gt;<i> Please review this for technical accuracy. I'd like to submit it to
+</I>&gt;<i> Linux Journal asap.
+</I>&gt;<i>
+</I>&gt;<i> Thanks for your input, and Thanks, Chen Kedem for the help types.
+</I>&gt;<i> It was getting late...
+</I>&gt;<i>
+</I>&gt;<i> -----------------------------------------------
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> For nearly two years, I've been managing an open source project
+</I>&gt;<i> named the Harbour Project. (Source Forge CVS)
+</I>&gt;<i>
+</I>&gt;<i> In this letter, I'd like to introduce you to some of the advanced
+</I>&gt;<i> capabilities we have been working on and some enhancements we
+</I>&gt;<i> have made to the Harbour Project compiler and our implementation
+</I>&gt;<i> of the xBase language.
+</I>&gt;<i>
+</I>&gt;<i> The Harbour Project is a cross platform Clipper 5.x workalike
+</I>&gt;<i> compiler with major additions since Computer Associates has
+</I>&gt;<i> stopped upgrading the Clipper language.
+</I>&gt;<i>
+</I>&gt;<i> With the strong foundation inherited from one of the most popular
+</I>&gt;<i> business xBase language compilers and the recent advances in
+</I>&gt;<i> language and compiler features and technology, we feel that we
+</I>&gt;<i> have embraced the entire capabilities of the original Clipper
+</I>&gt;<i> compiler and enhanced it with an open architecture that will extend
+</I>&gt;<i> the life of this language for years to come.
+</I>&gt;<i>
+</I>&gt;<i> One of the many strong features of Clipper and now, Harbour
+</I>&gt;<i> Project is the language preprocessor. While we were in the early
+</I>&gt;<i> stages of designing the Harbour Project, I requested that we create
+</I>&gt;<i> the preprocessor in a way that would allow it to be split off from our
+</I>&gt;<i> compiler and capable of standalone execution. This allows other
+</I>&gt;<i> languages to use this powerful addition to create plain english
+</I>&gt;<i> language with tagged parameterization capabilities. In plain
+</I>&gt;<i> english, this means that you can create a directive in your header
+</I>&gt;<i> files that will transform 'arbitrary order instructions' into 'functional
+</I>&gt;<i> parameter lists'.
+</I>&gt;<i>
+</I>&gt;<i> Phew, what the heck does that mean???
+</I>&gt;<i>
+</I>&gt;<i> Let's see an example:
+</I>&gt;<i>
+</I>&gt;<i> Using a snippet of the the built in preprocessor header file,
+</I>&gt;<i> (normally included in every compile automatically) STD.CH, we see
+</I>&gt;<i> this directive:
+</I>&gt;<i>
+</I>&gt;<i> (you may need to switch this to Courier font)
+</I>&gt;<i>
+</I>&gt;<i> #command USE &lt;(db)&gt;                             ;
+</I>&gt;<i>              [VIA &lt;rdd&gt;]                        ;
+</I>&gt;<i>              [ALIAS &lt;a&gt;]                        ;
+</I>&gt;<i>              [&lt;new: NEW&gt;]                       ;
+</I>&gt;<i>              [&lt;ex: EXCLUSIVE&gt;]                  ;
+</I>&gt;<i>              [&lt;sh: SHARED&gt;]                     ;
+</I>&gt;<i>              [&lt;ro: READONLY&gt;]                   ;
+</I>&gt;<i>              [INDEX &lt;(index1)&gt; [, &lt;(indexn)&gt;]]  ;
+</I>&gt;<i>                                      ;
+</I>&gt;<i>       =&gt; dbUseArea(                             ;
+</I>&gt;<i>              &lt;.new.&gt;, &lt;rdd&gt;, &lt;(db)&gt;, &lt;(a)&gt;,     ;
+</I>&gt;<i>   if(&lt;.sh.&gt; .or. &lt;.ex.&gt;, !&lt;.ex.&gt;, NIL), &lt;.ro.&gt;  ;
+</I>&gt;<i>                   )                             ;
+</I>&gt;<i>                                      ;
+</I>&gt;<i>       [; dbSetIndex( &lt;(index1)&gt; )]              ;
+</I>&gt;<i>       [; dbSetIndex( &lt;(indexn)&gt; )]
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> This preprocessor directive begins with a #command, which
+</I>&gt;<i> signifies the beginning of the directive, and in the middle, we see
+</I>&gt;<i> the =&gt; which signifies the break between $command and directive
+</I>&gt;<i> target. In the command area we see parameters surrounded with [],
+</I>&gt;<i> which means they are optional.
+</I>&gt;<i>
+</I>&gt;<i> In real life use, this #command makes it much easier to remember
+</I>&gt;<i> how to use the 'USE' command.
+</I>&gt;<i>
+</I>&gt;<i> We can use either of the following commands to perform the same
+</I>&gt;<i> functions.
+</I>&gt;<i>
+</I>&gt;<i> USE foobar EXCLUSIVE INDEX foodex READONLY
+</I>&gt;<i>
+</I>&gt;<i> or
+</I>&gt;<i>
+</I>&gt;<i> USE foobar INDEX foodex READONLY EXCLUSIVE
+</I>&gt;<i>
+</I>&gt;<i> Notice that the parameters in the above example do not have to be
+</I>&gt;<i> in any specific order. The preprocessor will read either of the above
+</I>&gt;<i> two lines of code and translate them both to the identical:
+</I>&gt;<i>
+</I>&gt;<i> dbUseArea( .f.,, 'foobar', .t., .t. )
+</I>&gt;<i> dbSetIndex( 'foodex' )
+</I>&gt;<i>
+</I>&gt;<i> We no longer have to remember the order of the parameters of a
+</I>&gt;<i> function, nor what they stand for. Instead, we can use a more
+</I>&gt;<i> englishlike substitute and let the preprocessor sort it out.
+</I>&gt;<i>
+</I>&gt;<i> Over the years, many parts of the Clipper language and now
+</I>&gt;<i> Harbour Project 'functions' have been transformed into arbitrary
+</I>&gt;<i> order 'commands'. Often, this means that you no longer have to
+</I>&gt;<i> look up the function in a manual to see what order the parameters
+</I>&gt;<i> should be used. This makes any language more natural and easier
+</I>&gt;<i> to remember and use. In fact, our Object Orientation makes heavy
+</I>&gt;<i> use of the preprocessor to turn englishlike commands into complex
+</I>&gt;<i> OO functions.
+</I>&gt;<i>
+</I>&gt;<i> This is only one of the features of what will soon be one of the most
+</I>&gt;<i> feature laden and powerful compilers available on the Linux platform.
+</I>&gt;<i>
+</I>&gt;<i> Harbour Project is still in alpha status and is nearly two years into
+</I>&gt;<i> development. Currently, Source Forge shows us as #117 of over
+</I>&gt;<i> 11,000 projects. Often, we have been as high as #20. A team of
+</I>&gt;<i> dedicated programmers are working around the clock and
+</I>&gt;<i> worldwide to make this one of the best third generation compilers
+</I>&gt;<i> available anywhere.
+</I>&gt;<i>
+</I>&gt;<i> Some other features that we have added to the Harbour Project
+</I>&gt;<i> above and beyond where Nantucket and Computer Associates left
+</I>&gt;<i> Clipper...
+</I>&gt;<i>
+</I>&gt;<i> Strong or weak variable typing
+</I>&gt;<i> Dynamic Garbage collection
+</I>&gt;<i> Dynamic Stack
+</I>&gt;<i> Replacable data drivers beyond .DBF files
+</I>&gt;<i> Full object orientation including Polymorphism, Encapsulation,
+</I>&gt;<i> multiple inheritance, scoping, forwarding and delegating
+</I>&gt;<i> Scripting (Runtime Compiling)
+</I>&gt;<i> Compile time expression optimizer
+</I>&gt;<i> Idle state handling
+</I>&gt;<i>
+</I>&gt;<i> ...and, we have worked very hard on several other initiatives during
+</I>&gt;<i> this process:
+</I>&gt;<i>
+</I>&gt;<i> Currently, there are 36 different language modules, so it is easy to
+</I>&gt;<i> have the basic runtime library text interfaces available in any
+</I>&gt;<i> language. Support for other languages is a tranlation away for
+</I>&gt;<i> anyone who is interested. That's the glory of Open Source!
+</I>&gt;<i>
+</I>&gt;<i> Harbour Project compiles and runs on 5 target platforms. Linux,
+</I>&gt;<i> DOS, OS/2, Win16, Win32, and there has been effort to support
+</I>&gt;<i> Macintosh but that effort is not current.
+</I>&gt;<i>
+</I>&gt;<i> The Harbour Project team members have been impressive
+</I>&gt;<i> participants, both in their outstanding coding talent and their
+</I>&gt;<i> dedication to sticking with this until we have a viable product.  This
+</I>&gt;<i> international team is currently working on integrating the RDD
+</I>&gt;<i> (Replacable Data Driver) layers. We are working on native .DBF,
+</I>&gt;<i> MySQL on Linux, MSQL, ADS, ODBC and there is an aftermarket
+</I>&gt;<i> company developing Oracle, Sybase and MS SQL support.
+</I>&gt;<i>
+</I>&gt;<i> There are also aftermarket companies developing very advanced
+</I>&gt;<i> GUI libraries. Many of  these aftermarket companies are drawing
+</I>&gt;<i> from over a decade of experience with serious commercial
+</I>&gt;<i> development in Clipper.
+</I>&gt;<i>
+</I>&gt;<i> Our help system is capable of outputting the following types of help
+</I>&gt;<i> files:
+</I>&gt;<i>
+</I>&gt;<i> TXT - plain ASCII text format
+</I>&gt;<i>     - plain ASCII text format without Form-Feed
+</I>&gt;<i> RTF - Rich text format
+</I>&gt;<i> NGI - Norton Guide source
+</I>&gt;<i> IPF - OS/2 help source code
+</I>&gt;<i> PDF - Adobe Portable Document
+</I>&gt;<i> HTM - HTML output
+</I>&gt;<i> CHM - HTML source files for Windows .CHM Help files
+</I>&gt;<i> HPC - HelpC source file
+</I>&gt;<i> TRF - Linux TROFF code
+</I>&gt;<i>
+</I>&gt;<i> I'm really excited as the capabilities of the Harbour Project
+</I>&gt;<i> compiler takes on a very professional and capable look and feel. I
+</I>&gt;<i> expect to see beta status soon, but being open source, that will
+</I>&gt;<i> depend on volunteer participation. This is a feature rich compiler. It
+</I>&gt;<i> takes time.
+</I>&gt;<i>
+</I>&gt;<i> You can visit the Harbour Project home page at <A HREF="http://www.harbour-">http://www.harbour-</A>
+</I>&gt;<i> project.org, where you will find links to the native c compilers that
+</I>&gt;<i> we use to create our compiler and other language tools that are
+</I>&gt;<i> necessary to build the language parser. If any of you are C coders
+</I>&gt;<i> and are interested in participating in the continuing development
+</I>&gt;<i> process, please feel free to join our developers mailing list and help
+</I>&gt;<i> us out.
+</I>&gt;<i>
+</I>&gt;<i> Harbour Power!
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i>               Phil Barnett  mailto:<A HREF="mailto:midnight@the-oasis.net">midnight@the-oasis.net</A>
+</I>&gt;<i>                        WWW  <A HREF="http://www.the-oasis.net/">http://www.the-oasis.net/</A>
+</I>&gt;<i>                   FTP Site  <A HREF="ftp://ftp.the-oasis.net">ftp://ftp.the-oasis.net</A>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> HarbourTalk mailing list
+</I>&gt;<i> <A HREF="mailto:HarbourTalk@lists.harbour-project.org">HarbourTalk@lists.harbour-project.org</A>
+</I>&gt;<i> <A HREF="http://www.matrixlist.com/mailman/listinfo/harbourtalk">http://www.matrixlist.com/mailman/listinfo/harbourtalk</A>
+</I>&gt;<i>
+</I>
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 20:02:33 2000
+Date: Wed, 8 Nov 2000 20:02:33 +0000
+From: Douglas Woodrow harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Boston
+
+<PRE>On Wed, 8 Nov 2000 16:32:29  Felipe G. Coury &lt;<A HREF="mailto:fcoury@creation.com.br">fcoury@creation.com.br</A>&gt;
+wrote
+&gt;<i>Is there anyone on the list that lives in Boston?
+</I>
+Which one?  I live near Boston, Lincolnshire, England, UK.
+-- 
+Douglas Woodrow
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 21:33:06 2000
+Date: Wed, 8 Nov 2000 18:33:06 -0300
+From: Felipe G. Coury harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Boston
+
+<PRE>Douglas,
+&gt;<i> &gt;Is there anyone on the list that lives in Boston?
+</I>&gt;<i> Which one?  I live near Boston, Lincolnshire, England, UK.
+</I>Sorry, I was talking about USA Boston ;-)
+
+Regards,
+
+Felipe G. Coury
+Gerente de Desenvolvimento
+Creation Internet Business
+<A HREF="http://www.creation.com.br">http://www.creation.com.br</A>
+
+--------------------------------------------
+Visite o GuiaBrasil.Net:
+<A HREF="http://www.guiabrasil.net">http://www.guiabrasil.net</A>
+--------------------------------------------
+
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 20:45:48 2000
+Date: Wed, 8 Nov 2000 12:45:48 -0800
+From: Ron Pinkas harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] An article that I want to submit to Linux Journal
+
+<PRE>Phil,
+
+Great work (I for one, believe that &quot;marketing hype&quot; is a must, and a given,
+in any promotional effort).
+
+Do you think any mention of SimpLex might be beneficial? It might be of
+interest to other Compiler Related projects/developer.
+
+Ron
+
+&gt;<i> Please review this for technical accuracy. I'd like to submit it to
+</I>&gt;<i> Linux Journal asap.
+</I>&gt;<i>
+</I>&gt;<i> Thanks for your input, and Thanks, Chen Kedem for the help types.
+</I>&gt;<i> It was getting late...
+</I>&gt;<i>
+</I>&gt;<i> -----------------------------------------------
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> For nearly two years, I've been managing an open source project
+</I>&gt;<i> named the Harbour Project. (Source Forge CVS)
+</I>&gt;<i>
+</I>&gt;<i> In this letter, I'd like to introduce you to some of the advanced
+</I>&gt;<i> capabilities we have been working on and some enhancements we
+</I>&gt;<i> have made to the Harbour Project compiler and our implementation
+</I>&gt;<i> of the xBase language.
+</I>&gt;<i>
+</I>&gt;<i> The Harbour Project is a cross platform Clipper 5.x workalike
+</I>&gt;<i> compiler with major additions since Computer Associates has
+</I>&gt;<i> stopped upgrading the Clipper language.
+</I>&gt;<i>
+</I>&gt;<i> With the strong foundation inherited from one of the most popular
+</I>&gt;<i> business xBase language compilers and the recent advances in
+</I>&gt;<i> language and compiler features and technology, we feel that we
+</I>&gt;<i> have embraced the entire capabilities of the original Clipper
+</I>&gt;<i> compiler and enhanced it with an open architecture that will extend
+</I>&gt;<i> the life of this language for years to come.
+</I>&gt;<i>
+</I>&gt;<i> One of the many strong features of Clipper and now, Harbour
+</I>&gt;<i> Project is the language preprocessor. While we were in the early
+</I>&gt;<i> stages of designing the Harbour Project, I requested that we create
+</I>&gt;<i> the preprocessor in a way that would allow it to be split off from our
+</I>&gt;<i> compiler and capable of standalone execution. This allows other
+</I>&gt;<i> languages to use this powerful addition to create plain english
+</I>&gt;<i> language with tagged parameterization capabilities. In plain
+</I>&gt;<i> english, this means that you can create a directive in your header
+</I>&gt;<i> files that will transform 'arbitrary order instructions' into 'functional
+</I>&gt;<i> parameter lists'.
+</I>&gt;<i>
+</I>&gt;<i> Phew, what the heck does that mean???
+</I>&gt;<i>
+</I>&gt;<i> Let's see an example:
+</I>&gt;<i>
+</I>&gt;<i> Using a snippet of the the built in preprocessor header file,
+</I>&gt;<i> (normally included in every compile automatically) STD.CH, we see
+</I>&gt;<i> this directive:
+</I>&gt;<i>
+</I>&gt;<i> (you may need to switch this to Courier font)
+</I>&gt;<i>
+</I>&gt;<i> #command USE &lt;(db)&gt;                             ;
+</I>&gt;<i>              [VIA &lt;rdd&gt;]                        ;
+</I>&gt;<i>              [ALIAS &lt;a&gt;]                        ;
+</I>&gt;<i>              [&lt;new: NEW&gt;]                       ;
+</I>&gt;<i>              [&lt;ex: EXCLUSIVE&gt;]                  ;
+</I>&gt;<i>              [&lt;sh: SHARED&gt;]                     ;
+</I>&gt;<i>              [&lt;ro: READONLY&gt;]                   ;
+</I>&gt;<i>              [INDEX &lt;(index1)&gt; [, &lt;(indexn)&gt;]]  ;
+</I>&gt;<i>                                      ;
+</I>&gt;<i>       =&gt; dbUseArea(                             ;
+</I>&gt;<i>              &lt;.new.&gt;, &lt;rdd&gt;, &lt;(db)&gt;, &lt;(a)&gt;,     ;
+</I>&gt;<i>   if(&lt;.sh.&gt; .or. &lt;.ex.&gt;, !&lt;.ex.&gt;, NIL), &lt;.ro.&gt;  ;
+</I>&gt;<i>                   )                             ;
+</I>&gt;<i>                                      ;
+</I>&gt;<i>       [; dbSetIndex( &lt;(index1)&gt; )]              ;
+</I>&gt;<i>       [; dbSetIndex( &lt;(indexn)&gt; )]
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> This preprocessor directive begins with a #command, which
+</I>&gt;<i> signifies the beginning of the directive, and in the middle, we see
+</I>&gt;<i> the =&gt; which signifies the break between $command and directive
+</I>&gt;<i> target. In the command area we see parameters surrounded with [],
+</I>&gt;<i> which means they are optional.
+</I>&gt;<i>
+</I>&gt;<i> In real life use, this #command makes it much easier to remember
+</I>&gt;<i> how to use the 'USE' command.
+</I>&gt;<i>
+</I>&gt;<i> We can use either of the following commands to perform the same
+</I>&gt;<i> functions.
+</I>&gt;<i>
+</I>&gt;<i> USE foobar EXCLUSIVE INDEX foodex READONLY
+</I>&gt;<i>
+</I>&gt;<i> or
+</I>&gt;<i>
+</I>&gt;<i> USE foobar INDEX foodex READONLY EXCLUSIVE
+</I>&gt;<i>
+</I>&gt;<i> Notice that the parameters in the above example do not have to be
+</I>&gt;<i> in any specific order. The preprocessor will read either of the above
+</I>&gt;<i> two lines of code and translate them both to the identical:
+</I>&gt;<i>
+</I>&gt;<i> dbUseArea( .f.,, 'foobar', .t., .t. )
+</I>&gt;<i> dbSetIndex( 'foodex' )
+</I>&gt;<i>
+</I>&gt;<i> We no longer have to remember the order of the parameters of a
+</I>&gt;<i> function, nor what they stand for. Instead, we can use a more
+</I>&gt;<i> englishlike substitute and let the preprocessor sort it out.
+</I>&gt;<i>
+</I>&gt;<i> Over the years, many parts of the Clipper language and now
+</I>&gt;<i> Harbour Project 'functions' have been transformed into arbitrary
+</I>&gt;<i> order 'commands'. Often, this means that you no longer have to
+</I>&gt;<i> look up the function in a manual to see what order the parameters
+</I>&gt;<i> should be used. This makes any language more natural and easier
+</I>&gt;<i> to remember and use. In fact, our Object Orientation makes heavy
+</I>&gt;<i> use of the preprocessor to turn englishlike commands into complex
+</I>&gt;<i> OO functions.
+</I>&gt;<i>
+</I>&gt;<i> This is only one of the features of what will soon be one of the most
+</I>&gt;<i> feature laden and powerful compilers available on the Linux platform.
+</I>&gt;<i>
+</I>&gt;<i> Harbour Project is still in alpha status and is nearly two years into
+</I>&gt;<i> development. Currently, Source Forge shows us as #117 of over
+</I>&gt;<i> 11,000 projects. Often, we have been as high as #20. A team of
+</I>&gt;<i> dedicated programmers are working around the clock and
+</I>&gt;<i> worldwide to make this one of the best third generation compilers
+</I>&gt;<i> available anywhere.
+</I>&gt;<i>
+</I>&gt;<i> Some other features that we have added to the Harbour Project
+</I>&gt;<i> above and beyond where Nantucket and Computer Associates left
+</I>&gt;<i> Clipper...
+</I>&gt;<i>
+</I>&gt;<i> Strong or weak variable typing
+</I>&gt;<i> Dynamic Garbage collection
+</I>&gt;<i> Dynamic Stack
+</I>&gt;<i> Replacable data drivers beyond .DBF files
+</I>&gt;<i> Full object orientation including Polymorphism, Encapsulation,
+</I>&gt;<i> multiple inheritance, scoping, forwarding and delegating
+</I>&gt;<i> Scripting (Runtime Compiling)
+</I>&gt;<i> Compile time expression optimizer
+</I>&gt;<i> Idle state handling
+</I>&gt;<i>
+</I>&gt;<i> ...and, we have worked very hard on several other initiatives during
+</I>&gt;<i> this process:
+</I>&gt;<i>
+</I>&gt;<i> Currently, there are 36 different language modules, so it is easy to
+</I>&gt;<i> have the basic runtime library text interfaces available in any
+</I>&gt;<i> language. Support for other languages is a tranlation away for
+</I>&gt;<i> anyone who is interested. That's the glory of Open Source!
+</I>&gt;<i>
+</I>&gt;<i> Harbour Project compiles and runs on 5 target platforms. Linux,
+</I>&gt;<i> DOS, OS/2, Win16, Win32, and there has been effort to support
+</I>&gt;<i> Macintosh but that effort is not current.
+</I>&gt;<i>
+</I>&gt;<i> The Harbour Project team members have been impressive
+</I>&gt;<i> participants, both in their outstanding coding talent and their
+</I>&gt;<i> dedication to sticking with this until we have a viable product.  This
+</I>&gt;<i> international team is currently working on integrating the RDD
+</I>&gt;<i> (Replacable Data Driver) layers. We are working on native .DBF,
+</I>&gt;<i> MySQL on Linux, MSQL, ADS, ODBC and there is an aftermarket
+</I>&gt;<i> company developing Oracle, Sybase and MS SQL support.
+</I>&gt;<i>
+</I>&gt;<i> There are also aftermarket companies developing very advanced
+</I>&gt;<i> GUI libraries. Many of  these aftermarket companies are drawing
+</I>&gt;<i> from over a decade of experience with serious commercial
+</I>&gt;<i> development in Clipper.
+</I>&gt;<i>
+</I>&gt;<i> Our help system is capable of outputting the following types of help
+</I>&gt;<i> files:
+</I>&gt;<i>
+</I>&gt;<i> TXT - plain ASCII text format
+</I>&gt;<i>     - plain ASCII text format without Form-Feed
+</I>&gt;<i> RTF - Rich text format
+</I>&gt;<i> NGI - Norton Guide source
+</I>&gt;<i> IPF - OS/2 help source code
+</I>&gt;<i> PDF - Adobe Portable Document
+</I>&gt;<i> HTM - HTML output
+</I>&gt;<i> CHM - HTML source files for Windows .CHM Help files
+</I>&gt;<i> HPC - HelpC source file
+</I>&gt;<i> TRF - Linux TROFF code
+</I>&gt;<i>
+</I>&gt;<i> I'm really excited as the capabilities of the Harbour Project
+</I>&gt;<i> compiler takes on a very professional and capable look and feel. I
+</I>&gt;<i> expect to see beta status soon, but being open source, that will
+</I>&gt;<i> depend on volunteer participation. This is a feature rich compiler. It
+</I>&gt;<i> takes time.
+</I>&gt;<i>
+</I>&gt;<i> You can visit the Harbour Project home page at <A HREF="http://www.harbour-">http://www.harbour-</A>
+</I>&gt;<i> project.org, where you will find links to the native c compilers that
+</I>&gt;<i> we use to create our compiler and other language tools that are
+</I>&gt;<i> necessary to build the language parser. If any of you are C coders
+</I>&gt;<i> and are interested in participating in the continuing development
+</I>&gt;<i> process, please feel free to join our developers mailing list and help
+</I>&gt;<i> us out.
+</I>&gt;<i>
+</I>&gt;<i> Harbour Power!
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i>               Phil Barnett  mailto:<A HREF="mailto:midnight@the-oasis.net">midnight@the-oasis.net</A>
+</I>&gt;<i>                        WWW  <A HREF="http://www.the-oasis.net/">http://www.the-oasis.net/</A>
+</I>&gt;<i>                   FTP Site  <A HREF="ftp://ftp.the-oasis.net">ftp://ftp.the-oasis.net</A>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> HarbourTalk mailing list
+</I>&gt;<i> <A HREF="mailto:HarbourTalk@lists.harbour-project.org">HarbourTalk@lists.harbour-project.org</A>
+</I>&gt;<i> <A HREF="http://www.matrixlist.com/mailman/listinfo/harbourtalk">http://www.matrixlist.com/mailman/listinfo/harbourtalk</A>
+</I>
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 22:34:41 2000
+Date: Wed, 8 Nov 2000 22:34:41 +0000
+From: Dave Pearson harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Boston
+
+<PRE>On Wed, Nov 08, 2000 at 04:32:29PM -0300, Felipe G. Coury wrote:
+
+&gt;<i> Is there anyone on the list that lives in Boston?
+</I>
+I live just down the road from Boston and I shop there at least once a week.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: <A HREF="http://www.harbour-project.org/">http://www.harbour-project.org/</A>
+FAQ................: <A HREF="http://www.harbour-project.org/faq/harbour.html">http://www.harbour-project.org/faq/harbour.html</A>
+My harbour page....: <A HREF="http://www.hagbard.demon.co.uk/harbour/">http://www.hagbard.demon.co.uk/harbour/</A>
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 22:37:07 2000
+Date: Wed, 8 Nov 2000 22:37:07 +0000
+From: Dave Pearson harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Boston
+
+<PRE>On Wed, Nov 08, 2000 at 08:02:33PM +0000, Douglas Woodrow wrote:
+&gt;<i> On Wed, 8 Nov 2000 16:32:29  Felipe G. Coury &lt;<A HREF="mailto:fcoury@creation.com.br">fcoury@creation.com.br</A>&gt;
+</I>&gt;<i> wrote
+</I>&gt;<i> &gt;Is there anyone on the list that lives in Boston?
+</I>&gt;<i> 
+</I>&gt;<i> Which one?  I live near Boston, Lincolnshire, England, UK.
+</I>
+So you're not too far from New York either. The really nice thing is that
+California is only a couple of hours away too.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: <A HREF="http://www.harbour-project.org/">http://www.harbour-project.org/</A>
+FAQ................: <A HREF="http://www.harbour-project.org/faq/harbour.html">http://www.harbour-project.org/faq/harbour.html</A>
+My harbour page....: <A HREF="http://www.hagbard.demon.co.uk/harbour/">http://www.hagbard.demon.co.uk/harbour/</A>
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 22:34:03 2000
+Date: Wed, 8 Nov 2000 22:34:03 +0000
+From: Dave Pearson harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] An article that I want to submit to Linux Journal
+
+<PRE>On Wed, Nov 08, 2000 at 12:45:48PM -0800, Ron Pinkas wrote:
+
+&gt;<i> Great work (I for one, believe that &quot;marketing hype&quot; is a must, and a
+</I>&gt;<i> given, in any promotional effort).
+</I>
+Hype and promotion are two different things. Hype says desperate to me, I
+don't think I'm alone in this.
+
+Promoting free software is fine, resorting to hype and marketing-speak
+misses the point IMNSHO. I'm confident Phil will understand and appreciate
+what I was saying.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: <A HREF="http://www.harbour-project.org/">http://www.harbour-project.org/</A>
+FAQ................: <A HREF="http://www.harbour-project.org/faq/harbour.html">http://www.harbour-project.org/faq/harbour.html</A>
+My harbour page....: <A HREF="http://www.hagbard.demon.co.uk/harbour/">http://www.hagbard.demon.co.uk/harbour/</A>
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 22:31:26 2000
+Date: Wed, 8 Nov 2000 22:31:26 +0000
+From: Dave Pearson harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] An article that I want to submit to Linux Journal
+
+<PRE>On Wed, Nov 08, 2000 at 02:07:52PM -0500, David G. Holm wrote:
+&gt;<i> ** Reply to message from Dave Pearson &lt;<A HREF="mailto:davep@davep.org">davep@davep.org</A>&gt; on Wed, 8 Nov 2000 13:54:02 +0000
+</I>&gt;<i> 
+</I>&gt;<i> &gt; Correct me if I'm wrong but STD.CH is, for all intents and purposes, empty
+</I>&gt;<i> 
+</I>&gt;<i> Well, yes, but only because it is hard-coded in the pre-processor...
+</I>
+...as it is with CA-Clipper. I just thought it best for the &quot;letter&quot; to not
+suggest that there is an editable header file of rules as there is with the
+base implementation.
+
+-- 
+Take a look in Hagbard's World: |   w3ng - The WWW Norton Guide reader.
+<A HREF="http://www.hagbard.demon.co.uk/">http://www.hagbard.demon.co.uk/</A> |     eg - Norton Guide reader for Linux.
+<A HREF="http://www.acemake.com/hagbard/">http://www.acemake.com/hagbard/</A> |    weg - Norton Guide reader for Windows.
+Free software, including........| dgscan - DGROUP scanner for Clipper.
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 23:33:57 2000
+Date: Wed, 8 Nov 2000 21:33:57 -0200
+From: ODGR harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Boston
+
+<PRE>Felipe,
+Se servir, conheço gente do ramo (Internet e desenvolvimento) que mora a 16
+milhas de Boston. E tem negócios lá.
+
+Odinir
+
+-----Mensagem original-----
+De: Felipe G. Coury &lt;<A HREF="mailto:fcoury@creation.com.br">fcoury@creation.com.br</A>&gt;
+Para: harbourtalk &lt;<A HREF="mailto:harbourtalk@lists.harbour-project.org">harbourtalk@lists.harbour-project.org</A>&gt;
+Data: Quarta-feira, 8 de Novembro de 2000 17:34
+Assunto: [HarbourTalk] Boston
+
+
+&gt;<i>Hi,
+</I>&gt;<i>
+</I>&gt;<i>Is there anyone on the list that lives in Boston?
+</I>&gt;<i>
+</I>&gt;<i>Regards,
+</I>&gt;<i>
+</I>&gt;<i>Felipe G. Coury
+</I>&gt;<i>Gerente de Desenvolvimento
+</I>&gt;<i>Creation Internet Business
+</I>&gt;<i><A HREF="http://www.creation.com.br">http://www.creation.com.br</A>
+</I>&gt;<i>
+</I>&gt;<i>--------------------------------------------
+</I>&gt;<i>Visite o GuiaBrasil.Net:
+</I>&gt;<i><A HREF="http://www.guiabrasil.net">http://www.guiabrasil.net</A>
+</I>&gt;<i>--------------------------------------------
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>_______________________________________________
+</I>&gt;<i>HarbourTalk mailing list
+</I>&gt;<i><A HREF="mailto:HarbourTalk@lists.harbour-project.org">HarbourTalk@lists.harbour-project.org</A>
+</I>&gt;<i><A HREF="http://www.matrixlist.com/mailman/listinfo/harbourtalk">http://www.matrixlist.com/mailman/listinfo/harbourtalk</A>
+</I>
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Thu Nov  9 00:05:28 2000
+Date: Thu, 9 Nov 2000 00:05:28 +0000
+From: Douglas Woodrow harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Boston
+
+<PRE>On Wed, 8 Nov 2000 22:37:07  Dave Pearson &lt;<A HREF="mailto:davep@davep.org">davep@davep.org</A>&gt; wrote
+&gt;<i>On Wed, Nov 08, 2000 at 08:02:33PM +0000, Douglas Woodrow wrote:
+</I>&gt;&gt;<i> On Wed, 8 Nov 2000 16:32:29  Felipe G. Coury &lt;<A HREF="mailto:fcoury@creation.com.br">fcoury@creation.com.br</A>&gt;
+</I>&gt;&gt;<i> wrote
+</I>&gt;&gt;<i> &gt;Is there anyone on the list that lives in Boston?
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Which one?  I live near Boston, Lincolnshire, England, UK.
+</I>&gt;<i>
+</I>&gt;<i>So you're not too far from New York either. The really nice thing is that
+</I>&gt;<i>California is only a couple of hours away too.
+</I>&gt;<i>
+</I>
+Yep. :)
+-- 
+Douglas Woodrow
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Thu Nov  9 01:19:42 2000
+Date: Wed, 8 Nov 2000 23:19:42 -0200
+From: Luiz Rafael Culik Guimaraes harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] An article that I want to submit to Linux Journal
+
+<PRE>Phil
+&gt;<i>
+</I>&gt;<i> Looks impressive!
+</I>&gt;<i> --
+</I>
+I´ll also agree with David.The text is well formated and with all needed
+information is present too.
+Btw. if any reader of the Linux Journal with good knowloge on on writing
+Troff pages and MAN pages join us, i can fix some bugs inside the  TROFF
+source files and maybe we can have Linux native Man Pages for DOC
+
+Regards
+
+Luiz Rafael Culik
+
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Wed Nov  8 23:06:09 2000
+Date: Wed, 8 Nov 2000 23:06:09 +0000
+From: Dave Pearson harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] An article that I want to submit to Linux Journal
+
+<PRE>On Wed, Nov 08, 2000 at 07:24:11PM +0100, Victor Szakats wrote:
+&gt;<i> Dave,
+</I>&gt;<i> 
+</I>&gt;<i> &gt; The question then becomes: what is this a measure of?
+</I>&gt;<i> 
+</I>&gt;<i> (if I understand your question correctly)
+</I>&gt;<i> 
+</I>&gt;<i> The measure was some kind of combined activity factor on the CVS server
+</I>&gt;<i> and the SourceForge page of the project.
+</I>
+So, it's only really a measure of how &quot;busy&quot; the project is. About as useful
+a measure (and as worth mentioning) as BogoMips perhaps?
+
+[Aside]
+
+I'm sure some will see my comments in response to Phil's RFC as overly
+negative. Actually I think Phil's idea of writing to the LJ is an excellent
+idea (as someone whose had a subscription since 1997 I've been thinking of
+writing and submitting an article). I'd just hate to see &quot;fluffy&quot; text sent
+in, the LJ is already loosing its way as it is, I'd like to think that a
+letter or an article about harbour might, in some small way, bolster the
+flagging free software content of what was once an excellent magazine.
+
+I'm saying: lets talk about what harbour has done and where it is as a free
+software project, lets not engage in the tick-list-oriented babble that's
+usually found in the non-free software world.
+
+. o O ( One of the most feature-laden compilers available for Linux?  )
+      ( Perhaps when we've overtaken the likes of GCC and CMUCL (and, )
+      ( don't forget, GCC is a compiler for a *number* of languages). )
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: <A HREF="http://www.harbour-project.org/">http://www.harbour-project.org/</A>
+FAQ................: <A HREF="http://www.harbour-project.org/faq/harbour.html">http://www.harbour-project.org/faq/harbour.html</A>
+My harbour page....: <A HREF="http://www.hagbard.demon.co.uk/harbour/">http://www.hagbard.demon.co.uk/harbour/</A>
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Thu Nov  9 12:46:00 2000
+Date: Thu, 9 Nov 2000 09:46:00 -0300
+From: Felipe G. Coury harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Boston
+
+<PRE>Odinir,
+
+&gt;<i> Se servir, conheço gente do ramo (Internet e desenvolvimento) que mora a
+</I>16
+&gt;<i> milhas de Boston. E tem negócios lá.
+</I>Estou procurando uma oportunidade em Boston, pois estou indo para lá no
+final do ano e gostaria de tentar arrumar um emprego no ramo. Se você me
+colocar em contato com alguém do ramo de informática, especialmente voltado
+à Web, posso enviá-los meu currículo. Tenho vasta experiência no ramo.
+
+Obrigado!
+
+Felipe G. Coury
+Gerente de Desenvolvimento
+Creation Internet Business
+<A HREF="http://www.creation.com.br">http://www.creation.com.br</A>
+
+--------------------------------------------
+Visite o GuiaBrasil.Net:
+<A HREF="http://www.guiabrasil.net">http://www.guiabrasil.net</A>
+--------------------------------------------
+
+
+
+</PRE>
+
+From harbourtalk@lists.harbour-project.org  Sat Nov 11 05:40:00 2000
+Date: Sat, 11 Nov 2000 00:40:00 -0500
+From: Phil Barnett harbourtalk@lists.harbour-project.org
+Subject: [HarbourTalk] Mailman Upgrade.
+
+<PRE>I am going to perform a Mailman upgrade to 2.0rc2.
+
+I've been waiting for them to resolve a lost messages issue and it 
+looks like they got it a few days ago.
+
+Now, they have released a release candidate.
+
+I'm configuring it and make-ing it tonight. There may be a slight 
+delay for some messages. I'll be sending test messages during 
+this test to Harbour Talk when I get it back up, and a notice here 
+when the upgrade is done. If you see anything funny after that 
+notice, please report it to me immediately. I'll do what I can even up 
+to reverting to the prior version if necessary. Hopefully, it will 
+upgrade nicely.
+
+-- 
+              Phil Barnett  mailto:<A HREF="mailto:midnight@the-oasis.net">midnight@the-oasis.net</A>
+                       WWW  <A HREF="http://www.the-oasis.net/">http://www.the-oasis.net/</A>
+                  FTP Site  <A HREF="ftp://ftp.the-oasis.net">ftp://ftp.the-oasis.net</A>
+
+</PRE>
+
+From midnight@the-oasis.net  Sat Nov 11 05:50:45 2000
+From: midnight@the-oasis.net (Phil Barnett)
+Date: Sat, 11 Nov 2000 00:50:45 -0500
+Subject: [HarbourTalk] Mailman Upgrade.
+In-Reply-To: <3A0C9560.428.22A641@localhost>
+Message-ID: <3A0C97E5.1835.2C7BDB@localhost>
+
+Ok, this is a test on Mailman 2.0rc2.
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From midnight@the-oasis.net  Sat Nov 11 17:05:45 2000
+From: midnight@the-oasis.net (Phil Barnett)
+Date: Sat, 11 Nov 2000 12:05:45 -0500
+Subject: [HarbourTalk] Mailman Upgrade.
+In-Reply-To: <20001111065651.A18577@hagbard.davep.org>
+References: <3A0C97E5.1835.2C7BDB@localhost>; from midnight@the-oasis.net on Sat, Nov 11, 2000 at 12:50:45AM -0500
+Message-ID: <3A0D3619.29784.29679B4@localhost>
+
+It appears to be to the list, and it's checked as 'to the list' in the 
+control panels.
+
+Where does this reply-to point?
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From midnight@the-oasis.net  Tue Nov 14 06:34:05 2000
+From: midnight@the-oasis.net (Phil Barnett)
+Date: Tue, 14 Nov 2000 01:34:05 -0500
+Subject: [HarbourTalk] Mailman Upgrade.
+In-Reply-To: <20001113223305.T18577@hagbard.davep.org>
+References: <200011132106.eADL6mE30072@thor.parrett.net>; from dholm@jsd-llc.com on Mon, Nov 13, 2000 at 04:00:32PM -0500
+Message-ID: <3A10968D.27578.62FF92C@localhost>
+
+On 13 Nov 2000, at 22:33, Dave Pearson wrote:
+
+> On Mon, Nov 13, 2000 at 04:00:32PM -0500, David G. Holm wrote:
+> > ** Reply to message from Dave Pearson <davep@davep.org> on Mon, 13
+> > Nov 2000 20:34:00 +0000
+> > 
+> > I've blanked my reply-to field for this reply. I suspect that this
+> > will cause the message to have the reply-to set to the list.
+> 
+> Your suspicion is correct.
+
+Boy, has this created a storm on the Mailman list.
+
+I have a patch. I'll be applying it RSN.
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@lists.harbour-project.org  Tue Nov 14 06:54:47 2000
+From: harbourtalk@lists.harbour-project.org (Phil Barnett)
+Date: Tue, 14 Nov 2000 01:54:47 -0500
+Subject: [HarbourTalk] test
+Message-ID: <3A109B67.31749.642EE49@localhost>
+
+test to see if this is a replyto list
+
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@lists.harbour-project.org  Tue Nov 14 06:57:57 2000
+From: harbourtalk@lists.harbour-project.org (Phil Barnett)
+Date: Tue, 14 Nov 2000 01:57:57 -0500
+Subject: [HarbourTalk] test
+In-Reply-To: <3A109B67.31749.642EE49@localhost>
+Message-ID: <3A109C25.15157.645D29B@localhost>
+
+On 14 Nov 2000, at 1:54, Phil Barnett wrote:
+
+> 
+> test to see if this is a replyto list
+
+YES!
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@lists.harbour-project.org  Tue Nov 14 12:05:19 2000
+From: harbourtalk@lists.harbour-project.org (Victor Szakats)
+Date: Tue, 14 Nov 2000 13:05:19 +0100
+Subject: [HarbourTalk] Mailman bug ? (Phil)
+Message-ID: <012b01c04e33$28ea5b80$0a0ac8c8@VECWS1>
+
+Phil,
+
+I typed this URL (from the top of my head, so it's probably wrong):
+http://www.matrixlist.com/mailman/archives/harbour/
+
+And I got this:
+
+Bug in Mailman version 2.0rc2
+
+We're sorry, we hit a bug!
+Please inform the webmaster for this site of this problem. Printing of traceback and other system information has been explicitly
+inhibited, but the webmaster can find this information in the Mailman error logs.
+
+Victor Szakats
+
+
+
+From harbourtalk@lists.harbour-project.org  Tue Nov 14 15:58:26 2000
+From: harbourtalk@lists.harbour-project.org (=?iso-8859-1?Q?Gustavo_A._Gonz=E1lez_M.?=)
+Date: Tue, 14 Nov 2000 11:58:26 -0400
+Subject: [HarbourTalk] De-compile an Obj ?
+Message-ID: <006101c04e75$710b9ae0$18f4c4a1@gustavo>
+
+Hi.
+
+May be possible to de-compile an obj that was writted in C languaje ?
+
+Regards
+
+********************************
+Gustavo A. González M.
+gonzalezgustavo@cantv.net
+Caracas - Venezuela
+********************************
+
+
+From harbourtalk@lists.harbour-project.org  Wed Nov 15 01:43:35 2000
+From: harbourtalk@lists.harbour-project.org (Phil Barnett)
+Date: Tue, 14 Nov 2000 20:43:35 -0500
+Subject: [HarbourTalk] Mailman bug ? (Phil)
+In-Reply-To: <012b01c04e33$28ea5b80$0a0ac8c8@VECWS1>
+Message-ID: <3A11A3F7.31395.A4C5F2C@localhost>
+
+On 14 Nov 2000, at 13:05, Victor Szakats wrote:
+
+> Phil,
+> 
+> I typed this URL (from the top of my head, so it's probably wrong):
+> http://www.matrixlist.com/mailman/archives/harbour/
+> 
+> And I got this:
+> 
+> Bug in Mailman version 2.0rc2
+> 
+> We're sorry, we hit a bug!
+> Please inform the webmaster for this site of this problem. Printing of
+> traceback and other system information has been explicitly inhibited,
+> but the webmaster can find this information in the Mailman error logs.
+> 
+> Victor Szakats
+
+Yes, it's reported.
+
+It seems that the new version has the archives in a different 
+location than the old version, and it's a bug. Once the new version 
+points to the populated directory, everything will work.
+
+I'm awaiting a bugfix.
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@lists.harbour-project.org  Fri Nov 17 07:43:10 2000
+From: harbourtalk@lists.harbour-project.org (Phil Barnett)
+Date: Fri, 17 Nov 2000 02:43:10 -0500
+Subject: [HarbourTalk] test
+Message-ID: <3A149B3E.10332.567F69A@localhost>
+
+test of Mailman RC-3
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@lists.harbour-project.org  Thu Nov 23 05:55:24 2000
+From: harbourtalk@lists.harbour-project.org (Ron Pinkas)
+Date: Wed, 22 Nov 2000 21:55:24 -0800
+Subject: [HarbourTalk] Fill the SimpLex Survey and win a FREE SimpLex T-Shirt
+In-Reply-To: <3A090DC1.8040.7324CAC@localhost>
+Message-ID: <LOBBKAFMMFGJIKLMEPAKEEFGDHAA.ron@profit-master.com>
+
+Hi all,
+
+I am pleased to invite you to take part in a simple 7 questions SimpLex
+Survey.
+
+All participants will receive a FREE* SimpLex T-Shirt.
+
+*S&H - US $5, International $10.
+
+S&H will be *waived* for the first 5 participants.
+
+Please allow 4-6 weeks for shipping.
+
+To participate please click the following link:
+
+http://sourceforge.net/survey/survey.php?group_id=8137&survey_id=11121
+
+Thanks in advance
+
+Ron
+
+
+From harbourtalk@lists.harbour-project.org  Thu Nov 23 06:06:09 2000
+From: harbourtalk@lists.harbour-project.org (Ron Pinkas)
+Date: Wed, 22 Nov 2000 22:06:09 -0800
+Subject: [HarbourTalk] Help Needed - SimpLex Documentation
+In-Reply-To: <LOBBKAFMMFGJIKLMEPAKEEFGDHAA.ron@profit-master.com>
+Message-ID: <LOBBKAFMMFGJIKLMEPAKOEFGDHAA.ron@profit-master.com>
+
+Hi All,
+
+I'm actively seeking assistance in completion of SimpLex Documentation.
+
+For more info please click:
+
+http://sourceforge.net/projects/simplex (select "Tasks")
+
+Ron
+
+From harbourtalk@lists.harbour-project.org  Thu Nov 23 16:22:23 2000
+From: harbourtalk@lists.harbour-project.org (Patrick Mast, Harbour)
+Date: Thu, 23 Nov 2000 17:22:23 +0100
+Subject: [HarbourTalk] RE: [Harbour] Mailing list info on the Harbour page (Patrick)
+In-Reply-To: <LOBBKAFMMFGJIKLMEPAKEEFJDHAA.ron@profit-master.com>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIAEGHFJAA.harbour@winfakt.com>
+
+Ron,
+
+> I got your postcard thanks! (if you had told me, we could have meet, I was
+> there to :-)
+Damned, you could have bought me dinner!! ;-))
+
+regards,
+
+Patrick Mast
+www.Patrick.Be.kz
+
+
+From harbourtalk@lists.harbour-project.org  Thu Nov 23 18:29:23 2000
+From: harbourtalk@lists.harbour-project.org (Felipe G. Coury)
+Date: Thu, 23 Nov 2000 15:29:23 -0300
+Subject: [HarbourTalk] Computer Acronyms Dictionary
+Message-ID: <03b401c0557b$4e163330$3c01a8c0@creation>
+
+I've found this great resource for searching that "Davy Words" ;-):
+
+o http://www.computeruser.com/resources/dictionary/dictionary.html
+
+Regards,
+
+Felipe G. Coury
+Gerente de Desenvolvimento
+Creation Internet Business
+http://www.creation.com.br
+
+--------------------------------------------
+Visite o GuiaBrasil.Net:
+http://www.guiabrasil.net
+--------------------------------------------
+
+
+
+From harbourtalk@lists.harbour-project.org  Thu Nov 23 17:40:14 2000
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Thu, 23 Nov 2000 17:40:14 +0000
+Subject: [HarbourTalk] Computer Acronyms Dictionary
+In-Reply-To: <03b401c0557b$4e163330$3c01a8c0@creation>; from fcoury@creation.com.br on Thu, Nov 23, 2000 at 03:29:23PM -0300
+References: <03b401c0557b$4e163330$3c01a8c0@creation>
+Message-ID: <20001123174014.Y8569@hagbard.davep.org>
+
+On Thu, Nov 23, 2000 at 03:29:23PM -0300, Felipe G. Coury wrote:
+
+> I've found this great resource for searching that "Davy Words" ;-):
+
+Davy? DAVY? LART! LART!
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.hagbard.demon.co.uk/harbour/
+
+From harbourtalk@lists.harbour-project.org  Fri Nov 24 23:53:41 2000
+From: harbourtalk@lists.harbour-project.org (Ron Pinkas)
+Date: Fri, 24 Nov 2000 15:53:41 -0800
+Subject: [HarbourTalk] Interesting Tools, Resources, etc.
+In-Reply-To: <LOBBKAFMMFGJIKLMEPAKOEFGDHAA.ron@profit-master.com>
+Message-ID: <LOBBKAFMMFGJIKLMEPAKEEHFDHAA.ron@profit-master.com>
+
+Here is a link to interesting resources:
+
+http://www.geocities.com/SiliconValley/Vista/6552/l7.html
+
+Ron
+
+From harbourtalk@lists.harbour-project.org  Wed Nov 29 06:49:11 2000
+From: harbourtalk@lists.harbour-project.org (Chen Kedem)
+Date: Wed, 29 Nov 2000 08:49:11 +0200
+Subject: [HarbourTalk] Mailman-Version
+Message-ID: <3A24A6E7.6C94@synel.co.il>
+
+Phil,
+did you change again the Mailman version?
+on "Harbour digest, Vol 1 #140 - 5 msgs" I've got in
+Sun, 26 Nov 2000 19:03:43 +0200
+the reported version was: Mailman v2.0rc3
+(with was the version sice Fri, 17 Nov 2000)
+since then the version reported is: Mailman v2.0
+did you revert the pach?
+
+  Chen.
+
+From harbourtalk@lists.harbour-project.org  Wed Nov 29 08:15:14 2000
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Wed, 29 Nov 2000 08:15:14 +0000
+Subject: [HarbourTalk] Mailman-Version
+In-Reply-To: <3A24A6E7.6C94@synel.co.il>; from niki@synel.co.il on Wed, Nov 29, 2000 at 08:49:11AM +0200
+References: <3A24A6E7.6C94@synel.co.il>
+Message-ID: <20001129081514.J26952@hagbard.davep.org>
+
+On Wed, Nov 29, 2000 at 08:49:11AM +0200, Chen Kedem wrote:
+> Phil,
+> did you change again the Mailman version?
+> on "Harbour digest, Vol 1 #140 - 5 msgs" I've got in
+> Sun, 26 Nov 2000 19:03:43 +0200
+> the reported version was: Mailman v2.0rc3
+> (with was the version sice Fri, 17 Nov 2000)
+> since then the version reported is: Mailman v2.0
+> did you revert the pach?
+
+The "rc3" in the version number probably means "release candidate". So
+v20.0rc1 would have been the first release candidate, rc2 the second, rc3
+the third and then, if no further bugs were found, rc3 would become v2.0
+proper.
+
+IOW, it's an upgrade to a "stable" release, not a downgrade.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.hagbard.demon.co.uk/harbour/
+
+From harbourtalk@lists.harbour-project.org  Thu Nov 30 04:52:51 2000
+From: harbourtalk@lists.harbour-project.org (Phil Barnett)
+Date: Wed, 29 Nov 2000 23:52:51 -0500
+Subject: [HarbourTalk] Mailman-Version
+In-Reply-To: <3A24A6E7.6C94@synel.co.il>
+Message-ID: <3A2596D3.13385.FDF0590@localhost>
+
+On 29 Nov 2000, at 8:49, Chen Kedem wrote:
+
+> Phil,
+> did you change again the Mailman version?
+> on "Harbour digest, Vol 1 #140 - 5 msgs" I've got in
+> Sun, 26 Nov 2000 19:03:43 +0200
+> the reported version was: Mailman v2.0rc3
+> (with was the version sice Fri, 17 Nov 2000)
+> since then the version reported is: Mailman v2.0
+> did you revert the pach?
+
+Mailman 2.0 was final released about two weeks ago. I watched 
+the developer list and user list and it appeared to be stable, so I 
+upgraded us to the final release.
+
+As far as I know, the final release was identical to rc3.
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+

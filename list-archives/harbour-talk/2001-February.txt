@@ -1,0 +1,173 @@
+From harbourtalk@lists.harbour-project.org  Thu Feb  8 23:31:48 2001
+From: harbourtalk@lists.harbour-project.org (Luiz Rafael Culik Guimaraes)
+Date: Thu, 08 Feb 2001 21:31:48 -0200
+Subject: [HarbourTalk] Harbour Debugger
+Message-ID: <3A832C64.A3F6F0@nh.conex.com.br>
+
+Dear Antonio,Ignacio and Maurilio
+
+Nice job you done to the debugger.
+
+Now my remarks
+
+Antonio
+
+The follow dont show propely
+
+Public variables on the monitor window if the function have local var
+Btw can you move the local variable addition to the  ::avars  to the
+load vars() method
+
+Second, please  notify me when you all has finish doing changes to the
+debugger. 
+
+I have the follow to upload, but since your upload speed is faster then
+my.(i have to download the latest changes, and apply the changes again)
+-Multiple source file support
+-the Show all/only one type of variables on the monitor window.
+-Some changes to the call stack window
+
+Regards
+
+Luiz Rafael Culik
+
+
+From harbourtalk@lists.harbour-project.org  Mon Feb 19 18:02:04 2001
+From: harbourtalk@lists.harbour-project.org (Datapark)
+Date: Mon, 19 Feb 2001 23:32:04 +0530
+Subject: [HarbourTalk] Waiting for next release.
+References: <200101301701.f0UH1Gs06787@nf1.netforward.com>
+Message-ID: <002e01c09a9e$119ebd60$0300a8c0@sandeep>
+
+The following is not from talk.
+
+>I think, that we can have new release already.
+
+> There is a big progress in DBFNTX since last release.
+> Indexing, seeking, skipping, updating of opened indexes while
+> append/replace of a record - all these works and may be ( and should
+> be ) properly tested.
+> Surely, there still remains some bugs - we will know about them after
+> people will test it.
+> Relations and memos aren't written yet.
+> The main 'what to do' now is optimization, because current code is
+> quite slow and index files aren't good balanced.
+
+All these days, waiting for the support. No problem if it slow or buggy,
+just want to start using HARBOUR.
+
+Want to test it out.
+
+Sandeep
+
+
+
+
+From harbourtalk@lists.harbour-project.org  Fri Feb 23 00:01:01 2001
+From: harbourtalk@lists.harbour-project.org (David G. Holm)
+Date: Thu, 22 Feb 2001 19:01:01 -0500
+Subject: [HarbourTalk] Harbour Build 0.36 Available
+Message-ID: <200102230001.f1N016X19945@thor.parrett.net>
+
+The following alternate build packages for Harbour Build 0.36
+(2001-02-20)
+are now available from my web site at
+http://www.jsd0.com/Harbour-Project/
+
+They are only available via http download. You can either use the links
+on the web page listed above or you can download the packages directly
+by
+adding the name of any package listed below to the address listed above
+(for example, http://www.jsd0.com/Harbour-Project/harbour-0.36.src.zip
+).
+
+1-02-22   1:42          20,600  contrib-0.36.bin.dos.bcc16.zip
+1-02-21  23:19           7,900  contrib-0.36.bin.dos.djgpp.zip
+1-02-22  15:18          17,498  contrib-0.36.bin.os2.gcc.zip
+1-02-22  14:27          18,372  contrib-0.36.bin.os2.icc.zip
+1-02-21  20:33          17,751  contrib-0.36.bin.w32.bcc32.zip
+1-02-21  21:42          19,164  contrib-0.36.bin.w32.gcc.zip
+1-02-21  21:22          19,071  contrib-0.36.bin.w32.mingw32.zip
+1-02-21  21:02          18,678  contrib-0.36.bin.w32.rsxnt.zip
+1-02-20  23:45          28,254  contrib-0.36.src.log.txt
+1-02-20  23:45         629,574  contrib-0.36.src.zip
+1-02-22   1:42       1,533,826  harbour-0.36.bin.dos.bcc16.zip
+1-02-21  23:19       1,778,437  harbour-0.36.bin.dos.djgpp.zip
+1-02-22  15:18       1,594,254  harbour-0.36.bin.os2.gcc.zip
+1-02-22  14:27       1,515,798  harbour-0.36.bin.os2.icc.zip
+1-02-21  20:23       1,526,814  harbour-0.36.bin.w32.bcc32.zip
+1-02-21  21:42       1,534,471  harbour-0.36.bin.w32.gcc.zip
+1-02-21  21:22       1,731,183  harbour-0.36.bin.w32.mingw32.zip
+1-02-21  21:02       1,728,191  harbour-0.36.bin.w32.rsxnt.zip
+1-02-20  21:06           7,690  harbour-0.36.log.dos.djgpp.zip
+1-02-21  12:22           7,140  harbour-0.36.log.os2.gcc.zip
+1-02-20  14:48           8,393  harbour-0.36.log.os2.icc.zip
+1-02-21  20:23           8,520  harbour-0.36.log.w32.bcc32.zip
+1-02-20  19:48           5,313  harbour-0.36.log.w32.gcc.zip
+1-02-20  20:38           5,333  harbour-0.36.log.w32.mingw32.zip
+1-02-20  15:56           5,979  harbour-0.36.log.w32.rsxnt.zip
+1-02-20  23:45          61,766  harbour-0.36.src.log.txt
+1-02-20  23:45       2,143,092  harbour-0.36.src.zip
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@lists.harbour-project.org  Fri Feb 23 23:05:15 2001
+From: harbourtalk@lists.harbour-project.org (Phil Barnett)
+Date: Fri, 23 Feb 2001 18:05:15 -0500
+Subject: [HarbourTalk] Finally a HOWTO we've all wanted...
+Message-ID: <3A96A65B.24512.92F7AFF@localhost>
+
+http://www.microsoft.com&item=q209354@www.hwnd.net/pub/msk
+b/Q209354.asp
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@lists.harbour-project.org  Fri Feb 23 23:16:29 2001
+From: harbourtalk@lists.harbour-project.org (David G. Holm)
+Date: Fri, 23 Feb 2001 18:16:29 -0500
+Subject: [HarbourTalk] Finally a HOWTO we've all wanted...
+In-Reply-To: <3A96A65B.24512.92F7AFF@localhost>
+Message-ID: <200102232316.f1NNGYX23542@thor.parrett.net>
+
+** Reply to message from "Phil Barnett" <midnight@the-oasis.net> on
+Fri, 23 Feb 2001 18:05:15 -0500
+
+The effect would have been better had your lame email program not
+word-wrapped the URL! 8-)
+
+http://www.microsoft.com&item=q209354@www.hwnd.net/pub/mskb/Q209354.asp
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@lists.harbour-project.org  Sat Feb 24 04:18:29 2001
+From: harbourtalk@lists.harbour-project.org (Phil Barnett)
+Date: Fri, 23 Feb 2001 23:18:29 -0500
+Subject: [HarbourTalk] Finally a HOWTO we've all wanted...
+In-Reply-To: <200102232316.f1NNGYX23542@thor.parrett.net>
+References: <3A96A65B.24512.92F7AFF@localhost>
+Message-ID: <3A96EFC5.18430.A4E3F6F@localhost>
+
+On 23 Feb 2001, at 18:16, David G. Holm wrote:
+
+> ** Reply to message from "Phil Barnett" <midnight@the-oasis.net> on
+> Fri, 23 Feb 2001 18:05:15 -0500
+> 
+> The effect would have been better had your lame email program not
+> word-wrapped the URL! 8-)
+> 
+> http://www.microsoft.com&item=q209354@www.hwnd.net/pub/mskb/Q209354.asp
+
+I'll see if I can find a manual on that... ;-)
+
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+

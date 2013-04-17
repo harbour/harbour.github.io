@@ -1,0 +1,1104 @@
+From harbourtalk@lists.harbour-project.org  Sat Dec  2 21:18:48 2000
+From: harbourtalk@lists.harbour-project.org (Patrick Mast, Harbour)
+Date: Sat, 2 Dec 2000 22:18:48 +0100
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <3A2596D3.13385.FDF0590@localhost>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIIECFFKAA.harbour@winfakt.com>
+
+Hi,
+
+is there a Borland C 5.5 Master Online now?
+I need info on a BYTE init.
+
+regards,
+
+Patrick Mast
+www.Patrick.Be.kz
+
+
+From harbourtalk@lists.harbour-project.org  Sat Dec  2 21:30:00 2000
+From: harbourtalk@lists.harbour-project.org (Patrick Mast, Harbour)
+Date: Sat, 2 Dec 2000 22:30:00 +0100
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIIECFFKAA.harbour@winfakt.com>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIOECFFKAA.harbour@winfakt.com>
+
+Hi,
+
+> is there a Borland C 5.5 Master Online now?
+> I need info on a BYTE init.
+I have this sample from MS Visual C++ and I need to compile it with BCC5.5:
+
+BYTE * pResized = new BYTE[uNewW * uNewH *3];
+
+The error it gives is:
+Error E2140 test.c 24: Declaration is not allowed here in function WinMain
+Error E2451 test.c 24: Undefined symbol 'new' in function WinMain
+Error E2141 test.c 24: Declaration syntax error in function WinMain
+
+Thanks!
+
+Patrick Mast
+www.Patrick.Be.kz
+
+
+From harbourtalk@lists.harbour-project.org  Sun Dec  3 02:10:51 2000
+From: harbourtalk@lists.harbour-project.org (harbourtalk@lists.harbour-project.org)
+Date: Sun, 3 Dec 2000 13:10:51 +1100
+Subject: [HarbourTalk] Learning C... Help! ;-))
+Message-ID: <OFA8818DA7.FA4DAFB7-ONCA2569AA.000BE020@dingoblue.net.au>
+
+Patrick,
+
+That sounds like you're not #include'ing whichever .h file defines BYTE.
+
+As a test, put a line above that one like
+
+#define BYTE int
+
+I know it's wrong, but at least it'll tell you whether that's the problem. 
+If that compiles, then remove the line and look for the appropriate .h 
+file (I'm not sure which one it is).
+
+Mab
+
+
+
+
+
+"Patrick Mast, Harbour" <harbour@winfakt.com>
+Sent by: harbourtalk-admin@lists.harbour-project.org
+03/12/00 08:30 AM
+Please respond to harbourtalk
+
+ 
+        To:     <harbourtalk@lists.harbour-project.org>
+        cc: 
+        Subject:        RE: [HarbourTalk] Learning C... Help! ;-))
+
+Hi,
+
+> is there a Borland C 5.5 Master Online now?
+> I need info on a BYTE init.
+I have this sample from MS Visual C++ and I need to compile it with 
+BCC5.5:
+
+BYTE * pResized = new BYTE[uNewW * uNewH *3];
+
+The error it gives is:
+Error E2140 test.c 24: Declaration is not allowed here in function WinMain
+Error E2451 test.c 24: Undefined symbol 'new' in function WinMain
+Error E2141 test.c 24: Declaration syntax error in function WinMain
+
+Thanks!
+
+Patrick Mast
+www.Patrick.Be.kz
+
+_______________________________________________
+HarbourTalk mailing list
+HarbourTalk@lists.harbour-project.org
+http://www.matrixlist.com/mailman/listinfo/harbourtalk
+
+
+
+
+
+From harbourtalk@lists.harbour-project.org  Sat Dec  2 23:23:09 2000
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Sat, 2 Dec 2000 23:23:09 +0000
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIOECFFKAA.harbour@winfakt.com>; from harbour@winfakt.com on Sat, Dec 02, 2000 at 10:30:00PM +0100
+References: <NCBBJKNMIDPJNLJCHCHIIECFFKAA.harbour@winfakt.com> <NCBBJKNMIDPJNLJCHCHIOECFFKAA.harbour@winfakt.com>
+Message-ID: <20001202232309.N6233@hagbard.davep.org>
+
+On Sat, Dec 02, 2000 at 10:30:00PM +0100, Patrick Mast, Harbour wrote:
+> Hi,
+> 
+> > is there a Borland C 5.5 Master Online now?
+> > I need info on a BYTE init.
+> I have this sample from MS Visual C++ and I need to compile it with BCC5.5:
+> 
+> BYTE * pResized = new BYTE[uNewW * uNewH *3];
+> 
+> The error it gives is:
+> Error E2140 test.c 24: Declaration is not allowed here in function WinMain
+> Error E2451 test.c 24: Undefined symbol 'new' in function WinMain
+> Error E2141 test.c 24: Declaration syntax error in function WinMain
+
+Are you sure you've compiling it as C++ code? The fact that you've given it
+a .c extension suggests you're writing C code (and I seem to recall that
+Borland's compiler takes a clue from the file extension in the absence of
+other hints).
+
+`new' is C++, not C.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.hagbard.demon.co.uk/harbour/
+
+From harbourtalk@lists.harbour-project.org  Sun Dec  3 08:28:10 2000
+From: harbourtalk@lists.harbour-project.org (Patrick Mast, Harbour)
+Date: Sun, 3 Dec 2000 09:28:10 +0100
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <20001202232309.N6233@hagbard.davep.org>
+Message-ID: <NCBBJKNMIDPJNLJCHCHICEDCFKAA.harbour@winfakt.com>
+
+Dave,
+
+> > > is there a Borland C 5.5 Master Online now?
+> > > I need info on a BYTE init.
+> > I have this sample from MS Visual C++ and I need to compile it 
+> > with BCC5.5:
+> > BYTE * pResized = new BYTE[uNewW * uNewH *3];
+> > The error it gives is:
+> > Error E2140 test.c 24: Declaration is not allowed here in 
+> > function WinMain
+> > Error E2451 test.c 24: Undefined symbol 'new' in function WinMain
+> > Error E2141 test.c 24: Declaration syntax error in function WinMain
+> Are you sure you've compiling it as C++ code? The fact that 
+> you've given it
+> a .c extension suggests you're writing C code (and I seem to recall that
+> Borland's compiler takes a clue from the file extension in the absence of
+> other hints).
+> `new' is C++, not C.
+
+You are right!
+Renaming test.c to test.cpp changed the whole thing!
+Thanks, I've learned!! ;-))
+
+regards,
+
+Patrick Mast
+www.Patrick.Be.kz
+
+
+From harbourtalk@lists.harbour-project.org  Sun Dec  3 08:38:24 2000
+From: harbourtalk@lists.harbour-project.org (Patrick Mast, Harbour)
+Date: Sun, 3 Dec 2000 09:38:24 +0100
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <20001202232309.N6233@hagbard.davep.org>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIEEDDFKAA.harbour@winfakt.com>
+
+Dave,
+
+> `new' is C++, not C.
+And it's no problem to make a DLL that is made with C++ to work with harbour
+isn't it?
+
+regards,
+
+Patrick Mast
+www.Patrick.Be.kz
+
+
+From harbourtalk@lists.harbour-project.org  Sun Dec  3 09:50:54 2000
+From: harbourtalk@lists.harbour-project.org (Antonio Linares)
+Date: Sun, 3 Dec 2000 10:50:54 +0100
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIEEDDFKAA.harbour@winfakt.com>
+Message-ID: <001301c05d0e$87213680$0f2aa8c0@fivetechs>
+
+Patrick,
+
+> And it's no problem to make a DLL that is made with C++ to work 
+> with harbour isn't it?
+
+Right, it doesn't matter.
+
+Anyhow, I would suggest you to start learning C before
+learn C++.
+
+Antonio
+
+From harbourtalk@lists.harbour-project.org  Sun Dec  3 10:15:48 2000
+From: harbourtalk@lists.harbour-project.org (Patrick Mast, Harbour)
+Date: Sun, 3 Dec 2000 11:15:48 +0100
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <001301c05d0e$87213680$0f2aa8c0@fivetechs>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIOEDFFKAA.harbour@winfakt.com>
+
+Antonio,
+
+> > And it's no problem to make a DLL that is made with C++ to work 
+> > with harbour isn't it?
+> Right, it doesn't matter.
+> Anyhow, I would suggest you to start learning C before
+> learn C++.
+
+I'm making a JPG class for Harbour together with Oh-Chul.
+
+regards,
+
+Patrick Mast
+www.Patrick.Be.kz
+
+
+From harbourtalk@lists.harbour-project.org  Sun Dec  3 18:56:38 2000
+From: harbourtalk@lists.harbour-project.org (Antonio Linares)
+Date: Sun, 3 Dec 2000 19:56:38 +0100
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIOEDFFKAA.harbour@winfakt.com>
+Message-ID: <000001c05d5a$c4225cc0$0f2aa8c0@fivetechs>
+
+Patrick,
+
+> I'm making a JPG class for Harbour together with Oh-Chul.
+
+Very good!!!
+
+Antonio
+
+
+From harbourtalk@lists.harbour-project.org  Sun Dec  3 19:38:16 2000
+From: harbourtalk@lists.harbour-project.org (Patrick Mast, Harbour)
+Date: Sun, 3 Dec 2000 20:38:16 +0100
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <000001c05d5a$c4225cc0$0f2aa8c0@fivetechs>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIAEDOFKAA.harbour@winfakt.com>
+
+Antonio,
+
+I need some help...
+I have a drnview.cpp source code compiled with this:
+bcc32 -tW -c -Ic:\harbour\include;c:\bcc55\include drnview.cpp
+
+Than I nake the DLL with this:
+tlib  drjpg+drnview
+
+Than I use the functions from inside the drnview.cpp
+IMGInit() and JPGResize()
+
+In buildh.bat I added this line:
+echo DrJPG.lib iSOurce.lib              + >> b32.bc
+
+and right this after loading FiveH.lib
+
+But compiling my PRG i get this:
+C:\fwh\Html Album>c:\bc55\bin\ilink32 -Gn -aa -Tpe -s -v @b32.bc
+Turbo Incremental Link 5.00 Copyright (c) 1997, 2000 Borland
+Error: Unresolved external '_HB_FUN_IMGINIT' referenced from
+C:\FWH\HTML ALBUM\ALBUM.OBJ
+Error: Unresolved external '_HB_FUN_IJPGRESIZE' referenced from
+C:\FWH\HTML ALBUM\ALBUM.OBJ
+
+What can be wrong?
+The CPP file?
+
+regards,
+
+Patrick Mast
+www.Patrick.Be.kz
+
+
+From harbourtalk@lists.harbour-project.org  Sun Dec  3 19:42:37 2000
+From: harbourtalk@lists.harbour-project.org (Antonio Linares)
+Date: Sun, 3 Dec 2000 20:42:37 +0100
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIAEDOFKAA.harbour@winfakt.com>
+Message-ID: <000501c05d61$308afd80$0f2aa8c0@fivetechs>
+
+Patrick,
+
+Have a look at FWH Clip3hrb.prg code. You will see how we
+add HB_FUN_ to the funcions names.
+
+Antonio
+
+> -----Mensaje original-----
+> De: harbourtalk-admin@lists.harbour-project.org
+> [mailto:harbourtalk-admin@lists.harbour-project.org]En nombre de Patrick
+> Mast, Harbour
+> Enviado el: domingo, 03 de diciembre de 2000 20:38
+> Para: harbourtalk@lists.harbour-project.org
+> Asunto: RE: [HarbourTalk] Learning C... Help! ;-))
+> 
+> 
+> Antonio,
+> 
+> I need some help...
+> I have a drnview.cpp source code compiled with this:
+> bcc32 -tW -c -Ic:\harbour\include;c:\bcc55\include drnview.cpp
+> 
+> Than I nake the DLL with this:
+> tlib  drjpg+drnview
+> 
+> Than I use the functions from inside the drnview.cpp
+> IMGInit() and JPGResize()
+> 
+> In buildh.bat I added this line:
+> echo DrJPG.lib iSOurce.lib              + >> b32.bc
+> 
+> and right this after loading FiveH.lib
+> 
+> But compiling my PRG i get this:
+> C:\fwh\Html Album>c:\bc55\bin\ilink32 -Gn -aa -Tpe -s -v @b32.bc
+> Turbo Incremental Link 5.00 Copyright (c) 1997, 2000 Borland
+> Error: Unresolved external '_HB_FUN_IMGINIT' referenced from
+> C:\FWH\HTML ALBUM\ALBUM.OBJ
+> Error: Unresolved external '_HB_FUN_IJPGRESIZE' referenced from
+> C:\FWH\HTML ALBUM\ALBUM.OBJ
+> 
+> What can be wrong?
+> The CPP file?
+> 
+> regards,
+> 
+> Patrick Mast
+> www.Patrick.Be.kz
+> 
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@lists.harbour-project.org
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+> 
+
+From harbourtalk@lists.harbour-project.org  Sun Dec  3 19:54:33 2000
+From: harbourtalk@lists.harbour-project.org (Patrick Mast, Harbour)
+Date: Sun, 3 Dec 2000 20:54:33 +0100
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <000501c05d61$308afd80$0f2aa8c0@fivetechs>
+Message-ID: <NCBBJKNMIDPJNLJCHCHICEDPFKAA.harbour@winfakt.com>
+
+Antonio,
+
+> Have a look at FWH Clip3hrb.prg code. You will see how we
+> add HB_FUN_ to the funcions names.
+I don't have that file...
+
+Here's the source of the JPGResize():
+(  It looks good to me ;-))  )
+
+#include "windows.h"
+#include "hbapi.h"
+
+typedef struct ISDPIStruct_t
+{
+ UINT32 uDPIX;
+ UINT32 uDPIY;
+ UINT32 uDPIUnits;
+} ISDPIStruct;
+
+
+HGLOBAL WINAPI _ISOpenFileSource( LPSTR cSource );
+HGLOBAL WINAPI _ISReadJPG( HGLOBAL hSource, UINT32 *puWidth, UINT32
+*puHeight, UINT32 uBitsPerPixel );
+UINT32  WINAPI _ISCloseSource( HGLOBAL hSource );
+UINT32  WINAPI _ISWriteJPG( HGLOBAL hDest, BYTE *pImg, UINT32 uWidth, UINT32
+uHeight, UINT32 uQuality, UINT32 uProgressive, UINT32 uBytesPerPixel,
+ISDPIStruct *pDPIStruct );
+HGLOBAL WINAPI _ISOpenFileDest( LPSTR cDest );
+UINT32  WINAPI _ISCloseDest( HGLOBAL hDest );
+void    WINAPI _ISInitialize( const char *pKey );
+BOOL    WINAPI _ISResizeImage( BYTE * pRGB, UINT32 uWidth, UINT32 uHeight,
+BYTE *pRGBOut, UINT32 uOutWidth, UINT32 uOutHeight, UINT32 uBytesPerPixel);
+
+
+// Initialize iSource
+// IMGInit()
+HB_FUNC ( IMGINIT )
+{
+ _ISInitialize("{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}");
+}
+
+
+// iJPGResize(cSource,cDest,nWidth,nHeight)
+HB_FUNC ( IJPGRESIZE )
+{
+  LPSTR  cSource = (LPSTR)  hb_parc (1);
+  LPSTR  cDest   = (LPSTR)  hb_parc (2);
+  UINT32 uWidth  = (UINT32) hb_parni(3);
+  UINT32 uHeight = (UINT32) hb_parni(4);
+  UINT32 nQty    = (UINT32) hb_parni(5);
+
+  UINT32 uOrgWidth;
+  UINT32 uOrgHeight;
+
+  HGLOBAL hSource;
+  HGLOBAL hDest;
+  HGLOBAL hResized;
+
+  // Open JPG
+  hSource  = _ISOpenFileSource ( cSource );
+  hResized = _ISReadJPG ( hSource, &uOrgWidth, &uOrgHeight, 24 );
+  _ISCloseSource(hSource);
+
+  // Resize
+  BYTE * pResized = new BYTE[uWidth * uHeight *3];
+  _ISResizeImage((BYTE *)hResized, uOrgWidth, uOrgHeight, pResized, uWidth,
+uHeight, 3);
+
+  // Get a destination manager
+  hDest = _ISOpenFileDest ( cDest );
+  if (hDest!=NULL)
+  {
+     _ISWriteJPG(hDest, pResized, uWidth, uHeight, nQty, 1 , 24, NULL);
+     _ISCloseDest(hDest);
+  }
+
+  // Free memory blocks
+  GlobalFree ( hSource );
+  GlobalFree ( hResized );
+  delete [] pResized;
+  hb_retl(0);
+}
+
+
+What is wrong?
+
+Patrick
+
+
+From harbourtalk@lists.harbour-project.org  Sun Dec  3 19:54:33 2000
+From: harbourtalk@lists.harbour-project.org (Patrick Mast, Harbour)
+Date: Sun, 3 Dec 2000 20:54:33 +0100
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <000501c05d61$308afd80$0f2aa8c0@fivetechs>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIAEDPFKAA.harbour@winfakt.com>
+
+Antonio,
+
+Your eMail alinares@sp-editores.es does not work
+
+Patrick
+
+From harbourtalk@lists.harbour-project.org  Mon Dec  4 08:15:46 2000
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Mon, 4 Dec 2000 08:15:46 +0000
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHICEDPFKAA.harbour@winfakt.com>; from harbour@winfakt.com on Sun, Dec 03, 2000 at 08:54:33PM +0100
+References: <000501c05d61$308afd80$0f2aa8c0@fivetechs> <NCBBJKNMIDPJNLJCHCHICEDPFKAA.harbour@winfakt.com>
+Message-ID: <20001204081546.O6233@hagbard.davep.org>
+
+On Sun, Dec 03, 2000 at 08:54:33PM +0100, Patrick Mast, Harbour wrote:
+
+> HB_FUNC ( IMGINIT )
+> HB_FUNC ( IJPGRESIZE )
+> 
+> What is wrong?
+
+You're building this as C++, right? Are you sure that you're building this
+such that the two functions above don't have their names passed via the name
+mangling mechanism?
+
+I'd also suggest that you might want to look at writing these functions so
+that they're portable (IOW no Win32 specific stuff). It strikes me that JPG
+manipulation code doesn't need to be tied to one platform.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.hagbard.demon.co.uk/harbour/
+
+From harbourtalk@lists.harbour-project.org  Mon Dec  4 16:20:02 2000
+From: harbourtalk@lists.harbour-project.org (David G. Holm)
+Date: Mon, 4 Dec 2000 11:20:02 -0500
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <001301c05d0e$87213680$0f2aa8c0@fivetechs>
+References: <NCBBJKNMIDPJNLJCHCHIEEDDFKAA.harbour@winfakt.com>
+Message-ID: <200012041620.eB4GKbr04607@thor.parrett.net>
+
+** Reply to message from "Antonio Linares" <alinares@fivetech.com> on
+Sun, 3 Dec 2000 10:50:54 +0100
+
+> Anyhow, I would suggest you to start learning C before learn C++.
+
+I disagree. I think that it is better to start with C++ than to have to
+unlearn all of the bad habits that will come from having learned C first.
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@lists.harbour-project.org  Tue Dec  5 10:14:53 2000
+From: harbourtalk@lists.harbour-project.org (Patrick Mast)
+Date: Tue, 5 Dec 2000 11:14:53 +0100
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <20001204081546.O6233@hagbard.davep.org>
+Message-ID: <NCBBJKNMIDPJNLJCHCHICEFFFKAA.harbour@winfakt.com>
+
+Dave,
+
+> > HB_FUNC ( IMGINIT )
+> > HB_FUNC ( IJPGRESIZE )
+> > What is wrong?
+>
+> You're building this as C++, right? Are you sure that you're building this
+> such that the two functions above don't have their names passed
+> via the name mangling mechanism?
+Is this different if we make the c code in C or C++?
+
+This is how I build the lib:
+,----
+| bcc32 -tW -c -I%hdir%\include;%bcdir%\include drnview.cpp
+| tlib Drjpg +Drnview
+`--------------
+
+Also tried:
+,-----
+|bcc32 -c -I%hdir%\include;%bcdir%\include drnview.cpp
+|tlib Drjpg +Drnview
+`--------------
+
+What can be wrong?
+
+
+> I'd also suggest that you might want to look at writing these functions so
+> that they're portable (IOW no Win32 specific stuff). It strikes
+> me that JPG manipulation code doesn't need to be tied to one platform.
+Let me first try this in C++, than I can try to make it in ANSI C and
+platform independant. ;-))
+
+regards,
+
+Patrick Mast
+www.Patrick.Be.kz
+
+
+From harbourtalk@lists.harbour-project.org  Tue Dec  5 10:37:41 2000
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Tue, 5 Dec 2000 10:37:41 +0000
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHICEFFFKAA.harbour@winfakt.com>; from harbour@winfakt.com on Tue, Dec 05, 2000 at 11:14:53AM +0100
+References: <20001204081546.O6233@hagbard.davep.org> <NCBBJKNMIDPJNLJCHCHICEFFFKAA.harbour@winfakt.com>
+Message-ID: <20001205103741.X6233@hagbard.davep.org>
+
+On Tue, Dec 05, 2000 at 11:14:53AM +0100, Patrick Mast wrote:
+> Dave,
+> 
+> > > HB_FUNC ( IMGINIT )
+> > > HB_FUNC ( IJPGRESIZE )
+> > > What is wrong?
+> >
+> > You're building this as C++, right? Are you sure that you're building
+> > this such that the two functions above don't have their names passed via
+> > the name mangling mechanism?
+>
+> Is this different if we make the c code in C or C++?
+
+Yes. It's also different if you tell the C++ compiler that certain functions
+are C code (see your compiler's documentation for the 'extern "C"'
+directive) or, at the very least, shouldn't be name-mangled.
+
+<URL:http://www.hagbard.demon.co.uk/clipper-faq/clipper-8.html#ss8.12> is
+worth reading at this point.
+
+> This is how I build the lib:
+> ,----
+> | bcc32 -tW -c -I%hdir%\include;%bcdir%\include drnview.cpp
+> | tlib Drjpg +Drnview
+> `--------------
+> 
+> Also tried:
+> ,-----
+> |bcc32 -c -I%hdir%\include;%bcdir%\include drnview.cpp
+> |tlib Drjpg +Drnview
+> `--------------
+> 
+> What can be wrong?
+
+Sorry, can't tell anything useful from that because I don't use Borland C++
+on Win32 (actually, I don't use any Win32 C++ compiler). Perhaps the manual
+for your compiler will tell you something useful about the command line
+switches you're using?
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.hagbard.demon.co.uk/harbour/
+
+From harbourtalk@lists.harbour-project.org  Tue Dec  5 12:12:45 2000
+From: harbourtalk@lists.harbour-project.org (Patrick Mast)
+Date: Tue, 5 Dec 2000 13:12:45 +0100
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <20001205103741.X6233@hagbard.davep.org>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIKEFGFKAA.harbour@winfakt.com>
+
+Ok, I need some advice from the C guru's around here...
+Lets take this to the Harbour list.
+
+Thanks Dave!
+
+Patrick
+
+> > > > HB_FUNC ( IMGINIT )
+> > > > HB_FUNC ( IJPGRESIZE )
+> > > > What is wrong?
+> > >
+> > > You're building this as C++, right? Are you sure that you're building
+> > > this such that the two functions above don't have their names 
+> passed via
+> > > the name mangling mechanism?
+> >
+> > Is this different if we make the c code in C or C++?
+> 
+> Yes. It's also different if you tell the C++ compiler that 
+> certain functions
+> are C code (see your compiler's documentation for the 'extern "C"'
+> directive) or, at the very least, shouldn't be name-mangled.
+> 
+> <URL:http://www.hagbard.demon.co.uk/clipper-faq/clipper-8.html#ss8.12> is
+> worth reading at this point.
+> 
+> > This is how I build the lib:
+> > ,----
+> > | bcc32 -tW -c -I%hdir%\include;%bcdir%\include drnview.cpp
+> > | tlib Drjpg +Drnview
+> > `--------------
+> > 
+> > Also tried:
+> > ,-----
+> > |bcc32 -c -I%hdir%\include;%bcdir%\include drnview.cpp
+> > |tlib Drjpg +Drnview
+> > `--------------
+> > 
+> > What can be wrong?
+> 
+> Sorry, can't tell anything useful from that because I don't use 
+> Borland C++
+> on Win32 (actually, I don't use any Win32 C++ compiler). Perhaps 
+> the manual
+> for your compiler will tell you something useful about the command line
+> switches you're using?
+> 
+> -- 
+> The Harbour Project: A free software Clipper compatible compiler
+> Home Page..........: http://www.harbour-project.org/
+> FAQ................: http://www.harbour-project.org/faq/harbour.html
+> My harbour page....: http://www.hagbard.demon.co.uk/harbour/
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@lists.harbour-project.org
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+> 
+
+From harbourtalk@lists.harbour-project.org  Tue Dec  5 12:22:15 2000
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Tue, 5 Dec 2000 12:22:15 +0000
+Subject: [HarbourTalk] Learning C... Help! ;-))
+In-Reply-To: <NCBBJKNMIDPJNLJCHCHIKEFGFKAA.harbour@winfakt.com>; from harbour@winfakt.com on Tue, Dec 05, 2000 at 01:12:45PM +0100
+References: <20001205103741.X6233@hagbard.davep.org> <NCBBJKNMIDPJNLJCHCHIKEFGFKAA.harbour@winfakt.com>
+Message-ID: <20001205122215.C6233@hagbard.davep.org>
+
+On Tue, Dec 05, 2000 at 01:12:45PM +0100, Patrick Mast wrote:
+
+> Ok, I need some advice from the C guru's around here... Lets take this to
+> the Harbour list.
+
+Are you saying that the pointer to the FAQ didn't help?
+
+BTW, this isn't a C problem so asking "C gurus" won't help. It's either a
+C++ problem or it's a C++ implementation problem, we'll know if it's the
+latter once you've actually discounted the FAQ pointer I gave you as the
+cause of your problem.
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.hagbard.demon.co.uk/harbour/
+
+From harbourtalk@lists.harbour-project.org  Tue Dec  5 15:48:03 2000
+From: harbourtalk@lists.harbour-project.org (Felipe G. Coury)
+Date: Tue, 5 Dec 2000 12:48:03 -0300
+Subject: [HarbourTalk] Do me a favor...
+Message-ID: <001a01c05ed2$c1190780$3c01a8c0@creation>
+
+People,
+
+I need feedback on what you see when you try to access:
+
+o http://www.bodysystems.com.br/teste/body1.swf
+o http://www.bodysystems.com.br/teste/body2.swf
+o http://www.bodysystems.com.br/teste2 
+
+There's some costumers complaining about this websites.
+
+Thanks in advance!
+
+Felipe G. Coury
+Gerente de Desenvolvimento
+Creation Internet Business
+http://www.creation.com.br
+
+--------------------------------------------
+Visite o GuiaBrasil.Net:
+http://www.guiabrasil.net
+--------------------------------------------
+
+
+
+From harbourtalk@lists.harbour-project.org  Tue Dec  5 17:44:38 2000
+From: harbourtalk@lists.harbour-project.org (Patrick Mast)
+Date: Tue, 5 Dec 2000 18:44:38 +0100
+Subject: [HarbourTalk] Do me a favor...
+In-Reply-To: <001a01c05ed2$c1190780$3c01a8c0@creation>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIKEGDFKAA.harbour@winfakt.com>
+
+Felipe,
+
+They work just fine with me...
+Slow, but they work! ;-))
+
+Patrick
+
+> -----Oorspronkelijk bericht-----
+> Van: harbourtalk-admin@lists.harbour-project.org
+> [mailto:harbourtalk-admin@lists.harbour-project.org]Namens Felipe G.
+> Coury
+> Verzonden: dinsdag 5 december 2000 16:48
+> Aan: harbourtalk
+> Onderwerp: [HarbourTalk] Do me a favor...
+> 
+> 
+> People,
+> 
+> I need feedback on what you see when you try to access:
+> 
+> o http://www.bodysystems.com.br/teste/body1.swf
+> o http://www.bodysystems.com.br/teste/body2.swf
+> o http://www.bodysystems.com.br/teste2 
+> 
+> There's some costumers complaining about this websites.
+> 
+> Thanks in advance!
+> 
+> Felipe G. Coury
+> Gerente de Desenvolvimento
+> Creation Internet Business
+> http://www.creation.com.br
+> 
+> --------------------------------------------
+> Visite o GuiaBrasil.Net:
+> http://www.guiabrasil.net
+> --------------------------------------------
+> 
+> 
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@lists.harbour-project.org
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+> 
+
+From harbourtalk@lists.harbour-project.org  Tue Dec  5 18:04:28 2000
+From: harbourtalk@lists.harbour-project.org (Dave Pearson)
+Date: Tue, 5 Dec 2000 18:04:28 +0000
+Subject: [HarbourTalk] Do me a favor...
+In-Reply-To: <001a01c05ed2$c1190780$3c01a8c0@creation>; from fcoury@creation.com.br on Tue, Dec 05, 2000 at 12:48:03PM -0300
+References: <001a01c05ed2$c1190780$3c01a8c0@creation>
+Message-ID: <20001205180428.N6233@hagbard.davep.org>
+
+On Tue, Dec 05, 2000 at 12:48:03PM -0300, Felipe G. Coury wrote:
+> People,
+> 
+> I need feedback on what you see when you try to access:
+> 
+> o http://www.bodysystems.com.br/teste/body1.swf
+> o http://www.bodysystems.com.br/teste/body2.swf
+> o http://www.bodysystems.com.br/teste2 
+> 
+> There's some costumers complaining about this websites.
+
+I'm getting nothing, it would appear, from where I'm sat, that the server
+for that site isn't responding.
+
+What sorts of complaints are you getting and what are you hoping people can
+test for you?
+
+-- 
+The Harbour Project: A free software Clipper compatible compiler
+Home Page..........: http://www.harbour-project.org/
+FAQ................: http://www.harbour-project.org/faq/harbour.html
+My harbour page....: http://www.hagbard.demon.co.uk/harbour/
+
+From harbourtalk@lists.harbour-project.org  Tue Dec  5 07:06:45 2000
+From: harbourtalk@lists.harbour-project.org (David G. Holm)
+Date: Tue, 5 Dec 2000 02:06:45 -0500
+Subject: [HarbourTalk] Do me a favor...
+In-Reply-To: <001a01c05ed2$c1190780$3c01a8c0@creation>
+Message-ID: <200012052100.eB5L0pq28840@thor.parrett.net>
+
+** Reply to message from "Felipe G. Coury" <fcoury@creation.com.br> on
+Tue, 5 Dec 2000 12:48:03 -0300
+
+To see what I saw, visit http://www.jsd0.com/test/ (you *must* include
+the "/" after "test") where you will find site3.gif (for teste2),
+site2.gif (for body2.swf), and site1.gif (for body1.swf). The files are
+75% quality JPEG images captured from NS 4.7. Things didn't look any
+better with IE 5.5...
+
+> I need feedback on what you see when you try to access:
+> 
+> o http://www.bodysystems.com.br/teste/body1.swf
+> o http://www.bodysystems.com.br/teste/body2.swf
+> o http://www.bodysystems.com.br/teste2 
+> 
+> There's some costumers complaining about this websites.
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
+From harbourtalk@lists.harbour-project.org  Tue Dec  5 22:10:52 2000
+From: harbourtalk@lists.harbour-project.org (Felipe G. Coury)
+Date: Tue, 5 Dec 2000 19:10:52 -0300
+Subject: [HarbourTalk] Do me a favor...
+References: <200012052100.eB5L0pq28840@thor.parrett.net>
+Message-ID: <035c01c05f08$3bfc6e30$3c01a8c0@creation>
+
+> To see what I saw, visit http://www.jsd0.com/test/ (you *must* include
+> the "/" after "test") where you will find site3.gif (for teste2),
+> site2.gif (for body2.swf), and site1.gif (for body1.swf). The files are
+> 75% quality JPEG images captured from NS 4.7. Things didn't look any
+> better with IE 5.5...
+Thanks a lot David and all of you! Really!
+
+Best regards,
+
+Felipe G. Coury
+Gerente de Desenvolvimento
+Creation Internet Business
+http://www.creation.com.br
+
+--------------------------------------------
+Visite o GuiaBrasil.Net:
+http://www.guiabrasil.net
+--------------------------------------------
+
+
+
+From harbourtalk@lists.harbour-project.org  Wed Dec  6 06:32:23 2000
+From: harbourtalk@lists.harbour-project.org (Chen Kedem)
+Date: Wed, 06 Dec 2000 08:32:23 +0200
+Subject: [HarbourTalk] Re: Do me a favor...
+References: <200012051657.SAA03195@post-office.synel>
+Message-ID: <3A2DDD77.7C0E@synel.co.il>
+
+Felipe,
+I don't have ShockWave installed on my browser (Netscape 3.04)
+so accessing the two swf files give me a request to save/download
+those files (which is not the point of course).
+as for teste2:
+I get the animated banner at the top,
+the cf.jpg at the bottom left with the green (barrafim.jpg) bar below.
+and 3 places where the ShockWave media should be shown.
+
+  Chen.
+
+From harbourtalk@lists.harbour-project.org  Tue Dec 12 19:51:00 2000
+From: harbourtalk@lists.harbour-project.org (Felipe G. Coury)
+Date: Tue, 12 Dec 2000 16:51:00 -0300
+Subject: [HarbourTalk] Backup solutions
+Message-ID: <00af01c06474$dac436d0$3c01a8c0@creation>
+
+Hi friends,
+
+I would like some advice in softwares that handles data backup to CDR that
+can maybe compress data, do incremental backups and span in many CDRs.
+
+TIA,
+
+Felipe G. Coury
+Gerente de Desenvolvimento
+Creation Internet Business
+http://www.creation.com.br
+
+--------------------------------------------
+Visite o GuiaBrasil.Net:
+http://www.guiabrasil.net
+--------------------------------------------
+
+
+
+From harbourtalk@lists.harbour-project.org  Wed Dec 20 15:51:20 2000
+From: harbourtalk@lists.harbour-project.org (Patrick Mast)
+Date: Wed, 20 Dec 2000 16:51:20 +0100
+Subject: [HarbourTalk] OffTopic. Windows 2000 Active Directory Error
+In-Reply-To: <00af01c06474$dac436d0$3c01a8c0@creation>
+Message-ID: <NCBBJKNMIDPJNLJCHCHIGEFAFLAA.harbour@winfakt.com>
+
+Hi,
+
+I cannot add or remove users anymore... Going to "Start", "Programms",
+"Administration Tools", "Active directory users and computers" Win 2000
+says:
+,--------
+| Naming information cannot be located:
+| The specified domain either does not exists or could not be contacted."
+`--------------------------
+I used Active Directory in the past on that machine... It suddenly stopped
+working.
+
+This is a web server with DNS installed. Can I remove Active Directory?
+
+regards,
+
+Patrick Mast
+www.Patrick.Be.kz
+
+
+From harbourtalk@lists.harbour-project.org  Sat Dec 23 20:55:44 2000
+From: harbourtalk@lists.harbour-project.org (Phil Barnett)
+Date: Sat, 23 Dec 2000 15:55:44 -0500
+Subject: [HarbourTalk] (Fwd) [LeapList] Industry to impose copy protection on all har
+Message-ID: <3A44CB00.6566.D13911C@localhost>
+
+Unbelievable! But it's already in high gear!
+
+------- Forwarded message follows -------
+From:           	fdj <mrlocomojo@yahoo.com>
+To:             	leaplist@lists.leap-cf.org
+Subject:        	[LeapList] Industry to impose copy protection on all hard drives?
+Send reply to:  	leaplist@lists.leap-cf.org
+	<mailto:leaplist-request@lists.leap-cf.org?subject=subscribe>
+	<mailto:leaplist-request@lists.leap-cf.org?subject=unsubscribe>
+Date sent:      	Fri, 22 Dec 2000 20:53:30 -0800 (PST)
+
+[ Double-click this line for list subscription options ] 
+
+fyi - 
+
+	This is pretty frightening, if it comes to fruition. 
+Now the media and software industry is trying to
+control what we write on our own hard drives, and
+breaking interoperability with existing technology
+(raid, backup software, other disks & removable media)
+in the process.
+
+http://www.theregister.co.uk/content/2/15620.html
+
+	It's a link from /.
+
+	I could say something about how this technology would
+aid in protecting proprietary, closed source software
+written with open source tools, but I won't ;)
+
+fdj
+
+__________________________________________________
+Do You Yahoo!?
+Yahoo! Shopping - Thousands of Stores. Millions of Products.
+http://shopping.yahoo.com/
+_______________________________________________
+LeapList mailing list
+LeapList@lists.leap-cf.org
+http://www.matrixlist.com/mailman/listinfo/leaplist
+
+------- End of forwarded message -------
+
+-- 
+              Phil Barnett  mailto:midnight@the-oasis.net
+                       WWW  http://www.the-oasis.net/
+                  FTP Site  ftp://ftp.the-oasis.net
+
+From harbourtalk@lists.harbour-project.org  Sun Dec 24 03:07:53 2000
+From: harbourtalk@lists.harbour-project.org (Alejandro de Garate)
+Date: Sun, 24 Dec 2000 03:07:53
+Subject: [HarbourTalk] LeapList
+Message-ID: <F225R60oVexDAeys8FS00008435@hotmail.com>
+
+Phil:
+This is not new. In the past the Industry try to control software
+through the ID number of every hard disk of the main brands.
+Later came the DAT fiasco in the audio area, and currently the
+delayed massive acceptance of DVD, due to stupid restriction area.
+Seems Industry never learn the lesson.
+Alejandro
+
+PS.
+Merry Christmas and a Happy new Year (Millenium) for everyone
+_________________________________________________________________________
+Get Your Private, Free E-mail from MSN Hotmail at http://www.hotmail.com.
+
+
+From harbourtalk@lists.harbour-project.org  Wed Dec 27 01:52:08 2000
+From: harbourtalk@lists.harbour-project.org (Bill Smith)
+Date: Tue, 26 Dec 2000 17:52:08 -0800
+Subject: [HarbourTalk] (Fwd) [LeapList] Industry to impose copy protection on all har
+References: <3A44CB00.6566.D13911C@localhost>
+Message-ID: <002e01c06fa7$a6a7a4c0$80ccefd1@k6bw>
+
+I think we should charge for this service.  After all, the storage space is
+our property.
+
+Bill
+
+----- Original Message -----
+From: "Phil Barnett" <midnight@the-oasis.net>
+To: <harbourtalk@lists.harbour-project.org>
+Sent: Saturday, December 23, 2000 12:55 PM
+Subject: [HarbourTalk] (Fwd) [LeapList] Industry to impose copy protection
+on all har
+
+
+>
+> Unbelievable! But it's already in high gear!
+>
+> ------- Forwarded message follows -------
+> From:           fdj <mrlocomojo@yahoo.com>
+> To:             leaplist@lists.leap-cf.org
+> Subject:        [LeapList] Industry to impose copy protection on all hard
+drives?
+> Send reply to:  leaplist@lists.leap-cf.org
+> <mailto:leaplist-request@lists.leap-cf.org?subject=subscribe>
+> <mailto:leaplist-request@lists.leap-cf.org?subject=unsubscribe>
+> Date sent:      Fri, 22 Dec 2000 20:53:30 -0800 (PST)
+>
+> [ Double-click this line for list subscription options ]
+>
+> fyi -
+>
+> This is pretty frightening, if it comes to fruition.
+> Now the media and software industry is trying to
+> control what we write on our own hard drives, and
+> breaking interoperability with existing technology
+> (raid, backup software, other disks & removable media)
+> in the process.
+>
+> http://www.theregister.co.uk/content/2/15620.html
+>
+> It's a link from /.
+>
+> I could say something about how this technology would
+> aid in protecting proprietary, closed source software
+> written with open source tools, but I won't ;)
+>
+> fdj
+>
+> __________________________________________________
+> Do You Yahoo!?
+> Yahoo! Shopping - Thousands of Stores. Millions of Products.
+> http://shopping.yahoo.com/
+> _______________________________________________
+> LeapList mailing list
+> LeapList@lists.leap-cf.org
+> http://www.matrixlist.com/mailman/listinfo/leaplist
+>
+> ------- End of forwarded message -------
+>
+> --
+>               Phil Barnett  mailto:midnight@the-oasis.net
+>                        WWW  http://www.the-oasis.net/
+>                   FTP Site  ftp://ftp.the-oasis.net
+> _______________________________________________
+> HarbourTalk mailing list
+> HarbourTalk@lists.harbour-project.org
+> http://www.matrixlist.com/mailman/listinfo/harbourtalk
+>
+
+
+From harbourtalk@lists.harbour-project.org  Fri Dec 29 21:13:36 2000
+From: harbourtalk@lists.harbour-project.org (David G. Holm)
+Date: Fri, 29 Dec 2000 16:13:36 -0500
+Subject: [HarbourTalk] Harbour Activity on SourceForge
+Message-ID: <200012292115.eBTLFd227637@thor.parrett.net>
+
+Harbour is the 51st most active project on SourceForge This Week and
+the 49th most active project on SourceForge All Time. That's out of
+13,292 registered projects!
+-- 
+David G. Holm, Set Captain and all around
+Harbour Project Clipper Compatibility fanatic.
+
