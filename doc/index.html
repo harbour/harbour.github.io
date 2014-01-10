@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
 <head>
-<title>Harbour Reference Guide</title>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 </meta>
+<title>Harbour Reference Guide</title>
 <meta name="generator" content="Harbour examples/hbdoc">
 </meta>
 <meta name="keywords" content="Harbour project, Clipper, xBase, database, Free Software, GNU, compiler, cross platform, 32-bit, FiveWin">
@@ -7291,13 +7291,13 @@ minor task).
 iVideo := ft_Adapter()
 DO CASE
 CASE iVideo == 0
-   QOut( &quot;You have a monochrome adapter.&quot; )
+   ? &quot;You have a monochrome adapter.&quot;
 CASE iVideo == 1
-   QOut( &quot;You have a CGA adapter.&quot; )
+   ? &quot;You have a CGA adapter.&quot;
 CASE iVideo == 2
-   QOut( &quot;You have an EGA adapter.&quot; )
+   ? &quot;You have an EGA adapter.&quot;
 CASE iVideo == 3
-   QOut( &quot;You have a VGA adapter.&quot; )
+   ? &quot;You have a VGA adapter.&quot;
 ENDCASE
 </pre>
 <div class="itemtitle">See also</div>
@@ -8785,7 +8785,7 @@ ft_ClrSel()
 </h4>
 </div>
 <div class="oneliner">
-User Selectable Colour Routine
+User Selectable Color Routine
 <br />
 </div>
 <div class="itemtitle">Syntax</div>
@@ -8799,7 +8799,7 @@ ft_ClrSel( &lt;aClrData&gt;, [ &lt;lClrMode&gt; ], [ &lt;cTestChr&gt; ]  -&gt; a
 <br />
 </div>
 <div class="itemtext">
-information about the colour settings.
+information about the color settings.
 <br />
 </div>
 <div class="itemtext">
@@ -8807,7 +8807,7 @@ The subarray has the following structure:
 <br />
 </div>
 <div class="itemtext">
-[1]  cName    is the name of this colour setting i.e. &quot;Pick List&quot;
+[1]  cName    is the name of this color setting i.e. &quot;Pick List&quot;
 <br />
 </div>
 <div class="itemtext">
@@ -8815,7 +8815,7 @@ Maximum length is 20 bytes
 <br />
 </div>
 <div class="itemtext">
-[2]  cClrStr  is the current colour string
+[2]  cClrStr  is the current color string
 <br />
 </div>
 <div class="itemtext">
@@ -8823,12 +8823,12 @@ Default is &quot;W/N,N/W,N/N,N/N,N/W&quot;
 <br />
 </div>
 <div class="itemtext">
-If Setting type is &quot;M&quot; (Menu) the colours are...
+If Setting type is &quot;M&quot; (Menu) the colors are...
 <br />
 </div>
 <div class="itemtext">
-1.  Prompt Colour 2.  Message Colour 3.  HotKey Colour 4.  LightBar
-Colour 5.  LightBar HotKey Colour
+1.  Prompt Color 2.  Message Color 3.  HotKey Color 4.  LightBar
+Color 5.  LightBar HotKey Color
 <br />
 </div>
 <div class="itemtext">
@@ -8836,8 +8836,8 @@ Note: While there are many ways to code the individual
 <br />
 </div>
 <div class="itemtext">
-colour combinations,  they should be in the same format that gets
-returned from SetColor(), so the defaults can be found in the colour
+color combinations,  they should be in the same format that gets
+returned from SetColor(), so the defaults can be found in the color
 palette.
 <br />
 </div>
@@ -8846,7 +8846,7 @@ foreground [+] / background [*] i.e. &quot;GR+/BG*, N/W*, N+/N, , W/N&quot;
 <br />
 </div>
 <div class="itemtext">
-[3]  cType  is the type of colour setting
+[3]  cType  is the type of color setting
 <br />
 </div>
 <div class="itemtext">
@@ -8854,8 +8854,8 @@ Default is &quot;W&quot; (Window)
 <br />
 </div>
 <div class="itemtext">
-T = Title     Only 1 colour element D = Desktop   Background colour
-and character M = Menu      For ft_MenuTo() style menus W = Window   
+T = Title     Only 1 color element D = Desktop   Background color and
+character M = Menu      For ft_MenuTo() style menus W = Window   
 Windows with radio buttons G = Get       For use with @ SAY... B =
 Browse    For TBrowse() and *dbEdit() A = aChoice   Pick-lists etc...
 <br />
@@ -8874,7 +8874,7 @@ Default is &quot;▒▒▒▒▒▒▒▒▒▒▒▒▒▒&quot;
 <br />
 </div>
 <div class="itemtext">
-&lt;lClrMode&gt;   .T.  use colour palette
+&lt;lClrMode&gt;   .T.  use color palette
 <br />
 </div>
 <div class="itemtext">
@@ -8886,7 +8886,7 @@ Default is the IsColor() setting
 <br />
 </div>
 <div class="itemtext">
-&lt;cTestChr&gt;  2 Byte character string for colour test display
+&lt;cTestChr&gt;  2 Byte character string for color test display
 <br />
 </div>
 <div class="itemtext">
@@ -8895,23 +8895,23 @@ Default is &quot;■■&quot;
 </div>
 <div class="itemtitle">Returns</div>
 <div class="itemtext">
-An array identical to the one passed, with new selected colours
+An array identical to the one passed, with new selected colors
 <br />
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-This function allows users to select their own colour combinations
-for all the different types of screen I/O in a typical application.
-This facilitates an easy implementation of Ted Means' replacement of
-the  @..PROMPT/MENU TO found in the NanForum Toolkit.  If you are not
+This function allows users to select their own color combinations for
+all the different types of screen I/O in a typical application. This
+facilitates an easy implementation of Ted Means' replacement of the 
+@..PROMPT/MENU TO found in the NanForum Toolkit.  If you are not
 using ft_MenuTo(), you can specify &quot;A&quot; for setting type and have a
-normal colour string returned.
+normal color string returned.
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-LOCAL aClrs   := {}
-LOCAL lColour := IsColor()
+LOCAL aClrs  := {}
+LOCAL lColor := IsColor()
 SET SCOREBOARD OFF
 SetBlink( .F. )       // Allow bright backgrounds
 // .... a typical application might have the following different settings
@@ -8927,7 +8927,7 @@ aClrs := { ;
    { &quot;Error Messages&quot;, &quot;W+/R*,N/GR*,,,N/R*&quot;,            &quot;W&quot;      }, ;
    { &quot;Database Query&quot;, &quot;N/BG, N/GR*,,,N+/BG&quot;,           &quot;B&quot;      }, ;
    { &quot;Pick List&quot;,      &quot;N/GR*,W+/B,,, BG/GR*&quot;,          &quot;A&quot;      } }
-aClrs := ft_ClrSel( aClrs, lColour )
+aClrs := ft_ClrSel( aClrs, lColor )
 </pre>
 <div id="ft_color2n">
 <h4>
@@ -9388,7 +9388,7 @@ Useful any time you need to know or change the default drive.
 cDrive := ft_Default()  // Get the current drive
 ft_Default( &quot;C&quot; )       // Switch to drive C
 IF !( ft_Default( &quot;E&quot; ) == &quot;E&quot; )
-   QOut( &quot;Drive E does not exist!&quot; )
+   ? &quot;Drive E does not exist!&quot;
 ENDIF
 </pre>
 <div id="ft_descend">
@@ -11207,7 +11207,7 @@ Press)
 <pre class="examples">
 PROCEDURE Main( cMode )
    ft_SetMode( Val( cMode ) )
-   ? &quot;Video mode is: &quot; + Str( ft_GetMode() )
+   ? &quot;Video mode is:&quot;, ft_GetMode()
    RETURN
 </pre>
 <div id="ft_getvcur">
@@ -11261,7 +11261,7 @@ Video Systems_ (Microsoft Press).
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 aCurInfo := getVCur( 1 )    // Get info on cursor pos in page 1
-? &quot;Row: &quot; + Str( aCurInfo[ 3 ] ) + &quot;  Col: &quot; + Str( aCurInfo[ 4 ] )
+? &quot;Row:&quot;, aCurInfo[ 3 ], &quot; Col:&quot;, aCurInfo[ 4 ]
 </pre>
 <div id="ft_getvpg">
 <h4>
@@ -13304,7 +13304,7 @@ The behavior is undefined if no shell is loaded.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? &quot;Logical station: &quot; + Str( ft_NWLStat() )
+? &quot;Logical station:&quot;, ft_NWLStat()
 </pre>
 <div id="ft_nwsemclose">
 <h4>
@@ -13348,7 +13348,7 @@ semaphore is deleted by NetWare.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? &quot;Close returns:  &quot; + Str( ft_NWSemClose( nHandle ) )
+? &quot;Close returns:&quot;, ft_NWSemClose( nHandle )
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -13420,7 +13420,7 @@ ft_NWSemOpen( &quot;Semaphore Test&quot;, nInitVal, @nHandle, @nOpenCnt )
 nRc := ft_NWSemWait( nHandle )
 IF nRc == 254
    ? &quot;All slots for this resource are currently in use&quot;
-   QUIT
+   RETURN
 ENDIF
 ft_NWSemEx( nHandle, @nValue, @nOpenCnt )
 ? &quot;Semaphore test -&gt; Open at [&quot; + ;
@@ -13637,8 +13637,8 @@ nInitVal := 2
 nRc      := ft_NWSemOpen( &quot;Semaphore Test&quot;, nInitVal, ;
                           @nHandle, @nOpenCnt )
 IF nRc != 0
-   ? &quot;Error: &quot; + Str( nRc )
-   QUIT
+   ? &quot;Error:&quot;, nRc
+   RETURN
 ENDIF
 </pre>
 <div class="itemtitle">See also</div>
@@ -13693,7 +13693,7 @@ For more information, see the description under ft_NWSemOpen().
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? &quot;Signal returns: &quot; + Str( ft_NWSemSig( nHandle ) )
+? &quot;Signal returns:&quot;, ft_NWSemSig( nHandle )
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -13808,7 +13808,7 @@ ft_NWSemOpen( &quot;Semaphore Test&quot;, nInitVal, @nHandle, @nOpenCnt )
 nRc := ft_NWSemWait( nHandle )
 IF nRc == 254
    ? &quot;All slots for this resource are currently in use&quot;
-   QUIT
+   RETURN
 ENDIF
 </pre>
 <div class="itemtitle">See also</div>
@@ -13977,10 +13977,9 @@ you need to.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-cMyFile := ft_Origin()
-IF !( cMyFile == &quot;C:\appdir\myfile.exe&quot; )
+IF !( ft_Origin() == &quot;C:\appdir\myfile.exe&quot; )
    ? &quot;Incorrect startup file.  Please remove/rename and start again&quot;
-   QUIT
+   RETURN
 ENDIF
 </pre>
 <div id="ft_pchr">
@@ -14342,7 +14341,7 @@ enhanced) by Robert DiFalco.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 PROCEDURE Main( cStr )
-   OutStd( ft_Proper( cStr ) + hb_eol() )
+   ? ft_Proper( cStr )
    RETURN
 </pre>
 <div id="ft_prtscr">
@@ -15733,7 +15732,7 @@ PC_ (Brady).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? &quot;Conventional memory installed: &quot; + Str( ft_SysMem() ) + &quot;K&quot;
+? &quot;Conventional memory installed: &quot; + hb_ntos( ft_SysMem() ) + &quot;K&quot;
 </pre>
 <div id="ft_tempfil">
 <h4>
@@ -21403,12 +21402,10 @@ PROCEDURE Main( cFile )
    LOCAL oFile := TFileRead():New( cFile )
    oFile:Open()
    IF oFile:Error()
-      OutStd( oFile:ErrorMsg( &quot;FileRead: &quot; ) )
-      OutStd( hb_eol() )
+      ? oFile:ErrorMsg( &quot;FileRead:&quot; )
    ELSE
       DO WHILE oFile:MoreToRead()
-         OutStd( oFile:ReadLine() )
-         OutStd( hb_eol() )
+         ? oFile:ReadLine()
       ENDDO
       oFile:Close()
    ENDIF
@@ -24275,11 +24272,11 @@ by the ADS server.
 <br />
 </div>
 <div class="itemtext">
-             every 2 seconds while indexing.
+           every 2 seconds while indexing.
 <br />
 </div>
 <div class="itemtext">
-             The codeblock can return .T. to abort.   */
+           The codeblock can return .T. to abort. */
 <br />
 </div>
 <div class="itemtext">
@@ -24295,7 +24292,8 @@ by the ADS server.
 <br />
 </div>
 <div class="itemtext">
-     FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
+     STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot;
+function */
 <br />
 </div>
 <div class="itemtext">
@@ -24303,11 +24301,8 @@ by the ADS server.
 <br />
 </div>
 <div class="itemtext">
-        RETURN Inkey() == K_ESC
-<br />
-</div>
-<div class="itemtext">
-        /*  If press ESC, returns .T. to abort.   */
+        RETURN Inkey() == K_ESC  /* If press ESC, returns .T. to
+abort. */
 <br />
 </div>
 <div class="itemtext">
@@ -26945,8 +26940,8 @@ written to the file. To truncate a file, a call of FWrite( nHandle,
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 nHandle := FCreate( &quot;test.txt&quot; )
-FOR X := 1 TO 10
-   FWrite( nHandle, Str( x ) )
+FOR x := 1 TO 10
+   FWrite( nHandle, hb_ntos( x ) )
 NEXT
 FClose( nHandle )
 </pre>
@@ -29719,7 +29714,7 @@ used into hb_inetConnectIP().
 <br />
 </div>
 <div class="itemtext">
-cName can be any string: valid DNS names (eg. &quot;www.myserver.com&quot;),
+cName can be any string: valid DNS names (eg. &quot;www.example.com&quot;),
 locally available names (e.g. &quot;localhost&quot; or windows Network
 Neighborhood names), or even IP addresses in quad dot notation.
 <br />
@@ -32438,11 +32433,11 @@ module strings are automatically converted by Harbour.
 <br />
 </div>
 <div class="itemtext">
-    Chinese Simplified    zh_sim
+    Chinese Traditional   zh
 <br />
 </div>
 <div class="itemtext">
-    Chinese Traditional   zh_tra
+    Chinese Simplified    zh_sim
 <br />
 </div>
 <div class="itemtext">
@@ -35127,8 +35122,8 @@ second expression, the function will return 0.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? 'At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) = ' + ;
-   Str( At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) )    // 3
+? 'At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) =',
+   At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; )    // 3
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -35269,10 +35264,10 @@ parameters lets you indicate a starting and end offset to search in.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? 'hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) = ' + ;
-   Str( hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) )       // 3
-? 'hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) = ' + ;
-   Str( hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot;, 4 ) )    // 0
+? 'hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) =',
+   hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; )       // 3
+? 'hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) =',
+   hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot;, 4 )    // 0
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -35426,7 +35421,7 @@ hb_MemoWrit( &lt;cFileName&gt;, &lt;cString&gt;, [&lt;lWriteEof&gt;] ) --&gt; lS
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;cFileName&gt; is the filename to read from disk.
+&lt;cFileName&gt; is the filename to be written to disk.
 <br />
 </div>
 <div class="itemtext">
@@ -36349,7 +36344,7 @@ MemoWrit( &lt;cFileName&gt;, &lt;cString&gt; ) --&gt; lSuccess
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;cFileName&gt; is the filename to read from disk.
+&lt;cFileName&gt; is the filename to be written to disk.
 <br />
 </div>
 <div class="itemtext">
@@ -36837,7 +36832,7 @@ It is equivalent to the following expressions:
 <br />
 </div>
 <div class="itemtext">
-SubStr( &lt;cString&gt;,  - &lt;nLen&gt; )
+SubStr( &lt;cString&gt;, -&lt;nLen&gt; )
 <br />
 </div>
 <div class="itemtext">
@@ -38519,11 +38514,11 @@ New()                 Create a new instance of the class
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-FUNCTION TestObject()
+PROCEDURE TestObject()
    LOCAL oObject
    oObject := HBClass():New( &quot;TMyClass&quot; )
    oObject:End()
-   RETURN NIL
+   RETURN
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -43982,7 +43977,7 @@ PROCEDURE Main()
    USE test NEW
    ? &quot;Is Bof()&quot;, Bof()
    dbGoTop()
-   WHILE ! Bof()
+   DO WHILE ! Bof()
       dbSkip( -1 )
    ENDDO
    ? &quot;Is Bof()&quot;, Bof()
@@ -44285,7 +44280,7 @@ PROCEDURE Main()
    READ
    //
    IF Updated()
-      APPEND BLANK
+      dbAppend()
       REPLACE tests-&gt;Name WITH cName
       REPLACE tests-&gt;Id WITH nId
       tests-&gt;( dbCommit() )
@@ -44345,11 +44340,11 @@ PROCEDURE Main()
    READ
    //
    IF Updated()
-      APPEND BLANK
+      dbAppend()
       REPLACE tests-&gt;Name WITH cName
       REPLACE tests-&gt;Id WITH nId
       IF ! testid-&gt;( dbSeek( nId ) )
-         APPEND BLANK
+         dbAppend()
          REPLACE tests-&gt;Id WITH nId
       ENDIF
    ENDIF
@@ -45432,7 +45427,7 @@ dbStruct() returns an array pointer to database structure
 <div class="itemtext">
 This function returns a multidimensional array. This array has array
 pointers to other arrays, each of which contains the characteristic
-of a field in the active work area. The lenght of this array is based
+of a field in the active work area. The length of this array is based
 in the number of fields in that particular work area. In other words,
 Len(dbStruct()) is equal to the value obtained from FCount(). Each
 subscript position
@@ -45831,7 +45826,7 @@ PROCEDURE Main()
    dbGoTop()
    ? &quot;Is Eof()&quot;, Eof()
    dbGoBottom()
-   WHILE ! Eof()
+   DO WHILE ! Eof()
       dbSkip()
    ENDDO
    ? &quot;Is Eof()&quot;, Eof()
@@ -46676,11 +46671,11 @@ function.
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-This function return a logical true (.T.) is a USE, APPEND BLANK, or
-a USE...EXCLUSIVE command is issue and fails in a network environment.
+This function return a logical true (.T.) is a USE, dbAppend(), or a
+USE...EXCLUSIVE command is issue and fails in a network environment.
 In the case of USE and USE...EXCLUSIVE commands, a NetErr() value
 of .T. would be returned if another node of the network has the
-exclusive use of a file. And the case of the APPEND BLANK command,
+exclusive use of a file. And the case of the dbAppend() command,
 NetErr() will return a logical true (.T.) if the file or record is
 locked by another node or the value of LastRec() has been advanced
 The value of NetErr() may be changed via the value of &lt;lNewError&gt;.
@@ -52611,11 +52606,11 @@ On compile time this command is translated into __Eject() function.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE Clientes NEW
+USE clients NEW
 SET DEVICE TO PRINTER
 CurPos := 0
-WHILE ! Eof()
-   ? Clientes-&gt;nome, Clientes-&gt;endereco
+DO WHILE ! Eof()
+   ? clients-&gt;NAME, clients-&gt;ADDRESS
    Curpos++
    IF Curpos &gt; 59
       Curpos := 0
@@ -53700,22 +53695,22 @@ compile time and use this mode.
 // CREATE a new structure extended file, append some records and
 // then CREATE FROM this file a new database file
 CREATE template
-APPEND BLANK
+dbAppend()
 FIELD-&gt;FIELD_NAME := &quot;CHANNEL&quot;
 FIELD-&gt;FIELD_TYPE := &quot;N&quot;
 FIELD-&gt;FIELD_LEN  := 2
 FIELD-&gt;FIELD_DEC  := 0
-APPEND BLANK
+dbAppend()
 FIELD-&gt;FIELD_NAME := &quot;PROGRAM&quot;
 FIELD-&gt;FIELD_TYPE := &quot;C&quot;
 FIELD-&gt;FIELD_LEN  := 20
 FIELD-&gt;FIELD_DEC  := 0
-APPEND BLANK
+dbAppend()
 FIELD-&gt;FIELD_NAME := &quot;REVIEW&quot;
 FIELD-&gt;FIELD_TYPE := &quot;C&quot;      // this field is 1000 char long
 FIELD-&gt;FIELD_LEN  := 232      // 1000 % 256 = 232
 FIELD-&gt;FIELD_DEC  := 3        // 1000 / 256 = 3
-CLOSE
+dbCloseArea()
 CREATE TV_Guide FROM template
 </pre>
 <div class="itemtitle">Status</div>
