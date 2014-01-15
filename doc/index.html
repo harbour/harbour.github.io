@@ -6836,10 +6836,10 @@ This routine requires ft_ASum().
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ft_AAvg( aSubTotals )          // Get Average of Entire Array
-ft_AAvg( aSubTotals, 5 )       // Get Average of 5th Element On
-ft_AAvg( aSubTotals, , 10 )    // Get Average of 1st 10 Elements
-ft_AAvg( aSubTotals, 5, 10 )   // Get Average of Elements 5-10
+? ft_AAvg( aSubTotals )          // Get Average of Entire Array
+? ft_AAvg( aSubTotals, 5 )       // Get Average of 5th Element On
+? ft_AAvg( aSubTotals, , 10 )    // Get Average of 1st 10 Elements
+? ft_AAvg( aSubTotals, 5, 10 )   // Get Average of Elements 5-10
 </pre>
 <div id="ft_acctadj">
 <h4>
@@ -6874,7 +6874,7 @@ An adjusted date dependent upon mode and work week start day.
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-Called by other FT_ACCT.. functions. The algorithm is:
+Called by other ft_Acct*() functions. The algorithm is:
 <br />
 </div>
 <div class="itemtext">
@@ -7005,15 +7005,15 @@ the year will contain 53 weeks.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-// get info about accounting month containing 9/15/90
+// get info about accounting month containing 1990-09-15
 aDateInfo := ft_AcctMonth( hb_SToD( &quot;19900915&quot; ) )
 ? aDateInfo[ 1 ]   //  199009       (9th month)
 ? aDateInfo[ 2 ]   //  1990-09-02   beginning of month 9
 ? aDateInfo[ 3 ]   //  1990-09-29   end of month 9
-// get info about accounting month 5 in year containing 9/15/90
+// get info about accounting month 5 in year containing 1990-09-15
 aDateInfo := ft_AcctMonth( hb_SToD( &quot;19900915&quot; ), 5 )
 ? aDateInfo[ 1 ]   //  199005
-? aDateInfo[ 2 ]   //  1989-04-29   beginning of month 5
+? aDateInfo[ 2 ]   //  1990-04-29   beginning of month 5
 ? aDateInfo[ 3 ]   //  1990-06-02   end of month 5
 </pre>
 <div class="itemtitle">See also</div>
@@ -7083,12 +7083,12 @@ the year will contain 53 weeks.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-// get info about accounting month containing 9/15/90
+// get info about accounting month containing 1990-09-15
 aDateInfo := ft_AcctQtr( hb_SToD( &quot;19900915&quot; ) )
 ? aDateInfo[ 1 ]   //  199003       (3rd quarter)
 ? aDateInfo[ 2 ]   //  1990-07-01   beginning of quarter 3
 ? aDateInfo[ 3 ]   //  1990-09-29   end of quarter 3
-// get info about accounting qtr. 2 in year containing 9/15/90
+// get info about accounting qtr. 2 in year containing 1990-09-15
 aDateInfo := ft_AcctQtr( hb_SToD( &quot;19900915&quot; ), 2 )
 ? aDateInfo[ 1 ]   //  199002
 ? aDateInfo[ 2 ]   //  1989-04-01   beginning of quarter 2
@@ -7161,12 +7161,12 @@ the year will contain 53 weeks.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-// get info about accounting week containing 9/15/90
+// get info about accounting week containing 1990-09-15
 aDateInfo := ft_AcctWeek( hb_SToD( &quot;19900915&quot; ) )
 ? aDateInfo[ 1 ]   //  199037       (37th week)
 ? aDateInfo[ 2 ]   //  1990-09-09   beginning of week 37
 ? aDateInfo[ 3 ]   //  1990-09-15   end of week 37
-// get info about accounting week 25 in year containing 9/15/90
+// get info about accounting week 25 in year containing 1990-09-15
 aDateInfo := ft_AcctWeek( hb_SToD( &quot;19900915&quot; ), 25 )
 ? aDateInfo[ 1 ]   //  199025
 ? aDateInfo[ 2 ]   //  1989-06-17   beginning of week 25
@@ -7234,7 +7234,7 @@ the year will contain 53 weeks.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-// get info about accounting year containing 9/15/90
+// get info about accounting year containing 1990-09-15
 aDateInfo := ft_AcctYear( hb_SToD( &quot;19900915&quot; ) )
 ? aDateInfo[ 1 ]   //  1990
 ? aDateInfo[ 2 ]   //  1989-12-31    beginning of year
@@ -7368,7 +7368,7 @@ him.
 // Postdate 5 working days from the first of January
 dPost := hb_SToD( &quot;19910101&quot; )
 dPost += ft_AddWkDy( dPost, 5 )   // returns 7 true days
-? dPost                           //  1991-01-08
+? dPost                           // 1991-01-08
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -7482,14 +7482,11 @@ return the longest element.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ft_AEMaxLen( aArray )          // Measure the 1st dimension of an Array
-ft_AEMaxLen( aArray, 2 )       // Measure the 2nd dimension of an Array
-ft_AEMaxLen( aArray, 2, , 9 )  // Measure Elements 1-9 of the
-                               // 2nd dimension or subarray
-ft_AEMaxLen( aArray, 3, 5, 9 ) // Measure Elements 5-9 of the
-                               // 3rd dimension or subarray
-ft_AEMaxLen( aArray, 3, 5 )    // Measure Elements 5 to last in the
-                               // 3rd dimension or subarray
+? ft_AEMaxLen( aArray )          // Measure the 1st dimension of an Array
+? ft_AEMaxLen( aArray, 2 )       // Measure the 2nd dimension of an Array
+? ft_AEMaxLen( aArray, 2, , 9 )  // Measure Elements 1-9 of the 2nd dimension or subarray
+? ft_AEMaxLen( aArray, 3, 5, 9 ) // Measure Elements 5-9 of the 3rd dimension or subarray
+? ft_AEMaxLen( aArray, 3, 5 )    // Measure Elements 5 to last in the 3rd dimension or subarray
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -7556,11 +7553,11 @@ return the shortest element.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ft_AEMinLen( aArray )          // Measure the 1st dimension of an Array
-ft_AEMinLen( aArray, 2 )       // Measure the 2nd dimension of an Array
-ft_AEMinLen( aArray, 2, , 9 )  // Measure Elements 1-9 of 2nd dimension
-ft_AEMinLen( aArray, 3, 5, 9 ) // Measure Elements 5-9 of 3rd dimension
-ft_AEMinLen( aArray, 3, 5 )    // Measure Elements 5 to end of 3rd dimension
+? ft_AEMinLen( aArray )          // Measure the 1st dimension of an Array
+? ft_AEMinLen( aArray, 2 )       // Measure the 2nd dimension of an Array
+? ft_AEMinLen( aArray, 2, , 9 )  // Measure Elements 1-9 of 2nd dimension
+? ft_AEMinLen( aArray, 3, 5, 9 ) // Measure Elements 5-9 of 3rd dimension
+? ft_AEMinLen( aArray, 3, 5 )    // Measure Elements 5 to end of 3rd dimension
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -7600,9 +7597,9 @@ Alt key is pressed, such as during a MemoEdit().
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 IF ft_Alt()
-   @ 24, 0 SAY &quot;Alt&quot;
+   @ 0, 0 SAY &quot;Alt&quot;
 ELSE
-   @ 24, 0 SAY &quot;   &quot;
+   @ 0, 0 SAY &quot;   &quot;
 ENDIF
 </pre>
 <div class="itemtitle">See also</div>
@@ -7659,10 +7656,10 @@ extreme values in the set.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ft_AMedian( aArray )        // Return Median for entire array
-ft_AMedian( aArray, 2 )     // Return Median for elements from 2 to end
-ft_AMedian( aArray, , 9 )   // Return Median for 1st 9 elements
-ft_AMedian( aArray, 8, 40 ) // Return Median for elements 8 to 40
+? ft_AMedian( aArray )        // Return Median for entire array
+? ft_AMedian( aArray, 2 )     // Return Median for elements from 2 to end
+? ft_AMedian( aArray, , 9 )   // Return Median for 1st 9 elements
+? ft_AMedian( aArray, 8, 40 ) // Return Median for elements 8 to 40
 </pre>
 <div id="ft_anomatches">
 <h4>
@@ -7719,13 +7716,13 @@ value.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // Search the Entire Array
-ft_ANoMatches( aTries, {| x | x &lt;= 100 } )
+? ft_ANoMatches( aTries, {| x | x &lt;= 100 } )
 // Search from the 5th Element On
-ft_ANoMatches( aCodes, {| x | Upper( x ) == cCurrentCode }, 5 )
+? ft_ANoMatches( aCodes, {| x | Upper( x ) == cCurrentCode }, 5 )
 // Search the 1st 10 Elements
-ft_ANoMatches( aDates, {| x | IS_BETWEEN( Date() - 7, x, Date() + 7 ) }, 10 )
+? ft_ANoMatches( aDates, {| x | IS_BETWEEN( Date() - 7, x, Date() + 7 ) }, 10 )
 // Search Elements 5-10
-ft_ANoMatches( aNames, {| x | x &lt;= cLastGoodName }, 5, 10 )
+? ft_ANoMatches( aNames, {| x | x &lt;= cLastGoodName }, 5, 10 )
 </pre>
 <div id="ft_aredit">
 <h4>
@@ -7807,7 +7804,7 @@ aHeadings  := { &quot;Numbers&quot;, &quot;Letters&quot;, &quot;Reverse&quot; }
 aBlocks[ 1 ] := {|| Str( ar[ 1, nElem ], 2 ) } // prevent default 10 spaces
 aBlocks[ 2 ] := {|| ar[ 2, nElem ] }
 aBlocks[ 3 ] := {|| ar[ 3, nElem ] }
-// set up TestGet() as the passed Get Function so FT_ArEdit knows how
+// set up TestGet() as the passed Get Function so ft_ArEdit() knows how
 // to edit the individual gets.
 bGetFunc   := {| b, ar, nDim, nElem | TestGet( b, ar, nDim, nElem ) }
 SetColor( &quot;N/W, W/N, , , W/N&quot; )
@@ -7856,10 +7853,10 @@ lengths of a character array.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ft_ASum( aSubTotals )               // Sum the Entire Array
-ft_ASum( aSubTotals, 5 )            // Sum from the 5th Element On
-ft_ASum( aSubTotals, , 10 )         // Sum the 1st 10 Elements
-ft_ASum( aSubTotals, 5, 10 )        // Sum Elements 5-10
+? ft_ASum( aSubTotals )               // Sum the Entire Array
+? ft_ASum( aSubTotals, 5 )            // Sum from the 5th Element On
+? ft_ASum( aSubTotals, , 10 )         // Sum the 1st 10 Elements
+? ft_ASum( aSubTotals, 5, 10 )        // Sum Elements 5-10
 </pre>
 <div id="ft_at2">
 <h4>
@@ -7915,9 +7912,9 @@ string.
 <pre class="examples">
 cSearch := &quot;t&quot;
 cTarget := &quot;This is the day that the Lord has made.&quot;
-ft_At2( cSearch, cTarget )            // Returns ( 9 )
-ft_At2( cSearch, cTarget, 2 )         // Returns ( 17 )
-ft_At2( cSearch, cTarget, 2, .F. )    // Returns ( 9 )
+? ft_At2( cSearch, cTarget )            // Returns 9
+? ft_At2( cSearch, cTarget, 2 )         // Returns 17
+? ft_At2( cSearch, cTarget, 2, .F. )    // Returns 9
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -7975,8 +7972,7 @@ cNewByte := ft_BitClr( hb_BChar( 115 ), 4 )
 ? hb_BCode( cNewbyte )    // result: 99
 ? cNewByte                // result: &quot;c&quot;
 // This code would clear bit 5 in the byte represented by letter &quot;A&quot;:
-ft_BitClr( &quot;A&quot;, 5 )       // result: &quot;A&quot;, since
-                          // bit 5 already clear
+? ft_BitClr( &quot;A&quot;, 5 )     // result: &quot;A&quot;, since bit 5 already clear
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -8149,7 +8145,7 @@ LOCAL nFreeze    := 1
 LOCAL lSaveScrn  := .T.
 LOCAL cColorList := &quot;N/W, N/BG, B/W, B/BG, B/W, B/BG, R/W, B/R&quot;
 LOCAL cColorShad := &quot;N/N&quot;
-USE TBNames INDEX TBNames NEW // indexed on Last + First
+USE tbnames INDEX tbnames NEW // indexed on Last + First
 // Pass Heading as character and Field as Block including Alias
 // To eliminate the need to use FieldWBlock() function in ft_BrwsWhl()
 AAdd( aFields, { &quot;Last Name&quot; , {|| TBNames-&gt;Last }  } )
@@ -8157,10 +8153,10 @@ AAdd( aFields, { &quot;First Name&quot;, {|| TBNames-&gt;First } } )
 AAdd( aFields, { &quot;City&quot;      , {|| TBNames-&gt;City }  } )
 IF ft_BrwsWhl( aFields, bWhile, cKey, nFreeze, lSaveScrn, ;
    cColorList, cColorShad, 3, 6, MaxRow() - 2, MaxCol() - 6 ) == 0
-   ? &quot;Sorry, NO Records Were Selected&quot;
+   ? &quot;Sorry, No records were selected&quot;
 ELSE
-   ? &quot;You Selected: &quot; + TBNames-&gt;Last + &quot; &quot; + ;
-      TBNames-&gt;First + &quot; &quot; + TBNames-&gt;City
+   ? &quot;You Selected:&quot;, TBNames-&gt;Last, ;
+      TBNames-&gt;First, TBNames-&gt;City
 ENDIF
 </pre>
 <div id="ft_byt2bit">
@@ -8210,8 +8206,7 @@ versions and use the Clipper Extend system.
 // in binary (bit) format.
 ? ft_Byt2Bit( hb_BChar( 20 ) )    // byte1: '0001 0100'
 ? ft_Byt2Bit( hb_BChar( 36 ) )    // byte2: '0010 0100'
-? ft_Byt2Bit( ft_ByteAnd( hb_BChar( 20 ), hb_BChar( 36 ) ) )
-// result: '0000 0100'
+? ft_Byt2Bit( ft_ByteAnd( hb_BChar( 20 ), hb_BChar( 36 ) ) )  // result: '0000 0100'
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -8263,8 +8258,7 @@ versions and use the Clipper Extend system.
 // in hexadecimal format, using 'h' to signify hexadecimal.
 ? ft_Byt2Hex( hb_BChar( 20 ) )    // byte1: '14h'
 ? ft_Byt2Hex( hb_BChar( 36 ) )    // byte2: '24h'
-? ft_Byt2Hex( ft_ByteAnd( hb_BChar( 20 ), hb_BChar( 36 ) ) )
-// result: '04h'
+? ft_Byt2Hex( ft_ByteAnd( hb_BChar( 20 ), hb_BChar( 36 ) ) )  // result: '04h'
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -8728,9 +8722,9 @@ minor task).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ft_ChDir( &quot;C:\harbour&quot; )
-ft_ChDir( hb_ps() )
-ft_ChDir( &quot;..&quot; + hb_ps() + &quot;hbnf&quot; )
+? ft_ChDir( &quot;C:\harbour&quot; )
+? ft_ChDir( hb_ps() )
+? ft_ChDir( &quot;..&quot; + hb_ps() + &quot;hbnf&quot; )
 </pre>
 <div id="ft_civ2mil">
 <h4>
@@ -8767,10 +8761,10 @@ Converts time from 12-hour civilian format to military.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ft_Civ2Mil( &quot; 5:40 pm&quot; ) // 1740
-ft_Civ2Mil( &quot; 5:40 am&quot; ) // 0540
-ft_Civ2Mil( &quot;12:00 n&quot; ) // 1200
-ft_Civ2Mil( &quot;12:00 m&quot; ) // 0000
+? ft_Civ2Mil( &quot; 5:40 pm&quot; ) // 1740
+? ft_Civ2Mil( &quot; 5:40 am&quot; ) // 0540
+? ft_Civ2Mil( &quot;12:00 n&quot; )  // 1200
+? ft_Civ2Mil( &quot;12:00 m&quot; )  // 0000
 // Caution: leading blanks are irrelevant; p,a,n,m must be preceded by
 //          one and only one space.
 </pre>
@@ -9005,9 +8999,9 @@ Ctrl key is pressed, such as during a MemoEdit().
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 IF ft_Ctrl()
-   @ 24, 0 SAY &quot;Ctrl&quot;
+   @ 0, 0 SAY &quot;Ctrl&quot;
 ELSE
-   @ 24, 0 SAY &quot;    &quot;
+   @ 0, 0 SAY &quot;    &quot;
 ENDIF
 </pre>
 <div class="itemtitle">See also</div>
@@ -9074,7 +9068,7 @@ ft_DateCnfg()
 </h4>
 </div>
 <div class="oneliner">
-Set beginning of year/week for FT_ date functions
+Set beginning of year/week for ft_*() date functions
 <br />
 </div>
 <div class="itemtitle">Syntax</div>
@@ -9718,6 +9712,48 @@ ft_DispMsg( { { &quot;Please Do Not Interrupt&quot; }, ;
    { &quot;W+/B&quot;, &quot;GR+/B&quot; } }, ;
    , 5, )
 </pre>
+<div id="ft_dosver">
+<h4>
+ft_DosVer()
+</h4>
+</div>
+<div class="oneliner">
+Return the current DOS major and minor version as a string
+<br />
+</div>
+<div class="itemtitle">Syntax</div>
+<div class="itemtext">
+ft_DosVer() -&gt; &lt;cVersion&gt;
+<br />
+</div>
+<div class="itemtitle">Argument(s)</div>
+<div class="itemtext">
+None
+<br />
+</div>
+<div class="itemtitle">Returns</div>
+<div class="itemtext">
+A character string with the major version number first, a period (&quot;.
+&quot;), then the minor version number (e.g., &quot;3.30&quot;)
+<br />
+</div>
+<div class="itemtitle">Description</div>
+<div class="itemtext">
+ft_DosVer() invokes DOS interrupt 21h, service 30 in order to return
+the current DOS version.  It does this by setting up an array
+corresponding to machine registers and then calling the toolkit
+function ft_int86().
+<br />
+</div>
+<div class="itemtext">
+It returns a character string corresponding to the DOS version, as
+follows:  The major version, a period (&quot;.&quot;), then the minor version.
+<br />
+</div>
+<div class="itemtitle">Example(s)</div>
+<pre class="examples">
+? &quot;OS version:&quot;, ft_DosVer()
+</pre>
 <div id="ft_doy">
 <h4>
 ft_DoY()
@@ -9923,7 +9959,7 @@ when holidays occur.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-dEdate := ft_Easter( 1990 )     // returns 1990-04-15
+? ft_Easter( 1990 )     // returns 1990-04-15
 </pre>
 <div id="ft_elapmin">
 <h4>
@@ -9961,8 +9997,8 @@ Finds the arithmetic difference between time two times (time 2 - time
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ft_ElapMin( &quot;1718&quot;, &quot;2040&quot; ) -&gt;  322
-ft_ElapMin( &quot;2040&quot;, &quot;1718&quot; ) -&gt; -322
+? ft_ElapMin( &quot;1718&quot;, &quot;2040&quot; )  //  202
+? ft_ElapMin( &quot;2040&quot;, &quot;1718&quot; )  // -202
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -10030,7 +10066,7 @@ Total Seconds (nn)
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ft_Elapsed( hb_SToD( &quot;19901128&quot; ), hb_SToD( &quot;19901130&quot; ), &quot;08:00:00&quot;, &quot;12:10:30&quot; )
+ft_Elapsed( 0d19901128, 0d19901130, &quot;08:00:00&quot;, &quot;12:10:30&quot; )
 // will return:
 ? aRetVal[ 1, 1 ] // -&gt;  2 ( Days )        aRetVal[ 1, 2 ] -&gt;    2.1740  Days
 ? aRetVal[ 2, 1 ] // -&gt;  4 ( Hours )       aRetVal[ 2, 2 ] -&gt;   52.1750  Hours
@@ -10077,8 +10113,8 @@ in character hours, minutes and seconds (hh:mm:ss).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ft_ElTime( &quot;22:40:12&quot;, &quot;23:55:17&quot; ) // 01:15:05
-ft_ElTime( &quot;23:55:17&quot;, &quot;22:40:12&quot; ) // 01:15:05
+? ft_ElTime( &quot;22:40:12&quot;, &quot;23:55:17&quot; ) // 01:15:05
+? ft_ElTime( &quot;23:55:17&quot;, &quot;22:40:12&quot; ) // 01:15:05
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -10280,8 +10316,7 @@ supplied.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-dDate := hb_SToD( &quot;19900915&quot; )
-? ft_FDay( dDate )             // 1990-09-01
+? ft_FDay( 0d19900915 )        // 1990-09-01
 ? ft_FDay()                    // 1991-03-01  (current month)
 </pre>
 <div class="itemtitle">See also</div>
@@ -10484,7 +10519,7 @@ another string appears in it.
 // Find the Position in cMemoString of
 // the 10th Occurrence of &quot;the&quot;, case
 // insensitive
-nNextPosition := ft_FindITh( &quot;the&quot;, cMemoString, 10 )
+? ft_FindITh( &quot;the&quot;, cMemoString, 10 )
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -10818,7 +10853,7 @@ TEXT_WORKAREAS in the C source code and recompiling.
 <br />
 </div>
 <div class="itemtext">
-All the FT_F*() file functions operate on the file in the currently
+All the ft_F*() file functions operate on the file in the currently
 selected text file workarea.
 <br />
 </div>
@@ -10908,7 +10943,7 @@ ft_FUse()
 </h4>
 </div>
 <div class="oneliner">
-Open or close a text file for use by the FT_F* functions
+Open or close a text file for use by the ft_F*() functions
 <br />
 </div>
 <div class="itemtitle">Syntax</div>
@@ -10948,7 +10983,7 @@ If a read error occurs ^ft_FError()^n will contain the error code.
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-The FT_F*() file functions are for reading text files, that is, files
+The ft_F*() file functions are for reading text files, that is, files
 where each line (record) is delimited by a CRLF/LF.
 <br />
 </div>
@@ -11168,7 +11203,6 @@ aEnvArray := Array( ft_GetE() )
 ft_GetE( aEnvArray )
 ? aEnvArray[ 1 ]       // &quot;COMSPEC=C:\command.com&quot;
 ? aEnvArray[ 2 ]       // &quot;PATH=C:\;C:\util;C:\harbour&quot;
-... etc ...
 </pre>
 <div id="ft_getmode">
 <h4>
@@ -11339,7 +11373,7 @@ using ft_int86().
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ft_int86( HEX2DEC( &quot;21&quot; ), aRegs )
+ft_int86( ft_Hex2Dex( &quot;21&quot; ), aRegs )
 // Converts 21h, the Dos Interrupt, to its decimal equivalent,
 // 33, for use by ft_int86().
 </pre>
@@ -11383,7 +11417,7 @@ minor task).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-byte := ft_inp( 100 )   // read a byte from port 100 (064h)
+? ft_inp( 100 )   // read a byte from port 100 (064h)
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -11423,7 +11457,7 @@ system that your application is idle.
 <br />
 </div>
 <div class="itemtext">
-Note that if you use this function in conjunction with FT_OnIdle(),
+Note that if you use this function in conjunction with ft_OnIdle(),
 you can cause Clipper to automatically release the CPU whenever
 Clipper itself detects an idle state.
 <br />
@@ -11434,12 +11468,12 @@ DO WHILE Inkey() != K_ESC
    ft_IAmIdle()         // Wait for ESC and announce idleness
 ENDDO
 // Here's another way to do it:
-FT_OnIdle( {|| ft_IAmIdle() } )
+ft_OnIdle( {|| ft_IAmIdle() } )
 Inkey( 0 )              // Automatically reports idleness until key is pressed!
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-FT_OnIdle()
+ft_OnIdle()
 <br />
 </div>
 <div id="ft_invclr">
@@ -11475,8 +11509,8 @@ e.g., &quot;W/N&quot; is converted to &quot;N/W&quot;.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-cInverse := ft_InvClr()            // Get Inverse of Current Color
-cInvErr  := ft_InvClr( cErrColor ) // Get Inverse of cErrorColor
+? ft_InvClr()             // Get Inverse of Current Color
+? ft_InvClr( cErrColor )  // Get Inverse of cErrorColor
 </pre>
 <div id="ft_isbit">
 <h4>
@@ -11759,8 +11793,7 @@ supplied.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-dDate := hb_SToD( &quot;19900915&quot; )
-? ft_LDay( dDate )             // 1990-09-30
+? ft_LDay( 0d19900915 )        // 1990-09-30
 ? ft_LDay()                    // 1991-03-31  (current month)
 </pre>
 <div class="itemtitle">See also</div>
@@ -11823,7 +11856,7 @@ preprocessor will convert it to other function calls.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-cString := &quot;FT_GoodFunc( BadFunc( 3, 2 ) )&quot;
+cString := &quot;ft_GoodFunc( BadFunc( 3, 2 ) )&quot;
 IF ft_Linked( cString )
    Eval( &amp;( &quot;{||&quot; + cString + &quot;}&quot; ) )
 ELSE
@@ -11883,11 +11916,11 @@ the same day as the day of the passed date.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-dDate := hb_SToD( &quot;19900915&quot; )
+dDate := 0d19900915
 ? ft_MAdd( dDate, 1 )        // 1990-10-15
 ? ft_MAdd( dDate, -2 )       // 1990-07-15
 // force EOM
-dDate := hb_SToD( &quot;19910430&quot; )
+dDate := 0d19910430
 ? ft_MAdd( dDate, 1 )        // 1991-05-30
 ? ft_MAdd( dDate, 1, .T. )   // 1991-05-31  &lt;- forced EOM
 ? ft_MAdd( dDate, 2 )        // 1991-06-30
@@ -12182,7 +12215,7 @@ double click.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-IF FT_MISREGION( 10, 10, 11, 20 ) .AND. ;
+IF ft_MIsRegion( 10, 10, 11, 20 ) .AND. ;
    ft_MDblClk( 0, 1,, ft_MGetX(), ft_MGetY() ) // double click, right button
                                                // at current location with
                                                // default interval
@@ -12239,11 +12272,11 @@ forgive shortcomings in spelling ability.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 USE persons
-INDEX ON ft_Metaph( LastName ) TO lastname
+INDEX ON ft_Metaph( LastName ) TO field-&gt;lastname
 SEEK ft_Metaph( &quot;Philmore&quot; )
-? Found(), LastName             // Result: .T. Philmore
+? Found(), field-&gt;LastName       // Result: .T. Philmore
 SEEK ft_Metaph( &quot;Fillmore&quot; )
-? Found(), LastName             // Result: .T. Philmore
+? Found(), field-&gt;LastName       // Result: .T. Philmore
 </pre>
 <div id="ft_mgetcoord">
 <h4>
@@ -12524,11 +12557,11 @@ Converts time from military to civilian format
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ft_Mil2Civ( &quot;1640&quot; ) //  4:40 pm
-ft_Mil2Civ( &quot;0440&quot; ) //  4:40 am
-ft_Mil2Civ( &quot;1200&quot; ) // 12:00 n
-ft_Mil2Civ( &quot;0000&quot; ) // 12:00 m
-ft_Mil2Civ( &quot;2400&quot; ) // 12:00 m
+? ft_Mil2Civ( &quot;1640&quot; ) //  4:40 pm
+? ft_Mil2Civ( &quot;0440&quot; ) //  4:40 am
+? ft_Mil2Civ( &quot;1200&quot; ) // 12:00 n
+? ft_Mil2Civ( &quot;0000&quot; ) // 12:00 m
+? ft_Mil2Civ( &quot;2400&quot; ) // 12:00 m
 Caution:  leading blanks are irrelevant.
 </pre>
 <div class="itemtitle">See also</div>
@@ -12567,7 +12600,7 @@ Converts time in military format to number of minute of the day.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ft_Mil2Min( &quot;1729&quot; ) // 1049
+? ft_Mil2Min( &quot;1729&quot; ) // 1049
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -12614,7 +12647,10 @@ hours &amp; minutes.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-aDHM_ := MIN2DHM( 16789 ) // aDHM_[ 1 ] = 11, aDHM_[ 2 ] = 15, aDHM_[ 3 ] = 49
+aDHM_ := ft_Min2Dhm( 16789 )
+? aDHM_[ 1 ]  // 11
+? aDHM_[ 2 ]  // 15
+? aDHM_[ 3 ]  // 49
 </pre>
 <div id="ft_min2mil">
 <h4>
@@ -12647,7 +12683,7 @@ Converts minute of the day to military format time.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ft_Min2Mil( 279 ) // 0439
+? ft_Min2Mil( 279 ) // 0439
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -12780,9 +12816,9 @@ minor task).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ft_MkDir( &quot;C:\clipper&quot; )
-ft_MkDir( &quot;\example&quot; )
-ft_MkDir( &quot;..\source&quot; )
+? ft_MkDir( &quot;C:\harbour&quot; )
+? ft_MkDir( &quot;\example&quot; )
+? ft_MkDir( &quot;..\source&quot; )
 </pre>
 <div id="ft_month">
 <h4>
@@ -12844,12 +12880,12 @@ January 1 and Sunday by calling ft_DateCnfg() with no parameters.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-// get info about month containing 9/15/90
+// get info about month containing 1990-09-15
 aDateInfo := ft_Month( hb_SToD( &quot;19900915&quot; ) )
 ? aDateInfo[ 1 ]   //  199009       (9th month)
 ? aDateInfo[ 2 ]   //  1990-09-01   beginning of month 9
 ? aDateInfo[ 3 ]   //  1990-09-30   end of week month 9
-// get info about month 5 in year containing 9/15/90
+// get info about month 5 in year containing 1990-09-15
 aDateInfo := ft_Month( hb_SToD( &quot;19900915&quot; ), 5 )
 ? aDateInfo[ 1 ]   //  199005
 ? aDateInfo[ 2 ]   //  1990-05-01   beginning of month 5
@@ -13014,7 +13050,7 @@ string.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-cColor := ft_Color2N( 239 )         // returns &quot;*+w/gr&quot;
+? ft_Color2N( 239 )         // returns &quot;*+w/gr&quot;
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -13082,13 +13118,21 @@ calculate the net present value is:
 <br />
 </div>
 <div class="itemtext">
-NetPresentValue := SUM( CashFlow[ i ] / ( ( 1 + InterestRate ) ** i )
+NetPresentValue := SUM( CashFlow[ i ] / ( ( 1 + InterestRate ) ^ i )
 ) FOR i := 1 TO NoOfCashFlows
+<br />
+</div>
+<div class="itemtext">
+//
+<br />
+</div>
+<div class="itemtext">
+NEXT
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-nNetPresentValue := ft_NetPV( 10000, 10, { 10000, 15000, 16000, 17000 } )
+? ft_NetPV( 10000, 10, { 10000, 15000, 16000, 17000 } )
 </pre>
 <div id="ft_nooccur">
 <h4>
@@ -13105,7 +13149,7 @@ ft_NoOccur( &lt;cCheckFor&gt;, &lt;cCheckIn&gt; ;
 <br />
 </div>
 <div class="itemtext">
-[, &lt;lIgnoreCase&gt; ] )      -&gt; &lt;nOccurrences&gt;
+[, &lt;lIgnoreCase&gt; ] ) -&gt; &lt;nOccurrences&gt;
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -13140,10 +13184,10 @@ second string.
 <pre class="examples">
 // Find the number of times &quot;the&quot; appears in cMemoString, case
 // insensitive
-nNoOfOccurrences := ft_NoOccur( &quot;the&quot;, cMemoString )
+? ft_NoOccur( &quot;the&quot;, cMemoString )
 // Find the number of times &quot;the&quot; appears in cMemoString, case
 // sensitive
-nNoOfOccurrences := ft_NoOccur( &quot;the&quot;, cMemoString, .T. )
+? ft_NoOccur( &quot;the&quot;, cMemoString, .T. )
 </pre>
 <div id="ft_ntow">
 <h4>
@@ -13175,7 +13219,7 @@ Translates numeric input to a text string.
 <br />
 </div>
 <div class="itemtext">
-FT_NTOW is intended to be used with integers only.  Since I don't
+ft_NToW() is intended to be used with integers only.  Since I don't
 know what your application will be, I can't assume the type of
 fraction you want returned (ninety nine cents, 99/100, .99, etc). If
 you want the fraction in words, just pass it as an integer.
@@ -13445,7 +13489,7 @@ Perform a semaphore &quot;lock&quot;
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-FT_NWSEMLOCK ( &lt;cSemaphore&gt;, &lt;@nHandle&gt; ) -&gt; lRet
+ft_NWSemLock( &lt;cSemaphore&gt;, &lt;@nHandle&gt; ) -&gt; lRet
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -13871,11 +13915,11 @@ garbage.  This function has not been tested on NetWare 386.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? &quot;I am: &quot; + ft_NWUID()
+? &quot;I am:&quot;, ft_NWUID()
 FOR x := 1 TO 100
    cUid := ft_NWUID( x )
    IF ! Empty( cUid )
-      ? Str( x, 3 ) + Space( 3 ) + cUid
+      ? Str( x, 3 ), cUid
    ENDIF
 NEXT
 </pre>
@@ -13930,7 +13974,7 @@ minor task).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-lOk := ft_outp( 0x64, 0 )  // send a hb_BChar( 0 ) to port 100 (0x64)
+? ft_outp( 0x64, 0 )  // send a hb_BChar( 0 ) to port 100 (0x64)
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -14160,7 +14204,7 @@ hb_BChar() function to convert it.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-LOCAL nVMode := ft_Peek( 0, 0x449 )  // Get the current video mode (MS-DOS)
+? ft_Peek( 0, 0x449 )  // Get the current video mode (MS-DOS)
 </pre>
 <div id="ft_pickday">
 <h4>
@@ -14193,7 +14237,7 @@ This function is ideal if you need the user to select a day.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-mday := ft_PickDay()
+? ft_PickDay()
 </pre>
 <div id="ft_poke">
 <h4>
@@ -14500,8 +14544,8 @@ and make any other necessary changes to the source code.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 ft_PutKey( -9 )   //  Stuff the F10 key
-ft_PutKey( 276 )  //  Stuff the Alt T key
-KEYSTROKE 28      //  Stuff the F1 key using a User-Defined Command
+ft_PutKey( 276 )  //  Stuff the Alt+T key
+KEYBOARD 28       //  Stuff the F1 key using a User-Defined Command
 </pre>
 <div id="ft_qtr">
 <h4>
@@ -14563,12 +14607,12 @@ January 1 and Sunday by calling ft_DateCnfg() with no parameters.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-// get info about quarter containing 9/15/90
+// get info about quarter containing 1990-09-15
 aDateInfo := ft_Qtr( hb_SToD( &quot;19900915&quot; ) )
 ? aDateInfo[ 1 ]   //  199003       (3rd quarter)
 ? aDateInfo[ 2 ]   //  1990-07-01   beginning of quarter 3
 ? aDateInfo[ 3 ]   //  1990-09-30   end of week quarter 3
-// get info about quarter 2 in year containing 9/15/90
+// get info about quarter 2 in year containing 1990-09-15
 aDateInfo := ft_Qtr( hb_SToD( &quot;19900915&quot; ), 2 )
 ? aDateInfo[ 1 ]   //  199002
 ? aDateInfo[ 2 ]   //  1990-04-01   beginning of quarter 2
@@ -14626,9 +14670,9 @@ should Round() the result.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-nResult := Int( ft_Rand1( 100 ) ) + 1    // 1 &lt;= nResult &lt;= 100
-nResult := Round( ft_Rand1( 100 ), 0 )   // 0 &lt;= nResult &lt;= 100
-nResult := ft_Rand1( 1 )                 // 0 &lt;= nResult &lt; 1
+? Int( ft_Rand1( 100 ) ) + 1    // 1 &lt;= nResult &lt;= 100
+? Round( ft_Rand1( 100 ), 0 )   // 0 &lt;= nResult &lt;= 100
+? ft_Rand1( 1 )                 // 0 &lt;= nResult &lt; 1
 </pre>
 <div id="ft_rat2">
 <h4>
@@ -14685,9 +14729,9 @@ within a string.
 <pre class="examples">
 cSearch := &quot;t&quot;
 cTarget := &quot;This is the day that the Lord has made.&quot;
-ft_RAt2( cSearch, cTarget )           // Returns ( 22 )
-ft_RAt2( cSearch, cTarget, 2 )        // Returns ( 20 )
-ft_RAt2( cSearch, cTarget, 2, .F. )   // Returns ( 22 )
+? ft_RAt2( cSearch, cTarget )           // Returns 22
+? ft_RAt2( cSearch, cTarget, 2 )        // Returns 20
+? ft_RAt2( cSearch, cTarget, 2, .F. )   // Returns 22
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -14733,7 +14777,7 @@ ft_SaveArr().
 <br />
 </div>
 <div class="itemtext">
-[10/1/92 Librarian note:
+[1992-10-01 Librarian note:
 <br />
 </div>
 <div class="itemtext">
@@ -14905,9 +14949,9 @@ minor task).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ft_RmDir( &quot;C:\clipper&quot; )
-ft_RmDir( &quot;\example&quot; )
-ft_RmDir( &quot;..\source&quot; )
+? ft_RmDir( &quot;C:\harbour&quot; )
+? ft_RmDir( &quot;\example&quot; )
+? ft_RmDir( &quot;..\source&quot; )
 </pre>
 <div id="ft_round">
 <h4>
@@ -15009,15 +15053,15 @@ a. Direction (up, down or normal - normal is 4/5 convention) b. Type
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // round normal to 2 decimal places
-nDollars := ft_Round( nDollars )
+? ft_Round( nDollars )
 // round normal to 6 decimal places
-nIntRate := ft_Round( nIntRate, 6 )
+? ft_Round( nIntRate, 6 )
 // round to nearest thousands
-nPrice   := ft_Round( nPrice, 3, NEAREST_WHOLE_NUMBER )
+? ft_Round( nPrice, 3, NEAREST_WHOLE_NUMBER )
 // round Up to nearest third
-nAmount  := ft_Round( nAmount, 3, NEAREST_FRACTION, ROUND_UP )
+? ft_Round( nAmount, 3, NEAREST_FRACTION, ROUND_UP )
 // round down to 3 decimals Within .005
-nAvg     := ft_Round( nAvg, 3, , ROUND_DOWN, .005 )
+? ft_Round( nAvg, 3, , ROUND_DOWN, .005 )
 </pre>
 <div id="ft_rstrgn">
 <h4>
@@ -15132,7 +15176,7 @@ the disc file using ft_RestArr().
 <br />
 </div>
 <div class="itemtext">
-[10/1/92 Librarian note:
+[1992-10-01 Librarian note:
 <br />
 </div>
 <div class="itemtext">
@@ -15375,8 +15419,8 @@ test driver below).
 <br />
 </div>
 <div class="itemtext">
-NANFORUM.  It was written in Clipper to help demonstrate the FT_INT86
-function of the Nanforum Toolkit.
+NANFORUM.  It was written in Clipper to help demonstrate the
+ft_int86() function of the Nanforum Toolkit.
 <br />
 </div>
 <div class="itemtext">
@@ -15385,11 +15429,11 @@ This program requires ft_int86().
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-cKey := ft_ScanCode()
-// &lt;grey-&gt; returns:  hb_BChar( 45 ) + hb_BChar( 74 )
-// &lt;-&gt;     returns:  hb_BChar( 45 ) + hb_BChar( 12 )
-// &lt;grey+&gt; returns:  hb_BChar( 43 ) + hb_BChar( 78 )
-// &lt;+&gt;     returns:  hb_BChar( 43 ) + hb_BChar( 13 )
+? ft_ScanCode()
+// &lt;grey-&gt; returns: hb_BChar( 45 ) + hb_BChar( 74 )
+// &lt;-&gt;     returns: hb_BChar( 45 ) + hb_BChar( 12 )
+// &lt;grey+&gt; returns: hb_BChar( 43 ) + hb_BChar( 78 )
+// &lt;+&gt;     returns: hb_BChar( 43 ) + hb_BChar( 13 )
 </pre>
 <div id="ft_setcentury">
 <h4>
@@ -15428,11 +15472,11 @@ and optionally sets it ON or OFF.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-lOldState := ft_SetCentury()       // Get current CENTURY Setting
-lOldState := ft_SetCentury( .T. )  // Get the current CENTURY Setting
-                                   // and turn it on (set it to TRUE)
-lOldState := ft_SetCentury( .F. )  // Get the current CENTURY Setting
-                                   // and turn it off (set it to FALSE)
+? ft_SetCentury()       // Get current CENTURY Setting
+? ft_SetCentury( .T. )  // Get the current CENTURY Setting
+                        // and turn it on (set it to TRUE)
+? ft_SetCentury( .F. )  // Get the current CENTURY Setting
+                        // and turn it off (set it to FALSE)
 </pre>
 <div id="ft_setdate">
 <h4>
@@ -15478,9 +15522,9 @@ Set Date service (Interrupt 33, service 43).
 // the DOS system date:
 PROCEDURE Main( cDate )
    cDate := iif( cDate == NIL, DToS( Date() ), cDate )
-   ? &quot;Setting date to: &quot; + cDate  + &quot;... &quot;
+   ? &quot;Setting date to:&quot;, cDate + &quot;... &quot;
    ft_SetDate( hb_SToD( cDate ) )
-   ? &quot;Today is now: &quot; + DToC( Date() )
+   ? &quot;Today is now:&quot;, DToC( Date() )
    RETURN
 </pre>
 <div id="ft_settime">
@@ -15526,9 +15570,9 @@ Set Time service (Interrupt 33, service 45).
 // the DOS system time:
 PROCEDURE Main( cTime )
    cTime := iif( cTime == NIL, Time(), cTime )
-   ? &quot;Setting time to: &quot; + cTime  + &quot;... &quot;
+   ? &quot;Setting time to:&quot;, cTime + &quot;... &quot;
    ft_SetTime( cTime )
-   ? &quot;Time is now: &quot; + Time()
+   ? &quot;Time is now:&quot;, Time()
    RETURN
 </pre>
 <div id="ft_shift">
@@ -15564,9 +15608,9 @@ shift key is pressed, such as during a MemoEdit().
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 IF ft_Shift()
-   @ 24, 0 SAY &quot;Shift&quot;
+   @ 0, 0 SAY &quot;Shift&quot;
 ELSE
-   @ 24, 0 SAY &quot;     &quot;
+   @ 0, 0 SAY &quot;     &quot;
 ENDIF
 </pre>
 <div class="itemtitle">See also</div>
@@ -15618,7 +15662,7 @@ to any keys set with SET KEY TO or SetKey().
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 SetKey( K_F1, {| n, l, r | HELP( n, l, r ) } )
-nKey := ft_SInkey( 0 )       // HELP() will be called if F1 pressed
+? ft_SInkey( 0 )       // HELP() will be called if F1 pressed
 </pre>
 <div id="ft_stod">
 <h4>
@@ -15653,8 +15697,7 @@ is the converse of the Clipper DToS() function.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-LOCAL dMyDate
-dMyDate := ft_SToD( &quot;19901127&quot; )
+? ft_SToD( &quot;19901127&quot; )
 </pre>
 <div id="ft_sys2mil">
 <h4>
@@ -15687,7 +15730,7 @@ Return current system time as character string in military format.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ft_Sys2Mil() // 1623
+? ft_Sys2Mil() // 1623
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
@@ -15732,7 +15775,7 @@ PC_ (Brady).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? &quot;Conventional memory installed: &quot; + hb_ntos( ft_SysMem() ) + &quot;K&quot;
+? &quot;Conventional memory installed:&quot;, hb_ntos( ft_SysMem() ) + &quot;K&quot;
 </pre>
 <div id="ft_tempfil">
 <h4>
@@ -15787,11 +15830,11 @@ This function requires ft_int86().
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // Create a unique file in the root of the current drive:
-myFile := ft_TempFil()
+? ft_TempFil()
 // Create a unique file in the current directory and hide it:
-myFile := ft_TempFil( &quot;.&quot; + hb_ps(), .T. )
+? ft_TempFil( &quot;.&quot; + hb_ps(), .T. )
 // Create a unique file on another drive, but do not hide it:
-myFile := ft_TempFil( &quot;E:\nanfor\src\&quot; )
+? ft_TempFil( &quot;E:\nanfor\src\&quot; )
 </pre>
 <div id="ft_week">
 <h4>
@@ -15853,12 +15896,12 @@ January 1 and Sunday by calling ft_DateCnfg() with no parameters.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-// get info about week containing 9/15/90
+// get info about week containing 1990-09-15
 aDateInfo := ft_Week( hb_SToD( &quot;19900915&quot; ) )
 ? aDateInfo[ 1 ]   //  199037       (37th week)
 ? aDateInfo[ 2 ]   //  1990-09-09   beginning of week 37
 ? aDateInfo[ 3 ]   //  1990-09-15   end of week 37
-// get info about week 25 in year containing 9/15/90
+// get info about week 25 in year containing 1990-09-15
 aDateInfo := ft_Week( hb_SToD( &quot;19900915&quot; ), 25 )
 ? aDateInfo[ 1 ]   //  199025
 ? aDateInfo[ 2 ]   //  1990-06-17   beginning of week 25
@@ -16023,7 +16066,7 @@ value of the desired type).
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 nNumericValue := ft_XToY( cInputValue, &quot;N&quot; )
-IF ft_XToY( nInputValue, &quot;L&quot; )
+lLogicalValue := ft_XToY( nInputValue, &quot;L&quot; )
 </pre>
 <div id="ft_year">
 <h4>
@@ -16080,7 +16123,7 @@ ft_DateCnfg() with no parameters.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-// Get info about year containing 9/15/90, assuming default
+// Get info about year containing 1990-09-15, assuming default
 // beginning of year is January 1st.
 aDateInfo := ft_Year( hb_SToD( &quot;19900915&quot; ) )
 ? aDateInfo[ 1 ]   //  1990
@@ -16277,50 +16320,6 @@ Library is hbct.
 Ceiling()
 <br />
 </div>
-<div id="ft_dosver">
-<h4>
-FT_DOSVER
-</h4>
-</div>
-<div class="oneliner">
-Return the current DOS major and minor version as a string
-<br />
-</div>
-<div class="itemtitle">Syntax</div>
-<div class="itemtext">
-ft_DosVer() -&gt; &lt;cVersion&gt;
-<br />
-</div>
-<div class="itemtitle">Argument(s)</div>
-<div class="itemtext">
-None
-<br />
-</div>
-<div class="itemtitle">Returns</div>
-<div class="itemtext">
-A character string with the major version number first, a period (&quot;.
-&quot;), then the minor version number (e.g., &quot;3.30&quot;)
-<br />
-</div>
-<div class="itemtitle">Description</div>
-<div class="itemtext">
-ft_DosVer() invokes DOS interrupt 21h, service 30 in order to return
-the current DOS version.  It does this by setting up an array
-corresponding to machine registers and then calling the toolkit
-function ft_int86().
-<br />
-</div>
-<div class="itemtext">
-It returns a character string corresponding to the DOS version, as
-follows:  The major version, a period (&quot;.&quot;), then the minor version.
-<br />
-</div>
-<div class="itemtitle">Example(s)</div>
-<pre class="examples">
-PROCEDURE Main()
-   ? &quot;Dos version: &quot; + ft_DosVer()
-   RETURN
-</pre>
 <div id="ftoc">
 <h4>
 FToC()
