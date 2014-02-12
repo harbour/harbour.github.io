@@ -8722,7 +8722,7 @@ minor task).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? ft_ChDir( &quot;C:\harbour&quot; )
+? ft_ChDir( &quot;harbour&quot; )
 ? ft_ChDir( hb_ps() )
 ? ft_ChDir( &quot;..&quot; + hb_ps() + &quot;hbnf&quot; )
 </pre>
@@ -10594,7 +10594,7 @@ Test diskette drive status
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-ft_FlopTst( &lt;nDrive&gt; ) -&gt; nStatus
+ft_FlopTst( &lt;cDirectory|nDrive&gt; ) -&gt; nStatus
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -10633,15 +10633,9 @@ drives.  If the third drive is &quot;C&quot; and the fourth &quot;D&quot; then t
 should be no problems.
 <br />
 </div>
-<div class="itemtext">
-This function does not currently check subst'd drives.  So if you
-have SUBST E: A:\ then ft_FlopTst( Asc( &quot;E&quot; ) - Asc( &quot;A&quot; ) ) == 4 Any
-suggestions to fix this limitation are appreciated.
-<br />
-</div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-iStatus := ft_FlopTst( 0 )
+iStatus := ft_FlopTst( &quot;A:&quot; )
 DO CASE
 CASE iStatus == 1
    ? &quot;The door to drive A is open.&quot;
@@ -11074,7 +11068,7 @@ A text file &quot;record&quot; is a line of text terminated by a CRLF/LF.
 <pre class="examples">
 // write a line of text to a file
 ft_FUse( &quot;config.sys&quot; )
-DO WHILE !( Left( Upper( ft_FReadLn() ), Len( &quot;FILES=&quot; ) ) == &quot;FILES=&quot; ) .AND. ! ft_FEof()
+DO WHILE ! hb_LeftIsI( ft_FReadLn(), &quot;FILES=&quot; ) .AND. ! ft_FEof()
    ft_FSkip()
 ENDDO
 ft_FWriteLn( &quot;FILES=30&quot;, ft_FEof() )
@@ -11201,8 +11195,8 @@ MemoWrit( &quot;environ.txt&quot;, cEnvBlock )
 // Get the environment in Array form:
 aEnvArray := Array( ft_GetE() )
 ft_GetE( aEnvArray )
-? aEnvArray[ 1 ]       // &quot;COMSPEC=C:\command.com&quot;
-? aEnvArray[ 2 ]       // &quot;PATH=C:\;C:\util;C:\harbour&quot;
+? aEnvArray[ 1 ]
+? aEnvArray[ 2 ]
 </pre>
 <div id="ft_getmode">
 <h4>
@@ -11704,8 +11698,8 @@ ENDIF
 IF ! ft_IsPrint( &quot;COM2&quot; )
    ? &quot;Check the device on COM2.  Something is wrong.&quot;
 ENDIF
-IF ! ft_IsPrint( &quot;A:\nul&quot; )
-   ? &quot;Oops, better check drive A!&quot;
+IF ! ft_IsPrint( &quot;/dev/lp0&quot; )
+   ? &quot;Oops, not available.&quot;
 ENDIF
 </pre>
 <div id="ft_isshare">
@@ -12272,7 +12266,7 @@ forgive shortcomings in spelling ability.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 USE persons
-INDEX ON ft_Metaph( LastName ) TO field-&gt;lastname
+INDEX ON ft_Metaph( LastName ) TO lastname
 SEEK ft_Metaph( &quot;Philmore&quot; )
 ? Found(), field-&gt;LastName       // Result: .T. Philmore
 SEEK ft_Metaph( &quot;Fillmore&quot; )
@@ -12816,9 +12810,9 @@ minor task).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? ft_MkDir( &quot;C:\harbour&quot; )
-? ft_MkDir( &quot;\example&quot; )
-? ft_MkDir( &quot;..\source&quot; )
+? ft_MkDir( &quot;harbour&quot; )
+? ft_MkDir( hb_ps() + &quot;example&quot; )
+? ft_MkDir( &quot;..&quot; + hb_ps() + &quot;source&quot; )
 </pre>
 <div id="ft_month">
 <h4>
@@ -14021,7 +14015,7 @@ you need to.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-IF !( ft_Origin() == &quot;C:\appdir\myfile.exe&quot; )
+IF !( hb_FNameNameExt( ft_Origin() ) == &quot;myapp.exe&quot; )
    ? &quot;Incorrect startup file.  Please remove/rename and start again&quot;
    RETURN
 ENDIF
@@ -14949,9 +14943,9 @@ minor task).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? ft_RmDir( &quot;C:\harbour&quot; )
-? ft_RmDir( &quot;\example&quot; )
-? ft_RmDir( &quot;..\source&quot; )
+? ft_RmDir( &quot;harbour&quot; )
+? ft_RmDir( hb_ps() + &quot;example&quot; )
+? ft_RmDir( &quot;..&quot; + hb_ps() + &quot;source&quot; )
 </pre>
 <div id="ft_round">
 <h4>
@@ -15832,9 +15826,9 @@ This function requires ft_int86().
 // Create a unique file in the root of the current drive:
 ? ft_TempFil()
 // Create a unique file in the current directory and hide it:
-? ft_TempFil( &quot;.&quot; + hb_ps(), .T. )
-// Create a unique file on another drive, but do not hide it:
-? ft_TempFil( &quot;E:\nanfor\src\&quot; )
+? ft_TempFil( &quot;.&quot;, .T. )
+// Create a unique file on another directory, but do not hide it:
+? ft_TempFil( &quot;mytempdir&quot; )
 </pre>
 <div id="ft_week">
 <h4>
@@ -18404,7 +18398,7 @@ Unzip a compressed file
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-hb_UnzipFile( &lt;cFile&gt;, &lt;bBlock&gt;, &lt;lWithPath&gt;, &lt;cPassWord&gt;, &lt;cPath&gt;,
+hb_UnzipFile( &lt;cFile&gt;, &lt;bBlock&gt;, &lt;lWithPath&gt;, &lt;cPassword&gt;, &lt;cPath&gt;,
 <br />
 </div>
 <div class="itemtext">
@@ -18425,7 +18419,7 @@ hb_UnzipFile( &lt;cFile&gt;, &lt;bBlock&gt;, &lt;lWithPath&gt;, &lt;cPassWord&gt
 <br />
 </div>
 <div class="itemtext">
-&lt;cPassWord&gt; Password to use to extract files
+&lt;cPassword&gt; Password to use to extract files
 <br />
 </div>
 <div class="itemtext">
@@ -25771,7 +25765,7 @@ of the error.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 IF DirChange( &quot;\temp&quot; ) == 0
-   ? &quot;Change to diretory was successfull&quot;
+   ? &quot;Change to diretory was successful&quot;
 ENDIF
 </pre>
 <div class="itemtitle">Status</div>
@@ -25835,7 +25829,7 @@ code number. See FError() function for the description of the error.
 <pre class="examples">
 cDir := &quot;.\backup&quot;
 IF DirRemove( cDir ) == 0
-   ? &quot;Remove of directory&quot;, cDir, &quot;was successfull&quot;
+   ? &quot;Remove of directory&quot;, cDir, &quot;was successful&quot;
 ENDIF
 </pre>
 <div class="itemtitle">Status</div>
@@ -25904,7 +25898,7 @@ runtime error 2018 will be raised.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? &quot;You can use : &quot; + hb_ntos( DiskSpace() ) + &quot; bytes &quot;
+? &quot;You can use:&quot;, hb_ntos( DiskSpace() ), &quot;bytes&quot;
 // NOTE: See tests/diskspac.prg for another example
 </pre>
 <div class="itemtitle">Status</div>
@@ -26125,7 +26119,7 @@ directory on the logged drive.
 <div class="itemtext">
 If the function is able to successfully delete the file from the disk,
 the value of the function will be 0; otherwise a -1 will be returned.
-If not successfull, additional information may be obtained by calling
+If not successful, additional information may be obtained by calling
 the FError() function.
 <br />
 </div>
@@ -26136,7 +26130,7 @@ Note: Any file to be removed by FErase() must still be closed.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 #include &quot;fileio.ch&quot;
-IF FErase( &quot;test.txt&quot; ) == 0
+IF FErase( &quot;test.txt&quot; ) != F_ERROR
    ? &quot;File successfully erased&quot;
 ELSE
    ? &quot;File can not be deleted&quot;
@@ -26271,7 +26265,7 @@ values returned by the FError() function.
 #include &quot;fileio.ch&quot;
 nHandle := FCreate( &quot;test.txt&quot;, FC_NORMAL )
 IF FError() != 0
-   ? &quot;Cannot create file, OS error &quot;, FError()
+   ? &quot;Cannot create file, OS error&quot;, FError()
 ENDIF
 </pre>
 <div class="itemtitle">Status</div>
@@ -26337,8 +26331,8 @@ blank.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? File( &quot;C:\harbour\doc\compiler.txt&quot; )
-? File( &quot;C:/harbour/doc/subcodes.txt&quot; )
+? File( &quot;C:\hb\doc\pp.txt&quot; )
+? File( &quot;*.txt&quot; )
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -26729,7 +26723,7 @@ any error found.
 #include &quot;fileio.ch&quot;
 nResult := FRename( &quot;test.txt&quot;, &quot;test1.txt&quot; )
 IF nResult != 0
-   ? &quot;File could not be renamed.&quot;
+   ? &quot;File could not be renamed&quot;
 ENDIF
 </pre>
 <div class="itemtitle">Status</div>
@@ -26849,10 +26843,10 @@ FUNCTION FReadLn( nH, cB, nMaxLine )
    cB := &quot;&quot;
    nSavePos := FSeek( nH, 0, FS_RELATIVE )
    nNumRead := FRead( nH, @cLine, nMaxLine )
-   IF ( nEol := hb_BAt( hb_eol(), hb_BSubStr( cLine, 1, nNumRead ) ) ) == 0
+   IF ( nEol := hb_BAt( hb_eol(), hb_BLeft( cLine, nNumRead ) ) ) == 0
       cB := cLine
    ELSE
-      cB := hb_BSubStr( cLine, 1, nEol - 1 )
+      cB := hb_BLeft( cLine, nEol - 1 )
       FSeek( nH, nSavePos + nEol + 1, FS_SET )
    ENDIF
    RETURN nNumRead != 0
@@ -27045,8 +27039,8 @@ runtime error 2018 will be raised.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 #include &quot;fileio.ch&quot;
-? &quot;You can use : &quot; + hb_ntos( hb_DiskSpace() ) + &quot; bytes &quot; +;
-  &quot;Out of a total of &quot; + hb_ntos( hb_DiskSpace( &quot;C:&quot;, HB_FS_TOTAL ) )
+? &quot;You can use:&quot;, hb_ntos( hb_DiskSpace() ), &quot;bytes&quot;, ;
+  &quot;Out of a total of&quot;, hb_ntos( hb_DiskSpace( &quot;C:&quot;, HB_FS_TOTAL ) )
 // NOTE: See tests/diskspac.prg for another example
 </pre>
 <div class="itemtitle">Status</div>
@@ -27109,7 +27103,7 @@ function returns .T. and sets the value returned by FError() to -1
 nH := FOpen( &quot;test.txt&quot; )
 ? FReadStr( nH, 80 )
 IF hb_FEof( nH )
-   ? &quot;End-of-file reached.&quot;
+   ? &quot;End-of-file reached&quot;
 ELSE
    ? FReadStr( nH, 80 )
 ENDIF
@@ -27343,15 +27337,15 @@ IsDisk( &lt;cDrive&gt; ) --&gt; lSuccess
 <div class="itemtitle">Description</div>
 <div class="itemtext">
 This function attempts to access a drive. If the access to the drive
-was successfull, it will return true (.T.), otherwise false(.F.).
-This function is usefull for backup function, so you can determine if
-the drive that will receive the backup data is ready or not.
+was successful, it will return true (.T.), otherwise false(.F.). This
+function is usefull for backup function, so you can determine if the
+drive that will receive the backup data is ready or not.
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 IF IsDisk( &quot;A&quot; )
-   ? &quot;Drive is ready &quot;
+   ? &quot;Drive is ready&quot;
 ENDIF
 </pre>
 <div class="itemtitle">Status</div>
@@ -32355,13 +32349,13 @@ PROCEDURE Main()
    ? hb_langName( &quot;&lt;non-existent&gt;&quot; )
    hb_langSelect( &quot;pt&quot; )       // Default language is now Portuguese
    ? CDoW( Date() )            // Segunda-feira
-   ? &quot;Current language is &quot;, hb_langName()             // Portuguese
-   ? &quot;Old language id selected is &quot;, hb_langSelect()   // PT
+   ? &quot;Current language is&quot;, hb_langName()              // Portuguese
+   ? &quot;Old language id selected is&quot;, hb_langSelect()    // PT
    hb_langSelect( &quot;ro&quot; )       // Default language is now Romanian
    ? CMonth( Date() )          // Mai
-   ? &quot;Old language id selected is &quot;, hb_langSelect()   // RO
+   ? &quot;Old language id selected is&quot;, hb_langSelect()    // RO
    hb_langSelect( &quot;es&quot; )       // Default language is now Spanish
-   ? &quot;Current language is &quot;, hb_langName()              // Spanish
+   ? &quot;Current language is&quot;, hb_langName()              // Spanish
    ? CMonth( Date() )          // Mayo
    ? CDoW( Date() )            // Lunes
    RETURN
@@ -32579,10 +32573,10 @@ REQUEST HB_LANG_ES
 PROCEDURE Main()
    hb_langSelect( &quot;pt&quot; )       // Default language is now Portuguese
    ? CDoW( Date() )            // Segunda-feira
-   ? &quot;Old language id selected is &quot;, hb_langSelect()   // PT
+   ? &quot;Old language id selected is&quot;, hb_langSelect()    // PT
    hb_langSelect( &quot;ro&quot; )       // Default language is now Romanian
    ? CMonth( Date() )          // Mai
-   ? &quot;Old language id selected is &quot;, hb_langSelect()   // RO
+   ? &quot;Old language id selected is&quot;, hb_langSelect()    // RO
    hb_langSelect( &quot;es&quot; )       // Default language is now Spanish
    ? CMonth( Date() )          // Mayo
    ? CDoW( Date() )            // Lunes
@@ -34213,9 +34207,8 @@ equivalent to __objGetMsgList( oObject, .F. ).
 <pre class="examples">
 // show information about TBrowse class
 oB := TBrowseNew( 0, 0, 24, 79 )
-aMethod := __objGetMethodList( oB )
-FOR i := 1 TO Len( aMethod )
-   ? &quot;METHOD name:&quot;, aMethod[ i ]
+FOR EACH s IN __objGetMethodList( oB )
+   ? &quot;METHOD name:&quot;, s
 NEXT
 </pre>
 <div class="itemtitle">Status</div>
@@ -34316,14 +34309,14 @@ oB := TBrowseNew( 0, 0, 24, 79 )
 aData      := __objGetMsgList( oB, .T. )
 aClassData := __objGetMsgList( oB, .T., HB_MSGLISTCLASS )
 aMethod    := __objGetMsgList( oB, .F. )
-FOR i := 1 TO Len( aData )
-   ? &quot;VAR name:&quot;, aData[ i ]
+FOR EACH x IN aData
+   ? &quot;VAR name:&quot;, x
 NEXT
-FOR i := 1 TO Len( aClassData )
-   ? &quot;CLASS VAR name:&quot;, aClassData[ i ]
+FOR EACH x IN aClassData
+   ? &quot;CLASS VAR name:&quot;, x
 NEXT
-FOR i := 1 TO Len( aMethod )
-   ? &quot;METHOD name:&quot;, aMethod[ i ]
+FOR EACH x IN aMethod
+   ? &quot;METHOD name:&quot;, x
 NEXT
 </pre>
 <div class="itemtitle">Status</div>
@@ -34394,10 +34387,10 @@ aData[ i, HB_OO_DATA_VALUE  ] contain the value of DATA
 <pre class="examples">
 // show information about TBrowse class
 oB := TBrowseNew( 0, 0, 24, 79 )
-aData := __objGetValueList( oB )
-FOR i := 1 TO Len( aData )
-   ? &quot;VAR name:&quot;, aData[ i, HB_OO_DATA_SYMBOL ], ;
-      &quot;   value=&quot;, aData[ i, HB_OO_DATA_VALUE  ]
+FOR EACH i IN __objGetValueList( oB )
+   ? ;
+     &quot;VAR name:&quot;, i[ HB_OO_DATA_SYMBOL ], ;
+     &quot;   value=&quot;, i[ HB_OO_DATA_VALUE ]
 NEXT
 </pre>
 <div class="itemtitle">Status</div>
@@ -34840,13 +34833,13 @@ specific work area code block use FieldWBlock() instead.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-// open a file named Test that have a field named &quot;name&quot;
+// open a file named test.dbf that have a field named &quot;name&quot;
 LOCAL bField
 bFiled := FieldBlock( &quot;name&quot; )
-USE Test
-? &quot;Original value of field 'name' :&quot;, Eval( bField )
+USE test
+? &quot;Original value of field 'name':&quot;, Eval( bField )
 Eval( bField, &quot;Mr X new name&quot; )
-? &quot;New value for the field 'name' :&quot;, Eval( bField )
+? &quot;New value for the field 'name':&quot;, Eval( bField )
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -34931,10 +34924,10 @@ USE one
 SELECT 2
 USE two
 SELECT 1
-? &quot;Original names: &quot;, One-&gt;name, Two-&gt;name
-? &quot;Name value for file Two :&quot;, Eval( bField )
+? &quot;Original names:&quot;, One-&gt;name, Two-&gt;name
+? &quot;Name value for file Two:&quot;, Eval( bField )
 Eval( bField, &quot;Two has new name&quot; )
-? &quot;and now: &quot;, One-&gt;name, Two-&gt;name
+? &quot;and now:&quot;, One-&gt;name, Two-&gt;name
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -35056,7 +35049,7 @@ character expression passed as &lt;cCharacter&gt;.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 ? Asc( &quot;A&quot; )
-? Asc( &quot;¹&quot; )
+? Asc( &quot;ą&quot; )
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -35121,7 +35114,7 @@ second expression, the function will return 0.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? 'At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) =',
+? 'At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) =', ;
    At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; )    // 3
 </pre>
 <div class="itemtitle">Status</div>
@@ -35263,9 +35256,9 @@ parameters lets you indicate a starting and end offset to search in.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? 'hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) =',
+? 'hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) =', ;
    hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; )       // 3
-? 'hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) =',
+? 'hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) =', ;
    hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot;, 4 )    // 0
 </pre>
 <div class="itemtitle">Status</div>
@@ -35582,8 +35575,7 @@ cSearch := &quot;cde&quot;
 nLen := Len( cString )
 FOR y := 1 TO nLen
    FOR i := 1 TO nLen
-      r := hb_RAt( cSearch, cString, y, i )
-      IF r != 0
+      IF ( r := hb_RAt( cSearch, cString, y, i ) ) != 0
       ? 'hb_RAt( &quot;' + cSearch + '&quot;, &quot;' + cString + '&quot;, ' + hb_ntos( y ) + ', ' + hb_ntos( i ) + ' ) = ' + ;
          hb_ntos( r )
       ENDIF
@@ -35763,8 +35755,8 @@ return a logical false (.F.).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? 'IsAlpha( &quot;hello&quot; ) = ', IsAlpha( &quot;hello&quot; )
-? 'IsAlpha( &quot;12345&quot; ) = ', IsAlpha( &quot;12345&quot; )
+? 'IsAlpha( &quot;hello&quot; ) =', IsAlpha( &quot;hello&quot; )
+? 'IsAlpha( &quot;12345&quot; ) =', IsAlpha( &quot;12345&quot; )
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -36981,7 +36973,7 @@ PROCEDURE Main()
    cBigString := Space( 100000 ) // create a memory variable with 100000
                                  // blank spaces
    ? Len( cBigString )
-   USE tests NEW
+   USE test NEW
    cFirst := MakeEmpty( 1 )
    ? Len( cFirst )
    RETURN
@@ -37465,9 +37457,9 @@ less than &lt;nLen&gt; the rest are ignored.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? SubStr( &quot;Hello Harbour&quot; ,  7, 4 )      // Harb
-? SubStr( &quot;Hello Harbour&quot; , -3, 3 )      // our
-? SubStr( &quot;Hello Harbour&quot; ,  7    )      // Harbour
+? SubStr( &quot;Hello Harbour&quot;,  7, 4 )      // Harb
+? SubStr( &quot;Hello Harbour&quot;, -3, 3 )      // our
+? SubStr( &quot;Hello Harbour&quot;,  7    )      // Harbour
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -37669,8 +37661,8 @@ LOCAL dDate := Date()
 ? &quot;working with String&quot;
 ? &quot;Current String is&quot;, cString
 ? &quot;All uppercased&quot;, Transform( cString, &quot;@!&quot; )
-? &quot;Date is&quot;, ddate
-? &quot;Date is &quot;, Transform( ddate, &quot;@D&quot; )
+? &quot;Date is&quot;, dDate
+? &quot;Date is&quot;, Transform( dDate, &quot;@D&quot; )
 ? Transform( nNumber, &quot;@L 99999999&quot; )  //  &quot;009923.34&quot;
 ? Transform( 0      , &quot;@L 9999&quot;     )  //  &quot;0000&quot;
 </pre>
@@ -39244,8 +39236,9 @@ nChoice := AChoice( 10, 10, 20, 20, aItems )
 IF nChoice == 0
    ? &quot;You did not choose an item&quot;
 ELSE
-   ? &quot;You chose element &quot; + hb_ntos( nChoice )
-   ?? &quot; which has a value of &quot; + aItems[ nChoice ]
+   ? ;
+      &quot;You chose element&quot;, hb_ntos( nChoice ), ;
+      &quot;which has a value of&quot;, aItems[ nChoice ]
 ENDIF
 </pre>
 <div class="itemtitle">Compliance</div>
@@ -39574,7 +39567,7 @@ MaxRow(), MaxCol().
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // this one shows you how to browse around
-USE Around
+USE around
 Browse()
 </pre>
 <div class="itemtitle">Status</div>
@@ -39906,7 +39899,7 @@ applications.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // Browse a file using default values
-USE Test
+USE test
 dbEdit()
 </pre>
 <div class="itemtitle">Status</div>
@@ -39988,13 +39981,13 @@ records skipped.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // open a file and find if we've got enough records in it
-USE MonthSales
+USE month_sales
 IF dbSkipper( 100 ) == 100
    ? &quot;Good work! You can party now&quot;
 ELSE
    ? &quot;Too bad, you should really work harder&quot;
 ENDIF
-CLOSE
+dbCloseArea()
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -40052,8 +40045,8 @@ code, call the function repeatedly. The zero code cannot be inserted.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // Stuff an Alt+PgDn key into the keyboard buffer
-hb_keyPut( K_ALT_PGDN ) ; ? Inkey() // ==&gt; 417
-hb_keyPut( K_F11 ) ; ? Inkey() // ==&gt; -40
+hb_keyPut( K_ALT_PGDN ); ? Inkey() // ==&gt; 417
+hb_keyPut( K_F11 ); ? Inkey() // ==&gt; -40
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -41578,16 +41571,16 @@ procedure
 PROCEDURE Main()
    PRIVATE mPrivate
    mPrivate := &quot;PRIVATE from Main()&quot;
-   ? mPrivate     //PRIVATE from Main()
+   ? mPrivate     // PRIVATE from Main()
    Test()
-   ? mPrivate     //PRIVATE from Main()
+   ? mPrivate     // PRIVATE from Main()
    RETURN
 PROCEDURE Main()
    PRIVATE mPrivate
    mPrivate := &quot;PRIVATE from Main()&quot;
-   ? mPrivate           //PRIVATE from Main()
+   ? mPrivate           // PRIVATE from Main()
    RELEASE mPrivate
-   ? mPrivate           //NIL
+   ? mPrivate           // NIL
    mPrivate := &quot;Again in Main()&quot;
    RETURN
 </pre>
@@ -42229,8 +42222,7 @@ Bin2I() is the opposite of I2Bin()
 #include &quot;fileio.ch&quot;
 PROCEDURE Main()
    LOCAL nHandle, cYear, cMonth, cDay
-   nHandle := FOpen( &quot;test.dbf&quot; )
-   IF nHandle != F_ERROR
+   IF ( nHandle := FOpen( &quot;test.dbf&quot; ) ) != F_ERROR
       FSeek( nHandle, 1 )
       cYear := cMonth := cDay := &quot; &quot;
       FRead( nHandle, @cYear , hb_BLen( cYear ) )
@@ -42316,8 +42308,7 @@ Bin2L() is the opposite of L2Bin()
 #include &quot;fileio.ch&quot;
 PROCEDURE Main()
    LOCAL nHandle, cBuffer := Space( 4 )
-   nHandle := FOpen( &quot;test.dbf&quot; )
-   IF nHandle != F_ERROR
+   IF ( nHandle := FOpen( &quot;test.dbf&quot; ) ) != F_ERROR
       FSeek( nHandle, 4 )
       FRead( nHandle, @cBuffer, hb_BLen( cBuffer ) )
       ? &quot;Number of records in file:&quot;, Bin2L( cBuffer )
@@ -42400,8 +42391,7 @@ Bin2U() is the opposite of U2Bin()
 #include &quot;fileio.ch&quot;
 PROCEDURE Main()
    LOCAL nHandle, cBuffer := Space( 4 )
-   nHandle := FOpen( &quot;test.dbf&quot; )
-   IF nHandle != F_ERROR
+   IF ( nHandle := FOpen( &quot;test.dbf&quot; ) ) != F_ERROR
       FSeek( nHandle, 4 )
       FRead( nHandle, @cBuffer, hb_BLen( cBuffer ) )
       ? &quot;Number of records in file:&quot;, Bin2U( cBuffer )
@@ -42484,8 +42474,7 @@ Bin2W() is the opposite of W2Bin()
 #include &quot;fileio.ch&quot;
 PROCEDURE Main()
    LOCAL nHandle, cBuffer := Space( 2 )
-   nHandle := FOpen( &quot;test.dbf&quot; )
-   IF nHandle != F_ERROR
+   IF ( nHandle := FOpen( &quot;test.dbf&quot; ) ) != F_ERROR
       FSeek( nHandle, 8 )
       FRead( nHandle, @cBuffer, hb_BLen( cBuffer ) )
       ? &quot;Length of DBF header in bytes:&quot;, Bin2W( cBuffer )
@@ -42623,9 +42612,8 @@ PROCEDURE Main()
    LOCAL nHandle, cYear, cMonth, cDay
    USE test
    ? &quot;Original update date is:&quot;, LUpdate()
-   CLOSE
-   nHandle := FOpen( &quot;test.dbf&quot;, FO_READWRITE )
-   IF nHandle != F_ERROR
+   dbCloseArea()
+   IF ( nHandle := FOpen( &quot;test.dbf&quot;, FO_READWRITE ) ) != F_ERROR
       FSeek( nHandle, 1 )
       cYear  := I2Bin( 68 )
       cMonth := I2Bin(  8 )
@@ -42636,7 +42624,7 @@ PROCEDURE Main()
       FClose( nHandle )
       USE test
       ? &quot;New update date is:&quot;, LUpdate()
-      CLOSE
+      dbCloseArea()
    ELSE
       ? &quot;Can not open file&quot;
    ENDIF
@@ -42959,11 +42947,11 @@ during compile time.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // Create a new file that contain the same structure
-USE TEST
+USE test
 __dbCopyStruct( &quot;mycopy.dbf&quot; )
 // Create a new file that contain part of the original structure
 LOCAL aList
-USE TEST
+USE test
 aList := { &quot;NAME&quot; }
 __dbCopyStruct( &quot;onlyname.dbf&quot;, aList )
 </pre>
@@ -43097,9 +43085,9 @@ __dbCopyXStruct() function during compile time.
 <pre class="examples">
 // Open a database, then copy its structure to a new file,
 // Open the new file and list all its records
-USE Test
-__dbCopyXStruct( &quot;TestStru&quot; )
-USE TestStru
+USE test
+__dbCopyXStruct( &quot;teststru&quot; )
+USE teststru
 LIST
 </pre>
 <div class="itemtitle">Status</div>
@@ -43379,11 +43367,11 @@ to a database table.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // Copy delinquent accounts into a delimited text file.
-USE ACCOUNTS NEW
+USE accounts NEW
 COPY TO overdue DELIMITED FOR ! Empty( accounts-&gt;duedate ) ;
    .AND. Date() - accounts-&gt;duedate &gt; 30
 // Import new customer records.
-USE CUSTOMER NEW
+USE customer NEW
 APPEND FROM customer DELIMITED
 </pre>
 <div class="itemtitle">Status</div>
@@ -43475,11 +43463,11 @@ to a database table.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // Copy delinquent accounts into an SDF text file.
-USE ACCOUNTS NEW
+USE accounts NEW
 COPY TO overdue SDF FOR ! Empty( accounts-&gt;duedate ) ;
    .AND. Date() - accounts-&gt;duedate &gt; 30
 // Import new customer records.
-USE CUSTOMER NEW
+USE customer NEW
 APPEND FROM customer SDF
 </pre>
 <div class="itemtitle">Status</div>
@@ -43599,7 +43587,7 @@ aList := { &quot;NOTEXIST&quot; }
 aRet := __dbStructFilter( aStruct, aList )   // {}
 // Create a new file that contain part of the original structure
 LOCAL aStruct, aList, aRet
-USE TEST
+USE test
 aStruct := dbStruct()
 aList := { &quot;NAME&quot; }
 dbCreate( &quot;onlyname.dbf&quot;, __dbStructFilter( aStruct, aList ) )
@@ -43734,7 +43722,7 @@ aList := { &quot;NOTEXIST&quot; }
 aRet := __FLedit( aStruct, aList )   // {}
 // Create a new file that contain part of the original structure
 LOCAL aStruct, aList, aRet
-USE TEST
+USE test
 aStruct := dbStruct()
 aList := { &quot;NAME&quot; }
 dbCreate( &quot;onlyname.dbf&quot;, __FLedit( aStruct, aList ) )
@@ -43839,8 +43827,8 @@ usually FCount(), before calling this function.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 PROCEDURE Main()
-   LOCAL aNames, aTypes, aLens, aDecs, nCount, nFields, i
-   USE Test
+   LOCAL nCount
+   USE test
    nCount := FCount()
    ? &quot;Number of fields:&quot;, nCount
    PrintFields( nCount )   // Information for all fields
@@ -43853,12 +43841,10 @@ PROCEDURE PrintFields( nCount )
    aLens   := Array( nCount )
    aDecs   := Array( nCount )
    nFields := AFields( aNames, aTypes, aLens, aDecs )
-   ? &quot;Number of items :&quot;, nFields
+   ? &quot;Number of items:&quot;, nFields
    FOR i := 1 TO nFields
-      ?  i, PadR( aNames[ i ], 12 ), aTypes[ i ]
-      ?? aLens[ i ], aDecs[ i ]
+      ? i, PadR( aNames[ i ], 12 ), aTypes[ i ], aLens[ i ], aDecs[ i ]
    NEXT
-   ?
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -43980,7 +43966,7 @@ PROCEDURE Main()
       dbSkip( -1 )
    ENDDO
    ? &quot;Is Bof()&quot;, Bof()
-   USE
+   dbCloseArea()
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -44060,8 +44046,8 @@ PROCEDURE Main()
    LOCAL cName := &quot;Harbour&quot;, nId := 10
    USE test
    test-&gt;( dbAppend() )
-   REPLACE test-&gt;Name WITH cName, test-&gt;Id WITH nId
-   USE
+   test-&gt;Name := cName
+   test-&gt;Id   := nId
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -44113,10 +44099,9 @@ selected work area.
 <pre class="examples">
 PROCEDURE Main()
    USE test
-   SET FILTER TO Left( test-&gt;Name, 2 ) == &quot;An&quot;
+   SET FILTER TO hb_LeftIs( test-&gt;Name, &quot;An&quot; )
    dbEdit()
    Test-&gt;( dbClearFilter() )
-   USE
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -44173,7 +44158,6 @@ PROCEDURE Main()
    USE test1 NEW
    dbEdit()
    dbCloseAll()
-   USE
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -44222,7 +44206,6 @@ PROCEDURE Main()
    USE test
    dbEdit()
    Test-&gt;( dbCloseArea() )
-   USE
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -44273,16 +44256,14 @@ PROCEDURE Main()
    LOCAL cName := Space( 40 )
    LOCAL nId := 0
    USE test EXCLUSIVE NEW
-   //
    @ 10, 10 GET cName
    @ 11, 10 GET nId
    READ
-   //
    IF Updated()
       dbAppend()
-      REPLACE tests-&gt;Name WITH cName
-      REPLACE tests-&gt;Id WITH nId
-      tests-&gt;( dbCommit() )
+      test-&gt;Name := cName
+      test-&gt;Id   := nId
+      dbCommit()
    ENDIF
    RETURN
 </pre>
@@ -44333,18 +44314,16 @@ PROCEDURE Main()
    LOCAL nId := 0
    USE test EXCLUSIVE NEW
    USE testid NEW INDEX testid
-   //
    @ 10, 10 GET cName
    @ 11, 10 GET nId
    READ
-   //
    IF Updated()
       dbAppend()
-      REPLACE tests-&gt;Name WITH cName
-      REPLACE tests-&gt;Id WITH nId
+      test-&gt;Name := cName
+      test-&gt;Id   := nId
       IF ! testid-&gt;( dbSeek( nId ) )
-         dbAppend()
-         REPLACE tests-&gt;Id WITH nId
+         testid-&gt;( dbAppend() )
+         testid-&gt;Id := nId
       ENDIF
    ENDIF
    dbCommitAll()
@@ -44460,7 +44439,7 @@ the decimal value-must he specified. even 1kw nonnumeric fields.
 </div>
 <div class="itemtext">
 the field data type-must contain a proper value: C, D, L, M or N It
-is possible to use additional letters (or clarity (e.g., 'Numeric'
+is possible to use additional letters for clarity (e.g., 'Numeric'
 for 'N'): however, the first letter of this array element must be a
 proper value.
 <br />
@@ -44491,7 +44470,7 @@ parameter specifies the alias name for the new opened database.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 PROCEDURE Main()
-   LOCAL nI, aStruct := { ;
+   LOCAL aStruct := { ;
       { &quot;CHARACTER&quot;, &quot;C&quot;, 25, 0 }, ;
       { &quot;NUMERIC&quot;,   &quot;N&quot;,  8, 0 }, ;
       { &quot;DOUBLE&quot;,    &quot;N&quot;,  8, 2 }, ;
@@ -44554,12 +44533,9 @@ locked prior to issuing the dbDelete() function.
 <pre class="examples">
 nId := 10
 USE testid INDEX testid NEW
-IF testid-&gt;( dbSeek( nId ) )
-   IF testid-&gt;( RLock() )
-      dbDelete()
-   ENDIF
+IF dbSeek( nId ) .AND. RLock()
+   dbDelete()
 ENDIF
-USE
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -44613,8 +44589,7 @@ USE test INDEX test NEW
 SET FILTER TO Name == &quot;Harbour&quot;
 USE testid INDEX testid NEW
 SET FILTER TO Id == 1
-SELECT Test
-//
+SELECT test
 ? dbFilter()
 ? testid-&gt;( dbFilter() )
 </pre>
@@ -44663,12 +44638,11 @@ is present, the value of the record pointer will be LastRec().
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests
+USE test
 dbGoTop()
 ? RecNo()
 dbGoBottom()
 ? RecNo()
-USE
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -44725,16 +44699,15 @@ number. In some data formats, for example, the value of
 <br />
 </div>
 <div class="itemtext">
-Issuing a dbGoto(RecNo()) call in a network enviroment will refresh
+Issuing a dbGoto( RecNo() ) call in a network enviroment will refresh
 the database and index buffers. This is the same as a dbSkip(0) call.
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-The following example uses dbGoto() TO iteratively process
+The following example uses dbGoto() to iteratively process
 every fourth record:
 dbUseArea( .T., &quot;DBFNTX&quot;, &quot;sales&quot;, &quot;sales&quot;, .T. )
-//
 // toggle every fourth record
 DO WHILE ! Eof()
    dbGoto( RecNo() + 4 )
@@ -44786,12 +44759,11 @@ is present, the value of RecNo() will be 1.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests
+USE test
 dbGoTop()
 ? RecNo()
 dbGoBottom()
 ? RecNo()
-USE
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -44846,7 +44818,6 @@ dbDelete()
 ? Deleted()
 dbRecall()
 ? Deleted()
-USE
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -44904,14 +44875,13 @@ assumed to lock the current active record/data item.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 PROCEDURE Main()
-   LOCAL x := 0
-   USE tests NEW
+   LOCAL x
+   USE test NEW
    FOR x := 1 TO RecCount()
       IF ! dbRLock()
          dbUnlock()
       ENDIF
    NEXT
-   USE
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -44963,18 +44933,16 @@ elements in it), then there are no locked records in that work area.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 PROCEDURE Main()
-   LOCAL aList := {}
-   LOCAL x := 0
-   USE tests NEW
+   LOCAL aList, x
+   USE test NEW
    dbGoto( 10 )
    RLock()
    dbGoto( 100 )
    RLock()
    aList := dbRLockList()
-   FOR x := 1 TO Len( aList )
-      ? aList[ x ]
+   FOR EACH x IN aList
+      ? x
    NEXT
-   USE
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -45026,13 +44994,12 @@ specified, them the current active record/data item will be unlocked
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 PROCEDURE Main()
-   USE tests NEW
+   USE test NEW
    dbGoto( 10 )
    IF RLock()
-      ? tests-&gt;ID
+      ? test-&gt;ID
       dbRUnlock()
    ENDIF
-   USE
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -45119,16 +45086,13 @@ status of SOFTSEEK before performing the operation. The default of
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 PROCEDURE Main()
-   USE tests NEW INDEX tests
+   USE test NEW INDEX test
    dbGoto( 10 )
-   nId := tests-&gt;nId
-   IF tests-&gt;( dbSeek( nId ) )
-      IF RLock()
-         ? tests-&gt;Name
-         dbRUnlock()
-      ENDIF
+   nId := test-&gt;nId
+   IF dbSeek( nId ) .AND. RLock()
+      ? test-&gt;Name
+      dbRUnlock()
    ENDIF
-   USE
    RETURN
 ACCEPT &quot;Employee name: &quot; TO cName
 IF Employee-&gt;( dbSeek( cName ) )
@@ -45185,7 +45149,7 @@ select the work area with the alias name.
 <br />
 </div>
 <div class="itemtext">
-dbSelectArea(0) will select the next avaliable and unused work area.
+dbSelectArea( 0 ) will select the next avaliable and unused work area.
 Up to 255 work areas are supported. Each work area has its own alias
 and record pointer, as well as its own Found(), dbFilter(),
 dbRSelect() and dbRelation() function values.
@@ -45195,13 +45159,13 @@ dbRSelect() and dbRelation() function values.
 <pre class="examples">
 PROCEDURE Main()
    LOCAL nId
-   USE tests NEW INDEX tests
-   USE tests1 NEW INDEX tests1
+   USE test NEW INDEX test
+   USE test1 NEW INDEX test1
    dbSelectArea( 1 )
-   nId := tests-&gt;Id
+   nId := test-&gt;Id
    dbSelectArea( 2 )
    IF dbSeek( nId )
-      ? tests1-&gt;cName
+      ? test1-&gt;cName
    ENDIF
    dbCloseAll()
    RETURN
@@ -45319,8 +45283,8 @@ area which in fact, would be not correct.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 PROCEDURE Main()
-   USE tests NEW
-   dbSetFilter( {|| tests-&gt;Id &lt; 100 }, &quot;tests-&gt;Id &lt;100&quot; )
+   USE test NEW
+   dbSetFilter( {|| test-&gt;Id &lt; 100 }, &quot;test-&gt;Id &lt;100&quot; )
    dbGoTop()
 </pre>
 <div class="itemtitle">Status</div>
@@ -45366,21 +45330,20 @@ dbSkip( [&lt;nRecords&gt;] )
 <div class="itemtext">
 This function moves the record pointer &lt;nRecords&gt; in the selected or
 aliased work area. The default value for &lt;nRecords&gt; will be 1. A
-dbSkip(0) will flush and refresh the internal database bufer and make
-any changes made to the record visible without moving the record
+dbSkip( 0 ) will flush and refresh the internal database bufer and
+make any changes made to the record visible without moving the record
 pointer in either direction.
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 PROCEDURE Main()
-   USE tests NEW
+   USE test NEW
    dbGoTop()
    DO WHILE ! Eof()
-      ? tests-&gt;Id, tests-&gt;Name
+      ? test-&gt;Id, test-&gt;Name
       dbSkip()
    ENDDO
-   USE
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -45428,7 +45391,7 @@ This function returns a multidimensional array. This array has array
 pointers to other arrays, each of which contains the characteristic
 of a field in the active work area. The length of this array is based
 in the number of fields in that particular work area. In other words,
-Len(dbStruct()) is equal to the value obtained from FCount(). Each
+Len( dbStruct() ) is equal to the value obtained from FCount(). Each
 subscript position
 <br />
 </div>
@@ -45437,12 +45400,11 @@ subscript position
 #include &quot;dbstruct.ch&quot;
 PROCEDURE Main()
    LOCAL aStru, x
-   USE tests NEW
+   USE test NEW
    aStru := dbStruct()
-   FOR x := 1 TO Len( aStru )
-      ? aStru[ x ][ DBS_NAME ]
+   FOR EACH x IN aStru
+      ? x[ DBS_NAME ]
    NEXT
-   USE
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -45497,7 +45459,6 @@ IF testid-&gt;( dbSeek( nId ) )
       dbUnlock()
    ENDIF
 ENDIF
-USE
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -45541,8 +45502,7 @@ This function will remove all file and record locks in all work area.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 nId := 10
-USE tests INDEX testid NEW
-USE tests1 INDEX tests NEW
+USE test INDEX testid NEW
 IF testid-&gt;( dbSeek( nId ) )
    IF testid-&gt;( RLock() )
       dbDelete()
@@ -45552,7 +45512,6 @@ IF testid-&gt;( dbSeek( nId ) )
 ELSE
    dbUnlockAll()
 ENDIF
-USE
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -45586,7 +45545,7 @@ Opens a work area and uses a database file.
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
 dbUseArea( [&lt;lNewArea&gt;], [&lt;cDriver&gt;], &lt;cName&gt;, [&lt;xcAlias&gt;],
-[&lt;lShared&gt;], [&lt;lReadonly&gt;])
+[&lt;lShared&gt;], [&lt;lReadonly&gt;] )
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -45626,7 +45585,7 @@ value of dbSetDriver().
 <br />
 </div>
 <div class="itemtext">
-IF used, &lt;xcAlias&gt; contains the alias name for that work area, If not
+If used, &lt;xcAlias&gt; contains the alias name for that work area, If not
 specified, the root name of the database specified in &lt;cName&gt; will be
 used.
 <br />
@@ -45648,7 +45607,7 @@ mode.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-dbUseArea( .T.,, &quot;tests&quot; )
+dbUseArea( .T.,, &quot;test&quot; )
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -45764,7 +45723,7 @@ PROCEDURE Main()
    dbDelete()
    ? &quot;Is Record Deleted&quot;, Test-&gt;( Deleted() )
    dbRecall()
-   USE
+   dbCloseArea()
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -45829,7 +45788,7 @@ PROCEDURE Main()
       dbSkip()
    ENDDO
    ? &quot;Is Eof()&quot;, Eof()
-   USE
+   dbCloseArea()
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -45881,9 +45840,9 @@ function will return 0.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 PROCEDURE Main()
-   USE tests NEW
-   ? &quot;This database have&quot;, tests-&gt;( FCount() ), &quot;Fields&quot;
-   USE
+   USE test NEW
+   ? &quot;This database has&quot;, test-&gt;( FCount() ), &quot;fields&quot;
+   dbCloseArea()
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -45943,7 +45902,7 @@ work area, the function will return a NIL data type.
 PROCEDURE Main()
    USE test NEW
    ? test-&gt;( FieldGet( 1 ) )
-   USE
+   dbCloseArea()
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -46002,11 +45961,11 @@ area, this function will return a NULL byte.
 <pre class="examples">
 PROCEDURE Main()
    LOCAL x
-   USE tests NEW
-   FOR x := 1 TO tests-&gt;( FCount() )
-      ? &quot;Field Name&quot;, FieldName( x )
+   USE test NEW
+   FOR x := 1 TO test-&gt;( FCount() )
+      ? &quot;Field Name:&quot;, FieldName( x )
    NEXT
-   USE
+   dbCloseArea()
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -46066,7 +46025,7 @@ work area, the function will return a 0.
 PROCEDURE Main()
    USE test NEW
    ? test-&gt;( FieldPos( &quot;ID&quot; ) )
-   USE
+   dbCloseArea()
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -46128,9 +46087,9 @@ the function will return a NIL data type
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests NEW
+USE test NEW
 FieldPut( 1, &quot;Mr. Jones&quot; )
-USE
+dbCloseArea()
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -46182,11 +46141,11 @@ the same network station.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests NEW
+USE test NEW
 IF FLock()
-   SUM tests-&gt;Ammount
+   SUM test-&gt;Ammount
 ENDIF
-USE
+dbCloseArea()
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -46243,12 +46202,12 @@ areas by using an alias.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 nId := 100
-USE tests NEW INDEX tests
+USE test NEW INDEX test
 SEEK nId
 IF Found()
-   ? tests-&gt;Name
+   ? test-&gt;Name
 ENDIF
-USE
+dbCloseArea()
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -46303,7 +46262,7 @@ restore routine.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests NEW
+USE test NEW
 ? Header()
 </pre>
 <div class="itemtitle">Status</div>
@@ -46429,7 +46388,7 @@ will be returned.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests NEW INDEX test1
+USE test NEW INDEX test1
 ? IndexKey( 1 )
 </pre>
 <div class="itemtitle">Status</div>
@@ -46491,7 +46450,7 @@ which therefore is in the natural order.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests NEW INDEX test1
+USE test NEW INDEX test1
 IF IndexOrd() &gt; 0
    ? &quot;Current order is&quot;, IndexOrd()
 ENDIF
@@ -46551,7 +46510,7 @@ return a 0 value as well.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests NEW
+USE test NEW
 ? LastRec(), RecCount()
 </pre>
 <div class="itemtitle">Status</div>
@@ -46613,9 +46572,9 @@ only work for those database files in USE.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 PROCEDURE Main()
-   USE tests NEW
+   USE test NEW
    ? LUpdate()
-   USE
+   dbCloseArea()
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -46694,7 +46653,7 @@ IF ! NetErr()
       ? test-&gt;First
    ENDIF
 ENDIF
-USE
+dbCloseArea()
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -46753,10 +46712,10 @@ This function replaces the IndexOrd() function.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests NEW VIA &quot;DBFNTX&quot;
+USE test NEW VIA &quot;DBFNTX&quot;
 ? ordBagExt()      //  Returns .ntx
 dbCloseArea()
-USE tests NEW VIA &quot;DBFCDX&quot;
+USE test NEW VIA &quot;DBFCDX&quot;
 ? ordBagExt()      //  Returns .cdx
 dbCloseArea()
 </pre>
@@ -46826,12 +46785,12 @@ index name or index order number. If &lt;cOrderName&gt; is not specified or
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests VIA &quot;DBFCDX&quot; NEW
-SET INDEX TO tests
+USE test VIA &quot;DBFCDX&quot; NEW
+SET INDEX TO test
 ordBagName( &quot;TeName&quot; )        // Returns: Customer
 ordBagName( &quot;TeLast&quot; )        // Returns: Customer
 ordBagName( &quot;teZip&quot; )         // Returns: Customer
-SET ORDER TO TAG TeName
+ordSetFocus( &quot;TeName&quot; )
 ? OrderBagName()              // Returns: Custumer
 </pre>
 <div class="itemtitle">Status</div>
@@ -46991,10 +46950,10 @@ name in the order list in the current or specified work area.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests VIA &quot;DBFNDX&quot; NEW
-ordCreate( &quot;FNAME&quot;,, &quot;Tests-&gt;fName&quot; )
-USE tests VIA &quot;DBFCDX&quot; NEW
-ordCreate( , &quot;lName&quot;, &quot;tests-&gt;lName&quot; )
+USE test VIA &quot;DBFNDX&quot; NEW
+ordCreate( &quot;FNAME&quot;,, &quot;test-&gt;fName&quot; )
+USE test VIA &quot;DBFCDX&quot; NEW
+ordCreate( , &quot;lName&quot;, &quot;test-&gt;lName&quot; )
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -47064,8 +47023,8 @@ DBFCDX and RDDADS drivers).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests VIA &quot;DBFCDX&quot; NEW
-ordDestroy( &quot;lName&quot;, &quot;tests&quot; )
+USE test VIA &quot;DBFCDX&quot; NEW
+ordDestroy( &quot;lName&quot;, &quot;test&quot; )
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -47133,11 +47092,9 @@ Order.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests NEW VIA &quot;DBFCDX&quot;
-INDEX ON tests-&gt;ID ;
-   TO tests          ;
-   FOR tests-&gt;ID &gt; 100
-ordFor( &quot;tests&quot; )      // Returns: tests-&gt;ID &gt; 100
+USE test NEW VIA &quot;DBFCDX&quot;
+INDEX ON field-&gt;ID TO test FOR field-&gt;ID &gt; 100
+ordFor( &quot;test&quot; )   // Returns: field-&gt;ID &gt; 100
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -47197,14 +47154,12 @@ the order.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests NEW VIA &quot;DBFCDX&quot;
-INDEX ON tests-&gt;fName ;
-   TO tests           ;
-   FOR tests-&gt;fName &gt; &quot;CK&quot;
-INDEX ON tests-&gt;Id TO TestId
-ordKey( &quot;tests&quot; )      // Returns: tests-&gt;fName
-SET ORDER TO 2
-ordKey()               // Returns: tests-&gt;Id
+USE test NEW VIA &quot;DBFCDX&quot;
+INDEX ON field-&gt;fName TO test FOR field-&gt;fName &gt; &quot;CK&quot;
+INDEX ON field-&gt;Id    TO testid
+ordKey( &quot;test&quot; )      // Returns: field-&gt;fName
+ordSetFocus( 2 )
+ordKey()               // Returns: field-&gt;Id
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -47268,7 +47223,7 @@ USE test NEW
 USE harbour NEW
 ? RecCount()
 ? Test-&gt;( RecCount() )
-CLOSE ALL
+dbCloseAll()
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -47327,7 +47282,7 @@ file, the value of this function will be 1.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests NEW
+USE test NEW
 dbGoTop()
 RecNo()            // Returns 1
 dbGoto( 50 )
@@ -47387,7 +47342,7 @@ in use in this work area, the return value from this function will be
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests NEW
+USE test NEW
 dbGoTop()
 RecSize()            // Returns 1
 dbGoto( 50 )
@@ -47474,7 +47429,7 @@ IF testid-&gt;( dbSeek( nId ) )
       dbDelete()
    ENDIF
 ENDIF
-USE
+dbCloseArea()
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -47529,7 +47484,7 @@ will be the return value of the function.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests NEW
+USE test NEW
 USE names NEW
 cOldArea := Select( &quot;names&quot; )
 SELECT test
@@ -47590,14 +47545,14 @@ work area.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests NEW
+USE test NEW
 USE names NEW
 ? Used()    // .T.
 ? TESTS-&gt;( Used() ) //.T.
-CLOSE
-? Used()  // .F.
-SELECT tests
-? Used() //.T.
+dbCloseArea()
+? Used()    // .F.
+SELECT test
+? Used()    // .T.
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -47841,7 +47796,7 @@ This function returns the current system date.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 ? Date()
-? &quot;Today is &quot;, Day( Date() ), &quot; of &quot;, CMonth( Date() ), &quot; of &quot;, Year( Date() )
+? &quot;Today is&quot;, hb_ntos( Day( Date() ) ), &quot;of&quot;, CMonth( Date() ), &quot;of&quot;, hb_ntos( Year( Date() ) )
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -49687,15 +49642,15 @@ by MaxRow() and MaxCol().
 <pre class="examples">
 // The first example change to a 12 lines of display mode:
 IF SetMode( 12, 40 )
-   ? &quot;Hey man are you blind ?&quot;
+   ? &quot;Hey man are you blind?&quot;
 ELSE
-   ? &quot;Mom bring me my glasses!&quot;
+   ? &quot;Mom, bring me my glasses!&quot;
 ENDIF
 // Next example change to a 50 lines mode:
 IF SetMode( 50, 80 )
    ? &quot;This wonderful mode was successfully set&quot;
 ELSE
-   ? &quot;Wait. this monitor are not made in rubber !&quot;
+   ? &quot;Wait. this monitor is not made of rubber!&quot;
 ENDIF
 </pre>
 <div class="itemtitle">Status</div>
@@ -51967,8 +51922,8 @@ DEFAULT TO settings.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-COPY FILE C:\harbour\tests\adir.prg TO C:\temp\adir.prg
-COPY FILE C:\harbour\tests\adir.prg TO LPT1
+COPY FILE /path/to/adir.prg TO /tmp/adir.prg
+COPY FILE adir.prg TO LPT1
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -52019,7 +51974,7 @@ may be deleted.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-DELETE FILE C:\temp\read.txt
+DELETE FILE test.txt
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -52149,7 +52104,7 @@ may be deleted.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-ERASE C:\temp\read.txt
+ERASE test.txt
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -52684,7 +52639,7 @@ a macro expression.
 PROCEDURE Main()
    FIELD Id
    FIELD Name
-   USE tests NEW
+   USE test NEW
    Name := &quot;Sales&quot;
    Id := 5
    USE
@@ -53464,10 +53419,10 @@ during compile time.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // Create a new file that contains the same structure
-USE TEST
+USE test
 COPY STRUCTURE TO MyCopy
 // Create a new file that contains part of the original structure
-USE TEST
+USE test
 COPY STRUCTURE TO SomePart FIELDS name, address
 </pre>
 <div class="itemtitle">Status</div>
@@ -53590,9 +53545,9 @@ __dbCopyXStruct() function during compile time.
 <pre class="examples">
 // Open a database, then copy its structure to a new file,
 // Open the new file and list all its records
-USE Test
-COPY STRUCTURE EXTENDED TO TestStru
-USE TestStru
+USE test
+COPY STRUCTURE EXTENDED TO teststru
+USE teststru
 LIST
 </pre>
 <div class="itemtitle">Status</div>
@@ -53867,11 +53822,11 @@ pointer is placed on the first record in the database.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests NEW INDEX tests
+USE test NEW INDEX test
 dbGoto( 10 )
 DELETE NEXT 10
 PACK
-USE
+dbCloseArea()
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -53918,9 +53873,9 @@ file that is about to be ZAPped must be used exclusively.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-USE tests NEW INDEX tests
+USE test NEW INDEX test
 ZAP
-USE
+dbCloseArea()
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -53982,7 +53937,7 @@ ALTERNATE TO command will close the alternate file
 <pre class="examples">
 SET ALTERNATE TO test.txt
 SET ALTERNATE ON
-? 'Harbour'
+? &quot;Harbour&quot;
 ? &quot;is&quot;
 ? &quot;Power&quot;
 SET ALTERNATE TO
