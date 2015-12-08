@@ -5,6 +5,7 @@
 *.css     text
 *.html    text
 *.js      text
+*.svg     text
 *.txt     text
 
 # Binary files
