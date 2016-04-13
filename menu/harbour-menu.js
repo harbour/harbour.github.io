@@ -13,7 +13,7 @@ stm_aix("p0i5","p0i1",[2,"","documentation.png","documentation.png",90,65,0,"/do
 stm_bpx("p2","p1",[1,4,0,-3,3,0,0,0,100,"",-2,"",-2,50,0,0,"#CCCCCC"]);
 stm_aix("p2i0","p1i0",[0," Readme ","","",-1,-1,0,"https://github.com/harbour/core/#readme"]);
 stm_aix("p2i1","p1i0",[0," ChangeLog ","","",-1,-1,0,"https://github.com/harbour/core/raw/master/ChangeLog.txt"]);
-stm_aix("p2i2","p1i0",[0," Clipper 5.3 ","","",-1,-1,0,"http://x-hacker.org/ng/53guide/"]);
+stm_aix("p2i2","p1i0",[0," Clipper 5.3 ","","",-1,-1,0,"https://www.itlnet.net/programming/program/Reference/c53g01c/menu.html"]);
 stm_aix("p2i3","p1i0",[0," Harbour ","","",-1,-1,0,"/doc/index.html"]);
 stm_aix("p2i4","p1i0",[0," FAQ (outdated) ","","",-1,-1,0,"/faq/index.html"]);
 stm_aix("p2i5","p1i0",[0," Samples ","","",-1,-1,0,"/samples.html"]);
@@ -52,7 +52,6 @@ stm_aix("p0i16","p0i2",[]);
 stm_aix("p0i17","p0i3",[2,"","language_en.png","language_en.png",62,65,0,""]);
 stm_bpx("p7","p1",[1,4,0,-3,2,0,28]);
 stm_aix("p7i0","p1i0",[0," English ","","",-1,-1,0,"/","_self","","","flageua.png","flageua.png",28,17]);
-stm_aix("p7i2","p7i0",[0," Portugués (outdated) ","","",-1,-1,0,"http://www.harbour-project.com.br","_self","","","flagbr.png","flagbr.png"]);
 stm_ep();
 stm_ep();
 stm_em();
