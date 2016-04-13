@@ -13,7 +13,7 @@ stm_aix("p0i5","p0i1",[2,"","documentation.png","documentation.png",90,65,0,"/do
 stm_bpx("p2","p1",[1,4,0,-3,3,0,0,0,100,"",-2,"",-2,50,0,0,"#CCCCCC"]);
 stm_aix("p2i0","p1i0",[0," Readme ","","",-1,-1,0,"https://github.com/harbour/core/#readme"]);
 stm_aix("p2i1","p1i0",[0," ChangeLog ","","",-1,-1,0,"https://github.com/harbour/core/raw/master/ChangeLog.txt"]);
-stm_aix("p2i2","p1i0",[0," Clipper 5.3 ","","",-1,-1,0,"https://www.itlnet.net/programming/program/Reference/c53g01c/menu.html"]);
+stm_aix("p2i2","p1i0",[0," Clipper 5.3 ","","",-1,-1,0,"/ng/c53g01c/menu.html"]);
 stm_aix("p2i3","p1i0",[0," Harbour ","","",-1,-1,0,"/doc/index.html"]);
 stm_aix("p2i4","p1i0",[0," FAQ (outdated) ","","",-1,-1,0,"/faq/index.html"]);
 stm_aix("p2i5","p1i0",[0," Samples ","","",-1,-1,0,"/samples.html"]);
