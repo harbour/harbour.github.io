@@ -6,7 +6,7 @@
 <title>Harbour Reference Guide</title>
 <meta name="generator" content="Harbour examples/hbdoc">
 </meta>
-<meta name="keywords" content="Harbour project, Clipper, xBase, database, Free Software, GNU, compiler, cross platform, 32-bit, FiveWin">
+<meta name="keywords" content="Harbour Project, Clipper, xBase, database, Free Software, GNU, compiler, cross platform, 32-bit, 64-bit">
 </meta>
 <link rel="stylesheet" type="text/css" href="hbdoc.css">
 </link>
@@ -29,34 +29,28 @@ Welcome to Harbour ==================
 </div>
 <div class="itemtext">
 Clipper is a trademark of Computer Associates and will often be
-referred to as CA-Cl*pper within Harbour documents.  Regardless of
+referred to as CA-Cl*pper within Harbour documents. Regardless of
 this variant, Clipper is recognized as Computer Associates' trademark.
 <br />
 </div>
 <div class="itemtext">
 Harbour is a free software compiler for the xBase superset language
 often referred to as Clipper (the language that is implemented by the
-compiler Clipper). The goal of the Harbour project is to produce a
-cross platform CA-Cl*pper compatible compiler.
+compiler Clipper). The goal of Harbour is to produce a cross platform
+CA-Cl*pper compatible compiler.
 <br />
 </div>
 <div class="itemtext">
-The Harbour website is at &lt;URL:https://harbour.github.io/&gt;. If you
-have any problems with this copy of Harbour please visit our website
-and ensure that you are using the latest release.
-<br />
-</div>
-<div class="itemtext">
-If you have any questions about Harbour please be sure to read the
-FAQ &lt;URL:https://harbour.github.io/faq/&gt;. Also, please be sure to
-read the documentation that comes with Harbour, you should find it in
-the same directory in which you found this file.
+The Harbour website is at &lt;URL:https://github.
+com/vszakats/harbour-core/&gt;. If you have any problems with this copy
+of Harbour please visit our web site and ensure that you are using
+the latest release.
 <br />
 </div>
 <div class="itemtext">
 If you are reading this file as part of a source distribution of
-harbour you probably want to start by reading dirstruc.txt because
-this is your map to the harbour source directories.
+Harbour you probably want to start by reading dirstruc.txt because
+this is your map to the Harbour source directories.
 <br />
 </div>
 <div class="itemtext">
@@ -2249,7 +2243,7 @@ Returns an array with the days names.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-ADays()  --&gt; aDays
+ADays() --&gt; aDays
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -2402,7 +2396,7 @@ Returns an array with the months names.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-AMonths()  --&gt; aMonths
+AMonths() --&gt; aMonths
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -2424,8 +2418,8 @@ selected current language.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 aMonths := AMonths()
-? aMonths[ 1 ] // -&gt; January
-? aMonths[ 1 ] // -&gt; Enero (if the selected language is Spanish)
+? aMonths[ 1 ]  // -&gt; January
+? aMonths[ 1 ]  // -&gt; Enero (if the selected language is Spanish)
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -3316,7 +3310,7 @@ Gets the first day in a month.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-BoM( &lt;dDate&gt; )  --&gt; dBOM
+BoM( &lt;dDate&gt; ) --&gt; dBOM
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -3337,8 +3331,8 @@ This function returns the first day of a given month date.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 Set( _SET_DATEFORMAT, &quot;yyyy-mm-dd&quot; )
-? BoM( hb_SToD( &quot;20000125&quot; ) ) // -&gt; &quot;2000-01-01&quot;
-? BoM( hb_SToD( &quot;20000224&quot; ) ) // -&gt; &quot;2000-02-01&quot;
+? BoM( hb_SToD( &quot;20000125&quot; ) )  // -&gt; &quot;2000-01-01&quot;
+? BoM( hb_SToD( &quot;20000224&quot; ) )  // -&gt; &quot;2000-02-01&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -3376,7 +3370,7 @@ Gets the first date of the year.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-BoY( &lt;dDate&gt; )  --&gt; dBOY
+BoY( &lt;dDate&gt; ) --&gt; dBOY
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -3397,8 +3391,8 @@ This function returns the first date of a given year date.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 Set( _SET_DATEFORMAT, &quot;yyyy-mm-dd&quot; )
-? BoY( hb_SToD( &quot;20000125&quot; ) ) // -&gt; &quot;2000-01-01&quot;
-? BoY( hb_SToD( &quot;20010224&quot; ) ) // -&gt; &quot;2001-01-01&quot;
+? BoY( hb_SToD( &quot;20000125&quot; ) )  // -&gt; &quot;2000-01-01&quot;
+? BoY( hb_SToD( &quot;20010224&quot; ) )  // -&gt; &quot;2001-01-01&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -3423,114 +3417,6 @@ Library is hbmisc
 <div class="itemtitle">See also</div>
 <div class="itemtext">
 EoY()
-<br />
-</div>
-<div id="ctcinit">
-<h4>
-ctcinit()
-</h4>
-</div>
-<div class="oneliner">
-Initializes the CT3 library, C part
-<br />
-</div>
-<div class="itemtitle">Syntax</div>
-<div class="itemtext">
-ctcinit() -&gt; lInitialized
-<br />
-</div>
-<div class="itemtitle">Argument(s)</div>
-<div class="itemtext">
-None
-<br />
-</div>
-<div class="itemtitle">Returns</div>
-<div class="itemtext">
-lInitialized     .T. if the function has been correctly initialized
-<br />
-</div>
-<div class="itemtitle">Description</div>
-<div class="itemtext">
-The ctcinit() function initializes the C source part of the CT3
-library. Do not call this function directly.
-<br />
-</div>
-<div class="itemtitle">Status</div>
-<div class="itemtext">
-Ready
-<br />
-</div>
-<div class="itemtitle">Compliance</div>
-<div class="itemtext">
-ctcinit() is a new function in Harbour's CT3 library.
-<br />
-</div>
-<div class="itemtitle">Platform(s)</div>
-<div class="itemtext">
-This is available on all platforms
-<br />
-</div>
-<div class="itemtitle">File(s)</div>
-<div class="itemtext">
-Library is hbct.
-<br />
-</div>
-<div class="itemtitle">See also</div>
-<div class="itemtext">
-ctinit(), ctexit()
-<br />
-</div>
-<div id="ctinit">
-<h4>
-ctinit()
-</h4>
-</div>
-<div class="oneliner">
-Initializes the CT3 library
-<br />
-</div>
-<div class="itemtitle">Syntax</div>
-<div class="itemtext">
-ctinit() -&gt; lInitialized
-<br />
-</div>
-<div class="itemtitle">Argument(s)</div>
-<div class="itemtext">
-None
-<br />
-</div>
-<div class="itemtitle">Returns</div>
-<div class="itemtext">
-lInitialized     .T. if the function has been correctly initialized
-<br />
-</div>
-<div class="itemtitle">Description</div>
-<div class="itemtext">
-The ctinit() function initializes the CT3 library. Identical code is
-declared as INIT FUNCTION, thus should be executed automatically at
-the beginning of the application, but it is a good idea to call it
-once again explicitly somewhere at the beginning of your program to
-check the initialization.
-<br />
-</div>
-<div class="itemtitle">Status</div>
-<div class="itemtext">
-Ready
-<br />
-</div>
-<div class="itemtitle">Compliance</div>
-<div class="itemtext">
-ctinit() is a new function in Harbour's CT3 library.
-<br />
-</div>
-<div class="itemtitle">Platform(s)</div>
-<div class="itemtext">
-This is available on all platforms
-<br />
-</div>
-<div class="itemtitle">File(s)</div>
-<div class="itemtext">
-Library is hbct.
 <br />
 </div>
 <div id="cd">
@@ -6230,7 +6116,7 @@ Gets the days in a month.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-DaysInMonth( &lt;dDate&gt; )  --&gt; nDays
+DaysInMonth( &lt;dDate&gt; ) --&gt; nDays
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -6250,8 +6136,8 @@ This function returns the number of days of the given date month.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? DaysInMonth( hb_SToD( &quot;20000101&quot; ) ) // -&gt; 31
-? DaysInMonth( hb_SToD( &quot;20000201&quot; ) ) // -&gt; 29
+? DaysInMonth( hb_SToD( &quot;20000101&quot; ) )  // -&gt; 31
+? DaysInMonth( hb_SToD( &quot;20000201&quot; ) )  // -&gt; 29
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -6409,7 +6295,7 @@ Gets the day number of the year.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-DoY( &lt;dDate&gt; )  --&gt; nDay
+DoY( &lt;dDate&gt; ) --&gt; nDay
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -6429,8 +6315,8 @@ This function returns the day number of the year for a given date.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? DoY( hb_SToD( &quot;20000131&quot; ) ) // -&gt; 31
-? DoY( hb_SToD( &quot;20000220&quot; ) ) // -&gt; 51
+? DoY( hb_SToD( &quot;20000131&quot; ) )  // -&gt; 31
+? DoY( hb_SToD( &quot;20000220&quot; ) )  // -&gt; 51
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -6529,7 +6415,7 @@ Gets the last day in a month.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-EoM( &lt;dDate&gt; )  --&gt; dEOM
+EoM( &lt;dDate&gt; ) --&gt; dEOM
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -6550,8 +6436,8 @@ This function returns the last day of a given month date.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 Set( _SET_DATEFORMAT, &quot;yyyy-mm-dd&quot; )
-? EoM( hb_SToD( &quot;20000101&quot; ) ) // -&gt; &quot;2000-01-31&quot;
-? EoM( hb_SToD( &quot;20000201&quot; ) ) // -&gt; &quot;2000-02-29&quot;
+? EoM( hb_SToD( &quot;20000101&quot; ) )  // -&gt; &quot;2000-01-31&quot;
+? EoM( hb_SToD( &quot;20000201&quot; ) )  // -&gt; &quot;2000-02-29&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -6589,7 +6475,7 @@ Gets the last date of the year.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-EoY( &lt;dDate&gt; )  --&gt; dEOY
+EoY( &lt;dDate&gt; ) --&gt; dEOY
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -6610,8 +6496,8 @@ This function returns the last date of a given year date.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 Set( _SET_DATEFORMAT, &quot;yyyy-mm-dd&quot; )
-? EoY( hb_SToD( &quot;20000101&quot; ) ) // -&gt; &quot;2000-12-31&quot;
-? EoY( hb_SToD( &quot;20010101&quot; ) ) // -&gt; &quot;2001-12-31&quot;
+? EoY( hb_SToD( &quot;20000101&quot; ) )  // -&gt; &quot;2000-12-31&quot;
+? EoY( hb_SToD( &quot;20010101&quot; ) )  // -&gt; &quot;2001-12-31&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -8100,7 +7986,7 @@ the screen from the calling program.  Defaults to .T. if not passed.
 <div class="itemtext">
 &lt;cColorList&gt; is a list of colors for the TBrowse columns. The 1st
 color is used as SAY/TBrowse Background and the 3rd and 4th colors
-are used as part of column:defColor := {3, 4}
+are used as part of column:defColor := { 3, 4 }
 <br />
 </div>
 <div class="itemtext">
@@ -8145,7 +8031,7 @@ LOCAL nFreeze    := 1
 LOCAL lSaveScrn  := .T.
 LOCAL cColorList := &quot;N/W, N/BG, B/W, B/BG, B/W, B/BG, R/W, B/R&quot;
 LOCAL cColorShad := &quot;N/N&quot;
-USE tbnames INDEX tbnames NEW // indexed on Last + First
+USE tbnames INDEX tbnames NEW  // indexed on Last + First
 // Pass Heading as character and Field as Block including Alias
 // To eliminate the need to use FieldWBlock() function in ft_BrwsWhl()
 AAdd( aFields, { &quot;Last Name&quot; , {|| TBNames-&gt;Last }  } )
@@ -8155,8 +8041,7 @@ IF ft_BrwsWhl( aFields, bWhile, cKey, nFreeze, lSaveScrn, ;
    cColorList, cColorShad, 3, 6, MaxRow() - 2, MaxCol() - 6 ) == 0
    ? &quot;Sorry, No records were selected&quot;
 ELSE
-   ? &quot;You Selected:&quot;, TBNames-&gt;Last, ;
-      TBNames-&gt;First, TBNames-&gt;City
+   ? &quot;You Selected:&quot;, TBNames-&gt;Last, TBNames-&gt;First, TBNames-&gt;City
 ENDIF
 </pre>
 <div id="ft_byt2bit">
@@ -8604,10 +8489,10 @@ Returns an 8 element array of calendar data:
 <br />
 </div>
 <div class="itemtext">
-Element  Value [1]      Date in current date format. [2]      Numeric
-month number. [3]      Numeric day number. [4]      Numeric year
-number. [5]      Month in character format. [6]      Day of the week
-in character format. [7]      Numeric Julian day. [8]      Current
+Element  Value [ 1 ]    Date in current date format. [ 2 ]    Numeric
+month number. [ 3 ]    Numeric day number. [ 4 ]    Numeric year
+number. [ 5 ]    Month in character format. [ 6 ]    Day of the week
+in character format. [ 7 ]    Numeric Julian day. [ 8 ]    Current
 time in time format.
 <br />
 </div>
@@ -8801,7 +8686,7 @@ The subarray has the following structure:
 <br />
 </div>
 <div class="itemtext">
-[1]  cName    is the name of this color setting i.e. &quot;Pick List&quot;
+[ 1 ] cName    is the name of this color setting i.e. &quot;Pick List&quot;
 <br />
 </div>
 <div class="itemtext">
@@ -8809,7 +8694,7 @@ Maximum length is 20 bytes
 <br />
 </div>
 <div class="itemtext">
-[2]  cClrStr  is the current color string
+[ 2 ] cClrStr  is the current color string
 <br />
 </div>
 <div class="itemtext">
@@ -8840,7 +8725,7 @@ foreground [+] / background [*] i.e. &quot;GR+/BG*, N/W*, N+/N, , W/N&quot;
 <br />
 </div>
 <div class="itemtext">
-[3]  cType  is the type of color setting
+[ 3 ] cType  is the type of color setting
 <br />
 </div>
 <div class="itemtext">
@@ -8860,7 +8745,7 @@ test display.
 <br />
 </div>
 <div class="itemtext">
-[4]  cFillChar  is the character (for desktop background only)
+[ 4 ] cFillChar  is the character (for desktop background only)
 <br />
 </div>
 <div class="itemtext">
@@ -8904,9 +8789,9 @@ normal color string returned.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-LOCAL aClrs  := {}
+LOCAL aClrs
 LOCAL lColor := IsColor()
-SET SCOREBOARD OFF
+Set( _SET_SCOREBOARD, .F. )
 SetBlink( .F. )       // Allow bright backgrounds
 // .... a typical application might have the following different settings
 //      normally these would be stored in a .dbf/.dbv
@@ -9100,7 +8985,7 @@ A 2-element array containing the following information:
 <br />
 </div>
 <div class="itemtext">
-aDateInfo[1] - an ANSI date string indicating the beginning
+aDateInfo[ 1 ] - an ANSI date string indicating the beginning
 <br />
 </div>
 <div class="itemtext">
@@ -9108,7 +8993,7 @@ date of the year.  Only the month and day are meaningful.
 <br />
 </div>
 <div class="itemtext">
-aDateInfo[2] - the number of the first day of the week
+aDateInfo[ 2 ] - the number of the first day of the week
 <br />
 </div>
 <div class="itemtext">
@@ -9153,7 +9038,7 @@ ft_AcctAdj() ft_Year()       ft_AcctYear()
 Set( _SET_DATEFORMAT, &quot;yyyy-mm-dd&quot; )
 ft_DateCnfg( &quot;1980-07-01&quot; )    // year is insignificant
 // Examples of return values:
-//                                          aArray[1]    aArray[2]
+//                                         aArray[ 1 ]   aArray[ 2 ]
 //  System date format: American
 SET DATE TO AMERICAN
 aArray := ft_DateCnfg()                //  &quot;1980.01.01&quot;     1 (Sun.)
@@ -10177,7 +10062,7 @@ Appends a line to the currently selected text file
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-ft_FAppend( [ &lt; nLines &gt; ] ) -&gt; NIL
+ft_FAppend( [ &lt;nLines&gt; ] ) -&gt; NIL
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -10457,7 +10342,8 @@ among others.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-IF ft_FUse( &quot;test.txt&quot; ) &lt; 0     // open text file
+#include &quot;fileio.ch&quot;
+IF ft_FUse( &quot;test.txt&quot; ) != F_ERROR     // open text file
    err := ft_FError()
    ? &quot;Error opening file 'test.txt', error code (&quot; + ;
       hb_ntos( err ) + &quot;)&quot;
@@ -10499,7 +10385,7 @@ ft_FindITh( &lt;cCheckFor&gt;, &lt;cCheckIn&gt;, &lt;nWhichOccurrence&gt; ;
 <br />
 </div>
 <div class="itemtext">
-sensitive.  The default is no case sensitivity (.F.).
+sensitive.  The default is no case sensitivity (.T.).
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -10953,17 +10839,17 @@ file currently open, if any, will be closed.
 </div>
 <div class="itemtext">
 ^b&lt;nMode&gt;^n is the open mode for the file.  Please refer to the
-discussion of open modes under FOpen() in the Clipper manual and
-fileio.ch for a list of allowable open modes.  If not specified, the
-file will be opened with a mode of FO_READ + FO_SHARED (64).
+discussion of file open modes in fileio.ch for a list of allowable
+open modes.  If not specified, the file will be opened with a mode of
+FO_READ + FO_SHARED.
 <br />
 </div>
 <div class="itemtitle">Returns</div>
 <div class="itemtext">
 If ^b&lt;cFile&gt;^n is passed and the file is opened successfully, an
 integer containing the text file's workarea.  If the file cannot be
-opened, -1 will be returned.  In this case, check the return value of
-^bft_FError()^n for the cause of the error.
+opened, F_ERROR (-1) will be returned.  In this case, check the
+return value of ^bft_FError()^n for the cause of the error.
 <br />
 </div>
 <div class="itemtext">
@@ -11015,7 +10901,7 @@ Write a line to the currently selected text file
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-ft_FWriteLn( &lt; cData &gt;, [ &lt; lInsert &gt; ] ) -&gt; lSuccess
+ft_FWriteLn( &lt;cData&gt;, [ &lt;lInsert&gt; ] ) -&gt; lSuccess
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -11068,7 +10954,7 @@ A text file &quot;record&quot; is a line of text terminated by a CRLF/LF.
 <pre class="examples">
 // write a line of text to a file
 ft_FUse( &quot;config.sys&quot; )
-DO WHILE ! hb_LeftIsI( ft_FReadLn(), &quot;FILES=&quot; ) .AND. ! ft_FEof()
+DO WHILE ! hb_LeftEqI( ft_FReadLn(), &quot;FILES=&quot; ) .AND. ! ft_FEof()
    ft_FSkip()
 ENDDO
 ft_FWriteLn( &quot;FILES=30&quot;, ft_FEof() )
@@ -11332,7 +11218,7 @@ nPage := ft_GetVPg()
 </pre>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-ft_SetVpg()
+ft_SetVPg()
 <br />
 </div>
 <div id="ft_hex2dec">
@@ -12359,7 +12245,7 @@ displayed
 <div class="itemtitle">Description</div>
 <div class="itemtext">
 This function gets the display page for the mouse cursor. The valid
-values of nPage is dependent upon the display mode. See ft_SetVpg()
+values of nPage is dependent upon the display mode. See ft_SetVPg()
 for changing the current video page
 <br />
 </div>
@@ -13157,7 +13043,7 @@ ft_NoOccur( &lt;cCheckFor&gt;, &lt;cCheckIn&gt; ;
 </div>
 <div class="itemtext">
 &lt;lIgnoreCase&gt; is a boolean variable to force case sensitivity
-(optional, defaults to .F.).
+(optional, defaults to .T.).
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -13181,7 +13067,7 @@ second string.
 ? ft_NoOccur( &quot;the&quot;, cMemoString )
 // Find the number of times &quot;the&quot; appears in cMemoString, case
 // sensitive
-? ft_NoOccur( &quot;the&quot;, cMemoString, .T. )
+? ft_NoOccur( &quot;the&quot;, cMemoString, .F. )
 </pre>
 <div id="ft_ntow">
 <h4>
@@ -14514,7 +14400,7 @@ even more like the KEYBOARD command.  For example,
 <br />
 </div>
 <div class="itemtext">
-#command KEYSTROKE &lt;key&gt; =&gt; ft_PutKey( &lt;key&gt; )
+#xcommand KEYSTROKE &lt;key&gt; =&gt; ft_PutKey( &lt;key&gt; )
 <br />
 </div>
 <div class="itemtext">
@@ -15512,13 +15398,13 @@ Set Date service (Interrupt 33, service 43).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-// The following program takes a date from the command line and sets
+// The following program takes a date from the command-line and sets
 // the DOS system date:
 PROCEDURE Main( cDate )
-   cDate := iif( cDate == NIL, DToS( Date() ), cDate )
+   hb_default( @cDate, DToS( Date() ) )
    ? &quot;Setting date to:&quot;, cDate + &quot;... &quot;
    ft_SetDate( hb_SToD( cDate ) )
-   ? &quot;Today is now:&quot;, DToC( Date() )
+   ? &quot;Today is now:&quot;, Date()
    RETURN
 </pre>
 <div id="ft_settime">
@@ -15560,7 +15446,7 @@ Set Time service (Interrupt 33, service 45).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-// The following program takes a time string from the command line and sets
+// The following program takes a time string from the command-line and sets
 // the DOS system time:
 PROCEDURE Main( cTime )
    cTime := iif( cTime == NIL, Time(), cTime )
@@ -15752,24 +15638,18 @@ None
 </div>
 <div class="itemtitle">Returns</div>
 <div class="itemtext">
-A numeric corresponding to the number of K memory.
+A numeric corresponding to the number of KiB memory.
 <br />
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-ft_SysMem() simply reports the amount of conventional memory (up to
-640K) installed.
-<br />
-</div>
-<div class="itemtext">
-ft_SysMem() uses DOS interrupt 12h to get this information. For
-information, refer to Peter Norton's _Programmer's Guide to the IBM
-PC_ (Brady).
+ft_SysMem() simply reports the amount of conventional memory
+installed.
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? &quot;Conventional memory installed:&quot;, hb_ntos( ft_SysMem() ) + &quot;K&quot;
+? &quot;Conventional memory:&quot;, hb_ntos( ft_SysMem() ), &quot;KiB installed&quot;
 </pre>
 <div id="ft_tempfil">
 <h4>
@@ -15800,7 +15680,8 @@ attribute set.  The default is .F.
 <div class="itemtitle">Returns</div>
 <div class="itemtext">
 &lt;cFileSpec&gt; should be your path, including the name of the newly
-created unique file.  Use this with FOpen(), etc.
+created unique file.  You are safe to create a new file with this
+filename.
 <br />
 </div>
 <div class="itemtext">
@@ -15812,9 +15693,8 @@ will be returned.
 <div class="itemtext">
 This function uses DOS Interrupt 21, service 5Ah (Create temporary
 file) to create a unique filename in a directory you specify. There
-will be no extension.  After the file is created, you may then
-FOpen() it and do any i/o you need (see the test driver in the source
-code).
+will be no extension.  After the file is created, you may do any I/O
+you need (see the test driver in the source code).
 <br />
 </div>
 <div class="itemtext">
@@ -17109,7 +16989,7 @@ gt_AscPos( &lt;cStr&gt;, &lt;nPos&gt; ) --&gt; nAscVal
 </div>
 <div class="itemtitle">Returns</div>
 <div class="itemtext">
-&lt;nAscVal&gt; - The ascii value of SubStr( &lt;cStr&gt;, &lt;nPos&gt;, 1 )
+&lt;nAscVal&gt; - The ascii value of hb_BSubStr( &lt;cStr&gt;, &lt;nPos&gt;, 1 )
 <br />
 </div>
 <div class="itemtitle">Description</div>
@@ -17119,7 +16999,7 @@ Equivalent (but much faster) to
 <br />
 </div>
 <div class="itemtext">
-Asc(SubStr(cStr, nPos, 1)
+hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
 <br />
 </div>
 <div class="itemtext">
@@ -17127,7 +17007,8 @@ NOTE:
 <br />
 </div>
 <div class="itemtext">
-invalid parameters will return -1 nPos &gt; Len( cStr ) will return -2
+invalid parameters will return -1 nPos &gt; hb_BLen( cStr ) will return
+-2
 <br />
 </div>
 <div class="itemtext">
@@ -17458,8 +17339,8 @@ in &lt;cStr&gt;.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Chr( gt_ChrFirst( &quot;sa &quot;, &quot;This is a test&quot; ) )  // prints &quot;s&quot;
-? Chr( gt_ChrFirst( &quot;et&quot;,  &quot;This is a test&quot; ) )   // prints &quot;t&quot;
+? hb_BChar( gt_ChrFirst( &quot;sa &quot;, &quot;This is a test&quot; ) )  // prints &quot;s&quot;
+? hb_BChar( gt_ChrFirst( &quot;et&quot; , &quot;This is a test&quot; ) )  // prints &quot;t&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -17624,7 +17505,7 @@ string.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // Print the setting of the flags in a flag string called ``cDave''
-FOR nFlag := 1 to ( Len( cDave ) * 8 )
+FOR nFlag := 1 to ( hb_BLen( cDave ) * 8 )
    ? &quot;Flag number &quot;, nFlag, &quot; == &quot;, gt_IsFlag( cDave, nFlag )
 NEXT
 </pre>
@@ -18315,7 +18196,7 @@ This block will be released, when the caller finish it job.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-hb_SetDiskZip( {| nDisk | Alert( &quot;Please insert disk no &quot; + Str( nDisk, 3 ) ) } )
+hb_SetDiskZip( {| nDisk | Alert( &quot;Please insert disk no &quot; + hb_ntos( nDisk ) ) } )
 </pre>
 <div class="itemtitle">Compliance</div>
 <div class="itemtext">
@@ -18470,7 +18351,8 @@ as follow {| nPos, nTotal | GaugeUpdate( aGauge1, nPos / nTotal ) }
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 PROCEDURE Main()
-   LOCAL aExtract := hb_GetFilesInZip( &quot;test.zip&quot; )  // extract all files in zip
+   LOCAL aExtract
+   aExtract := hb_GetFilesInZip( &quot;test.zip&quot; )  // extract all files in zip
    IF hb_UnzipFile( &quot;test.zip&quot;,,,, &quot;.&quot; + hb_ps(), aExtract )
       ? &quot;File was successfully extracted&quot;
    ENDIF
@@ -18853,7 +18735,7 @@ the hb_SetDiskZip().
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 PROCEDURE Main()
-   hb_SetDiskZip( {| nDisk | Alert( &quot;Please insert disk no &quot; + Str( nDisk, 3 ) ) } )
+   hb_SetDiskZip( {| nDisk | Alert( &quot;Please insert disk no &quot; + hb_ntos( nDisk ) ) } )
    IF hb_ZipFileByPKSpan( &quot;test.zip&quot;, &quot;test.prg&quot; )
       ? &quot;File was successfully created&quot;
    ENDIF
@@ -19350,7 +19232,7 @@ Checks if the given date is a leap year.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-IsLeapYear( &lt;dDate&gt; )  --&gt; lTrueOrFalse
+IsLeapYear( &lt;dDate&gt; ) --&gt; lTrueOrFalse
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -19371,8 +19253,8 @@ if isn't.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? IsLeapYear( hb_SToD( &quot;20000101&quot; ) ) // -&gt; .T.
-? IsLeapYear( hb_SToD( &quot;20010101&quot; ) ) // -&gt; .F.
+? IsLeapYear( hb_SToD( &quot;20000101&quot; ) )  // -&gt; .T.
+? IsLeapYear( hb_SToD( &quot;20010101&quot; ) )  // -&gt; .F.
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -20604,8 +20486,8 @@ SetDate( &lt;dDate&gt;, [&lt;lMode&gt;] ) --&gt; lSet
 <div class="itemtext">
 &lt;lMode&gt;  Designates whether the date should also be set in the CMOS-
 RAM of an AT.  The default is do not write (.F.). Note that in
-Windows plataform this adjust is automatic, therefore this parameter
-is without efect.
+Windows platform this adjust is automatic, therefore this parameter
+is without effect.
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -20731,7 +20613,7 @@ to become the system time.
 &lt;lMode&gt;  Designates whether the time should also be set in the
 CMOS-RAM of an AT.  The default is do not write to CMOS-RAM. Note
 that in Windows platform this adjust is automatic, therefore this
-parameter is without efect.
+parameter is without effect.
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -21022,9 +20904,9 @@ points of the required operations.
 Be aware that this function is both quite time -
 O(Len(cString1)*Len(cString2)) - and memory consuming -
 O((Len(cString1)+1)*(Len(cString2)+1)*sizeof(int)) - so keep the
-strings as short as possible. E.g., on common 32 bit systems
+strings as short as possible. E.g., on common 32-bit systems
 (sizeof(int) == 4), calling StrDiff() with two strings of 1024 bytes
-in length will consume 4 MB of memory. To not impose unneeded
+in length will consume 4 MiB of memory. To not impose unneeded
 restrictions, the function will only check if
 (Len(cString1)+1)*(Len(cString2)+1)*sizeof(int) &lt;= UINT_MAX, although
 allocing UINT_MAX bytes will not work on most systems. If this simple
@@ -21093,7 +20975,7 @@ Format a string
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-StrFormat(&lt;cMask&gt;[, &lt;cPar1&gt;[, &lt;cParn&gt;[, ...]]) --&gt; cString
+StrFormat( &lt;cMask&gt;[, &lt;cPar1&gt;[, &lt;cParn&gt;[, ...]] ) --&gt; cString
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -21133,7 +21015,7 @@ You can print &quot;%&quot; character with &quot;%%&quot;.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 StrFormat( &quot;Please insert disk %1 to drive %2&quot;, hb_ntos( 2 ), &quot;A:&quot; )
-StrFormat( &quot;This is %1 from %2&quot;, &quot;Victor&quot;, &quot;Hungary&quot; )
+StrFormat( &quot;This is %1 from %2&quot;, &quot;John&quot;, &quot;Earth&quot; )
 StrFormat( &quot;%2 %1 %2&quot;, &quot;Param1&quot;, &quot;Param2&quot; )
 </pre>
 <div class="itemtitle">Status</div>
@@ -21327,15 +21209,15 @@ The class methods are as follows:
 <br />
 </div>
 <div class="itemtext">
-New()              Creates a new instance of the TFileRead class.
+New()                Creates a new instance of the TFileRead class.
 <br />
 </div>
 <div class="itemtext">
-Open([&lt;nFlags&gt;])   Opens the file for reading. The optional nFlags
+Open( [&lt;nFlags&gt;] )   Opens the file for reading. The optional nFlags
 <br />
 </div>
 <div class="itemtext">
-parameter can use any of the FOpen() flags from fileio.ch. The
+parameter can use any of the file open flags from fileio.ch. The
 default is FO_READ + FO_SHARED. Calling this method when the file is
 already open causes the next ReadLine() to start over
 <br />
@@ -21345,11 +21227,11 @@ from the beginning of the file.
 <br />
 </div>
 <div class="itemtext">
-Close()            Closes the file.
+Close()              Closes the file.
 <br />
 </div>
 <div class="itemtext">
-ReadLine()         Returns one line from the file, stripping the
+ReadLine()           Returns one line from the file, stripping the
 <br />
 </div>
 <div class="itemtext">
@@ -21362,15 +21244,15 @@ newline: 1) CR CR LF; 2) CR LF;
 <br />
 </div>
 <div class="itemtext">
-Name()             Returns the name of the file.
+Name()               Returns the name of the file.
 <br />
 </div>
 <div class="itemtext">
-IsOpen()           Returns .T. if the file is open.
+IsOpen()             Returns .T. if the file is open.
 <br />
 </div>
 <div class="itemtext">
-MoreToRead()       Returns .T. if there are more lines to be read
+MoreToRead()         Returns .T. if there are more lines to be read
 <br />
 </div>
 <div class="itemtext">
@@ -21378,15 +21260,15 @@ MoreToRead()       Returns .T. if there are more lines to be read
 <br />
 </div>
 <div class="itemtext">
-Error()            Returns .T. if an error has occurred.
+Error()              Returns .T. if an error has occurred.
 <br />
 </div>
 <div class="itemtext">
-ErrorNo()          Returns the current error code.
+ErrorNo()            Returns the current error code.
 <br />
 </div>
 <div class="itemtext">
-ErrorMsg([&lt;cPre&gt;]) Returns a formatted error message.
+ErrorMsg( [&lt;cPre&gt;] ) Returns a formatted error message.
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
@@ -21822,7 +21704,7 @@ successfully released
 The TokenExit() function releases the memory associated with the
 global token environment. One should use it for every TokenInit()
 using the global TE. Additionally, TokenExit() is implicitly called
-from ctexit() to free the memory at library shutdown.
+when the thread or application ends.
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
@@ -23158,7 +23040,7 @@ Gets the week number of the year.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-WoY( &lt;dDate&gt;, &lt;lIso&gt; )  --&gt; nWeek
+WoY( &lt;dDate&gt;, &lt;lIso&gt; ) --&gt; nWeek
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -23181,8 +23063,8 @@ or passing TRUE as second parameter) or 1 - 52 if lIso is FALSE.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? WoY( hb_SToD( &quot;20000131&quot; ) ) // -&gt; 3
-? WoY( hb_SToD( &quot;20000131&quot; ), .F. ) // -&gt; 4
+? WoY( hb_SToD( &quot;20000131&quot; ) )  // -&gt; 3
+? WoY( hb_SToD( &quot;20000131&quot; ), .F. )  // -&gt; 4
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -23368,12 +23250,12 @@ harbour [options] &lt;file[.prg]&gt; [options]
 <br />
 </div>
 <div class="itemtext">
-The command line options have to be separated by at least one space.
+The command-line options have to be separated by at least one space.
 The option can start with either '/' character or '-' character.
 <br />
 </div>
 <div class="itemtext">
-&lt;b&gt;The Harbour command line options:  &lt;/b&gt;
+&lt;b&gt;The Harbour command-line options:  &lt;/b&gt;
 <br />
 </div>
 <div class="itemtext">
@@ -24294,8 +24176,8 @@ function */
 <br />
 </div>
 <div class="itemtext">
-        RETURN Inkey() == K_ESC  /* If press ESC, returns .T. to
-abort. */
+        RETURN hb_keyStd( Inkey() ) == K_ESC  /* If press ESC,
+returns .T. to abort. */
 <br />
 </div>
 <div class="itemtext">
@@ -24437,7 +24319,7 @@ Example: LOCAL/STATIC Var AS ...
 <br />
 </div>
 <div class="itemtext">
-- Class TDbWindow could be the foundation for a generic multiplatform
+- Class TDbWindow could be the foundation for a generic multi-platform
 <br />
 </div>
 <div class="itemtext">
@@ -24453,7 +24335,7 @@ Example: LOCAL/STATIC Var AS ...
 <br />
 </div>
 <div class="itemtext">
-- hb_DiskSpace( &lt;nDrive&gt;, &lt;nType&gt; )
+- hb_vfDirSpace( &lt;nDir&gt;, &lt;nType&gt; )
 <br />
 </div>
 <div class="itemtext">
@@ -24485,18 +24367,18 @@ these are the only datatypes that can cause self-references ( a[ 1 ]
 <br />
 </div>
 <div class="itemtext">
-Since all variables in harbour are stored inside some available
+Since all variables in Harbour are stored inside some available
 tables (the eval stack, memvars table and array of static variables)
 then checking if the reference is still alive is quite easy and
 doesn't require any special treatment during memory allocation.
 Additionaly the garbage collector is scanning some internal data used
-by harbour objects implementation that also stores some values that
+by Harbour objects implementation that also stores some values that
 can contain memory references. These data are used to initialize
 class instance variables and are stored in class shared variables.
 <br />
 </div>
 <div class="itemtext">
-In special cases when the value of a harbour variable is stored
+In special cases when the value of a Harbour variable is stored
 internally in some static area (at C or assembler level), the garbage
 collector will be not able to scan such values since it doesn't know
 their location. This could cause some memory blocks to be released
@@ -24526,10 +24408,10 @@ the idle states.
 <div class="itemtext">
 The idle state is a state when there is no real application code
 executed. For example, the user code is stopped for 0.1 of a second
-during Inkey(0.1) - Harbour is checking the keyboard only during this
-time. It leaves however quite enough time for many other background
-tasks. One such background task can be looking for unreferenced
-memory blocks.
+during Inkey( 0.1 ) - Harbour is checking the keyboard only during
+this time. It leaves however quite enough time for many other
+background tasks. One such background task can be looking for
+unreferenced memory blocks.
 <br />
 </div>
 <div class="itemtext">
@@ -24577,16 +24459,16 @@ will start. See hb_gcCollectAll() and hb_gcItemRef()
 <br />
 </div>
 <div class="itemtext">
-Calling the garbage collector from harbour code
+Calling the garbage collector from Harbour code
 -----------------------------------------------
 <br />
 </div>
 <div class="itemtext">
-The garbage collector can be called directly from the harbour code.
+The garbage collector can be called directly from the Harbour code.
 This is usefull in situations where there is no idle states available
 or the application is working in the loop with no user interaction
 and there is many memory allocations. See hb_gcAll() for explanation
-of how to call this function from your harbour code.
+of how to call this function from your Harbour code.
 <br />
 </div>
 <div class="itemtitle">See also</div>
@@ -24606,7 +24488,7 @@ Read me file for Idle States
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-The idle state is the state of the harbour virtual machine when it
+The idle state is the state of the Harbour virtual machine when it
 waits for the user input from the keyboard or the mouse. The idle
 state is entered during Inkey() calls currently. All applications
 that don't use Inkey() function call can signal the idle states with
@@ -24890,16 +24772,16 @@ unrecoverable error.
 <div class="itemtext">
 hb_gcAlloc() is used to allocate the memory that will be tracked by
 the garbage collector. It allows to properly release memory in case
-of self-referencing or cross-referencing harbour level variables.
+of self-referencing or cross-referencing Harbour level variables.
 Memory allocated with this function should be released with
 hb_gcFree() function or it will be automatically deallocated by the
-GC if it is not locked or if it is not referenced by some harbour
+GC if it is not locked or if it is not referenced by some Harbour
 level variable.
 <br />
 </div>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
-Unknown 'STATUS' code: 'C'
+Unrecognized 'STATUS' code: 'C'
 <br />
 </div>
 <div class="itemtitle">Compliance</div>
@@ -24951,7 +24833,7 @@ not locked are released.
 </div>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
-Unknown 'STATUS' code: 'C'
+Unrecognized 'STATUS' code: 'C'
 <br />
 </div>
 <div class="itemtitle">Compliance</div>
@@ -25005,7 +24887,7 @@ the hb_gcAlloc() function.
 </div>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
-Unknown 'STATUS' code: 'C'
+Unrecognized 'STATUS' code: 'C'
 <br />
 </div>
 <div class="itemtitle">Compliance</div>
@@ -25070,7 +24952,7 @@ be released prematurely during the closest garbage collection).
 </div>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
-Unknown 'STATUS' code: 'C'
+Unrecognized 'STATUS' code: 'C'
 <br />
 </div>
 <div class="itemtitle">Compliance</div>
@@ -25120,7 +25002,7 @@ a codeblock.
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-This function can be called either by the harbour compiler or by user.
+This function can be called either by the Harbour compiler or by user.
 The compiler always passes the item of IT_SYMBOL type that stores the
 name of procedure specified in DO &lt;proc&gt; WITH ... statement.
 <br />
@@ -26262,9 +26144,7 @@ values returned by the FError() function.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-#include &quot;fileio.ch&quot;
-nHandle := FCreate( &quot;test.txt&quot;, FC_NORMAL )
-IF FError() != 0
+IF ( nHandle := FCreate( &quot;test.txt&quot; ) ) == F_ERROR
    ? &quot;Cannot create file, OS error&quot;, FError()
 ENDIF
 </pre>
@@ -26614,22 +26494,13 @@ FOpen() or FCreate() functions.
 <div class="itemtext">
 The value of &lt;nBytes&gt; is the number of bytes to read from the file.
 The returned string will be the number of characters specified in
-&lt;nBytes&gt; or the number of bytes read before an end-of-file charac-
-ter (ASCII 26) is found.
-<br />
-</div>
-<div class="itemtext">
-NOTE  This function is similar to the FRead() function, except that
-it will not read binary characters that may he required as part of a
-header of a file construct. Characters Such as Chr( 0 ) and Chr( 26 )
-may keep this function from performing its intended operation. In
-this event, the FRead() function should he used in place of the
-FReadStr() function.
+&lt;nBytes&gt; or the number of bytes read before a zero byte is found.
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 #include &quot;fileio.ch&quot;
+LOCAL cStr
 IF ( nH := FOpen( &quot;test.txt&quot; ) ) != F_ERROR
    cStr := FReadStr( nH, 100 )
    ? cStr
@@ -27463,6 +27334,15 @@ pointer
 date/datetime, logical, nil, pointer, array, hash table
 <br />
 </div>
+<div class="itemtext">
+Equivalent to:
+<br />
+</div>
+<div class="itemtext">
+hsTable := { =&gt; } hsTable := { &lt;Key1&gt; =&gt; &lt;Value1&gt;, &lt;Key2&gt; =&gt; &lt;Value2&gt;,
+&lt;KeyN&gt; =&gt; &lt;ValueN&gt; }
+<br />
+</div>
 <div class="itemtitle">Returns</div>
 <div class="itemtext">
 A hash table built from the initial key/value pairs
@@ -27494,7 +27374,7 @@ hb_HAllocate( &lt;hsTable&gt;, &lt;nItems&gt; )
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -27527,7 +27407,7 @@ hb_HAutoAdd( &lt;hsTable&gt;, [&lt;lFlag&gt;] ) -&gt; &lt;lPreviousFlag&gt;
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -27579,7 +27459,7 @@ hb_HBinary( &lt;hsTable&gt;, [&lt;lFlag&gt;] ) -&gt; &lt;lPreviousFlag&gt;
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -27631,7 +27511,7 @@ hb_HCaseMatch( &lt;hsTable&gt;, [&lt;lFlag&gt;] ) -&gt; &lt;lPreviousFlag&gt;
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -27682,7 +27562,7 @@ hb_HClone( &lt;hsTable&gt; ) -&gt; &lt;hsDestination&gt;
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -27717,11 +27597,11 @@ hb_HCopy( &lt;hsDestination&gt;, &lt;hsSource&gt;, [&lt;nStart&gt;], [&lt;nCount
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsDestination&gt; a destination hash table, created by hb_Hash()
+&lt;hsDestination&gt; a destination hash table
 <br />
 </div>
 <div class="itemtext">
-&lt;hsSource&gt; a source hash table, created by hb_Hash()
+&lt;hsSource&gt; a source hash table
 <br />
 </div>
 <div class="itemtext">
@@ -27763,7 +27643,7 @@ hb_HDefault( &lt;hsTable&gt;, &lt;DefaultValue&gt; ) -&gt; &lt;OldDefaultValye&g
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -27806,7 +27686,7 @@ hb_HDel( &lt;hsTable&gt;, &lt;Key&gt; ) -&gt; &lt;hsTable&gt;
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -27845,7 +27725,7 @@ hb_HDelAt( &lt;hsTable&gt;, &lt;nPosition&gt; ) -&gt; &lt;hsTable&gt;
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -27884,7 +27764,7 @@ hb_HEval( &lt;hsTable&gt;, &lt;bBlock&gt;, [&lt;nStart&gt;], [&lt;nCount&gt;] ) 
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -27940,7 +27820,7 @@ hb_HFill( &lt;hsTable&gt;, &lt;Value&gt; ) -&gt; &lt;hsTable&gt;
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -27979,7 +27859,7 @@ hb_HGet( &lt;hsTable&gt;, &lt;Key&gt; ) -&gt; &lt;Value&gt;
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -28022,7 +27902,7 @@ hb_HGetDef( &lt;hsTable&gt;, &lt;Key&gt;, [&lt;DefaultValue&gt;] ) -&gt; &lt;Val
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -28067,7 +27947,7 @@ hb_HHasKey( &lt;hsTable&gt;, &lt;Key&gt; ) -&gt; lExists
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -28107,7 +27987,7 @@ hb_HKeyAt( &lt;hsTable&gt;, &lt;nPosition&gt; ) -&gt; &lt;Key&gt;
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -28147,7 +28027,7 @@ hb_HKeys( &lt;hsTable&gt; ) -&gt; &lt;aKeys&gt;
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -28182,11 +28062,11 @@ hb_HMerge( &lt;hsDestination&gt;, &lt;hsSource&gt;, &lt;bBlock&gt;|&lt;nPosition
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsDestination&gt; a destination hash table, created by hb_Hash()
+&lt;hsDestination&gt; a destination hash table
 <br />
 </div>
 <div class="itemtext">
-&lt;hsSource&gt; a source hash table, created by hb_Hash()
+&lt;hsSource&gt; a source hash table
 <br />
 </div>
 <div class="itemtext">
@@ -28238,7 +28118,7 @@ hb_HPairAt( &lt;hsTable&gt;, &lt;nPosition&gt; ) -&gt; &lt;aKeyValue&gt;
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -28277,7 +28157,7 @@ hb_HPos( &lt;hsTable&gt;, &lt;Key&gt; ) -&gt; nPosition
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -28323,7 +28203,7 @@ nPosition
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -28375,7 +28255,7 @@ hb_HSet( &lt;hsTable&gt;, &lt;Key&gt;, &lt;Value&gt; ) -&gt; &lt;hsTable&gt;
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -28418,7 +28298,7 @@ hb_HSort( &lt;hsTable&gt; ) -&gt; &lt;hsSortedTable&gt;
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -28456,7 +28336,7 @@ hb_HValueAt( &lt;hsTable&gt;, &lt;nPosition&gt;, [&lt;NewValue&gt;] ) -&gt; &lt;
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtext">
@@ -28500,7 +28380,7 @@ hb_HValues( &lt;hsTable&gt; ) -&gt; &lt;aValues&gt;
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;hsTable&gt; a hash table, created by hb_Hash()
+&lt;hsTable&gt; a hash table
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -28726,7 +28606,7 @@ An INET socket
 </div>
 <div class="itemtitle">Returns</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtitle">Description</div>
@@ -28765,7 +28645,7 @@ hb_inetAddress( &lt;socket&gt; ) -&gt; cResult
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -28776,8 +28656,8 @@ Server address
 <div class="itemtitle">Description</div>
 <div class="itemtext">
 Returns a string representing the remote server address in quad dot
-notation, e.g. &quot;192.168.1.1&quot;, or the local server address if the
-socket is server side.
+notation, e.g. &quot;127.0.0.1&quot;, or the local server address if the socket
+is server side.
 <br />
 </div>
 <div class="itemtext">
@@ -28835,7 +28715,7 @@ hb_inetClearError( &lt;socket&gt; )
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtitle">Compliance</div>
@@ -28859,7 +28739,7 @@ hb_inetClearPeriodCallback( &lt;socket&gt; )
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtitle">Compliance</div>
@@ -28883,7 +28763,7 @@ hb_inetClearTimeLimit( &lt;socket&gt; )
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtitle">Description</div>
@@ -28912,7 +28792,7 @@ hb_inetClearTimeout( &lt;socket&gt; )
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtitle">Description</div>
@@ -28942,7 +28822,7 @@ hb_inetClose( &lt;socket&gt; ) -&gt; nResult
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -29019,8 +28899,8 @@ hb_inetConnect( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) -&gt; NIL
 <div class="itemtitle">Description</div>
 <div class="itemtext">
 Connects to a remote server described by cAddress, that can be in
-quad dot notation (e.g. &quot;192.168.1.1&quot;) or in DNS name (e.g. &quot;www.
-xharbour.org&quot;), using the desired port.
+quad dot notation (e.g. &quot;127.0.0.1&quot;) or in DNS name (e.g. &quot;example.
+org&quot;), using the desired port.
 <br />
 </div>
 <div class="itemtext">
@@ -29094,7 +28974,7 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) -&gt; NIL
 <div class="itemtitle">Description</div>
 <div class="itemtext">
 Connects to a remote server described by cAddress, that can be
-specified only in quad dot IPV4 notation (e.g. &quot;127.0.0.1&quot;), using
+specified only in quad dot IPv4 notation (e.g. &quot;127.0.0.1&quot;), using
 the desired port. This version of hb_inetConnect() does not use
 gethostbyname, and thus is thread safe and can be used in combination
 with hb_inetGetHosts() to have a finer timeout control while
@@ -29133,7 +29013,7 @@ hb_inetCount( &lt;socket&gt; ) -&gt; nResult
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -29241,7 +29121,7 @@ hb_inetDataReady( &lt;socket&gt;, [ &lt;nMillisec&gt; ] ) -&gt; nResult
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtext">
@@ -29411,7 +29291,7 @@ hb_inetDGramRecv( &lt;socket&gt;, @&lt;cBuffer&gt; [, &lt;nSize&gt; ] ) -&gt; nB
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtext">
@@ -29462,7 +29342,7 @@ hb_inetDGramSend( &lt;socket&gt;, &lt;cAddress&gt;, &lt;nPort&gt;, &lt;cBuffer&g
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtext">
@@ -29541,7 +29421,7 @@ hb_inetErrorCode( &lt;socket&gt; ) -&gt; nResult
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -29581,7 +29461,7 @@ hb_inetErrorDesc( &lt;socket&gt; ) -&gt; cResult
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -29617,7 +29497,7 @@ hb_inetFD( &lt;socket&gt; [, &lt;lNoSocket&gt; ] ) -&gt; nResult
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtext">
@@ -29702,14 +29582,14 @@ An array of IP addresses
 <div class="itemtext">
 Returns an array containing all the IP addresses associated with a
 given host name. The IP addressess returned by this funtion are
-strings in quad dot notations, eg &quot;192.168.1.1&quot;, and can be directly
+strings in quad dot notations, eg &quot;127.0.0.1&quot;, and can be directly
 used into hb_inetConnectIP().
 <br />
 </div>
 <div class="itemtext">
-cName can be any string: valid DNS names (eg. &quot;www.example.com&quot;),
-locally available names (e.g. &quot;localhost&quot; or windows Network
-Neighborhood names), or even IP addresses in quad dot notation.
+cName can be any string: valid DNS names (eg. &quot;example.org&quot;), locally
+available names (e.g. &quot;localhost&quot; or windows Network Neighborhood
+names), or even IP addresses in quad dot notation.
 <br />
 </div>
 <div class="itemtext">
@@ -29744,7 +29624,7 @@ hb_inetGetRcvBufSize( &lt;socket&gt; ) -&gt; nResult
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -29780,7 +29660,7 @@ hb_inetGetSndBufSize( &lt;socket&gt; ) -&gt; nResult
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -29853,7 +29733,7 @@ hb_inetIsSocket( &lt;socket&gt; ) -&gt; lResult
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -29883,7 +29763,7 @@ xPreviousCallback
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtext">
@@ -29926,7 +29806,7 @@ hb_inetPort( &lt;socket&gt; ) -&gt; cResult
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -29961,7 +29841,7 @@ hb_inetRecv( &lt;socket&gt;, @&lt;cResult&gt;, [ &lt;nAmount&gt; ] ) -&gt; nResu
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtext">
@@ -30022,7 +29902,7 @@ hb_inetRecvAll( &lt;socket&gt;, @&lt;cResult&gt;, [ &lt;nAmount&gt; ] ) -&gt; nR
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtext">
@@ -30069,7 +29949,7 @@ hb_inetRecvEndblock( &lt;socket&gt; [, &lt;cBlock &gt;[, @&lt;nBytesRead&gt; [,
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtext">
@@ -30123,7 +30003,7 @@ hb_inetRecvLine( &lt;socket&gt; [, @&lt;nBytesRead&gt;, [, &lt;nMaxLength&gt; [,
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtext">
@@ -30204,7 +30084,7 @@ hb_inetstatus( &lt;socket&gt; ) -&gt; nResult
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtitle">Returns</div>
@@ -30233,7 +30113,7 @@ hb_inetSend( &lt;socket&gt;, &lt;cBuffer&gt; [, &lt;nLength&gt; ] ) -&gt; nResul
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtext">
@@ -30297,7 +30177,7 @@ hb_inetSendAll( &lt;socket&gt;, &lt;cBuffer&gt; [, &lt;nLength&gt; ] ) -&gt; nRe
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtext">
@@ -30411,7 +30291,7 @@ hb_inetSetRcvBufSize( &lt;socket&gt;, nSize ) -&gt; nSize
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtext">
@@ -30449,7 +30329,7 @@ hb_inetSetSndBufSize( &lt;socket&gt;, &lt;nSize&gt; ) -&gt; nSize
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtext">
@@ -30487,7 +30367,7 @@ hb_inetTimeLimit( &lt;socket&gt; [, &lt;nTimeLimit&gt; ) -&gt; NIL
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtext">
@@ -30525,7 +30405,7 @@ hb_inetTimeout( &lt;socket&gt; [, &lt;nTimeout&gt; ] ) -&gt; nPreviousTimeout
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;socket&gt; a socket previously created  / opened
+&lt;socket&gt; a socket previously created / opened
 <br />
 </div>
 <div class="itemtext">
@@ -31392,7 +31272,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-AAdd(), AEval(), dbStruct(), Directory()
+AAdd(), AEval(), dbStruct()
 <br />
 </div>
 <div id="ains">
@@ -31605,8 +31485,8 @@ or until the end of the array has been reached.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-LOCAL aDir := Directory( &quot;*.prg&quot; )
-AScan( aDir,,, {| x, y | x[ 1 ] := &quot;test.prg&quot; } )
+LOCAL aDir := hb_vfDirectory( &quot;*.prg&quot; )
+AScan( aDir,,, {| x, y | x[ 1 ] := &quot;test.prg&quot;, HB_SYMBOL_UNUSED( y ) } )
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -31944,27 +31824,23 @@ by language.
 <br />
 </div>
 <div class="itemtext">
-    Hungarian (ntxhu852)  852            HU852
+    Hungarian (ntxhu852)  852            HU852C
 <br />
 </div>
 <div class="itemtext">
-    Hungarian (sixhu852)  852            HU852S
+    Hungarian (sixhu852)  852            HU852
 <br />
 </div>
 <div class="itemtext">
-    Hungarian (ntxhu852)  ISO-8859-2     HUISO
+    Hungarian (sixhu852)  CWI-2          HUCWI
 <br />
 </div>
 <div class="itemtext">
-    Hungarian (sixhu852)  ISO-8859-2     HUISOS
+    Hungarian             ISO-8859-2     HUISO
 <br />
 </div>
 <div class="itemtext">
-    Hungarian (ntxhu852)  Windows-1250   HUWIN
-<br />
-</div>
-<div class="itemtext">
-    Hungarian (sixhu852)  Windows-1250   HUWINS
+    Hungarian             Windows-1250   HUWIN
 <br />
 </div>
 <div class="itemtext">
@@ -32815,9 +32691,9 @@ Library is core
 IsAffirm(), NationMsg()
 <br />
 </div>
-<div id="languageandnationmsg">
+<div id="nationmsg">
 <h4>
-Language and Nation MSG()
+NationMsg()
 </h4>
 </div>
 <div class="oneliner">
@@ -32826,7 +32702,7 @@ Returns international strings messages.
 </div>
 <div class="itemtitle">Syntax</div>
 <div class="itemtext">
-Language and Nation MSG( &lt;nMsg&gt; ) --&gt; &lt;cMessage&gt;
+NationMsg( &lt;nMsg&gt; ) --&gt; &lt;cMessage&gt;
 <br />
 </div>
 <div class="itemtitle">Argument(s)</div>
@@ -32836,8 +32712,8 @@ Language and Nation MSG( &lt;nMsg&gt; ) --&gt; &lt;cMessage&gt;
 </div>
 <div class="itemtitle">Returns</div>
 <div class="itemtext">
-&lt;cMessage&gt; If &lt;nMsg&gt; is a valid message selector, returns the message.
-If &lt;nMsg&gt; is nil returns &quot;Invalid Argument&quot;, and if &lt;nMsg&gt; is any
+&lt;cMessage&gt; if &lt;nMsg&gt; is a valid message selector, returns the message.
+If &lt;nMsg&gt; is NIL, it returns &quot;Invalid Argument&quot;, and if &lt;nMsg&gt; is any
 <br />
 </div>
 <div class="itemtext">
@@ -32846,7 +32722,7 @@ other type it returns an empty string.
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-Language and Nation MSG() returns international message descriptions.
+NationMsg() returns international message descriptions.
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
@@ -32859,7 +32735,7 @@ ENDDO
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
-Unknown 'STATUS' code: 'C'
+Unrecognized 'STATUS' code: 'C'
 <br />
 </div>
 <div class="itemtitle">Compliance</div>
@@ -32914,7 +32790,7 @@ to keep strict CA-Cl*pper compatibility.
 <br />
 </div>
 <div class="itemtext">
-Available features are: &lt;b&gt;HB_SM_HARBOUR&lt;/b&gt; - enables harbour
+Available features are: &lt;b&gt;HB_SM_HARBOUR&lt;/b&gt; - enables Harbour
 extensions:
 <br />
 </div>
@@ -33221,7 +33097,7 @@ upward or downward; it merely truncates a number at the decimal point.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-SET DECIMAL TO 5
+Set( _SET_DECIMALS, 5 )
 ? Int( 632512.62541 )
 ? Int( 845414111.91440 )
 </pre>
@@ -33602,14 +33478,13 @@ Sqrt( &lt;nNumber&gt; ) --&gt; &lt;nSqrt&gt;
 <div class="itemtitle">Description</div>
 <div class="itemtext">
 This function returns the square root of &lt;nNumber&gt;. The precision of
-this evaluation is based solely on the settings of the SET DECIMAL TO
-command. Any negative number passed as &lt;nNumber&gt; will always return a
-0.
+this evaluation is based solely on the setting of _SET_DECIMALS. Any
+negative number passed as &lt;nNumber&gt; will always return a 0.
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-SET DECIMAL TO 5
+Set( _SET_DECIMALS, 5 )
 ? Sqrt( 632512.62541 )
 ? Sqrt( 845414111.91440 )
 </pre>
@@ -34141,7 +34016,7 @@ PROCEDURE Main()
 CREATE CLASS TMood
    METHOD New() INLINE Self
 ENDCLASS
-CREATE CLASS THappy FROM TMood
+CREATE CLASS THappy INHERIT TMood
    METHOD Smile() INLINE QOut( &quot;*smile*&quot; )
 ENDCLASS
 CREATE CLASS TShirt
@@ -34834,8 +34709,7 @@ specific work area code block use FieldWBlock() instead.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // open a file named test.dbf that have a field named &quot;name&quot;
-LOCAL bField
-bFiled := FieldBlock( &quot;name&quot; )
+LOCAL bFiled := FieldBlock( &quot;name&quot; )
 USE test
 ? &quot;Original value of field 'name':&quot;, Eval( bField )
 Eval( bField, &quot;Mr X new name&quot; )
@@ -34912,9 +34786,8 @@ block return NIL.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-LOCAL bField
 // this block work on the field &quot;name&quot; that exist on work area 2
-bFiled := FieldBlock( &quot;name&quot;, 2 )
+LOCAL bFiled := FieldBlock( &quot;name&quot;, 2 )
 // open a file named One in work area 1
 // that have a field named &quot;name&quot;
 SELECT 1
@@ -35114,8 +34987,7 @@ second expression, the function will return 0.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? 'At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) =', ;
-   At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; )    // 3
+? At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; )    // 3
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -35256,10 +35128,8 @@ parameters lets you indicate a starting and end offset to search in.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? 'hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) =', ;
-   hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; )       // 3
-? 'hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) =', ;
-   hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot;, 4 )    // 0
+? hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot; )       // 3
+? hb_At( &quot;cde&quot;, &quot;abcdefgfedcba&quot;, 4 )    // 0
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -35368,7 +35238,7 @@ systems) if it's a EOF char.
 cFile   := &quot;account.prg&quot;
 cString := hb_MemoRead( cFile )
 cCopyright := &quot;Melina&quot;
-IF At( &quot;Melina&quot;, cString ) == 0               // check for copyright
+IF ! cCopyright $ cString                     // check for copyright
    hb_MemoWrit( cFile, cCopyright + cString ) // if not, add it!
 ENDIF
 </pre>
@@ -35487,7 +35357,7 @@ EOF char at the end of the file.
 cFile   := &quot;account.prg&quot;
 cString := hb_MemoRead( cFile )
 cCopyright := &quot;Melina&quot;
-IF At( &quot;Melina&quot;, cString ) == 0               // check for copyright
+IF ! cCopyright $ cString                     // check for copyright
    hb_MemoWrit( cFile, cCopyright + cString ) // if not, add it!
 ENDIF
 </pre>
@@ -35565,22 +35435,19 @@ RAt().
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-LOCAL cString
-LOCAL cSearch
-LOCAL i, y, r, nLen
-? 'hb_RAt( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) = ', ;
-   hb_RAt( &quot;cde&quot;, &quot;abcdefgfedcba&quot; ) // -&gt; 3
-cString := &quot;acdefcdeedcb&quot;
-cSearch := &quot;cde&quot;
-nLen := Len( cString )
+LOCAL cString := &quot;acdefcdeedcb&quot;
+LOCAL cSearch := &quot;cde&quot;
+LOCAL i, y, r
+LOCAL nLen := Len( cString )
 FOR y := 1 TO nLen
    FOR i := 1 TO nLen
-      IF ( r := hb_RAt( cSearch, cString, y, i ) ) != 0
-      ? 'hb_RAt( &quot;' + cSearch + '&quot;, &quot;' + cString + '&quot;, ' + hb_ntos( y ) + ', ' + hb_ntos( i ) + ' ) = ' + ;
-         hb_ntos( r )
+      IF ( r := hb_RAt( cSearch, cString, y, i ) ) &gt; 0
+         ? 'hb_RAt( &quot;' + cSearch + '&quot;, &quot;' + cString + '&quot;,', hb_ntos( y ) + &quot;,&quot;, hb_ntos( i ), &quot;) =&quot;, ;
+            hb_ntos( r )
       ENDIF
    NEXT
 NEXT
+? hb_RAt( cSearch, &quot;abcdefgfedcba&quot; )  // -&gt; 3
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -35755,8 +35622,8 @@ return a logical false (.F.).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? 'IsAlpha( &quot;hello&quot; ) =', IsAlpha( &quot;hello&quot; )
-? 'IsAlpha( &quot;12345&quot; ) =', IsAlpha( &quot;12345&quot; )
+? IsAlpha( &quot;hello&quot; )
+? IsAlpha( &quot;12345&quot; )
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -36226,7 +36093,7 @@ process, the function will returns a null string (&quot;&quot;).
 cFile   := &quot;account.prg&quot;
 cString := MemoRead( cFile )
 cCopyright := &quot;Melina&quot;
-IF At( &quot;Melina&quot;, cString ) == 0            // check for copyright
+IF ! cCopyright $ cString                  // check for copyright
    MemoWrit( cFile, cCopyright + cString ) // if not, add it!
 ENDIF
 </pre>
@@ -36387,7 +36254,7 @@ Note that MemoWrit() do not use the directory settings SET DEFAULT.
 // variable to a text file.
 cFile   := &quot;account.prg&quot;
 cString := MemoRead( cFile )
-IF At( &quot;Melina&quot;, cString ) == 0            // check for copyright
+IF ! cCopyright $ cString                  // check for copyright
    MemoWrit( cFile, cCopyright + cString ) // if not, add it!
 ENDIF
 </pre>
@@ -36688,10 +36555,8 @@ If the function is unable to find any occurrence of &lt;cSearch&gt; in
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? 'RAt( &quot;cde&quot;, &quot;abcdefgfcdeedcba&quot; ) = ' + ;
-   hb_ntos( RAt( &quot;cde&quot;, &quot;abcdefgfcdeedcba&quot; ) )     // 9
-? 'RAt( &quot;cdr&quot;, &quot;abcdefgfedcba&quot; ) = ' + ;
-   hb_ntos( RAt( &quot;cdr&quot;, &quot;abcdefgfedcba&quot; ) )        // 0
+? hb_ntos( RAt( &quot;cde&quot;, &quot;abcdefgfcdeedcba&quot; ) )     // 9
+? hb_ntos( RAt( &quot;cdr&quot;, &quot;abcdefgfedcba&quot; ) )        // 0
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -36964,6 +36829,7 @@ variable.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
+#include &quot;dbstruct.ch&quot;
 PROCEDURE Main()
    LOCAL cBigString
    LOCAL cFirst
@@ -36980,23 +36846,23 @@ PROCEDURE Main()
 FUNCTION MakeEmpty( xField )
    LOCAL nRecord
    LOCAL xRetValue
-   IF ! Empty( Alias() )
+   IF ! HB_ISNULL( Alias() )
       nRecord := RecNo()
       dbGoto( 0 )
-      IF ValType( xField ) == &quot;C&quot;
-         xField := AScan( dbStruct(), {| aFields | aFields[ 1 ] == Upper( xfield ) } )
+      IF HB_ISSTRING( xField )
+         xField := AScan( dbStruct(), {| aFields | aFields[ DBS_NAME ] == Upper( xField ) } )
       ELSE
-         DEFAULT xField TO 0
+         hb_default( @xField, 0 )
          IF xField &lt; 1 .OR. xField &gt; FCount()
-            xfield := 0
+            xField := 0
          ENDIF
       ENDIF
-      IF !( xfield == 0 )
-         xRetvalue := FieldGet( xfield )
+      IF xField != 0
+         xRetValue := FieldGet( xField )
       ENDIF
-      dbGoto( nrecord )
+      dbGoto( nRecord )
    ENDIF
-   RETURN xRetvalue
+   RETURN xRetValue
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -37144,8 +37010,8 @@ decimal places), the return value is rounded to an integer.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Str( 10, 6, 2 ) // &quot; 10.00&quot;
-? Str( -10, 8, 2 ) // &quot;  -10.00&quot;
+? Str( 10, 6, 2 )  // &quot; 10.00&quot;
+? Str( -10, 8, 2 )  // &quot;  -10.00&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -37384,8 +37250,8 @@ The StrZero() function was part of the CA-Cl*pper samples.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? StrZero( 10, 6, 2 ) // &quot;010.00&quot;
-? StrZero( -10, 8, 2 ) // &quot;-0010.00&quot;
+? StrZero( 10, 6, 2 )  // &quot;010.00&quot;
+? StrZero( -10, 8, 2 )  // &quot;-0010.00&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -38928,7 +38794,7 @@ __NoNoAlert()
 </h4>
 </div>
 <div class="oneliner">
-Override //NOALERT command line switch
+Override //NOALERT command-line switch
 <br />
 </div>
 <div class="itemtitle">Syntax</div>
@@ -38943,7 +38809,7 @@ This function takes no arguments.
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-The //NOALERT command line switch cause Clipper to ignore calls to
+The //NOALERT command-line switch cause Clipper to ignore calls to
 the Alert() function, this function override this behavior and always
 display Alert() dialog box.
 <br />
@@ -39320,7 +39186,7 @@ first letter of the option.
 <br />
 </div>
 <div class="itemtext">
-If the program is executed with the //NOALERT command line switch,
+If the program is executed with the //NOALERT command-line switch,
 nothing is displayed and it simply returns NIL. This switch could be
 overridden with __NoNoAlert().
 <br />
@@ -39389,7 +39255,7 @@ the Left-Mouse button could be used to select an option.
 <br />
 </div>
 <div class="itemtext">
-The interpretation of the //NOALERT command line switch is done only
+The interpretation of the //NOALERT command-line switch is done only
 if HB_CLP_UNDOC was define during compilation of src/rtl/alert.prg
 <br />
 </div>
@@ -40676,7 +40542,7 @@ source (see Str() for detail).
 <br />
 </div>
 <div class="itemtext">
-There is an undocumented CA-Cl*pper command line switch //STDERR
+There is an undocumented CA-Cl*pper command-line switch //STDERR
 which can set the file handle to write output from OutErr(). If not
 specified the default STDERR is used, //STDERR or //STDERR:0 set
 OutErr() to output to the same file handle as OutStd(), //STDERR:n
@@ -40688,7 +40554,7 @@ HB_CLP_UNDOC flag.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // write error log information
-OutErr( Date(), Time(), &quot;Core meltdown detected&quot; )
+OutErr( hb_DateTime(), &quot;Core meltdown detected&quot; )
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -40932,6 +40798,7 @@ execution and you are inside a READ or MENU TO.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
+#include &quot;inkey.ch&quot;
 // display a menu, press F1 to view the MENU TO variable name
 CLS
 @ 1, 10 PROMPT &quot;blood sucking insect that infect beds   &quot;
@@ -40939,10 +40806,11 @@ CLS
 @ 3, 10 PROMPT &quot;defect; snag; (source of) malfunctioning&quot;
 @ 4, 10 PROMPT &quot;small hidden microphone                 &quot;
 @ 6, 10 SAY &quot;(Press F1 for a hint)&quot;
-SET KEY 28 TO ShowVar
+SetKey( K_F1, {|| ShowVar() } )
 MENU TO What_Is_Bug
-PROCEDURE ShowVar
+STATIC PROCEDURE ShowVar()
    Alert( ReadVar() )     // WHAT_IS_BUG in red Alert() box
+   RETURN
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -40971,7 +40839,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-@...GET, @...PROMPT, MENU TO, READ, SET KEY, __AtPrompt(), __MenuTo()
+@...GET, @...PROMPT, MENU TO, READ, SetKey(), __AtPrompt(), __MenuTo()
 <br />
 </div>
 <div id="tbrowsedb">
@@ -41248,7 +41116,7 @@ Nothing
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-This function can be called either by the harbour compiler or by user.
+This function can be called either by the Harbour compiler or by user.
 The compiler always passes the item of IT_SYMBOL type that stores the
 name of variable. If a variable with the same name exists already
 then the value of old variable is hidden until the new variable is 
@@ -41302,7 +41170,7 @@ Nothing
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-This function can be called either by the harbour compiler or by user.
+This function can be called either by the Harbour compiler or by user.
 The compiler always passes the item of IT_SYMBOL type that stores the
 name of variable. If a variable with the same name exists already
 then the new variable is not created - the previous value remains
@@ -41569,15 +41437,13 @@ procedure
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 PROCEDURE Main()
-   PRIVATE mPrivate
-   mPrivate := &quot;PRIVATE from Main()&quot;
+   PRIVATE mPrivate := &quot;PRIVATE from Main()&quot;
    ? mPrivate     // PRIVATE from Main()
    Test()
    ? mPrivate     // PRIVATE from Main()
    RETURN
 PROCEDURE Main()
-   PRIVATE mPrivate
-   mPrivate := &quot;PRIVATE from Main()&quot;
+   PRIVATE mPrivate := &quot;PRIVATE from Main()&quot;
    ? mPrivate           // PRIVATE from Main()
    RELEASE mPrivate
    ? mPrivate           // NIL
@@ -41638,6 +41504,7 @@ PROCEDURE Main()
    ? Empty( 0 )               // .T.
    ? Empty( .F. )             // .T.
    ? Empty( &quot;&quot; )              // .T.
+   ? Empty( &quot;  &quot; )            // .T.
    ? Empty( 1 )               // .F.
    ? Empty( .T. )             // .F.
    ? Empty( &quot;smile&quot; )         // .F.
@@ -42186,7 +42053,7 @@ Bin2I( &lt;cBuffer&gt; ) --&gt; nNumber
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;cBuffer&gt; is a character string that contain 16 bit encoded signed
+&lt;cBuffer&gt; is a character string that contains 16-bit encoded signed
 short integer (least significant byte first). The first two bytes are
 taken into account, the rest if any are ignored.
 <br />
@@ -42200,9 +42067,9 @@ Bin2I() return numeric integer (or 0 if &lt;cBuffer&gt; is not a string).
 <div class="itemtext">
 Bin2I() is one of the low level binary conversion functions, those
 functions convert between Harbour numeric and a character
-representation of numeric value. Bin2I() take two bytes of encoded 16
-bit signed short integer and convert it into standard Harbour numeric
-value.
+representation of numeric value. Bin2I() take two bytes of encoded
+16-bit signed short integer and convert it into standard Harbour
+numeric value.
 <br />
 </div>
 <div class="itemtext">
@@ -42221,15 +42088,15 @@ Bin2I() is the opposite of I2Bin()
 // Show DBF last update date
 #include &quot;fileio.ch&quot;
 PROCEDURE Main()
-   LOCAL nHandle, cYear, cMonth, cDay
-   IF ( nHandle := FOpen( &quot;test.dbf&quot; ) ) != F_ERROR
-      FSeek( nHandle, 1 )
+   LOCAL hFile, cYear, cMonth, cDay
+   IF ( hFile := hb_vfOpen( &quot;test.dbf&quot;, FO_READ ) ) != NIL
+      hb_vfSeek( hFile, 1 )
       cYear := cMonth := cDay := &quot; &quot;
-      FRead( nHandle, @cYear , hb_BLen( cYear ) )
-      FRead( nHandle, @cMonth, hb_BLen( cMonth ) )
-      FRead( nHandle, @cDay  , hb_BLen( cDay ) )
+      hb_vfRead( hFile, @cYear , hb_BLen( cYear ) )
+      hb_vfRead( hFile, @cMonth, hb_BLen( cMonth ) )
+      hb_vfRead( hFile, @cDay  , hb_BLen( cDay ) )
       ? &quot;Last update:&quot;, Bin2I( cYear ), Bin2I( cMonth ), Bin2I( cDay )
-      FClose( nHandle )
+      hb_vfClose( hFile )
    ELSE
       ? &quot;Can not open file&quot;
    ENDIF
@@ -42252,8 +42119,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2L(), Bin2U(), Bin2W(), I2Bin(), L2Bin(), W2Bin(), Word(), U2Bin(),
-FRead()
+Bin2L(), Bin2U(), Bin2W(), I2Bin(), L2Bin(), W2Bin(), Word(), U2Bin()
 <br />
 </div>
 <div id="bin2l">
@@ -42272,7 +42138,7 @@ Bin2L( &lt;cBuffer&gt; ) --&gt; nNumber
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;cBuffer&gt; is a character string that contain 32 bit encoded signed
+&lt;cBuffer&gt; is a character string that contains 32-bit encoded signed
 long integer (least significant byte first). The first four bytes are
 taken into account, the rest if any are ignored.
 <br />
@@ -42287,7 +42153,7 @@ Bin2L() return numeric integer (or 0 if &lt;cBuffer&gt; is not a string).
 Bin2L() is one of the low level binary conversion functions, those
 functions convert between Harbour numeric and a character
 representation of numeric value. Bin2L() take four bytes of encoded
-32 bit signed long integer and convert it into standard Harbour
+32-bit signed long integer and convert it into standard Harbour
 numeric value.
 <br />
 </div>
@@ -42307,12 +42173,12 @@ Bin2L() is the opposite of L2Bin()
 // Show number of records in DBF
 #include &quot;fileio.ch&quot;
 PROCEDURE Main()
-   LOCAL nHandle, cBuffer := Space( 4 )
-   IF ( nHandle := FOpen( &quot;test.dbf&quot; ) ) != F_ERROR
-      FSeek( nHandle, 4 )
-      FRead( nHandle, @cBuffer, hb_BLen( cBuffer ) )
+   LOCAL hFile, cBuffer := Space( 4 )
+   IF ( hFile := hb_vfOpen( &quot;test.dbf&quot;, FO_READ ) ) != NIL
+      hb_vfSeek( hFile, 4 )
+      hb_vfRead( hFile, @cBuffer, hb_BLen( cBuffer ) )
       ? &quot;Number of records in file:&quot;, Bin2L( cBuffer )
-      FClose( nHandle )
+      hb_vfClose( hFile )
    ELSE
       ? &quot;Can not open file&quot;
    ENDIF
@@ -42335,8 +42201,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2I(), Bin2U(), Bin2W(), I2Bin(), L2Bin(), W2Bin(), Word(), U2Bin(),
-FRead()
+Bin2I(), Bin2U(), Bin2W(), I2Bin(), L2Bin(), W2Bin(), Word(), U2Bin()
 <br />
 </div>
 <div id="bin2u">
@@ -42355,7 +42220,7 @@ Bin2U( &lt;cBuffer&gt; ) --&gt; nNumber
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;cBuffer&gt; is a character string that contain 32 bit encoded unsigned
+&lt;cBuffer&gt; is a character string that contains 32-bit encoded unsigned
 long integer (least significant byte first). The first four bytes are
 taken into account, the rest if any are ignored.
 <br />
@@ -42370,7 +42235,7 @@ Bin2U() return numeric integer (or 0 if &lt;cBuffer&gt; is not a string).
 Bin2U() is one of the low level binary conversion functions, those
 functions convert between Harbour numeric and a character
 representation of numeric value. Bin2U() take four bytes of encoded
-32 bit unsigned long integer and convert it into standard Harbour
+32-bit unsigned long integer and convert it into standard Harbour
 numeric value.
 <br />
 </div>
@@ -42390,12 +42255,12 @@ Bin2U() is the opposite of U2Bin()
 // Show number of records in DBF
 #include &quot;fileio.ch&quot;
 PROCEDURE Main()
-   LOCAL nHandle, cBuffer := Space( 4 )
-   IF ( nHandle := FOpen( &quot;test.dbf&quot; ) ) != F_ERROR
-      FSeek( nHandle, 4 )
-      FRead( nHandle, @cBuffer, hb_BLen( cBuffer ) )
+   LOCAL hFile, cBuffer := Space( 4 )
+   IF ( hFile := hb_vfOpen( &quot;test.dbf&quot;, FO_READ ) ) != NIL
+      hb_vfSeek( hFile, 4 )
+      hb_vfRead( hFile, @cBuffer, hb_BLen( cBuffer ) )
       ? &quot;Number of records in file:&quot;, Bin2U( cBuffer )
-      FClose( nHandle )
+      hb_vfClose( hFile )
    ELSE
       ? &quot;Can not open file&quot;
    ENDIF
@@ -42418,8 +42283,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2I(), Bin2L(), Bin2W(), I2Bin(), L2Bin(), W2Bin(), Word(), U2Bin(),
-FRead()
+Bin2I(), Bin2L(), Bin2W(), I2Bin(), L2Bin(), W2Bin(), Word(), U2Bin()
 <br />
 </div>
 <div id="bin2w">
@@ -42438,7 +42302,7 @@ Bin2W( &lt;cBuffer&gt; ) --&gt; nNumber
 </div>
 <div class="itemtitle">Argument(s)</div>
 <div class="itemtext">
-&lt;cBuffer&gt; is a character string that contain 16 bit encoded unsigned
+&lt;cBuffer&gt; is a character string that contains 16-bit encoded unsigned
 short integer (least significant byte first). The first two bytes are
 taken into account, the rest if any are ignored.
 <br />
@@ -42452,8 +42316,8 @@ Bin2W() return numeric integer (or 0 if &lt;cBuffer&gt; is not a string).
 <div class="itemtext">
 Bin2W() is one of the low level binary conversion functions, those
 functions convert between Harbour numeric and a character
-representation of numeric value. Bin2W() take two bytes of encoded 16
-bit unsigned short integer and convert it into standard Harbour
+representation of numeric value. Bin2W() take two bytes of encoded
+16-bit unsigned short integer and convert it into standard Harbour
 numeric value.
 <br />
 </div>
@@ -42473,12 +42337,12 @@ Bin2W() is the opposite of W2Bin()
 // Show header length of a DBF
 #include &quot;fileio.ch&quot;
 PROCEDURE Main()
-   LOCAL nHandle, cBuffer := Space( 2 )
-   IF ( nHandle := FOpen( &quot;test.dbf&quot; ) ) != F_ERROR
-      FSeek( nHandle, 8 )
-      FRead( nHandle, @cBuffer, hb_BLen( cBuffer ) )
+   LOCAL hFile, cBuffer := Space( 2 )
+   IF ( hFile := hb_vfOpen( &quot;test.dbf&quot;, FO_READ ) ) != NIL
+      hb_vfSeek( hFile, 8 )
+      hb_vfRead( hFile, @cBuffer, hb_BLen( cBuffer ) )
       ? &quot;Length of DBF header in bytes:&quot;, Bin2W( cBuffer )
-      FClose( nHandle )
+      hb_vfClose( hFile )
    ELSE
       ? &quot;Can not open file&quot;
    ENDIF
@@ -42501,8 +42365,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2I(), Bin2L(), Bin2U(), I2Bin(), L2Bin(), W2Bin(), Word(), U2Bin(),
-FRead()
+Bin2I(), Bin2L(), Bin2U(), I2Bin(), L2Bin(), W2Bin(), Word(), U2Bin()
 <br />
 </div>
 <div id="descend">
@@ -42581,8 +42444,8 @@ I2Bin( &lt;nNumber&gt; ) --&gt; cBuffer
 </div>
 <div class="itemtitle">Returns</div>
 <div class="itemtext">
-I2Bin() return two bytes character string that contain 16 bit encoded
-signed short integer (least significant byte first).
+I2Bin() return two bytes character string that contains 16-bit
+encoded signed short integer (least significant byte first).
 <br />
 </div>
 <div class="itemtitle">Description</div>
@@ -42590,7 +42453,7 @@ signed short integer (least significant byte first).
 I2Bin() is one of the low level binary conversion functions, those
 functions convert between Harbour numeric and a character
 representation of numeric value. I2Bin() take a numeric integer value
-and convert it into two bytes of encoded 16 bit signed short integer.
+and convert it into two bytes of encoded 16-bit signed short integer.
 <br />
 </div>
 <div class="itemtext">
@@ -42607,21 +42470,20 @@ I2Bin() is the opposite of Bin2I()
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // Update DBF &quot;last update&quot; date
-#include &quot;fileio.ch&quot;
 PROCEDURE Main()
-   LOCAL nHandle, cYear, cMonth, cDay
+   LOCAL hFile, cYear, cMonth, cDay
    USE test
    ? &quot;Original update date is:&quot;, LUpdate()
    dbCloseArea()
-   IF ( nHandle := FOpen( &quot;test.dbf&quot;, FO_READWRITE ) ) != F_ERROR
-      FSeek( nHandle, 1 )
+   IF ( hFile := hb_vfOpen( &quot;test.dbf&quot;, FO_READWRITE ) ) != NIL
+      hb_vfSeek( hFile, 1 )
       cYear  := I2Bin( 68 )
       cMonth := I2Bin(  8 )
       cDay   := I2Bin(  1 )
-      FWrite( nHandle, cYear , 1 )   // write only the first byte
-      FWrite( nHandle, cMonth, 1 )
-      FWrite( nHandle, cDay  , 1 )
-      FClose( nHandle )
+      hb_vfWrite( hFile, cYear , 1 )   // write only the first byte
+      hb_vfWrite( hFile, cMonth, 1 )
+      hb_vfWrite( hFile, cDay  , 1 )
+      hb_vfClose( hFile )
       USE test
       ? &quot;New update date is:&quot;, LUpdate()
       dbCloseArea()
@@ -42647,8 +42509,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2I(), Bin2L(), Bin2U(), Bin2W(), L2Bin(), W2Bin(), Word(), U2Bin(),
-FWrite()
+Bin2I(), Bin2L(), Bin2U(), Bin2W(), L2Bin(), W2Bin(), Word(), U2Bin()
 <br />
 </div>
 <div id="l2bin">
@@ -42672,7 +42533,7 @@ L2Bin( &lt;nNumber&gt; ) --&gt; cBuffer
 </div>
 <div class="itemtitle">Returns</div>
 <div class="itemtext">
-L2Bin() return four bytes character string that contain 32 bit
+L2Bin() return four bytes character string that contains 32-bit
 encoded signed long integer (least significant byte first).
 <br />
 </div>
@@ -42681,7 +42542,7 @@ encoded signed long integer (least significant byte first).
 L2Bin() is one of the low level binary conversion functions, those
 functions convert between Harbour numeric and a character
 representation of numeric value. L2Bin() take a numeric integer value
-and convert it into four bytes of encoded 32 bit signed long integer.
+and convert it into four bytes of encoded 32-bit signed long integer.
 <br />
 </div>
 <div class="itemtext">
@@ -42712,8 +42573,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2I(), Bin2L(), Bin2U(), Bin2W(), I2Bin(), W2Bin(), Word(), U2Bin(),
-FWrite()
+Bin2I(), Bin2L(), Bin2U(), Bin2W(), I2Bin(), W2Bin(), Word(), U2Bin()
 <br />
 </div>
 <div id="u2bin">
@@ -42737,7 +42597,7 @@ U2Bin( &lt;nNumber&gt; ) --&gt; cBuffer
 </div>
 <div class="itemtitle">Returns</div>
 <div class="itemtext">
-U2Bin() return four bytes character string that contain 32 bit
+U2Bin() return four bytes character string that contains 32-bit
 encoded unsigned long integer (least significant byte first).
 <br />
 </div>
@@ -42746,7 +42606,7 @@ encoded unsigned long integer (least significant byte first).
 U2Bin() is one of the low level binary conversion functions, those
 functions convert between Harbour numeric and a character
 representation of numeric value. U2Bin() take a numeric integer value
-and convert it into four bytes of encoded 32 bit unsigned long
+and convert it into four bytes of encoded 32-bit unsigned long
 integer.
 <br />
 </div>
@@ -42778,8 +42638,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2I(), Bin2L(), Bin2U(), Bin2W(), I2Bin(), L2Bin(), W2Bin(), Word(),
-FWrite()
+Bin2I(), Bin2L(), Bin2U(), Bin2W(), I2Bin(), L2Bin(), W2Bin(), Word()
 <br />
 </div>
 <div id="w2bin">
@@ -42803,8 +42662,8 @@ W2Bin( &lt;nNumber&gt; ) --&gt; cBuffer
 </div>
 <div class="itemtitle">Returns</div>
 <div class="itemtext">
-W2Bin() return two bytes character string that contain 16 bit encoded
-unsigned short integer (least significant byte first).
+W2Bin() return two bytes character string that contains 16-bit
+encoded unsigned short integer (least significant byte first).
 <br />
 </div>
 <div class="itemtitle">Description</div>
@@ -42812,7 +42671,7 @@ unsigned short integer (least significant byte first).
 W2Bin() is one of the low level binary conversion functions, those
 functions convert between Harbour numeric and a character
 representation of numeric value. W2Bin() take a numeric integer value
-and convert it into two bytes of encoded 16 bit unsigned short
+and convert it into two bytes of encoded 16-bit unsigned short
 integer.
 <br />
 </div>
@@ -42844,8 +42703,7 @@ Library is core
 </div>
 <div class="itemtitle">See also</div>
 <div class="itemtext">
-Bin2I(), Bin2L(), Bin2U(), Bin2W(), I2Bin(), L2Bin(), Word(), U2Bin(),
-FWrite()
+Bin2I(), Bin2L(), Bin2U(), Bin2W(), I2Bin(), L2Bin(), Word(), U2Bin()
 <br />
 </div>
 <div id="word">
@@ -44099,7 +43957,7 @@ selected work area.
 <pre class="examples">
 PROCEDURE Main()
    USE test
-   SET FILTER TO hb_LeftIs( test-&gt;Name, &quot;An&quot; )
+   SET FILTER TO hb_LeftEq( test-&gt;Name, &quot;An&quot; )
    dbEdit()
    Test-&gt;( dbClearFilter() )
    RETURN
@@ -44877,7 +44735,7 @@ assumed to lock the current active record/data item.
 PROCEDURE Main()
    LOCAL x
    USE test NEW
-   FOR x := 1 TO RecCount()
+   FOR x := 1 TO LastRec()
       IF ! dbRLock()
          dbUnlock()
       ENDIF
@@ -47796,7 +47654,7 @@ This function returns the current system date.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 ? Date()
-? &quot;Today is&quot;, hb_ntos( Day( Date() ) ), &quot;of&quot;, CMonth( Date() ), &quot;of&quot;, hb_ntos( Year( Date() ) )
+? &quot;Today is&quot;, hb_ntos( Day( Date() ) ), &quot;of&quot;, CMonth( Date() ), &quot;of&quot;, StrZero( Year( Date() ), 4 )
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -47970,7 +47828,8 @@ DoW( &lt;dDate&gt; ) --&gt; nDay
 <div class="itemtitle">Description</div>
 <div class="itemtext">
 This function returns the number representing the day of the week for
-the date expressed as &lt;dDate&gt;.
+the date expressed as &lt;dDate&gt;. Returned value range is from 1
+(Sunday) to 7 (Saturday).
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
@@ -48778,7 +48637,7 @@ the return value is the Carriage-Return plus Line-Feed characters
 <pre class="examples">
 // Get the newline character(s) for the current OS.
 OutStd( &quot;Hello World!&quot; + hb_eol() )
-? ValType( hb_eol() ) == &quot;C&quot;
+? HB_ISSTRING( hb_eol() )
 ? Len( hb_eol() ) &lt;= 2
 </pre>
 <div class="itemtitle">Status</div>
@@ -49424,8 +49283,8 @@ _SET_PATH        &lt;cDirectories&gt;
 <div class="itemtext">
 Specifies a path of directories to search through to locate a file
 that can't be located in the DEFAULT directory. Defaults to no path
-(&quot;&quot;). Directories must be separated by a semicolon (e.g., &quot;C:\data;
-C:\more&quot;).
+(&quot;&quot;). Directories must be separated by a semicolon (e.g., &quot;C:\hb\bin;
+C:\hb\tests&quot;).
 <br />
 </div>
 <div class="itemtext">
@@ -49817,7 +49676,7 @@ Version()
 </h4>
 </div>
 <div class="oneliner">
-Returns the HARBOUR Version or the Harbour/Compiler Version.
+Returns the version of Harbour compiler
 <br />
 </div>
 <div class="itemtitle">Syntax</div>
@@ -49832,17 +49691,17 @@ None
 </div>
 <div class="itemtitle">Returns</div>
 <div class="itemtext">
-&lt;cReturn&gt;   String containing the Harbour Version
+&lt;cReturn&gt;   String containing the Harbour version
 <br />
 </div>
 <div class="itemtitle">Description</div>
 <div class="itemtext">
-This function returns the current Harbour Version.
+This function returns the current Harbour version.
 <br />
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Version() // &quot;Harbour Terminal: Standard stream console&quot;
+? Version()
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -50734,7 +50593,7 @@ hb_mathIsMathErr()
 </h4>
 </div>
 <div class="oneliner">
-Check if harbour math error handling is available
+Check if Harbour math error handling is available
 <br />
 </div>
 <div class="itemtitle">Syntax</div>
@@ -50877,7 +50736,7 @@ hb_mathSetHandler()
 </h4>
 </div>
 <div class="oneliner">
-set the harbour math handler
+set the Harbour math handler
 <br />
 </div>
 <div class="itemtitle">Syntax</div>
@@ -52345,7 +52204,7 @@ command. The path may be specified, along, with (the drive letter, in
 PROCEDURE Main()
    USE test NEW
    LABEL FORM test.lbl
-   USE
+   dbCloseArea()
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -52493,7 +52352,7 @@ turned off while this command is being executed.
 PROCEDURE Main()
    USE test NEW
    REPORT FORM test.frm
-   USE
+   dbCloseArea()
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -52572,7 +52431,7 @@ DO WHILE ! Eof()
    ENDIF
 ENDDO
 SET DEVICE TO SCREEN
-USE
+dbCloseArea()
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -52639,10 +52498,10 @@ a macro expression.
 PROCEDURE Main()
    FIELD Id
    FIELD Name
-   USE test NEW
+   USE test.dbf NEW
    Name := &quot;Sales&quot;
    Id := 5
-   USE
+   dbCloseArea()
    RETURN
 </pre>
 <div class="itemtitle">Status</div>
@@ -53254,7 +53113,7 @@ PARAMETERS, MEMVAR, STATIC and FIELD, may precede the LOCAL command.
 </div>
 <div class="itemtext">
 LOCAL array reference may not be initialized (i.e., assigned values)
-on the same command line as the LOCAL command statement. This can be
+on the same command-line as the LOCAL command statement. This can be
 done later in the program.
 <br />
 </div>
@@ -54292,7 +54151,7 @@ current logged drive and directory.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-SET DEFAULT TO C:\temp
+SET DEFAULT TO C:\hb\tests
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -54463,27 +54322,27 @@ decimal digits
 <br />
 </div>
 <div class="itemtext">
-     Division         Determined by SET DECIMAL TO
+     Division         Determined by SET DECIMALS TO
 <br />
 </div>
 <div class="itemtext">
-     Exponential      Determined by SET DECIMAL TO
+     Exponential      Determined by SET DECIMALS TO
 <br />
 </div>
 <div class="itemtext">
-     Log()            Determined by SET DECIMAL TO
+     Log()            Determined by SET DECIMALS TO
 <br />
 </div>
 <div class="itemtext">
-     Exp()            Determined by SET DECIMAL TO
+     Exp()            Determined by SET DECIMALS TO
 <br />
 </div>
 <div class="itemtext">
-     Sqrt()           Determined by SET DECIMAL TO
+     Sqrt()           Determined by SET DECIMALS TO
 <br />
 </div>
 <div class="itemtext">
-     Val()            Determined by SET DECIMAL TO
+     Val()            Determined by SET DECIMALS TO
 <br />
 </div>
 <div class="itemtext">
@@ -54815,7 +54674,7 @@ path; 3 The SET PATH path.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-SET PATH TO C:\harbour\test
+SET PATH TO C:\hb\tests
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -54985,6 +54844,26 @@ using PRIVATE or PUBLIC statement.
 This is CA-Cl*pper v5.2 compliant
 <br />
 </div>
+<div id="base1068002">
+<h4>
+BASE/1068
+</h4>
+</div>
+<div class="oneliner">
+Bound error in array element assignment
+<br />
+</div>
+<div class="itemtitle">Description</div>
+<div class="itemtext">
+The specified index into an array was greater then the number of
+elements in the array.
+<br />
+</div>
+<div class="itemtitle">Compliance</div>
+<div class="itemtext">
+This is CA-Cl*pper v5.2 compliant
+<br />
+</div>
 <div id="base1068001">
 <h4>
 BASE/1068
@@ -55016,26 +54895,6 @@ Invalid type of argument
 <div class="itemtitle">Description</div>
 <div class="itemtext">
 The used data is not of logical type.
-<br />
-</div>
-<div class="itemtitle">Compliance</div>
-<div class="itemtext">
-This is CA-Cl*pper v5.2 compliant
-<br />
-</div>
-<div id="base1068002">
-<h4>
-BASE/1068
-</h4>
-</div>
-<div class="oneliner">
-Bound error in array element assignment
-<br />
-</div>
-<div class="itemtitle">Description</div>
-<div class="itemtext">
-The specified index into an array was greater then the number of
-elements in the array.
 <br />
 </div>
 <div class="itemtitle">Compliance</div>
@@ -55154,6 +55013,25 @@ The type of compared arguments do not match.
 This is CA-Cl*pper v5.2 compliant
 <br />
 </div>
+<div id="base1076002">
+<h4>
+BASE/1076
+</h4>
+</div>
+<div class="oneliner">
+Invalid type of arguments
+<br />
+</div>
+<div class="itemtitle">Description</div>
+<div class="itemtext">
+The arguments of '$' operator are not a strings.
+<br />
+</div>
+<div class="itemtitle">Compliance</div>
+<div class="itemtext">
+This is CA-Cl*pper v5.2 compliant
+<br />
+</div>
 <div id="base1076001">
 <h4>
 BASE/1076
@@ -55172,25 +55050,6 @@ The value of argument cannot be incremented.
 <pre class="examples">
 ++
 </pre>
-<div class="itemtitle">Compliance</div>
-<div class="itemtext">
-This is CA-Cl*pper v5.2 compliant
-<br />
-</div>
-<div id="base1076002">
-<h4>
-BASE/1076
-</h4>
-</div>
-<div class="oneliner">
-Invalid type of arguments
-<br />
-</div>
-<div class="itemtitle">Description</div>
-<div class="itemtext">
-The arguments of '$' operator are not a strings.
-<br />
-</div>
 <div class="itemtitle">Compliance</div>
 <div class="itemtext">
 This is CA-Cl*pper v5.2 compliant
@@ -55243,29 +55102,6 @@ logical value.
 This is CA-Cl*pper v5.2 compliant
 <br />
 </div>
-<div id="base1078">
-<h4>
-BASE/1078
-</h4>
-</div>
-<div class="oneliner">
-Invalid type of arguments
-<br />
-</div>
-<div class="itemtitle">Description</div>
-<div class="itemtext">
-The type of compared arguments do not match.
-<br />
-</div>
-<div class="itemtitle">Example(s)</div>
-<pre class="examples">
-==
-</pre>
-<div class="itemtitle">Compliance</div>
-<div class="itemtext">
-This is CA-Cl*pper v5.2 compliant
-<br />
-</div>
 <div id="base1078001">
 <h4>
 BASE/1078
@@ -55283,6 +55119,29 @@ The type of one or both arguments is not a logical.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 .AND.
+</pre>
+<div class="itemtitle">Compliance</div>
+<div class="itemtext">
+This is CA-Cl*pper v5.2 compliant
+<br />
+</div>
+<div id="base1078">
+<h4>
+BASE/1078
+</h4>
+</div>
+<div class="oneliner">
+Invalid type of arguments
+<br />
+</div>
+<div class="itemtitle">Description</div>
+<div class="itemtext">
+The type of compared arguments do not match.
+<br />
+</div>
+<div class="itemtitle">Example(s)</div>
+<pre class="examples">
+==
 </pre>
 <div class="itemtitle">Compliance</div>
 <div class="itemtext">
