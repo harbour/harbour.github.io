@@ -73,8 +73,11 @@ title: "Home"
               </tr>
 
               <tr>
-                <td><input type="button" name="button" id="button" value="Download Harbour" onclick=
-                "window.location='https://sourceforge.net/projects/harbour-project/files/';"></td>
+                <td>
+                  <form action="https://sourceforge.net/projects/harbour-project/files/" method="get">
+                    <input type="submit" value="Download Harbour" name="button" id="button" />
+                  </form>
+                </td>
               </tr>
             </table>
           </td>
