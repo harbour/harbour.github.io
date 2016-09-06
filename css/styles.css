@@ -203,6 +203,11 @@ a:active {
 	background-repeat: no-repeat;
 }
 
+.github-fork-ribbon.right-top:before {
+	color: #0;
+	background-color: #fff;
+}
+
 /* ------------------------------------------------------------------------ */
 /* drop-down menu magic */
 
