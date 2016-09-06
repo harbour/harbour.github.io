@@ -4,32 +4,14 @@
 <meta charset="UTF-8" />
 <title>Harbour Project - Samples -&gt; switch</title>
 <link href="/css/styles.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/menu/stmenu.js"></script>
+<script type="text/javascript" src="/w3data.js"></script>
 </head>
 <body>
 <table width="740" border="0" align="center" cellpadding="0" cellspacing="1" bordercolor="#000000">
   <tr>
     <td valign="top" bgcolor="#000000"><table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td height="229" valign="top" background="/images/header_03.png" bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-          <tr>
-            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td width="6%"><img src="/images/header_01.jpg" width="287" height="164" /></td>
-                <td width="94%"><img src="/images/header_02.jpg" width="453" height="164" /></td>
-              </tr>
-            </table></td>
-          </tr>
-          <tr>
-            <td background="/images/menu-bg.png"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-
-              <tr>
-                <td width="95%" height="65" valign="top" background="/images/menu-bg2.png"><script type="text/javascript" src="/menu/harbour-menu.js"></script></td>
-                <td width="5%" height="65" valign="middle">&nbsp;</td>
-              </tr>
-            </table></td>
-          </tr>
-        </table></td>
+        <div w3-include-html="/head.html"></div>
       </tr>
       <tr>
         <td bgcolor="#FFFFFF"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -118,7 +100,7 @@ switch sample running on Windows</span><br />
       <tr>
         <td height="32" background="/images/footer.png"><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
           <tr>
-            <td width="33%" class="footer"><a href="/" class="whitelink">Copyright © 1999-<script type="text/javascript">copyright_year()</script> The Harbour Project.</a></td>
+            <td width="33%" class="footer"><a href="/" class="whitelink">Copyright © 1999-<script type="text/javascript">document.write(new Date().getFullYear())</script> The Harbour Project.</a></td>
             <td width="33%" class="footer"><div align="center"><a href="/legalnotes.html" class="whitelink">Terms of Service</a> | <a href="/contact.html" class="whitelink">Contact Us</a></div></td>
             <td width="33%" class="footer"><div align="right">Design
               by <a href="mailto:vailtom@gmail.com" class="whitelink">Vailton Renato</a> </div>
@@ -129,5 +111,6 @@ switch sample running on Windows</span><br />
     </table></td>
   </tr>
 </table>
+<script type="text/javascript">w3IncludeHTML();</script>
 </body>
 </html>
