@@ -204,8 +204,7 @@ a:active {
 }
 
 .github-fork-ribbon.right-top:before {
-	color: #0;
-	background-color: #fff;
+	background-color: #222;
 }
 
 /* ------------------------------------------------------------------------ */
