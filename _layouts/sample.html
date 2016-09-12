@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+  <body>
+    <div class="page-content">
+      <div class="wrapper">
+{% include header.html %}
+<a href="samples.html"><img src="images/more-samples.png" width="60" height="60" class="img_right"></a>
+<h1 class="title">{{ page.title_long }}</h1>
+
+<p>{{ page.description }}</p>
+
+<p class="sample_subtitle">Files:</p>
+  <ul>
+    <li><a href="https://github.com/harbour/core/blob/master/tests/{{ page.source }}" class="blue_link">tests/{{ page.source }}</a></li>
+  </ul>
+</p>
+
+<p class="sample_subtitle">Screenshot(s):</p>
+<p class="read_more sshot">
+  {{ content }}
+</p>
+
+<p class="sample_subtitle">How to compile:</p>
+<p>To learn how to compile/link this example see our specific section on this
+  <a href="samples.html#compile" class="blue_link">link</a>.
+</p>
+{% include footer.html %}
+      </div>
+    </div>
+  </body>
+</html>
