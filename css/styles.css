@@ -117,26 +117,9 @@ a:active {
 .any1-symbol 			{ }
 .any1-variable 			{ color: #808000; }
 
-.pagina_titulo {
-	color: #0066CC;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 12pt;
-	font-family: Arial, Helvetica, sans-serif;
-}
-.pagina_titulo_non_captalize {
-	color: #0066CC;
-	font-weight: bold;
-	font-size: 12pt;
-	font-family: Arial, Helvetica, sans-serif;
-}
 .pagina_subtitulo {
 	color: #990000;
 	font-weight: bold;
-}
-.titulo_citacao {
-	color: #0066FF;
-	font-style: italic;
 }
 .texto_subtitulo {
 	color: #0066CC;
