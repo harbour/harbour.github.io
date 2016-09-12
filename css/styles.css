@@ -95,11 +95,6 @@ a:active {
 	color: #FF0000;
 }
 
-.tabela_box_trans_TL { width: 6px; height: 6px; background-image: url('../images/table-azul-top-left.png');     background-position: 0 0;             background-repeat: no-repeat; }
-.tabela_box_trans_TR { width: 6px; height: 6px; background-image: url('../images/table-azul-top-right.png');    background-position: top right;       background-repeat: no-repeat; }
-.tabela_box_trans_BR { width: 6px; height: 6px; background-image: url('../images/table-azul-bottom-right.png'); background-position: bottom right;    background-repeat: no-repeat; }
-.tabela_box_trans_BL { width: 6px; height: 6px; background-image: url('../images/table-azul-bottom-left.png');  background-position: bottom left;     background-repeat: no-repeat; }
-
 /*
  * From xDevStudio export HTML tool...
  */
@@ -154,15 +149,9 @@ a:active {
 	color: #0066FF;
 	text-decoration: none;
 }
-.crew_aphalist_link {
+.crew_alphalist_link {
 	color: #000066;
 	text-decoration: none;
-}
-.crew_page_top {
-	width: 7px;
-	background-image: url(/images/arrow_up.png);
-	background-position: right bottom;
-	background-repeat: no-repeat;
 }
 .whitelink {
 	color: #FFFFFF;
@@ -171,40 +160,6 @@ a:active {
 .source_code{
 	font-size: 10pt;
 	font-family: "Courier New", Courier, monospace;
-}
-.news_category {
-	color: #BC0000;
-	font-weight: bolder;
-}
-.news_item {
-	padding-left: 15px;
-	background-image: url(/images/button-ok.jpg);
-	background-position: 2px center;
-	background-repeat: no-repeat;
-}
-.news_info {
-	padding-left: 15px;
-	background-image: url(/images/button-info.jpg);
-	background-position: 2px center;
-	background-repeat: no-repeat;
-}
-.news_warn {
-	padding-left: 15px;
-	background-image: url(/images/button-yellow.jpg);
-	background-position: 2px center;
-	background-repeat: no-repeat;
-}
-.news_error {
-	padding-left: 15px;
-	background-image: url(/images/button-red.jpg);
-	background-position: 2px center;
-	background-repeat: no-repeat;
-}
-.news_fixed {
-	padding-left: 15px;
-	background-image: url(/images/button-green.jpg);
-	background-position: 2px center;
-	background-repeat: no-repeat;
 }
 
 .github-fork-ribbon.right-top:before {
