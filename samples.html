@@ -1,386 +1,104 @@
 ---
-layout: default
+layout: default2
 title: "Sample Applications"
 ---
 
-<table style="width: 98%; border: 0; margin: auto; margin-top: 15px; margin-bottom: 15px; padding: 0; border-spacing: 0;">
-  <tr>
-    <td>
-      <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-        <tr valign="bottom">
-          <td width="2%" height="26" class="tabela_box_trans_TL"><a id="top"></a></td>
-          <td width="96%" height="26" class="title">Sample Applications</td>
-          <td width="2%" height="26" class="tabela_box_trans_TR">&nbsp;</td>
-        </tr>
+<h1 class="title">Sample Applications</h1>
 
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top">This is the list of some examples in Harbour's test directory. The examples demonstrate Harbour features in small
-          programs.</td>
-          <td>&nbsp;</td>
-        </tr>
+<p>This is the list of some examples in Harbour's test directory. The examples demonstrate Harbour features in small programs.</p>
 
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top">&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
+<hr>
+<p class="sample_subtitle">Categories:</p>
+<p>
+  <ul>
+    <li><a href="#Basic" class="blue_link">Basic</a></li>
+    <li><a href="#Arrays" class="blue_link">Arrays</a></li>
+    <li><a href="#Database" class="blue_link">Database</a></li>
+    <li><a href="#Extensions" class="blue_link">Extensions</a></li>
+    <!--<li><a href="#OOP" class="blue_link">OOP</a></li> !-->
+    <li><a href="#Web" class="blue_link">Web</a></li>
+    <li><a href="#More" class="blue_link">More samples</a><br></li>
+    <li><a href="#compile" class="blue_link">How to compile</a></li>
+  </ul>
+</p>
 
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top" class="sample_subtitle">Categories:</td>
-          <td>&nbsp;</td>
-        </tr>
+<hr>
+<p class="sample_subtitle" id="Basic">Basic</p>
+  <ul>
+    <li><a href="sample_hello.html" class="blue_link">Hello world (hello.prg)</a></li>
+    <li><a href="sample_macro.html" class="blue_link">Dynamic code evalutation sample (macro.prg)</a></li>
+    <li><a href="sample_begin.html" class="blue_link">Begin Sequence support (begin.prg)</a></li>
+    <li><a href="sample_codebloc.html" class="blue_link">Codeblock support sample (codebloc.prg)</a></li>
+    <li><a href="sample_codebl.html" class="blue_link">Codeblock advanced sample (codebl.prg)</a></li>
+    <li><a href="sample_dates3.html" class="blue_link">Manipulation of date values (dates3.prg)</a></li>
+    <li><a href="sample_byref.html" class="blue_link">Manipulating variables by reference (byref.prg)</a></li>
+    <li><a href="sample_parseini.html" class="blue_link">Test for Ini file reading/writing (parseini.prg)</a></li>
+    <li><a href="sample_initexit.html" class="blue_link">INIT and EXIT functions support (initexit.prg)</a></li>
+    <li><a href="sample_osshell.html" class="blue_link">Run command: About to shell to OS (osshell.prg)</a></li>
+    <li><a href="sample_longdev.html" class="blue_link">Testing long string handling support (longdev.prg)</a></li>
+    <li><a href="sample_mouse.html" class="blue_link">Mouse sample support (mouse.prg)</a></li>
+  </ul>
+</p>
 
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top">
-            <ul>
-              <li><a href="#Basic" class="blue_link">Basic</a></li>
-              <li><a href="#Arrays" class="blue_link">Arrays</a></li>
-              <li><a href="#Database" class="blue_link">Database</a></li>
-              <li><a href="#Extensions" class="blue_link">Extensions</a></li>
-              <!--<li><a href="#OOP" class="blue_link">OOP</a></li> !-->
-              <li><a href="#Web" class="blue_link">Web</a></li>
-              <li><a href="#More" class="blue_link">More samples</a><br></li>
-              <li><a href="#compile" class="blue_link">How to compile</a></li>
-            </ul>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
+<hr>
+<p class="sample_subtitle" id="Arrays">Arrays</p>
+  <ul>
+    <li><a href="sample_array16.html" class="blue_link">Multidimensional arrays demo (array16.prg)</a></li>
+    <li><a href="sample_arreval.html" class="blue_link">AEval() sample (arreval.prg)</a></li>
+  </ul>
+</p>
 
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top">
-            <hr>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
+<hr>
+<p class="sample_subtitle" id="Database">Database</p>
+  <ul>
+    <li><a href="sample_browse.html" class="blue_link">Browse() function demo (browse.prg)</a></li>
+    <li><a href="sample_tbrowse.html" class="blue_link">TBrowse() sample (tbrowse.prg)</a></li>
+  </ul>
+</p>
 
-        <tr>
-          <td><a id="Basic"></a></td>
-          <td valign="top" class="sample_subtitle">Basic</td>
-          <td>&nbsp;</td>
-        </tr>
+<hr>
+<p class="sample_subtitle" id="Extensions">Extensions</p>
+  <ul>
+    <li><a href="sample_switch.html" class="blue_link">Switch support (switch.prg)</a></li>
+    <li><a href="sample_foreach.html" class="blue_link">FOR EACH example (foreach.prg)</a></li>
+    <li><a href="sample_idle.html" class="blue_link">OnIdle sample (idle.prg)</a></li>
+    <li><a href="sample_onidle.html" class="blue_link">OnIdle advanced sample (onidle.prg)</a></li>
+  </ul>
+</p>
 
-        <tr>
-          <td>&nbsp;</td>
+<!--
+<hr>
+<p class="sample_subtitle" id="OOP">OOP</p>
+  <ul>
+    <li>Using Harbour Class HBClass (classes.prg)*</li>
+    <li>Using Harbour Class HBClass with inherit (clasinh.prg)</li>
+    <li>Testing Harbour hbclass.ch support (classch.prg)</li>
+    <li>Tests the className message against the &quot;fundemental&quot; types of Clipper. (clasname.prg)</li>
+    <li>Testing Harbour classes ON ERROR feature (testcls.prg)</li>
+    <li>Demonstration/test code for non virtual hidden messages (clsnv.prg)</li>
+    <li>Demonstration/test code for class method scoping (clsscope.prg)</li>
+    <li>Example/test code for object destructors (destruct.prg)</li>
+    <li>Implementation of dynamic objects in Harbour (dynobj.prg)*</li>
+    <li>Implementation of operator overload in Harbour (overload.prg)</li>
+    <li>Testing the operators-overloading feature (testop.prg)</li>
+  </ul>
+</p>-->
 
-          <td valign="top">
-            <ul>
-              <li><a href="sample_hello.html" class="blue_link">Hello world (hello.prg)</a></li>
-              <li><a href="sample_macro.html" class="blue_link">Dynamic code evalutation sample (macro.prg)</a></li>
-              <li><a href="sample_begin.html" class="blue_link">Begin Sequence support (begin.prg)</a></li>
-              <li><a href="sample_codebloc.html" class="blue_link">Codeblock support sample (codebloc.prg)</a></li>
-              <li><a href="sample_codebl.html" class="blue_link">Codeblock advanced sample (codebl.prg)</a></li>
-              <li><a href="sample_dates3.html" class="blue_link">Manipulation of date values (dates3.prg)</a></li>
-              <li><a href="sample_byref.html" class="blue_link">Manipulating variables by reference (byref.prg)</a></li>
-              <li><a href="sample_parseini.html" class="blue_link">Test for Ini file reading/writing (parseini.prg)</a></li>
-              <li><a href="sample_initexit.html" class="blue_link">INIT and EXIT functions support (initexit.prg)</a></li>
-              <li><a href="sample_osshell.html" class="blue_link">Run command: About to shell to OS (osshell.prg)</a></li>
-              <li><a href="sample_longdev.html" class="blue_link">Testing long string handling support (longdev.prg)</a></li>
-              <li><a href="sample_mouse.html" class="blue_link">Mouse sample support (mouse.prg)</a></li>
-            </ul>
-          </td>
+<hr>
+<p class="pagina_subtitulo" id="Web">Web</p>
+  <ul>
+    <li><a href="sample_html.html" class="blue_link">Harbour Test of a HTML-Generator class (html.prg)</a></li>
+  </ul>
+</p>
 
-          <td>&nbsp;</td>
-        </tr>
+<hr>
+<p class="pagina_subtitulo" id="More">More examples</p>
+<p>More examples can be provided with the installation package of the Harbour. Look the /tests and /extras folder to find
+other samples, but the best examples are the source code of Harbour itself.</p>
 
-        <tr>
-          <td>&nbsp;</td>
-          <td align="right">
-            <div align="right">
-              <a href="#top" title="Go top"><img src="images/arrow_up.png" width="7" height="7" border="0"></a>
-            </div>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top">
-            <hr>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td><a id="Arrays"></a></td>
-          <td valign="top" class="sample_subtitle">Arrays</td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top">
-            <ul>
-              <li><a href="sample_array16.html" class="blue_link">Multidimensional arrays demo (array16.prg)</a></li>
-              <li><a href="sample_arreval.html" class="blue_link">AEval() sample (arreval.prg)</a></li>
-            </ul>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td align="right">
-            <div align="right">
-              <a href="#top" title="Go top"><img src="images/arrow_up.png" width="7" height="7" border="0"></a>
-            </div>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top">
-            <hr>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td><a id="Database"></a></td>
-          <td valign="top" class="sample_subtitle">Database</td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top">
-            <ul>
-              <li><a href="sample_browse.html" class="blue_link">Browse() function demo (browse.prg)</a></li>
-              <li><a href="sample_tbrowse.html" class="blue_link">TBrowse() sample (tbrowse.prg)</a></li>
-            </ul>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td align="right">
-            <div align="right">
-              <a href="#top" title="Go top"><img src="images/arrow_up.png" width="7" height="7" border="0"></a>
-            </div>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top">
-            <hr>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td><a id="Extensions"></a></td>
-          <td valign="top" class="sample_subtitle">Extensions</td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top">
-            <ul>
-              <li><a href="sample_switch.html" class="blue_link">Switch support (switch.prg)</a></li>
-              <li><a href="sample_foreach.html" class="blue_link">FOR EACH example (foreach.prg)</a></li>
-              <li><a href="sample_idle.html" class="blue_link">OnIdle sample (idle.prg)</a></li>
-              <li><a href="sample_onidle.html" class="blue_link">OnIdle advanced sample (onidle.prg)</a></li>
-            </ul>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td align="right">
-            <div align="right">
-              <a href="#top" title="Go top"><img src="images/arrow_up.png" width="7" height="7" border="0"></a>
-            </div>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top">
-            <hr>
-          </td>
-          <td>&nbsp;</td>
-        </tr><!--
-<tr>
-  <td><a id="OOP"></a></td>
-  <td valign="top" class="sample_subtitle">OOP</td>
-  <td>&nbsp;</td>
-</tr>
-
-<tr>
-  <td>&nbsp;</td>
-  <td valign="top">Using Harbour Class HBClass (classes.prg)*</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td valign="top">Using Harbour Class HBClass with inherit (clasinh.prg)</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td valign="top">Testing Harbour hbclass.ch support (classch.prg)</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td valign="top">Tests the className message against the &quot;fundemental&quot; types of Clipper. (clasname.prg)</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td valign="top">Testing Harbour classes ON ERROR feature (testcls.prg)</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td valign="top">Demonstration/test code for non virtual hidden messages (clsnv.prg)</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td valign="top">Demonstration/test code for class method scoping (clsscope.prg)</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td valign="top">Example/test code for object destructors (destruct.prg)</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td valign="top">Implementation of dynamic objects in Harbour (dynobj.prg)*</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td valign="top">Implementation of operator overload in Harbour (overload.prg)</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td valign="top">Testing the operators-overloading feature (testop.prg)</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td align="right"><div align="right"><a href="#top" title="Go top"><img src="images/arrow_up.png" width="7" height="7" border="0" /></a></div></td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td valign="top"><hr /></td>
-  <td>&nbsp;</td>
-</tr>-->
-
-        <tr>
-          <td><a id="Web"></a></td>
-          <td valign="top" class="pagina_subtitulo">Web</td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top">
-            <ul>
-              <li><a href="sample_html.html" class="blue_link">Harbour Test of a HTML-Generator class (html.prg)</a></li>
-            </ul>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td align="right">
-            <div align="right">
-              <a href="#top" title="Go top"><img src="images/arrow_up.png" width="7" height="7" border="0"></a>
-            </div>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top">
-            <hr>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td><a id="More"></a></td>
-          <td valign="top" class="pagina_subtitulo">More examples</td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top">More examples can be provided with the installation package of the Harbour. Look the /tests and /extras folder to find
-          other samples, but the best examples are the source code of Harbour itself.</td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td align="right">
-            <div align="right">
-              <a href="#top" title="Go top"><img src="images/arrow_up.png" width="7" height="7" border="0"></a>
-            </div>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top">
-            <hr>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td><a id="compile"></a></td>
-          <td valign="top" class="sample_subtitle">How to compile the samples applications</td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top">
-            <ul>
-              <li><a href="sample_HowToBuildOnLinux.html" class="blue_link">On Linux</a></li>
-            </ul>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td align="right">
-            <div align="right">
-              <a href="#top" title="Go top"><img src="images/arrow_up.png" width="7" height="7" border="0"></a>
-            </div>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-          <td valign="top">
-            <hr>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
+<hr>
+<p class="sample_subtitle" id="compile">How to compile the samples applications</p>
+  <ul>
+    <li><a href="sample_HowToBuildOnLinux.html" class="blue_link">On Linux</a></li>
+  </ul>
+</p>

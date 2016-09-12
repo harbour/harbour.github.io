@@ -11,6 +11,10 @@ body {
 	margin-left: 0;
 	background-color: #333333;
 }
+.img_right {
+	float: right;
+	margin: 1em;
+}
 .header1 {
 	color: #bc0000;
 	/* font-weight: bolder; */
