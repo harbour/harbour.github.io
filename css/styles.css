@@ -14,6 +14,7 @@ body {
 .img_right {
 	float: right;
 	margin: 1em;
+	border: none;
 }
 .header1 {
 	color: #bc0000;
