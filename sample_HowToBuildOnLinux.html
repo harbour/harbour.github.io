@@ -25,7 +25,7 @@ wrappers called &quot;hbcc&quot;, &quot;hbcmp&quot;, &quot;hblnk&quot; and &quot
   <p>&quot;hbmk&quot; tries to produce an executable from your .prg file. It's a simple
     equivalent of cl.bat from the CA-Clipper distribution.</p>
   <p>All these scripts accept command line switches:<br />
-    <code><span class="any1-preprocessor" style="FONT: 10pt Courier New">-o&lt;outputfilename&gt; &nbsp;&nbsp;# output file name
+    <code><span class="any1-preprocessor" style="font: 10pt Courier New">-o&lt;outputfilename&gt; &nbsp;&nbsp;# output file name
           <br />
   -static &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# link with static Harbour libs
   <br />
@@ -37,7 +37,7 @@ wrappers called &quot;hbcc&quot;, &quot;hbcmp&quot;, &quot;hblnk&quot; and &quot
   <br />
   -gt&lt;hbgt&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# link with &lt;hbgt&gt; GT driver, can be repeated to  <br />
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;                  # link with more GTs. The first one will be<br />
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></code><code><span class="any1-preprocessor" style="FONT: 10pt Courier New"># the default at runtime <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></code><code><span class="any1-preprocessor" style="font: 10pt Courier New"># the default at runtime <br />
   -xbgtk &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# link with xbgtk library (xBase GTK+ interface) <br />
   -hwgui &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# link with HWGUI library (GTK+ interface) <br />
   -l&lt;libname&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# link with &lt;libname&gt; library <br />
@@ -56,7 +56,7 @@ wrappers called &quot;hbcc&quot;, &quot;hbcmp&quot;, &quot;hblnk&quot; and &quot
   <br />
   <span class="source_code">---------------------------------------------------------------------------------------druzus@uran:~/tmp$ cat foo.prg
   <br />
-  <code><span style="FONT: 10pt Courier New"><span class="any1-reservedword">function</span><span class="any1-space"> </span><span class="any1-variable">main</span><span class="any1-symbol">()<br />
+  <code><span style="font: 10pt Courier New"><span class="any1-reservedword">function</span><span class="any1-space"> </span><span class="any1-variable">main</span><span class="any1-symbol">()<br />
 ? </span><span class="any1-string">&quot;Hello, World!&quot;<br />
  </span><span class="any1-reservedword">return</span><span class="any1-space"> nil</span></span></code></span>
   <pre class="source_code">druzus@uran:~/tmp$ <strong>hbcmp</strong> foo
@@ -71,7 +71,7 @@ Generating C source output to 'foo.c'... Done.</pre>
   <p>or using hbmk only:<br />
     <span class="source_code">---------------------------------------------------------------------------------------<br />
       druzus@uran:~/tmp</span>$ cat foo.prg <br />
-      <code><span style="FONT: 10pt Courier New"><span class="any1-reservedword">function</span> <span class="any1-variable">main</span><span class="any1-symbol">()<br />
+      <code><span style="font: 10pt Courier New"><span class="any1-reservedword">function</span> <span class="any1-variable">main</span><span class="any1-symbol">()<br />
 ? </span><span class="any1-string">&quot;Hello, World!&quot;<br />
 </span><span class="any1-reservedword">return</span><span class="any1-space"> nil</span></span></code><br />
 <br />
@@ -85,7 +85,7 @@ Lines 5, Functions/Procedures 2<br />
 Generating C source output to 'foo.c'... Done.<br />
 <br />
  druzus@uran:~/tmp$ ls -l foo<br />
- -rwxrwxr-x    1 druzus   druzus       3824 maj 17 02:46<SPAN class=any1-space> </span><span class="any1-escapeampersand">foo</span><span class="source_code"><br />
+ -rwxrwxr-x    1 druzus   druzus       3824 maj 17 02:46<span class=any1-space> </span><span class="any1-escapeampersand">foo</span><span class="source_code"><br />
  ---------------------------------------------------------------------------------------</span><br />
   <br />
   You will find additional wonderful tools: /usr/bin/hbrun<br />
@@ -95,7 +95,7 @@ Generating C source output to 'foo.c'... Done.<br />
     ----------------------------------------------------------------------<br />
     <span class="source_code">druzus@uran:~/tmp$ cat foo.prg<br />
     #!/usr/bin/hbrun<br />
-    <code><span style="FONT: 10pt Courier New"><span class="any1-reservedword">function</span> <span class="any1-variable">main</span><span class="any1-symbol">()<br />
+    <code><span style="font: 10pt Courier New"><span class="any1-reservedword">function</span> <span class="any1-variable">main</span><span class="any1-symbol">()<br />
 ? </span><span class="any1-string">&quot;Hello, World!, This is a script !!! :-)&quot;<br />
 </span><span class="any1-reservedword">return</span><span class="any1-space"> nil</span></span></code></span></p>
 <p class="source_code">druzus@uran:~/tmp$ <strong>chmod</strong> +x foo.prg<br />

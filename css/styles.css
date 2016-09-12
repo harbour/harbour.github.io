@@ -11,6 +11,15 @@ body {
 	margin-left: 0;
 	background-color: #333333;
 }
+.nobullet {
+	list-style: none;
+	padding-left: 1em;
+	text-indent: 0em;
+}
+.nobullet>li {
+	margin: 0 0 5px 0;
+	color: #000066;
+}
 .sshot {
 	margin: auto;
 	text-align: center;
