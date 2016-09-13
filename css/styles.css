@@ -34,15 +34,6 @@ body {
 	margin-left: 0;
 	background-color: #333333;
 }
-.nobullet {
-	list-style: none;
-	padding-left: 1em;
-	text-indent: 0em;
-}
-.nobullet>li {
-	margin: 0 0 5px 0;
-	color: #000066;
-}
 .sshot {
 	margin: auto;
 	text-align: center;
@@ -172,7 +163,15 @@ a:active {
 	color: #0066FF;
 	text-decoration: none;
 }
-.crew_alphalist_link {
+.crew_alphalist {
+	list-style: none;
+	padding-left: 1em;
+	text-indent: 0em;
+}
+.crew_alphalist>li {
+	margin: 0 0 5px 0;
+}
+.crew_alphalist>li>a {
 	color: #000066;
 	text-decoration: none;
 }
