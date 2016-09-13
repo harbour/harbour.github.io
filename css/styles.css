@@ -87,11 +87,11 @@ body {
 	color: #666666;
 	font-style: italic;
 }
-.sample_subtitle{
+.sample_subtitle {
 	color: #bc0000;
 	font-weight: bold;
 }
-.sample_link_missing{
+.sample_link_missing {
 	color: #666666;
 }
 .sample_linkback {
@@ -144,10 +144,10 @@ a:active {
 	font-weight: bold;
 	font-style: italic;
 }
-.text_subtitle_upper {
+.text_libname {
 	color: #0066CC;
-	text-transform: uppercase;
 	font-weight: bold;
+	font-size: 120%;
 }
 .redbox {
 	margin: 3px;
