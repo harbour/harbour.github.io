@@ -159,9 +159,20 @@ a:active {
 	color: #0099FF;
 	text-decoration: none;
 }
-.crew_country_link {
+.crew_country_list {
+	list-style: none;
+	padding-left: 1em;
+	text-indent: 0em;
+}
+.crew_country_list>li {
+	margin: 0 0 5px 0;
+}
+.crew_country_list>li>a {
 	color: #0066FF;
 	text-decoration: none;
+}
+.crew_country_list>li>a>img {
+	margin: 0 5px 0 0;
 }
 .crew_alphalist {
 	list-style: none;
