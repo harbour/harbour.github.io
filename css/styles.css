@@ -1,5 +1,28 @@
 @charset "UTF-8";
 
+div.container {
+	width: 100%;
+	margin: 0;
+	border: 0px black;
+	line-height: 150%;
+}
+div.header, div.footer {
+	padding: 0.5em;
+	clear: left;
+}
+div.left {
+	float: left;
+	width: 160px;
+	margin: 0;
+	padding: 1em;
+}
+div.content {
+	margin-left: 190px;
+	border-left: 1px solid gray;
+	padding: 1em;
+	overflow: hidden;
+}
+
 body,td,th {
 	font-size: 12px;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
