@@ -135,16 +135,16 @@ a:active {
 .any1-symbol 			{ }
 .any1-variable 			{ color: #808000; }
 
-.pagina_subtitulo {
+.page_subtitle {
 	color: #990000;
 	font-weight: bold;
 }
-.texto_subtitulo {
+.text_subtitle {
 	color: #0066CC;
 	font-weight: bold;
 	font-style: italic;
 }
-.texto_subtitulo_maiusculo {
+.text_subtitle_upper {
 	color: #0066CC;
 	text-transform: uppercase;
 	font-weight: bold;
