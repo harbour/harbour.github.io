@@ -5,26 +5,34 @@
     <div class="page-content">
       <div class="wrapper">
 {% include header.html %}
-<a href="samples.html"><img src="images/pict_more_samples.png" width="60" height="60" class="img_right"></a>
-<h1 class="title">{{ page.title_long }}</h1>
 
+<a href="samples.html"><img src="images/pict_more_samples.png" alt="more samples" width="60" height="60" class="img_right"></a>
+<h1 class="title">{{ page.title_long }}</h1>
 <p>{{ page.description }}</p>
 
-<p class="sample_subtitle">Files:</p>
+<div>
+  <div class="sample_subtitle">Files:</div>
   <ul>
     <li><a href="https://github.com/harbour/core/blob/master/tests/{{ page.source }}" class="blue_link">tests/{{ page.source }}</a></li>
   </ul>
-</p>
+</div>
 
-<p class="sample_subtitle">Screenshot(s):</p>
-<p class="read_more sshot">
-  {{ content }}
-</p>
+<div>
+  <div class="sample_subtitle">Screenshot(s):</div>
+  <br />
+  <div class="read_more sshot">
+    {{ content }}
+  </div>
+</div>
 
-<p class="sample_subtitle">How to compile:</p>
-<p>To learn how to compile/link this example see our specific section on this
-  <a href="samples.html#compile" class="blue_link">link</a>.
-</p>
+<div>
+  <br />
+  <div class="sample_subtitle">How to compile:</div>
+  <div>To learn how to compile/link this example see our specific section on this
+    <a href="samples.html#compile" class="blue_link">link</a>.
+  </div>
+</div>
+
 {% include footer.html %}
       </div>
     </div>
