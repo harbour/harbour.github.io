@@ -109,23 +109,6 @@ a:active {
 	color: #FF0000;
 }
 
-/*
- * From xDevStudio export HTML tool...
- */
-.any1-activedot 		{ color: #800080; }
-.any1-comment 			{ color: #008080; }
-.any1-constant 			{ color: #800080; }
-.any1-escapeampersand 	{ color: #00FF00; font-weight: bold; }
-.any1-function 			{ color: #808000; }
-.any1-identifier 		{ color: #000000; }
-.any1-number			{ color: #FF0000; }
-.any1-preprocessor 		{ }
-.any1-reservedword 		{ color: #800000; }
-.any1-space 			{ }
-.any1-string 			{ color: #0000FF; }
-.any1-symbol 			{ }
-.any1-variable 			{ color: #808000; }
-
 .page_subtitle {
 	color: #990000;
 	font-weight: bold;
