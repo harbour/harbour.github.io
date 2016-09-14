@@ -103,12 +103,8 @@ body {
 	color: #bc0000;
 	font-weight: bold;
 }
-.sample_link_missing {
-	color: #666666;
-}
-.sample_linkback {
+.sample_text {
 	color: #000000;
-	text-decoration: none;
 	font-size: 9px;
 }
 .black_link {
