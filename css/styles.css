@@ -72,11 +72,11 @@ body {
 .title_text {
 	color: #000000;
 	font-weight: bolder;
-	font-style: italic;
 }
 .title_date {
 	color: #666666;
-	font-style: italic;
+	font-weight: bolder;
+	vertical-align: text-top;
 }
 .sample_subtitle {
 	color: #bc0000;
@@ -88,7 +88,6 @@ body {
 .sample_linkback {
 	color: #000000;
 	text-decoration: none;
-	font-style: italic;
 	font-size: 9px;
 }
 .black_link {
@@ -99,7 +98,6 @@ body {
 	text-decoration: none;
 }
 .read_more {
-	font-style: italic;
 	font-size: 9px;
 }
 a:hover {
@@ -113,10 +111,10 @@ a:active {
 	color: #990000;
 	font-weight: bold;
 }
-.text_subtitle {
+.prod_name {
 	color: #0066CC;
 	font-weight: bold;
-	font-style: italic;
+	text-decoration: none;
 }
 .text_libname {
 	color: #0066CC;
@@ -128,7 +126,6 @@ a:active {
 	/* padding: 3px; */
 	/* background-color: #FF0000; */
 	color: #bc0000;
-	font-style: italic;
 }
 .crew_country {
 	color: #BC0000;
