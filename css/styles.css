@@ -59,6 +59,46 @@ body {
 	font-size: 8px;
 	font-family: Arial, Helvetica, sans-serif;
 }
+.crew-layout>div:nth-child(1) {
+	float: left;
+	text-align: center;
+	width: 75%;
+}
+.crew-layout>div:nth-child(2) {
+	float: right;
+	width: 23%;
+}
+.crew-content>div:nth-child(1) {
+	background-color: #FFFFEC;
+	border-radius: 2px;
+	padding: 2px;
+	margin-bottom: 12px;
+}
+.crew-content>div:nth-child(2) {
+	background-color: #F1FFFF;
+	border-radius: 2px;
+	padding: 2px;
+}
+.list-bubble {
+	background-color: #FFFFCC;
+	border-radius: 6px;
+	padding: 15px;
+	width: 65%;
+	margin: auto;
+	margin-bottom: 18px;
+}
+.bubble-alt {
+	background-color: #FF4A4A;
+	width: 96%;
+}
+.list-bubble div:nth-child(1) {
+	float: left;
+	padding-top: 15px;
+}
+.list-bubble div:nth-child(2) {
+	overflow: hidden;
+	padding-left: 5px;
+}
 .news>dl {
 	width: 100%;
 	overflow: hidden;
