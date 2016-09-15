@@ -43,7 +43,7 @@ body {
 .feature_box { background-color: rgb(243, 249, 251); height: 200px; padding: 0; }
 .feature_box>div { padding-top: 0; }
 .feature_box>div>div {
-	padding: 0 9px 0 9px;
+	padding: 0 9px;
 	float: left;
 	width: 14%;
 	text-align: center;
@@ -69,10 +69,17 @@ body {
 	text-decoration: underline;
 }
 .footer {
-	color: #FFFFFF;
+	color: #fff;
 	font-size: 8px;
 	font-family: Arial, Helvetica, sans-serif;
+	background: rgb(28,105,183);
+	background: linear-gradient(to bottom, rgba(28,105,183,1) 0%,rgba(31,108,186,1) 10%,rgba(46,124,199,1) 35%,rgba(50,127,202,1) 48%,rgba(47,124,200,1) 61%,rgba(31,108,187,1) 87%,rgba(28,105,183,1) 100%);
+	height: 32px;
 }
+.footer div { float: left; width: 33.3%; padding-top: 7px; }
+.footer div:nth-child(1) { text-align: left; }
+.footer div:nth-child(2) { text-align: center; }
+.footer div:nth-child(3) { text-align: right; }
 .crew-layout>div:nth-child(1) {
 	float: left;
 	text-align: center;
@@ -171,7 +178,7 @@ body {
 	margin-bottom: 11px;
 }
 .minisamples dd {
-	color: #000000;
+	color: #000;
 	font-size: 9px;
 }
 .title {
@@ -185,7 +192,7 @@ body {
 	font-size: 14px;
 }
 .title_text {
-	color: #000000;
+	color: #000;
 	font-weight: bolder;
 }
 .sample_subtitle {
@@ -193,11 +200,11 @@ body {
 	font-weight: bold;
 }
 .sample_text {
-	color: #000000;
+	color: #000;
 	font-size: 9px;
 }
 .black_link {
-	color: #000000;
+	color: #000;
 }
 .blue_link {
 	color: #0099FF;
@@ -273,7 +280,7 @@ a:active {
 	text-decoration: none;
 }
 .whitelink {
-	color: #FFFFFF;
+	color: #fff;
 	text-decoration: none;
 }
 .source_code{
