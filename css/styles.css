@@ -63,13 +63,13 @@ body {
 	width: 100%;
 	overflow: hidden;
 	padding: 0;
-	margin: 0
+	margin: 0;
 }
 .news>dt {
 	float: left;
 	width: 20%;
 	padding: 0;
-	margin: 0
+	margin: 0;
 }
 .news dt {
 	color: #666666;
@@ -80,7 +80,40 @@ body {
 	float: left;
 	width: 80%;
 	padding: 0;
-	margin: 0
+	margin: 0;
+}
+.feat {
+	padding: 0 9px 0 9px;
+	float: left;
+	width: 14%;
+	text-align: center;
+}
+.minisamples>dl {
+	padding: 0;
+	margin: 0;
+}
+.minisamples>dt {
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+.minisamples dt a {
+	color: #0099FF;
+	font-weight: bold;
+	text-decoration: none;
+}
+.minisamples dt a:hover {
+	color: #FF0000;
+}
+.minisamples>dd {
+	float: left;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 11px;
+}
+.minisamples dd {
+	color: #000000;
+	font-size: 9px;
 }
 .title {
 	color: #bc0000;
