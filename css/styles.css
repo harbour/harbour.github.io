@@ -34,6 +34,20 @@ body {
 	margin-left: 0;
 	background-color: #333333;
 }
+
+.why_box { background-color: #FFFFEC; border-radius: 6px; padding: 7px; margin: auto; }
+.why_box>div:nth-child(1) { float: left; width: 68%; }
+.why_box>div:nth-child(2) { padding-left: 5px; }
+.why_box>div>ul { padding-left: 2em; text-indent: 0em; }
+
+.feature_box { background-image:url(../images/feat_bg.jpg); height: 200px; padding: 0; }
+.feature_box>div { padding-top: 0; }
+.feature_box>div>div {
+	padding: 0 9px 0 9px;
+	float: left;
+	width: 14%;
+	text-align: center;
+}
 .sshot {
 	margin: auto;
 	text-align: center;
@@ -125,11 +139,13 @@ body {
 .news-full>dt { 
 	width: 100px;
 }
-.feat {
-	padding: 0 9px 0 9px;
-	float: left;
-	width: 14%;
-	text-align: center;
+.lower_box { padding: 7px; margin: auto; }
+.news_box { float: left; width: 68%; padding-right: 14px; }
+.minisamples_box {
+	overflow: hidden;
+	background-color: #FEF0D1;
+	border-radius: 6px;
+	padding: 6px;
 }
 .minisamples>dl {
 	padding: 0;
