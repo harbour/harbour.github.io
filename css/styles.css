@@ -70,6 +70,8 @@ body {
 	width: 20%;
 	padding: 0;
 	margin: 0
+}
+.news dt {
 	color: #666666;
 	font-weight: bolder;
 	vertical-align: text-top;
@@ -93,11 +95,6 @@ body {
 .title_text {
 	color: #000000;
 	font-weight: bolder;
-}
-.title_date {
-	color: #666666;
-	font-weight: bolder;
-	vertical-align: text-top;
 }
 .sample_subtitle {
 	color: #bc0000;
