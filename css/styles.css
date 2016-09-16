@@ -88,6 +88,11 @@ hr {
 	text-decoration: none;
 	float: right;
 }
+.third_logo {
+	font-size: 400%;
+	color: #444;
+	float: right;
+}
 .samples_list {
 	font-size: 180%;
 	color: #333;
