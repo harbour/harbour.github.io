@@ -378,6 +378,7 @@ i.fa-camera {
 .dropdown-content {
 	display: none;
 	position: absolute;
+	margin-top: 1px;
 	background-color: #fcfdff;
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
