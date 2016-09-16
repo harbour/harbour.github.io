@@ -317,15 +317,39 @@ i.fa-camera {
 /* ------------------------------------------------------------------------ */
 /* drop-down menu magic */
 
+.menu_text {
+	font-size: 13px;
+	text-align: center;
+	margin-top: -10px;
+	text-align: center;
+	width: 20px;
+}
+
 /* Dropdown Button */
 .dropbtn {
-	/*background-color: #093754;*/
-	color: white;
+	/*background-color: #0000C0;*/
+	color: #666;
 	margin: 0;
-	padding-right: 16px;
-	font-size: 10px;
+	font-size: 32px;
 	border: none;
 	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	width: 20px;
+}
+
+.menu {
+	padding-top: 12px;
+	height: 68px;
+	border-bottom: 1px solid #e6eff9;
+	background-color: #fafffb;
+}
+
+.menu>div {
+	padding: 2px 0;
+	float: left;
+	width: 11%;
+	text-align: center;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -353,7 +377,6 @@ i.fa-camera {
 	font-size: 100%;
 	font-weight: bold;
 	text-align: left;
-	border: 1px solid #e6eff9;
 }
 
 /* Change color of dropdown links on hover */
@@ -369,5 +392,5 @@ i.fa-camera {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-	color: #8080ff;
+	color: #000;
 }
