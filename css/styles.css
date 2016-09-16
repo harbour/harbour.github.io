@@ -68,6 +68,10 @@ hr {
 	margin: 1em;
 	border: none;
 }
+.samples_list {
+	font-size: 180%;
+	color: #333;
+}
 .bkg_socoding {
 	background-color: #f1ffff;
 }
@@ -254,7 +258,7 @@ a:active {
 	font-weight: bolder;
 	align: center;
 }
-i.fa {
+i.fa-camera {
 	color: #777;
 }
 .crew_mail {
