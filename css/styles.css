@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+.banner {
+	display: flex;
+	padding: 0 0 3px 0;
+	height: 164px;
+	background: rgb(9,116,197);
+	background-image: radial-gradient(rgba(255,255,255,1) 0%, rgba(253,253,255,1) 30%, rgba(9,116,197,1) 80%);
+	background-position: -750px -100px;
+	background-size: 220% 500%;
+}
+
 div.container {
 	border: 0 black;
 	line-height: 150%;
@@ -71,6 +81,12 @@ hr {
 	float: right;
 	margin: 1em;
 	border: none;
+}
+.trophy {
+	font-size: 450%;
+	color: #ffd700;
+	text-decoration: none;
+	float: right;
 }
 .samples_list {
 	font-size: 180%;
@@ -342,7 +358,7 @@ i.fa-camera {
 	padding-top: 12px;
 	height: 68px;
 	border-bottom: 1px solid #e6eff9;
-	background-color: #fafffb;
+	background-color: #fcfdff;
 }
 
 .menu>div {
@@ -362,7 +378,7 @@ i.fa-camera {
 .dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: #e6eff9;
+	background-color: #fcfdff;
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 100;
@@ -381,8 +397,8 @@ i.fa-camera {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-	background-color: #f8f8f8;
-	border-color: #f8f8f8;
+	background-color: #e6eff9;
+	border-color:#e6eff9;
 }
 
 /* Show the dropdown menu on hover */
