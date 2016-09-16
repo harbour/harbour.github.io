@@ -125,6 +125,7 @@ hr {
 .list-bubble div:nth-child(1) {
 	float: left;
 	padding-top: 15px;
+	font-size: 280%;
 }
 .list-bubble div:nth-child(2) {
 	overflow: hidden;
@@ -251,6 +252,10 @@ a:active {
 .crew_person_name {
 	color: #1C69B7;
 	font-weight: bolder;
+	align: center;
+}
+i.fa {
+	color: #777;
 }
 .crew_mail {
 	color: #0099FF;
