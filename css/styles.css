@@ -80,7 +80,7 @@ hr {
 }
 .footer {
 	color: #fff;
-	font-size: 8px;
+	font-size: 60%;
 	background: rgb(28,105,183);
 	height: 4em;
 	padding: 0.1em 1em;
@@ -189,17 +189,17 @@ hr {
 }
 .minisamples dd {
 	color: #000;
-	font-size: 9px;
+	font-size: 70%;
 }
 .title {
 	color: #bc0000;
 	font-weight: bolder;
-	font-size: 14px;
+	font-size: 115%;
 }
 .title_blue {
 	color: #06639d;
 	font-weight: bolder;
-	font-size: 14px;
+	font-size: 115%;
 }
 .title_text {
 	color: #000;
@@ -221,7 +221,7 @@ hr {
 	text-decoration: none;
 }
 .read_more {
-	font-size: 9px;
+	font-size: 70%;
 }
 a:hover {
 	color: #FF0000;
