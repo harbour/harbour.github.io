@@ -63,6 +63,10 @@ hr {
 	margin: auto;
 	text-align: center;
 }
+.feat_font {
+	font-size: 340%;
+	color: #444;
+}
 .img_right {
 	float: right;
 	margin: 1em;
