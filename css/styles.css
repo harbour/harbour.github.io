@@ -293,6 +293,9 @@ a:active {
 	font-family: "Courier New", Courier, monospace;
 }
 
+.github-fork-ribbon.left-top:before {
+	background-color: #222;
+}
 .github-fork-ribbon.right-top:before {
 	background-color: #222;
 }
