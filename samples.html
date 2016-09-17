@@ -3,31 +3,30 @@ layout: default
 title: "Sample Applications"
 ---
 
-<h1 class="title">Sample Applications</h1>
-
+<h1>Sample Applications</h1>
 <p>
   This is the list of some examples in Harbour's test directory.
   The examples demonstrate Harbour features in small programs.
 </p>
 
-<hr>
+<h2>Categories:</h2>
 <div>
-  <div class="sample_subtitle">Categories:</div>
   <ul>
-    <li><a href="#Basic" class="blue_link">Basic</a></li>
-    <li><a href="#Arrays" class="blue_link">Arrays</a></li>
-    <li><a href="#Database" class="blue_link">Database</a></li>
-    <li><a href="#Extensions" class="blue_link">Extensions</a></li>
-    <!--<li><a href="#OOP" class="blue_link">OOP</a></li> !-->
-    <li><a href="#Web" class="blue_link">Web</a></li>
-    <li><a href="#More" class="blue_link">More samples</a><br></li>
+    <li><a href="#basic" class="blue_link">Basic</a></li>
+    <li><a href="#arrays" class="blue_link">Arrays</a></li>
+    <li><a href="#database" class="blue_link">Database</a></li>
+    <li><a href="#extensions" class="blue_link">Extensions</a></li>
+    <!-- <li><a href="#oop" class="blue_link">OOP</a></li> !-->
+    <li><a href="#web" class="blue_link">Web</a></li>
+    <li><a href="#more" class="blue_link">More samples</a><br></li>
     <li><a href="#compile" class="blue_link">How to compile</a></li>
   </ul>
 </div>
 
 <hr>
+
+<h2 id="basic">Basic</h2>
 <div>
-  <div class="sample_subtitle" id="Basic">Basic</div>
   <ul>
     <li><a href="sample_hello.html" class="blue_link">Hello world (hello.prg)</a></li>
     <li><a href="sample_macro.html" class="blue_link">Dynamic code evalutation sample (macro.prg)</a></li>
@@ -44,27 +43,24 @@ title: "Sample Applications"
   </ul>
 </div>
 
-<hr>
+<h2 id="arrays">Arrays</h2>
 <div>
-  <div class="sample_subtitle" id="Arrays">Arrays</div>
   <ul>
     <li><a href="sample_array16.html" class="blue_link">Multidimensional arrays demo (array16.prg)</a></li>
     <li><a href="sample_arreval.html" class="blue_link">AEval() sample (arreval.prg)</a></li>
   </ul>
 </div>
 
-<hr>
+<h2 id="database">Database</h2>
 <div>
-  <div class="sample_subtitle" id="Database">Database</div>
   <ul>
     <li><a href="sample_browse.html" class="blue_link">Browse() function demo (browse.prg)</a></li>
     <li><a href="sample_tbrowse.html" class="blue_link">TBrowse() sample (tbrowse.prg)</a></li>
   </ul>
 </div>
 
-<hr>
+<h2 id="extensions">Extensions</h2>
 <div>
-  <div class="sample_subtitle" id="Extensions">Extensions</div>
   <ul>
     <li><a href="sample_switch.html" class="blue_link">Switch support (switch.prg)</a></li>
     <li><a href="sample_foreach.html" class="blue_link">FOR EACH example (foreach.prg)</a></li>
@@ -74,9 +70,8 @@ title: "Sample Applications"
 </div>
 
 <!--
-<hr>
+<h2 id="oop">OOP</h2>
 <div>
-  <div class="sample_subtitle" id="OOP">OOP</div>
   <ul>
     <li>Using Harbour Class HBClass (classes.prg)*</li>
     <li>Using Harbour Class HBClass with inherit (clasinh.prg)</li>
@@ -93,24 +88,25 @@ title: "Sample Applications"
 </div>
 -->
 
-<hr>
+<h2 id="web">Web</h2>
 <div>
-  <div class="page_subtitle" id="Web">Web</div>
   <ul>
     <li><a href="sample_html.html" class="blue_link">Harbour Test of a HTML-Generator class (html.prg)</a></li>
   </ul>
 </div>
 
-<hr>
+<h2 id="more">More examples</h2>
 <div>
-  <div class="page_subtitle" id="More">More examples</div>
-  More examples can be provided with the installation package of the Harbour.
-  Look the /tests and /extras folder to find other samples, but the best examples
-  are the source code of Harbour itself.
+  <p>
+    More examples can be provided with the installation package of the Harbour.
+    Look the /tests and /extras folder to find other samples, but the best examples
+    are the source code of Harbour itself.
+  </p>
 </div>
 
 <hr>
+
+<h2 id="compile">How to build the sample applications:</h2>
 <div>
-  <div class="sample_subtitle" id="compile">How to build the sample applications:</div>
   <pre class="source_code">$ hbmk2 app.prg</pre>
 </div>

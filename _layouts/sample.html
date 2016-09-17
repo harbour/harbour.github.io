@@ -7,30 +7,29 @@
 {% include header.html %}
 
 <a href="samples.html" class="samples_list"><i class="fa fa-list img_right" aria-hidden="true"></i></a>
-<h1 class="title">{{ page.title_long }}</h1>
+<h1>{{ page.title_long }}</h1>
 <p>{{ page.description }}</p>
 
+<h2>Files:</h2>
 <div>
-  <div class="sample_subtitle">Files:</div>
   <ul>
     <li><a href="https://github.com/harbour/core/blob/master/tests/{{ page.source }}" class="blue_link">tests/{{ page.source }}</a></li>
   </ul>
 </div>
 
-<div>
-  <div class="sample_subtitle">Screenshot(s):</div>
-  <br>
-  <div class="read_more sshot">
+<h2>Screenshot(s):</h2>
+<div class="read_more sshot">
+  <p>
     {{ content }}
-  </div>
+  </p>
 </div>
 
+<h2>How to compile:</h2>
 <div>
-  <br>
-  <div class="sample_subtitle">How to compile:</div>
-  <div>To learn how to compile/link this example see our specific section on this
+  <p>
+    To learn how to compile/link this example see our specific section on this
     <a href="samples.html#compile" class="blue_link">link</a>.
-  </div>
+  </p>
 </div>
 
 {% include footer.html %}

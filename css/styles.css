@@ -190,9 +190,9 @@ hr {
 .news_box { float: left; width: 68%; padding-right: 14px; }
 .minisamples_box {
 	overflow: hidden;
-	background-color: #FEF0D1;
+	background-color: #fef0d1;
 	border-radius: 6px;
-	padding: 6px;
+	padding: 0 6px 0 6px;
 }
 .minisamples>dl {
 	padding: 0;
@@ -220,6 +220,16 @@ hr {
 .minisamples dd {
 	color: #000;
 	font-size: 70%;
+}
+h1 {
+	color: #bc0000;
+	font-weight: bold;
+	font-size: 115%;
+}
+h2 {
+	color: #990000;
+	font-weight: bolder;
+	font-size: 100%;
 }
 .title {
 	color: #bc0000;
@@ -264,7 +274,7 @@ a:active {
 	color: #990000;
 	font-weight: bold;
 }
-.prod_name {
+.prod_link a {
 	color: #0066CC;
 	font-weight: bold;
 	text-decoration: none;
@@ -272,7 +282,9 @@ a:active {
 .text_libname {
 	color: #0066CC;
 	font-weight: bold;
-	font-size: 120%;
+	font-size: 115%;
+	border-top: 1px solid rgba(0,0,0,0.4);
+	padding-top: 1em;
 }
 .crew_country {
 	color: #bc0000;
