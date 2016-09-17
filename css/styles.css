@@ -276,6 +276,7 @@ a:active {
 }
 .prod_link a {
 	color: #0066CC;
+	font-size: 115%;
 	font-weight: bold;
 	text-decoration: none;
 }
