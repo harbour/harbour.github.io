@@ -104,7 +104,7 @@ hr {
 .footer {
 	color: #fff;
 	font-size: 75%;
-	background: #09397F;
+	background: #09397f;
 	height: 5em;
 	padding: 0.1em 1em;
 }
@@ -129,13 +129,13 @@ hr {
 	margin-bottom: 12px;
 }
 .crew-content>div:nth-child(2) {
-	background-color: #E3EEF7;
+	background-color: #e3eef7;
 	border-radius: 4px;
 	padding: 2px;
 	padding-left: 0.6em;
 }
 .list-bubble {
-	background-color: #FAFFD2;
+	background-color: #faffd2;
 	border-radius: 4px;
 	padding: 15px 15px 0.3em 15px;
 	width: 65%;
@@ -336,7 +336,7 @@ i.fa-camera {
 
 /* Dropdown Button */
 .dropbtn {
-	/*background-color: #0000C0;*/
+	/*background-color: #0000c0;*/
 	color: #666;
 	margin: 0;
 	font-size: 32px;
@@ -396,8 +396,8 @@ i.fa-camera {
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
 	color: #fff;
-	background-color: #09397F;
-	border-color: #09397F;
+	background-color: #09397f;
+	border-color: #09397f;
 }
 
 /* Show the dropdown menu on hover */
