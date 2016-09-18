@@ -85,7 +85,6 @@ hr {
 .trophy {
 	font-size: 450%;
 	color: #ffd700;
-	text-decoration: none;
 	float: right;
 }
 .third_logo {
@@ -99,9 +98,6 @@ hr {
 }
 .bkg_socoding {
 	background-color: #f1ffff;
-}
-.text_under {
-	text-decoration: underline;
 }
 .header {
 	margin: 1px 0 0 0;
@@ -208,9 +204,6 @@ hr {
 	font-weight: bold;
 	text-decoration: none;
 }
-.minisamples dt a:hover {
-	color: #FF0000;
-}
 .minisamples>dd {
 	float: left;
 	padding: 0;
@@ -253,18 +246,32 @@ h2 {
 	color: #000;
 	font-size: 100%;
 }
-.black_link {
-	color: #000;
-}
-.blue_link {
-	color: #0099FF;
+.whitelink {
+	color: #fff;
 	text-decoration: none;
 }
-.read_more {
+.whitelink:hover {
+	border-style: none none solid;
+	border-width: 0 0 1px;
+	border-color: #fff;
+	border-color: rgba(255, 255, 255, 0.8);
+}
+.prod_link a {
+	font-size: 115%;
+	font-weight: bold;
+}
+.smaller {
 	font-size: 70%;
 }
+a {
+	color: #0066CC;
+	text-decoration: none;
+}
 a:hover {
-	color: #FF0000;
+	border-style: none none solid;
+	border-width: 0 0 1px;
+	border-color: #0066CC;
+	border-color: rgba(0, 102, 204, 0.4);
 }
 a:active {
 	color: #FF0000;
@@ -273,12 +280,6 @@ a:active {
 .page_subtitle {
 	color: #990000;
 	font-weight: bold;
-}
-.prod_link a {
-	color: #0066CC;
-	font-size: 115%;
-	font-weight: bold;
-	text-decoration: none;
 }
 .text_libname {
 	color: #0066CC;
@@ -330,10 +331,6 @@ i.fa-camera {
 	color: #000066;
 	text-decoration: none;
 }
-.whitelink {
-	color: #fff;
-	text-decoration: none;
-}
 .source_code {
 	background-color: #f7f7f7;
 	padding: 16px;
@@ -346,6 +343,9 @@ i.fa-camera {
 }
 .github-fork-ribbon.right-top:before {
 	background-color: #222;
+}
+.github-fork-ribbon:hover {
+	border: 0;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -370,6 +370,9 @@ i.fa-camera {
 	text-decoration: none;
 	text-align: center;
 	width: 20px;
+}
+.dropbtn:hover {
+	border: none;
 }
 
 .menu {
@@ -412,6 +415,7 @@ i.fa-camera {
 	font-size: 100%;
 	font-weight: bold;
 	text-align: left;
+	border: 0;
 }
 
 /* Change color of dropdown links on hover */
