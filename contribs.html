@@ -7,8 +7,8 @@ title: "Contribution"
 
 <h1>Harbour Contributions</h1>
 <div>
-  Contributions are libraries, sources or other products, which are
-  independent from the language core and bundled with the main Harbour
+  Contributions are libraries, sources or tools, which are independent
+  from the language core, but bundled with the main Harbour
   distribution. These components are part of the Harbour Project
   source package.<br>
   <br>
@@ -31,7 +31,7 @@ title: "Contribution"
   This library can be used for pure console applications instead of GTWVT. But
   if used with GUI extensions, very appealing Windows screens without
   sacrificing the Clipper syntax. Additionally GTWVG has a nice set of
-  Wvt*Classes() which employ the common event loop.<br>
+  Wvt*() classes which employ the common event loop.<br>
   <br>
   You can create high performance dialogs with multiple TBrowser, Reads,
   Bitmaps, Buttons, i.e. all GUI elements you can think of.
@@ -39,61 +39,51 @@ title: "Contribution"
 
 <h2>hbct</h2>
 <div>
-  This library has functions and procedures compatible with the famous Clipper
+  This library provides functions compatible with the famous Clipper
   Tools for CA-Clipper (CT.LIB).
 </div>
 
 <h2>hbcurl</h2>
 <div>
-  This is a Harbour interface for libcurl. Note what libcurl is a free and
-  easy-to-use client-side URL transfer library, supporting FTP, FTPS, HTTP,
-  HTTPS, SCP, SFTP, TFTP, TELNET, DICT, LDAP, LDAPS and FILE.<br>
-  <br>
-  libcurl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading,
-  HTTP form based upload, proxies, cookies, authentication (Basic, Digest,
-  NTLM, Negotiate, Kerberos4), file transfer resume, http proxy tunneling
-  and more! See more info
-  <a href="https://curl.haxx.se/libcurl/">here</a>.
+  Harbour wrappers for libcurl. libcurl is a free and easy-to-use
+  client-side URL transfer library, supporting SSL, HTTP GET/PUT/POST/forms,
+  HTTP2, SCP, FTPS, SFTP, FTP, LDAP, LDAPS,
+  SMTP, SMTPS, IMAP, IMAPS, POP3, POP3S, TFTP, TELNET, FILE/SMB,
+  proxies, cookies, authentication (Basic, Digest, NTLM, Negotiate, Kerberos4),
+  file transfer resume, http proxy tunneling and more.
+  See more info <a href="https://curl.haxx.se/libcurl/">here</a>.
 </div>
 
 <h2>hbfbird</h2>
 <div>
-  Harbour Low Level api for Firebird and Interbase RDBMS, including classes
+  Harbour Low Level api for Firebird/Interbase RDBMS, including classes
   and functions to work with these RDBMS.
 </div>
 
 <h2>hbfimage</h2>
 <div>
-  FreeImage graphic library low level (client API) interface code for Harbour.
-  FreeImage Library is a porting to Harbour of famous FreeImage Project library.
+  FreeImage graphic library wrapper for Harbour.
   FreeImage is an Open Source library project for developers who would like to
   support popular graphics image formats like PNG, BMP, JPEG, TIFF and others
   as needed by today's multimedia applications.<br>
   <br>
-  FreeImage is easy to use, fast, multithreading safe, compatible with all
-  32-bit versions of Windows, and cross-platform (works both with Linux and Mac).
+  FreeImage is easy to use, fast, multithreading safe and cross-platform
+  (works on Windows, Linux and Mac).
 </div>
 
 <h2>hbgd</h2>
 <div>
-  HBGD is basically a wrapper of Thomas Boutell's GD Library version 2.x for
-  Harbour. The GD Library is a powerfull graphic library very usefull expecially
-  under CGI environment. HBGD actually contains almost all GD functions, more
-  a set of functions that extends original library and a set of classes that
-  make easier to work with this library. More info
-  <a href="https://libgd.github.io/">here</a>.
-</div>
-
-<h2>hbgf</h2>
-<div>
-  Portable functions for creating GUI objects like windows, menus, buttons, etc.
-  inside prg source code. Supports Windows, GTK &amp; OS/2.
+  HBGD is a Harbour wrapper for Thomas Boutell's GD Library version 2.x.
+  The GD Library is a powerful graphic library, useful expecially
+  under CGI environment. HBGD supports almost all GD functions, plus
+  a set of functions and classes that extend and make it easier to work
+  with this library.
+  More info <a href="https://libgd.github.io/">here</a>.
 </div>
 
 <h2>hbgt</h2>
 <div>
-  Several functions for manipulation of strings and some generic compatible with
-  Flagship.
+  Misc functions for manipulating strings.
 </div>
 
 <h2>hbhpdf</h2>
@@ -105,34 +95,28 @@ title: "Contribution"
 
 <h2>hbmisc</h2>
 <div>
-  Misc functions for manipulating strings, numbers, type conversions, classes
-  for working with HTML and files, etc.
+  Miscellaneous functions for manipulating strings, numbers, type conversions, etc.
 </div>
 
 <h2>hbmysql</h2>
 <div>
-  Harbour MariaDB/MySQL access classes. Includes a dbf2mysql.prg utility to converts
-  a .dbf file into a MySQL table.
+  Harbour MariaDB/MySQL client API wrappers and helper classes. Includes
+  a dbf2mysql.prg utility to convert .dbf files into MariaDB/MySQL tables.
 </div>
 
 <h2>hbmzip</h2>
 <div>
-  This library contains compression related functions to work with zip file
-  support based on minizip library including:
-  <ul>
-    <li>wrapper functions for minizip</li>
-    <li>some additionl functions to provide a higher level API for zip files</li>
-  </ul>
+  Harbour wrappers for the minizip API, allowing to read and write .zip files.
 </div>
 
 <h2>hbnf</h2>
 <div>
-  A port in Harbour of the Nanforum Library for Clipper.
+  A port to Harbour of the Nanforum Library for Clipper.
 </div>
 
 <h2>hbodbc</h2>
 <div>
-  Harbour ODBC Library. Includes functions, procedures and classes to work with
+  Harbour ODBC Library. Includes wrappers and helper classes to work with
   various RDBMS.
 </div>
 
@@ -144,27 +128,27 @@ title: "Contribution"
 
 <h2>hbsqlit3</h2>
 <div>
-  Harbour interface for SQLite version 3. This library allow access an SQLite
+  Harbour wrapper for SQLite version 3. This library allow access an SQLite
   database using Harbour.
 </div>
 
 <h2>hbssl</h2>
 <div>
-  OpenSSL API Harbour interface. Supports SSL, SSL_CIPHER, SSL_CTX, RAND,
-  SSL_SESSION functions.
+  Harbour wrappers for OpenSSL. Supports SSL, SSL_CIPHER, SSL_CTX, RAND,
+  SSL_SESSION (and more) modules.
 </div>
 
 <h2>hbtip</h2>
 <div>
-  TIP class-oriented internet protocol library for Harbour. Supports FTP,
-  POP3, HTTP and more.
+  Class-oriented internet protocol library for Harbour. Supports HTTP,
+  HTTPS, SMTP, SMTPS, POP3, FTP and more.
 </div>
 
 <h2>hbtpathy</h2>
 <div>
-  Telepathy emulation library. Telepathy is the best serial communication
+  Telepath(y) emulation library. Telepath(y) is the best serial communication
   library for Nantucket/CA-Clipper and this library has a significant
-  amount of the functionality contained in Telepathy in this Harbour port.
+  amount of the functionality contained in Telepath(y) in this Harbour port.
 </div>
 
 <h2>hbvpdf</h2>
@@ -175,21 +159,16 @@ title: "Contribution"
 
 <h2>hbwin</h2>
 <div>
-  This library has functions, procedures and classes to access Windows API (win32).
+  This library has functions and classes to access the Windows API.
   Among these features are:
   <ul>
-    <li>Registry</li>
+    <li>Registry access</li>
     <li>GUI printing</li>
     <li>OLE support</li>
     <li>Services</li>
     <li>DLL handling functions</li>
     <li>&hellip;and more</li>
   </ul>
-</div>
-
-<h2>rddado</h2>
-<div>
-  RDD to automatically manage Microsoft ADO databases.
 </div>
 
 <h2>rddads</h2>
@@ -211,13 +190,12 @@ title: "Contribution"
 <h2>rddsql</h2>
 <div>
   SQL MIX (Memory Index) Database Driver. This library provides access to
-  FireBird, MySQL and PostgreSQL servers.
+  PostgreSQL, sqlite3, MariaDB/MySQL, Firebird and ODBC servers.
 </div>
 
 <h2>xhb</h2>
 <div>
-  Files containing functions, procedures and defines for cross-compatibility
-  with xHarbour project.
+  Provides a compatibility layer with the xHarbour fork.
 </div>
 
 </span>
