@@ -2,7 +2,7 @@
 	display: flex;
 	padding: 0 0 3px 0;
 	height: 164px;
-	background: rgb(9,116,197);
+	background: #0974c5;
 	background-image: radial-gradient(rgba(255,255,255,1) 0%, rgba(253,253,255,1) 30%, rgba(9,116,197,1) 80%);
 	background-position: -750px -100px;
 	background-size: 220% 500%;
@@ -186,7 +186,7 @@ hr {
 .news_box { float: left; width: 68%; padding-right: 14px; }
 .minisamples_box {
 	overflow: hidden;
-	background-color: #d2FFd2;
+	background-color: #ececec;
 	border-radius: 6px;
 	padding: 0 6px 0 6px;
 }
@@ -387,8 +387,9 @@ i.fa-camera {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-	background-color: #e6eff9;
-	border-color: #e6eff9;
+	color: #fff;
+	background-color: #0974c5;
+	border-color: #0974c5;
 }
 
 /* Show the dropdown menu on hover */
