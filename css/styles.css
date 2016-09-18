@@ -307,11 +307,17 @@ i.fa-camera {
 	font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 }
 
-.github-fork-ribbon.left-top:before {
-	background-color: #222;
+.screen-only {
+	display: block;
 }
+@media screen and (max-width: 480px) {
+	.screen-only {
+		display: none;
+	}
+}
+
 .github-fork-ribbon.right-top:before {
-	background-color: #222;
+	background-color: #333;
 }
 .github-fork-ribbon:hover {
 	border: 0;
