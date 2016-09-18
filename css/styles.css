@@ -103,12 +103,12 @@ hr {
 }
 .footer {
 	color: #fff;
-	font-size: 60%;
+	font-size: 75%;
 	background: #09397F;
-	height: 4em;
+	height: 5em;
 	padding: 0.1em 1em;
 }
-.footer div { float: left; width: 33.3%; padding-top: 0.8em; }
+.footer div { float: left; width: 33.3%; padding-top: 1.5em; }
 .footer div:nth-child(1) { text-align: left; }
 .footer div:nth-child(2) { text-align: center; }
 .footer div:nth-child(3) { text-align: right; }
@@ -210,7 +210,7 @@ hr {
 }
 .minisamples dd {
 	color: #000;
-	font-size: 70%;
+	font-size: 75%;
 }
 h1 {
 	color: #9f0e22;
@@ -241,7 +241,7 @@ h2 {
 	border-color: rgba(255, 255, 255, 0.8);
 }
 .smaller {
-	font-size: 70%;
+	font-size: 75%;
 }
 a {
 	color: #0974c5;
