@@ -247,6 +247,9 @@ a {
 	color: #0974c5;
 	text-decoration: none;
 }
+a.smaller {
+	white-space: nowrap;
+}
 a:hover {
 	border-style: none none solid;
 	border-width: 0 0 1px;
