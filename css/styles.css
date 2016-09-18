@@ -255,6 +255,9 @@ a:hover {
 a:active {
 	color: #9f0e22;
 }
+.img_link a:hover {
+	border-bottom: 0;
+}
 
 .contribs h2 {
 	color: #0974c5;
