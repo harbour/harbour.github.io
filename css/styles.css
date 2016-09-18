@@ -9,7 +9,7 @@
 }
 
 div.container {
-	border: 0 black;
+	border: 0;
 	line-height: 150%;
 	width: 738px;
 	margin: auto;
@@ -55,7 +55,7 @@ hr {
 }
 
 .why_box { background-color: #ececec; border-radius: 4px; padding: 1em; margin: auto; margin-bottom: 1em; }
-.why_box>div:nth-child(1) { float: left; width: 68%; padding-right: 1em; }
+.why_box>div:nth-child(1) { float: left; width: 66%; padding-right: 1em; }
 .why_box>div:nth-child(2) { padding-left: 0; }
 .why_box>div>ul { padding-left: 2em; text-indent: 0; }
 
@@ -98,7 +98,7 @@ hr {
 	color: #333;
 }
 .header {
-	margin: 1px 0 0 0;
+	margin: 0;
 	padding: 0;
 }
 .footer {
@@ -169,8 +169,6 @@ hr {
 	margin: 0;
 }
 .news dt {
-	color: #666;
-	font-weight: bolder;
 	vertical-align: text-top;
 }
 .news>dd {
@@ -209,7 +207,6 @@ hr {
 	margin-bottom: 11px;
 }
 .minisamples dd {
-	color: #000;
 	font-size: 75%;
 }
 h1 {
@@ -228,7 +225,6 @@ h2 {
 	font-size: 115%;
 }
 .title_text {
-	color: #000;
 	font-weight: bolder;
 }
 .whitelink {
