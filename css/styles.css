@@ -54,12 +54,12 @@ hr {
 	margin-right: 0.5em;
 }
 
-.why_box { background-color: #ffffec; border-radius: 6px; padding: 1em; padding-bottom: 1.5em; margin: auto; }
+.why_box { background-color: #FAFFD2; border-radius: 6px; padding: 1em; padding-bottom: 1.5em; margin: auto; margin-bottom: 1em; }
 .why_box>div:nth-child(1) { float: left; width: 68%; padding-right: 1em; }
 .why_box>div:nth-child(2) { padding-left: 0; }
 .why_box>div>ul { padding-left: 2em; text-indent: 0; }
 
-.feature_box { background-color: #f3f9fb; height: 16em; }
+.feature_box { background-color: #f3f9fb; height: 16em; padding: 0.1em; padding-left: 0.4em; margin-bottom: 1em; }
 .feature_box>div { padding-top: 0; }
 .feature_box>div>div {
 	padding: 0 0.5em;
@@ -67,6 +67,9 @@ hr {
 	width: 14%;
 	text-align: center;
 }
+
+.bkg_socoding { background-color: #f3f9fb; padding: 0.4em; margin-bottom: 1em; }
+
 .sshot {
 	margin: auto;
 	text-align: center;
@@ -94,9 +97,6 @@ hr {
 	font-size: 180%;
 	color: #333;
 }
-.bkg_socoding {
-	background-color: #f1ffff;
-}
 .header {
 	margin: 1px 0 0 0;
 	padding: 0;
@@ -122,18 +122,20 @@ hr {
 	width: 23%;
 }
 .crew-content>div:nth-child(1) {
-	background-color: #ffffec;
-	border-radius: 2px;
+	background-color: #efefef;
+	border-radius: 4px;
 	padding: 2px;
+	padding-left: 0.6em;
 	margin-bottom: 12px;
 }
 .crew-content>div:nth-child(2) {
-	background-color: #f1ffff;
-	border-radius: 2px;
+	background-color: #E3EEF7;
+	border-radius: 4px;
 	padding: 2px;
+	padding-left: 0.6em;
 }
 .list-bubble {
-	background-color: #ffffcc;
+	background-color: #FAFFD2;
 	border-radius: 6px;
 	padding: 15px 15px 0.3em 15px;
 	width: 65%;
@@ -141,7 +143,7 @@ hr {
 	margin-bottom: 18px;
 }
 .bubble-alt {
-	background-color: #ff4a4a;
+	background-color: #c00000;
 	color: #fff;
 	width: 96%;
 }
@@ -184,7 +186,7 @@ hr {
 .news_box { float: left; width: 68%; padding-right: 14px; }
 .minisamples_box {
 	overflow: hidden;
-	background-color: #fef0d1;
+	background-color: #d2FFd2;
 	border-radius: 6px;
 	padding: 0 6px 0 6px;
 }
@@ -290,7 +292,7 @@ i.fa-camera {
 }
 .crew_alphalist {
 	list-style: none;
-	padding-left: 1em;
+	padding-left: 0.4em;
 	text-indent: 0em;
 }
 .crew_alphalist>li {
