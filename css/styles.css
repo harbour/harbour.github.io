@@ -45,7 +45,7 @@ body {
 	margin-right: 0;
 	margin-bottom: 0;
 	margin-left: 0;
-	background-color: #333333;
+	background-color: #333;
 }
 hr {
 	border: 0;
@@ -54,12 +54,12 @@ hr {
 	margin-right: 0.5em;
 }
 
-.why_box { background-color: #FFFFEC; border-radius: 6px; padding: 1em; padding-bottom: 1.5em; margin: auto; }
+.why_box { background-color: #ffffec; border-radius: 6px; padding: 1em; padding-bottom: 1.5em; margin: auto; }
 .why_box>div:nth-child(1) { float: left; width: 68%; padding-right: 1em; }
 .why_box>div:nth-child(2) { padding-left: 0; }
 .why_box>div>ul { padding-left: 2em; text-indent: 0; }
 
-.feature_box { background-color: rgb(243, 249, 251); height: 16em; }
+.feature_box { background-color: #f3f9fb; height: 16em; }
 .feature_box>div { padding-top: 0; }
 .feature_box>div>div {
 	padding: 0 0.5em;
@@ -104,7 +104,7 @@ hr {
 .footer {
 	color: #fff;
 	font-size: 60%;
-	background: rgb(28,105,183);
+	background: #095fa8;
 	height: 4em;
 	padding: 0.1em 1em;
 }
@@ -122,18 +122,18 @@ hr {
 	width: 23%;
 }
 .crew-content>div:nth-child(1) {
-	background-color: #FFFFEC;
+	background-color: #ffffec;
 	border-radius: 2px;
 	padding: 2px;
 	margin-bottom: 12px;
 }
 .crew-content>div:nth-child(2) {
-	background-color: #F1FFFF;
+	background-color: #f1ffff;
 	border-radius: 2px;
 	padding: 2px;
 }
 .list-bubble {
-	background-color: #FFFFCC;
+	background-color: #ffffcc;
 	border-radius: 6px;
 	padding: 15px 15px 0.3em 15px;
 	width: 65%;
@@ -141,7 +141,7 @@ hr {
 	margin-bottom: 18px;
 }
 .bubble-alt {
-	background-color: #FF4A4A;
+	background-color: #ff4a4a;
 	color: #fff;
 	width: 96%;
 }
@@ -167,7 +167,7 @@ hr {
 	margin: 0;
 }
 .news dt {
-	color: #666666;
+	color: #666;
 	font-weight: bolder;
 	vertical-align: text-top;
 }
@@ -198,9 +198,7 @@ hr {
 	margin: 0;
 }
 .minisamples dt a {
-	color: #0099FF;
 	font-weight: bold;
-	text-decoration: none;
 }
 .minisamples>dd {
 	float: left;
@@ -213,36 +211,23 @@ hr {
 	font-size: 70%;
 }
 h1 {
-	color: #bc0000;
+	color: #9f0e22;
 	font-weight: bold;
 	font-size: 115%;
 }
 h2 {
-	color: #990000;
+	color: #9f0e22;
 	font-weight: bolder;
 	font-size: 108%;
 }
 .title {
-	color: #bc0000;
-	font-weight: bolder;
-	font-size: 115%;
-}
-.title_blue {
-	color: #06639d;
+	color: #9f0e22;
 	font-weight: bolder;
 	font-size: 115%;
 }
 .title_text {
 	color: #000;
 	font-weight: bolder;
-}
-.sample_subtitle {
-	color: #bc0000;
-	font-weight: bold;
-}
-.sample_text {
-	color: #000;
-	font-size: 100%;
 }
 .whitelink {
 	color: #fff;
@@ -251,43 +236,37 @@ h2 {
 .whitelink:hover {
 	border-style: none none solid;
 	border-width: 0 0 1px;
-	border-color: #fff;
 	border-color: rgba(255, 255, 255, 0.8);
 }
 .smaller {
 	font-size: 70%;
 }
 a {
-	color: #0066CC;
+	color: #0974c5;
 	text-decoration: none;
 }
 a:hover {
 	border-style: none none solid;
 	border-width: 0 0 1px;
-	border-color: #0066CC;
 	border-color: rgba(0, 102, 204, 0.4);
 }
 a:active {
-	color: #FF0000;
+	color: #9f0e22;
 }
 
-.page_subtitle {
-	color: #990000;
-	font-weight: bold;
-}
 .contribs h2 {
-	color: #0066CC;
+	color: #0974c5;
 	font-weight: bold;
 	font-size: 115%;
 	border-top: 1px solid rgba(0,0,0,0.4);
 	padding-top: 1em;
 }
 .crew_country {
-	color: #bc0000;
+	color: #9f0e22;
 	font-weight: bolder;
 }
 .crew_person_name {
-	color: #1C69B7;
+	color: #095fa8;
 	font-weight: bolder;
 	align: center;
 }
@@ -295,7 +274,7 @@ i.fa-camera {
 	color: #777;
 }
 .crew_mail {
-	color: #0099FF;
+	color: #0974c5;
 	text-decoration: none;
 }
 .crew_country_list {
@@ -305,10 +284,6 @@ i.fa-camera {
 }
 .crew_country_list>li {
 	margin: 0 0 5px 0;
-}
-.crew_country_list>li>a {
-	color: #0066FF;
-	text-decoration: none;
 }
 .crew_country_list>li>a>img {
 	margin: 0 5px 0 0;
@@ -320,10 +295,6 @@ i.fa-camera {
 }
 .crew_alphalist>li {
 	margin: 0 0 5px 0;
-}
-.crew_alphalist>li>a {
-	color: #000066;
-	text-decoration: none;
 }
 .source_code {
 	background-color: #f7f7f7;
@@ -415,7 +386,7 @@ i.fa-camera {
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
 	background-color: #e6eff9;
-	border-color:#e6eff9;
+	border-color: #e6eff9;
 }
 
 /* Show the dropdown menu on hover */
