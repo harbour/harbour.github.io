@@ -108,7 +108,7 @@ hr {
 	height: 5em;
 	padding: 0.1em 1em;
 }
-.footer div { float: left; width: 33.3%; padding-top: 1.5em; }
+.footer div { float: left; width: 33.3%; padding-top: 1.35em; }
 .footer div:nth-child(1) { text-align: left; }
 .footer div:nth-child(2) { text-align: center; }
 .footer div:nth-child(3) { text-align: right; }
