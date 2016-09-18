@@ -7,6 +7,6 @@ description: "Testing Harbour long string handling with device output."
 <img src="images/{{ page.name | remove:'.html' }}.png" alt="screenshot">
 <br>Running on Linux
 <br><br>
-<span class="smaller">NOTE: The Clipper limits the size of a string of up to
-65535 bytes (64 KiB). In Harbour this limit is much higher: you can load
-a file larger than 2 GiB into a memory variable.</span>
+Clipper limited the size of a string to 65535 bytes (64 KiB).<br>
+In Harbour, this limit is 2 GiB for 32-bit builds and in practice
+limited by the available memory for 64-bit builds.

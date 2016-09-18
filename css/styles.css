@@ -54,7 +54,7 @@ hr {
 	margin-right: 0.5em;
 }
 
-.why_box { background-color: #FAFFD2; border-radius: 4px; padding: 1em; padding-bottom: 1.5em; margin: auto; margin-bottom: 1em; }
+.why_box { background-color: #ececec; border-radius: 4px; padding: 1em; margin: auto; margin-bottom: 1em; }
 .why_box>div:nth-child(1) { float: left; width: 68%; padding-right: 1em; }
 .why_box>div:nth-child(2) { padding-left: 0; }
 .why_box>div>ul { padding-left: 2em; text-indent: 0; }
