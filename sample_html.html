@@ -2,7 +2,6 @@
 layout: sample
 title_long: "Harbour Test of a HTML-Generator class"
 description: "This example demonstrates the possibility of working with Web pages using a custom CGI class."
-source: html.prg
 ---
 
-<img src="images/sample_html.png" alt="screenshot" width="392" height="379">
+<img src="images/{{ page.name | remove:'.html' }}.png" alt="screenshot">

@@ -1,12 +1,11 @@
 ---
 layout: sample
-title_long: "Hello world"
-description: "A single Hello World with a typical welcome message."
-source: hello.prg
+title_long: "Hello, world!"
+description: "A simple welcome message."
 ---
 
-<img src="images/sample_hello_win.png" alt="screenshot" width="501" height="239"><br>
-Running on Windows
+<img src="images/{{ page.name | remove:'.html' }}_win.png" alt="screenshot">
+<br>Running on Windows
 <br><br>
-<img src="images/sample_hello_linux.png" alt="screenshot" width="529" height="175"><br>
-Running on Linux
+<img src="images/{{ page.name | remove:'.html' }}_linux.png" alt="screenshot">
+<br>Running on Linux
