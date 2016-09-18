@@ -54,12 +54,12 @@ hr {
 	margin-right: 0.5em;
 }
 
-.why_box { background-color: #FAFFD2; border-radius: 6px; padding: 1em; padding-bottom: 1.5em; margin: auto; margin-bottom: 1em; }
+.why_box { background-color: #FAFFD2; border-radius: 4px; padding: 1em; padding-bottom: 1.5em; margin: auto; margin-bottom: 1em; }
 .why_box>div:nth-child(1) { float: left; width: 68%; padding-right: 1em; }
 .why_box>div:nth-child(2) { padding-left: 0; }
 .why_box>div>ul { padding-left: 2em; text-indent: 0; }
 
-.feature_box { background-color: #f3f9fb; height: 16em; padding: 0.1em; padding-left: 0.4em; margin-bottom: 1em; }
+.feature_box { background-color: #e6eff9; border-radius: 4px; height: 16em; padding: 0.1em; padding-left: 0.4em; margin-bottom: 1em; }
 .feature_box>div { padding-top: 0; }
 .feature_box>div>div {
 	padding: 0 0.5em;
@@ -68,7 +68,7 @@ hr {
 	text-align: center;
 }
 
-.bkg_socoding { background-color: #f3f9fb; padding: 0.4em; margin-bottom: 1em; }
+.bkg_socoding { background-color: #e6eff9; border-radius: 4px; padding: 0.4em; margin-bottom: 1em; }
 
 .sshot {
 	margin: auto;
@@ -136,7 +136,7 @@ hr {
 }
 .list-bubble {
 	background-color: #FAFFD2;
-	border-radius: 6px;
+	border-radius: 4px;
 	padding: 15px 15px 0.3em 15px;
 	width: 65%;
 	margin: auto;
@@ -182,12 +182,12 @@ hr {
 .news-full>dt { 
 	width: 7em;
 }
-.lower_box { padding: 7px; margin: auto; }
+.lower_box { margin: auto; }
 .news_box { float: left; width: 68%; padding-right: 14px; }
 .minisamples_box {
 	overflow: hidden;
 	background-color: #ececec;
-	border-radius: 6px;
+	border-radius: 4px;
 	padding: 0 6px 0 6px;
 }
 .minisamples>dl {
@@ -348,7 +348,7 @@ i.fa-camera {
 .menu {
 	padding-top: 12px;
 	height: 68px;
-	border-bottom: 1px solid #e6eff9;
+	border-bottom: 1px solid #f2f2f2;
 	background-color: #fcfdff;
 }
 
@@ -391,8 +391,8 @@ i.fa-camera {
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
 	color: #fff;
-	background-color: #0974c5;
-	border-color: #0974c5;
+	background-color: #09397F;
+	border-color: #09397F;
 }
 
 /* Show the dropdown menu on hover */
