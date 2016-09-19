@@ -11,4 +11,4 @@ Some topics to be explained:
 * How to download and compile the Harbour in Linux?
 * How to print via Harbour using the Putty?
 * How to access MySQL or PostgreSQL using the content?
-* etc..
+* etc.
