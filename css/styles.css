@@ -72,7 +72,7 @@ hr {
 
 .dl-button { background-color: #ccc; border-radius: 3px; padding: .1em .4em .1em .4em; }
 
-.feature-box { background-color: #e6eff9; border-radius: 4px; height: 15em; padding: .1em; padding-left: .4em; margin-bottom: 1em; }
+.feature-box { background-color: #e6eff9; border-radius: 4px; height: 16em; padding: .1em; padding-left: .4em; margin-bottom: 1em; }
 
 .feature-box>div { padding-top: 0; }
 
@@ -91,8 +91,10 @@ hr {
 }
 
 .feat-font {
-  font-size: 340%;
   color: #444;
+  display: block !important;
+  font-size: 340% !important;
+  margin-bottom: .2em;
 }
 
 .img-right {
@@ -102,13 +104,11 @@ hr {
 }
 
 .trophy {
-  font-size: 450%;
-  color: #ffd700;
-  float: right;
+  color: #ffd700 !important;
 }
 
-.third-logo {
-  font-size: 400%;
+.large-icon {
+  font-size: 425% !important;
   color: #444;
   float: right;
 }
@@ -319,11 +319,13 @@ a:active {
 
 .crew-country {
   color: #9f0e22;
+  display: block !important;
   font-weight: bolder;
 }
 
 .crew-person-name {
   color: #095fa8;
+  display: block !important;
   font-weight: bolder;
 }
 
