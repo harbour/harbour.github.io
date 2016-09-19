@@ -72,7 +72,7 @@ hr {
 
 .dl-button { background-color: #ccc; border-radius: 3px; padding: .1em .4em .1em .4em; }
 
-.feature-box { background-color: #e6eff9; border-radius: 4px; height: 16em; padding: .1em; padding-left: .4em; margin-bottom: 1em; }
+.feature-box { background-color: #e6eff9; border-radius: 4px; height: 15em; padding: .1em; padding-left: .4em; margin-bottom: 1em; }
 
 .feature-box>div { padding-top: 0; }
 
@@ -124,7 +124,7 @@ hr {
 }
 
 .footer {
-  color: #fff;
+  color: #ddd;
   font-size: 75%;
   background: #09397f;
   height: 5em;
@@ -176,7 +176,7 @@ hr {
 
 .bubble-alt {
   background-color: #c00000;
-  color: #fff;
+  color: #ddd;
   width: 96%;
 }
 
@@ -280,12 +280,12 @@ h2 {
 }
 
 .whitelink {
-  color: #fff;
+  color: #ddd;
   text-decoration: none;
 }
 
 .whitelink:hover {
-  color: #ccc;
+  color: #fff;
 }
 
 .smaller {
