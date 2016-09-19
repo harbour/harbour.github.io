@@ -4,7 +4,7 @@
     "id": "ma-ha",
     "name": "Matt Hamilton",
     "photos": [ "matt_hamilton.jpg" ],
-    "title": "Captain of <code>strings.c</code> and <code>math.c</code>\nA VIP shipmaster! A Admiral actual!"
+    "title": "Captain of <code>strings.c</code> and <code>math.c</code><br>A VIP shipmaster! A Admiral actual!"
   },
   {
     "country": "au",
@@ -18,7 +18,7 @@
     "name": "Patrick Mast",
     "url": "eMail at PatrickMast.com",
     "photos": [ "patrickmast1.jpg", "patrickmast2.jpg", "patrickmast3.jpg" ],
-    "title": "Harbour WebMaster\nHarbour public relations and\nreal-life application tester"
+    "title": "Harbour WebMaster<br>Harbour public relations and<br>real-life application tester"
   },
   {
     "country": "be",
@@ -42,7 +42,7 @@
     "name": "Felipe Coury",
     "url": "fcoury at creation.com.br",
     "photos": [ "felipecoury.jpg" ],
-    "title": "Harbour Internet Integration Captain Radio operator\nand Brazilian Harbour Community Informant"
+    "title": "Harbour Internet Integration Captain Radio operator<br>and Brazilian Harbour Community Informant"
   },
   {
     "country": "br",
@@ -71,7 +71,7 @@
     "id": "bi-si",
     "name": "Bil Simser",
     "url": "bsimser at home.com",
-    "title": "Pascal Captain\nThe Dread Pirate Pascal"
+    "title": "Pascal Captain<br>The Dread Pirate Pascal"
   },
   {
     "country": "ca",
@@ -98,7 +98,7 @@
     "id": "go-di",
     "name": "Gonzalo Diethelm",
     "url": "gonzalo.diethelm at iname.com",
-    "title": "GNU Tools Pusher\nHarbour standard GNU tools pusher"
+    "title": "GNU Tools Pusher<br>Harbour standard GNU tools pusher"
   },
   {
     "country": "earth",
@@ -110,7 +110,7 @@
     "country": "earth",
     "id": "ro-pr",
     "name": "Ross Presser",
-    "title": "Captain Boy\nUnreliable Yet Sometimes Helpful Cabin Boy"
+    "title": "Captain Boy<br>Unreliable Yet Sometimes Helpful Cabin Boy"
   },
   {
     "country": "earth",
@@ -132,7 +132,7 @@
     "id": "pr-be",
     "name": "Pritpal Bedi",
     "url": "pritpal at vouchcac.com",
-    "title": "A student of software\nanalysis and design"
+    "title": "A student of software<br>analysis and design"
   },
   {
     "country": "id",
@@ -147,7 +147,7 @@
     "name": "Chen Kedem",
     "url": "niki at synel.co.il",
     "photos": [ "chenkedem.jpg" ],
-    "title": "The Documentor\nHarbour documentation writer"
+    "title": "The Documentor<br>Harbour documentation writer"
   },
   {
     "country": "it",
@@ -169,7 +169,7 @@
     "id": "ma-be",
     "name": "Massimo Belgrano",
     "url": "massimo.belgrano at gmail.com",
-    "title": "Fleet Admiral of Newsgroup, Lieutenant of\napplication tester, and Half soldier developer"
+    "title": "Fleet Admiral of Newsgroup, Lieutenant of<br>application tester, and Half soldier developer"
   },
   {
     "country": "it",
@@ -192,7 +192,7 @@
     "id": "ed-ru",
     "name": "Eddie Runia",
     "url": "eddie at runia.com",
-    "title": "Resident Medic\nDebug doctor with a bought fake diploma"
+    "title": "Resident Medic<br>Debug doctor with a bought fake diploma"
   },
   {
     "country": "pl",
@@ -206,14 +206,14 @@
     "id": "ro-ar",
     "name": "Robert Arseniuk",
     "url": "roberta at jmpolska.com",
-    "title": "Arrays Captain\nCaptain of the Harbour Arrays"
+    "title": "Arrays Captain<br>Captain of the Harbour Arrays"
   },
   {
     "country": "pl",
     "id": "ry-gl",
     "name": "Ryszard Glab",
     "url": "rglab at imid.med.pl",
-    "title": "2nd Harbour Master\nNearest to the Harbour Master!"
+    "title": "2nd Harbour Master<br>Nearest to the Harbour Master!"
   },
   {
     "country": "ru",
@@ -234,7 +234,7 @@
     "country": "uk-scotland",
     "id": "ra-th",
     "name": "Rab Thomson",
-    "title": "Ship's Rat\nGnawing at the leftovers, and did someone\nsay something about sinking ships?"
+    "title": "Ship's Rat<br>Gnawing at the leftovers, and did someone<br>say something about sinking ships?"
   },
   {
     "country": "es",
@@ -242,7 +242,7 @@
     "name": "Antonio Linares",
     "url": "alinares at fivetech.com",
     "photos": [ "antoniolinares1.jpg", "antoniolinares2.jpg" ],
-    "title": "Harbour Starter\nThe Great Man who started the engines!"
+    "title": "Harbour Starter<br>The Great Man who started the engines!"
   },
   {
     "country": "es",
@@ -258,13 +258,13 @@
     "name": "Bruno Cantero",
     "url": "bruno at issnet.net",
     "photos": [ "canterobruno.jpg" ],
-    "title": "RDD Captain\nHappy C and Clipper developer"
+    "title": "RDD Captain<br>Happy C and Clipper developer"
   },
   {
     "country": "es",
     "id": "jo-la",
     "name": "Jose Lalin",
-    "title": "Towboat Skipper\nHelping ships to come alongside"
+    "title": "Towboat Skipper<br>Helping ships to come alongside"
   },
   {
     "country": "es",
@@ -283,7 +283,7 @@
     "id": "br-ha",
     "name": "Brian Hays",
     "url": "bhays at abacuslaw.com",
-    "title": "Ship's Carpenter\nRoving Editor, Barnacle Scraper and Window Cleaner"
+    "title": "Ship's Carpenter<br>Roving Editor, Barnacle Scraper and Window Cleaner"
   },
   {
     "country": "us",
@@ -291,13 +291,13 @@
     "name": "David G. Holm",
     "url": "dholm at jsd-llc.com",
     "photos": [ "dholm1.jpg", "dholm2.jpg", "dholm3.jpg" ],
-    "title": "Set Captain\nThe Clipper Compatibility Fanatic"
+    "title": "Set Captain<br>The Clipper Compatibility Fanatic"
   },
   {
     "country": "us",
     "id": "ma-sc",
     "name": "Mark W. Schumann",
-    "title": "Animal Trainer\nTrainer of the Harbour Animal"
+    "title": "Animal Trainer<br>Trainer of the Harbour Animal"
   },
   {
     "country": "us",
@@ -305,7 +305,7 @@
     "name": "Phil Barnett",
     "url": "philb at philb.us",
     "photos": [ "philbarnett.jpg" ],
-    "title": "Harbour Manager\nKeeper of Pieces and Parts"
+    "title": "Harbour Manager<br>Keeper of Pieces and Parts"
   },
   {
     "country": "us",
@@ -313,7 +313,7 @@
     "name": "Ron Pinkas",
     "url": "ron at profit-master.com",
     "photos": [ "ron_pinkas.jpg" ],
-    "title": "Clipper-Head\nThe Clipper-Head who doesn't mind becoming\na 'c'-man to keep Clipper sailing into the future"
+    "title": "Clipper-Head<br>The Clipper-Head who doesn't mind becoming<br>a 'c'-man to keep Clipper sailing into the future"
   },
   {
     "country": "us",
@@ -327,6 +327,6 @@
     "country": "us",
     "id": "jo-be",
     "name": "Jon Berg",
-    "title": "Stoker\nJust keep shoveling coal into the Harbour engine. (Tester)\nHeld a higher rank on the old Clipper ships before I got\nbusted with the advent of steam engines"
+    "title": "Stoker<br>Just keep shoveling coal into the Harbour engine. (Tester)<br>Held a higher rank on the old Clipper ships before I got<br>busted with the advent of steam engines"
   }
 ]
