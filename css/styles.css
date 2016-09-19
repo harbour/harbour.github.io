@@ -380,12 +380,34 @@ a:active {
   padding-top: 1em;
 }
 
-.crew-country {
-  border-top: 1px solid rgba(0, 0, 0, .4);
-  color: #9f0e22;
-  display: block !important;
+h3 {
+  color: #09397f;
+  font-size: 115%;
   font-weight: bolder;
-  padding-top: .5em;
+  overflow: hidden;
+  text-align: center;
+}
+
+h3:before,
+h3:after {
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .4);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+h3:before {
+  right: .5em;
+  margin-left: -50%;
+}
+
+h3:after {
+  left: .5em;
+  margin-right: -50%;
 }
 
 .crew-person-name {
@@ -531,4 +553,29 @@ code {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   color: #000;
+}
+
+.crew-list > dl {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+.crew-list > dt {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+}
+
+.crew-list dt {
+  vertical-align: text-top;
+}
+
+.crew-list > dd {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 50%;
 }

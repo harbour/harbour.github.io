@@ -12,16 +12,19 @@ title: "The Crew"
 {% assign last_country = "" %}
 {% for member in site.data.members %}
 {% if last_country != member.country %}{% assign last_country = member.country %}
-      <span class="crew-country" id="{{ last_country }}">{{ site.data.countries[last_country].name }}</span>
+      <h3 id="{{ last_country }}">{{ site.data.countries[last_country].name }}</h3>
 {% endif %}
       <div>
-        <p><span class="crew-person-name" id="{{ member.id }}">{{ member.name }}</span>
+        <p>
 {% if member.url != nil %}
-        <span class="crew-mail">{{ member.url }}</span>{% endif %}
+        <a href="{{ member.url }}" class="crew-person-name crew-mail" id="{{ member.id }}">{{ member.name }}</a>
+{% else %}
+        <span class="crew-person-name" id="{{ member.id }}">{{ member.name }}</span>
+{% endif %}
 {% for pic in member.photos %}
         <a href="images/crew_{{ pic }}"><i class="fa fa-camera"></i></a>
 {% endfor %}
-{% if member.photos.size > 0 or member.url != nil %}
+{% if member.photos.size > 0 %}
         <br>
 {% endif %}
 {{ member.title | newline_to_br }}
