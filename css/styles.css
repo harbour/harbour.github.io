@@ -362,6 +362,7 @@ i.fa-camera {
 
 code {
   font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  white-space: nowrap;
 }
 
 .source-code {
