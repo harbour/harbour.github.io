@@ -154,6 +154,32 @@ hr {
   padding: 0;
 }
 
+.header-logo {
+  margin-left: -5px;
+  margin-top: 5px;
+}
+
+.header-text {
+  color: #fff;
+  margin-left: 20px;
+  margin-top: 35px;
+  text-shadow: 1px 1px #09397f;
+}
+
+.header-text-headline {
+  display: inline-block;
+  font-size: 240%;
+  font-style: italic;
+  transform: scale(1,1.5);
+}
+
+.header-text-alt {
+  float: right;
+  font-size: 120%;
+  font-style: italic;
+  text-decoration: underline;
+}
+
 .footer {
   background: #09397f;
   color: #ddd;
