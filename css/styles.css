@@ -62,7 +62,7 @@ hr {
   margin-right: .5em;
 }
 
-.why-box { background-color: #ececec; border-radius: 4px; padding: 1em; margin: auto; margin-bottom: 1em; }
+.why-box { background-color: #ececec; border-radius: 4px; padding: 1em; padding-top: .2em; margin: auto; margin-bottom: 1em; }
 
 .why-box>div:nth-child(1) { float: left; width: 66%; padding-right: 1em; }
 
@@ -267,12 +267,6 @@ h2 {
   color: #9f0e22;
   font-weight: bolder;
   font-size: 108%;
-}
-
-.title {
-  color: #9f0e22;
-  font-weight: bolder;
-  font-size: 115%;
 }
 
 .whitelink {
