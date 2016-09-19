@@ -70,6 +70,8 @@ hr {
 
 .why-box>div>ul { padding-left: 2em; text-indent: 0; }
 
+.dl-button { background-color: #ccc; border-radius: 3px; padding: .1em .4em .1em .4em; }
+
 .feature-box { background-color: #e6eff9; border-radius: 4px; height: 16em; padding: .1em; padding-left: .4em; margin-bottom: 1em; }
 
 .feature-box>div { padding-top: 0; }
@@ -283,9 +285,7 @@ h2 {
 }
 
 .whitelink:hover {
-  border-style: none none solid;
-  border-width: 0 0 1px;
-  border-color: rgba(255,255,255,.8);
+  color: #ccc;
 }
 
 .smaller {
@@ -302,17 +302,11 @@ a.smaller {
 }
 
 a:hover {
-  border-style: none none solid;
-  border-width: 0 0 1px;
-  border-color: rgba(0,102,204,.4);
+  color: #09a8e8;
 }
 
 a:active {
   color: #9f0e22;
-}
-
-.img-link a:hover {
-  border-bottom: 0;
 }
 
 .contribs h2 {
@@ -386,10 +380,6 @@ i.fa-camera {
   background-color: #333;
 }
 
-.github-fork-ribbon:hover {
-  border: 0;
-}
-
 /* ------------------------------------------------------------------------ */
 /* drop-down menu magic */
 
@@ -412,10 +402,6 @@ i.fa-camera {
   text-decoration: none;
   text-align: center;
   width: 20px;
-}
-
-.dropbtn:hover {
-  border: none;
 }
 
 .menu {
