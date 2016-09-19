@@ -54,31 +54,31 @@ hr {
 	margin-right: .5em;
 }
 
-.why_box { background-color: #ececec; border-radius: 4px; padding: 1em; margin: auto; margin-bottom: 1em; }
-.why_box>div:nth-child(1) { float: left; width: 66%; padding-right: 1em; }
-.why_box>div:nth-child(2) { padding-left: 0; }
-.why_box>div>ul { padding-left: 2em; text-indent: 0; }
+.why-box { background-color: #ececec; border-radius: 4px; padding: 1em; margin: auto; margin-bottom: 1em; }
+.why-box>div:nth-child(1) { float: left; width: 66%; padding-right: 1em; }
+.why-box>div:nth-child(2) { padding-left: 0; }
+.why-box>div>ul { padding-left: 2em; text-indent: 0; }
 
-.feature_box { background-color: #e6eff9; border-radius: 4px; height: 16em; padding: .1em; padding-left: .4em; margin-bottom: 1em; }
-.feature_box>div { padding-top: 0; }
-.feature_box>div>div {
+.feature-box { background-color: #e6eff9; border-radius: 4px; height: 16em; padding: .1em; padding-left: .4em; margin-bottom: 1em; }
+.feature-box>div { padding-top: 0; }
+.feature-box>div>div {
 	padding: 0 .5em;
 	float: left;
 	width: 14%;
 	text-align: center;
 }
 
-.bkg_socoding { background-color: #e6eff9; border-radius: 4px; padding: .4em; margin-bottom: 1em; }
+.license-box { background-color: #e6eff9; border-radius: 4px; padding: .4em; margin-bottom: 1em; }
 
 .sshot {
 	margin: auto;
 	text-align: center;
 }
-.feat_font {
+.feat-font {
 	font-size: 340%;
 	color: #444;
 }
-.img_right {
+.img-right {
 	float: right;
 	margin: 1em;
 	border: none;
@@ -88,12 +88,12 @@ hr {
 	color: #ffd700;
 	float: right;
 }
-.third_logo {
+.third-logo {
 	font-size: 400%;
 	color: #444;
 	float: right;
 }
-.samples_list {
+.samples-list {
 	font-size: 180%;
 	color: #333;
 }
@@ -180,9 +180,9 @@ hr {
 .news-full>dt { 
 	width: 7em;
 }
-.lower_box { margin: auto; }
-.news_box { float: left; width: 68%; padding-right: 14px; }
-.minisamples_box {
+.lower-box { margin: auto; }
+.news-box { float: left; width: 68%; padding-right: 14px; }
+.minisamples-box {
 	overflow: hidden;
 	background-color: #ececec;
 	border-radius: 4px;
@@ -224,7 +224,7 @@ h2 {
 	font-weight: bolder;
 	font-size: 115%;
 }
-.title_text {
+.title-text {
 	font-weight: bolder;
 }
 .whitelink {
@@ -254,7 +254,7 @@ a:hover {
 a:active {
 	color: #9f0e22;
 }
-.img_link a:hover {
+.img-link a:hover {
 	border-bottom: 0;
 }
 
@@ -265,41 +265,41 @@ a:active {
 	border-top: 1px solid rgba(0,0,0,.4);
 	padding-top: 1em;
 }
-.crew_country {
+.crew-country {
 	color: #9f0e22;
 	font-weight: bolder;
 }
-.crew_person_name {
+.crew-person-name {
 	color: #095fa8;
 	font-weight: bolder;
 }
 i.fa-camera {
 	color: #777;
 }
-.crew_mail {
+.crew-mail {
 	color: #0974c5;
 	text-decoration: none;
 }
-.crew_country_list {
+.crew-country-list {
 	list-style: none;
 	padding-left: 1em;
 	text-indent: 0em;
 }
-.crew_country_list>li {
+.crew-country-list>li {
 	margin: 0 0 5px 0;
 }
-.crew_country_list>li>a>img {
+.crew-country-list>li>a>img {
 	margin: 0 5px 0 0;
 }
-.crew_alphalist {
+.crew-alphalist {
 	list-style: none;
 	padding-left: .4em;
 	text-indent: 0em;
 }
-.crew_alphalist>li {
+.crew-alphalist>li {
 	margin: 0 0 5px 0;
 }
-.source_code {
+.source-code {
 	background-color: #f7f7f7;
 	padding: 16px;
 	font: 14px Consolas, 'Liberation Mono', Menlo, Courier, monospace;
@@ -324,7 +324,7 @@ i.fa-camera {
 /* ------------------------------------------------------------------------ */
 /* drop-down menu magic */
 
-.menu_text {
+.menu-text {
 	font-size: 13px;
 	text-align: center;
 	margin-top: -10px;
