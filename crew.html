@@ -12,7 +12,7 @@ title: "The Crew"
 {% assign last_country = "" %}
 {% for member in site.data.members %}
 {% if last_country != member.country %}{% assign last_country = member.country %}
-      <h3 id="{{ last_country }}">{{ site.data.countries[last_country].name }}</h3>
+      <h4 id="{{ last_country }}">{{ site.data.countries[last_country].name }}</h4>
 {% endif %}
       <div>
         <p>

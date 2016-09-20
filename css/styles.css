@@ -41,15 +41,18 @@ div.content {
   width: 94%;
 }
 
-body,
-td,
-th {
-  font: 14px 'Open Sans', sans-serif;
+.hbsite {
+  background-color: #333;
+  margin: 0;
+}
+
+.faq {
+  line-height: 160%;
+  margin: .5em;
 }
 
 body {
-  background-color: #333;
-  margin: 0;
+  font: 14px 'Open Sans', sans-serif;
 }
 
 hr {
@@ -354,7 +357,7 @@ h2 {
 
 .whitelink:hover {
   color: #fff;
-  transition: all 0.25s;
+  transition: all .25s;
 }
 
 .smaller {
@@ -372,7 +375,7 @@ a.smaller {
 
 a:hover {
   color: #09a8e8;
-  transition: all 0.25s;
+  transition: all .25s;
 }
 
 a:active {
@@ -387,7 +390,7 @@ a:active {
   padding-top: 1em;
 }
 
-h3 {
+h4 {
   color: #09397f;
   font-size: 115%;
   font-weight: bolder;
@@ -395,8 +398,8 @@ h3 {
   text-align: center;
 }
 
-h3:before,
-h3:after {
+h4:before,
+h4:after {
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, .4);
   content: "";
@@ -407,12 +410,12 @@ h3:after {
   width: 50%;
 }
 
-h3:before {
+h4:before {
   right: .5em;
   margin-left: -50%;
 }
 
-h3:after {
+h4:after {
   left: .5em;
   margin-right: -50%;
 }
