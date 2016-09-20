@@ -366,7 +366,7 @@ h2 {
 
 .whitelink:hover {
   color: #fff;
-  transition: all .25s;
+  transition: color .25s;
 }
 
 .smaller {
@@ -376,17 +376,17 @@ h2 {
 a {
   color: #0974c5;
   text-decoration: none;
-  transition: all .2s;
+  transition: color .2s;
 }
 
 a.smaller {
   white-space: nowrap;
-  transition: all .2s;
+  transition: color .2s;
 }
 
 a:hover {
   color: #09a8e8;
-  transition: all .25s;
+  transition: color .25s;
 }
 
 a:active {
@@ -511,7 +511,7 @@ code {
   text-decoration: none;
   text-align: center;
   width: 20px;
-  transition: all .25s;
+  transition: color .25s;
 }
 
 .menu {
@@ -574,5 +574,5 @@ code {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   color: #000;
-  transition: all .5s;
+  transition: color .5s;
 }
