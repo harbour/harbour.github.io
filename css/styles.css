@@ -331,13 +331,13 @@ hr {
 }
 
 h1 {
-  color: #9f0e22;
+  color: #09397f;
   font-size: 115%;
   font-weight: bold;
 }
 
 h2 {
-  color: #9f0e22;
+  color: #09397f;
   font-size: 108%;
   font-weight: bolder;
 }
@@ -551,29 +551,4 @@ code {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   color: #000;
-}
-
-.crew-list > dl {
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  width: 100%;
-}
-
-.crew-list > dt {
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 50%;
-}
-
-.crew-list dt {
-  vertical-align: text-top;
-}
-
-.crew-list > dd {
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 50%;
 }
