@@ -449,15 +449,13 @@ i.fa-camera {
   margin: 0 0 5px;
 }
 
-code {
-  font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  white-space: nowrap;
+pre {
+  background-color: #f7f7f7;
+  padding: 16px;
 }
 
-.source-code {
-  background-color: #f7f7f7;
-  font: 14px Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  padding: 16px;
+code {
+  font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 }
 
 .screen-only {
