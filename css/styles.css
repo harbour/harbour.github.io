@@ -272,13 +272,13 @@ hr {
 .list-bubble div:nth-child(2) {
   overflow: hidden;
   padding-left: 1em;
+  padding-right: .5em;
 }
 
 .news > dl {
   margin: 0;
   overflow: hidden;
   padding: 0;
-  width: 100%;
 }
 
 .news > dt {
@@ -297,6 +297,7 @@ hr {
   margin: 0;
   padding: 0;
   width: 80%;
+  text-align: justify;
 }
 
 .news-full > dt {
@@ -309,7 +310,7 @@ hr {
 
 .news-box {
   float: left;
-  padding-right: 14px;
+  padding-right: 18px;
   width: 68%;
 }
 
@@ -317,7 +318,7 @@ hr {
   background-color: #ececec;
   border-radius: 4px;
   overflow: hidden;
-  padding: 0 6px;
+  padding: 0 8px;
 }
 
 .minisamples > dl {
@@ -375,10 +376,12 @@ h2 {
 a {
   color: #0974c5;
   text-decoration: none;
+  transition: all .2s;
 }
 
 a.smaller {
   white-space: nowrap;
+  transition: all .2s;
 }
 
 a:hover {
@@ -392,7 +395,6 @@ a:active {
 
 .contribs h2 {
   border-top: 1px solid rgba(0, 0, 0, .4);
-  color: #0974c5;
   font-weight: bold;
   font-size: 115%;
   padding-top: 1em;
@@ -553,6 +555,7 @@ code {
   padding: 4px;
   text-align: left;
   text-decoration: none;
+  transition: none;
 }
 
 /* Change color of dropdown links on hover */

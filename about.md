@@ -20,8 +20,8 @@ Harbour is a cross-platform compiler and is known to compile and run on:
 
 Harbour is a free and open-source project. It can be used to make open
 source applications, free or commercial products. To learn more about
-Harbour license
-[click here](https://raw.githubusercontent.com/harbour/core/master/COPYING.txt).
+Harbour license,
+visit [here](https://raw.githubusercontent.com/harbour/core/master/COPYING.txt).
 
 # Why use it?
 
