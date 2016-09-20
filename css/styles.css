@@ -134,6 +134,11 @@ hr {
   margin-bottom: .2em;
 }
 
+.text-right {
+  float: right;
+  padding-bottom: 1em;
+}
+
 .img-right {
   border: none;
   float: right;

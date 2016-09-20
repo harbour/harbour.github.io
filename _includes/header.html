@@ -104,3 +104,7 @@
   </div>
 
   <div class="content">
+  {% if page.layout != 'sample' %}
+    <a class="text-right" href="https://github.com/harbour/harbour.github.io/edit/master/{{ page.path }}">
+    <i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;Improve this page</a>
+  {% endif %}

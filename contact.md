@@ -18,7 +18,8 @@ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ## Webmaster
 
 Do you have a question or concern regarding the functionality of this site?<br>
-Click [here](https://github.com/harbour/harbour.github.io/issues) to submit an issue.
+Click [here](https://github.com/harbour/harbour.github.io/pulls) to submit a
+Pull Request.
 
 ## Suggestions?
 
