@@ -173,16 +173,16 @@ title: "Home"
     <h1>Code Examples</h1>
     <hr>
     <dl class="minisamples">
-      <dt><a href="sample_hello.html">Hello, world!</a>
-      <dd>A simple welcome message.
-      <dt><a href="sample_foreach.html"><code>FOR EACH</code> example</a>
-      <dd>Demonstrating how to use the <code>FOR EACH</code> command.
-      <dt><a href="sample_parseini.html">.ini file reading/writing</a>
-      <dd>Test for reading/writing .ini files using native Harbour functions.
-      <dt><a href="sample_tbrowse.html"><code>TBrowse()</code> and <code>TBColumn()</code> examples</a>
-      <dd>A simple example demonstrating the use of classes <code>TBrowse()</code> and <code>TBColumn()</code>.
-      <dt><a href="sample_onidle.html">Idle processing</a>
-      <dd>Simple way to run a process in the background.
+{% assign selection = "hello|foreach|parseini|tbrowse|onidle" | split: "|" %}
+{% assign samples_sorted = site.samples | sort: 'slug' %}
+{% for selected_sample in selection %}
+{% for sample in samples_sorted %}
+{% if sample.slug == selected_sample %}
+      <dt><a href="samples/{{ sample.slug }}.html">{{ sample.title_long }}</a>
+      <dd>{{ sample.description }}
+{% endif %}
+{% endfor %}
+{% endfor %}
     </dl>
   </div>
 </div>

@@ -1,0 +1,16 @@
+sample_categories:
+  - basic
+  - arrays
+  - database
+  - extensions
+  - web
+collections:
+  samples:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: samples
+    values:
+      layout: sample
+      _topdir: ../

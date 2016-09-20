@@ -1,6 +1,6 @@
 {% include head.html %}
 {% include header.html %}
-<a href="samples.html" class="samples-list"><i class="fa fa-list img-right" aria-hidden="true"></i></a>
+<a href="{{ page._topdir }}samples.html" class="samples-list"><i class="fa fa-list img-right" aria-hidden="true"></i></a>
 
 <h1>{{ page.title_long }}</h1>
 <p>{{ page.description }}
@@ -8,7 +8,7 @@
 <h2>Files:</h2>
 <div>
   <ul>
-    <li><a href="https://github.com/harbour/core/blob/master/tests/{{ page.name | remove: 'sample_' | remove: '.html' }}.prg">tests/{{ page.name | remove: 'sample_' | remove: '.html' }}.prg</a>
+    <li><a href="https://github.com/harbour/core/blob/master/tests/{{ page.slug }}.prg">tests/{{ page.slug }}.prg</a>
   </ul>
 </div>
 
@@ -18,5 +18,5 @@
 </div>
 
 <h2>How to build/run:</h2>
-<p>To learn how to build/run this example, see <a href="samples.html#compile">this</a> page.
+<p>To learn how to build/run this example, see <a href="{{ page._topdir }}samples.html#compile">this</a> page.
 {% include footer.html %}
