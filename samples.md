@@ -8,7 +8,7 @@ title: "Code Examples"
 This is the list of some examples in Harbour's test directory.
 The examples demonstrate Harbour features in small programs.
 
-## Categories:
+## Categories
 
 * [Basic](#basic)
 * [Arrays](#arrays)

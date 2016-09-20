@@ -242,9 +242,14 @@ hr {
 }
 
 .bubble-alt {
-  background-color: #c00000;
-  color: #ddd;
+  background-color: #fef1f1;
+  border-radius: 0;
   width: 96%;
+  border-left: 3px solid #c00000;
+}
+
+.bubble-alt > div:nth-child(1) {
+  color: #c00000;
 }
 
 .list-bubble div:nth-child(1) {
