@@ -147,6 +147,7 @@ hr {
 
 .trophy {
   color: #ffd700 !important;
+  margin: 10px;
 }
 
 .large-icon {
@@ -179,7 +180,7 @@ hr {
 
 .header-version {
   border-radius: 4px;
-  font: 15px Arial, sans-serif;
+  font: 15px Arial, Helvetica, sans-serif;
   text-align: center;
   -webkit-transform: rotate(-11deg);
   -moz-transform:    rotate(-15deg);
@@ -202,7 +203,6 @@ hr {
 }
 
 .header-mark {
-  font-family: Verdana, sans-serif;
   font-size: 70%;
   padding-right: 3px;
 }
