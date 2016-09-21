@@ -186,6 +186,7 @@ hr {
   -moz-transform:    rotate(-15deg);
   -ms-transform:     rotate(-15deg);
   -o-transform:      rotate(-15deg);
+  transform:         rotate(-15deg);
   position: relative;
   padding: 2px;
   right: -649px;
