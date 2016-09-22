@@ -158,8 +158,8 @@ intuitive and permits the development of any project in record time.
 OTC Mediator is RDD driver for PostgreSQL, Microsoft SQL Server, Oracle and
 MySQL was designed to allow quick migration of DBF data and xBase applications
 to one of the mentioned databases. It implements all RDD features required for
-easy migration including RECNO record numbers, DELETED flag, Clipper-compatible
-record and file locks as well as complex expression indexes.
+easy migration including `RecNo()` record numbers, `Deleted()` flag,
+Clipper-compatible record and file locks as well as complex expression indexes.
 
 Basically, Mediator package consists of three parts:
 
