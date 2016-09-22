@@ -311,13 +311,13 @@ hr {
   padding-right: .5em;
 }
 
-.news > dl {
+.news dl {
   margin: 0;
   overflow: hidden;
   padding: 0;
 }
 
-.news > dt {
+.news dt {
   float: left;
   margin: 0;
   padding: 0;
@@ -328,7 +328,7 @@ hr {
   vertical-align: text-top;
 }
 
-.news > dd {
+.news dd {
   float: left;
   margin: 0;
   padding: 0;
@@ -336,7 +336,7 @@ hr {
   text-align: justify;
 }
 
-.news-full > dt {
+.news-full dt {
   width: 7em;
 }
 
