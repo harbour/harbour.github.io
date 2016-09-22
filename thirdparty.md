@@ -11,7 +11,7 @@ These are some links to Harbour related 3rd party products.
 
 * [GUI — Free and Open Source](#gui--free-and-open-source)
 * [GUI — Commercial](#gui--commercial)
-* [RDD](#rdd)
+* [RDD — Commercial](#rdd--commercial)
 
 ---
 
@@ -150,7 +150,7 @@ intuitive and permits the development of any project in record time.
 
 ---
 
-# RDD
+# RDD — Commercial
 
 ## [OTC Mediator RDD for Harbour](http://www.otc.pl/en/harbour.html)
 
@@ -163,8 +163,8 @@ Clipper-compatible record and file locks as well as complex expression indexes.
 
 Basically, Mediator package consists of three parts:
 
-* Set of utilities facilitating data (DBF) and index (NTX, CDX) migration to
-  RDBMS
+* Set of utilities facilitating data (`.dbf`) and index (`.ntx`, `.cdx`)
+  migration to RDBMS
 * Libraries implementing RDD interface to be linked into Harbour or Clipper
   application
 * Mediator server translating application requests into SQL commands sent to
