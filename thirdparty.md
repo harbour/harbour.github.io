@@ -9,13 +9,12 @@ These are some links to Harbour related 3rd party products.
 
 ## Categories:
 
-* [GUI — Free and Open Source](#gui--free-and-open-source)
-* [GUI — Commercial](#gui--commercial)
-* [RDD — Commercial](#rdd--commercial)
+* [Free and Open Source](#free-and-open-source)
+* [Commercial](#commercial)
 
 ---
 
-# GUI — Free and Open Source
+# Free and Open Source
 
 ## [HwGUI](https://sourceforge.net/projects/hwgui/)
 
@@ -41,6 +40,10 @@ distribution who include all needed components for your work.
 
 [Project page](https://sourceforge.net/projects/harbourminigui/).<br>
 MiniGUI [unofficial build](http://www.hmgextended.com/) with _extended_ features.
+
+## [hbqt](https://sourceforge.net/projects/qtcontribs/)
+
+QT5 wrapper layer and IDE.
 
 ## [ooHG](https://sourceforge.net/projects/oohg/)
 
@@ -83,15 +86,16 @@ programmers. Its main advantage over other GUI libraries is the 'native look and
 feel' on all supported platforms, simplyfying application usage and giving users
 the same sense of comfort they are already used to.
 
-## [xbGTK](http://xbgtk.sourceforge.net/)
+## [hbgi](https://github.com/tuffnatty/hbgi)
 
 <img class="img-right" src="images/3rd_gtk.svg" height="48" alt="logo">
-xbGTK is an open source library for Linux and Windows. It allows to use GTK+ in
-programs written in xBase-like languages. The library is written by Phil Krylov.
-It is based on the PyGTK — Project by James Henstridge. Some files are modified,
-though, to generate proper xBase code (instead of Python).
+Continuation of former project [xbGTK](https://sourceforge.net/projects/xbgtk/),
+this project is an open source library for Linux and Windows. It allows to use
+GTK+ in programs written in xBase-like languages. The library is written by Phil
+Krylov. It is based on the PyGTK — Project by James Henstridge. Some files are
+modified, though, to generate proper xBase code (instead of Python).
 
-## [xHGtk](http://xhgtk.sourceforge.net/)
+## [xHGtk](https://sourceforge.net/projects/xhgtk/)
 
 xHGtk is an multiplataform GUI library for Harbour. Use GTK+ to create programs
 that can run in Windows and Linux. It provides a library of commands, functions
@@ -105,84 +109,12 @@ Harbour from the full power of GTK + Cross-platform.
 
 ---
 
-# GUI — Commercial
+# Commercial
 
-## [FiveWin for Harbour (FWH)](http://www.fivetechsoft.com/english/fwh.html)
+* Advantage Database Server — client-server RDD
+* FiveWin/EasyReport — GUI/Report designer (Windows)
+* OTC Mediator — client-server RDD for SQL backends
+* Xailer — Visual IDE (Windows)
 
-<img class="img-right" src="images/3rd_fw.jpg" alt="logo">
-FiveWin was originally a library for Clipper 5 which you use in exactly the same
-way that you have been using other third party libraries in Clipper. The main
-difference is that FiveWin lets you build executables that run as REAL Windows
-GUI Programs.
-
-You have all the power of Windows and its environment at your fingertips! Only
-downside of the FiveWin for Clipper… it's still 16-bit. Now FiveTech Software
-has managed to make the library work with Harbour.
-
-## [Visual Report designer for Harbour/FiveWin](http://www.reportdesigner.info)
-
-EasyReport provides every Harbour/FiveWin user a simple and fast way to add a
-visual report designer to his/her applications. EasyReport is flexible,
-cost-effective, multilingual and you can give the visual designer to all of your
-end users without paying anything extra (royalty free).
-
-EasyReport supports up to 100 areas with 1000 items each. The possible item
-types are Text, Image (supports 8 different image file formats), Graphic (f.e.
-lines, rectangles, ellipses) and Barcodes.
-
-## [Xailer](http://www.xailer.com/)
-
-<img class="img-right" src="images/3rd_xailer.png" alt="logo">
-Xailer is a complete visual development environment for xBase users, following
-the guide lines of other already existing programming environments (Delphi,
-Visual Basic, …). As any other complete visual environment includes:
-
-* Form designer
-* Professional Source code editor
-* Property inspector
-* Project manager
-* Report generator
-* Resource manager
-* Integrated Debugger
-
-And all these features are built over a unique interface, which is tremendously
-intuitive and permits the development of any project in record time.
-
----
-
-# RDD — Commercial
-
-## [OTC Mediator RDD for Harbour](http://www.otc.pl/en/harbour.html)
-
-<img class="img-right" src="images/3rd_otc.png" alt="logo">
-OTC Mediator is RDD driver for PostgreSQL, Microsoft SQL Server, Oracle and
-MySQL was designed to allow quick migration of DBF data and xBase applications
-to one of the mentioned databases. It implements all RDD features required for
-easy migration including `RecNo()` record numbers, `Deleted()` flag,
-Clipper-compatible record and file locks as well as complex expression indexes.
-
-Basically, Mediator package consists of three parts:
-
-* Set of utilities facilitating data (`.dbf`) and index (`.ntx`, `.cdx`)
-  migration to RDBMS
-* Libraries implementing RDD interface to be linked into Harbour or Clipper
-  application
-* Mediator server translating application requests into SQL commands sent to
-  database
-
-## [Sybase Advantage Server for Harbour](https://www.sap.com/pc/tech/database/software/advantage-database-server/index.html)
-
-<img class="img-right" src="images/3rd_sybase.svg" height="48" alt="logo">
-Harbour has native support for Sybase Advantage Database Server, a
-high-performance client/server RDBMS for stand-alone, networked, internet and
-mobile database applications. Advantage Database Server allows developers the
-high-performance and control of navigational commands combined with optimized
-data access methodology for easily delivering unparalleled performance, Advantage
-provides security, stability and data integrity while being completely
-maintenance-free.
-
-With no mandatory configuration requirements, Advantage is easily installed on
-an existing network infrastructure. Because of the embedded qualities of
-Advantage, it works tirelessly behind the application, delivering client/server
-performance, stability, and data integrity that today's business applications
-demand.
+Please use a search engine for up-to-date information and details about these
+products.
