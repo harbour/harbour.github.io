@@ -25,10 +25,10 @@ used for game programming.
 
 ## gtwvg
 
-This library can be used for pure console applications instead of GTWVT. But
-if used with GUI extensions, an appealing Windows screens without
-sacrificing the Clipper syntax. Additionally GTWVG has a nice set of `Wvt*()`
-classes which employ the common event loop.
+This library can be used for pure console applications instead of `gtwvt`.
+But if used with GUI extensions, an appealing Windows screens without
+sacrificing the Clipper syntax. Additionally `gtwvg` has a nice set of
+`Wvt*()` classes which employ the common event loop.
 
 You can create high performance dialogs with multiple TBrowser, Reads,
 Bitmaps, Buttons, i.e. all GUI elements you can think of.
