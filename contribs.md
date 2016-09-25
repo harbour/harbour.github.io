@@ -7,9 +7,9 @@ title: "Contribs"
 
 # Harbour Contribs
 
-Contributions are libraries, sources or tools, which are independent from the
-language core, but bundled with the main Harbour distribution. These
-components are part of the Harbour source package.
+Contribs are libraries or tools, which are independent from the language core,
+but bundled with the main Harbour distribution. These components are part of
+the Harbour source package.
 
 _Important: Common to all contributions is that you can download them freely
 but please note the [licensing terms](about.html), which are included in the

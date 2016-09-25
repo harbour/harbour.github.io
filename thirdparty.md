@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Third-party Tools and Libraries"
+title: "Third-parties"
 ---
 
-# Third-party Tools and Libraries
+# Third-parties
 
-These are some links to Harbour related 3rd party products.
+These are some links to Harbour related 3rd party tools and libraries.
 
 ## Categories:
 
