@@ -163,7 +163,7 @@ extensions.
 ## rddsql
 
 SQL MIX (Memory Index) Database Driver. This library provides access to
-PostgreSQL, sqlite3, MariaDB/MySQL, Firebird and ODBC servers.
+PostgreSQL, SQLite, MariaDB/MySQL, Firebird and ODBC servers.
 
 ## xhb
 
