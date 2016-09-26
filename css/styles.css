@@ -235,6 +235,16 @@ hr {
   padding: .1em 1em;
 }
 
+.footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff;
+  transition: color .25s;
+}
+
 .footer div {
   float: left;
   padding-top: 1.3em;
@@ -393,16 +403,6 @@ h2 {
   color: #09397f;
   font-size: 108%;
   font-weight: bolder;
-}
-
-.whitelink {
-  color: #ddd;
-  text-decoration: none;
-}
-
-.whitelink:hover {
-  color: #fff;
-  transition: color .25s;
 }
 
 .smaller {
