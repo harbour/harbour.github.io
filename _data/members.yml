@@ -11,9 +11,9 @@
   name: Patrick Mast
   url: mailto:eMail at PatrickMast.com
   photos:
-  - patrickmast1.jpg
-  - patrickmast2.jpg
-  - patrickmast3.jpg
+  - patrick_mast_1.jpg
+  - patrick_mast_2.jpg
+  - patrick_mast_3.jpg
   title: Harbour WebMaster<br>Harbour public relations and<br>real-life application
     tester
 - country: be
@@ -32,21 +32,21 @@
   name: Felipe Coury
   url: mailto:fcoury at creation.com.br
   photos:
-  - felipecoury.jpg
+  - felipe_coury.jpg
   title: Harbour Internet Integration Captain Radio operator<br>and Brazilian Harbour
     Community Informant
 - country: br
   name: Luiz Rafael Culik
   url: mailto:culik at sl.conex.net
   photos:
-  - luizculik.jpg
+  - luiz_culik.jpg
   title: Harbour Norton Guide Captain
 - country: br
   name: Vailton Renato
   url: mailto:vailtom at gmail.com
   photos:
-  - vailtonrenato1.jpg
-  - vailtonrenato2.jpg
+  - vailton_renato_1.jpg
+  - vailton_renato_2.jpg
   title: Trainee for Webdesigner
 - country: ca
   name: April White
@@ -65,7 +65,7 @@
   name: Paul Tucker
   url: mailto:ptucker at sympatico.ca
   photos:
-  - paultucker.jpg
+  - paul_tucker.jpg
   title: MSVC and GTAPI Master
 - country: cl
   name: Gonzalo Diethelm
@@ -99,7 +99,7 @@
   name: Chen Kedem
   url: mailto:niki at synel.co.il
   photos:
-  - chenkedem.jpg
+  - chen_kedem.jpg
   title: The Documentor<br>Harbour documentation writer
 - country: it
   name: Francesco Saverio Giudice
@@ -109,7 +109,7 @@
   name: Matteo Baccan
   url: mailto:baccan at isanet.it
   photos:
-  - matteobaccan.jpg
+  - matteo_baccan.jpg
   title: Tester and Java interface developer
 - country: it
   name: Massimo Belgrano
@@ -120,13 +120,13 @@
   name: Maurilio Longo
   url: mailto:maurilio.longo at libero.it
   photos:
-  - mauriliolongo.jpg
+  - maurilio_longo.jpg
   title: OS/2 Pirate and Harbour sailor
 - country: kr
   name: Kwon, Oh-Chul
   url: mailto:ohchul at fivetech.net
   photos:
-  - kwonohchul.jpg
+  - kwon_oh_chul.jpg
   title: Asian Harbour Captain
 - country: nl
   name: Eddie Runia
@@ -162,8 +162,8 @@
   name: Antonio Linares
   url: mailto:alinares at fivetech.com
   photos:
-  - antoniolinares1.jpg
-  - antoniolinares2.jpg
+  - antonio_linares_1.jpg
+  - antonio_linares_2.jpg
   title: Harbour Starter<br>The Great Man who started the engines!
 - country: es
   name: Ignacio Ortiz de Zuniga
@@ -175,7 +175,7 @@
   name: Bruno Cantero
   url: mailto:bruno at issnet.net
   photos:
-  - brunocantero.jpg
+  - bruno_cantero.jpg
   title: RDD Captain<br>Happy C and Clipper developer
 - country: es
   name: Jose Lalin
@@ -194,9 +194,9 @@
   name: David G. Holm
   url: mailto:dholm at jsd-llc.com
   photos:
-  - dholm1.jpg
-  - dholm2.jpg
-  - dholm3.jpg
+  - davig_holm_1.jpg
+  - david_holm_2.jpg
+  - david_holm_3.jpg
   title: Set Captain<br>The Clipper Compatibility Fanatic
 - country: us
   name: Mark W. Schumann
@@ -205,7 +205,7 @@
   name: Phil Barnett
   url: mailto:philb at philb.us
   photos:
-  - philbarnett.jpg
+  - phil_barnett.jpg
   title: Harbour Manager<br>Keeper of Pieces and Parts
 - country: us
   name: Ron Pinkas
@@ -218,7 +218,7 @@
   name: Tim Stone
   url: mailto:timstone at mstrlink.com
   photos:
-  - timstone.jpg
+  - tim_stone.jpg
   title: List House Keeper and Manual Captain
 - country: us
   name: Jon Berg
