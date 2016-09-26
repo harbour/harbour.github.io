@@ -4,7 +4,7 @@
     sources have been cleaned up and further minimised, the look refreshed.
     The crew page and code examples are now automatically generated, thus
     much easier to update. Several pages have been converted to Markdown.
-    Source size is now 68 kB (was 624 kB). Also added en edit button to
+    Source size is now 64 kB (was 624 kB). Also added en edit button to
     each page.
     <a href="https://github.com/vszakats">@vszakats</a>
 - date: 2016-09-12
