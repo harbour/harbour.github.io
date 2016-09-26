@@ -89,15 +89,11 @@ title: "Home"
     <hr>
 
     <dl class="news">
-{% capture limit %}{{ site.time | date: '%s' | minus: 315360000 | date: '%F' }}{% endcapture %}
 {% for item in site.data.news %}
-{% capture itemd %}{{ item.date | date: '%F' }}{% endcapture %}
-{% if itemd >= limit %}
 {% if item.text %}
       <dt>{{ item.date }}
       <dd><strong>{{ item.title }}</strong>
         <p>{{ item.text }}
-{% endif %}
 {% endif %}
 {% endfor %}
     </dl>
