@@ -89,86 +89,17 @@ title: "Home"
     <hr>
 
     <dl class="news">
-      <dt>2016-09-20
-      <dd><strong>Website refresh</strong>
-        <p>Continuing with the refactor, the site is now fully vector-based,
-        sources have been cleaned up and further minimised, the look refreshed.
-        The crew page and code examples are now automatically generated, thus
-        much easier to update. Several pages have been converted to Markdown.
-        Source size is now 68 kB (was 624 kB). Also added en edit button to
-        each page.
-        <a href="https://github.com/vszakats">@vszakats</a>
-
-      <dt>2016-09-12
-      <dd><strong>Website refactor</strong>
-        <p>Website refactored to: use Jekyll, use pure HTML5, drop table based layout,
-        drop JavaScript for a CSS menu, remove anything unused, fix things broken,
-        use vector images instead of bitmaps where possible, deduplicate markup and
-        content. This means 7.5x size reduction of page sources.<br>
-        Content and design remained the same, but much easier to update now.
-        <a href="https://github.com/vszakats">@vszakats</a>
-
-      <dt>2013-03-20
-      <dd><strong>Migration to Git and GitHub</strong>
-        <a href="https://github.com/harbour/"><img src="images/3rd_github.svg" alt="GitHub Logo" class="img-right" width="90"></a>
-        <p>The source repositories, website hosting, issue tracker, daily
-        source snapshots, links and every other related facilities have
-        been transferred to GitHub.
-
-      <dt>2011-07-17
-      <dd><strong>Release 3.0.0</strong>
-        <p>After 1.5 years of strong development and 3600 commits, new stable version
-        3.0.0 is released. Sources are available for download, prebuilt binaries will
-        follow shortly.
-
-      <dt>2010-08-02
-      <dd><strong>Successful port to VxWorks RTOS</strong>
-        <p>In 2010 July with few days of development effort, Harbour has been ported
-        successfully to VxWorks 6.8 Real-Time Operating System (x86 CPU target for now)
-        for both GNU GCC and Wind River C Compiler. Thanks to Wind River Inc. for
-        making their development package available to our open source project. This
-        means Harbour can now run on cars, planes, rockets and robots :) Details in the
-        <a href="https://github.com/harbour/core/commit/302211f9af601ed63dff84558e075be0ed3ffe45">commit</a>.
-
-      <dt>2010-06-03
-      <dd><strong>Mailing list address changes</strong>
-        <p>Thanking Phil Barnett for providing the Harbour community a great mailing
-        list for so many years, today, due to server problems, we have migrated the
-        mailing lists to Google Groups in agreement with Phil and Harbour admins.<br>
-        Make sure to revise your subscription settings, because digest, nomail options
-        and readable name were lost along the migration.
-
-      <dt>2009-12-23
-      <dd><strong>Release 2.0.0 unified Windows binaries</strong>
-        <p>Harbour 2.0.0 (Revision 13372) source archives and Windows binary releases
-        are available for download.
-
-      <dt>2009-12-22
-      <dd><strong>Release 2.0.0</strong>
-        <p>After 16 months of intensive development the final version 2.0.0 is finally
-        released. There are many highlights and news in this new release, check out
-        some details and download your copy free today.
-
-      <dt>2009-05-13
-      <dd><strong>SourceForge Community Choice Awards</strong>
-        <i class="fa fa-trophy large-icon trophy" aria-hidden="true"></i>
-        <p>SourceForge.net announced the opening of nominations for the fourth annual
-        SourceForge Community Choice Awards. Harbour is a candidate — nominate us!
-
-      <dt>2009-02-15
-      <dd><strong>New website</strong>
-        <p>Released the new layout for our site. This includes details about the
-        project, several examples and will soon include some tutorials.
-
-      <dt>2008-09-17
-      <dd><strong>Release 1.0.1</strong>
-        <p>Many deployment fixes into General, Core and Contrib sections. All users
-        should upgrade to receive the latest fixes.
-
-      <dt>2008-08-10
-      <dd><strong>Release 1.0.0</strong>
-        <p>Many deployment fixes into General, Core and Contrib sections. All users
-        should upgrade to receive the latest fixes.
+{% capture limit %}{{ site.time | date: '%s' | minus: 315360000 | date: '%F' }}{% endcapture %}
+{% for item in site.data.news %}
+{% capture itemd %}{{ item.date | date: '%F' }}{% endcapture %}
+{% if itemd >= limit %}
+{% if item.text %}
+      <dt>{{ item.date }}
+      <dd><strong>{{ item.title }}</strong>
+        <p>{{ item.text }}
+{% endif %}
+{% endif %}
+{% endfor %}
     </dl>
 
     <p>See the <a href="news.html">news archive</a> for past articles.
