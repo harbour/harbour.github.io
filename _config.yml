@@ -1,3 +1,7 @@
+repo_slug: harbour/core
+site_slug: harbour/harbour.github.io
+site_branch_and_root: master/
+
 sample_categories:
   - basic
   - arrays

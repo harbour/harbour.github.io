@@ -25,8 +25,8 @@ The examples demonstrate Harbour features in small programs.
 ## More examples
 
 More examples can be provided with the installation package of the Harbour.
-Look the [`/tests`](https://github.com/harbour/core/tree/master/tests) and
-[`/extras`](https://github.com/harbour/core/tree/master/extras) folders to
+Look the [`/tests`](https://github.com/{{ site.repo_slug }}/tree/master/tests) and
+[`/extras`](https://github.com/{{ site.repo_slug }}/tree/master/extras) folders to
 find other examples, but the best example is the source code of Harbour
 itself.
 

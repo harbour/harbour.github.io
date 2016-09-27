@@ -12,9 +12,9 @@ use in its software and its website.
 
 The Harbour logo was created by Patrick Mast.<br>
 Download the original
-[Harbour logo](art/harbour-logo-2001.zip) in SVG, EPS and AI vector formats (854 kB).
+[Harbour logo](https://harbour.github.io/art/harbour-logo-2001.zip) in SVG, EPS and AI vector formats (854 kB).
 
-<a href="art/harbour-logo-2011.zip"><img src="images/harbour.svg" alt="icon" height="256"></a>
+<a href="https://harbour.github.io/art/harbour-logo-2011.zip"><img src="images/harbour.svg" alt="icon" height="256"></a>
 
 Harbour logo in
 [Windows](https://raw.githubusercontent.com/vszakats/harbour-core/master/package/harbour.ico) or
@@ -24,6 +24,6 @@ Harbour logo in
 # Historical Buttons
 
 * Still (1.5 kB):<br>
-  [![button](art/harbour-button.png)](art/harbour-button.png)
+  [![button](https://harbour.github.io/art/harbour-button.png)](https://harbour.github.io/art/harbour-button.png)
 * Animated (116 kB):<br>
-  [harbour-animgif.zip](art/harbour-animgif.zip)
+  [harbour-animgif.zip](https://harbour.github.io/art/harbour-animgif.zip)

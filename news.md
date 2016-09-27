@@ -11,7 +11,7 @@ Harbour. To view the latest [`ChangeLog.txt`](changelog.html) or
 stable release of Harbour.
 
 You can find the detailed list of changes
-[here](https://raw.githubusercontent.com/harbour/core/master/doc/oldnews.txt).
+[here](https://raw.githubusercontent.com/{{ site.repo_slug }}/master/doc/oldnews.txt).
 
 ---
 

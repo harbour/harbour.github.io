@@ -15,7 +15,7 @@ _Important: Common to all contribs is that you can download them freely, but
 please note the [licensing terms](about.html), which are included in the
 distribution folder._
 
-See respective authors inside the [source code](https://github.com/harbour/core/tree/master/contrib).
+See respective authors inside the [source code](https://github.com/{{ site.repo_slug }}/tree/master/contrib).
 
 ## gtalleg
 

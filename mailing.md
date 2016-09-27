@@ -51,7 +51,7 @@ Please read the following guidelines before posting to the list.
   in English.
 
 **Do not ask FAQs**
-: <p>Be sure to read the <a href="https://github.com/harbour/core/#readme">README</a>
+: <p>Be sure to read the <a href="https://github.com/{{ site.repo_slug }}/#readme">README</a>
   and search the archives before posting.
 
 **Remember that…**
@@ -70,7 +70,7 @@ Foundation; either version 2 of the License, or (at your option) any later
 version. This program is distributed in the hope that it will be useful, but
 WITHOUT ANY WARRANTY or SUPPORT; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-<span class="smaller">[Read more »](https://raw.githubusercontent.com/harbour/core/master/COPYING.txt)</span>
+<span class="smaller">[Read more »](https://raw.githubusercontent.com/{{ site.repo_slug }}/master/COPYING.txt)</span>
 
 </div>
 </div>
