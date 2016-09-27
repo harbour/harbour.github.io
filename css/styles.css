@@ -303,6 +303,8 @@ hr {
   border-radius: 0;
   width: 96%;
   border-left: 3px solid #c00000;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .bubble-alt > div:nth-child(1) {
@@ -344,6 +346,10 @@ hr {
   padding: 0;
   width: 80%;
   text-align: justify;
+}
+
+.news-full {
+  margin-top: 1em;
 }
 
 .news-full dt {
