@@ -47,7 +47,6 @@ QT5 wrapper layer and IDE.
 
 ## [ooHG](https://sourceforge.net/projects/oohg/)
 
-<img class="img-right" src="images/3rd_oohg.jpg" alt="logo">
 Object-Oriented Harbour Graphical interface. This is an object-oriented style
 conversion from the MiniGUI's library. Supporting existing code, and adding new
 and powerful advantages of the object oriented programming.
