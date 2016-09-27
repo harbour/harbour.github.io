@@ -18,9 +18,9 @@ title: "News Archive"
 
 <dl class="news news-full">
 
-{% for item in site.data.news %}
-  <dt id="{{ item.date }}">{{ item.date }}
-  <dd><strong>{{ item.title }}</strong>
-    <p>{{ item.text }}
+{% for story in site.data.news %}
+  <dt id="{{ story.date }}">{{ story.date }}
+  <dd><strong>{{ story.title }}</strong>
+    <p>{{ story.text }}
 {% endfor %}
 </dl>
