@@ -32,7 +32,7 @@ Visual C, Borland C, Pelles C and Open Watcom C.
 
 ## [MiniGUI](https://sites.google.com/site/hmgweb/)
 
-<img class="img-right" src="images/3rd_minigui.jpg" height="48" alt="logo">
+<img class="img-right" src="images/3rd_minigui.svg" height="48" alt="logo">
 Harbour MiniGUI (HMG) is an xBase Windows / GUI Development System based
 on Harbour MiniGUI library, Harbour MiniGUI IDE, Harbour compiler and MinGW
 compiler. This implements a semi-OOP model and is a ready to use Harbour
@@ -43,6 +43,7 @@ MiniGUI [unofficial build](http://www.hmgextended.com/) with _extended_ features
 
 ## [hbqt](https://sourceforge.net/projects/qtcontribs/)
 
+<img class="img-right" src="images/3rd_qt.svg" height="48" alt="logo">
 QT5 wrapper layer and IDE.
 
 ## [ooHG](https://sourceforge.net/projects/oohg/)
