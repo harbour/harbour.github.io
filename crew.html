@@ -4,17 +4,19 @@ title: "The Crew"
 ---
 
 <div class="crew-layout">
-  <div>
+  <section>
     <h1>The Harbour Crew</h1>
     <p><a href="https://github.com/{{ site.site_slug }}/edit/{{ site.site_branch_and_root }}_data/members.yml"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;Edit/Add your info</a>
     <p>Per country in alphabetical order:
 
     <div>
-{% assign last_country = "" %}
-{% for member in site.data.members %}
-{% if last_country != member.country %}{% assign last_country = member.country %}
-      <h4 id="{{ last_country }}">{{ site.data.countries[last_country].name }}</h4>
-{% endif %}
+{% assign countries_sorted = site.data.countries | sort: 'name' %}
+{% assign members_sorted = site.data.members | sort: 'name' %}
+
+{% for country in countries_sorted %}
+      <h4 id="{{ country.id }}">{{ country.name }}</h4>
+{% for member in members_sorted %}
+{% if member.country == country.id %}
       <div>
         <p>
 {% if member.url != nil %}
@@ -30,18 +32,20 @@ title: "The Crew"
 {% endif %}
 {{ member.title }}
       </div>
+{% endif %}
+{% endfor %}
 {% endfor %}
     </div>
     <br>
-  </div>
+  </section>
 
-  <div class="crew-content">
+  <aside class="crew-content">
     <div>
       <h1>Countries</h1>
       <hr>
       <ul class="crew-country-list">
-{% for country in site.data.countries %}
-        <li><a href="#{{ country[0] }}"><img src="images/flag-{{ country[0] }}.svg" alt="flag" width="31" height="16">{{ country[1].name }}</a>
+{% for country in countries_sorted %}
+        <li><a href="#{{ country.id }}"><img src="images/flag-{{ country.id }}.svg" alt="flag" width="31" height="16">{{ country.name }}</a>
 {% endfor %}
       </ul>
     </div>
@@ -50,11 +54,10 @@ title: "The Crew"
       <h1>First Name Alphabetical</h1>
       <hr>
       <ul class="crew-alphalist">
-{% assign members_sorted = site.data.members | sort: 'name' %}
 {% for member in members_sorted %}
         <li><a href="#{{ member.name | slugify }}">{{ member.name }}</a>
 {% endfor %}
       </ul>
     </div>
-  </div>
+  </aside>
 </div>
