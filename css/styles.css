@@ -263,13 +263,13 @@ hr {
   text-align: right;
 }
 
-.crew-layout > div:nth-child(1) {
+.crew-layout > section {
   float: left;
   text-align: center;
   width: 75%;
 }
 
-.crew-layout > div:nth-child(2) {
+.crew-layout > aside {
   float: right;
   width: 23%;
 }
