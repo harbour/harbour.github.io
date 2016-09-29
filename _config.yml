@@ -1,6 +1,7 @@
 repo_slug: harbour/core
 site_slug: harbour/harbour.github.io
 site_branch_and_root: master/
+dl_url: https://sourceforge.net/projects/harbour-project/files/
 
 sample_categories:
   - basic
