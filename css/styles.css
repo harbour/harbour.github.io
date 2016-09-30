@@ -183,10 +183,10 @@ header {
   font: 15px Arial, Helvetica, sans-serif;
   text-align: center;
   -webkit-transform: rotate(-11deg);
-  -moz-transform:    rotate(-15deg);
-  -ms-transform:     rotate(-15deg);
-  -o-transform:      rotate(-15deg);
-  transform:         rotate(-15deg);
+  -moz-transform:    rotate(-11deg);
+  -ms-transform:     rotate(-11deg);
+  -o-transform:      rotate(-11deg);
+  transform:         rotate(-11deg);
   position: relative;
   padding: 2px;
   right: -649px;
