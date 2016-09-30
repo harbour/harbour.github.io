@@ -198,9 +198,14 @@ header {
   right: -649px;
   top: 76px;
   width: 80px;
-  background-color: #015173;
   border: 0;
+{% if site.badge_version >= '3.4' %}
+  background-color: #f8981D;
+  color: #fff;
+{% else %}
+  background-color: #015173;
   color: #eee;
+{% endif %}
   height: 18px;
   z-index: 100;
 }
@@ -368,6 +373,7 @@ footer div:nth-child(3) {
 
 .news-box {
   float: left;
+  margin-bottom: 1em;
   padding-right: 18px;
   width: 68%;
 }
@@ -719,6 +725,14 @@ code {
   }
 
   .news-full dd {
+    width: auto;
+  }
+
+  .news dt {
+    width: auto;
+  }
+
+  .news dd {
     width: auto;
   }
 

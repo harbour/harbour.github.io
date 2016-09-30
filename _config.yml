@@ -2,9 +2,10 @@ repo_slug: harbour/core
 site_slug: harbour/harbour.github.io
 site_branch_and_root: master/
 dl_url: https://sourceforge.net/projects/harbour-project/files/
+badge_version: "3.0"
 
 sass:
-  -style: compressed
+  style: compressed
 sample_categories:
   - basic
   - arrays
