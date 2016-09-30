@@ -1,3 +1,7 @@
+---
+---
+$code-fonts: Consolas, Menlo, 'Droid Sans Mono', 'Source Code Pro', 'Liberation Mono', 'Oxygen Mono', 'Andale Mono', monospace;
+
 .banner {
   background: #0974c5;
   background-image: radial-gradient(rgba(255, 255, 255, 1) 0%, rgba(253, 253, 255, 1) 30%, rgba(9, 116, 197, 1) 80%);
@@ -66,39 +70,46 @@ hr {
 }
 
 .why-box {
+  display: inline-block;
   background-color: #ececec;
   border-radius: 4px;
   margin: auto;
   margin-bottom: 1em;
   padding: 1em;
   padding-top: .2em;
+  padding-bottom: .2em;
 }
 
-.why-box > div:nth-child(1) {
+.why-items {
   float: left;
   padding-right: 1em;
   width: 66%;
 }
 
-.why-box > div:nth-child(2) {
-  padding-left: 0;
-}
-
-.why-box > div > ul {
+.why-items ul {
   padding-left: 2em;
   text-indent: 0;
+}
+
+.status-box {
+  float: left;
+  padding-left: 0;
 }
 
 .dl-button {
   background-color: #ccc;
   border-radius: 3px;
+  display: inline-block;
   padding: .1em .4em;
+  margin-bottom: .5em;
 }
 
 .feature-box {
+  display: inline-block;
   background-color: #e6eff9;
   border-radius: 4px;
   height: 16em;
+  margin: auto;
   margin-bottom: 1em;
   padding: .1em;
   padding-left: .4em;
@@ -116,10 +127,12 @@ hr {
 }
 
 .license-box {
+  display: inline-block;
   background-color: #e6eff9;
   border-radius: 4px;
-  padding: .4em;
+  margin: auto;
   margin-bottom: 1em;
+  padding: .4em;
 }
 
 .sshot {
@@ -454,7 +467,7 @@ h4:before,
 h4:after {
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, .4);
-  content: "";
+  content: '';
   display: inline-block;
   height: 1px;
   position: relative;
@@ -517,17 +530,11 @@ pre {
 }
 
 code {
-  font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-family: $code-fonts;
 }
 
 .screen-only {
   display: block;
-}
-
-@media screen and (max-width: 480px) {
-  .screen-only {
-    display: none;
-  }
 }
 
 .github-fork-ribbon.right-top::before {
@@ -579,7 +586,7 @@ code {
   text-align: left;
   background-color: #000;
   color: #0d0 !important;
-  font-family: Consolas, "Source Code Pro", "Oxygen Mono", "Droid Sans Mono", "Menlo", "Andale Mono", "Fira Mono", "Anonymous Pro", monospace;
+  font-family: $code-fonts;
   font-size: 12px;
   line-height: 12px;
   margin-top: 0;
@@ -691,4 +698,76 @@ code {
 .dropdown:hover .dropbtn {
   color: #000;
   transition: color .5s;
+}
+
+@media screen and (max-width: 480px) {
+  .screen-only {
+    display: none;
+  }
+
+  div.container {
+    width: auto;
+  }
+
+  main {
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0;
+  }
+
+  aside {
+    display: none; }
+
+  .news-box {
+    width: 100%;
+  }
+
+  .news-full dt {
+    width: 6em;
+  }
+
+  .news-full dd {
+    width: auto;
+  }
+
+  .banner {
+    background: rgba(207, 235, 242, 1);
+  }
+
+  footer {
+    height: 9em;
+  }
+
+  .header-logo {
+    margin-left: -40px;
+    margin-top: 11px;
+  }
+
+  .header-text {
+    display: none;
+  }
+
+  .header-version {
+    right: -280px;
+  }
+
+  .crew-layout > section {
+    width: 100%;
+  }
+
+  .feature-box {
+    display: none;
+  }
+
+  .menu-text {
+    display: none;
+  }
+
+  .dropbtn {
+    font-size: 2em;
+  }
+
+  .menu {
+    height: 3em;
+  }
 }
