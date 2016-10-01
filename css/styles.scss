@@ -153,16 +153,16 @@ hr {
 
 .trophy {
   color: #ffd700 !important;
-  margin: 10px;
 }
 
 .large-icon {
   color: #444;
   float: right;
   font-size: 425% !important;
+  margin: .1em .3em;
 }
 
-.samples-list {
+.example-list {
   color: #333;
   font-size: 180%;
 }
@@ -199,7 +199,7 @@ header {
   top: 76px;
   width: 80px;
   border: 0;
-{% if site.badge_version >= '3.4' %}
+{% if site.fork %}
   background-color: #f8981D;
   color: #fff;
 {% else %}
@@ -208,6 +208,7 @@ header {
 {% endif %}
   height: 18px;
   z-index: 100;
+  white-space: nowrap;
 }
 
 .header-version > * {
@@ -312,10 +313,8 @@ footer div:nth-child(3) {
 .bubble-alt {
   background-color: #fef1f1;
   border-radius: 0;
-  width: 96%;
-  border-left: 3px solid #c00000;
-  padding-top: 0;
-  padding-bottom: 0;
+  width: 90%;
+  padding: 0 15px;
 }
 
 .bubble-alt > div:nth-child(1) {
@@ -378,36 +377,36 @@ footer div:nth-child(3) {
   width: 68%;
 }
 
-.minisamples-box {
+.miniexample-box {
   background-color: #ececec;
   border-radius: 4px;
   overflow: hidden;
   padding: 0 8px;
 }
 
-.minisamples > dl {
+.miniexample > dl {
   margin: 0;
   padding: 0;
 }
 
-.minisamples > dt {
+.miniexample > dt {
   float: left;
   margin: 0;
   padding: 0;
 }
 
-.minisamples dt a {
+.miniexample dt a {
   font-weight: bold;
 }
 
-.minisamples > dd {
+.miniexample > dd {
   float: left;
   margin: 0;
   margin-bottom: 11px;
   padding: 0;
 }
 
-.minisamples dd {
+.miniexample dd {
   font-size: 75%;
 }
 
