@@ -1,11 +1,11 @@
 fork: false
+real_host: https://harbour.github.io
 repo_slug: harbour/core
 site_slug: harbour/harbour.github.io
 site_branch_and_root: master/
 dl_url: https://sourceforge.net/projects/harbour-project/files/
 badge_version: "3.0"
 
-permalink: :slug/
 example_categories:
   - basic
   - arrays
@@ -21,4 +21,8 @@ defaults:
       type: example
     values:
       layout: example
-      permalink: example/:slug/
+
+incremental: true
+exclude: ["node_modules"]
+sass:
+  style: compressed
