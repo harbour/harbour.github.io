@@ -17,7 +17,7 @@
     <a href="https://github.com/vszakats">vszakats</a>
 - date: 2013-03-20
   title: Migration to Git and GitHub
-  text: <a href="https://github.com/harbour/"><i class="fa fa-git large-icon" aria-hidden="true"></i></a>
+  text: <a href="https://git-scm.com/"><img src="images/3rd_git.svg" alt="Git Logo" class="img-right" height="48"></a>
     The source repositories, website hosting, issue tracker, daily source
     snapshots, links and every other related facilities have been transferred
     to GitHub.
@@ -56,7 +56,8 @@
   title: SourceForge Community Choice Awards
   text: <i class="fa fa-trophy large-icon trophy" aria-hidden="true"></i>
     SourceForge.net announced the opening of nominations for the fourth annual
-    SourceForge Community Choice Awards. Harbour is a candidate — nominate us!
+    SourceForge Community Choice Awards.<br>
+    Harbour is a candidate — nominate us!
 - date: 2009-02-15
   title: New website
   text: Released the new layout for our site. This includes details about the
