@@ -4,8 +4,10 @@ $code-fonts: Consolas, Menlo, 'Droid Sans Mono', 'Source Code Pro', 'Liberation 
 
 .banner {
   position: absolute;
-  background: #4c90df;
-  background-image:url({{ site.baseurl }}/images/bkg-banner.svg);
+  /* average/dominant color of background-image. https://github.com/lokesh/color-thief */
+  background: #569fd7;
+  {% capture svg %}{% include bkg-banner.svg %}{% endcapture %}
+  background-image: url('data:image/svg+xml;utf8,{{ svg | strip_newlines }}');
   display: flex;
   font-size: 14px;
   height: 163px;
@@ -730,7 +732,8 @@ code {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #09397f;
+  -background-color: #09397f;
+  background-color: #4c90df;
   color: #fff;
   transition: none;
 }
