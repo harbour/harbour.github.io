@@ -3,6 +3,7 @@
 {% assign old_design = false %}
 
 $code-fonts: Consolas, Menlo, 'Droid Sans Mono', 'Source Code Pro', 'Liberation Mono', 'Oxygen Mono', 'Andale Mono', monospace;
+$fork-color: #f84373;
 
 .banner {
   position: absolute;
@@ -88,7 +89,7 @@ hr {
 
 .why-items {
   float: left;
-  width: 60%;
+  width: 59%;
 }
 
 .why-items ul {
@@ -100,30 +101,41 @@ hr {
   float: right;
 }
 
-$dl-button-transition-time: .4s;
-
 .dl-button {
   background-color: #ccc;
   border-radius: 3px;
   display: inline-block;
   padding: .1em .4em;
   margin-bottom: 1em;
-  transition: background-color $dl-button-transition-time;
 }
 
-.dl-button:hover {
-  background-color: #333;
-  transition: background-color $dl-button-transition-time;
+$donate-button-transition-time: .3s;
+
+.donate-button {
+  border: 2px solid $fork-color;
+  border-radius: 4px;
+  background-color: $fork-color;
+  display: inline-block;
+  float: right;
+  font-size: 125%;
+  padding: .4em .6em;
+  margin: 1em .5em;
+  margin-top: 0;
+  margin-right: 0;
+  transition: color $donate-button-transition-time, background-color $donate-button-transition-time;
+  white-space: nowrap;
 }
 
-.dl-button a {
-  -color: #333;
-  transition: color $dl-button-transition-time;
+.donate-button a {
+  color: #fff;
 }
 
-.dl-button:hover a {
-  color: #eee;
-  transition: color $dl-button-transition-time;
+.donate-button:hover {
+  background-color: #fff;
+}
+
+.donate-button:hover a {
+  color: $fork-color;
 }
 
 .feature-box {
@@ -199,6 +211,7 @@ $dl-button-transition-time: .4s;
 
 header {
   border-bottom: 1px solid #f2f2f2;
+  cursor: default;
   font: 14px 'Open Sans', sans-serif;
   line-height: 150%;
   margin: 0;
@@ -239,10 +252,12 @@ header {
   line-height: 120%;
   text-align: center;
   transform: rotate(-11deg);
-  position: relative;
   padding: 2px 4.5px;
 {% if site.fork %}
-  background-color: #f84373;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-backface-visibility: hidden;
+  transition: transform .2s ease-in-out;
+  background-color: $fork-color;
   color: #fff;
 {% else %}
   background-color: #015173;
@@ -257,6 +272,12 @@ header {
   -moz-osx-font-smoothing: auto;
 {% endif %}
 }
+
+{% if site.fork %}
+.header-text:hover .header-version {
+  transform: rotate(-11deg) scale(1.1);
+}
+{% endif %}
 
 .header-version-narrow {
   position: absolute;
@@ -718,7 +739,7 @@ code {
 }
 
 .menu > nav {
-  padding: 2px .85em;
+  padding: 2px 1em;
   text-align: center;
   display: table-row;
 }
