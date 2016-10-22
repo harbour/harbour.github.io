@@ -535,6 +535,38 @@ h2 {
   font-size: 75%;
 }
 
+.edit-page {
+  font-size: 100%;
+}
+
+$readmore-char: ' ⇢';
+
+.readmore {
+  font-size: 75%;
+  white-space: nowrap;
+}
+
+.readmore:after {
+  content: $readmore-char;
+}
+
+.readmore-md {
+  font-size: 75%;
+  white-space: nowrap;
+}
+
+.readmore-md a:after {
+  content: $readmore-char;
+}
+
+.readmore-norm {
+  white-space: nowrap;
+}
+
+.readmore-norm:after {
+  content: $readmore-char;
+}
+
 a {
   color: #0974c5;
   text-decoration: none;
@@ -555,7 +587,7 @@ a:active {
   color: #9f0e22;
 }
 
-.contribs h2 {
+.components h2 {
   border-top: 1px solid rgba(0, 0, 0, .4);
   font-weight: bold;
   font-size: 115%;

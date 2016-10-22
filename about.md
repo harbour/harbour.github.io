@@ -11,9 +11,10 @@ Harbour is a cross-platform compiler and is known to compile and run on:
 * GNU/Linux
 * Windows (32/64-bit, CE)
 * macOS
-* *NIX
-* *BSD
+* iOS
 * Android
+* *BSD
+* *NIX
 * OS/2
 * MS-DOS
 
@@ -40,4 +41,4 @@ visit [here](https://raw.githubusercontent.com/{{ site.repo_slug }}/master/COPYI
   developers.
 
 Most importantly, try Harbour for yourself, decide for yourself why it has
-advantages for _you_. This product will be an harbour for Clipper.
+advantages for _you_. This product will be a harbour for Clipper.
