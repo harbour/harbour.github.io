@@ -6,18 +6,18 @@ title: "Forks"
 
 # Harbour Forks
 
-## Harbour 3.4 by [vszakats](https://github.com/vszakats)
+## Harbour 3.4<br><span class="smaller">by [vszakats](https://github.com/vszakats)</span>
 
 Forked in April of 2013 in an attempt to focus on a narrower set of platforms
 and contrib libraries while also freeing up resources by distancing from
 project/community management tasks. This fork focuses on Linux, Windows (64-bit)
-and macOS, and some selected C compilers (clang, gcc/mingw). It has the stated
+and macOS, and some selected C compilers (clang, gcc/MinGW). It has the stated
 goal to adapt all mainline (non-fork) updates with minimal delay. To ease
-maintenance this fork has the policy to disable all deprecated components by
+maintenance, this fork has the policy to disable all deprecated components by
 default (they can be enabled though, with no promises). Other goals are
 maintenance, build automation and security (`hbcrypto` contrib and
 [curl/OpenSSL builds](https://github.com/vszakats/harbour-deps)). It also
-feature a large number of fixes and cleanups, many of which are often eventually
+features a large number of fixes and cleanups, many of which are eventually
 retrofitted to mainline.
 
 This fork accepts donations.
