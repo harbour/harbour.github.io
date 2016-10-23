@@ -66,8 +66,8 @@ always between 0 and Pi().
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Acos( 0.0 ) // &rarr; Pi() / 2
-? Acos( 0.5 ) // &rarr; 1.04719...
+? Acos( 0.0 ) // --&gt; Pi() / 2
+? Acos( 0.5 ) // --&gt; 1.04719...
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -137,7 +137,7 @@ happens, if uninterpretable parameters are passed to this function.
 <pre class="examples">
 // Add 32 to the ASCII value of the character at the last position
 // in the string
-? AddAscii( &quot;SmitH&quot;, 32 ) // &rarr; &quot;Smith&quot;
+? AddAscii( &quot;SmitH&quot;, 32 ) // --&gt; &quot;Smith&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -1762,8 +1762,8 @@ change the ascii sum.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? AsciiSum( &quot;ABC&quot; ) // &rarr;  197
-? AsciiSum( &quot;ACB&quot; ) // &rarr;  197
+? AsciiSum( &quot;ABC&quot; ) // --&gt;  197
+? AsciiSum( &quot;ACB&quot; ) // --&gt;  197
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -1812,8 +1812,8 @@ is larger than the length of &lt;cString&gt;, 0 is returned.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? AscPos( &quot;0123456789&quot; ) // &rarr; 57
-? AscPos( &quot;0123456789&quot;, 1 ) // &rarr; 48
+? AscPos( &quot;0123456789&quot; ) // --&gt; 57
+? AscPos( &quot;0123456789&quot;, 1 ) // --&gt; 48
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -1858,8 +1858,8 @@ between -Pi()/2 and Pi()/2.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Asin( 0.0 ) // &rarr; 0.0
-? Asin( 0.5 ) // &rarr; 0.5235...
+? Asin( 0.0 ) // --&gt; 0.0
+? Asin( 0.5 ) // --&gt; 0.5235...
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -1903,8 +1903,8 @@ to convert it into degress).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Atan( 0.0 ) // &rarr; 0.0
-? Atan( 0.5 ) // &rarr; 0.4636...
+? Atan( 0.0 ) // --&gt; 0.0
+? Atan( 0.5 ) // --&gt; 0.4636...
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -2015,8 +2015,8 @@ degress).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Atn2( 0.0, 1.0 ) // &rarr; 0.0
-? Atn2( Sqrt( 1 / 2 ), Sqrt( 1 / 2 ) ) // &rarr; Pi() / 4
+? Atn2( 0.0, 1.0 ) // --&gt; 0.0
+? Atn2( Sqrt( 1 / 2 ), Sqrt( 1 / 2 ) ) // --&gt; Pi() / 4
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -2157,10 +2157,10 @@ SetAtLike().
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? AtRepl( &quot;ABC&quot;, &quot;ABCDABCDABC&quot;, &quot;xx&quot; )    // &rarr; &quot;xxDxxDxx&quot;
-? AtRepl( &quot;ABC&quot;, &quot;ABCDABC&quot;, &quot;ZYXW&quot; )      // &rarr; &quot;ZYXWDZYXW&quot;
-? AtRepl( &quot;ABC&quot;, &quot;ABCDABCDABC&quot;, &quot;xx&quot;, 2 ) // &rarr; &quot;xxDxxDABC&quot;
-? AtRepl( &quot;ABC&quot;, &quot;ABCDABCDABC&quot;, &quot;xx&quot;, 2, .T. )  // &rarr; &quot;ABCDxxDABC&quot;
+? AtRepl( &quot;ABC&quot;, &quot;ABCDABCDABC&quot;, &quot;xx&quot; )    // --&gt; &quot;xxDxxDxx&quot;
+? AtRepl( &quot;ABC&quot;, &quot;ABCDABC&quot;, &quot;ZYXW&quot; )      // --&gt; &quot;ZYXWDZYXW&quot;
+? AtRepl( &quot;ABC&quot;, &quot;ABCDABCDABC&quot;, &quot;xx&quot;, 2 ) // --&gt; &quot;xxDxxDABC&quot;
+? AtRepl( &quot;ABC&quot;, &quot;ABCDABCDABC&quot;, &quot;xx&quot;, 2, .T. )  // --&gt; &quot;ABCDxxDABC&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -2235,7 +2235,7 @@ is within the tokenizer list.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-AtToken( &quot;Hello, World!&quot; ) // &rarr; 8 (empty strings after tokenizer are not a token !)
+AtToken( &quot;Hello, World!&quot; ) // --&gt; 8 (empty strings after tokenizer are not a token !)
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -2487,8 +2487,8 @@ than &lt;nNumber&gt;.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Ceiling( 1.1 )  // &rarr; 2.0
-? Ceiling( -1.1 ) // &rarr; -1.0
+? Ceiling( 1.1 )  // --&gt; 2.0
+? Ceiling( -1.1 ) // --&gt; -1.0
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -2530,9 +2530,9 @@ scale to the Celsius scale.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // melting point of water in standard conditions
-? Celsius( 32.0 )      // &rarr; 0.0
+? Celsius( 32.0 )      // --&gt; 0.0
 // boiling point of water in standard conditions
-? Celsius( 212.0 )     // &rarr; 100.0
+? Celsius( 212.0 )     // --&gt; 100.0
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -2581,9 +2581,9 @@ processed, the function restarts with the first character of
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? CharAdd( &quot;012345678&quot;, hb_BChar( 1 ) ) // &rarr; &quot;123456789&quot;
-? CharAdd( &quot;123456789&quot;, hb_BChar( 255 ) ) // &rarr; &quot;012345678&quot;
-? CharAdd( &quot;0000&quot;, hb_BChar( 0 ) + hb_BChar( 1 ) + hb_BChar( 2 ) + hb_BChar( 3 ) ) // &rarr; &quot;0123&quot;
+? CharAdd( &quot;012345678&quot;, hb_BChar( 1 ) ) // --&gt; &quot;123456789&quot;
+? CharAdd( &quot;123456789&quot;, hb_BChar( 255 ) ) // --&gt; &quot;012345678&quot;
+? CharAdd( &quot;0000&quot;, hb_BChar( 0 ) + hb_BChar( 1 ) + hb_BChar( 2 ) + hb_BChar( 3 ) ) // --&gt; &quot;0123&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -2633,8 +2633,8 @@ character of &lt;cString2&gt;.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // clear the LSB
-? CharAnd( &quot;012345678&quot;, hb_BChar( 254 ) ) // &rarr; &quot;002244668&quot;
-? CharAnd( &quot;012345678&quot;, hb_BChar( 254 ) + hb_BChar( 252 ) ) // &rarr; &quot;002044648&quot;
+? CharAnd( &quot;012345678&quot;, hb_BChar( 254 ) ) // --&gt; &quot;002244668&quot;
+? CharAnd( &quot;012345678&quot;, hb_BChar( 254 ) + hb_BChar( 252 ) ) // --&gt; &quot;002044648&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -2728,7 +2728,7 @@ ASCII character #(n-1) in &lt;cString&gt;.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? CharHist( &quot;Hello World !&quot; )[ 109 ] // &rarr; 3  // Chr( 108 ) == &quot;l&quot;
+? CharHist( &quot;Hello World !&quot; )[ 109 ] // --&gt; 3  // Chr( 108 ) == &quot;l&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -2774,7 +2774,7 @@ characters first that are occuring in &lt;cString&gt; first.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? CharList( &quot;Hello World !&quot; ) // &rarr; &quot;Helo Wrd!&quot;
+? CharList( &quot;Hello World !&quot; ) // --&gt; &quot;Helo Wrd!&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -2933,7 +2933,7 @@ alphabetically sorted.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? CharNoList( CharNoList( &quot;Hello World !&quot; ) ) // &rarr; &quot; !HWdelor&quot;
+? CharNoList( CharNoList( &quot;Hello World !&quot; ) ) // --&gt; &quot; !HWdelor&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -2981,8 +2981,8 @@ CSetRef()-switch to .T., the return value can be omitted.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 ? CharNot( hb_BChar(  85 ) + hb_BChar( 128 ) + hb_BChar( 170 ) + hb_BChar(   1 ) )
-// &rarr;     hb_BChar( 170 ) + hb_BChar( 127 ) + hb_BChar(  85 ) + hb_BChar( 254 )
-? CharNot( CharNot( &quot;This is a test!&quot; ) ) // &rarr; &quot;This is a test!&quot;
+// --&gt;     hb_BChar( 170 ) + hb_BChar( 127 ) + hb_BChar(  85 ) + hb_BChar( 254 )
+? CharNot( CharNot( &quot;This is a test!&quot; ) ) // --&gt; &quot;This is a test!&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -3180,8 +3180,8 @@ character of &lt;cString2&gt;.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // set the LSB
-? CharOr( &quot;012345678&quot;, hb_BChar( 1 ) ) // &rarr; &quot;113355779&quot;
-? CharOr( &quot;012345678&quot;, hb_BChar( 1 ) + hb_BChar( 3 ) ) // &rarr; &quot;133357779&quot;
+? CharOr( &quot;012345678&quot;, hb_BChar( 1 ) ) // --&gt; &quot;113355779&quot;
+? CharOr( &quot;012345678&quot;, hb_BChar( 1 ) + hb_BChar( 3 ) ) // --&gt; &quot;133357779&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -3379,7 +3379,7 @@ setting the CSetRef()-switch to .T., the return value can be omitted.
 <pre class="examples">
 ? CharRll( hb_BChar(   1 ) + hb_BChar(  2 ) + hb_BChar(  4 ) + hb_BChar(   8 ) + ;
            hb_BChar(  16 ) + hb_BChar( 32 ) + hb_BChar( 64 ) + hb_BChar( 128 ), 3 )
-// &rarr;     hb_BChar(   8 ) + hb_BChar( 16 ) + hb_BChar( 32 ) + hb_BChar(  64 ) + ;
+// --&gt;     hb_BChar(   8 ) + hb_BChar( 16 ) + hb_BChar( 32 ) + hb_BChar(  64 ) + ;
 //         hb_BChar( 128 ) + hb_BChar(  1 ) + hb_BChar(  2 ) + hb_BChar(   4 )
 </pre>
 <div class="itemtitle">Status</div>
@@ -3431,7 +3431,7 @@ setting the CSetRef()-switch to .T., the return value can be omitted.
 <pre class="examples">
 ? CharRlr( hb_BChar(  1 ) + hb_BChar(  2 ) + hb_BChar(   4 ) + hb_BChar(   8 ) + ;
            hb_BChar( 16 ) + hb_BChar( 32 ) + hb_BChar(  64 ) + hb_BChar( 128 ), 3 )
-// &rarr;     hb_BChar( 32 ) + hb_BChar( 64 ) + hb_BChar( 128 ) + hb_BChar(   1 ) + ;
+// --&gt;     hb_BChar( 32 ) + hb_BChar( 64 ) + hb_BChar( 128 ) + hb_BChar(   1 ) + ;
 //         hb_BChar(  2 ) + hb_BChar(  4 ) + hb_BChar(   8 ) + hb_BChar(  16 )
 </pre>
 <div class="itemtitle">Status</div>
@@ -3484,7 +3484,7 @@ value can be omitted.
 <pre class="examples">
 ? CharShl( hb_BChar(   1 ) + hb_BChar(  2 ) + hb_BChar(  4 ) + hb_BChar(   8 ) + ;
            hb_BChar(  16 ) + hb_BChar( 32 ) + hb_BChar( 64 ) + hb_BChar( 128 ), 3 )
-// &rarr;     hb_BChar(   8 ) + hb_BChar( 16 ) + hb_BChar( 32 ) + hb_BChar(  64 ) + ;
+// --&gt;     hb_BChar(   8 ) + hb_BChar( 16 ) + hb_BChar( 32 ) + hb_BChar(  64 ) + ;
 //         hb_BChar( 128 ) + hb_BChar(  0 ) + hb_BChar(  0 ) + hb_BChar(   0 )
 </pre>
 <div class="itemtitle">Status</div>
@@ -3537,7 +3537,7 @@ value can be omitted.
 <pre class="examples">
 ? CharShr( hb_BChar(  1 ) + hb_BChar(  2 ) + hb_BChar(  4 ) + hb_BChar(   8 ) + ;
            hb_BChar( 16 ) + hb_BChar( 32 ) + hb_BChar( 64 ) + hb_BChar( 128 ), 3 )
-// &rarr;     hb_BChar(  0 ) + hb_BChar(  0 ) + hb_BChar(  0 ) + hb_BChar(   1 ) + ;
+// --&gt;     hb_BChar(  0 ) + hb_BChar(  0 ) + hb_BChar(  0 ) + hb_BChar(   1 ) + ;
 //         hb_BChar(  2 ) + hb_BChar(  4 ) + hb_BChar(  8 ) + hb_BChar(  16 )
 </pre>
 <div class="itemtitle">Status</div>
@@ -3585,7 +3585,7 @@ same result as CharSort(CharList(&lt;cString&gt;))
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? CharSList( &quot;Hello World !&quot; ) // &rarr; &quot; !HWdelor&quot;
+? CharSList( &quot;Hello World !&quot; ) // --&gt; &quot; !HWdelor&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -3733,9 +3733,9 @@ character of &lt;cString2&gt;.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? CharSub( &quot;012345678&quot;, hb_BChar( 1 ) ) // &rarr; &quot;/01234567&quot;
-? CharSub( &quot;123456789&quot;, hb_BChar( 255 ) ) // &rarr; &quot;23456789:&quot;
-? CharSub( &quot;9999&quot;, hb_BChar( 0 ) + hb_BChar( 1 ) + hb_BChar( 2 ) + hb_BChar( 3 ) ) // &rarr; &quot;9876&quot;
+? CharSub( &quot;012345678&quot;, hb_BChar( 1 ) ) // --&gt; &quot;/01234567&quot;
+? CharSub( &quot;123456789&quot;, hb_BChar( 255 ) ) // --&gt; &quot;23456789:&quot;
+? CharSub( &quot;9999&quot;, hb_BChar( 0 ) + hb_BChar( 1 ) + hb_BChar( 2 ) + hb_BChar( 3 ) ) // --&gt; &quot;9876&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -3875,7 +3875,7 @@ character of &lt;cString2&gt;.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // easy encryption
-? CharXor( &quot;This is top secret !&quot;, &quot;My Password&quot; ) // &rarr; &lt;encrypted sentence&gt;
+? CharXor( &quot;This is top secret !&quot;, &quot;My Password&quot; ) // --&gt; &lt;encrypted sentence&gt;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -4057,8 +4057,8 @@ function is the ankathede-hypotenuse-ratio of a right-angled triangle.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Cos( 0.0 ) // &rarr; 1.0
-? Cos( 1.0 ) // &rarr; 0.5403...
+? Cos( 0.0 ) // --&gt; 1.0
+? Cos( 1.0 ) // --&gt; 0.5403...
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -4104,8 +4104,8 @@ the hyperbola x^2-y^2=1.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Cosh( 0.0 ) // &rarr; 1.0
-? Cosh( 1.0 ) // &rarr; 1.5430...
+? Cosh( 0.0 ) // --&gt; 1.0
+? Cosh( 1.0 ) // --&gt; 1.5430...
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -4149,7 +4149,7 @@ triangle, or, Cot(x) = Cos(x)/Sin(x)=1/Tan(x).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Cot( 1.0 ) // &rarr; 0.6420...
+? Cot( 1.0 ) // --&gt; 0.6420...
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -4541,8 +4541,8 @@ degrees to radiant (as expected by sin, cos or tan functions).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? DToR( 180 ) // &rarr; Pi()
-? DToR( 60 ) // &rarr; Pi() / 3
+? DToR( 180 ) // --&gt; Pi()
+? DToR( 60 ) // --&gt; Pi() / 3
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -11489,9 +11489,9 @@ function must return a -1.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Fact( 0 ) // &rarr; 1
-? Fact( 1 ) // &rarr; 1
-? Fact( 4 ) // &rarr; 24
+? Fact( 0 ) // --&gt; 1
+? Fact( 1 ) // --&gt; 1
+? Fact( 4 ) // --&gt; 24
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -11530,9 +11530,9 @@ scale to the Fahrenheit scale.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 // melting point of water in standard conditions
-? Fahrenheit( 0.0 )       // &rarr; 32.0
+? Fahrenheit( 0.0 )       // --&gt; 32.0
 // boiling point of water in standard conditions
-? Fahrenheit( 100.0 )     // &rarr; 212.0
+? Fahrenheit( 100.0 )     // --&gt; 212.0
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -11573,8 +11573,8 @@ than &lt;nNumber&gt;.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Floor( 1.1 )  // &rarr; 1.0
-? Floor( -1.1 ) // &rarr; -2.0
+? Floor( 1.1 )  // --&gt; 1.0
+? Floor( -1.1 ) // --&gt; -2.0
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -11677,7 +11677,7 @@ value in period &lt;nPeriod&gt; = ((value in period
 <pre class="examples">
 // Payment of 1000 per year for 10 years at a interest rate
 // of 5 per cent per year
-? FV( 1000, 0.05, 10 ) // &rarr; 12577.893
+? FV( 1000, 0.05, 10 ) // --&gt; 12577.893
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -13861,8 +13861,8 @@ e. 10^&lt;nLogarithm&gt; == &lt;nNumber&gt;.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Log10( 10.0 )         // &rarr; 1.0
-? Log10( Sqrt( 10.0 ) ) // &rarr; 0.5
+? Log10( 10.0 )         // --&gt; 1.0
+? Log10( Sqrt( 10.0 ) ) // --&gt; 0.5
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -14075,7 +14075,7 @@ debt in period &lt;nPeriod&gt; = ((debt in period
 // You get a loan of 5172.56 at a interest rate of 0.5% per
 // month (6% per year).
 // For 5 years, you have to pay back every month
-? Payment( 5172.56, 0.005, 60 ) // &rarr; 100.00
+? Payment( 5172.56, 0.005, 60 ) // --&gt; 100.00
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -14143,7 +14143,7 @@ loan back. The functions does then return -1.
 // You get a loan of 5172.56 at a interest rate of 0.5% per
 // month (6% per year).
 // You can afford to pay 100 back every month, so you need
-? Periods( 5172.56, 100, 0.005 ) // &rarr; 60.0
+? Periods( 5172.56, 100, 0.005 ) // --&gt; 60.0
 // months to cancel the loan.
 </pre>
 <div class="itemtitle">Status</div>
@@ -14184,7 +14184,7 @@ number is the constant perimeter-to-diameter-ratio of circles.
 <pre class="examples">
 // the diameter of a circle-like swimming pool is 3.4 meters, how
 // long is the perimeter ?
-? Str( Pi() * 3.4, 5, 3 ) + &quot; meters&quot; // &rarr; 10.681 meters
+? Str( Pi() * 3.4, 5, 3 ) + &quot; meters&quot; // --&gt; 10.681 meters
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -14251,7 +14251,7 @@ debt in period &lt;nPeriod&gt; = ((debt in period
 // at a interest rate of 0.5% per month (6% per year), so instead
 // of 6000 Dollars (the amount you will pay back) the bank will pay
 // you
-? PV( 100, 0.005, 60 ) // &rarr; 5172.56
+? PV( 100, 0.005, 60 ) // --&gt; 5172.56
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -14307,7 +14307,7 @@ be estimated.
 // You get a loan of 5172.56, pay 100 back every month for
 // 5 years (60 months). The effective interest rate per
 // period (=month) is
-? Rate( 5172.56, 100, 60 ) // &rarr; 0.005
+? Rate( 5172.56, 100, 60 ) // --&gt; 0.005
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -14420,8 +14420,8 @@ degrees that are commonly used geometry and technics.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? RToD( Pi() ) // &rarr; 180
-? Tanh( Pi() / 3 ) // &rarr; 60
+? RToD( Pi() ) // --&gt; 180
+? Tanh( Pi() / 3 ) // --&gt; 60
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -14825,9 +14825,9 @@ returns 0
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Sign( 1.1 )   // &rarr; 1
-? Sign( -1.1 )  // &rarr; -1
-? Sign( 0.0 )   // &rarr; 0
+? Sign( 1.1 )   // --&gt; 1
+? Sign( -1.1 )  // --&gt; -1
+? Sign( 0.0 )   // --&gt; 0
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -14868,8 +14868,8 @@ triangle.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Sin( 0.0 ) // &rarr; 0.0
-? Sin( 1.0 ) // &rarr; 0.8414...
+? Sin( 0.0 ) // --&gt; 0.0
+? Sin( 1.0 ) // --&gt; 0.8414...
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -14915,8 +14915,8 @@ the hyperbola x^2-y^2=1.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Sinh( 0.0 ) // &rarr; 0.0
-? Sinh( 1.0 ) // &rarr; 1.1752...
+? Sinh( 0.0 ) // --&gt; 0.0
+? Sinh( 1.0 ) // --&gt; 1.1752...
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -15096,8 +15096,8 @@ triangle, or, Tan(x) = Sin(x)/Cos(x).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Tan( 0.0 ) // &rarr; 0.0
-? Tan( 1.0 ) // &rarr; 1.5574...
+? Tan( 0.0 ) // --&gt; 0.0
+? Tan( 1.0 ) // --&gt; 1.5574...
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -15138,8 +15138,8 @@ In analytical mathematics it is defined as Sinh(x)/Cosh(x).
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Tanh( 0.0 ) // &rarr; 0.0
-? Tanh( 1.0 ) // &rarr; 0.7615...
+? Tanh( 0.0 ) // --&gt; 0.0
+? Tanh( 1.0 ) // --&gt; 0.7615...
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -15401,10 +15401,10 @@ function are not necessary.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? Token( &quot;Hello, World!&quot; )            &rarr;  &quot;World&quot;
-? Token( &quot;Hello, World!&quot;,, 2, 1 )     &rarr; &quot;&quot;
-? Token( &quot;Hello, World!&quot;, &quot;,&quot;, 2, 1 ) &rarr; &quot; World!&quot;
-? Token( &quot;Hello, World!&quot;, &quot; &quot;, 2, 1 ) &rarr; &quot;World!&quot;
+? Token( &quot;Hello, World!&quot; )            --&gt;  &quot;World&quot;
+? Token( &quot;Hello, World!&quot;,, 2, 1 )     --&gt; &quot;&quot;
+? Token( &quot;Hello, World!&quot;, &quot;,&quot;, 2, 1 ) --&gt; &quot; World!&quot;
+? Token( &quot;Hello, World!&quot;, &quot; &quot;, 2, 1 ) --&gt; &quot;World!&quot;
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -15866,7 +15866,7 @@ environment is used, otherwise the global TE is used.
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
 TokenInit( &quot;a.b.c.d&quot;, &quot;.&quot;, 1 )  // initialize global TE
-? TokenNum()  // &rarr; 4
+? TokenNum()  // --&gt; 4
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -16119,8 +16119,8 @@ the length of &lt;cString&gt;, 0 is returned.
 </div>
 <div class="itemtitle">Example(s)</div>
 <pre class="examples">
-? ValPos( &quot;1234x56789&quot; ) // &rarr; 9
-? ValPos( &quot;1234x56789&quot;, 1 ) // &rarr; 1
+? ValPos( &quot;1234x56789&quot; ) // --&gt; 9
+? ValPos( &quot;1234x56789&quot;, 1 ) // --&gt; 1
 </pre>
 <div class="itemtitle">Status</div>
 <div class="itemtext">
@@ -38100,8 +38100,8 @@ it returns the size of the first dimension.
 <pre class="examples">
 PROCEDURE Main()
    LOCAL cName
-   ? Len( &quot;Harbour&quot; )          // &rarr; 7
-   ? Len( { &quot;One&quot;, &quot;Two&quot; } )   // &rarr; 2
+   ? Len( &quot;Harbour&quot; )          // --&gt; 7
+   ? Len( { &quot;One&quot;, &quot;Two&quot; } )   // --&gt; 2
    cName := &quot;&quot;
    ACCEPT &quot;Enter your name: &quot; TO cName
    ? Len( cName )
