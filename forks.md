@@ -15,12 +15,13 @@ and macOS, and some selected C compilers (clang, gcc/MinGW). It has the stated
 goal to adapt all mainline (non-fork) updates with minimal delay. To ease
 maintenance, this fork has the policy to disable all deprecated components by
 default (they can be enabled though, with no promises). Other goals are
-maintenance, build automation and security (`hbcrypto` contrib and
-[curl/OpenSSL builds](https://github.com/vszakats/harbour-deps)). It also
-features a large number of fixes and cleanups, many of which are eventually
-retrofitted to mainline.
+maintenance, build automation and security ([`hbcrypto`]({{ site.baseurl }}/contribs#hbcrypto)
+contrib and [curl/OpenSSL builds](https://github.com/vszakats/harbour-deps)).
+It also features a large number of fixes and cleanups, many of which are
+eventually retrofitted to mainline.
 
-This fork accepts donations.
+This fork accepts
+[donations]({% if site.fork %}{{ site.baseurl }}{% else %}https://vszakats.github.io/harbour-core{% endif %}/#this-fork).
 
 * [Homepage](https://vszakats.github.io/harbour-core/)
 * [Repository](https://github.com/vszakats/harbour-core)
@@ -39,7 +40,7 @@ focus on the Windows platform along with commercial offerings.
 * [Community](https://groups.google.com/forum/#!forum/comp.lang.xharbour)
 
 Technical details on how this fork differs from the other variations,
-[here](https://raw.githubusercontent.com/vszakats/harbour-core/master/doc/xhb-diff.txt).
+[here](https://raw.githubusercontent.com/{{ site.repo_slug }}/master/doc/xhb-diff.txt).
 
 {% if site.fork %}
 ## Mainline (non-fork) Harbour

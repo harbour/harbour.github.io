@@ -9,23 +9,21 @@ title: "Home"
   compatible with xBase languages. Harbour consists of a compiler and runtime
   libraries with multiple UI and database backends, its own make system and
   a large collection of libraries and interfaces to popular APIs.
-{% unless site.fork %}
   <br><br>
   Harbour is a cross-platform compiler and is known to compile and run on
   Windows (32/64-bit), GNU/Linux, macOS, Android, OS/2 and MS-DOS.
-{% endunless %}
   <a href="{{ site.baseurl }}/about" class="readmore">Read more</a>
 </div>
 
 {% if site.fork %}
 {% assign ppurl = 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BPSZQYKXMQJYG' %}
-<h1>This Fork</h1>
+<h1 id="this-fork">This Fork</h1>
 <div><p><span class="donate-button"><a href="{{ ppurl }}">Donate Now&ensp;<i class="fa fa-paypal" aria-hidden="true"></i></a></span>
   This fork contains all <a href="https://harbour.github.io/">mainline</a>
   updates as well as local fixes, additions, extra contribs, better tooling
-  and maintenance. <strong>Donations are welcome and appreciated</strong>
-  to support this effort. Fork modifications often get retrofitted into
-  the mainline version, making the benefits mutual.
+  and maintenance. <strong><a href="{{ ppurl }}">Donations</a> are welcome
+  and appreciated</strong> to support this effort. Fork modifications often
+  get retrofitted into the mainline version, making the benefits mutual.
   <a href="{{ site.baseurl }}/forks" class="readmore">Read more</a>
 </div>
 {% endif %}
