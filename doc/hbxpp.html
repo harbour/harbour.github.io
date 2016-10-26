@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="utf-8">
+<meta name="referrer" content="origin">
+<meta name="viewport" content="initial-scale=1">
+
+<meta name="generator" content="hbdoc">
+<meta name="keywords" content="Harbour, Clipper, xBase, database, Free Software, GPL, compiler, cross-platform, 32-bit, 64-bit">
+
+<title>Harbour Reference Guide — hbxpp contrib</title>
+
+<link rel="stylesheet" href="hbdoc.css">
+
+<body>
+
+<header>
+<h1>Harbour Reference Guide — hbxpp contrib</h1>
+</header>
+
+<main>
+
+<section id="bin2u">
+<h4><code>Bin2U()</code></h4>
+<div class="d-ol">
+  <div>Convert unsigned long encoded bytes into Harbour numeric</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>Bin2U( &lt;cBuffer&gt; ) &rarr; nNumber</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cBuffer&gt; is a character string that contains 32-bit encoded unsigned long integer (least significant byte first). The first four bytes are taken into account, the rest if any are ignored.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Bin2U() return numeric integer (or 0 if &lt;cBuffer&gt; is not a string).</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Bin2U() is one of the low level binary conversion functions, those functions convert between Harbour numeric and a character representation of numeric value. Bin2U() take four bytes of encoded 32-bit unsigned long integer and convert it into standard Harbour numeric value.</div>
+  <div><p>You might ask what is the need for such functions, well, first of all it allow you to read/write information from/to a binary file (like extracting information from DBF header), it is also a useful way to share information from source other than Harbour (C for instance).</div>
+  <div><p>Bin2U() is the opposite of U2Bin()</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+// Show number of records in DBF
+#include &quot;fileio.ch&quot;
+PROCEDURE Main()
+   LOCAL hFile, cBuffer := Space( 4 )
+   IF ( hFile := hb_vfOpen( &quot;test.dbf&quot;, FO_READ ) ) != NIL
+      hb_vfSeek( hFile, 4 )
+      hb_vfRead( hFile, @cBuffer, hb_BLen( cBuffer ) )
+      ? &quot;Number of records in file:&quot;, Bin2U( cBuffer )
+      hb_vfClose( hFile )
+   ELSE
+      ? &quot;Can not open file&quot;
+   ENDIF
+   RETURN
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>XPP</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is core</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, Conversion</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#bin2i">Bin2I()</a></code>, <code><a href="#bin2l">Bin2L()</a></code>, <code><a href="#bin2w">Bin2W()</a></code>, <code><a href="#i2bin">I2Bin()</a></code>, <code><a href="#l2bin">L2Bin()</a></code>, <code><a href="#w2bin">W2Bin()</a></code>, <code><a href="#word">Word()</a></code>, <code><a href="#u2bin">U2Bin()</a></code></div>
+</section>
+
+<section id="bin2w">
+<h4><code>Bin2W()</code></h4>
+<div class="d-ol">
+  <div>Convert unsigned short encoded bytes into Harbour numeric</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>Bin2W( &lt;cBuffer&gt; ) &rarr; nNumber</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cBuffer&gt; is a character string that contains 16-bit encoded unsigned short integer (least significant byte first). The first two bytes are taken into account, the rest if any are ignored.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Bin2W() return numeric integer (or 0 if &lt;cBuffer&gt; is not a string).</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Bin2W() is one of the low level binary conversion functions, those functions convert between Harbour numeric and a character representation of numeric value. Bin2W() take two bytes of encoded 16-bit unsigned short integer and convert it into standard Harbour numeric value.</div>
+  <div><p>You might ask what is the need for such functions, well, first of all it allow you to read/write information from/to a binary file (like extracting information from DBF header), it is also a useful way to share information from source other than Harbour (C for instance).</div>
+  <div><p>Bin2W() is the opposite of W2Bin()</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+// Show header length of a DBF
+#include &quot;fileio.ch&quot;
+PROCEDURE Main()
+   LOCAL hFile, cBuffer := Space( 2 )
+   IF ( hFile := hb_vfOpen( &quot;test.dbf&quot;, FO_READ ) ) != NIL
+      hb_vfSeek( hFile, 8 )
+      hb_vfRead( hFile, @cBuffer, hb_BLen( cBuffer ) )
+      ? &quot;Length of DBF header in bytes:&quot;, Bin2W( cBuffer )
+      hb_vfClose( hFile )
+   ELSE
+      ? &quot;Can not open file&quot;
+   ENDIF
+   RETURN
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>CA-Cl*pper v5.x compatible</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is core</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, Conversion</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#bin2i">Bin2I()</a></code>, <code><a href="#bin2l">Bin2L()</a></code>, <code><a href="#bin2u">Bin2U()</a></code>, <code><a href="#i2bin">I2Bin()</a></code>, <code><a href="#l2bin">L2Bin()</a></code>, <code><a href="#w2bin">W2Bin()</a></code>, <code><a href="#word">Word()</a></code>, <code><a href="#u2bin">U2Bin()</a></code></div>
+</section>
+
+<section id="u2bin">
+<h4><code>U2Bin()</code></h4>
+<div class="d-ol">
+  <div>Convert Harbour numeric into unsigned long encoded bytes</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>U2Bin( &lt;nNumber&gt; ) &rarr; cBuffer</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nNumber&gt; is a numeric value to convert (decimal digits are ignored).</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>U2Bin() return four bytes character string that contains 32-bit encoded unsigned long integer (least significant byte first).</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>U2Bin() is one of the low level binary conversion functions, those functions convert between Harbour numeric and a character representation of numeric value. U2Bin() take a numeric integer value and convert it into four bytes of encoded 32-bit unsigned long integer.</div>
+  <div><p>You might ask what is the need for such functions, well, first of all it allow you to read/write information from/to a binary file (like extracting information from DBF header), it is also a useful way to share information from source other than Harbour (C for instance).</div>
+  <div><p>U2Bin() is the opposite of Bin2U()</div>
+</div>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>XPP</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is core</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, Conversion</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#bin2i">Bin2I()</a></code>, <code><a href="#bin2l">Bin2L()</a></code>, <code><a href="#bin2u">Bin2U()</a></code>, <code><a href="#bin2w">Bin2W()</a></code>, <code><a href="#i2bin">I2Bin()</a></code>, <code><a href="#l2bin">L2Bin()</a></code>, <code><a href="#w2bin">W2Bin()</a></code>, <code><a href="#word">Word()</a></code></div>
+</section>
+
+<section id="w2bin">
+<h4><code>W2Bin()</code></h4>
+<div class="d-ol">
+  <div>Convert Harbour numeric into unsigned short encoded bytes</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>W2Bin( &lt;nNumber&gt; ) &rarr; cBuffer</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nNumber&gt; is a numeric value to convert (decimal digits are ignored).</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>W2Bin() return two bytes character string that contains 16-bit encoded unsigned short integer (least significant byte first).</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>W2Bin() is one of the low level binary conversion functions, those functions convert between Harbour numeric and a character representation of numeric value. W2Bin() take a numeric integer value and convert it into two bytes of encoded 16-bit unsigned short integer.</div>
+  <div><p>You might ask what is the need for such functions, well, first of all it allow you to read/write information from/to a binary file (like extracting information from DBF header), it is also a useful way to share information from source other than Harbour (C for instance).</div>
+  <div><p>W2Bin() is the opposite of Bin2W()</div>
+</div>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>XPP</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is core</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, Conversion</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#bin2i">Bin2I()</a></code>, <code><a href="#bin2l">Bin2L()</a></code>, <code><a href="#bin2u">Bin2U()</a></code>, <code><a href="#bin2w">Bin2W()</a></code>, <code><a href="#i2bin">I2Bin()</a></code>, <code><a href="#l2bin">L2Bin()</a></code>, <code><a href="#word">Word()</a></code>, <code><a href="#u2bin">U2Bin()</a></code></div>
+</section>
+
+<section id="dbskipper">
+<h4><code>dbSkipper()</code></h4>
+<div class="d-ol">
+  <div>Helper function to skip a database</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>dbSkipper( &lt;nRecs&gt; ) &rarr; nSkipped</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nRecs&gt; is the number of records to skip relative to current record. Positive number would try to move the record pointer forward, while a negative number would try to move the record pointer back &lt;nRecs&gt; records.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>dbSkipper() return the number of actual record skipped.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>dbSkipper() is a helper function used in browse mechanism to skip a number of records while giving the caller indication about the actual records skipped.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+// open a file and find if we've got enough records in it
+USE month_sales
+IF dbSkipper( 100 ) == 100
+   ? &quot;Good work! You can party now&quot;
+ELSE
+   ? &quot;Too bad, you should really work harder&quot;
+ENDIF
+dbCloseArea()
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>XPP</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is core</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, User interface</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#dbskip">dbSkip()</a></code>, <code><a href="#skip">SKIP</a></code></div>
+</section>
+
+</main>
+
+<footer>
+<div>Generated by hbdoc on 2016-10-26 15:18 UTC</div>
+<div>Based on commit <a href="https://github.com/vszakats/harbour-core/tree/a2227e0">a2227e0</a></div>
+</footer>

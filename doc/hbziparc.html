@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="utf-8">
+<meta name="referrer" content="origin">
+<meta name="viewport" content="initial-scale=1">
+
+<meta name="generator" content="hbdoc">
+<meta name="keywords" content="Harbour, Clipper, xBase, database, Free Software, GPL, compiler, cross-platform, 32-bit, 64-bit">
+
+<title>Harbour Reference Guide — hbziparc contrib</title>
+
+<link rel="stylesheet" href="hbdoc.css">
+
+<body>
+
+<header>
+<h1>Harbour Reference Guide — hbziparc contrib</h1>
+</header>
+
+<main>
+
+<section id="hb-getzipcomment">
+<h4><code>hb_GetZipComment()</code></h4>
+<div class="d-ol">
+  <div>Return the comment of an zip file</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>hb_GetZipComment( &lt;szFile&gt; ) &rarr; &lt;szComment&gt;</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;szFile&gt;  File to get the comment from</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;szComment&gt;  The comment that was stored in &lt;szFile&gt;</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function receives a valid zip file name as parameter, and returns the global comment stored within.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+? &quot;The comment in test.zip is &quot;, hb_GetZipComment( &quot;test.zip&quot; )
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is a Harbour extension</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbziparc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Zip Functions</div>
+</div>
+</section>
+
+<section id="hb-setbuffer">
+<h4><code>hb_SetBuffer()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>hb_SetBuffer( [&lt;nWriteBuffer&gt;], [&lt;nExtractBuffer&gt;], [&lt;nReadBuffer&gt;] ) &rarr; NIL</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWriteBuffer&gt;   The size of the write buffer.</div>
+  <div>&lt;nExtractBuffer&gt; The size of the extract buffer.</div>
+  <div>&lt;nReadBuffer&gt;    The size of the read buffer.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;NIL&gt;            This function always returns NIL.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function set the size of the internal buffers for write/extract/read operation.</div>
+  <div><p>If the size of the buffer is smaller then the default, the function will automatically use the default values, which are 65535/16384/32768 respectively.</div>
+  <div><p>This function be called before any of the compression/decompression functions.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+hb_SetBuffer( 100000, 115214, 65242 )
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is a Harbour extension</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbziparc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Zip Functions</div>
+</div>
+</section>
+
+<section id="hb-setdiskzip">
+<h4><code>hb_SetDiskZip()</code></h4>
+<div class="d-ol">
+  <div>Set an codeblock for disk changes</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>hb_SetDiskZip( &lt;bBlock&gt; ) &rarr; .T.</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;bBlock&gt; an Code block that contains an function that will be performed when the need of changing disk are need.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>It always returns True</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function will set an codeblock that will be evaluated every time that an changedisk event is necessary. &lt;bBlock&gt; receives nDisk as a code block param that corresponds to the diskette number to be processed.</div>
+  <div><p>Set this function before opening archives that are in removable media. This block will be released, when the caller finish it job.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+hb_SetDiskZip( {| nDisk | Alert( &quot;Please insert disk no &quot; + hb_ntos( nDisk ) ) } )
+</pre>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is a Harbour extension</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbziparc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Zip Functions</div>
+</div>
+</section>
+
+<section id="hb-setzipcomment">
+<h4><code>hb_SetZipComment()</code></h4>
+<div class="d-ol">
+  <div>Set an Zip archive Comment</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>hb_SetZipComment( &lt;cComment&gt; ) &rarr; NIL</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cComment&gt;   Comment to add to the zip archive</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;NIL&gt; this function always return NIL</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function stored an global comment to an zip archive. It should be called before any of the compression functions.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+hb_SetZipComment( &quot;This is an Test&quot; )
+hb_ZipFile( &quot;test.zip&quot;, { &quot;ios.ini&quot;, &quot;win.ini&quot; } )
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is a Harbour extension</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbziparc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Zip Functions</div>
+</div>
+</section>
+
+<section id="hb-unzipfile">
+<h4><code>hb_UnzipFile()</code></h4>
+<div class="d-ol">
+  <div>Unzip a compressed file</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>hb_UnzipFile( &lt;cFile&gt;, &lt;bBlock&gt;, &lt;lWithPath&gt;, &lt;cPassword&gt;, &lt;cPath&gt;,</code><code>&lt;cFile&gt; | &lt;aFile&gt;, &lt;pFileProgress&gt; ) &rarr; lCompress</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cFile&gt;   Name of the zip file to extract</div>
+  <div>&lt;bBlock&gt;  Code block to execute while extracting</div>
+  <div>&lt;lWithPath&gt; Toggle to create directory if needed</div>
+  <div>&lt;cPassword&gt; Password to use to extract files</div>
+  <div>&lt;cPath&gt;    Path to extract the files to - mandatory</div>
+  <div>&lt;cFile&gt; | &lt;aFiles&gt; A File or Array of files to extract - mandatory</div>
+  <div>&lt;pFileProgress&gt; Code block for File Progress</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;lCompress&gt;  .T. if all file was successfully restored, otherwise .F.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function restores all files contained inside the &lt;cFile&gt;. If the extension is omitted, .zip will be assumed. If a file already exists, it will be overwritten.</div>
+  <div><p>If &lt;bBlock&gt; is used, every time the file is opened to compress it will evaluate bBlock. Parameters of bBlock are cFile and nPos.</div>
+  <div><p>The &lt;cPath&gt; is a mandatory parameter. Set to &quot;." to extract to the current directory</div>
+  <div><p>If &lt;cFile&gt; or &lt;aFiles&gt; are not provided, no files will be extracted! Make sure you provide the file or files you want extracted</div>
+  <div><p>If &lt;pFileProgress&gt; is used, an Code block is evaluated, showing the total of that file has being processed. The codeblock must be defined as follow {| nPos, nTotal | GaugeUpdate( aGauge1, nPos / nTotal ) }</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+PROCEDURE Main()
+
+   LOCAL aExtract
+
+   aExtract := hb_GetFilesInZip( &quot;test.zip&quot; )  // extract all files in zip
+   IF hb_UnzipFile( &quot;test.zip&quot;,,,, &quot;.&quot; + hb_ps(), aExtract )
+      ? &quot;File was successfully extracted&quot;
+   ENDIF
+
+   aExtract := hb_GetFilesInZip( &quot;test2.zip&quot; )  // extract all files in zip
+   IF hb_UnzipFile( &quot;test2.zip&quot;, {| cFile | QOut( cFile ) },,, &quot;.&quot; + hb_ps(), aExtract )
+      ? &quot;File was successfully extracted&quot;
+   ENDIF
+
+   RETURN
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is a Harbour extension</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbziparc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Zip Functions</div>
+</div>
+</section>
+
+<section id="hb-zipdeletefiles">
+<h4><code>hb_ZipDeleteFiles()</code></h4>
+<div class="d-ol">
+  <div>Delete files from an zip archive</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>hb_ZipDeleteFiles( &lt;cFile&gt;, &lt;cFiletoDelete&gt; | &lt;aFiles&gt; | &lt;nFilePos&gt; ) &rarr; &lt;lDeleted&gt;</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cFile&gt;  The name of the zip files from where the files will be deleted</div>
+  <div>&lt;cFiletoDelete&gt; An File to be removed</div>
+  <div><i>or</i></div>
+  <div>&lt;aFiles&gt;    An Array of Files to be removed</div>
+  <div><i>or</i></div>
+  <div>&lt;nFilePos&gt; The Position of the file to be removed</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;lDeleted&gt; If the files are deleted, it will return .T.; otherwise it will return .F. in the following cases: Spanned Archives; the file(s) could not be found in the zip file.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This  function removes files from an Zip archive.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+? &quot;has the file zipnew.i been deleted &quot;, iif( hb_ZipDeleteFiles( &quot;test23.zip&quot;, &quot;zipnew.i&quot; ), &quot;Yes&quot;, &quot;No&quot; )
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is a Harbour extension</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbziparc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Zip Functions</div>
+</div>
+</section>
+
+<section id="hb-zipfile">
+<h4><code>hb_ZipFile()</code></h4>
+<div class="d-ol">
+  <div>Create a zip file</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>hb_ZipFile( &lt;cFile&gt;, &lt;cFileToCompress&gt; | &lt;aFiles&gt;, &lt;nLevel&gt;, &lt;bBlock&gt;, &lt;lOverWrite&gt;, &lt;cPassword&gt;, &lt;lWithPath&gt;, &lt;lWithDrive&gt;, &lt;pFileProgress&gt; ) &rarr; lCompress</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cFile&gt;   Name of the zip file to create</div>
+  <div>&lt;cFileToCompress&gt;  Name of a file to Compress, Drive and/or path can be used</div>
+  <div><i>or</i></div>
+  <div>&lt;aFiles&gt;  An array containing files to compress, Drive and/or path can be used</div>
+  <div>&lt;nLevel&gt;  Compression level ranging from 0 to 9</div>
+  <div>&lt;bBlock&gt;  Code block to execute while compressing</div>
+  <div>&lt;lOverWrite&gt;  Toggle to overwrite the file if exists</div>
+  <div>&lt;cPassword&gt; Password to encrypt the files</div>
+  <div>&lt;lWithPath&gt; Toggle to store the path or not</div>
+  <div>&lt;lWithDrive&gt; Toggle to store the Drive letter and path or not</div>
+  <div>&lt;pFileProgress&gt; Code block for File Progress</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;lCompress&gt;  .T. if file was create, otherwise .F.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function creates a zip file named &lt;cFile&gt;. If the extension is omitted, .zip will be assumed. If the second parameter is a character string, this file will be added to the zip file. If the second parameter is an array, all file names contained in &lt;aFiles&gt; will be compressed.</div>
+  <div><p>If &lt;nLevel&gt; is used, it determines the compression type where 0 means no compression and 9 means best compression.</div>
+  <div><p>If &lt;bBlock&gt; is used, every time the file is opened to compress it will evaluate bBlock. Parameters of bBlock are cFile and nPos.</div>
+  <div><p>If &lt;lOverWrite&gt; is used, it toggles to overwrite or not the existing file. Default is to overwrite the file, otherwise if &lt;lOverWrite&gt; is false the new files are added to the &lt;cFile&gt;.</div>
+  <div><p>If &lt;cPassword&gt; is used, all files that are added to the archive are encrypted with the password.</div>
+  <div><p>If &lt;lWithPath&gt; is used, it tells  the path should also be stored with the file name. Default is false.</div>
+  <div><p>If &lt;lWithDrive&gt; is used, it tells thats the Drive and path should also be stored with the file name. Default is false.</div>
+  <div><p>If &lt;pFileProgress&gt; is used, an Code block is evaluated, showing the total of that file has being processed. The codeblock must be defined as follow {| nPos, nTotal | GaugeUpdate( aGauge1, nPos / nTotal ) }</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+PROCEDURE Main()
+
+   IF hb_ZipFile( &quot;test.zip&quot;, &quot;test.prg&quot; )
+      ? &quot;File was successfully created&quot;
+   ENDIF
+
+   IF hb_ZipFile( &quot;test1.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; } )
+      ? &quot;File was successfully created&quot;
+   ENDIF
+
+   IF hb_ZipFile( &quot;test2.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; }, 9, {| cFile, nPos | QOut( cFile ) } )
+      ? &quot;File was successfully created&quot;
+   ENDIF
+
+   aFiles := { &quot;test.prg&quot;, &quot;test.hbp&quot; }
+   nLen   := Len( aFiles )
+   aGauge := GaugeNew( 5, 5, 7, 40, &quot;W/B&quot;, &quot;W+/B&quot; , &quot;.&quot; )
+   GaugeDisplay( aGauge )
+   hb_ZipFile( &quot;test33.zip&quot;, aFiles, 9, {| cFile, nPos | GaugeUpdate( aGauge, nPos / nLen ) },, &quot;hello&quot; )
+   RETURN
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is a Harbour extension</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbziparc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Zip Functions</div>
+</div>
+</section>
+
+<section id="hb-zipfilebypkspan">
+<h4><code>hb_ZipFileByPKSpan()</code></h4>
+<div class="d-ol">
+  <div>Create a zip file on removable media</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>hb_ZipFileByPKSpan( &lt;cFile&gt;, &lt;cFileToCompress&gt; | &lt;aFiles&gt;, &lt;nLevel&gt;, &lt;bBlock&gt;, &lt;lOverWrite&gt;, &lt;cPassword&gt;, &lt;lWithPath&gt;, &lt;lWithDrive&gt;, &lt;pFileProgress&gt; ) &rarr; lCompress</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cFile&gt;   Name of the zip file</div>
+  <div>&lt;cFileToCompress&gt;  Name of a file to Compress, Drive and/or path can be used</div>
+  <div><i>or</i></div>
+  <div>&lt;aFiles&gt;  An array containing files to compress, Drive and/or path can be used</div>
+  <div>&lt;nLevel&gt;  Compression level ranging from 0 to 9</div>
+  <div>&lt;bBlock&gt;  Code block to execute while compressing</div>
+  <div>&lt;lOverWrite&gt;  Toggle to overwrite the file if exists</div>
+  <div>&lt;cPassword&gt; Password to encrypt the files</div>
+  <div>&lt;lWithPath&gt; Toggle to store the path or not</div>
+  <div>&lt;lWithDrive&gt; Toggle to store the Drive letter and path or not</div>
+  <div>&lt;pFileProgress&gt; Code block for File Progress</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;lCompress&gt;  .T. if file was create, otherwise .F.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function creates a zip file named &lt;cFile&gt;. If the extension is omitted, .zip will be assumed. If the second parameter is a character string, this file will be added to the zip file. If the second parameter is an array, all file names contained in &lt;aFiles&gt; will be compressed.  Also, the use of this function is for creating backup in removable media like an floppy drive/zip drive.</div>
+  <div><p>If &lt;nLevel&gt; is used, it determines the compression type where 0 means no compression and 9 means best compression.</div>
+  <div><p>If &lt;bBlock&gt; is used, every time the file is opened to compress it will evaluate bBlock. Parameters of bBlock are cFile and nPos.</div>
+  <div><p>If &lt;lOverWrite&gt; is used , it toggles to overwrite or not the existing file. Default is to overwrite the file, otherwise if &lt;lOverWrite&gt; is false the new files are added to the &lt;cFile&gt;.</div>
+  <div><p>If &lt;cPassword&gt; is used, all files that are added to the archive are encrypted with the password.</div>
+  <div><p>If &lt;lWithPath&gt; is used, it tells thats the path should also be stored with the file name. Default is false.</div>
+  <div><p>If &lt;lWithDrive&gt; is used, it tells thats the Drive and path should also be stored with the file name. Default is false.</div>
+  <div><p>If &lt;pFileProgress&gt; is used, an Code block is evaluated, showing the total of that file has being processed. The codeblock must be defined as follow {| nPos, nTotal | GaugeUpdate( aGauge1, nPos / nTotal ) }</div>
+  <div><p>Before calling this function, Set an Changedisk codeblock by calling the hb_SetDiskZip().</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+PROCEDURE Main()
+
+   hb_SetDiskZip( {| nDisk | Alert( &quot;Please insert disk no &quot; + hb_ntos( nDisk ) ) } )
+
+   IF hb_ZipFileByPKSpan( &quot;test.zip&quot;, &quot;test.prg&quot; )
+      ? &quot;File was successfully created&quot;
+   ENDIF
+
+   IF hb_ZipFileByPKSpan( &quot;test1.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; } )
+      ? &quot;File was successfully created&quot;
+   ENDIF
+
+   IF hb_ZipFileByPKSpan( &quot;test2.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; }, 9, {| nPos, cFile | QOut( cFile ) } )
+      ? &quot;File was successfully created&quot;
+   ENDIF
+
+   aFiles := { &quot;test.prg&quot;, &quot;test.hbp&quot; }
+   nLen   := Len( aFiles )
+   aGauge := GaugeNew( 5, 5, 7, 40, &quot;W/B&quot;, &quot;W+/B&quot;, &quot;.&quot; )
+   GaugeDisplay( aGauge )
+   hb_ZipFileByPKSpan( &quot;test33.zip&quot;, aFiles, 9, {| cFile, nPos | GaugeUpdate( aGauge, nPos / nLen ) },, &quot;hello&quot; )
+   RETURN
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is a Harbour extension</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbziparc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Zip Functions</div>
+</div>
+</section>
+
+<section id="hb-zipfilebytdspan">
+<h4><code>hb_ZipFileByTDSpan()</code></h4>
+<div class="d-ol">
+  <div>Create a zip file</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>hb_ZipFileByTDSpan( &lt;cFile&gt;, &lt;cFileToCompress&gt; | &lt;aFiles&gt;, &lt;nLevel&gt;, &lt;bBlock&gt;, &lt;lOverWrite&gt;, &lt;cPassword&gt;, &lt;iSize&gt;, &lt;lWithPath&gt;, &lt;lWithDrive&gt;, &lt;pFileProgress&gt;) &rarr; lCompress</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cFile&gt;   Name of the zip file</div>
+  <div>&lt;cFileToCompress&gt;  Name of a file to Compress, Drive and/or path can be used</div>
+  <div><i>or</i></div>
+  <div>&lt;aFiles&gt;  An array containing files to compress, Drive and/or path can be used</div>
+  <div>&lt;nLevel&gt;  Compression level ranging from 0 to 9</div>
+  <div>&lt;bBlock&gt;  Code block to execute while compressing</div>
+  <div>&lt;lOverWrite&gt;  Toggle to overwrite the file if exists</div>
+  <div>&lt;cPassword&gt; Password to encrypt the files</div>
+  <div>&lt;iSize&gt; Size of the archive, in bytes. Default is 1457664 bytes</div>
+  <div>&lt;lWithPath&gt; Toggle to store the path or not</div>
+  <div>&lt;lWithDrive&gt; Toggle to store the Drive letter and path or not</div>
+  <div>&lt;pFileProgress&gt; Code block for File Progress</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;lCompress&gt;  .T. if file was create, otherwise .F.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function creates a zip file named &lt;cFile&gt;. If the extension is omitted, .zip will be assumed. If the second parameter is a character string, this file will be added to the zip file. If the second parameter is an array, all file names contained in &lt;aFiles&gt; will be compressed.</div>
+  <div><p>If &lt;nLevel&gt; is used, it determines the compression type where 0 means no compression and 9 means best compression.</div>
+  <div><p>If &lt;bBlock&gt; is used, every time the file is opened to compress it will evaluate bBlock. Parameters of bBlock are cFile and nPos.</div>
+  <div><p>If &lt;lOverWrite&gt; is used, it toggles to overwrite or not the existing file. Default is to overwrite the file, otherwise if &lt;lOverWrite&gt; is false the new files are added to the &lt;cFile&gt;.</div>
+  <div><p>If &lt;lWithPath&gt; is used, it tells thats the path should also be stored with the file name. Default is false.</div>
+  <div><p>If &lt;lWithDrive&gt; is used, it tells thats the Drive and path should also be stored with the file name. Default is false.</div>
+  <div><p>If &lt;pFileProgress&gt; is used, an Code block is evaluated, showing the total of that file has being processed. The codeblock must be defined as follow {| nPos, nTotal | GaugeUpdate( aGauge1, nPos / nTotal ) }</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+PROCEDURE Main()
+
+   IF hb_ZipFileByTDSpan( &quot;test.zip&quot;, &quot;test.prg&quot; )
+      ? &quot;File was successfully created&quot;
+   ENDIF
+
+   IF hb_ZipFileByTDSpan( &quot;test1.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; } )
+      ? &quot;File was successfully created&quot;
+   ENDIF
+
+   IF hb_ZipFileByTDSpan( &quot;test2.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; }, 9, {| nPos, cFile | QOut( cFile ) }, &quot;hello&quot;,, 521421 )
+      ? &quot;File was successfully created&quot;
+   ENDIF
+
+   aFiles := { &quot;test.prg&quot;, &quot;test.hbp&quot; }
+   nLen   := Len( aFiles )
+   aGauge := GaugeNew( 5, 5, 7, 40, &quot;W/B&quot;, &quot;W+/B&quot;, &quot;.&quot; )
+   GaugeDisplay( aGauge )
+   hb_ZipFileByTDSpan( &quot;test33.zip&quot;, aFiles, 9, {| cFile, nPos | GaugeUpdate( aGauge, nPos / nLen ) },, &quot;hello&quot;,, 6585452 )
+   RETURN
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is a Harbour extension</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbziparc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Zip Functions</div>
+</div>
+</section>
+
+<section id="hb-ziptestpk">
+<h4><code>hb_ZipTestPK()</code></h4>
+<div class="d-ol">
+  <div>Test pkSpanned zip files</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>hb_ZipTestPK( &lt;cFile&gt; ) &rarr; &lt;nReturnCode&gt;</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cFile&gt;  File to be tested.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;nReturn&gt; A code that tells if the current disk is the last of a pkSpanned disk set.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function tests if the disk inserted is the last disk of an backup set or not. It will return the follow return code when an error is found</div>
+  <div class="d-t d-t1">
+  <div>Error code     Meaning</div>
+  <div>114            Incorrect Disk</div>
+  <div>103            No Call back was set with hb_ZipTestPK()</div>
+</div>
+  <div><p>Call this function to determine if the disk inserted is the correct one before any other function.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+IF hb_ZipTestPK( &quot;test22.zip&quot; ) == 114
+   ? &quot;Invalid Diskette&quot;
+ENDIF
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is a Harbour extension</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbziparc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Zip Functions</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div>Generated by hbdoc on 2016-10-26 15:18 UTC</div>
+<div>Based on commit <a href="https://github.com/vszakats/harbour-core/tree/a2227e0">a2227e0</a></div>
+</footer>

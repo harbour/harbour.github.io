@@ -1,0 +1,4967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="utf-8">
+<meta name="referrer" content="origin">
+<meta name="viewport" content="initial-scale=1">
+
+<meta name="generator" content="hbdoc">
+<meta name="keywords" content="Harbour, Clipper, xBase, database, Free Software, GPL, compiler, cross-platform, 32-bit, 64-bit">
+
+<title>Harbour Reference Guide — gtwvw contrib</title>
+
+<link rel="stylesheet" href="hbdoc.css">
+
+<body>
+
+<header>
+<h1>Harbour Reference Guide — gtwvw contrib</h1>
+</header>
+
+<main>
+
+<section id="wvw--makedlgtemplate">
+<h4><code>wvw__MakeDlgTemplate()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw__MakeDlgTemplate( Dlg, aItens1, aItens2, aItens3, aItens4, aItens5, aItens6, aItens7, aItens8, aItens9, aItens10 )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;aDlg&gt; &lt;aItens1&gt; &lt;aItens2&gt; &lt;aItens3&gt; &lt;aItens4&gt; &lt;aItens5&gt; &lt;aItens6&gt; &lt;aItens7&gt; &lt;aItens8&gt; &lt;aItens9&gt; &lt;aItens10&gt;</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>String with new template dialog.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Creates a window dialog template.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-addrows">
+<h4><code>wvw_AddRows()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_AddRows( nWinNum, nRows )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nRows&gt; Number of lines to add or reduce (if nRows &lt; 0).</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Adds or reduces lines from window. The new lines will be colored from column zero color, from prior line. There's no checking to determine if the window is bigger than desktop area (except if in maincoord mode, because we need these boundaries to MaxRow() function).</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-appendmenu">
+<h4><code>wvw_AppendMenu()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_AppendMenu( hMenu, nFlags, nMenuItemId, cCaption )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;hMenu&gt; Identifies the menu to be changed. &lt;nFlags&gt; Specifies flags to control the appearance and behavior of the new menu item. This parameter can be a combination of values (all flags can be viewed in winuser.ch file). &lt;nMenuItemId&gt; Specifies either the identifier of the new menu item or, if the uFlags parameter is set to MF_POPUP, the handle to the drop-down menu or submenu. &lt;cCaption&gt; Specifies the string content of the new menu item or full path to a bitmap to the new menu item.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>If successful, a value greater than zero. Otherwise zero.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Adds a new menu item. Through this function we can specifies the content, appearance and behavior of each menu item.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cbaddstring">
+<h4><code>wvw_cbAddString()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cbAddString( nHandleDialog, nIDComboBox, cItem )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nHandleDialog&gt; Dialog handle of window. &lt;nIdComboBox&gt; ID of Combobox. &lt;cItem&gt; Item to be included in Combobox.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Adds an item into Combobox.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cbcreate">
+<h4><code>wvw_cbCreate()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cbCreate( nWinNum, nTop, nLeft, nWidth, aText, bBlock, nListLines, nReserved, nKbdType, aOffset )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop&gt;, &lt;nLeft&gt; Coordinates of combobox. &lt;nWidth&gt; Width of combobox. &lt;aText&gt; Array with all combobox elements. Default is empty. &lt;bBlock&gt; Code block, executed for the following events: CBN_SELCHANGE: CBN_SETFOCUS: CBN_KILLFOCUS: User change selection (not executed when made by program itself) When focus go to combobox When focus lost from combobox</div>
+  <div>This code block will be evaluated with the following arguments: nWinNum nCBId nType nIndex Actual windows number Combobox ID Event type (only the three types above are supported) Index on selected item (start from 0)</div>
+  <div>&lt;nListLines&gt; Number of lines to list items (default is 3). will be automatically truncated if this parameter is greater than Len(aText). &lt;nReserved&gt; Reserved for future use. &lt;nKbdType&gt; Specifies the behavior of combobox. Can be one of the following values: 0: 1: Similar to standard windows convention (i.e., ENTER/ESC will kill focus from combobox) Similar to CA-Cl*pper (i.e., ENTER shows all combobox's items, UP/DOWN/TAB/SHIFTAB/ESC will kill focus from combobox)</div>
+  <div>Default is 0.</div>
+  <div>&lt;aOffset&gt; Array with four elements containing offsets to corner pixels {x1,y1,x2,y2}, to adjust dimension of combobox. Default is {-2,-2,+2,+2}. The third element (y2) is actually ignored. Height of combobox is always 1 char height.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Handle of combobox, if successful. Zero if failed.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Create a combobox in current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cbdestroy">
+<h4><code>wvw_cbDestroy()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cbDestroy( nWinNum, nCBId )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCBId&gt; ID of Combobox.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Delete a combobox in the current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cbenable">
+<h4><code>wvw_cbEnable()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cbEnable( nWinNum, nCBId, lEnable )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCBId&gt; ID of Combobox. &lt;lEnable&gt; Enable (.T.) or disable (.F.) combobox button in current window. Default is .T.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Return old configuration of combobox (.T. enable, .F. disable). If failed, return .F..</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Enable/Disable access of combobox in current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cbfindstring">
+<h4><code>wvw_cbFindString()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cbFindString( nWinNum, nCBId, cString )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCBId&gt; ID of combobox. &lt;cString&gt; String to find.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Index of string, or ­1 if failed (or can't find).</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Find index of string in combobox in current window. This function is case insensitive.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cbgetcurtext">
+<h4><code>wvw_cbGetCurText()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cbGetCurText( nWinNum, nCBId )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCBId&gt; ID of combobox.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>String, if successful, or &quot;&quot; if failed.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Get current selected string in combobox in current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cbgetindex">
+<h4><code>wvw_cbGetIndex()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cbGetIndex( nWinNum, nCBId )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCBId&gt; ID of combobox.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Current position in combobox or ­1 if failed.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Get current selection in combobox (start from zero).</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cbisdropped">
+<h4><code>wvw_cbIsDropped()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cbIsDropped( nWinNum, nCBId )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCBId&gt; ID of combobox.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Return .T. if listbox is being shown, otherwise .F.. Also return .F. if combobox ID is not valid.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Get current dropped state of combobox in current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cbisfocused">
+<h4><code>wvw_cbIsFocused()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cbIsFocused( nWinNum, nCBId )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCBId&gt; ID of combobox.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if is focused, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Get information if focus is on combobox in current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cbsetcodeblock">
+<h4><code>wvw_cbSetCodeblock()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cbSetCodeblock( nWinNum, nCBId, bBlock )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCBId&gt; ID of combobox. &lt;bBlock&gt; New code block to assign to combobox.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Assign a new code block to combobox on current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cbsetcursel">
+<h4><code>wvw_cbSetCurSel()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cbSetCurSel( nHandleDialog, nIDCombobox, nIndex )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nHandleDialog&gt; Handle of window dialog. &lt;nIDCombobox&gt; ID of combobox. &lt;nIndex&gt; Index of item (start from zero). If ­1, remove current selection and clean edit control of combobox.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Select na item of combobox list.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cbsetfont">
+<h4><code>wvw_cbSetFont()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cbSetFont( nWinNum, cFontFace, nHeight, nWidth, nWeight, nQuality, lItalic, lUnderline, lStrikeout )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;cFontName&gt; Name of the font. &lt;nHeight&gt; Height of the font's character. &lt;nWidth&gt; Specifies average width of character in the font. &lt;nWeight&gt; Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). &lt;nQuality&gt; Specifies the output quality. &lt;lItalic&gt; Specifies an italic font if set to TRUE. &lt;lUnderline&gt; Specifies an underlined font if set to TRUE. &lt;lStrikeout&gt; Specifies a strikeout font if set to TRUE.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This will initialize font for all comboboxes on current window (including ones created later on).</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cbsetindex">
+<h4><code>wvw_cbSetIndex()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cbSetIndex( nWinNum, nCBId, nIndex )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCBId&gt; ID of combobox. &lt;nIndex&gt; Item index on combobox (start from 0).</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Set current selection on combobox.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cxcreate">
+<h4><code>wvw_cxCreate()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cxCreate( nWinNum, nTop, nLeft, nBottom, nRight, cText, cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft&gt; Row/column of top/left corner. &lt;nBottom, nRight&gt; Row/column of bottom/right corner. &lt;cText&gt; Text of checkbox. Default is empty. &lt;cImage/nImage&gt; If numeric, represent an resource ID from a .RC file. If string, represent a bitmap file name (must be supplied with a full path). &lt;bBlock&gt; Code block to exectue on every BN_CLICK event. This code block will be evaluated with these parameters: current window and checkbox id. If this parameter is omitted, the checkbox will not be created. &lt;aOffSet&gt; Array of four elements {x1,y1,x2,y2} with offsets to corner pixels to adjust dimension of checkbox. Default is {-2,-2,+2,+2}. &lt;nStretchBitmap&gt; A number between 0 and 1 (inclusive) as a factor to stretch the bitmap. Example: 1.0 0.5 0 Bitmap covers the whole button Bitmap covers 50% of button Bitmap is not stretch</div>
+  <div>Default is 1. &lt;lMap3Dcolors&gt; If image will have transparent effect (.T.) or not (.F.). This will work on 256 colored bitmaps only.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns checkbox handle, if successful. If failed, return zero.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Creates a checkbox.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cxdestroy">
+<h4><code>wvw_cxDestroy()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cxDestroy( nWinNum, nCXId )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCXId&gt; ID of checkbox.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Delete a checkbox on current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cxenable">
+<h4><code>wvw_cxEnable()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cxEnable( nWinNum, nCXId, lToggle )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCXId&gt; ID of checkbox. &lt;lToggle&gt; If .T., Enable, otherwisie disable. Default is .T.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Return previous state of the checkbox, if &lt;lToggle&gt; informed. Otherwise, returns current state of the checkbox (.T. = enable, .F. = disable).</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Enable/disable a checkbox on current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cxgetcheck">
+<h4><code>wvw_cxGetCheck()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cxGetCheck( nWinNum, nCXId )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCXId&gt; ID of checkbox.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns one of the following values: 0 1 2 Not selected Selected Indeterminate</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Return current state of checkbox.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cxsetcheck">
+<h4><code>wvw_cxSetCheck()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cxSetCheck( nWinNum, nCXId, nCheckState )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCXId&gt; ID of checkbox. &lt;nCheckState&gt; 0 1 2 Not selected Selected Indeterminate</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Always .T.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Assign check-state of checkbox.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cxsetcodeblock">
+<h4><code>wvw_cxSetCodeblock()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cxSetCodeblock( nWinNum, nCXId, bBlock )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCXId&gt; ID of checkbox. &lt;bBlock&gt; Code block</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. if failed.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Assign a new code block to checkbox on current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-cxsetfocus">
+<h4><code>wvw_cxSetFocus()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_cxSetFocus( nWinNum, nCXId )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCXId&gt; ID of checkbox.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. if failed.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Set the focus to checkbox.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-centerwindow">
+<h4><code>wvw_CenterWindow()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_CenterWindow( nWinNum, lCenter, lPaint )</code><code>See function wvw_SetWindowCentre().</code></div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-choosecolor">
+<h4><code>wvw_ChooseColor()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_ChooseColor( nRGBInit, aRGB16, nFlags )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nRGBInit&gt; Initial color. &lt;aRGB16&gt; Array of 16 elements, with color index. Default is an array with color set of button. &lt;nFlags&gt; A set of bit flags that you can use to initialize the color common dialog box. When the dialog box returns, it sets these flags to indicate the user's input. Default is a combination of CC_ANYCOLOR | CC_RGBINIT | CC_FULLOPEN.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Contains the RGB color value of the color selected by the user, if the user clicks OK button of the dialog box.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Open a color selection dialog.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-choosefont">
+<h4><code>wvw_ChooseFont()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_ChooseFont( cFontName, nHeight, nWidth, nWeight, nQuality, lItalic, lUnderline, lStrikeout )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cFontName&gt; Name of the font. &lt;nHeight&gt; Height of the font's character. &lt;nWidth&gt; Specifies average width of character in the font. &lt;nWeight&gt; Specifies the weight of the font in the range 0 through 1000 (see About Fonts section) &lt;nQuality&gt; Specifies the output quality. &lt;lItalic&gt; Specifies an italic font if set to TRUE. &lt;lUnderline&gt; Specifies an underlined font if set to TRUE. &lt;lStrikeout&gt; Specifies a strikeout font if set to TRUE.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Creates a common font dialog box that enables the user to choose attributes for alogical font.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-clienttoscreen">
+<h4><code>wvw_ClientToScreen()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_ClientToScreen( nWinNum, nRow, nCol )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nRow&gt;, &lt;nCol&gt; Row/Column in current windows to be converted.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Array with two positions with coordinates x,y.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Converts row/column in current screen to coordinates x,y relative to screen.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-createdialogdynamic">
+<h4><code>wvw_CreateDialogDynamic()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_CreateDialogDynamic(cDlgTemplate|nResource, lHandle, cDlgProc|bDlgProc|nDlgProc, nFlag)</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cDlgTemplate|nResource&gt; &lt;lHandle&gt; &lt;cDlgProc|bDlgProc|nDlgProc&gt; &lt;nFlag&gt;</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Handle of dialog window or zero.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Creates a dialog window dynamically.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-createdialogmodal">
+<h4><code>wvw_CreateDialogModal()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_CreateDialogModal( cDialog|nResource|cDlgTemplate, NIL, bDlgProc|cDlgProc, nFlag, nHandle )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cDialog|nResource|cDlgTemplate&gt; &lt;bDlgProc|cDlgProc&gt; &lt;nFlag&gt; &lt;nHandle&gt;</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Handle of dialog window or zero.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Creates a modal dialog window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-createfont">
+<h4><code>wvw_CreateFont()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_CreateFont(cFontFace, nHeight, nWidth, nWeight, lItalic, lUnderline, lStrikeout, nCharset, nQuality, nEscapement )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cFontFace&gt; Name of the font. &lt;nHeight&gt; Height of the font's character. &lt;nWidth&gt; Specifies average width of character in the font. &lt;nWeight&gt; Specifies the weight of the font in the range 0 through 1000 (see About Fonts section) &lt;lItalic&gt; Specifies an italic font if set to TRUE. &lt;lUnderline&gt; Specifies an underlined font if set to TRUE. &lt;lStrikeOut&gt; Specifies a strikeout font if set to TRUE. &lt;nCharSet&gt; Identify the character set. &lt;nQuality&gt; Specifies the output quality &lt;nEscapement&gt; Specifies the angle, in tenths of degrees, between the escapement vector and the x-axis of the device.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>If successful, the return value is a handle to a logical font. If failed, return zero.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>creates a logical font that has the characteristics specified in the parameters. The font can subsequently be selected as the current font for any device context.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-createmenu">
+<h4><code>wvw_CreateMenu()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_CreateMenu()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Handle of new created menu. If failed, returns NULL.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Creates a menu. Initially, the menu is empty, but can be filled with items through function wvw_AppendMenu().</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-createpopupmenu">
+<h4><code>wvw_CreatePopupMenu()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_CreatePopupMenu()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Handle of new popup menu. If failed, return NULL.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Creates a drop-down menu, submenu or shortcut menu. The menu is initialy empty, but you can insert or append menu items by using the wvw_AppendMenu() function.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-deletemenu">
+<h4><code>wvw_DeleteMenu()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DeleteMenu( hMenu, nPosition, nFlag )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;hMenu&gt; Identifies the menu to be changed. &lt;nPosition&gt; Specifies a menu item to be changed. &lt;nFlag&gt; Specifies how &lt;nPosition&gt; will be interpreted. This parameter can be one of two values: MF_BYCOMMAND MF_BYPOSITION Indicates that &lt;nPosition&gt; gives the identifier of the menu item. The MF_BYCOMMAND flag is the default flag if neither the MF_BYCOMMAND nor MF_BYPOSITION flag is specified. Indicates that &lt;nPosition&gt; gives the zero-based relative position of the menu item.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>If the function succeeds, the return value is nonzero. If the function fails, the return value is zero.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function deletes an item from the specified menu. If the menu item opens a menu or submenu, this function destroys the handle to the menu or submenu and frees the memory used by the menu or submenu.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-destroymenu">
+<h4><code>wvw_DestroyMenu()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DestroyMenu( hMenu )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;hMenu&gt; Identifies the menu to be destroyed.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>If the function succeeds, the return value is nonzero. If the function fails, the return value is zero.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function deletes an item from the specified menu. If the menu item opens a menu or submenu, this function destroys the handle to the menu or submenu and frees the memory used by the menu or submenu.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-dlgseticon">
+<h4><code>wvw_DlgSetIcon()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DlgSetIcon( nHandleDialog, ncIcon )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nHandleDialog&gt; Handle of dialog window. &lt;ncIcon&gt; If numeric, identifies a RESOURCE in a RC file. If string, identifies an icon file name.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>If successful, icon handle. Otherwise, NIL.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Defines an icon on a dialog window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawboxget">
+<h4><code>wvw_DrawBoxGet()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawBoxGet( nWinNum, nRow, nCol, nWidth, aOffset )</code></div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Always .T.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a box to an input get. Unlike GTWVT, GTWVW draw white lines on outer right and outer bottom. Besides, scope is the same as DRAWBOXRECESSED, ie., two pixel out of char boundary.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawboxgroup">
+<h4><code>wvw_DrawBoxGroup()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawBoxGroup( nWinNum, nTop, nLeft, nBottom, nRight, aOffset )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw a box. &lt;aOffset&gt; Array of four elements with top/left and bottom/right corner coordinates to align the box with row/column.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Always .T.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a box.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawboxraised">
+<h4><code>wvw_DrawBoxRaised()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawBoxRaised( nNumWin, nTop, nLeft, nBottom, nRight, lTight/aOffset )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw a box. &lt;lTight/aOffset&gt; If &lt;lTight&gt;, box is draw inside the character region and top and left lines are lower two pixel down to make room for above/left object. If &lt;aOffset&gt;, an array of four elements is defined with coordinates top, left, bottom right to align box with row/column.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Always .T.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a raised box.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawboxrecessed">
+<h4><code>wvw_DrawBoxRecessed()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawBoxRecessed( nWinNum, nTop, nLeft, nBottom, nRight, lTight/aOffset )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw a box. &lt;lTight/aOffset&gt; If &lt;lTight&gt;, box is drawn inside the character region and top and left lines are lower two pixel down to make room for above/left object. If &lt;aOffset&gt;, an array of four elements is defined with coordinates top, left, bottom right to align box with row/column.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Always .T.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a recessed box.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawbutton">
+<h4><code>wvw_DrawButton()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawButton( nWinNum, nTop, nLEft, nBottom, nRight, cText, cImage/nImage, nFormat, nTextColor, nBkClor, nImageAt )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nButtom, nRight&gt; Coordinates to draws a button. &lt;cText&gt; Text of button. &lt;cImage/nImage&gt; If string, specifies a bitmap filename (full path is required). If numeric, specifies the position of image in application image cache. &lt;nFormat&gt; Specifies shape of button: 0 1 2 Raised (default) Recessed Outline</div>
+  <div>&lt;nTextColor&gt; Index to button's color. &lt;nBkColor&gt; Index of button's background color. &lt;nImageAt&gt; Ignored.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Always .T.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a button.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawcolorrect">
+<h4><code>wvw_DrawColorRect()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawColorRect( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels, nRGBColor )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw a rectangle. &lt;aOffPixels&gt; Array of four elements with top/left and bottom/right coordinates to align the rectangle with row/column. &lt;nRGBColor&gt; Color to fill the rectangle.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a color rectangle. wvw_FillRectangle(). This function is for compatibility with GWTWVT, similar to</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawellipse">
+<h4><code>wvw_DrawEllipse()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawEllipse( nWinNum, nTop, nLeft, nBottom, nRight, aOffset )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw an ellipse. &lt;aOffset&gt; Array of four elements with top/left and bottom/right coordinates to align the ellipse with row/column.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns a nonzero value, if successful, otherwise zero.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws an ellipse.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawfocusrect">
+<h4><code>wvw_DrawFocusRect()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawFocusRect( nWinNum, nTop, nLeft, nBottom, nRight, aOffSet )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw a rectangle. &lt;aOffset&gt; Array of four elements with top/left and bottom/right coordinates to align the rectangle with row/column.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns a nonzero value, if successful, otherwise zero.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a rectangle in a style to represent focus.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawgridhorz">
+<h4><code>wvw_DrawGridHorz()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawGridHorz( nWinNum, nTop, nLeft, nBottom, nRight, nRows )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw horizontal grid. &lt;nRows&gt; Number of lines to horizontal grid.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Always .T.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a horizontal grid.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawgridvert">
+<h4><code>wvw_DrawGridVert()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawGridVert( nWinNum, nTop, nBottom, aCols, nCols, aOffset )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nBottom&gt; Initial/final line to draw vertical grid. &lt;aCols&gt; Array with sizes of columns to be draw. &lt;nCols&gt; Number of columns to be draw. &lt;aOffset&gt; Array of four row/column. elements with top/left, bottom/right offset to align vertical grid to</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Always .T.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a vertical grid.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawimage">
+<h4><code>wvw_DrawImage()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawImage( nWinNum, nTop, nLeft, nBottom, nRight, cImage/nPictureSlot, lTight/aOffset, lTransparent )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw an image. If &lt;nBottom&gt; is NIL, so image's height will be proportional to image's width. If &lt;nRight&gt; is NIL, so image's width will be proportional to image's height. If both &lt;nbottom&gt; and &lt;nRight&gt; are NIL, so original size of image will be used. &lt;cImage/nPictureSlot&gt; If string, an image will be read from &lt;cImage&gt; (full path). If numeric, will an index in an image list (previously loaded by application). WARNING: this function will always cache the image. Do not use it to draw large number of images, because image handle is never closed. &lt;lTight/aOffset&gt; Specifies how image will be adjusted (in pixels) to row/column coordinates. &lt;lTransparent&gt; If .T., specifies a transparent image, otherwise .F. If .T., transparency color will be the top left corner pixel.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful (draws an image), .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws an image.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawlabel">
+<h4><code>wvw_DrawLabel()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawLabel( nWinNum, nRow, nCol, cLabel, nAlign, nEscapement, nTextColor, nBkColor, cFontFace, nHeight, nWidth, nWeight, nQuality, nCharSet, lItalic, lUnderline, lStrikeOut )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nRow, nCol&gt; Row/column to draw a label. &lt;cLabel&gt; String to be draw. &lt;nAlign&gt; String alignment. Default is TA_LEFT (another definitions: see file wingdi.ch). &lt;nEscapement&gt; Specifies angle. &lt;nTextColor&gt; Color index of label. &lt;nBkColor&gt; Color index of background of label. &lt;cFontFace&gt; Name of the font. &lt;nHeight&gt; Height of the font's character. &lt;nWidth&gt; Specifies average width of character in the font. &lt;nWeight&gt; Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). &lt;nQuality&gt; Specifies the output quality.</div>
+  <div>&lt;nCharSet&gt; Specifies set of characters to be used. &lt;lItalic&gt; Specifies an italic font if set to TRUE. &lt;lUnderline&gt; Specifies an underline font if set to TRUE. &lt;lStrikeOut&gt; Specifies a strikeout font if set to TRUE.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a label.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawlabelex">
+<h4><code>wvw_DrawLabelEx()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawLabelEx( nWinNum, nRow, nCol, cLabel, nAlign, cTextColor, nBkColor, nSlotFont )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nRow, nCol&gt; Row/column to draw a label. &lt;cLabel&gt; String to be draw. &lt;nAlign&gt; Text alignment. Default is TA_LEFT (see wingdi.ch to another definitions). &lt;cTextColor&gt; Index color of the font. &lt;nBkColor&gt; Index color of label background. &lt;nSlotFont&gt; Index of application cache fonts. If image cache is empty (or index does not exist), function will be not executed.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful (draws a label), .F. otherwise (returns .F. if &lt;nSlotFont&gt; invalid).</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a label.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawlabelobj">
+<h4><code>wvw_DrawLabelObj()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawLabelObj( nWinNum, nTop, nLeft, nBottom, nRight, cLabel, nAlignHorz, nAlignVert, nTextColor, nBkColor, hFont, aOffset )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw a label. &lt;cLabel&gt; String to be draw. &lt;nAlignHorz&gt; Horizontal align of the label. Default is zero. &lt;nAlignVert&gt; Vertical align. Default is zero. &lt;nTextColor&gt; Index color of the label. &lt;nBkColor&gt; Index backgroud color of the label. &lt;hFont&gt; Specifies which font will be used to draw a label. &lt;aOffSet&gt; String of four elements to align label with coordinates &lt;nTop, nLeft, nBottom, nRight&gt;.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Always .T.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a label.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawline">
+<h4><code>wvw_DrawLine()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawLine( nWinNum, nTop, nLeft, nBottom, nRight, nOrient, nFormat, nAlign, nStyle, nThick, nColor, aOffset )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw a line. &lt;nOrient&gt; Line orientation: 0 1 Horizontal Vertical</div>
+  <div>&lt;nFormat&gt; Line format: 0 1 2 Raised Recessed Plain</div>
+  <div>&lt;nAlign&gt; Line alignment: 0 1 2 3 4 Center Top Bottom Left Right</div>
+  <div>&lt;nStyle&gt; Specifies pen style. See wingdi.ch (PS_SOLID, PS_DOT, etc.). &lt;nThick&gt; Specifies the width of the pen, in logical units. If zero, the pen is a single pixel wide, regardless of the current transformation. Default is zero (width of one pixel). &lt;nColor&gt; Specifies a color reference for the pen color ( a 32-bit value from RGB color). &lt;aOffset&gt; Array of four row/column. elements with top/left, bottom/right of coordinates to align line with</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Always .T.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a line.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawlineex">
+<h4><code>wvw_DrawLineEx()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawLineEx( nWinNum, nTop, nLeft, nBottom, nRight, nOrient, nFormat, nAlign, nSlotPen )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw a line. &lt;nOrient&gt; Line orientation: 0 1 Horizontal Vertical</div>
+  <div>&lt;nFormat&gt; Line format: 0 1 2 Raised Recessed Plain</div>
+  <div>&lt;nAlign&gt; Line alignment: 0 1 2 3 4 Center Top Bottom Left Right</div>
+  <div>&lt;nSlotPen&gt; Index on pen's cache.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Always .T.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a line (using an index of pen's cache).</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawmenubar">
+<h4><code>wvw_DrawMenuBar()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawMenuBar()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function repaint the menu bar of the current window. If the menu bar changes after Windows has created the window, this function must be called to repaint the changed menu bar.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawoutline">
+<h4><code>wvw_DrawOutline()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawOutline( nWinNum, nTop, nLeft, nBottom, nRight, nThick, nShape, nRGBColor )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw a box. &lt;nThick&gt; Style of pen. See wingdi.ch file for definitions (PS_SOLID, PS_DOT, etc.). &lt;nShape&gt; Ignored. &lt;nRGBColor&gt; Specifies color reference for pen (a 32-bit RGB color value).</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Always .T.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a outline arguments. box in &lt;nTop, nLeft, nBottom, nRight&gt; coordinates, with style and color</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawoutlineex">
+<h4><code>wvw_DrawOutlineEx()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawOutlineEx( nWinNum, nTop, nLeft, nBottom, nRight, nSlotPen )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw a box. &lt;nSlotPen&gt; Index on pen's cache.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws an outlined box (using an index of pen's cache).</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawpicture">
+<h4><code>wvw_DrawPicture()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawPicture( nWinNum, nTop, nLeft, nBottom, nRight, nSlot, lTight/aOffset )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw an image. &lt;nSlot&gt; index on image's cache. &lt;lTight/aOffset&gt; Array with four row/column. elements with top/left, bottom/right coordinates to align image with</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws an image, saving in a cache if images.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawprogressbar">
+<h4><code>wvw_DrawProgressBar()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawProgressBar( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels, nPercent, nBackColor, nBarColor, cImage, lVertical, nDirection )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw a progress bar. &lt;aOffPixels&gt; Array with four elemets with top/left, bottom/right coordinates to align progress bar with row/column. &lt;nPercent&gt; Maximum range value. &lt;nBackColor&gt; Background color. &lt;nBarColor&gt; Progress bar color. &lt;cImage&gt; An image to show when progress bar is running. &lt;lVertical&gt; Specifies if progress bar is vertical (.T.) or horizontal (.F.). &lt;nDirection&gt; 0 Specifies a left to right progress bar (default) 1 Specifies a right to left progress bar</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a progress bar.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawrectangle">
+<h4><code>wvw_DrawRectangle()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawRectangle( nWinNum, nTop, nLeft, nBottom, nRight, aOffset )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw a rectangle. &lt;aOffset&gt; Array with four elements with top/left, bottom/right coordinates to align rectangle with row/column.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>If successful returns a non-zero value, otherwise zero.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a rectangle.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawroundrect">
+<h4><code>wvw_DrawRoundRect()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawRoundRect(nWinNum, nTop, nLeft, nBottom, nRight, aOffset, nRoundHeight, nRoundWidth)</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw a rectangle. &lt;aOffset&gt; Array with four elements with top/left, bottom/right coordinates to align rectangle with row/column. &lt;nRoundHeight&gt; Width of ellipse to round rectangle's corner. &lt;nRoundWidth&gt; Height of ellipse to round rectangle's corner.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>If successful returns a non-zero value, otherwise zero.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a rectangle with rounded corners.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawscrollbutton">
+<h4><code>wvw_DrawScrollButton()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawScrollButton( nWinNum, nTop, nLeft, nBotton, nRight, aOffPixels, nTLBR, lDepressed )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw a scrollbutton. &lt;aOffPixels&gt; Array with four elements with top/left, bottom/right coordinates to align scrollbutton with row/column. &lt;nTLBR&gt; Specifies scrollbutton direction: 1 2 3 4 Up arrow button Left arrow button Bottom arrow button Right arrow button</div>
+  <div>&lt;lDepressed&gt; If .F., specifies raised button, .T. recessed button.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a scrollbutton. With functions wvw_xb*(), this function becomes obsolete.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawscrollthumbhorz">
+<h4><code>wvw_DrawScrollThumbHorz()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawScrollThumbHorz( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels, nThumbPos )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw scrollbar movement button. &lt;aOffPixels&gt; Array of four elements with top/left, bottom/right coordinates to align scrollbar movement button with row/column. &lt;nThumbPos&gt; Initial column position.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a horizontal obsolete. scrollbar button. With functions wvw_xb*(), this function becomes</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawscrollthumbvert">
+<h4><code>wvw_DrawScrollThumbVert()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawScrollThumbVert( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels, nThumbPos )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw scrollbar movement button. &lt;aOffPixels&gt; Array of four elements with top/left, bottom/right coordinates to align scrollbar movement button with row/column. &lt;nThumbPos&gt; Initital line position.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a vertical obsolete. scrollbar button. With functions wvw_xb*(), this function becomes</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawshadedrect">
+<h4><code>wvw_DrawShadedRect()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawShadedRect( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels, nHorVert, aRGBb, aRGBe )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw a rectangle. &lt;aOffPixels&gt; Array of four elements with top/left, bottom/right coordinates to align rectangle with row/column. &lt;nHorVert&gt; Specifies draws method and how to interpret rectangle fill array ( &lt;aRGBb&gt; and &lt;aRGBe&gt;). Default is GRADIENT_FILL_RECT_H (see wingdi.ch file for all definitions). &lt;aRGBb&gt; Array of four color position (Red, Gree, Blue, Alpha), with initial rectangle position. &lt;aRGBe&gt; Array of four color position (Red, Gree, Blue, Alpha), with final rectangle position.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, otherwise .F.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a rectangle in specified coordinates, with gradient filling colors, varying from &lt;aRGBb&gt; to &lt;aRGBe&gt;.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawstatusbar">
+<h4><code>wvw_DrawStatusBar()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawStatusBar( nWinNum, nPanels, aPos )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nPanels&gt; Number of parts in a status bar. &lt;aPos&gt; Array with row/column positions to divide status bar.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a status bar. Only for compatibility with GTWVT. wvw_sb*() functions are recommended instead.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawtextbox">
+<h4><code>wvw_DrawTextBox()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawTextBox( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels, cText, nAlignHorz, nAlignVert, nTextColor, nBackColor, nBackMode, hFont )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw text. &lt;aOffPixels&gt; Array of four row/column. &lt;cText&gt; Text to be draw. &lt;nAlignHorz&gt; Specifies text alignment inside coordinates: 0 1 2 Left (default) Right Centralized elements with top/left, bottom/right coordinates to align text with</div>
+  <div>&lt;nAlignVert&gt; Ignored. &lt;nTextColor&gt; Color of text. &lt;nBackColor&gt; Background color. &lt;nBackMode&gt; Background mode how color is used. Default is OPAQUE (see wingdi.ch for all definitions). &lt;hFont&gt; Font of the text.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a text in a rectangle.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-drawtoolbuttonstate">
+<h4><code>wvw_DrawToolButtonState()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_DrawToolButtonState( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels, nState )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Windwow number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw toolbutton. &lt;aOffPixels&gt; Array of four elements with top/left, bottom/right coordinates to align toolbutton with row/column. &lt;nState&gt; Button state: 0 1 2 Flat Raised Recessed</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Always .T.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Draws a toolbutton.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-enablemaximize">
+<h4><code>wvw_EnableMaximize()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_EnableMaximize( nWinNum, lEnable )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;lEnable&gt; If .T., enable maximize button, .F. disable.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Old maximize box state, before applying the new style.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Read/Set maximize button. In order to enable MAXIMIZE button, app should have WVW_SIZE() callback function.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-enablemenuitem">
+<h4><code>wvw_EnableMenuItem()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_EnableMenuItem( hMenu, nPosition, nFlag )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;hMenu&gt; ID of menu. &lt;nPosition&gt; Specifies position of item to be enabled/disabled (see &lt;nFlag&gt; argument). &lt;nFlag&gt; For Harbour, in practice, we should define only two values: MF_DISABLE MF_ENABLE Specifies item to be disabled. Specifies item to be enabled.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns old configuration of menu item. If menu item is invalid, returns zero.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Enable/Disable menu item.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-enableshortcuts">
+<h4><code>wvw_EnableShortcuts()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_EnableShortcuts( nWinNum, lEnable )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;lEnable&gt; If .T., enable shortcut keys. .F. disable shortcut keys.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns old configuration.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Specifies if shortcut keys are enabled/disabled to acess menu item or system menu.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-fillrectangle">
+<h4><code>wvw_FillRectangle()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_FillRectangle( nWinNum, nTop, nLeft, nBottom, nRight, nRGBColor/hBrush, lTight, lUseBrush )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to fill a rectangle. &lt;nRGBColor/hBrush&gt; Rectangle filling color (a 32-bit value with RGB color). &lt;lTight&gt; Filling patern will be adjusted in all coordinates area. &lt;lUseBrush&gt; If .T., &lt;nRGBColor/hBrush&gt; argument is interpreted as a handle to a pen model. Otherwise, is used as a RGB color.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Always .T.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Fills a rectangle using a color or a pen model.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-getclipboard">
+<h4><code>wvw_GetClipboard()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_GetClipboard()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Data from the clipboard.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Retrieves data from the clipboard.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-getcursorpos">
+<h4><code>wvw_GetCursorPos()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_GetCursorPos()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Array of two elements, respectively, X coordinate and Y coordinate.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Retrieves mouse coordinates.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-getfontinfo">
+<h4><code>wvw_GetFontInfo()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_GetFontInfo()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Array of seven elements: 1 2 3 4 5 6 7 ­ ­ ­ ­ ­ ­ ­ cFontFace cFontHeight nFontWidth nFontWeight cFontQuality PTEXTSIZE&rarr;x PTEXESIZE&rarr;y Name Height Width Weight Quality Font's width in pixels Font's size in pixels</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Retrieves current font data.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-getlastmenuevent">
+<h4><code>wvw_GetLastMenuEvent()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_GetLastMenuEvent()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Last selected item or zero, if no item is selected previously.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Reads the last item selected (always on current window).</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-getmenu">
+<h4><code>wvw_GetMenu()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_GetMenu()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Menu handle.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Gets the handle of current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-getpaintrect">
+<h4><code>wvw_GetPaintRect()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_GetPaintRect( nWinNum )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns array of paint pending rect {top, left, bottom, right}. Warning: unlike WVT, top maybe &gt; bottom or left maybe &gt; right. in these cases, no paint request is pending (in WVT these is reflected in {0,0,0,0}).</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Gets coordinates of screen with pending paint.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-getpalette">
+<h4><code>wvw_GetPalette()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_GetPalette()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Array of 16 elements, each element represent a color.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Get color palette.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-getrgbcolor">
+<h4><code>wvw_GetRGBColor()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_GetRGBColor( nColor )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nColor&gt; Color index (as defined in CA-Cl*pper).</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns a RGB color value.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Reads an index RGB color value for &lt;nColor&gt; argument.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-getrowcolfromxy">
+<h4><code>wvw_GetRowColFromXY()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_GetRowColFromXY( nWinNum, nX, nY )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nX&gt; X coordinate in pixels. &lt;nY&gt; Y coordinate in pixels.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Array of two elements: row and column.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Convert X,Y coordinates (in pixels) to row and column.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-getscreenheight">
+<h4><code>wvw_GetScreenHeight()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_GetScreenHeight()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Screen height, in pixels.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Reads screen height, in pixels.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-getscreenwidth">
+<h4><code>wvw_GetScreenWidth()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_GetScreenWidth()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Screen width, in pixels.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Reads screen width, in pixels.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-gettitle">
+<h4><code>wvw_GetTitle()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_GetTitle()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Window current title.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Reads current window title.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-gettooltipbkcolor">
+<h4><code>wvw_GetToolTipBkColor()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_GetToolTipBkColor()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Index RGB background color of tooltip.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Gets background color of tooltip.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-gettooltiptextcolor">
+<h4><code>wvw_GetToolTipTextColor()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_GetToolTipTextColor()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Index RGB text color of tooltip.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Gets text color of tooltip.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-gettooltipwidth">
+<h4><code>wvw_GetToolTipWidth()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_GetToolTipWidth()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Tooltip width.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Gets width of tooltip.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-getwindowhandle">
+<h4><code>wvw_GetWindowHandle()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_GetWindowHandle()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Window handle.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Gets handle of current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-getxyfromrowcol">
+<h4><code>wvw_GetXYFromRowCol()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_GetXYFromRowCol( nWinNum, nRow, nCol )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nRow&gt; Line number. &lt;nCol&gt; Column number.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Array of two elements: X coordinate and Y coordinate.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Convert row and column to X,Y coordinates (in pixels).</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-invalidaterect">
+<h4><code>wvw_InvalidateRect()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_InvalidateRect()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Invalidate current window, forcing a new painting.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-islbuttonpressed">
+<h4><code>wvw_IsLButtonPressed()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_IsLButtonPressed()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. button pressed. .F. button released.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Verify if left mouse button is pressed.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-killtimer">
+<h4><code>wvw_KillTimer()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_KillTimer( nWinNum )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Cancels timer event on current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-lbaddstring">
+<h4><code>wvw_lbAddString()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_lbAddString( nHandleDialog, nIDListBox, cItem )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nHandleDialog&gt; Handle of dialog window. &lt;nIDListBox&gt; ID of listbox. &lt;cItem&gt; Item to add in listbox.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Adds an item in listbox.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-lbsetcursel">
+<h4><code>wvw_lbSetCurSel()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_lbSetCurSel( nHandleDialog, nIDListBox, nItem )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nHandleDialog&gt; Handle of dialog window. &lt;nIDListBox&gt; ID of listbox. &lt;nItem&gt; Item index (start from zero).</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Selects an item in listbox.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-lclosewindow">
+<h4><code>wvw_lCloseWindow()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_lCloseWindow()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Closes the last/topmost window</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-loadfont">
+<h4><code>wvw_LoadFont()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_LoadFont( nSlotFont, cFontName, nHeight, nWidth, nWeight, lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nSlotFont&gt; Index of font cache. &lt;cFontName&gt; Name of the font. &lt;nHeight&gt; Height of the font's character. &lt;nWidth&gt; Specifies average width of character in the font. &lt;nWeight&gt; Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). &lt;lItalic&gt; Specifies an italic font if set to TRUE. &lt;lUnderline&gt; Specifies an underlined font if set to TRUE. &lt;lStrikeout&gt; Specifies a strikeout font if set to TRUE. &lt;nCharSet&gt; Identify the character set. For example, ANSI_CHARSET, DEFAULT_CHARSET, OEM_CHARSET, etc. (all models can be viewed in file wingdi.ch). &lt;nQuality&gt; Specifies the output quality. &lt;nEscapement&gt; Angle of escapement of the font.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Load all information about the specified font, writing it in font cache.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-loadpen">
+<h4><code>wvw_LoadPen()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_LoadPen( nSlot, nStyle, nWidth, nRGBColor )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nSlot&gt; Index of cache of pen, defined by the user. &lt;nStyle&gt; Style of the pen. &lt;nWidth&gt; Specifies the width of the pen, in logical units. If nWidth is zero, the pen is a single pixel wide, regardless of the current transformation. &lt;nRGBColor&gt; Specifies a color reference for the pen color.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns .T. if read and write of definition is OK, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Load definition of the pen (style, width and color) to a cache of pen.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-loadpicture">
+<h4><code>wvw_LoadPicture()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_LoadPicture( nSlot, cFilePicture )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nSlot&gt; Position of the cache where the image will be loaded. If there is any image in this position, will be replaced. &lt;cFilePicture&gt; Image to be loaded in the cache.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Load an image in cache of images. Please, read an observation about cache of images, in the introducion.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-maximize">
+<h4><code>wvw_Maximize()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_Maximize( nWinNum )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Maximize current window (argument &lt;nWinNum&gt; is ignored). If application define a callback function WVW_Size() the window will be maximized, otherwise, only restores window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-maxmaxcol">
+<h4><code>wvw_MaxMaxCol()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_MaxMaxCol( nWinNum )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Maximum number of columns.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Returns maximum &lt;nWinNum&gt;. possible MaxCol() in current screen setting for font used by window</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-maxmaxrow">
+<h4><code>wvw_MaxMaxRow()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_MaxMaxRow( nWinNum )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Maximum number of rows.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Returns maximum &lt;nWinNum&gt;. possible MaxRow() in current screen setting for font used by window</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-messagebox">
+<h4><code>wvw_MessageBox()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_MessageBox( nWinNum, cMessage, cTitle, nOption )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;cMessage&gt; Message to be displayed. &lt;cTitle&gt; Dialog box title. &lt;nOption&gt; Specifies a set of buttons that determine the contents and behavior of the dialog box. Default is MB_OK ( OK button, without icons). You can see all definitions in file winuser.ch.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Number of selected option (IDOK to OK button, IDCANCEL to Cancel button, etc.) You can see all definitions in file winuser.ch</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Creates, displays, and operates a message box. The message box contains an applicationdefined message and title, plus any combination of predefined icons and push buttons.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-minimize">
+<h4><code>wvw_Minimize()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_Minimize()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Minimizes current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-ncolofs">
+<h4><code>wvw_nColOfs()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_nColOfs( nWinNum )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Number of offset columns.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Returns column offset of window &lt;nWinNum&gt; (0 == MAIN), relative to Main Window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-nnumwindows">
+<h4><code>wvw_nNumWindows()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_nNumWindows()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Number of opened windows.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Returns number of windows opened (including main window).</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-nopenwindow">
+<h4><code>wvw_nOpenWindow()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_nOpenWindow( cWinName, row1, col1, row2, col2, nStyle, nParentWin, nExStyle )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cWinName &gt; Title of window. If omitted, the name of executable will be used. &lt;row1, col1, row2, col2 &gt; Specifies initial row/column and final row/column of the window coordinates are relative to main window, not to current window. This coordinates are used to: 1) Put window in initial position. 2) Determine size of the window (new MaxRow() and MaxCol()). 3) Save in RowOfs and ColOfs to MainCoord mode. &lt;nStyle &gt; Style of the window. All definitions are in file winuser.ch. Default is WS_CAPTION|WS_SYSMENU|WS_CLIPCHILDREN. If you will use controls such as PUSHBUTTON, you MUST include WS_CLIPCHILDREN. &lt;nParentWin&gt; Is the mother of the new window. Default is current window (in Standard mode) and the last window (in MainCoord mode). If you want the new window to not have parent, pass -1 as argument. &lt;nExStyle&gt; Extended style to window (for example: WS_EX_TOOLTIPWINDOW). Default is NIL. Note: this parameter does not exist in original GTWVW to be opened. This</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Number of window, if successful, zero if failed.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Opens a window in specified coordinates. Depending of parameter in function wvw_NoStartupSubWindow() the window will be displayed or remains invisible ( until we call function wvw_ShowWindow()).</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-nrowofs">
+<h4><code>wvw_nRowOfs()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_nRowOfs( nWinNum )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Number of offset rows.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Returns row offset of window &lt;nWinNum&gt; (0==MAIN), relative to Main Window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-nsetcurwindow">
+<h4><code>wvw_nSetCurWindow()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_nSetCurWindow( nWinNum )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns old current window.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Assigns &lt;nWinNum&gt; as the new current window. Makes sense only if in StandardMode.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-noclose">
+<h4><code>wvw_NoClose()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_NoClose( nWinNum )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Disable close button in windows &lt;nWinNum&gt;.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-nostartupsubwindow">
+<h4><code>wvw_NoStartupSubWindow()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_NoStartupSubWindow( lOn )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;lOn&gt; .T. when open window, will be displayed (default). .F. when open window, remains invisible.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns new configuration (if argument &lt;lOn&gt; is passed) or actual configuration.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Informs to the system that the window, when created, will be displayed or remains invisible until we call funtion wvw_ShowWindow().</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-numbmcache">
+<h4><code>wvw_NumBMCache()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_NumBMCache()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns current number of user-bitmap cache.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Reads number of user-bitmap cache.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-pbcreate">
+<h4><code>wvw_pbCreate()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_pbCreate( nWinNum, nTop, nLeft, nBottom, nRight, cText, cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to create the button. &lt;cText&gt; Text of the button. Default is &quot;&quot;. &lt;cImage/nImage&gt; If specified as numeric, identify ID from Resource in a .RC file. If specified as string, must have a full path to an image file. &lt;bBlock&gt; Code block to be executed whenever a BN_CLICK event occurred (press and release the button). Always pass as a parameter: &lt;nWinNum&gt; and ID of button. &lt;aOffset&gt; Array of four row/column. elements with top/left, bottom/right coordinates to align button with</div>
+  <div>&lt;nStretchBitmap&gt; Number between 0 and 1 (inclusive) as a stretch factor: 1.0 0.5 0 The bitmap will cover all button. The bitmap will cover only 50% of the button. The bitmap will not be stretched.</div>
+  <div>Default is 1. &lt;lMap3DColors&gt; Specified if an image will be transparent (.T.) or not (.F.). This will work on 256 colored bitmaps only.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns the handle of the new pushbutton, if successful (or zero if failed).</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Creates a pushbutton in current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-pbdestroy">
+<h4><code>wvw_pbDestroy()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_pbDestroy( nWinNum, nPBId )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nPBId&gt; ID of the pushbutton.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Deletes a pushbutton of current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-pbenable">
+<h4><code>wvw_pbEnable()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_pbEnable( nWinNum, nPBId, lToggle )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nPBId&gt; ID of the pushbutton. &lt;lToggle&gt; .T. Enable pushbutton (default). .F. Disable pushbutton.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns prior status of pushbutton, if &lt;lToggle&gt; is passed. Otherwise, returns actual status of pushbutton (.T. is enabled, .F. disabled).</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Enable/disable the pushbutton in current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-pbsetcodeblock">
+<h4><code>wvw_pbSetCodeblock()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_pbSetCodeblock( nWinNum, nPBId, bBlock )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nPBId&gt; ID of the pushbutton. &lt;bBlock&gt; Code block.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Assign a new code block to a pushbutton in current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-pbsetfocus">
+<h4><code>wvw_pbSetFocus()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_pbSetFocus( nWinNum, nPBId )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nPBId&gt; ID of the pushbutton.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. if failed.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Set focus to pushbutton to current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-pbsetfont">
+<h4><code>wvw_pbSetFont()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_pbSetFont( nWinNum, cFontFace, nHeight, nWidth, nWeight, nQuality, lItalic, lUnderline, lStrikeout )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;cFontName&gt; Name of the font. &lt;nHeight&gt; Height of the font's character. &lt;nWidth&gt; Specifies average width of character in the font. &lt;nWeight&gt; Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). &lt;nQuality&gt; Specifies the output quality. &lt;lItalic&gt; Specifies an italic font if set to TRUE. &lt;lUnderline&gt; Specifies an underlined font if set to TRUE. &lt;lStrikeout&gt; Specifies a strikeout font if set to TRUE.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. if failed.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This funtction will initialize font for ALL pushbuttons in window &lt;nWinNum&gt;, including ones created later on.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-pbsetstyle">
+<h4><code>wvw_pbSetStyle()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_pbSetStyle( nWinNum, nPBId, nStyle )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nPBId&gt; ID of pushbutton. &lt;nStyle&gt; Define style of pushbutton. You can see all possibilities BS_PUSHBUTTON, BS_DEFPUSHBUTTON, etc.). Typical usage: BS_DEFPUSHBUTTON BS_PUSHBUTTON in file winuser.ch (</div>
+  <div>1: Turn the button into default button (thick border) 0: Turn the button into regular pushbutton</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Always .T.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Assign new style to button in current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-pgcreate">
+<h4><code>wvw_pgCreate()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_pgCreate( nWinNum, nTop, nLeft, nBottom, nRight, aOffset, nBackColor, nBarColor, lSmooth, lVertical )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to create a progress bar. &lt;aOffset&gt; Array of four elements with top/left, bottom/right coordinates to align progress bar with row/column. &lt;nBackColor&gt; Background color. &lt;nBarColor&gt; Progress bar color. &lt;lSmooth&gt; .T. draw progress bar as a continuum bar .F. draw progress bar with tiny distinct rectangles (default) &lt;lVertical&gt; .T. draw as vertical progress bar .F. draw as horizontal progress bar (default)</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Progress bar handle, if successful. Zero if failed.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Create progress bar for current window. Progress bar range is initially set as 0 to 100, start from 0.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-pgdestroy">
+<h4><code>wvw_pgDestroy()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_pgDestroy( nWinNum, nPGId )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nPGId&gt; ID of progress bar.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Delete a progress bar for current window</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-pggetpos">
+<h4><code>wvw_pgGetPos()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_pgGetPos( nWinNum, nPGId )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nPGId&gt; ID of progress bar.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns 0 if operation failed, otherwise return progress bar position.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Get progress bar current position.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-pgsetpos">
+<h4><code>wvw_pgSetPos()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_pgSetPos( nWinNum, nPGId, nPos )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nPGId&gt; ID of progress bar. &lt;nPos&gt; A number in range of current range.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns .T. if operation considered successfull, otherwise .F.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Update progress bar position within current range.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-pastefromclipboard">
+<h4><code>wvw_PasteFromClipboard()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_PasteFromClipboard()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Paste text from Clipboard.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-processmessages">
+<h4><code>wvw_ProcessMessages()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_ProcessMessages( nWinNum )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. NOTE: Despite the parameter, the following will actually process messages for all windows</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None (actually, returns number 1, with no use).</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Process messages for all windows.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-restore">
+<h4><code>wvw_Restore()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_Restore( nWinNum )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Restores the window (&lt;nWinNum&gt; is ignored). Restoring window from its maximized state might need handling in callback function WVW_SIZE(), because this function assumes no change in MaxRow()/MaxCol().</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-restscreen">
+<h4><code>wvw_RestScreen()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_RestScreen( nWinNum, nTop, nLeft, nBottom, nRight, aScr, lDoNotDestroyBMP )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Screen coordinates to display data saved by function wvw_SaveScreen(). &lt;aScr&gt; Array with three elements (height, width and handle of bitmap). &lt;lDoNotDestroyBMP&gt; If .T., after restore screen, delete the bitmap used to save screen. If .F., the bitmap will not be erased. (default)</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Restores screen, saved by function wvw_SaveScreen().</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-sbaddpart">
+<h4><code>wvw_sbAddPart()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_sbAddPart( nWinNum, cMaxText, nWidth, nStyle, lResetParts, cIcon, cTooltip )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;cMaxText&gt; If present, the width of status bar will be the width of this text. &lt;nWidth&gt; Width of status bar part. Ignored, if &lt;cMaxText&gt; is passed. &lt;nStyle&gt; Style of status bar: 0 0x100 0x200 Recessed (default) No borders Raised</div>
+  <div>&lt;lResetParts&gt; If .T., remove all previously created parts. If .F., a new status bar part will be created and added to previous parts. &lt;cIcon/cTooltip&gt; Ignored.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns number of parts, if successful. Zero if failed.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Adds a new division in a status &lt;cMaxText/nWidth&gt; and &lt;nStyle&gt;. bar, with width and style specified in arguments</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-sbcreate">
+<h4><code>wvw_sbCreate()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_sbCreate( nWinNum )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Handle to status bar of current window. Zero if failed, eg. if there is already a status bar for this window.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Create status bar for current window, with one part.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-sbdestroy">
+<h4><code>wvw_sbDestroy()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_sbDestroy( nWinNum )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Destroy status bar, forcing the window to be draw again.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-sbgetparts">
+<h4><code>wvw_sbGetParts()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_sbGetParts()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Number of parts in status bar.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Get number of parts in status bar of current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-sbgettext">
+<h4><code>wvw_sbGetText()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_sbGetText( nWinNum, nPart )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nPart&gt; Number of part in status bar.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Text from &lt;nPart&gt; in status bar.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Get text of status bar's part &lt;nPart&gt;.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-sbrefresh">
+<h4><code>wvw_sbRefresh()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_sbRefresh()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Number of parts in status bar, if successful. Zero, otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Reinitialize statusBar's parts, eg. after window resize.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-sbsettext">
+<h4><code>wvw_sbSetText()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_sbSetText( nWinNum, nPart, cText )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nPart&gt; Number of part in status bar. &lt;cText&gt; Text to be configured.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Set text of status bar's part &lt;nPart&gt; .</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-savescreen">
+<h4><code>wvw_SaveScreen()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SaveScreen( nWinNum, nTop, nLeft, nBottom, nRight )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Screen coordinates to save screen (always from current window, because argument &lt;nWinNum&gt; is ignored).</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Array of three elements, with height, width and handle of the bitmap.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Save a region of screen, writing in a bitmap file.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setaltf4close">
+<h4><code>wvw_SetAltF4Close()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetAltF4Close( lOn )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;lOn&gt; .T. if application can be finished using ALT F4 key. .F. if application can not be finished usgin ALT F4 key.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Old configuration.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Identify if the application can be finished using ALT F4 key.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setasnormal">
+<h4><code>wvw_SetAsNormal()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetAsNormal()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Returns window into normal state (opposing to function wvw_SetOnTop()).</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setbrush">
+<h4><code>wvw_SetBrush()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetBrush( nStyle, nColor, nHatch )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nStyle&gt; Identify pen style. All definitions can be viewed in file wingdi.ch ( BS_SOLID, BS_NULL, etc.). &lt;nColor&gt; Index color to pen draw. &lt;nHatch&gt; Define the filling pattern of pen. All definitions can be viewed in file wingdi.ch ( HS_VERTICAL, HS_HORIZONTAL, etc.).</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Define style, color and pattern of pen filling.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setclipboard">
+<h4><code>wvw_SetClipboard()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetClipboard( cText )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cText&gt; Text to be inserted in the clipboard.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Sets text to the clipboard.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setcodepage">
+<h4><code>wvw_SetCodepage()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetCodepage( nWinNum, nCodePage )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCodePage&gt; Sets the code page.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Define code page for current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setdefcentrewindow">
+<h4><code>wvw_SetDefCentreWindow()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetDefCentreWindow( lCentre )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;lCentre&gt; If .T., config all newly opened windows, to be centralized horizontally and vertically.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>If &lt;lCentre&gt; is configuration. passed, returns old configuration value, otherwise returns actual</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Read or set the parameter for centralization of windows.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setdefhcentrewindow">
+<h4><code>wvw_SetDefHCentreWindow()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetDefHCentreWindow( lCentre )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;lCentre&gt; If .T., config all newly opened windows, to be centralized horizontally.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>If &lt;lCentre&gt; is configuration. passed, returns old configuration value, otherwise returns actual</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Read or set the parameter for centralization of windows.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setdeflinespacing">
+<h4><code>wvw_SetDefLineSpacing()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetDefLineSpacing( nLineSpacing )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nLineSpacing&gt; Number of line spacing. Must be even, positive number &lt;= 40, otherwise it will be ignored.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Old configuration.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Sets line spacing for all windows.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setdeflspacecolor">
+<h4><code>wvw_SetDefLSpaceColor()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetDefLSpaceColor( nColorIndex )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nColorIndex&gt; Index color to line spacing. Must be between 0 and 15, or ­1 meaning line spacing has no color.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Prior configuration, if &lt;nColorIndex&gt; is passed, otherwise actual configuration.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Change color to line spacing.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setdefvcentrewindow">
+<h4><code>wvw_SetDefVCentreWindow()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetDefVCentreWindow( lCentre )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;lCentre&gt; If .T., config all newly opened windows, to be centralized vertically.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>If &lt;lCentre&gt; is configuration. passed, returns old configuration value, otherwise returns actual</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Read or set the parameter for centralization of windows.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setfont">
+<h4><code>wvw_SetFont()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetFont( cFontFace, nFontHeight, nFontWidth, nFontWeight, nFontQuality )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cFontName&gt; Name of the font. (e.g., MS Sans Serif). &lt;nFontHeight&gt; Height of the font's character. &lt;nFontWidth&gt; Specifies average width of character in the font. &lt;nFontWeight&gt; Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). &lt;nFontQuality&gt; Specifies the output quality. All arguments are optional. This function uses the values assigned in windows creation.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Modify the font or the arguments related to the font (height, width, quality, etc.).</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-seticon">
+<h4><code>wvw_SetIcon()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetIcon( nWinNum, nIcon, cIcon )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nIcon&gt; Identify an icon in a resource file. &lt;cIcon&gt; Icon's file name.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Set the icon for current window (argument &lt;nWinNum&gt; is ignored).</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setlastmenuevent">
+<h4><code>wvw_SetLastMenuEvent()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetLastMenuEvent( nWinNum, nMenuEvent )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nMenuEvent&gt; Menu's item.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Last valid configuration.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Set the last selected item of the menu (returned from wvw_GetLastMenuEvent())</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setlinespacing">
+<h4><code>wvw_SetLineSpacing()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetLineSpacing( nWinNum, nLineSpacing )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nLineSpacing&gt; If passed, change line spacing in current window, otherwise read actual configuration.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns old configuration, if &lt;nLineSpacing&gt; is passed, or actual configuration.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Read/set line spacing for current window. If window size will become too high, line spacing is restored. To change default line spacing for next window open, use wvw_SetDefLineSpacing().</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setlspacecolor">
+<h4><code>wvw_SetLSpaceColor()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetLSpaceColor( nWinNum, nColorIndex )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nColorIndex&gt; Color index to line spacing. Must be between 0 and 15, or ­1, meaning has no color.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns old configuration, if &lt;nColorIndex&gt; is passed, otherwise actual configuration.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Change color to line spacing for current window. To change default line space color for next window open, use wvw_SetDefLineSpacing().</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setmaincoord">
+<h4><code>wvw_SetMainCoord()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetMainCoord( lMainCoord )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;lMainCoord&gt; If passed, change the display mode of windows. Otherwise, read actual configuration.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Actual configuration mode or old configuration, if &lt;lMainCoord&gt; is passed.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Change the MainCoord). way of windows are displayed or read actual configuration (Standard or</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setmaxbmcache">
+<h4><code>wvw_SetMaxBMCache()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetMaxBMCache( nMaxCache )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nMaxCache&gt; Limit of cache bitmaps. Default is 20, minimum is 1.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns old setting of maximum user-bitmap cache.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>To minimize bitmap loading operation, wvw_drawimage caches bitmap once it reads from disk. Ie., subsequent wvw_drawimage will use the bitmap from the memory. When the maximum number of cache is used, the least recently opened bitmap will be discarded from the cache. There is no way to discard a specific bitmap from the cache. If you want to control bitmap caching manually, use wvw_LoadPicture() instead.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setmenu">
+<h4><code>wvw_SetMenu()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetMenu( nWinWin, hMenu )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;hMenu&gt; Contains menu information.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Adds a menu, pointed by &lt;hMenu&gt;, in current window. (argument &lt;nWinNum&gt; is ignored).</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setmenukeyevent">
+<h4><code>wvw_SetMenuKeyEvent()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetMenuKeyEvent( nWinNum, nKeyEvent )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nKeyEvent&gt; Number of event defined by the user to command menu of the window.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Last valid configuration.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Defines a numeric event from menu, in current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setmousemove">
+<h4><code>wvw_SetMouseMove()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetMouseMove( nWinNum, lMouseMove )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;lMouseMove&gt; .T. recognize mouse in application .F. do not recognize mouse in application If not passed, returns actual configuration.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>If passed &lt;lMouseMove&gt;, returns .T. to successful operation or .F. otherwise. If omitted, returns last valid configuration.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Enable/disable mouse recognition by the application.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setmousepos">
+<h4><code>wvw_SetMousePos()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetMousePos( nWinNum, nRow, nCol )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nRow, nCol&gt; Row/Column to position mouse cursor.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Position mouse cursor.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setontop">
+<h4><code>wvw_SetOnTop()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetOnTop()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>The window will be always visible, even if the focus is in another window. This function change properties of the window, thus it will be on top of any other opened window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setpaintrefresh">
+<h4><code>wvw_SetPaintRefresh()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetPaintRefresh( nPaintRefresh )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nPaintRefresh&gt; Interval in milliseconds to call WVW_PAINT(). Must be &gt;= 50, or == 0, causing repaint to execute immediately.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Old setting value.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Determine interval to calling WVW_PAINT() function, responsible to repaint screen.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setpalette">
+<h4><code>wvw_SetPalette()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetPalette( aRGBValues )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;aRGBValues&gt; Array of 16 elements with RGB values.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Config color palette.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setpen">
+<h4><code>wvw_SetPen()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetPen( nPenStyle, nWidth, nColor )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nPenStyle&gt; Defines pen style. All definition are in file wingdi.ch ( PS_SOLID, PS_DOT, etc.). &lt;nWidth&gt; Specifies width of the pen. &lt;nColor&gt; Index color of pen.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Define style, width and color of pen.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setpointer">
+<h4><code>wvw_SetPointer()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetPointer( nWinNum, nIcon )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nIcon&gt; Model of icon to be read. May be a string which identify a resource in a RC file or may be a predefined window model (default is IDC_ARROW). All definition are in winuser.ch file.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Change mouse cursor.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setpopupmenu">
+<h4><code>wvw_SetPopupMenu()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetPopupMenu( nWinNum, hPopUp )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;hPopUp&gt; Include all information of a popup menu.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Config the popup menu for current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-settimer">
+<h4><code>wvw_SetTimer()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetTimer( nWinNum, nInterval )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nInterval&gt; Interval, in milliseconds.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Set timer event for every &lt;nInterval&gt; milliseconds (it can be usefull to update clock on status bar). Effective only if WVW_TIMER() function exists</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-settitle">
+<h4><code>wvw_SetTitle()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetTitle( nWinNum, cTitle )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;cTitle&gt; Title of window.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Define title of current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-settooltip">
+<h4><code>wvw_SetToolTip()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetToolTip( nWinNum, nTop, nLeft, nBottom, nRight, cToolText )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to show tooltip. &lt;cToolText&gt; Tooltip text.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Defines a tooltip.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-settooltipactive">
+<h4><code>wvw_SetToolTipActive()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetToolTipActive( nWinNum, lToggle )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;lToggle&gt; .T. enable tooltip. .F. disable tooltip. If not passed, returns actual configuration.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Old configuration (if passed &lt;lToggle&gt;) or actual configuration.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Enable/disable tooltip.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-settooltipbkcolor">
+<h4><code>wvw_SetToolTipBkColor()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetToolTipBkColor( nWinNum, nColor )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nColor&gt; Color index of tooltip.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>If not passed &lt;nColor&gt;, returns actual background color of tooltip, otherwise, sets the new color.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Get/set a background color of tooltip.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-settooltipmargin">
+<h4><code>wvw_SetToolTipMargin()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetToolTipMargin( nWinNum, nTop, nLeft, nBottom, nRight )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nTop, nLeft, nBottom, nRight&gt; Coordinates to draw tooltip.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Define the borders of tooltip. The border is the distance (in pixels) between window's border and text inside toolip.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-settooltiptext">
+<h4><code>wvw_SetToolTipText()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetToolTipText( nWinNum, cText )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;cText&gt; Text of tooltip.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Define text to tooltip.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-settooltiptextcolor">
+<h4><code>wvw_SetToolTipTextColor()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetToolTipTextColor( nWinNum, nColor )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nColor&gt; Color index to text in tooltip.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>If not passed &lt;nColor&gt;, returns actual color of text, othewise, sets the new color.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Define or get the color of text in tooltip.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-settooltiptitle">
+<h4><code>wvw_SetToolTipTitle()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetToolTipTitle( nWinNum, nIcon, cTitle )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nIcon&gt; Identify if it will be displayed an icon with text in tooltip. Is allowed one of the following values: 0 1 2 3 no icon (default) information warning Error</div>
+  <div>any other value greater than 3, the gtwvw convert to 0.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>None.</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-settooltipwidth">
+<h4><code>wvw_SetToolTipWidth()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetToolTipWidth( nWinNum, nWidth )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nWidth&gt; Width of tooltip area.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>If not passed &lt;nWidth&gt;, returns actual width of tooltip area, otherwise, sets the new width of tooltip area.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Change or get the width of tooltip area.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setvertcaret">
+<h4><code>wvw_SetVertCaret()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetVertCaret( lOn )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;lOn&gt; .T. turn caret into vertical caret .F. turn caret into horizontal caret</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>If passed &lt;lOn&gt;, returns old configuration. If not passed, returns actual configuration.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Change caret of text.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setwindowcentre">
+<h4><code>wvw_SetWindowCentre()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetWindowCentre( nWinNum, lCentre, lPaintIt )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;lCentre&gt; .T. centralize window .F. not centralize window &lt;lPaintIt&gt; .T. Repaint all windows immediate. .F. Just update configuration.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Update parameter to centralization of all opened windows (and newly opened). If passed &lt;lPaintIt&gt; and &lt;lCentre&gt;, all windows are repainted and cetralized.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setwindowpos">
+<h4><code>wvw_SetWindowPos()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetWindowPos( nWinNum, nXPosition, nYPosition )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nXPosition&gt; Horizontal position in pixels. &lt;nYPosition&gt; Vertical posititon in pixels.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Change position of current window, based in &lt;nXPosition&gt; and &lt;nYPosition&gt; coordinates.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-setwinstyle">
+<h4><code>wvw_SetWinStyle()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_SetWinStyle( nWinNum, nStyle )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nStyle&gt; New windows style. If the windows has any control (PUSHBUTTON, SCROLLBAR, etc.), must be added WS_CLIPCHILDREN style.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns old style of the window.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Read or set style for window &lt;nWinNum&gt;. If windows is minimized or hidden, and if passed &lt;nStyle&gt;, the window will be showed.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-showwindow">
+<h4><code>wvw_ShowWindow()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_ShowWindow( nWinNum, nMode )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nMode&gt; Points out how window will be showed. Default is SW_SHOWNORMAL (another definitions in file winuser.ch).</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Set the mode of showing window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-tbaddbutton">
+<h4><code>wvw_tbAddButton()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_tbAddButton( nWinNum, nCommand, xBitmap, cLabel, nBitmapType, lMap3DColors )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCommand&gt; ID of action to be executed when user press button. &lt;xBitmap&gt; ID of bitmap resource in .RC file (in this case, the image can not have more than 256 colors) or full path to a file name. &lt;cLabel&gt; Text of button. If passed &lt;lDisplayText&gt; (in function wvw_tbCreate()) to .T., the text will be showed below image, otherwise will be used as a tooltip. &lt;nBitmapType&gt; Bitmap type. Can be: 0 1 2 3 Custom Standard windows bitmaps (COPY, PAST, FIND, OPEN, etc.) System view bitmaps System history bitmaps</div>
+  <div>&lt;lMap3DColors&gt; If the image will be transparent (meaningful for custom bitmap only).</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Always .T.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Adds one button on the right of existing buttons, in a toolbar.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-tbbuttoncount">
+<h4><code>wvw_tbButtonCount()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_tbButtonCount()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Number of buttons.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Count the number of buttons in a toolbar.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-tbcmd2index">
+<h4><code>wvw_tbCmd2Index()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_tbCmd2Index( nWinNum, nCmd )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCmd&gt; ID of command to search (zero based).</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Number of button or ­1, if failed.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Read the number of button whose command ID is &lt;nCmd&gt;.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-tbcreate">
+<h4><code>wvw_tbCreate()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_tbCreate( nWinNum, lDisplayText, nStyle, nSystemBitmap, nImageWidth, nImageHeight )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;lDIsplayText&gt; .T. Text of button will be showed with the image .F. Text will be showed as a tooltip ( default) &lt;nStyle&gt; Style of toolbar. Default is TBSTYLE_FLAT | TBSTYLE_TOOLTIPS (another definitions are in file COMMCTRL.H). &lt;nSystemBitmap&gt; Points out if will be used Windows system bitmaps. Can be: 0 1 2 Do not use Windows system bitmaps Use Windows system bitmaps (small) Use Windows system bitmaps (large)</div>
+  <div>&lt;nImageWidth, nImageHeight&gt; Length and width of image (meaningful only if &lt;nSystemBitmap&gt; is zero).</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Handle of toolbar, if successful. Zero if failed.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Creates a toolbar on top of current window (with no button).</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-tbdelbutton">
+<h4><code>wvw_tbDelButton()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_tbDelButton( nWinNum, nButton )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nButton&gt; Number of button do delete. The separator button count as a button, and can be deleted. This list is zero based.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Delete a button in a toolbar.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-tbdestroy">
+<h4><code>wvw_tbDestroy()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_tbDestroy()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Delete a toolbar from current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-tbenablebutton">
+<h4><code>wvw_tbEnableButton()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_tbEnableButton( nWinNum. nButton, lToggle )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nButton&gt; Number of button in a toolbar (zero based list). &lt;lToggle&gt; .T. Enable the button .F. Disable the button</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Enable/disable a button in a toolbar.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-tbindex2cmd">
+<h4><code>wvw_tbIndex2Cmd()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_tbIndex2Cmd( nWinNum, nButton )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nButton&gt; Number of button in a toolbar (zero based list).</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Number of command ID, if successful, -1 if failed.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Returns the ID assigned to the button.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-trackpopupmenu">
+<h4><code>wvw_TrackPopupMenu()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_TrackPopupMenu( nWinNum, nHandle )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nHandle&gt; Popup menu handle.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>ID of selected option or zero if user cancels or an error occurs.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Shows a menu in the cursor position.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-unreachedbr">
+<h4><code>wvw_UnreachedBr()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_UnreachedBr( nWinNum, nBottomPixels, nRightPixels )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nBottomPixels&gt; Passed by reference, to keep the number of lines (in pixels). &lt;nRightPixels&gt; Passed by reference, to keep the number of columns (in pixels).</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Number of rows/columns in pixels.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Read the number of pixels out of reach to lines and columns when window &lt;nWinNum&gt; is maximized.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-updatewindow">
+<h4><code>wvw_UpdateWindow()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_UpdateWindow()</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Update the window, repaint it.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-xbcreate">
+<h4><code>wvw_xbCreate()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_xbCreate( nWinNum, nStyle, nTop, nLeft, nLength, bBlock, aOffset )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nStyle&gt; 0 Horizontal 1 Vertical &lt;nTop, nLeft&gt; Intital row/column of scrollbar (in characters). &lt;nLength&gt; Length of scrollbar (in characters). &lt;bBlock&gt; Code block to execute on every VM_VSCROLL/VM_HSCROLL. This code block will be evaluated with these parameters: nWinNum nXBid nXBmsg window number scrollbar ID scrollbar message. Can be divided in two categories:</div>
+  <div>The &quot;must be handled&quot; messages: SB_LINEUP/SB_LINELEFT SB_LINEDOWN/SB_LINERIGHT SB_PAGEUP/SB_PAGELEFT SB_PAGEDOWN/SB_PAGERIGHT 0: 1: 2: 3: up/left button clicked down/right button clicked upper/left shaft clicked lower/right shaft clicked</div>
+  <div>The &quot;may not be handled&quot; messages: SB_TUMBPOSITION SB_THUMBTRACK SB_ENDSCROLL nXBPos 4: scroll thumb is released at position nXBpos 5: scroll thumb is being dragged at position nXBpos 8: end of scroll</div>
+  <div>scrollthumb position (only if message = SB_THUMBPOSITION or SB_THUMBTRACK)</div>
+  <div>&lt;aOffset&gt; Array with four elements with top/left, bottom/right coordinates, in pixels, to adjust the dimensions of scrollbar.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Scrollbar handle, if successful. Zero if failed.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Creates a scollbar in current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-xbdestroy">
+<h4><code>wvw_xbDestroy()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_xbDestroy( nWinNum, nXBId )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nXBId&gt; ID of scrollbar.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Delete the scrollbar in current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-xbenable">
+<h4><code>wvw_xbEnable()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_xbEnable( nWinNum, nXBId, nFlags )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nXBId&gt; ID of scrollbar. &lt;nFlags&gt; The following values are allowed: 0 1 2 3 enable both arrows disable left/up arrow disable right/down arrow disable both arrow</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>.T. if successful, .F. otherwise.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Enable/disable scrollbar in current window.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-xbinfo">
+<h4><code>wvw_xbInfo()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_xbInfo( nWinNum, nXBId )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nXBId&gt; ID of scrollbar.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Array with five elements (if successful): nMin nMax nPageSize nPos nTrackPos Minimum positions to scrolling Maximum positions to scrolling Page size Position of scrolling button Exact position of the scrolling button, when the user beginning a drag-and-drop operation.</div>
+  <div>If failed, returns an empty array.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Get information about scrollbar.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-xbupdate">
+<h4><code>wvw_xbUpdate()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_xbUpdate( nWinNum, nXBId, nPos, nPageSize, nMin, nMax )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nXBId&gt; ID of scrollbar. &lt;nPos&gt; Specifies the position of scrolling button. &lt;nPageSize&gt; Page size. This value is used by scrollbar to determine the proporcional size to page jump. &lt;nMin&gt; Minimum value to scrolling. &lt;nMax&gt; Maximum value to scrolling.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>Returns current position of scroll thumb, if successful. ­1 if failed.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Update and redisplay a scollbar data. The parameters &lt;nPos&gt;, &lt;nPageSize&gt;, &lt;nMin&gt; and &lt;nMax&gt; are optional, however, both &lt;nMin&gt; and &lt;nMax&gt; must be supplied, or not at all.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+<section id="wvw-xreposwindow">
+<h4><code>wvw_XReposWindow()</code></h4>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>wvw_XReposWindow( lAnchored )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;lAnchored&gt; If .T., all subwindows are positioned according to their respective coordinate If .F., all subwindows are positioned according to whatever their &quot;CenterWindow&quot; setting</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>None.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>Reposition all windows to their initial position.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on Windows</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>API, GTWVW</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div>Generated by hbdoc on 2016-10-26 15:18 UTC</div>
+<div>Based on commit <a href="https://github.com/vszakats/harbour-core/tree/a2227e0">a2227e0</a></div>
+</footer>

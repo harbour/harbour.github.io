@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="utf-8">
+<meta name="referrer" content="origin">
+<meta name="viewport" content="initial-scale=1">
+
+<meta name="generator" content="hbdoc">
+<meta name="keywords" content="Harbour, Clipper, xBase, database, Free Software, GPL, compiler, cross-platform, 32-bit, 64-bit">
+
+<title>Harbour Reference Guide — hbmisc contrib</title>
+
+<link rel="stylesheet" href="hbdoc.css">
+
+<body>
+
+<header>
+<h1>Harbour Reference Guide — hbmisc contrib</h1>
+</header>
+
+<main>
+
+<section id="bintodec">
+<h4><code>BinToDec()</code></h4>
+<div class="d-ol">
+  <div>Converts a Binary Value to Decimal</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>BinToDec( &lt;cN&gt; ) &rarr; &lt;cNr&gt;</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cN&gt; NUMBER TO BE CONVERTED</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;cNr&gt;  NUMBER CONVERTED</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function converts a string &lt;cN&gt; from an binary value to a numeric decimal value.</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Conversion Tools</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#octaltodec">OctalToDec()</a></code>, <code><a href="#hexatodec">HexaToDec()</a></code></div>
+</section>
+
+<section id="dectobin">
+<h4><code>DecToBin()</code></h4>
+<div class="d-ol">
+  <div>Converts a Decimal Value to Binary</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>DecToBin( &lt;cN&gt; ) &rarr; &lt;cNr&gt;</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cN&gt; NUMBER TO BE CONVERTED</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;cNr&gt;  NUMBER CONVERTED</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function converts a string &lt;cN&gt; from an decimal value to an binary value.</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Conversion Tools</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#dectohexa">DecToHexa()</a></code>, <code><a href="#dectooctal">DecToOctal()</a></code></div>
+</section>
+
+<section id="dectohexa">
+<h4><code>DecToHexa()</code></h4>
+<div class="d-ol">
+  <div>Converts a Decimal Value to Hexa</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>DecToHexa( &lt;cN&gt; ) &rarr; &lt;cNr&gt;</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cN&gt; NUMBER TO BE CONVERTED</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;cNr&gt;  NUMBER CONVERTED</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function converts a string &lt;cN&gt; from an decimal value to an hexadecimal value.</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Conversion Tools</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#dectobin">DecToBin()</a></code>, <code><a href="#dectooctal">DecToOctal()</a></code></div>
+</section>
+
+<section id="dectooctal">
+<h4><code>DecToOctal()</code></h4>
+<div class="d-ol">
+  <div>Converts a Decimal Value to Octal</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>DecToOctal( &lt;cN&gt; ) &rarr; &lt;cNr&gt;</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cN&gt; NUMBER TO BE CONVERTED</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;cNr&gt;  NUMBER CONVERTED</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function converts a string &lt;cN&gt; from an decimal value to an octal value.</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Conversion Tools</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#dectohexa">DecToHexa()</a></code>, <code><a href="#dectobin">DecToBin()</a></code></div>
+</section>
+
+<section id="hexatodec">
+<h4><code>HexaToDec()</code></h4>
+<div class="d-ol">
+  <div>Converts a Hexa Value to Decimal</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>HexaToDec( &lt;cN&gt; ) &rarr; &lt;cNr&gt;</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cN&gt; NUMBER TO BE CONVERTED</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;cNr&gt;  NUMBER CONVERTED</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function converts a string &lt;cN&gt; from an hexadecimal value to a numeric decimal value.</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Conversion Tools</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#octaltodec">OctalToDec()</a></code>, <code><a href="#bintodec">BinToDec()</a></code></div>
+</section>
+
+<section id="isbin">
+<h4><code>IsBin()</code></h4>
+<div class="d-ol">
+  <div>Check if the value is a Binary  Number</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>IsBin( &lt;cN&gt; ) &rarr; &lt;cNr&gt;</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cN&gt; STRING TO BE CHECKED</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;cNr&gt; .T. IF THE STRING IS BYNARY, otherwise .F.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>check if the passed string is a bynary number or not</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Conversion Tools</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#isoctal">IsOctal()</a></code>, <code><a href="#isdec">IsDec()</a></code>, <code><a href="#ishexa">IsHexa()</a></code></div>
+</section>
+
+<section id="isdec">
+<h4><code>IsDec()</code></h4>
+<div class="d-ol">
+  <div>Check if the value is a Decimal  Number</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>IsDec( &lt;cN&gt; ) &rarr; &lt;cNr&gt;</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cN&gt; STRING TO BE CHECKED</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;cNr&gt; .T. IF THE STRING IS DECIMAL;otherwise .F.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>check if the passed string is a decimal number or not</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Conversion Tools</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#isoctal">IsOctal()</a></code>, <code><a href="#isbin">IsBin()</a></code>, <code><a href="#ishexa">IsHexa()</a></code></div>
+</section>
+
+<section id="ishexa">
+<h4><code>IsHexa()</code></h4>
+<div class="d-ol">
+  <div>Check if the value is a Hexal  Number</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>IsHexa( &lt;cN&gt; ) &rarr; &lt;cNr&gt;</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cN&gt; STRING TO BE CHECKED</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;cNr&gt; .T. IF THE STRING IS HEXA;otherwise .F.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>check if the passed string is a hexa number or not</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Conversion Tools</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#isoctal">IsOctal()</a></code>, <code><a href="#isdec">IsDec()</a></code>, <code><a href="#isbin">IsBin()</a></code></div>
+</section>
+
+<section id="isoctal">
+<h4><code>IsOctal()</code></h4>
+<div class="d-ol">
+  <div>Check if the value is a Octal  Number</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>IsOctal( &lt;cN&gt; ) &rarr; &lt;cNr&gt;</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cN&gt; STRING TO BE CHECKED</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;cNr&gt; .T. IF THE STRING IS OCTAL;otherwise .F.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>check if the passed string is a octal number or not</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Conversion Tools</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#isbin">IsBin()</a></code>, <code><a href="#isdec">IsDec()</a></code>, <code><a href="#ishexa">IsHexa()</a></code></div>
+</section>
+
+<section id="octaltodec">
+<h4><code>OctalToDec()</code></h4>
+<div class="d-ol">
+  <div>Converts a Octal Value to Decimal</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>OctalToDec( &lt;cN&gt; ) &rarr; &lt;cNr&gt;</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cN&gt; NUMBER TO BE CONVERTED</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;cNr&gt;  NUMBER CONVERTED</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function converts a string &lt;cN&gt; from an octal value to a numeric decimal value.</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Conversion Tools</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#bintodec">BinToDec()</a></code>, <code><a href="#hexatodec">HexaToDec()</a></code></div>
+</section>
+
+<section id="adays">
+<h4><code>ADays()</code></h4>
+<div class="d-ol">
+  <div>Returns an array with the days names.</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>ADays() &rarr; aDays</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;aDays&gt;   The array which holds the days names.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function returns an array with all the days names in the selected current language.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+aDays := ADays()
+? aDays[ 1 ] // -&gt; Sunday
+? aDays[ 1 ] // -&gt; Domingo (if the selected language is Spanish)
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is new in Harbour.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Date</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#adays">ADays()</a></code></div>
+</section>
+
+<section id="amonths">
+<h4><code>AMonths()</code></h4>
+<div class="d-ol">
+  <div>Returns an array with the months names.</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>AMonths() &rarr; aMonths</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>None</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;aMonths&gt; The array which holds the months names.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function returns an array with all the months names in the selected current language.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+aMonths := AMonths()
+? aMonths[ 1 ]  // -&gt; January
+? aMonths[ 1 ]  // -&gt; Enero (if the selected language is Spanish)
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is new in Harbour.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Date</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#adays">ADays()</a></code></div>
+</section>
+
+<section id="bom-001">
+<h4><code>BoM()</code></h4>
+<div class="d-ol">
+  <div>Gets the first day in a month.</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>BoM( &lt;dDate&gt; ) &rarr; dBOM</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;dDate&gt;   A valid date.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;dBOM&gt;    The first day in the month.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function returns the first day of a given month date.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+Set( _SET_DATEFORMAT, &quot;yyyy-mm-dd&quot; )
+? BoM( hb_SToD( &quot;20000125&quot; ) )  // -&gt; &quot;2000-01-01&quot;
+? BoM( hb_SToD( &quot;20000224&quot; ) )  // -&gt; &quot;2000-02-01&quot;
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is new in Harbour.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Date</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#eom">EoM()</a></code>, <code><a href="#wom">WoM()</a></code></div>
+</section>
+
+<section id="boy-001">
+<h4><code>BoY()</code></h4>
+<div class="d-ol">
+  <div>Gets the first date of the year.</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>BoY( &lt;dDate&gt; ) &rarr; dBOY</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;dDate&gt;   A valid date.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;dBOY&gt;    The first day in the year.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function returns the first date of a given year date.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+Set( _SET_DATEFORMAT, &quot;yyyy-mm-dd&quot; )
+? BoY( hb_SToD( &quot;20000125&quot; ) )  // -&gt; &quot;2000-01-01&quot;
+? BoY( hb_SToD( &quot;20010224&quot; ) )  // -&gt; &quot;2001-01-01&quot;
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is new in Harbour.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Date</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#eoy">EoY()</a></code></div>
+</section>
+
+<section id="doy-001">
+<h4><code>DoY()</code></h4>
+<div class="d-ol">
+  <div>Gets the day number of the year.</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>DoY( &lt;dDate&gt; ) &rarr; nDay</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;dDate&gt;   A valid date.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;nDay&gt;    The day number</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function returns the day number of the year for a given date.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+? DoY( hb_SToD( &quot;20000131&quot; ) )  // -&gt; 31
+? DoY( hb_SToD( &quot;20000220&quot; ) )  // -&gt; 51
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is new in Harbour.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Date</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#woy">WoY()</a></code></div>
+</section>
+
+<section id="eom-001">
+<h4><code>EoM()</code></h4>
+<div class="d-ol">
+  <div>Gets the last day in a month.</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>EoM( &lt;dDate&gt; ) &rarr; dEOM</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;dDate&gt;   A valid date.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;dEOM&gt;    The last day in the month.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function returns the last day of a given month date.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+Set( _SET_DATEFORMAT, &quot;yyyy-mm-dd&quot; )
+? EoM( hb_SToD( &quot;20000101&quot; ) )  // -&gt; &quot;2000-01-31&quot;
+? EoM( hb_SToD( &quot;20000201&quot; ) )  // -&gt; &quot;2000-02-29&quot;
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is new in Harbour.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Date</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#bom">BoM()</a></code>, <code><a href="#wom">WoM()</a></code></div>
+</section>
+
+<section id="eoy-001">
+<h4><code>EoY()</code></h4>
+<div class="d-ol">
+  <div>Gets the last date of the year.</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>EoY( &lt;dDate&gt; ) &rarr; dEOY</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;dDate&gt;   A valid date.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;dEOY&gt;    The last date of the year.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function returns the last date of a given year date.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+Set( _SET_DATEFORMAT, &quot;yyyy-mm-dd&quot; )
+? EoY( hb_SToD( &quot;20000101&quot; ) )  // -&gt; &quot;2000-12-31&quot;
+? EoY( hb_SToD( &quot;20010101&quot; ) )  // -&gt; &quot;2001-12-31&quot;
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is new in Harbour.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Date</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#boy">BoY()</a></code></div>
+</section>
+
+<section id="hbmisc-daysinmonth">
+<h4><code>hbmisc_DaysInMonth()</code></h4>
+<div class="d-ol">
+  <div>Gets the days in a month.</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>hbmisc_DaysInMonth( &lt;dDate&gt; ) &rarr; nDays</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;dDate&gt;   A valid date.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;nDays&gt;   The number of days of the month.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function returns the number of days of the given date month.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+? hbmisc_DaysInMonth( hb_SToD( &quot;20000101&quot; ) )  // -&gt; 31
+? hbmisc_DaysInMonth( hb_SToD( &quot;20000201&quot; ) )  // -&gt; 29
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is new in Harbour.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Date</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#isleapyear">IsLeapYear()</a></code></div>
+</section>
+
+<section id="isleapyear">
+<h4><code>IsLeapYear()</code></h4>
+<div class="d-ol">
+  <div>Checks if the given date is a leap year.</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>IsLeapYear( &lt;dDate&gt; ) &rarr; lTrueOrFalse</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;dDate&gt;   A valid date.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;lTrueOrFalse&gt;  A logical that indicates if the date year is leap</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function returns true if the given date is a leap year and false if isn't.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+? IsLeapYear( hb_SToD( &quot;20000101&quot; ) )  // -&gt; .T.
+? IsLeapYear( hb_SToD( &quot;20010101&quot; ) )  // -&gt; .F.
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is new in Harbour.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Date</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#daysinmonth">DaysInMonth()</a></code></div>
+</section>
+
+<section id="woy">
+<h4><code>WoY()</code></h4>
+<div class="d-ol">
+  <div>Gets the week number of the year.</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>WoY( &lt;dDate&gt;, &lt;lIso&gt; ) &rarr; nWeek</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;dDate&gt;   A valid date.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;nWeek&gt;   The week number &lt;lIso&gt;    Flag that indicates if &lt;nWeek&gt; is in ISO format.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function returns the week number of the year for a given date. It returns the week number in ISO format ( range 0 - 52, by default or passing TRUE as second parameter) or 1 - 52 if lIso is FALSE.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+? WoY( hb_SToD( &quot;20000131&quot; ) )  // -&gt; 3
+? WoY( hb_SToD( &quot;20000131&quot; ), .F. )  // -&gt; 4
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This function is new in Harbour.</div>
+</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">
+  <div>Available on all platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Date</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#doy">DoY()</a></code></div>
+</section>
+
+<section id="tfileread">
+<h4><code>TFileRead()</code></h4>
+<div class="d-ol">
+  <div>Read a file one line at a time</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>oFile := TFileRead():New( &lt;cFileName&gt; [, &lt;nReadSize&gt; ] )</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cFileName&gt; is the required name of the file to be read.</div>
+  <div>&lt;nReadSize&gt; is the optional size to use when reading from the file. The default value is 4096 and the allowed range is 1 through 65535.</div>
+  <div>Any value outside of this range causes the default value to be used.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>An instance of the File Reader class</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>TFileRead() is used to access a file one line at a time. You must</div>
+  <div><p>specify the name of the file when an instance of the class is created.</div>
+  <div><p>The class data should be considered private to the class.</div>
+  <div><p>The class methods are as follows:</div>
+  <div><p>New()                Creates a new instance of the TFileRead class.</div>
+  <div><p>Open( [&lt;nFlags&gt;] )   Opens the file for reading. The optional nFlags</div>
+  <div><p>parameter can use any of the file open flags from fileio.ch. The default is FO_READ + FO_SHARED. Calling this method when the file is already open causes the next ReadLine() to start over</div>
+  <div><p>from the beginning of the file.</div>
+  <div><p>Close()              Closes the file.</div>
+  <div><p>ReadLine()           Returns one line from the file, stripping the</div>
+  <div><p>newline characters. The following sequences are treated as one newline: 1) CR CR LF; 2) CR LF;</div>
+  <div><p>3) LF; and 4) CR. Note: LF CR is 2 newlines.</div>
+  <div><p>Name()               Returns the name of the file.</div>
+  <div><p>IsOpen()             Returns .T. if the file is open.</div>
+  <div><p>MoreToRead()         Returns .T. if there are more lines to be read</div>
+  <div><p>(think of it as an inverse EOF function).</div>
+  <div><p>Error()              Returns .T. if an error has occurred.</div>
+  <div><p>ErrorNo()            Returns the current error code.</div>
+  <div><p>ErrorMsg( [&lt;cPre&gt;] ) Returns a formatted error message.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+PROCEDURE Main( cFile )
+   LOCAL oFile := TFileRead():New( cFile )
+
+   oFile:Open()
+   IF oFile:Error()
+      ? oFile:ErrorMsg( &quot;FileRead:&quot; )
+   ELSE
+      DO WHILE oFile:MoreToRead()
+         ? oFile:ReadLine()
+      ENDDO
+      oFile:Close()
+   ENDIF
+   RETURN
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Ready</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>This is a new Harbour Tools class</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>Harbour Tools</div>
+</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#tclass">TClass()</a></code></div>
+</section>
+
+<section id="strformat">
+<h4><code>StrFormat()</code></h4>
+<div class="d-ol">
+  <div>Format a string</div>
+</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>StrFormat( &lt;cMask&gt;[, &lt;cPar1&gt;[, &lt;cParn&gt;[, ...]] ) &rarr; cString</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;cMask&gt; Holds the mask for the resulting string &lt;cParn&gt; Holds the strings to be inserted in the mask</div>
+  <div>maximum 9 of them can be specified.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;cString&gt; Return the mask with all the parameters inserted.</div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>String replacment, can be useful when writing international apps. You can separate the constant strings from the variable ones. Each %1 - %9 marks will be replaced with the appropriate parameter</div>
+  <div><p>from the parameter list.</div>
+  <div><p>Marks can be in any order, and can be duplicated.</div>
+  <div><p>You can print &quot;%&quot; character with &quot;%%&quot;.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+StrFormat( &quot;Please insert disk %1 to drive %2&quot;, hb_ntos( 2 ), &quot;A:&quot; )
+StrFormat( &quot;This is %1 from %2&quot;, &quot;John&quot;, &quot;Earth&quot; )
+StrFormat( &quot;%2 %1 %2&quot;, &quot;Param1&quot;, &quot;Param2&quot; )
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">
+  <div>Done</div>
+</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">
+  <div>All platforms</div>
+</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">
+  <div>Library is hbmisc</div>
+</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">
+  <div>String Tools</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div>Generated by hbdoc on 2016-10-26 15:18 UTC</div>
+<div>Based on commit <a href="https://github.com/vszakats/harbour-core/tree/a2227e0">a2227e0</a></div>
+</footer>
