@@ -22,9 +22,7 @@
 
 <section id="adsoverview">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/readme.txt" class="edit-page"> Improve this doc</a><h4>ADS Overview</h4>
-<div class="d-ol">
-  <div>Advantage Database Server RDD</div>
-</div>
+<div class="d-ol">Advantage Database Server RDD</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>rddads is an RDD for the Advantage Database Server, an xBase data server by Extended Systems &lt;www.advantagedatabase.com&gt;. The RDD was written by Alexander Kresin &lt;alex@belacy.belgorod.su&gt; Additional code and documentation was added by Brian Hays &lt;bhays@abacuslaw.com&gt;.</div>
@@ -80,16 +78,12 @@
   <div>3) When setting a relation, the expression must be one that can be evaluated by the Advantage Expression Engine.  UDFs will fail.</div>
 </div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Document</div>
-</div>
+<div class="d-it">Document</div>
 </section>
 
 <section id="adsblob2file">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsBlob2File()</code></h4>
-<div class="d-ol">
-  <div>Write a Binary (memo) field's contents to a file</div>
-</div>
+<div class="d-ol">Write a Binary (memo) field's contents to a file</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsBlob2File( &lt;cFileName&gt;, &lt;cFieldName&gt; ) &rarr; lSuccess</code></div>
 <div class="d-d">Argument(s)</div>
@@ -98,207 +92,131 @@
   <div>&lt;cFieldName&gt;   Field in the current workarea that contains binary data.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;lSuccess&gt;  True if the file is successfully written.</div>
-</div>
+<div class="d-it">&lt;lSuccess&gt;  True if the file is successfully written.</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>See ace.hlp for full details about the Advantage Database Server. AdsBlob2File() is a wrapper for AdsBinaryToFile().</div>
-</div>
+<div class="d-it">See ace.hlp for full details about the Advantage Database Server. AdsBlob2File() is a wrapper for AdsBinaryToFile().</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on Windows</div>
-</div>
+<div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsFile2Blob">AdsFile2Blob()</a></code></div>
 </section>
 
 <section id="adscacheopencursors">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsCacheOpenCursors()</code></h4>
-<div class="d-ol">
-  <div>Provides caching of open cursors</div>
-</div>
+<div class="d-ol">Provides caching of open cursors</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsCacheOpenCursors( &lt;nOpen&gt; ) &rarr; nRetVal</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;nOpen&gt;       Number of cursors to cache.</div>
-</div>
+<div class="d-it">&lt;nOpen&gt;       Number of cursors to cache.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;nRetVal&gt;     ???</div>
-</div>
+<div class="d-it">&lt;nRetVal&gt;     ???</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>AdsCacheOpenCursors() allows cursor closes to be cached in order for subsequent SELECTS to occur faster. A call to AdsCloseTable() with the cursor cache greater than zero results in the cursor appearing closed to an application, but still open on the Advantage server. AdsCacheOpenCursors() is a global setting that affects the behavior of the entire application. The default number of open cursors that are cached is 25.</div>
-</div>
+<div class="d-it">AdsCacheOpenCursors() allows cursor closes to be cached in order for subsequent SELECTS to occur faster. A call to AdsCloseTable() with the cursor cache greater than zero results in the cursor appearing closed to an application, but still open on the Advantage server. AdsCacheOpenCursors() is a global setting that affects the behavior of the entire application. The default number of open cursors that are cached is 25.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 AdsCacheOpenCursors( 0 )
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>Available on Windows</div>
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsCacheOpenTables">AdsCacheOpenTables()</a></code></div>
 </section>
 
 <section id="adscacheopentables">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsCacheOpenTables()</code></h4>
-<div class="d-ol">
-  <div>Provides caching of open tables</div>
-</div>
+<div class="d-ol">Provides caching of open tables</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsCacheOpenTables( &lt;nOpen&gt; ) &rarr; nRetVal</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;nOpen&gt;       Number of tables to cache.</div>
-</div>
+<div class="d-it">&lt;nOpen&gt;       Number of tables to cache.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;nRetVal&gt;     ???</div>
-</div>
+<div class="d-it">&lt;nRetVal&gt;     ???</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>AdsCacheOpenTables() allows table closes to be cached in order for subsequent opens to occur faster. A call to AdsCloseTable() with the table cache greater than zero results in the table appearing closed to an application, but still open on the Advantage server. AdsCacheOpenTables() is a global setting that affects the behavior of the entire application. The default number of open tables that are cached is 0.</div>
-</div>
+<div class="d-it">AdsCacheOpenTables() allows table closes to be cached in order for subsequent opens to occur faster. A call to AdsCloseTable() with the table cache greater than zero results in the table appearing closed to an application, but still open on the Advantage server. AdsCacheOpenTables() is a global setting that affects the behavior of the entire application. The default number of open tables that are cached is 0.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 AdsCacheOpenTables( 25 )
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>Available on Windows</div>
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsCacheOpenCursors">AdsCacheOpenCursors()</a></code></div>
 </section>
 
 <section id="adsclearaof">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsClearAOF()</code></h4>
-<div class="d-ol">
-  <div>Clears an Advantage Optimized Filter in the current workarea.</div>
-</div>
+<div class="d-ol">Clears an Advantage Optimized Filter in the current workarea.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsClearAOF()</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>None</div>
-</div>
+<div class="d-it">None</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>See ace.hlp for full details about the Advantage Database Server.</div>
-</div>
+<div class="d-it">See ace.hlp for full details about the Advantage Database Server.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on Windows</div>
-</div>
+<div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsCustomizeAOF">AdsCustomizeAOF()</a></code>, <code><a href="#AdsEvalAOF">AdsEvalAOF()</a></code>, <code><a href="#AdsGetAOF">AdsGetAOF()</a></code>, <code><a href="#AdsGetAOFOptLevel">AdsGetAOFOptLevel()</a></code>, <code><a href="#AdsIsRecordInAOF">AdsIsRecordInAOF()</a></code>, <code><a href="#AdsRefreshAOF">AdsRefreshAOF()</a></code></div>
 </section>
 
 <section id="adsclosecachedtables">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsCloseCachedTables()</code></h4>
-<div class="d-ol">
-  <div>Close all cached tables on the given connection</div>
-</div>
+<div class="d-ol">Close all cached tables on the given connection</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsCloseCachedTables( [&lt;hConnection&gt;] ) &rarr; nRetVal</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;hConnection&gt;    A connection handle retrieved via AdsConnect() or AdsConnect60(). If omitted, the RDD's current connection handle is used, but this only exists if AdsConnect() or AdsConnect60() were previously called.</div>
-</div>
+<div class="d-it">&lt;hConnection&gt;    A connection handle retrieved via AdsConnect() or AdsConnect60(). If omitted, the RDD's current connection handle is used, but this only exists if AdsConnect() or AdsConnect60() were previously called.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;nRetVal&gt;     ???</div>
-</div>
+<div class="d-it">&lt;nRetVal&gt;     ???</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>AdsCloseCachedTables() can be used to close all cached tables on a given connection. All cached closed tables on the client will be closed, as well as all cache closed tables on the server that might have been used when executing SQL statements.</div>
-</div>
+<div class="d-it">AdsCloseCachedTables() can be used to close all cached tables on a given connection. All cached closed tables on the client will be closed, as well as all cache closed tables on the server that might have been used when executing SQL statements.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 AdsCloseCachedTables()
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>ADS 7.x and above</div>
@@ -306,76 +224,50 @@ AdsCloseCachedTables()
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsCacheOpenTables">AdsCacheOpenTables()</a></code>, <code><a href="#AdsCacheOpenCursors">AdsCacheOpenCursors()</a></code></div>
 </section>
 
 <section id="adsclrcallback">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsClrCallback()</code></h4>
-<div class="d-ol">
-  <div>Clears the callback set by AdsRegCallback().</div>
-</div>
+<div class="d-ol">Clears the callback set by AdsRegCallback().</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsClrCallback() &rarr; NIL</code></div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>See AdsRegCallback().</div>
-</div>
+<div class="d-it">See AdsRegCallback().</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>Available on Windows</div>
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsRegCallback">AdsRegCallback()</a></code></div>
 </section>
 
 <section id="adsconnect60">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsConnect60()</code></h4>
-<div class="d-ol">
-  <div>Connect to a local/remote/internet server</div>
-</div>
+<div class="d-ol">Connect to a local/remote/internet server</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsConnect60( &lt;cFilePath&gt;, &lt;nServertype&gt;, [&lt;cUserName&gt;], [&lt;cUserPass&gt;], [&lt;nOptions&gt;] ) &rarr; lSuccess</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cFilePath&gt;   Name of data dictionary to connect to. &lt;nServertype&gt; The server type to connect (LOCAL, REMOTE, AIS or all together) &lt;cUserName&gt;   Optional Name of the user connecting to the server &lt;cUserPass&gt;   Optional password for the user Name &lt;nOptions&gt;    The optional connection options</div>
-</div>
+<div class="d-it">&lt;cFilePath&gt;   Name of data dictionary to connect to. &lt;nServertype&gt; The server type to connect (LOCAL, REMOTE, AIS or all together) &lt;cUserName&gt;   Optional Name of the user connecting to the server &lt;cUserPass&gt;   Optional password for the user Name &lt;nOptions&gt;    The optional connection options</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;lSuccess&gt;   True if connected, otherwise False.</div>
-</div>
+<div class="d-it">&lt;lSuccess&gt;   True if connected, otherwise False.</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>AdsConnect60() makes the connection to an advantage database server. See ace.hlp for full details about the Advantage Database Server.</div>
-</div>
+<div class="d-it">AdsConnect60() makes the connection to an advantage database server. See ace.hlp for full details about the Advantage Database Server.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 IF AdsConnect60( &quot;harbour.add&quot;, 7 /* All types of connection */, &quot;ADSSYS&quot;, &quot;&quot;, )
@@ -384,35 +276,25 @@ IF AdsConnect60( &quot;harbour.add&quot;, 7 /* All types of connection */, &quot
 ENDIF
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>Available on Windows</div>
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsDDAddTable">AdsDDAddTable()</a></code></div>
 </section>
 
 <section id="adscustomizeaof">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsCustomizeAOF()</code></h4>
-<div class="d-ol">
-  <div>Add or remove records from an existing AOF</div>
-</div>
+<div class="d-ol">Add or remove records from an existing AOF</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsCustomizeAOF( [&lt;nRecno | aRecNos&gt;] [, &lt;nType&gt;] ) &rarr; nSuccess</code></div>
 <div class="d-d">Argument(s)</div>
@@ -427,9 +309,7 @@ ENDIF
   <div></div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;nError&gt;  ADS error code, or 0 for success.</div>
-</div>
+<div class="d-it">&lt;nError&gt;  ADS error code, or 0 for success.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>An Advantage Optimized Filter (AOF) consists of a bitmap of the records in the database. If bit 5 is on, record 5 is considered a visible record. If bit 5 is off, record 5 is not visible. It does not &quot;pass the test&quot;. Initially, the bits are set by the Server according to a filter expression from SET FILTER TO or AdsSetAOF(). But by using AdsCustomizeAOF() you can add or remove records at will from the visible set.  This is useful for tagging records or for refining a result set after the data has been retrieved from the server.</div>
@@ -439,48 +319,30 @@ ENDIF
   <div><p>See ace.hlp for full details about the Advantage Database Server.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on Windows</div>
-</div>
+<div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsClearAOF">AdsClearAOF()</a></code>, <code><a href="#AdsEvalAOF">AdsEvalAOF()</a></code>, <code><a href="#AdsGetAOF">AdsGetAOF()</a></code>, <code><a href="#AdsGetAOFOptLevel">AdsGetAOFOptLevel()</a></code>, <code><a href="#AdsIsRecordInAOF">AdsIsRecordInAOF()</a></code>, <code><a href="#AdsRefreshAOF">AdsRefreshAOF()</a></code></div>
 </section>
 
 <section id="adsddaddtable">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsDDAddTable()</code></h4>
-<div class="d-ol">
-  <div>Add a new table to a Data dictionary</div>
-</div>
+<div class="d-ol">Add a new table to a Data dictionary</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsDDAddTable( &lt;cTableName&gt;, &lt;cFileName&gt;, &lt;cIndexFileName&gt; ) &rarr; lSuccess</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cTableName&gt; Name of the table inside the data dictionary &lt;cFileName&gt;  Name of the adt or dbf file name &lt;cIndexFileName&gt; Optional name of the index file</div>
-</div>
+<div class="d-it">&lt;cTableName&gt; Name of the table inside the data dictionary &lt;cFileName&gt;  Name of the adt or dbf file name &lt;cIndexFileName&gt; Optional name of the index file</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;lSuccess&gt; &rarr; .T. if file was added, otherwise .F.</div>
-</div>
+<div class="d-it">&lt;lSuccess&gt; &rarr; .T. if file was added, otherwise .F.</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>See ace.hlp for full details about the Advantage Database Server. AdsDDAddTable() adds a new table to an ADS data dictionary. To add the table you must be connected as ADSSYS user using the AdsConnect60() function</div>
-</div>
+<div class="d-it">See ace.hlp for full details about the Advantage Database Server. AdsDDAddTable() adds a new table to an ADS data dictionary. To add the table you must be connected as ADSSYS user using the AdsConnect60() function</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 IF AdsConnect60( &quot;harbour.add&quot;, 7 /* All types of connection */, &quot;ADSSYS&quot;, &quot;&quot;, )
@@ -492,78 +354,50 @@ IF AdsConnect60( &quot;harbour.add&quot;, 7 /* All types of connection */, &quot
 ENDIF
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>Available on Windows</div>
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsConnect60">AdsConnect60()</a></code></div>
 </section>
 
 <section id="adsevalaof">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsEvalAOF()</code></h4>
-<div class="d-ol">
-  <div>Evaluate a filter expression to determine its optimization level</div>
-</div>
+<div class="d-ol">Evaluate a filter expression to determine its optimization level</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsEvalAOF( &lt;cFilter&gt; ) &rarr; nOptimizationLevel</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cFilter&gt;       Expression to test.</div>
-</div>
+<div class="d-it">&lt;cFilter&gt;       Expression to test.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;nOptimizationLevel&gt; Values are defined in ads.ch: ADS_OPTIMIZED_FULL, ADS_OPTIMIZED_PART, ADS_OPTIMIZED_NONE. IMPORTANT NOTE: These values are NOT the same as those returned by dbOrderInfo().</div>
-</div>
+<div class="d-it">&lt;nOptimizationLevel&gt; Values are defined in ads.ch: ADS_OPTIMIZED_FULL, ADS_OPTIMIZED_PART, ADS_OPTIMIZED_NONE. IMPORTANT NOTE: These values are NOT the same as those returned by dbOrderInfo().</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>See ace.hlp for full details about the Advantage Database Server.</div>
-</div>
+<div class="d-it">See ace.hlp for full details about the Advantage Database Server.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on Windows</div>
-</div>
+<div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsClearAOF">AdsClearAOF()</a></code>, <code><a href="#AdsGetAOF">AdsGetAOF()</a></code>, <code><a href="#AdsGetAOFOptLevel">AdsGetAOFOptLevel()</a></code>, <code><a href="#AdsIsRecordInAOF">AdsIsRecordInAOF()</a></code>, <code><a href="#AdsRefreshAOF">AdsRefreshAOF()</a></code></div>
 </section>
 
 <section id="adsfile2blob">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsFile2Blob()</code></h4>
-<div class="d-ol">
-  <div>Save a Binary file to a field</div>
-</div>
+<div class="d-ol">Save a Binary file to a field</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsFile2Blob( &lt;cFileName&gt;, &lt;cFieldName&gt;, &lt;nBinaryType&gt; ) &rarr; lSuccess</code></div>
 <div class="d-d">Argument(s)</div>
@@ -573,469 +407,289 @@ ENDIF
   <div>&lt;nBinaryType&gt;  Either ADS_BINARY (the default) or ADS_IMAGE. This parameter is for fields in DBF files. ADT tables cannot store binary and image data in standard character memo fields (they have specific field types for that).</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;lSuccess&gt;   True if the file is successfully written.</div>
-</div>
+<div class="d-it">&lt;lSuccess&gt;   True if the file is successfully written.</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>See ace.hlp for full details about the Advantage Database Server. AdsFile2Blob() is a wrapper for AdsFileToBinary(). Use of this function is illegal in an ADS transaction.</div>
-</div>
+<div class="d-it">See ace.hlp for full details about the Advantage Database Server. AdsFile2Blob() is a wrapper for AdsFileToBinary(). Use of this function is illegal in an ADS transaction.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on Windows</div>
-</div>
+<div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsBlob2File">AdsBlob2File()</a></code></div>
 </section>
 
 <section id="adsgetaof">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsGetAOF()</code></h4>
-<div class="d-ol">
-  <div>Retrieve the filter expression used in the call to AdsSetAOF()</div>
-</div>
+<div class="d-ol">Retrieve the filter expression used in the call to AdsSetAOF()</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsGetAOF() &rarr; cFilter</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>None</div>
-</div>
+<div class="d-it">None</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;cFilter&gt;  The filter expression used in the call to AdsSetAOF().</div>
-</div>
+<div class="d-it">&lt;cFilter&gt;  The filter expression used in the call to AdsSetAOF().</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>See ace.hlp for full details about the Advantage Database Server.</div>
-</div>
+<div class="d-it">See ace.hlp for full details about the Advantage Database Server.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on Windows</div>
-</div>
+<div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsClearAOF">AdsClearAOF()</a></code>, <code><a href="#AdsGetAOFOptLevel">AdsGetAOFOptLevel()</a></code>, <code><a href="#AdsIsRecordInAOF">AdsIsRecordInAOF()</a></code>, <code><a href="#AdsRefreshAOF">AdsRefreshAOF()</a></code></div>
 </section>
 
 <section id="adsgetaofnoopt">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsGetAOFNoOpt()</code></h4>
-<div class="d-ol">
-  <div>Return the non-optimized portion of the current filter expression</div>
-</div>
+<div class="d-ol">Return the non-optimized portion of the current filter expression</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsGetAOFNoOpt() &rarr; cFilterFragment</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>None</div>
-</div>
+<div class="d-it">None</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;cFilterFragment&gt;  If an AOF filter expression is not fully optimizable, the non-optimizable part of the expression can be retrieved with this function.</div>
-</div>
+<div class="d-it">&lt;cFilterFragment&gt;  If an AOF filter expression is not fully optimizable, the non-optimizable part of the expression can be retrieved with this function.</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>See ace.hlp for full details about the Advantage Database Server.</div>
-</div>
+<div class="d-it">See ace.hlp for full details about the Advantage Database Server.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on Windows</div>
-</div>
+<div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsClearAOF">AdsClearAOF()</a></code>, <code><a href="#AdsIsRecordInAOF">AdsIsRecordInAOF()</a></code>, <code><a href="#AdsRefreshAOF">AdsRefreshAOF()</a></code></div>
 </section>
 
 <section id="adsgetaofoptlevel">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsGetAOFOptLevel()</code></h4>
-<div class="d-ol">
-  <div>Returns optimization level of the current AOF filter</div>
-</div>
+<div class="d-ol">Returns optimization level of the current AOF filter</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsGetAOFOptLevel() &rarr; nOptimizationLevel</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>None</div>
-</div>
+<div class="d-it">None</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;nOptimizationLevel&gt; Values are defined in ads.ch: ADS_OPTIMIZED_FULL, ADS_OPTIMIZED_PART, ADS_OPTIMIZED_NONE.</div>
-</div>
+<div class="d-it">&lt;nOptimizationLevel&gt; Values are defined in ads.ch: ADS_OPTIMIZED_FULL, ADS_OPTIMIZED_PART, ADS_OPTIMIZED_NONE.</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>See ace.hlp for full details about the Advantage Database Server.</div>
-</div>
+<div class="d-it">See ace.hlp for full details about the Advantage Database Server.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on Windows</div>
-</div>
+<div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsClearAOF">AdsClearAOF()</a></code>, <code><a href="#AdsGetAOF">AdsGetAOF()</a></code>, <code><a href="#AdsIsRecordInAOF">AdsIsRecordInAOF()</a></code>, <code><a href="#AdsRefreshAOF">AdsRefreshAOF()</a></code></div>
 </section>
 
 <section id="adsgetconnectiontype">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsGetConnectionType()</code></h4>
-<div class="d-ol">
-  <div>Returns the type of Server used by the given connection handle.</div>
-</div>
+<div class="d-ol">Returns the type of Server used by the given connection handle.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsGetConnectionType( [&lt;hConnection&gt;] ) &rarr; nConnectionType</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;hConnection&gt;    A connection handle retrieved via AdsConnect() or AdsConnect60(). If omitted, the RDD's current connection handle is used, but this only exists if AdsConnect() or AdsConnect60() were previously called.</div>
-</div>
+<div class="d-it">&lt;hConnection&gt;    A connection handle retrieved via AdsConnect() or AdsConnect60(). If omitted, the RDD's current connection handle is used, but this only exists if AdsConnect() or AdsConnect60() were previously called.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>The type of Advantage Server that the connection uses, either ADS_REMOTE_SERVER, ADS_AIS_SERVER, or ADS_LOCAL_SERVER.</div>
-</div>
+<div class="d-it">The type of Advantage Server that the connection uses, either ADS_REMOTE_SERVER, ADS_AIS_SERVER, or ADS_LOCAL_SERVER.</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>Advantage uses Handles to control connections to various servers. It's possible that an app may open some files via the Remote server, but others via the Local server or an Internet connection. This function identifies the type of server used by a connection handle. Note that after a table is opened, the type of connection used for that workarea can be retrieved with AdsGetTableConType(). See ace.hlp for full details.</div>
-</div>
+<div class="d-it">Advantage uses Handles to control connections to various servers. It's possible that an app may open some files via the Remote server, but others via the Local server or an Internet connection. This function identifies the type of server used by a connection handle. Note that after a table is opened, the type of connection used for that workarea can be retrieved with AdsGetTableConType(). See ace.hlp for full details.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>Available on Windows</div>
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsGetTableConType">AdsGetTableConType()</a></code>, <code><a href="#AdsConnect">AdsConnect()</a></code>, <code><a href="#AdsConnect60">AdsConnect60()</a></code></div>
 </section>
 
 <section id="adsgetlasterror">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsGetLastError()</code></h4>
-<div class="d-ol">
-  <div>Returns any error code generated by the most recent ADS API call</div>
-</div>
+<div class="d-ol">Returns any error code generated by the most recent ADS API call</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsGetLastError() &rarr; nErrorCode</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>None.</div>
-</div>
+<div class="d-it">None.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>The error code generated by the most recent ADS API call. Zero for success.</div>
-</div>
+<div class="d-it">The error code generated by the most recent ADS API call. Zero for success.</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>See ace.hlp for full details about the Advantage Database Server.</div>
-</div>
+<div class="d-it">See ace.hlp for full details about the Advantage Database Server.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>Available on Windows</div>
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 </section>
 
 <section id="adsgetrelkeypos">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsGetRelKeyPos()</code></h4>
-<div class="d-ol">
-  <div>Estimated key position of current record within the current index</div>
-</div>
+<div class="d-ol">Estimated key position of current record within the current index</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsGetRelKeyPos() &rarr; nKeyPos</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>None.  Only accesses the current index, if any.</div>
-</div>
+<div class="d-it">None.  Only accesses the current index, if any.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>A value between 0.0 and 1.0, inclusive.</div>
-</div>
+<div class="d-it">A value between 0.0 and 1.0, inclusive.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>This function estimates the relative key position within the current index, respecting any scope setting. It also works with no active index to yield the relative position of the current record number. The value returned is between 0.0 and 1.0, inclusive.</div>
   <div><p>This is the recommended function for positioning a scrollbar or other &quot;coarse&quot; position interface. See ace.hlp for full details about the Advantage Database Server.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on Windows</div>
-</div>
+<div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsKeyNo">AdsKeyNo()</a></code>, <code><a href="#AdsKeyCount">AdsKeyCount()</a></code>, <code><a href="#AdsSetRelKeyPos">AdsSetRelKeyPos()</a></code></div>
 </section>
 
 <section id="adsgettablecontype">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsGetTableConType()</code></h4>
-<div class="d-ol">
-  <div>Returns the type of Server used by current workarea.</div>
-</div>
+<div class="d-ol">Returns the type of Server used by current workarea.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsGetTableConType() &rarr; nConnectionType</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>None.</div>
-</div>
+<div class="d-it">None.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>The type of Advantage Server that the current workarea uses, either ADS_REMOTE_SERVER, ADS_AIS_SERVER, or ADS_LOCAL_SERVER. Returns zero if the current workarea does not have an Advantage table opened.</div>
-</div>
+<div class="d-it">The type of Advantage Server that the current workarea uses, either ADS_REMOTE_SERVER, ADS_AIS_SERVER, or ADS_LOCAL_SERVER. Returns zero if the current workarea does not have an Advantage table opened.</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>Advantage uses Handles to control connections to various servers. It's possible that an app may open some files via the Remote server, but others via the Local server or an Internect connection. This function identifies the type of server used in the current workarea.</div>
-</div>
+<div class="d-it">Advantage uses Handles to control connections to various servers. It's possible that an app may open some files via the Remote server, but others via the Local server or an Internect connection. This function identifies the type of server used in the current workarea.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>Available on Windows</div>
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsGetConnectionType">AdsGetConnectionType()</a></code>, <code><a href="#AdsConnect">AdsConnect()</a></code>, <code><a href="#AdsConnect60">AdsConnect60()</a></code></div>
 </section>
 
 <section id="adsisexprvalid">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsIsExprValid()</code></h4>
-<div class="d-ol">
-  <div>Determine if the ADS server can parse an expression</div>
-</div>
+<div class="d-ol">Determine if the ADS server can parse an expression</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsIsExprValid( &lt;cExp&gt; ) &rarr; lSuccess</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cExp&gt;    Any hopefully valid expression; often a filter string</div>
-</div>
+<div class="d-it">&lt;cExp&gt;    Any hopefully valid expression; often a filter string</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>.T. if the expression is understood by ADS.</div>
-</div>
+<div class="d-it">.T. if the expression is understood by ADS.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>ADS has its own limitations for the logical or string expressions used in indexes, filters, scopes, etc. Unlike internal RDDs like DBFNTX, the server is independent of the applications code, so it cannot understand references to PUBLIC variables or User-Defined Functions (UDFs). (See ace.hlp under Advantage Expression Engine for a list of functions allowed by ADS.) Call AdsIsExprValid() to determine if the server can process the expression.</div>
   <div><p>For illustration, consider filter expressions. Since Harbour attempts to be as compatible with Clipper as possible, you CAN set a filter that ADS DOES NOT understand, but the filtering will be done by the RDD layer itself and ADS will be unaware of the filter setting. This means more data will be sent &quot;across the wire&quot; from the server to the client, and the client (in rddads) will be doing the processing. Since the value of a database server is to have more processing done by the server itself to reduce network traffic, it is better to only use filter expressions ADS can understand.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>Available on Windows</div>
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 </section>
 
 <section id="adsisindexed">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsIsIndexed()</code></h4>
-<div class="d-ol">
-  <div>Fast determination for if current workarea has a selected index</div>
-</div>
+<div class="d-ol">Fast determination for if current workarea has a selected index</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsIsIndexed() &rarr; lActiveIndex</code></div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;lActiveIndex&gt;</div>
-</div>
+<div class="d-it">&lt;lActiveIndex&gt;</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>Equivalent to <strong>Empty( ordSetFocus() )</strong>, but faster.</div>
-</div>
+<div class="d-it">Equivalent to <strong>Empty( ordSetFocus() )</strong>, but faster.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>Available on Windows</div>
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads</div>
-</div>
+<div class="d-it">Library is rddads</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 </section>
 
 <section id="adsisrecordinaof">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsIsRecordInAOF()</code></h4>
-<div class="d-ol">
-  <div>Determine if a record is in the current AOF</div>
-</div>
+<div class="d-ol">Determine if a record is in the current AOF</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsIsRecordInAOF( [&lt;nRecNo&gt;] ) &rarr; lSatisfiesFilter</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;nRecNo&gt;         Record number to test. Default is current record.</div>
-</div>
+<div class="d-it">&lt;nRecNo&gt;         Record number to test. Default is current record.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>True if the record satisfies the filter criteria.</div>
-</div>
+<div class="d-it">True if the record satisfies the filter criteria.</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>See ace.hlp for full details about the Advantage Database Server.</div>
-</div>
+<div class="d-it">See ace.hlp for full details about the Advantage Database Server.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on Windows</div>
-</div>
+<div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsClearAOF">AdsClearAOF()</a></code>, <code><a href="#AdsRefreshAOF">AdsRefreshAOF()</a></code></div>
 </section>
 
 <section id="adskeycount">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsKeyCount()</code></h4>
-<div class="d-ol">
-  <div>Retrieve the number of keys in a specified index</div>
-</div>
+<div class="d-ol">Retrieve the number of keys in a specified index</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsKeyCount( [&lt;xTag&gt;], &lt;cIgnoredIndexFile&gt;, [&lt;nFilterOption&gt;] ) &rarr; nKeyCount</code></div>
 <div class="d-d">Argument(s)</div>
@@ -1052,42 +706,26 @@ ENDIF
   <div></div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;nKeyCount&gt;  The number of keys within the current index.</div>
-</div>
+<div class="d-it">&lt;nKeyCount&gt;  The number of keys within the current index.</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>See ace.hlp for full details about the Advantage Database Server.</div>
-</div>
+<div class="d-it">See ace.hlp for full details about the Advantage Database Server.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on Windows</div>
-</div>
+<div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsKeyNo">AdsKeyNo()</a></code>, <code><a href="#AdsGetRelKeyPos">AdsGetRelKeyPos()</a></code></div>
 </section>
 
 <section id="adskeyno">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsKeyNo()</code></h4>
-<div class="d-ol">
-  <div>Get the logical key number of the current record in the given index</div>
-</div>
+<div class="d-ol">Get the logical key number of the current record in the given index</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsKeyNo( [&lt;xTag&gt;], &lt;cIgnoredIndexFile&gt;, [&lt;nFilterOption&gt;] ) &rarr; nKeyNo</code></div>
 <div class="d-d">Argument(s)</div>
@@ -1104,52 +742,32 @@ ENDIF
   <div></div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;nKeyNo&gt;   The logical key number of the current record in the given index.</div>
-</div>
+<div class="d-it">&lt;nKeyNo&gt;   The logical key number of the current record in the given index.</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>See ace.hlp for full details about the Advantage Database Server. Wrapper for AdsGetKeyNum. This function may be slow on a large database with ADS_RESPECTFILTERS set because it walks through the keys to get the current position.  Compare to AdsGetRelKeyPos().</div>
-</div>
+<div class="d-it">See ace.hlp for full details about the Advantage Database Server. Wrapper for AdsGetKeyNum. This function may be slow on a large database with ADS_RESPECTFILTERS set because it walks through the keys to get the current position.  Compare to AdsGetRelKeyPos().</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on Windows</div>
-</div>
+<div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsKeyCount">AdsKeyCount()</a></code>, <code><a href="#AdsGetRelKeyPos">AdsGetRelKeyPos()</a></code></div>
 </section>
 
 <section id="adslocking">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsLocking()</code></h4>
-<div class="d-ol">
-  <div>Turns on/off the Advantage proprietary locking mode</div>
-</div>
+<div class="d-ol">Turns on/off the Advantage proprietary locking mode</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsLocking( &lt;lMode&gt; ) &rarr; lPriorSetting</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;lMode&gt;    .T. to use the Advantage proprietary locking mode (this is the default setting if a remote server is used) or pass .F. to use &quot;compatibility&quot; locking.</div>
-</div>
+<div class="d-it">&lt;lMode&gt;    .T. to use the Advantage proprietary locking mode (this is the default setting if a remote server is used) or pass .F. to use &quot;compatibility&quot; locking.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;lPriorSetting&gt;   .T. if prior setting was for the proprietary mode.</div>
-</div>
+<div class="d-it">&lt;lPriorSetting&gt;   .T. if prior setting was for the proprietary mode.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>See ace.hlp for full details about the Advantage Database Server. The Advantage Database Server has a fast Proprietary locking mode that is more efficient than traditional network locking. It is only available when using the remote server (not the local server).</div>
@@ -1157,91 +775,55 @@ ENDIF
   <div><p>AdsLocking() is a Get/Set function for the locking mode. It affects files at the time they are opened. So when a data file is opened, the current setting is used for that file until it is closed. Different files can have different locking modes by changing the setting before opening a second file.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on Windows</div>
-</div>
+<div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsRightsCheck">AdsRightsCheck()</a></code></div>
 </section>
 
 <section id="adsrefreshaof">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsRefreshAOF()</code></h4>
-<div class="d-ol">
-  <div>Update the filter snapshot</div>
-</div>
+<div class="d-ol">Update the filter snapshot</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsRefreshAOF()</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>None</div>
-</div>
+<div class="d-it">None</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>See ace.hlp for full details about the Advantage Database Server. If record updates occur after an AOF is set, the updated records may or may not be valid records for the filter. AdsRefreshAOF() re-evaluates the data to include or exclude changed records.</div>
-</div>
+<div class="d-it">See ace.hlp for full details about the Advantage Database Server. If record updates occur after an AOF is set, the updated records may or may not be valid records for the filter. AdsRefreshAOF() re-evaluates the data to include or exclude changed records.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on Windows</div>
-</div>
+<div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsClearAOF">AdsClearAOF()</a></code>, <code><a href="#AdsIsRecordInAOF">AdsIsRecordInAOF()</a></code>, <code><a href="#AdsSetAOF">AdsSetAOF()</a></code></div>
 </section>
 
 <section id="adsregcallback">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsRegCallback()</code></h4>
-<div class="d-ol">
-  <div>For Progress displays: Sets a codeblock to be called during indexing</div>
-</div>
+<div class="d-ol">For Progress displays: Sets a codeblock to be called during indexing</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsRegCallback( &lt;bEval&gt; )  &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;bEval&gt;    The codeblock that is eval'ed every 2 seconds during indexing. A numeric value of the &quot;percent completed&quot; is passed to the codeblock by the ADS server. The codeblock should return a logical value: .T. to abort or .F. to not stop indexing.</div>
-</div>
+<div class="d-it">&lt;bEval&gt;    The codeblock that is eval'ed every 2 seconds during indexing. A numeric value of the &quot;percent completed&quot; is passed to the codeblock by the ADS server. The codeblock should return a logical value: .T. to abort or .F. to not stop indexing.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>See ace.hlp for full details on AdsRegisterProgressCallback(). ace32.dll does not support the EVAL/EVERY clauses. Remember, there is an external process doing the indexing that knows nothing of Harbour expressions or codeblocks. Even with Local Server it's the DLLs doing all the indexing. So to do progress meters you need to implement this.</div>
-</div>
+<div class="d-it">See ace.hlp for full details on AdsRegisterProgressCallback(). ace32.dll does not support the EVAL/EVERY clauses. Remember, there is an external process doing the indexing that knows nothing of Harbour expressions or codeblocks. Even with Local Server it's the DLLs doing all the indexing. So to do progress meters you need to implement this.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 #include &quot;inkey.ch&quot;
@@ -1260,79 +842,53 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
    RETURN hb_keyStd( Inkey() ) == K_ESC  /* If press ESC, returns .T. to abort. */
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>Available on Windows</div>
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsClrCallback">AdsClrCallback()</a></code></div>
 </section>
 
 <section id="adsrightscheck">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsRightsCheck()</code></h4>
-<div class="d-ol">
-  <div>Sets the &quot;rights checking&quot; setting for opening files</div>
-</div>
+<div class="d-ol">Sets the &quot;rights checking&quot; setting for opening files</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsRightsCheck( &lt;lMode&gt; ) &rarr; lPriorSetting</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;lMode&gt;    .T. to check rights upon opening data files (the default), or .F. to ignore rights</div>
-</div>
+<div class="d-it">&lt;lMode&gt;    .T. to check rights upon opening data files (the default), or .F. to ignore rights</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;lPriorSetting&gt;</div>
-</div>
+<div class="d-it">&lt;lPriorSetting&gt;</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>See ace.hlp for full details about the Advantage Database Server. AdsRightsCheck() is a Get/Set function for the &quot;rights checking&quot; mode. If the setting is .T. when a file is opened, then the Advantage Database Server will use the rights of the connected user when opening the file. If the user does not have rights to the directory or server, then the open call will fail.</div>
   <div><p>If the setting is .F., then the ADS will ignore the connected user's rights and open the file regardless. This lets you allow only Advantage-based applications to access specific data.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on Windows</div>
-</div>
+<div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsLocking">AdsLocking()</a></code></div>
 </section>
 
 <section id="adssetaof">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsSetAOF()</code></h4>
-<div class="d-ol">
-  <div>Create an Advantage Optimized Filter</div>
-</div>
+<div class="d-ol">Create an Advantage Optimized Filter</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsSetAOF( &lt;cFilter&gt; [, &lt;nResolveOption&gt;] ) &rarr; lSuccess</code></div>
 <div class="d-d">Argument(s)</div>
@@ -1341,308 +897,192 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
   <div>&lt;nResolveOption&gt;  Option to indicate how the filter should be resolved in the event that the expression cannot be fully optimized. Options are defined in ads.ch: ADS_RESOLVE_IMMEDIATE, ADS_RESOLVE_DYNAMIC.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;lSuccess&gt;   True if AOF is created.</div>
-</div>
+<div class="d-it">&lt;lSuccess&gt;   True if AOF is created.</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>See ace.hlp for full details about the Advantage Database Server.</div>
-</div>
+<div class="d-it">See ace.hlp for full details about the Advantage Database Server.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on Windows</div>
-</div>
+<div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsClearAOF">AdsClearAOF()</a></code>, <code><a href="#AdsIsRecordInAOF">AdsIsRecordInAOF()</a></code>, <code><a href="#AdsRefreshAOF">AdsRefreshAOF()</a></code></div>
 </section>
 
 <section id="adssetchartype">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsSetCharType()</code></h4>
-<div class="d-ol">
-  <div>Sets the type of character data expected when opening tables.</div>
-</div>
+<div class="d-ol">Sets the type of character data expected when opening tables.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsSetCharType( &lt;nCharType&gt;, [lOEM] ) &rarr; nPriorSetting</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;nCharType&gt;    Type of character data in the table. From ADS docs: Options are ADS_ANSI and ADS_OEM. This indicates the type of character data to be stored in the table. For compatibility with DOS-based CA-Cl*pper applications, ADS_OEM should be specified. When usTableType is ADS_ADT, this parameter is ignored and ANSI is always used. &lt;lOEM&gt; This parameter used for console mode applications, when character data stored in OEM charset. If lOEM is passed as .T., rddads doesn't convert character data into ANSI charset.</div>
-</div>
+<div class="d-it">&lt;nCharType&gt;    Type of character data in the table. From ADS docs: Options are ADS_ANSI and ADS_OEM. This indicates the type of character data to be stored in the table. For compatibility with DOS-based CA-Cl*pper applications, ADS_OEM should be specified. When usTableType is ADS_ADT, this parameter is ignored and ANSI is always used. &lt;lOEM&gt; This parameter used for console mode applications, when character data stored in OEM charset. If lOEM is passed as .T., rddads doesn't convert character data into ANSI charset.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;nPriorSetting&gt;</div>
-</div>
+<div class="d-it">&lt;nPriorSetting&gt;</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>See ace.hlp for full details about the Advantage Database Server. This sets the usCharType parameter used when ADS opens a table.</div>
-</div>
+<div class="d-it">See ace.hlp for full details about the Advantage Database Server. This sets the usCharType parameter used when ADS opens a table.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>Available on Windows</div>
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsRightsCheck">AdsRightsCheck()</a></code>, <code><a href="#AdsLocking">AdsLocking()</a></code>, <code><a href="#AdsSetFileType">AdsSetFileType()</a></code></div>
 </section>
 
 <section id="adssetdefault">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsSetDefault() *</code></h4>
-<div class="d-ol">
-  <div>Get/Set function for ADS's DEFAULT setting.</div>
-</div>
+<div class="d-ol">Get/Set function for ADS's DEFAULT setting.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsSetDefault( [&lt;cPath&gt;] ) &rarr; cPriorSetting</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cPath&gt;    Sets new value if passed.</div>
-</div>
+<div class="d-it">&lt;cPath&gt;    Sets new value if passed.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;cPriorSetting&gt;</div>
-</div>
+<div class="d-it">&lt;cPriorSetting&gt;</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>This function is NOT recommended! It allows direct access to the ADS internal equivalent to SET DEFAULT TO. But this setting is automatically maintained by Harbour's Set() function and the SET DEFAULT TO command, so normal programming will not use this. It exists primarily for testing purposes.</div>
-</div>
+<div class="d-it">This function is NOT recommended! It allows direct access to the ADS internal equivalent to SET DEFAULT TO. But this setting is automatically maintained by Harbour's Set() function and the SET DEFAULT TO command, so normal programming will not use this. It exists primarily for testing purposes.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>Available on Windows</div>
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 </section>
 
 <section id="adssetdeleted">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsSetDeleted() *</code></h4>
-<div class="d-ol">
-  <div>Get/Set function for ADS's ShowDeleted() setting.</div>
-</div>
+<div class="d-ol">Get/Set function for ADS's ShowDeleted() setting.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsSetDeleted( [&lt;lOnOff&gt;] ) &rarr; lPriorSetting</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;lOnOff&gt;    Sets new value if passed. The value is parallel to Harbour usage, so pass .F. to see deleted records or .T. to hide them. (This is inverted from ADS's AdsShowDeleted() syntax.)</div>
-</div>
+<div class="d-it">&lt;lOnOff&gt;    Sets new value if passed. The value is parallel to Harbour usage, so pass .F. to see deleted records or .T. to hide them. (This is inverted from ADS's AdsShowDeleted() syntax.)</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;lPriorSetting&gt;</div>
-</div>
+<div class="d-it">&lt;lPriorSetting&gt;</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>This function is NOT recommended! It allows direct access to the ADS internal equivalent to SET DELETED. But this setting is automatically maintained by Harbour's Set() function and the SET DELETED ON/OFF command, so normal programming will not use this. It exists primarily for testing purposes.</div>
-</div>
+<div class="d-it">This function is NOT recommended! It allows direct access to the ADS internal equivalent to SET DELETED. But this setting is automatically maintained by Harbour's Set() function and the SET DELETED ON/OFF command, so normal programming will not use this. It exists primarily for testing purposes.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>Available on Windows</div>
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 </section>
 
 <section id="adssetexact">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsSetExact() *</code></h4>
-<div class="d-ol">
-  <div>Get/Set function for ADS's AdsSetExact() setting.</div>
-</div>
+<div class="d-ol">Get/Set function for ADS's AdsSetExact() setting.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsSetExact( [&lt;lOnOff&gt;] ) &rarr; lPriorSetting</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;lOnOff&gt;    Sets new value if passed.</div>
-</div>
+<div class="d-it">&lt;lOnOff&gt;    Sets new value if passed.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;lPriorSetting&gt;</div>
-</div>
+<div class="d-it">&lt;lPriorSetting&gt;</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>This function is NOT recommended! It allows direct access to the ADS internal equivalent to SET EXACT. But this setting is automatically maintained by Harbour's Set() function and the SET EXACT ON/OFF command, so normal programming will not use this. It exists primarily for testing purposes.</div>
-</div>
+<div class="d-it">This function is NOT recommended! It allows direct access to the ADS internal equivalent to SET EXACT. But this setting is automatically maintained by Harbour's Set() function and the SET EXACT ON/OFF command, so normal programming will not use this. It exists primarily for testing purposes.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>Available on Windows</div>
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 </section>
 
 <section id="adssetrelkeypos">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsSetRelKeyPos()</code></h4>
-<div class="d-ol">
-  <div>GoTo the given estimated key position within the current index</div>
-</div>
+<div class="d-ol">GoTo the given estimated key position within the current index</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>ADSSetSelKeyPos( &lt;nPercent&gt; ) &rarr; nError</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;nPercent&gt;  Relative key position between 0.0 and 1.0, inclusive.</div>
-</div>
+<div class="d-it">&lt;nPercent&gt;  Relative key position between 0.0 and 1.0, inclusive.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>The return/error value of the ADS API call.</div>
-</div>
+<div class="d-it">The return/error value of the ADS API call.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>This function moves the record pointer to the estimated relative position within the current index order, respecting any scope setting. It also works with no active index to go to the relative position of the current record number.</div>
   <div><p>This is the recommended function for re-positioning in reaction to a dragged scrollbar thumb or other &quot;coarse&quot; navigation interface. See ace.hlp for full details about the Advantage Database Server.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on Windows</div>
-</div>
+<div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#AdsKeyNo">AdsKeyNo()</a></code>, <code><a href="#AdsKeyCount">AdsKeyCount()</a></code>, <code><a href="#AdsGetRelKeyPos">AdsGetRelKeyPos()</a></code></div>
 </section>
 
 <section id="adssetsearchpath">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsSetSearchPath() *</code></h4>
-<div class="d-ol">
-  <div>Get/Set function for ADS's AdsSetSearchPath() setting.</div>
-</div>
+<div class="d-ol">Get/Set function for ADS's AdsSetSearchPath() setting.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsSetSearchPath( [&lt;cPath&gt;] ) &rarr; cPriorSetting</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cPath&gt;     Sets new value if passed.</div>
-</div>
+<div class="d-it">&lt;cPath&gt;     Sets new value if passed.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;cPriorSetting&gt;</div>
-</div>
+<div class="d-it">&lt;cPriorSetting&gt;</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>This function is NOT recommended! It allows direct access to the ADS AdsSetSearchPath() setting. But this setting is automatically maintained by Harbour's Set() function and the SET PATH command, so normal programming will not use this. It exists primarily for testing purposes.</div>
-</div>
+<div class="d-it">This function is NOT recommended! It allows direct access to the ADS AdsSetSearchPath() setting. But this setting is automatically maintained by Harbour's Set() function and the SET PATH command, so normal programming will not use this. It exists primarily for testing purposes.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>Available on Windows</div>
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 </section>
 
 <section id="adstestreclocks">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfuncs.txt" class="edit-page"> Improve this doc</a><h4><code>AdsTestRecLocks()</code></h4>
-<div class="d-ol">
-  <div>Turn On or Off a &quot;debug mode&quot; for trapping missed record locks.</div>
-</div>
+<div class="d-ol">Turn On or Off a &quot;debug mode&quot; for trapping missed record locks.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>AdsTestRecLocks( &lt;lOnOff&gt; ) &rarr; lPriorSetting</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;lOnOff&gt;    New setting. Default is FALSE.</div>
-</div>
+<div class="d-it">&lt;lOnOff&gt;    New setting. Default is FALSE.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>Prior Setting.</div>
-</div>
+<div class="d-it">Prior Setting.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>AdsTestRecLocks() is a Get/Set function for a &quot;record lock checking&quot; mode. ADS has Implicit Record locking that can mask programming errors. Implicit locking can occur the first time a value is written to a field with no lock in effect. The lock can potentially remain in effect indefinitely if the record pointer is not moved, causing bugs later in program execution that are hard to find. In Harbour internal RDDs, a runtime error occurs if an attempt is made to write to a shared file without a proper lock.</div>
@@ -1650,31 +1090,23 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
   <div><p>See ace.hlp for full details about the Advantage Database Server.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>Harbour extension</div>
-</div>
+<div class="d-it">Harbour extension</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">
   <div>Available on Windows</div>
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is rddads Header is ads.ch</div>
-</div>
+<div class="d-it">Library is rddads Header is ads.ch</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Advantage Database RDD</div>
-</div>
+<div class="d-it">Advantage Database RDD</div>
 </section>
 
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-27 02:00 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/ca07f12">ca07f12</a></div>
+<div>Generated by hbdoc on 2016-10-27 10:16 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/407fe82">407fe82</a></div>
 </footer>

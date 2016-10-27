@@ -22,9 +22,7 @@
 
 <section id="thegdlibrary">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4>The GD Library</h4>
-<div class="d-ol">
-  <div>Read me file for GD Library</div>
-</div>
+<div class="d-ol">Read me file for GD Library</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>HBGD is basically a wrapper of Thomas Boutell's GD Library version 2.0.33. GD Library is a powerfull graphic library very usefull expecially under CGI environment.</div>
@@ -38,28 +36,20 @@
   <div><p>NOTE: Not all functions are wrapped.</div>
 </div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>Document</div>
-</div>
+<div class="d-it">Document</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#Alphabetical-list-of-functions">Alphabetical list of functions</a></code>, <code><a href="#Categorized-list-of-functions">Categorized list of functions</a></code>, <code><a href="#GDImage-Class">GDImage Class</a></code>, <code><a href="#GDChart-Class.">GDChart Class.</a></code></div>
 </section>
 
 <section id="gdimagearc">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageArc()</code></h4>
-<div class="d-ol">
-  <div>Draws a partial ellipse centered at a given point.</div>
-</div>
+<div class="d-ol">Draws a partial ellipse centered at a given point.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageArc( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;s&gt;, &lt;e&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;cx&gt;           - center point horizontal position &lt;cy&gt;           - center point vertical position &lt;w&gt;            - width &lt;h&gt;            - height &lt;s&gt;            - start degree &lt;e&gt;            - end degree &lt;nColor&gt;       - Color index</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;cx&gt;           - center point horizontal position &lt;cy&gt;           - center point vertical position &lt;w&gt;            - width &lt;h&gt;            - height &lt;s&gt;            - start degree &lt;e&gt;            - end degree &lt;nColor&gt;       - Color index</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageArc() is used to draw a partial ellipse centered at the given point, with the specified width and height in pixels. The arc begins at the position in degrees specified by s and ends at the position specified by e. The arc is drawn in the color specified by the last argument. A circle can be drawn by beginning from 0 degrees and ending at 360 degrees, with width and height being equal. &lt;e&gt; must be greater than &lt;s&gt;. Values greater than 360 are interpreted modulo 360.</div>
@@ -86,40 +76,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code></div>
 </section>
 
 <section id="gdimagecreate">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageCreate()</code></h4>
-<div class="d-ol">
-  <div>Create a palette-based image in memory with no more that 256 colors.</div>
-</div>
+<div class="d-ol">Create a palette-based image in memory with no more that 256 colors.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageCreate( &lt;nPixelWidth&gt;, &lt;nPixelHeight&gt; ) &rarr; &lt;pImage&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;nPixelWidth&gt;  - image width &lt;nPixelHeight&gt; - image height</div>
-</div>
+<div class="d-it">&lt;nPixelWidth&gt;  - image width &lt;nPixelHeight&gt; - image height</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageCreate() creates an empty image in memory. This image has no more than 256 colors.</div>
@@ -135,40 +111,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreateTrueColor">gdImageCreateTrueColor()</a></code></div>
 </section>
 
 <section id="gdimagecreatefromgd">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageCreateFromGD()</code></h4>
-<div class="d-ol">
-  <div>Load a GD image file.</div>
-</div>
+<div class="d-ol">Load a GD image file.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageCreateFromGD( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) &rarr; &lt;pImage&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;pPointer&gt;     - Memory image pointer &lt;nSize&gt;        - Image size</div>
-</div>
+<div class="d-it">&lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;pPointer&gt;     - Memory image pointer &lt;nSize&gt;        - Image size</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageCreateFromGD() creates a GD image from a file or a handle or another image in memory.</div>
@@ -191,40 +153,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageCreateTrueColor">gdImageCreateTrueColor()</a></code>, <code><a href="#gdImageCreateFromJpeg">gdImageCreateFromJpeg()</a></code>, <code><a href="#gdImageCreateFromGif">gdImageCreateFromGif()</a></code>, <code><a href="#gdImageCreateFromPng">gdImageCreateFromPng()</a></code>, <code><a href="#gdImageCreateFromWBmp">gdImageCreateFromWBmp()</a></code></div>
 </section>
 
 <section id="gdimagecreatefromgif">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageCreateFromGif()</code></h4>
-<div class="d-ol">
-  <div>Load a Gif image file.</div>
-</div>
+<div class="d-ol">Load a Gif image file.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageCreateFromGif( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) &rarr; &lt;pImage&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;pPointer&gt;     - Memory image pointer &lt;nSize&gt;        - Image size</div>
-</div>
+<div class="d-it">&lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;pPointer&gt;     - Memory image pointer &lt;nSize&gt;        - Image size</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageCreateFromGif() creates a GIF image from a file or a handle or another image in memory.</div>
@@ -247,40 +195,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageCreateTrueColor">gdImageCreateTrueColor()</a></code>, <code><a href="#gdImageCreateFromJpeg">gdImageCreateFromJpeg()</a></code>, <code><a href="#gdImageCreateFromPng">gdImageCreateFromPng()</a></code>, <code><a href="#gdImageCreateFromGD">gdImageCreateFromGD()</a></code>, <code><a href="#gdImageCreateFromWBmp">gdImageCreateFromWBmp()</a></code></div>
 </section>
 
 <section id="gdimagecreatefromjpeg">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageCreateFromJpeg()</code></h4>
-<div class="d-ol">
-  <div>Load a JPEG image file.</div>
-</div>
+<div class="d-ol">Load a JPEG image file.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageCreateFromJpeg( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) &rarr; &lt;pImage&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;pPointer&gt;     - Memory image pointer &lt;nSize&gt;        - Image size</div>
-</div>
+<div class="d-it">&lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;pPointer&gt;     - Memory image pointer &lt;nSize&gt;        - Image size</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageCreateFromJpeg() creates a JPEG image from a file or a handle or another image in memory.</div>
@@ -303,40 +237,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageCreateTrueColor">gdImageCreateTrueColor()</a></code>, <code><a href="#gdImageCreateFromGif">gdImageCreateFromGif()</a></code>, <code><a href="#gdImageCreateFromPng">gdImageCreateFromPng()</a></code>, <code><a href="#gdImageCreateFromGD">gdImageCreateFromGD()</a></code>, <code><a href="#gdImageCreateFromWBmp">gdImageCreateFromWBmp()</a></code></div>
 </section>
 
 <section id="gdimagecreatefrompng">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageCreateFromPng()</code></h4>
-<div class="d-ol">
-  <div>Load a PNG image file.</div>
-</div>
+<div class="d-ol">Load a PNG image file.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageCreateFromPng( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) &rarr; &lt;pImage&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;pPointer&gt;     - Memory image pointer &lt;nSize&gt;        - Image size</div>
-</div>
+<div class="d-it">&lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;pPointer&gt;     - Memory image pointer &lt;nSize&gt;        - Image size</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageCreateFromPng() creates a PNG image from a file or a handle or another image in memory.</div>
@@ -359,40 +279,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageCreateTrueColor">gdImageCreateTrueColor()</a></code>, <code><a href="#gdImageCreateFromJpeg">gdImageCreateFromJpeg()</a></code>, <code><a href="#gdImageCreateFromGif">gdImageCreateFromGif()</a></code>, <code><a href="#gdImageCreateFromGD">gdImageCreateFromGD()</a></code>, <code><a href="#gdImageCreateFromWBmp">gdImageCreateFromWBmp()</a></code></div>
 </section>
 
 <section id="gdimagecreatefromwbmp">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageCreateFromWBmp()</code></h4>
-<div class="d-ol">
-  <div>Load a WBmp image file.</div>
-</div>
+<div class="d-ol">Load a WBmp image file.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageCreateFromWBmp( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) &rarr; &lt;pImage&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;pPointer&gt;     - Memory image pointer &lt;nSize&gt;        - Image size</div>
-</div>
+<div class="d-it">&lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;pPointer&gt;     - Memory image pointer &lt;nSize&gt;        - Image size</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageCreateFromWBmp() creates a WBmp image from a file or a handle or another image in memory.</div>
@@ -415,40 +321,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageCreateTrueColor">gdImageCreateTrueColor()</a></code>, <code><a href="#gdImageCreateFromJpeg">gdImageCreateFromJpeg()</a></code>, <code><a href="#gdImageCreateFromGif">gdImageCreateFromGif()</a></code>, <code><a href="#gdImageCreateFromPng">gdImageCreateFromPng()</a></code>, <code><a href="#gdImageCreateFromGD">gdImageCreateFromGD()</a></code></div>
 </section>
 
 <section id="gdimagecreatetruecolor">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageCreateTrueColor()</code></h4>
-<div class="d-ol">
-  <div>Create a true color image in memory.</div>
-</div>
+<div class="d-ol">Create a true color image in memory.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageCreateTrueColor( &lt;nPixelWidth&gt;, &lt;nPixelHeight&gt; ) &rarr; &lt;pImage&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;nPixelWidth&gt;  - image width &lt;nPixelHeight&gt; - image height</div>
-</div>
+<div class="d-it">&lt;nPixelWidth&gt;  - image width &lt;nPixelHeight&gt; - image height</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageCreateTrueColor() creates an empty image in memory. This image has true colors.</div>
@@ -464,40 +356,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code></div>
 </section>
 
 <section id="gdimagedashedline">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageDashedLine()</code></h4>
-<div class="d-ol">
-  <div>Draws a dashed line between two end points (x1, y1 and x2, y2) with a particular color index.</div>
-</div>
+<div class="d-ol">Draws a dashed line between two end points (x1, y1 and x2, y2) with a particular color index.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageDashedLine( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;x1&gt;           - 1st point horizontal position &lt;y1&gt;           - 1st point vertical position &lt;x2&gt;           - 2nd point horizontal position &lt;y2&gt;           - 2nd point vertical position &lt;nColor&gt;       - Color index</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;x1&gt;           - 1st point horizontal position &lt;y1&gt;           - 1st point vertical position &lt;x2&gt;           - 2nd point horizontal position &lt;y2&gt;           - 2nd point vertical position &lt;nColor&gt;       - Color index</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageDashedLine() Draws a dashed line between two end points (x1, y1 and x2, y2) with a particular color index.</div>
@@ -524,40 +402,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code></div>
 </section>
 
 <section id="gdimagefill">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageFill()</code></h4>
-<div class="d-ol">
-  <div>floods a portion of the image with the specified color.</div>
-</div>
+<div class="d-ol">floods a portion of the image with the specified color.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageFill( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;x&gt;            - start point horizontal position &lt;y&gt;            - start point vertical position &lt;nColor&gt;       - Color index of filling color</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;x&gt;            - start point horizontal position &lt;y&gt;            - start point vertical position &lt;nColor&gt;       - Color index of filling color</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageFill() floods a portion of the image with the specified color, beginning at the specified point and flooding the surrounding region of the same color as the starting point. For a way of flooding a region defined by a specific border color rather than by its interior color, see gdImageFillToBorder(). The fill color can be gdTiled, resulting in a tile fill using another image as the tile. However, the tile image cannot be transparent. If the image you wish to fill with has a transparent color index, call gdImageTransparent on the tile image and set the transparent color index to -1 to turn off its transparency.</div>
@@ -588,40 +452,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code>, <code><a href="#gdImageArc">gdImageArc()</a></code></div>
 </section>
 
 <section id="gdimagefilledarc">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageFilledArc()</code></h4>
-<div class="d-ol">
-  <div>Draws a partial filled ellipse centered at a given point.</div>
-</div>
+<div class="d-ol">Draws a partial filled ellipse centered at a given point.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageArc( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;s&gt;, &lt;e&gt;, &lt;nColor&gt;, &lt;nStyle&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;cx&gt;           - center point horizontal position &lt;cy&gt;           - center point vertical position &lt;w&gt;            - width &lt;h&gt;            - height &lt;s&gt;            - start degree &lt;e&gt;            - end degree &lt;nColor&gt;       - Color index &lt;nStyle&gt;       - fill style</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;cx&gt;           - center point horizontal position &lt;cy&gt;           - center point vertical position &lt;w&gt;            - width &lt;h&gt;            - height &lt;s&gt;            - start degree &lt;e&gt;            - end degree &lt;nColor&gt;       - Color index &lt;nStyle&gt;       - fill style</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageFilledArc() is used to draw a partial ellipse centered at the given point, with the specified width and height in pixels. The arc begins at the position in degrees specified by s and ends at the position specified by e. The arc is drawn in the color specified by the last argument. A circle can be drawn by beginning from 0 degrees and ending at 360 degrees, with width and height being equal. &lt;e&gt; must be greater than &lt;s&gt;. Values greater than 360 are interpreted modulo 360.</div>
@@ -653,40 +503,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code></div>
 </section>
 
 <section id="gdimagefilledellipse">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageFilledEllipse()</code></h4>
-<div class="d-ol">
-  <div>Draws a filled ellipse centered at a given point.</div>
-</div>
+<div class="d-ol">Draws a filled ellipse centered at a given point.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageFilledEllipse( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;cx&gt;           - center point horizontal position &lt;cy&gt;           - center point vertical position &lt;w&gt;            - width &lt;h&gt;            - height &lt;nColor&gt;       - Color index</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;cx&gt;           - center point horizontal position &lt;cy&gt;           - center point vertical position &lt;w&gt;            - width &lt;h&gt;            - height &lt;nColor&gt;       - Color index</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageFilledEllipse() is used to draw a filled ellipse centered at the given point, with the specified width and height in pixels.</div>
@@ -713,30 +549,20 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code></div>
 </section>
 
 <section id="gdimagefilledpolygon">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageFilledPolygon()</code></h4>
-<div class="d-ol">
-  <div>Draws a filled polygon with verticies (at least 3) with a particular color index.</div>
-</div>
+<div class="d-ol">Draws a filled polygon with verticies (at least 3) with a particular color index.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageFilledPolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
@@ -746,9 +572,7 @@ PROCEDURE Main()
   <div>&lt;nColor&gt;       - Color index</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageFilledPolygon() Draws a filled polygon with verticies (at least 3) with a particular color index.</div>
@@ -779,40 +603,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code></div>
 </section>
 
 <section id="gdimagefilledrectangle">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageFilledRectangle()</code></h4>
-<div class="d-ol">
-  <div>Draws a filled rectangle with a particular color index.</div>
-</div>
+<div class="d-ol">Draws a filled rectangle with a particular color index.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageFilledRectangle( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;x1&gt;           - upper left point horizontal position &lt;y1&gt;           - upper left point vertical position &lt;x2&gt;           - lower right point horizontal position &lt;y2&gt;           - lower right point vertical position &lt;nColor&gt;       - Color index</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;x1&gt;           - upper left point horizontal position &lt;y1&gt;           - upper left point vertical position &lt;x2&gt;           - lower right point horizontal position &lt;y2&gt;           - lower right point vertical position &lt;nColor&gt;       - Color index</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageFilledRectangle() draws a filled rectangle between 2 points with a particular color index.</div>
@@ -839,40 +649,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code></div>
 </section>
 
 <section id="gdimagefilltoborder">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageFillToBorder()</code></h4>
-<div class="d-ol">
-  <div>floods a portion of the image with the specified color.</div>
-</div>
+<div class="d-ol">floods a portion of the image with the specified color.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageFillToBorder( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nBorder&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;x&gt;            - start point horizontal position &lt;y&gt;            - start point vertical position &lt;nBorder&gt;      - Color index where fill stops &lt;nColor&gt;       - Color index of filling color</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;x&gt;            - start point horizontal position &lt;y&gt;            - start point vertical position &lt;nBorder&gt;      - Color index where fill stops &lt;nColor&gt;       - Color index of filling color</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageFillToBorder() floods a portion of the image with the specified color, beginning at the specified point and stopping at the specified border color. For a way of flooding an area defined by the color of the starting point, see gdImageFill().</div>
@@ -903,40 +699,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code>, <code><a href="#gdImageArc">gdImageArc()</a></code></div>
 </section>
 
 <section id="gdimagegd">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageGD()</code></h4>
-<div class="d-ol">
-  <div>Save a GD image.</div>
-</div>
+<div class="d-ol">Save a GD image.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageGD( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageGD() saves a GD image to a file or a handle.</div>
@@ -956,40 +738,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreateFromGif">gdImageCreateFromGif()</a></code></div>
 </section>
 
 <section id="gdimagegif">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageGif()</code></h4>
-<div class="d-ol">
-  <div>Save a GIF image.</div>
-</div>
+<div class="d-ol">Save a GIF image.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageGif( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageGif() saves a GIF image to a file or a handle.</div>
@@ -1009,30 +777,20 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreateFromJpeg">gdImageCreateFromJpeg()</a></code></div>
 </section>
 
 <section id="gdimagejpeg">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageJpeg()</code></h4>
-<div class="d-ol">
-  <div>Save a JPEG image.</div>
-</div>
+<div class="d-ol">Save a JPEG image.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageJpeg( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nCompressionLevel&gt; ] ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
@@ -1041,9 +799,7 @@ PROCEDURE Main()
   <div>default is -1=auto</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageJpeg() saves a JPEG image to a file or a handle.</div>
@@ -1063,40 +819,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreateFromGif">gdImageCreateFromGif()</a></code></div>
 </section>
 
 <section id="gdimageline">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageLine()</code></h4>
-<div class="d-ol">
-  <div>Draws a line between two end points (x1, y1 and x2, y2) with a particular color index.</div>
-</div>
+<div class="d-ol">Draws a line between two end points (x1, y1 and x2, y2) with a particular color index.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageLine( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;x1&gt;           - 1st point horizontal position &lt;y1&gt;           - 1st point vertical position &lt;x2&gt;           - 2nd point horizontal position &lt;y2&gt;           - 2nd point vertical position &lt;nColor&gt;       - Color index</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;x1&gt;           - 1st point horizontal position &lt;y1&gt;           - 1st point vertical position &lt;x2&gt;           - 2nd point horizontal position &lt;y2&gt;           - 2nd point vertical position &lt;nColor&gt;       - Color index</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageLine() Draws a line between two end points (x1, y1 and x2, y2) with a particular color index.</div>
@@ -1123,30 +865,20 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code></div>
 </section>
 
 <section id="gdimageopenpolygon">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageOpenPolygon()</code></h4>
-<div class="d-ol">
-  <div>Draws an open polygon with verticies (at least 3) with a particular color index.</div>
-</div>
+<div class="d-ol">Draws an open polygon with verticies (at least 3) with a particular color index.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageOpenPolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
@@ -1156,9 +888,7 @@ PROCEDURE Main()
   <div>&lt;nColor&gt;       - Color index</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageOpenPolygon() Draws an open polygon with verticies (at least 3) with a particular color index. Unlike gdImagePolygon() the endpoints of the line sequence are not connected to close the polygon.</div>
@@ -1189,30 +919,20 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code></div>
 </section>
 
 <section id="gdimagepng">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImagePng()</code></h4>
-<div class="d-ol">
-  <div>Save a PNG image.</div>
-</div>
+<div class="d-ol">Save a PNG image.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImagePng( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nCompressionLevel&gt; ] ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
@@ -1221,9 +941,7 @@ PROCEDURE Main()
   <div>default is -1=auto</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImagePng() saves a PNG image to a file or a handle.</div>
@@ -1243,30 +961,20 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreateFromGif">gdImageCreateFromGif()</a></code></div>
 </section>
 
 <section id="gdimagepolygon">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImagePolygon()</code></h4>
-<div class="d-ol">
-  <div>Draws a closed polygon with verticies (at least 3) with a particular color index.</div>
-</div>
+<div class="d-ol">Draws a closed polygon with verticies (at least 3) with a particular color index.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImagePolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
@@ -1276,9 +984,7 @@ PROCEDURE Main()
   <div>&lt;nColor&gt;       - Color index</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImagePolygon() Draws a closed polygon with verticies (at least 3) with a particular color index.</div>
@@ -1309,40 +1015,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code></div>
 </section>
 
 <section id="gdimagerectangle">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageRectangle()</code></h4>
-<div class="d-ol">
-  <div>Draws a rectangle with a particular color index.</div>
-</div>
+<div class="d-ol">Draws a rectangle with a particular color index.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageRectangle( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;x1&gt;           - upper left point horizontal position &lt;y1&gt;           - upper left point vertical position &lt;x2&gt;           - lower right point horizontal position &lt;y2&gt;           - lower right point vertical position &lt;nColor&gt;       - Color index</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;x1&gt;           - upper left point horizontal position &lt;y1&gt;           - upper left point vertical position &lt;x2&gt;           - lower right point horizontal position &lt;y2&gt;           - lower right point vertical position &lt;nColor&gt;       - Color index</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageRectangle() draws a rectangle between 2 points with a particular color index.</div>
@@ -1369,40 +1061,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code></div>
 </section>
 
 <section id="gdimagesetantialiased">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageSetAntiAliased()</code></h4>
-<div class="d-ol">
-  <div>specify the actual foreground color to be used when drawing antialiased lines.</div>
-</div>
+<div class="d-ol">specify the actual foreground color to be used when drawing antialiased lines.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageSetAntiAliased( &lt;pImage&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;nColor&gt;       - Color index of filling color</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;nColor&gt;       - Color index of filling color</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>&quot;Antialiasing&quot; is a process by which jagged edges associated with line drawing can be reduced by blending the foreground color with an appropriate percentage of the background, depending on how much of the pixel in question is actually within the boundaries of the line being drawn. All line-drawing functions, such as gdImageLine(), gdImageOpenPolygon() and gdImagePolygon(), will draw antialiased lines if the special &quot;color&quot; gdAntiAliased constant is used when calling them.</div>
@@ -1438,40 +1116,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code>, <code><a href="#gdImageLine">gdImageLine()</a></code>, <code><a href="#gdAntiAliased">gdAntiAliased</a></code>, <code><a href="#gdImageSetAntiAliasedDontBlend">gdImageSetAntiAliasedDontBlend()</a></code></div>
 </section>
 
 <section id="gdimagesetantialiaseddontblend">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageSetAntiAliasedDontBlend()</code></h4>
-<div class="d-ol">
-  <div>indicate the special color that the foreground should stand out more clearly against.</div>
-</div>
+<div class="d-ol">indicate the special color that the foreground should stand out more clearly against.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageSetAntiAliasedDontBlend( &lt;pImage&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;nColor&gt;       - Color index of filling color</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;nColor&gt;       - Color index of filling color</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Normally, when drawing lines with the special gdAntiAliased &quot;color,&quot; blending with the background to reduce jagged edges is the desired behavior. However, when it is desired that lines not be blended with one particular color when it is encountered in the background, the gdImageSetAntiAliasedDontBlend() function can be used to indicate the special color that the foreground should stand out more clearly against.</div>
@@ -1508,40 +1172,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code>, <code><a href="#gdImageLine">gdImageLine()</a></code>, <code><a href="#gdAntiAliased">gdAntiAliased</a></code>, <code><a href="#gdImageSetAntiAlias">gdImageSetAntiAlias()</a></code></div>
 </section>
 
 <section id="gdimagesetbrush">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageSetBrush()</code></h4>
-<div class="d-ol">
-  <div>A &quot;brush&quot; is an image used to draw wide, shaped strokes in another image.</div>
-</div>
+<div class="d-ol">A &quot;brush&quot; is an image used to draw wide, shaped strokes in another image.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageSetBrush( &lt;pImage&gt;, &lt;pBrush&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;pBrush&gt;       - Brush Image pointer</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;pBrush&gt;       - Brush Image pointer</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>A &quot;brush&quot; is an image used to draw wide, shaped strokes in another image. Just as a paintbrush is not a single point, a brush image need not be a single pixel. Any gd image can be used as a brush, and by setting the transparent color index of the brush image with gdImageColorTransparent, a brush of any shape can be created. All line-drawing functions, such as gdImageLine, gdImageOpenPolygon and gdImagePolygon, will use the current brush if the special &quot;color&quot; gdBrushed or gdStyledBrushed is used when calling them. gdImageSetBrush is used to specify the brush to be used in a particular image. You can set any image to be the brush. If the brush image does not have the same color map as the first image, any colors missing from the first image will be allocated. If not enough colors can be allocated, the closest colors already available will be used. This allows arbitrary PNGs to be used as brush images. It also means, however, that you should not set a brush unless you will actually use it; if you set a rapid succession of different brush images, you can quickly fill your color map, and the results will not be optimal.</div>
@@ -1576,40 +1226,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code>, <code><a href="#gdImageLine">gdImageLine()</a></code></div>
 </section>
 
 <section id="gdimagesetpixel">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageSetPixel()</code></h4>
-<div class="d-ol">
-  <div>Set a pixel to a particular color index.</div>
-</div>
+<div class="d-ol">Set a pixel to a particular color index.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageSetPixel( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;x&gt;            - Horizontal position &lt;y&gt;            - Vertical position &lt;nColor&gt;       - Color index</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;x&gt;            - Horizontal position &lt;y&gt;            - Vertical position &lt;nColor&gt;       - Color index</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageSetPixel() sets a pixel to a particular color index.</div>
@@ -1636,40 +1272,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code></div>
 </section>
 
 <section id="gdimagesetstyle">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageSetStyle()</code></h4>
-<div class="d-ol">
-  <div>set any desired series of colors to be repeated during the drawing of a line.</div>
-</div>
+<div class="d-ol">set any desired series of colors to be repeated during the drawing of a line.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageSetStyle( &lt;pImage&gt;, &lt;aStyle&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;aStyle&gt;       - Array of colors and special colors used to &quot;style&quot; a line</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;aStyle&gt;       - Array of colors and special colors used to &quot;style&quot; a line</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>It is often desirable to draw dashed lines, dotted lines, and other variations on a broken line. gdImageSetStyle can be used to set any desired series of colors, including a special color that leaves the background intact, to be repeated during the drawing of a line. To use gdImageSetStyle, create an array of integers and assign them the desired series of color values to be repeated. You can assign the special color value gdTransparent to indicate that the existing color should be left unchanged for that particular pixel (allowing a dashed line to be attractively drawn over an existing image).</div>
@@ -1720,44 +1342,28 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code>, <code><a href="#gdImageLine">gdImageLine()</a></code></div>
 </section>
 
 <section id="gdimagesetthickness">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageSetThickness()</code></h4>
-<div class="d-ol">
-  <div>determines the width of lines drawn in pixels.</div>
-</div>
+<div class="d-ol">determines the width of lines drawn in pixels.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageSetThickness( &lt;pImage&gt;, &lt;nThickness&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;nThickness&gt;   - width of line in pixel</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;nThickness&gt;   - width of line in pixel</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>gdImageSetThickness determines the width of lines drawn by the gdImageLine, gdImagePolygon, gdImageOpenPolygon and related functions, in pixels.</div>
-</div>
+<div class="d-it">gdImageSetThickness determines the width of lines drawn by the gdImageLine, gdImagePolygon, gdImageOpenPolygon and related functions, in pixels.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 #include &quot;gd.ch&quot;
@@ -1785,40 +1391,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code>, <code><a href="#gdImageLine">gdImageLine()</a></code></div>
 </section>
 
 <section id="gdimagesettile">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageSetTile()</code></h4>
-<div class="d-ol">
-  <div>A &quot;tile&quot; is an image used to fill an area with a repeated pattern.</div>
-</div>
+<div class="d-ol">A &quot;tile&quot; is an image used to fill an area with a repeated pattern.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageSetTile( &lt;pImage&gt;, &lt;pTile&gt; ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;pTile&gt;        - Tile Image pointer</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;pTile&gt;        - Tile Image pointer</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>A &quot;tile&quot; is an image used to fill an area with a repeated pattern. Any gd image can be used as a tile, and by setting the transparent color index of the tile image with gdImageColorTransparent, a tile that allows certain parts of the underlying area to shine through can be created. All region-filling functions, such as gdImageFill and gdImageFilledPolygon, will use the current tile if the special &quot;color&quot; gdTiled is used when calling them.</div>
@@ -1855,40 +1447,26 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageColorAllocate">gdImageColorAllocate()</a></code>, <code><a href="#gdImageJpeg">gdImageJpeg()</a></code>, <code><a href="#gdImageFilledRectangle">gdImageFilledRectangle()</a></code></div>
 </section>
 
 <section id="gdimagewbmp">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/hbgd.txt" class="edit-page"> Improve this doc</a><h4><code>gdImageWBmp()</code></h4>
-<div class="d-ol">
-  <div>Save a WBMP image.</div>
-</div>
+<div class="d-ol">Save a WBMP image.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gdImageWBmp( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nFGcolor&gt; ] ) &rarr; NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;nFGcolor&gt;     - foreground color value to be used as foreground, the others are background</div>
-</div>
+<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;nFGcolor&gt;     - foreground color value to be used as foreground, the others are background</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>NIL</div>
-</div>
+<div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageWBmp() saves a WBMP image to a file or a handle.</div>
@@ -1921,21 +1499,13 @@ PROCEDURE Main()
    RETURN
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>GD Library</div>
-</div>
+<div class="d-it">GD Library</div>
 <div class="d-d">Platform(s)</div>
-<div class="d-it">
-  <div>Available on all platforms</div>
-</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>hbgd</div>
-</div>
+<div class="d-it">hbgd</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gdImageCreate">gdImageCreate()</a></code>, <code><a href="#gdImageRectangle">gdImageRectangle()</a></code>, <code><a href="#gdColorAllocate">gdColorAllocate()</a></code></div>
 </section>
@@ -1943,6 +1513,6 @@ PROCEDURE Main()
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-27 02:00 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/ca07f12">ca07f12</a></div>
+<div>Generated by hbdoc on 2016-10-27 10:16 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/407fe82">407fe82</a></div>
 </footer>

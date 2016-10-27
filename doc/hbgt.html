@@ -22,9 +22,7 @@
 
 <section id="gt_clrflag">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_ClrFlag()</code></h4>
-<div class="d-ol">
-  <div>Set a number of flags to FALSE in a bit flag string.</div>
-</div>
+<div class="d-ol">Set a number of flags to FALSE in a bit flag string.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_ClrFlag( &lt;cFlagString&gt;, [&lt;nStart&gt;], [&lt;nEnd&gt;] ) &rarr; cFlagString</code></div>
 <div class="d-d">Argument(s)</div>
@@ -34,13 +32,9 @@
   <div>&lt;nEnd&gt; is the ending flag. This is an optional numeric value. If not supplied it defaults to &lt;nStart&gt;.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>The bit map string with the new flag settings.</div>
-</div>
+<div class="d-it">The bit map string with the new flag settings.</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>gt_ClrFlag() is used to turn flags within the flag string off.</div>
-</div>
+<div class="d-it">gt_ClrFlag() is used to turn flags within the flag string off.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 cFlags := gt_NewFlag( 20 )   // Create a bit flag string for 20
@@ -63,18 +57,14 @@ cFlags := gt_ClrFlag( cFlags, 18 )
 cFlags := gt_ClrFlag( cFlags )
 </pre>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>General</div>
-</div>
+<div class="d-it">General</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gt_NewFlag">gt_NewFlag()</a></code>, <code><a href="#gt_SetFlag">gt_SetFlag()</a></code>, <code><a href="#gt_IsFlag">gt_IsFlag()</a></code></div>
 </section>
 
 <section id="gt_isflag">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_IsFlag()</code></h4>
-<div class="d-ol">
-  <div>Test the setting of a flag in a bit flag string.</div>
-</div>
+<div class="d-ol">Test the setting of a flag in a bit flag string.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_IsFlag( &lt;cFlagString&gt;, [&lt;nFlag&gt;] ) &rarr; lSetting</code></div>
 <div class="d-d">Argument(s)</div>
@@ -83,13 +73,9 @@ cFlags := gt_ClrFlag( cFlags )
   <div>&lt;nFlag&gt; is the flag to be tested.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>A boolean value, TRUE if the flag is on, FALSE if it's off.</div>
-</div>
+<div class="d-it">A boolean value, TRUE if the flag is on, FALSE if it's off.</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>gt_IsFlag() is used to test the state of a flag with a bit flag string.</div>
-</div>
+<div class="d-it">gt_IsFlag() is used to test the state of a flag with a bit flag string.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 // Print the setting of the flags in a flag string called ``cDave''
@@ -99,28 +85,20 @@ FOR nFlag := 1 TO hb_BLen( cDave ) * 8
 NEXT
 </pre>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>General</div>
-</div>
+<div class="d-it">General</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gt_NewFlag">gt_NewFlag()</a></code>, <code><a href="#gt_SetFlag">gt_SetFlag()</a></code>, <code><a href="#gt_ClrFlag">gt_ClrFlag()</a></code></div>
 </section>
 
 <section id="gt_newflag">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_NewFlag()</code></h4>
-<div class="d-ol">
-  <div>Create a new bit flag string.</div>
-</div>
+<div class="d-ol">Create a new bit flag string.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_NewFlag( &lt;nFlagCount&gt; ) &rarr; cFlagString</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;nFlagCount&gt; is the number of flags you wish to store.</div>
-</div>
+<div class="d-it">&lt;nFlagCount&gt; is the number of flags you wish to store.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>A string to hold the bit flags. All flags are set to FALSE.</div>
-</div>
+<div class="d-it">A string to hold the bit flags. All flags are set to FALSE.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gt_NewFlag() is used to construct a bit flag string. The bit flag functions can be used for storing a large number of logical values in a small space.</div>
@@ -131,18 +109,14 @@ NEXT
 cFlags := gt_NewFlag( 20 )   // Create a bit flag string for 20 logical values.
 </pre>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>General</div>
-</div>
+<div class="d-it">General</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gt_SetFlag">gt_SetFlag()</a></code>, <code><a href="#gt_ClrFlag">gt_ClrFlag()</a></code>, <code><a href="#gt_IsFlag">gt_IsFlag()</a></code></div>
 </section>
 
 <section id="gt_setflag">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_SetFlag()</code></h4>
-<div class="d-ol">
-  <div>Set a number of flags to TRUE in a bit flag string.</div>
-</div>
+<div class="d-ol">Set a number of flags to TRUE in a bit flag string.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_SetFlag( &lt;cFlagString&gt;, [&lt;nStart&gt;], [&lt;nEnd&gt;] ) &rarr; cFlagString</code></div>
 <div class="d-d">Argument(s)</div>
@@ -152,13 +126,9 @@ cFlags := gt_NewFlag( 20 )   // Create a bit flag string for 20 logical values.
   <div>&lt;nEnd&gt; is the ending flag. This is an optional numeric value. If not supplied it defaults to &lt;nStart&gt;.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>The bit map string with the new flag settings.</div>
-</div>
+<div class="d-it">The bit map string with the new flag settings.</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>gt_SetFlag() is used to turn flags within the flag string on.</div>
-</div>
+<div class="d-it">gt_SetFlag() is used to turn flags within the flag string on.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 cFlags := gt_NewFlag( 20 )   // Create a bit flag string for 20
@@ -177,61 +147,39 @@ cFlags := gt_SetFlag( cFlags, 18 )
 cFlags := gt_SetFlag( cFlags )
 </pre>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>General</div>
-</div>
+<div class="d-it">General</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gt_NewFlag">gt_NewFlag()</a></code>, <code><a href="#gt_ClrFlag">gt_ClrFlag()</a></code>, <code><a href="#gt_IsFlag">gt_IsFlag()</a></code></div>
 </section>
 
 <section id="gt_asciisum">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_AsciiSum()</code></h4>
-<div class="d-ol">
-  <div>Sum the ASCII values in a string.</div>
-</div>
+<div class="d-ol">Sum the ASCII values in a string.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_AsciiSum( &lt;cStr&gt; ) &rarr; nSum</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cStr&gt;  - The string to sum</div>
-</div>
+<div class="d-it">&lt;cStr&gt;  - The string to sum</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;nSum&gt;    - The sum of all ASCII values in &lt;cStr&gt;.</div>
-</div>
+<div class="d-it">&lt;nSum&gt;    - The sum of all ASCII values in &lt;cStr&gt;.</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>Sum the ASCII value of every character in the passed string and return the result.</div>
-</div>
+<div class="d-it">Sum the ASCII value of every character in the passed string and return the result.</div>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is hbgt</div>
-</div>
+<div class="d-it">Library is hbgt</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>String Tools</div>
-</div>
+<div class="d-it">String Tools</div>
 </section>
 
 <section id="gt_ascpos">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_AscPos()</code></h4>
-<div class="d-ol">
-  <div>Return the ASCII value of a specified character in a string</div>
-</div>
+<div class="d-ol">Return the ASCII value of a specified character in a string</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_AscPos( &lt;cStr&gt;, &lt;nPos&gt; ) &rarr; nAscVal</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cStr&gt;  - The string &lt;nPos&gt;  - The position in &lt;cStr&gt;</div>
-</div>
+<div class="d-it">&lt;cStr&gt;  - The string &lt;nPos&gt;  - The position in &lt;cStr&gt;</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;nAscVal&gt; - The ASCII value of hb_BSubStr( &lt;cStr&gt;, &lt;nPos&gt;, 1 )</div>
-</div>
+<div class="d-it">&lt;nAscVal&gt; - The ASCII value of hb_BSubStr( &lt;cStr&gt;, &lt;nPos&gt;, 1 )</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return the ASCII value of a specified character in a string Equivalent (but much faster) to</div>
@@ -245,34 +193,22 @@ cFlags := gt_SetFlag( cFlags )
 ? gt_AscPos( &quot;the cat sat on the mat&quot;, 3 ) // prints e
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is hbgt</div>
-</div>
+<div class="d-it">Library is hbgt</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>String Tools</div>
-</div>
+<div class="d-it">String Tools</div>
 </section>
 
 <section id="gt_atdiff">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_AtDiff()</code></h4>
-<div class="d-ol">
-  <div>Return the position where two strings begin to differ</div>
-</div>
+<div class="d-ol">Return the position where two strings begin to differ</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_AtDiff( &lt;cStr1&gt;, &lt;cStr2&gt; ) &rarr; nPos</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cStr1&gt;  - A character string to compare &lt;cStr2&gt;  - The string to compare with</div>
-</div>
+<div class="d-it">&lt;cStr1&gt;  - A character string to compare &lt;cStr2&gt;  - The string to compare with</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;nPos&gt;     - The position in &lt;cStr2&gt; where &lt;cStr1&gt; begins to differ</div>
-</div>
+<div class="d-it">&lt;nPos&gt;     - The position in &lt;cStr2&gt; where &lt;cStr1&gt; begins to differ</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return the position in &lt;cStr2&gt; where &lt;cStr1&gt; begins to differ. If the strings differ in the first character gt_AtDiff() will return 1.  If the two strings are identical (or identical upto the last character in &lt;cStr2&gt;) the function will return 0.</div>
@@ -285,34 +221,22 @@ cFlags := gt_SetFlag( cFlags )
 ? gt_AtDiff( &quot;the cat&quot;, &quot;the &quot; )             // prints 0
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is hbgt</div>
-</div>
+<div class="d-it">Library is hbgt</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>String Tools</div>
-</div>
+<div class="d-it">String Tools</div>
 </section>
 
 <section id="gt_chareven">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_CharEven()</code></h4>
-<div class="d-ol">
-  <div>Return a string of all the characters in even positions</div>
-</div>
+<div class="d-ol">Return a string of all the characters in even positions</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_CharEven( &lt;cStr&gt; ) &rarr; cRet</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cStr&gt;   - A character string to extract chars from</div>
-</div>
+<div class="d-it">&lt;cStr&gt;   - A character string to extract chars from</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;cRet&gt;     - A string of all the chars in even positions</div>
-</div>
+<div class="d-it">&lt;cRet&gt;     - A string of all the chars in even positions</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return a string consisting of all the characters in even positions in &lt;cStr1&gt;.</div>
@@ -324,30 +248,20 @@ cFlags := gt_SetFlag( cFlags )
 ? gt_CharEven( &quot;abcdefghijklm&quot; )             // prints &quot;bdfhjl&quot;
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is hbgt</div>
-</div>
+<div class="d-it">Library is hbgt</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>String Tools</div>
-</div>
+<div class="d-it">String Tools</div>
 </section>
 
 <section id="gt_charmix">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_CharMix()</code></h4>
-<div class="d-ol">
-  <div>Amalgamate two strings to form the return value</div>
-</div>
+<div class="d-ol">Amalgamate two strings to form the return value</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_CharMix( &lt;cStr1&gt;, &lt;cStr2&gt; ) &rarr; cRet</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cStr1&gt;  - A character string to mix &lt;cStr2&gt;  - A character string to mix with</div>
-</div>
+<div class="d-it">&lt;cStr1&gt;  - A character string to mix &lt;cStr2&gt;  - A character string to mix with</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
   <div>&lt;cRet&gt;     - A string consisting of all the characters in &lt;cStr1&gt;</div>
@@ -366,34 +280,22 @@ cFlags := gt_SetFlag( cFlags )
 ? gt_CharMix( &quot;abc&quot;, &quot;12345&quot; )             // prints &quot;a1b2c345&quot;
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is hbgt</div>
-</div>
+<div class="d-it">Library is hbgt</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>String Tools</div>
-</div>
+<div class="d-it">String Tools</div>
 </section>
 
 <section id="gt_charodd">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_CharOdd()</code></h4>
-<div class="d-ol">
-  <div>Return a string of all the characters in odd positions</div>
-</div>
+<div class="d-ol">Return a string of all the characters in odd positions</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_CharOdd( &lt;cStr&gt; ) &rarr; cRet</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cStr&gt;   - A character string to extract chars from</div>
-</div>
+<div class="d-it">&lt;cStr&gt;   - A character string to extract chars from</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;cRet&gt;     - A string of all the chars in odd positions</div>
-</div>
+<div class="d-it">&lt;cRet&gt;     - A string of all the chars in odd positions</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return a string consisting of all the characters in odd positions in &lt;cStr1&gt;.</div>
@@ -405,34 +307,22 @@ cFlags := gt_SetFlag( cFlags )
 ? gt_CharOdd( &quot;abcdefghijklm&quot; )             // prints &quot;acegikm&quot;
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is hbgt</div>
-</div>
+<div class="d-it">Library is hbgt</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>String Tools</div>
-</div>
+<div class="d-it">String Tools</div>
 </section>
 
 <section id="gt_chrcount">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_ChrCount()</code></h4>
-<div class="d-ol">
-  <div>Count the number of times a character appears in a string</div>
-</div>
+<div class="d-ol">Count the number of times a character appears in a string</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_ChrCount( &lt;cChr&gt;, &lt;cStr&gt; ) &rarr; nFreq</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cChr&gt;  - The character to find the frequence of &lt;cStr&gt;  - The string in which to find the character</div>
-</div>
+<div class="d-it">&lt;cChr&gt;  - The character to find the frequence of &lt;cStr&gt;  - The string in which to find the character</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>nFreq   - The number of times &lt;cChr&gt; occurs in &lt;cStr&gt;</div>
-</div>
+<div class="d-it">nFreq   - The number of times &lt;cChr&gt; occurs in &lt;cStr&gt;</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gt_ChrCount() counts how many times a specified character appears in a string.</div>
@@ -444,69 +334,47 @@ cFlags := gt_SetFlag( cFlags )
 ? gt_ChrCount( &quot;t&quot;, &quot;the cat sat on the mat&quot; )      // prints 4
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is hbgt</div>
-</div>
+<div class="d-it">Library is hbgt</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>String Tools</div>
-</div>
+<div class="d-it">String Tools</div>
 </section>
 
 <section id="gt_chrfirst">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_ChrFirst()</code></h4>
-<div class="d-ol">
-  <div>Find which character occurs first in a string</div>
-</div>
+<div class="d-ol">Find which character occurs first in a string</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_ChrFirst( &lt;cChars&gt;, &lt;cStr&gt; ) &rarr; nAsc</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cChars&gt; - The set of characters to find &lt;cStr&gt;   - The input string</div>
-</div>
+<div class="d-it">&lt;cChars&gt; - The set of characters to find &lt;cStr&gt;   - The input string</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
   <div>&lt;nAsc&gt;     - The ASCII value of the first character in &lt;cChars&gt;</div>
   <div>which appears first in &lt;cStr&gt;</div>
 </div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>Return the ASCII value of a character in &lt;cChars&gt; which appears first in &lt;cStr&gt;.</div>
-</div>
+<div class="d-it">Return the ASCII value of a character in &lt;cChars&gt; which appears first in &lt;cStr&gt;.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? hb_BChar( gt_ChrFirst( &quot;sa &quot;, &quot;This is a test&quot; ) )  // prints &quot;s&quot;
 ? hb_BChar( gt_ChrFirst( &quot;et&quot; , &quot;This is a test&quot; ) )  // prints &quot;t&quot;
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is hbgt</div>
-</div>
+<div class="d-it">Library is hbgt</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>String Tools</div>
-</div>
+<div class="d-it">String Tools</div>
 </section>
 
 <section id="gt_chrtotal">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_ChrTotal()</code></h4>
-<div class="d-ol">
-  <div>Find number of times a set of characters appears in a string</div>
-</div>
+<div class="d-ol">Find number of times a set of characters appears in a string</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_ChrTotal( &lt;cChrs&gt;, &lt;cStr&gt; ) &rarr; nTotOcc</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cChrs&gt; - The set of characters &lt;cStr&gt;  - The string to search</div>
-</div>
+<div class="d-it">&lt;cChrs&gt; - The set of characters &lt;cStr&gt;  - The string to search</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
   <div>&lt;nTotOcc&gt; - The number of times the characters specified in</div>
@@ -526,34 +394,22 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
    ? gt_ChrTotal( &quot;zqw&quot;, cStr1 )            // prints  0
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is hbgt</div>
-</div>
+<div class="d-it">Library is hbgt</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>String Tools</div>
-</div>
+<div class="d-it">String Tools</div>
 </section>
 
 <section id="gt_strcount">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_StrCount()</code></h4>
-<div class="d-ol">
-  <div>Count the number of times a substring appears in a string</div>
-</div>
+<div class="d-ol">Count the number of times a substring appears in a string</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_StrCount( &lt;cChrs&gt;, &lt;cStr&gt; ) &rarr; nFreq</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cChrs&gt; - The substring to find the frequence of &lt;cStr&gt;  - The string in which to find the character</div>
-</div>
+<div class="d-it">&lt;cChrs&gt; - The substring to find the frequence of &lt;cStr&gt;  - The string in which to find the character</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;nFreq&gt;   - The number of times &lt;cChrs&gt; occurs in &lt;cStr&gt;</div>
-</div>
+<div class="d-it">&lt;nFreq&gt;   - The number of times &lt;cChrs&gt; occurs in &lt;cStr&gt;</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gt_StrCount() counts how many times a specified substring appears in a string. If the substring does NOT appear in &lt;cStr&gt; this function will return 0. If the substring is a single character use gt_ChrCount() as it will be faster.</div>
@@ -565,68 +421,44 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 ? gt_StrCount( &quot;the&quot;, &quot;the cat sat on the mat&quot; )      // prints 2
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is hbgt</div>
-</div>
+<div class="d-it">Library is hbgt</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>String Tools</div>
-</div>
+<div class="d-it">String Tools</div>
 </section>
 
 <section id="gt_strcspn">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_StrCSPN()</code></h4>
-<div class="d-ol">
-  <div>Return length of prefix in string of chars NOT in set.</div>
-</div>
+<div class="d-ol">Return length of prefix in string of chars NOT in set.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_StrCSPN( &lt;cString&gt;, &lt;cSet&gt; ) &rarr; nLength</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cString&gt; - The string to find the prefix in &lt;cSet&gt;    - The set of characters</div>
-</div>
+<div class="d-it">&lt;cString&gt; - The string to find the prefix in &lt;cSet&gt;    - The set of characters</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;nLength&gt;   - The length of a string upto a character in the set</div>
-</div>
+<div class="d-it">&lt;nLength&gt;   - The length of a string upto a character in the set</div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>Return the number of characters in the leading segment of a string that consists solely of characters NOT in the set.</div>
-</div>
+<div class="d-it">Return the number of characters in the leading segment of a string that consists solely of characters NOT in the set.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? gt_StrCSPN( &quot;this is a test&quot;, &quot;as &quot; )      // prints 3
 ? gt_StrCSPN( &quot;this is a test&quot;, &quot;elnjpq&quot; )   // prints 11
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is hbgt</div>
-</div>
+<div class="d-it">Library is hbgt</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>String Tools</div>
-</div>
+<div class="d-it">String Tools</div>
 </section>
 
 <section id="gt_strdiff">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_StrDiff()</code></h4>
-<div class="d-ol">
-  <div>Return a string where it begins to differ from another</div>
-</div>
+<div class="d-ol">Return a string where it begins to differ from another</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_StrDiff( &lt;cStr1&gt;, &lt;cStr2&gt; ) &rarr; cRet</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cStr1&gt;  - A character string to compare &lt;cStr2&gt;  - The string to compare with</div>
-</div>
+<div class="d-it">&lt;cStr1&gt;  - A character string to compare &lt;cStr2&gt;  - The string to compare with</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
   <div>&lt;cRet&gt;     - A string beginning at the position in &lt;cStr2&gt; where</div>
@@ -644,30 +476,20 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 ? gt_StrDiff( &quot;the cat&quot;, &quot;the &quot; )             // prints &quot;&quot;
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is hbgt</div>
-</div>
+<div class="d-it">Library is hbgt</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>String Tools</div>
-</div>
+<div class="d-it">String Tools</div>
 </section>
 
 <section id="gt_strexpand">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_StrExpand()</code></h4>
-<div class="d-ol">
-  <div>Insert fillers between characters in a passed string</div>
-</div>
+<div class="d-ol">Insert fillers between characters in a passed string</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_StrExpand( &lt;cStr&gt;, [&lt;nNum&gt;], [&lt;cChar&gt;] ) &rarr; cRet</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cStr1&gt;  - A character string to insert chars into &lt;nNum&gt;   - The number of fill characters to insert (default 1) &lt;cChar&gt;  - The fill chararacter (default space)</div>
-</div>
+<div class="d-it">&lt;cStr1&gt;  - A character string to insert chars into &lt;nNum&gt;   - The number of fill characters to insert (default 1) &lt;cChar&gt;  - The fill chararacter (default space)</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
   <div>&lt;cRet&gt;     - The input string with fill characters inserted between</div>
@@ -686,34 +508,22 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 ? gt_StrExpand( &quot;abc&quot;, 2, '|' )            // prints &quot;a||b||c&quot;
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is hbgt</div>
-</div>
+<div class="d-it">Library is hbgt</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>String Tools</div>
-</div>
+<div class="d-it">String Tools</div>
 </section>
 
 <section id="gt_strleft">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_StrLeft()</code></h4>
-<div class="d-ol">
-  <div>Find length of prefix of a string</div>
-</div>
+<div class="d-ol">Find length of prefix of a string</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_StrLeft( &lt;cStr&gt;, &lt;cChars&gt; ) &rarr; nLen</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cStr&gt;   - The input string &lt;cChars&gt; - The set of characters to find</div>
-</div>
+<div class="d-it">&lt;cStr&gt;   - The input string &lt;cChars&gt; - The set of characters to find</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>nLen     - The length of the prefix found.</div>
-</div>
+<div class="d-it">nLen     - The length of the prefix found.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return the length of the leading segment in the passed string &lt;cStr&gt; that consists solely of the characters in the character set &lt;cChars&gt;.</div>
@@ -726,73 +536,49 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 ? gt_StrLeft( &quot;this is a test&quot;, &quot;zxy&quot; )         // prints 0
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is hbgt</div>
-</div>
+<div class="d-it">Library is hbgt</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>String Tools</div>
-</div>
+<div class="d-it">String Tools</div>
 </section>
 
 <section id="gt_strpbrk">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_StrPBRK()</code></h4>
-<div class="d-ol">
-  <div>Return string after 1st char from a set</div>
-</div>
+<div class="d-ol">Return string after 1st char from a set</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_StrPBRK( &lt;cStr&gt;, &lt;cSet&gt; ) &rarr; cString</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cStr&gt;   - The input string &lt;cSet&gt;   - The set of characters to find</div>
-</div>
+<div class="d-it">&lt;cStr&gt;   - The input string &lt;cSet&gt;   - The set of characters to find</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
   <div>&lt;cString&gt;  - The input string after the first occurance of any</div>
   <div>character from &lt;cSet&gt;</div>
 </div>
 <div class="d-d">Description</div>
-<div class="d-it">
-  <div><p>Return a string after the first occurance of any character from the input set &lt;cSet&gt;.</div>
-</div>
+<div class="d-it">Return a string after the first occurance of any character from the input set &lt;cSet&gt;.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? gt_StrPBRK( &quot;This is a test&quot;, &quot;sa &quot; )  // prints &quot;s is a test&quot;
 ? gt_StrPBRK( &quot;This is a test&quot;, &quot;et&quot; )   // prints &quot;test&quot;
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is hbgt</div>
-</div>
+<div class="d-it">Library is hbgt</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>String Tools</div>
-</div>
+<div class="d-it">String Tools</div>
 </section>
 
 <section id="gt_strright">
 <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgt/doc/en/hbgt.txt" class="edit-page"> Improve this doc</a><h4><code>gt_StrRight()</code></h4>
-<div class="d-ol">
-  <div>Find length of a suffix of a string</div>
-</div>
+<div class="d-ol">Find length of a suffix of a string</div>
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>gt_StrRight( &lt;cStr&gt;, &lt;cChars&gt; ) &rarr; nLen</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">
-  <div>&lt;cStr&gt;   - The input string &lt;cChars&gt; - The set of characters to find</div>
-</div>
+<div class="d-it">&lt;cStr&gt;   - The input string &lt;cChars&gt; - The set of characters to find</div>
 <div class="d-d">Returns</div>
-<div class="d-it">
-  <div>&lt;nLen&gt;     - The length of the prefix found.</div>
-</div>
+<div class="d-it">&lt;nLen&gt;     - The length of the prefix found.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return the length of the trailing segment in the passed string &lt;cStr&gt; that consists solely of the characters in the character set &lt;cChars&gt;.</div>
@@ -805,22 +591,16 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 ? gt_StrRight( &quot;this is a test&quot;, &quot;zxy&quot; )         // prints 0
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">
-  <div>Ready</div>
-</div>
+<div class="d-it">Ready</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">
-  <div>Library is hbgt</div>
-</div>
+<div class="d-it">Library is hbgt</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">
-  <div>String Tools</div>
-</div>
+<div class="d-it">String Tools</div>
 </section>
 
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-27 02:00 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/ca07f12">ca07f12</a></div>
+<div>Generated by hbdoc on 2016-10-27 10:16 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/407fe82">407fe82</a></div>
 </footer>
