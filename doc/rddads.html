@@ -26,30 +26,46 @@
 <div class="d-ol">Advantage Database Server RDD</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>rddads is an RDD for the Advantage Database Server, an xBase data server by Extended Systems &lt;www.advantagedatabase.com&gt;. The RDD was written by Alexander Kresin &lt;alex@belacy.belgorod.su&gt; Additional code and documentation was added by Brian Hays &lt;bhays@abacuslaw.com&gt;.</div>
+  <div><p>rddads is an RDD for the Advantage Database Server, an xBase data server by Extended Systems &lt;www.advantagedatabase.com&gt;. The RDD was written by Alexander Kresin &lt;alex/at/belacy.belgorod.su&gt; Additional code and documentation was added by Brian Hays &lt;bhays/at/abacuslaw.com&gt;.</div>
   <div><p>Your Harbour application can access a remote database server for a true client/server architecture, or it can use the &quot;local server&quot; for stand-alone or even small network installations.</div>
   <div><p>For using this RDD you need to have all required dynamic libraries installed on your system.</div>
-  <div><p>For building executables don't forget to include rddads.hbc in your hbmk2 project.</div>
+  <div><p>For building executables don't forget to include <code>rddads.hbc</code> in your hbmk2 project.</div>
   <div><p>You also need to include in your prg file following lines:</div>
-  <div><p>REQUEST ADS rddRegister( &quot;ADS&quot;, 1 ) rddSetDefault( &quot;ADS&quot; )</div>
-  <div><p>By default rddads is tuned for remote server and cdx indexes. To change this you may use these commands defined in ads.ch:</div>
-  <div><p>SET SERVER LOCAL SET SERVER REMOTE</div>
-  <div><p>SET FILETYPE TO NTX SET FILETYPE TO ADT SET FILETYPE TO CDX</div>
-  <div><p>or functions AdsSetServerType(), AdsSetFileType(). See the header file ads.ch for details.</div>
+<pre>
+REQUEST ADS
+rddRegister( &quot;ADS&quot;, 1 )
+rddSetDefault( &quot;ADS&quot; )
+</pre>
+  <div><p>By default rddads is tuned for remote server and cdx indexes. To change this you may use these commands defined in `ads.ch`:</div>
+<pre>
+SET SERVER LOCAL
+SET SERVER REMOTE
+
+SET FILETYPE TO NTX
+SET FILETYPE TO ADT
+SET FILETYPE TO CDX
+</pre>
+  <div><p>or functions AdsSetServerType(), AdsSetFileType(). See the header file <code>ads.ch</code> for details.</div>
   <div><p>Note that the default local server is useable for file sharing on a small network.  The default DLL is limited to 5 users, but an unlimited version is available from Extended Systems.</div>
-  <div><p>MAX OPEN TABLES: The server (even local) has its own setting for Max Tables allowed open.  For the Local Server, it can be set in adslocal.cfg.  The default is only 50! For the Windows Remote Servers, use the Configuration Utility, or increase the setting for the TABLES configuration value in the Advantage Database Server configuration registry key using the Registry Editor. For NetWare, edit the configuration file ads.cfg.</div>
-  <div><p>See ace.hlp under adslocal.cfg, or the Advantage Error Guide for error 7005.</div>
+  <div><p>MAX OPEN TABLES: The server (even local) has its own setting for Max Tables allowed open.  For the Local Server, it can be set in `adslocal.cfg`.  The default is only 50! For the Windows Remote Servers, use the Configuration Utility, or increase the setting for the TABLES configuration value in the Advantage Database Server configuration registry key using the Registry Editor. For NetWare, edit the configuration file `ads.cfg`.</div>
+  <div><p>See <code>ace.hlp</code> under `adslocal.cfg`, or the Advantage Error Guide for error 7005.</div>
   <div><p>SPEED AND PERFORMANCE ISSUES</div>
   <div><p>If you have sluggish browsers, one issue could be the scrollbar. If it's fast with the scrollbar disabled, the browse/scrolling logic may not be as optimized as it could be. Scrollbars should always use AdsGetRelKeyPos() and AdsSetRelKeyPos() instead of key counting functions.</div>
   <div><p>If filtered data seems slower than expected, check these things: First, optimization is not on by default, so at the top of the app call</div>
-  <div><p>Set( _SET_OPTIMIZE, .T. )</div>
+<pre>
+   Set( _SET_OPTIMIZE, .T. )
+</pre>
   <div><p>or its command equivalent.  rddads will use an AOF whenever dbSetFilter is called *if it can*.</div>
   <div><p>Second, make sure the filter is one ADS can understand. UDFs are out, as are references to public or private variables. It's also best to remove field aliases from the string. ADS cannot reference aliases for other related tables, so they're superfluous. You can call</div>
-  <div><p>? AdsIsExprValid( cFilter )</div>
+<pre>
+   ? AdsIsExprValid( cFilter )
+</pre>
   <div><p>to check.  If this returns False, neither the Local Server nor the Remote Server can process it, so optimization will never occur (but the Harbour RDD will process the filtering locally by eval'ing the codeblock and testing each record). The only way to speed it up is to fix the filter so ADS understands it.</div>
-  <div><p>You can also use dbOrderInfo(DBOI_OPTLEVEL) to see if the current filter is optimized or not. COMIX users can use:</div>
-  <div><p>FUNCTION rlOptLevel()</div>
-  <div><p>RETURN dbOrderInfo( DBOI_OPTLEVEL )</div>
+  <div><p>You can also use dbOrderInfo( DBOI_OPTLEVEL ) to see if the current filter is optimized or not. COMIX users can use:</div>
+<pre>
+   FUNCTION rlOptLevel()
+      RETURN dbOrderInfo( DBOI_OPTLEVEL )
+</pre>
   <div><p>This returns the Clipper/COMIX values (not ADS-defined values) because this is an RDD call, not just a wrapper to the ADS call, which uses different numbers).</div>
 </div>
 <div class="d-d">Compliance</div>
@@ -57,21 +73,22 @@
   <div>Every attempt has been made to make the RDD compliant with the standard dbfcdx RDD at the .prg level. One important difference is the handling of structural indexes. ACE will <strong>always</strong> automatically open an index with the same name as the data file.  There is no way to turn this feature off.</div>
   <div>You can use the Set() function call as well as the equivalent commands for SET DEFAULT TO, DATEFORMAT, DELETE, and EPOCH. Harbour automatically makes the call to ADS to change its internal setting to match Harbour's.</div>
   <div>INDEXING and Progress Displays: Remote server does not support the EVAL/EVERY clauses. Remember, there is an external process doing the indexing that knows nothing of Harbour expressions or codeblocks. Even with Local Server it's the DLLs doing all the indexing. So to do progress meters you need to implement <strong>AdsRegCallback( bEval )</strong>. It lets you set a codeblock that is eval'ed every 2 seconds. A numeric value of the &quot;percent completed&quot; is passed to the codeblock by the ADS server.</div>
-  <div class="d-t d-t1">
-  <div> #include &quot;inkey.ch&quot;</div>
-  <div> PROCEDURE Main()</div>
-  <div>    ...</div>
-  <div>    AdsRegCallback( {| nPercent | outputstuff( nPercent ) }  )</div>
-  <div>    /* The above codeblock will be called approximately</div>
-  <div>       every 2 seconds while indexing.</div>
-  <div>       The codeblock can return .T. to abort. */</div>
-  <div>    INDEX ON FIRST + LAST + LABEL1 + LABEL2 TAG First</div>
-  <div>    AdsClrCallback()</div>
-  <div>    RETURN</div>
-  <div> STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */</div>
-  <div>    ? &quot;output stuff&quot;, nPercent</div>
-  <div>    RETURN hb_keyStd( Inkey() ) == K_ESC  /* If press ESC, returns .T. to abort. */</div>
-</div>
+<pre>
+ #include &quot;inkey.ch&quot;
+ PROCEDURE Main()
+    ...
+    AdsRegCallback( {| nPercent | outputstuff( nPercent ) }  )
+    /* The above codeblock will be called approximately
+       every 2 seconds while indexing.
+       The codeblock can return .T. to abort. */
+    INDEX ON FIRST + LAST + LABEL1 + LABEL2 TAG First
+    AdsClrCallback()
+    RETURN
+
+ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
+    ? &quot;output stuff&quot;, nPercent
+    RETURN hb_keyStd( Inkey() ) == K_ESC  /* If press ESC, returns .T. to abort. */
+</pre>
   <div>For programmers who are already familiar with the ACE engine, Harbour's compatibility with dbfcdx means there are some differences between the rddads in Harbour and the parallel ACE documentation:</div>
   <div>1) In ACE, skipping backwards to BOF goes to the phantom record and sets the record number to 0.  In rddads, the  record pointer stays at the Top record and only the BOF flag is set to True.</div>
   <div>2) In rddads, a filter expression can be used that may not be valid on the server (because of references to public variables or User-Defined Functions). In these cases, all data will come back from the server but will be filtered by the application running on the client. These situations lose the benefits of having a data server and should be avoided, but they will function as they would in a Clipper program.</div>
@@ -1143,6 +1160,6 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-27 12:54 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/c85505d">c85505d</a></div>
+<div>Generated by hbdoc on 2016-10-27 16:21 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/4968a90">4968a90</a></div>
 </footer>
