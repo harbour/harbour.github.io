@@ -1778,7 +1778,7 @@ PROCEDURE Main()
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>This function add a new record to the end of the database in the selected or aliased work area. All fields in that database will be given empty data values - character fields will be filled with blank spaces, date fields with hb_SToD(), numeric fields with 0, logical fields with .F., and memo fields with NULL bytes. The header of the database is not updated until the record is flushed from the buffer and the contents are written to the disk.</div>
-  <div><p>Under a networking enviroment, dbAppend() performs an additional operation: It attrmps to lock the newly added record. If the database file is currently locked or if a locking assignment if made to LastRec() + 1, NetErr() will return a logical true (.T.) immediately after the dbAppend() function. This function does not unlock the locked records.</div>
+  <div><p>Under a networking enviroment, dbAppend() performs an additional operation: It attempts to lock the newly added record. If the database file is currently locked or if a locking assignment is made to LastRec() + 1, NetErr() will return a logical true (.T.) immediately after the dbAppend() function. This function does not unlock the locked records.</div>
   <div><p>If &lt;lLock&gt; is passed a logical true (.T.) value, it will release the record locks, which allows the application to main- tain multiple record locks during an appending operation. The default for this parameter is a logical false (.F.).</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -1984,14 +1984,14 @@ PROCEDURE Main()
 <h4><code>dbCreate()</code></h4>
 <div class="d-ol">Creates an empty database from a array.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>dbCreate( &lt;cDatabase&gt;, &lt;aStruct&gt;, [&lt;cDriver&gt;], [&lt;lOpen&gt;],</code><code>[&lt;cAlias&gt;] )</code></div>
+<div class="d-it"><code>dbCreate( &lt;cFile&gt;, &lt;aStruct&gt;, [&lt;cRDD&gt;], [&lt;lKeepOpen&gt;], [&lt;cAlias&gt;],</code><code>[&lt;cDelimArg&gt;], [&lt;cCodePage&gt;], [&lt;nConnection&gt;] )</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div>&lt;cDatabase&gt; Name of database to be create</div>
+  <div>&lt;cFile&gt;     Name of database file to be create</div>
   <div>&lt;aStruct&gt;   Name of a multidimensional array that contains the</div>
   <div>database structure</div>
-  <div>&lt;cDriver&gt;   Name of the RDD</div>
-  <div>&lt;lOpenNew&gt;  3-way toggle to Open the file in New or Current workarea:</div>
+  <div>&lt;cRDD&gt;      Name of the RDD</div>
+  <div>&lt;lKeepOpen&gt; 3-way toggle to Open the file in New or Current workarea:</div>
   <div class="d-t">
   <div>                 NIL     The file is not opened.</div>
   <div>                 True    It is opened in a New area.</div>
@@ -2008,8 +2008,8 @@ PROCEDURE Main()
   <div><p>- The second subscript value in the second dimension-which contains</div>
   <div><p>the field data type-must contain a proper value: C, D, L, M or N It is possible to use additional letters for clarity (e.g., 'Numeric' for 'N'): however, the first letter of this array element must be a proper value.</div>
   <div><p>The dbCreate( ) function does not use the decimal field to calculate the length of a character held longer than 256. Values up to the maximum length of a character field (which is 65519 bytes) are stored directly in the database in the length attribute if that database was created via this function. However, a file containing fields longer than 256 bytes is not compatible with any interpreter.</div>
-  <div><p>The &lt;cDriver&gt; parameter specifies the name of the Replaceable Database Driver to use to create the database. If it is not specified, then the Replaceable Database Driver in the current work area is used.</div>
-  <div><p>The &lt;lOpenNew&gt; parameter specifies if the already created database is to be opened, and where.  If NIL, the file is not opened. If True, it is opened in a New area, and if False it is opened in the current area (closing any file already occupying that area). The &lt;cAlias&gt; parameter specifies the alias name for the new opened database.</div>
+  <div><p>The &lt;cRDD&gt; parameter specifies the name of the Replaceable Database Driver to use to create the database. If it is not specified, then the Replaceable Database Driver in the current work area is used.</div>
+  <div><p>The &lt;lKeepOpen&gt; parameter specifies if the already created database is to be opened, and where.  If NIL, the file is not opened. If True, it is opened in a New area, and if False it is opened in the current area (closing any file already occupying that area). The &lt;cAlias&gt; parameter specifies the alias name for the new opened database.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -2396,7 +2396,7 @@ ENDIF
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>This function moves the Harbour internal primary focus to the work area designated by &lt;xArea&gt;. If &lt;xArea&gt; is numeric, then it will select the numeric work area; if &lt;xArea&gt; is character, then it will select the work area with the alias name.</div>
-  <div><p>dbSelectArea( 0 ) will select the next avaliable and unused work area. Up to 255 work areas are supported. Each work area has its own alias and record pointer, as well as its own Found(), dbFilter(), dbRSelect() and dbRelation() function values.</div>
+  <div><p>dbSelectArea( 0 ) will select the next avaliable and unused work area. Up to 65534 work areas are supported. Each work area has its own alias and record pointer, as well as its own Found(), dbFilter(), dbRSelect() and dbRelation() function values.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -16190,6 +16190,6 @@ IsLeapYear()
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-28 01:54 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/aa67a26">aa67a26</a></div>
+<div>Generated by hbdoc on 2016-10-28 10:37 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/0550bdb">0550bdb</a></div>
 </footer>
