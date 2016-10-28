@@ -16187,9 +16187,216 @@ IsLeapYear()
 <div class="d-it">Run time errors</div>
 </section>
 
+<section id="tbrowsenew">
+<span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/tbrowse.txt">Improve this doc</a></span>
+<h4><code>TBrowseNew()</code></h4>
+<div class="d-ol">Create a Browse Object</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>TBrowseNew( &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt; ) &rarr; &lt;oBrowse&gt;</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nTop&gt;    Top Row</div>
+  <div>&lt;nLeft&gt;   Top Left Column</div>
+  <div>&lt;nBottom&gt; Bottom Row</div>
+  <div>&lt;nRight&gt;  Bottom Right Column</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">&lt;oBrowse&gt;  An new Browse Object</div>
+<div class="d-d">Description</div>
+<div class="d-it">This function set up a browsing window at top-left coordinates of &lt;nTop&gt;, &lt;nLeft&gt; to bottom-right coordinates of &lt;nBottom&gt;, &lt;nRight&gt;. To browse Database files use TBrowseDB() function insted.</div>
+<div class="d-d">Data no link</div>
+<div class="d-it">
+  <div>:aColumns       Array to hold all browse columns</div>
+  <div>:autoLite       Logical value to control highlighting</div>
+  <div>:cargo          User-definable variable</div>
+  <div>:colorSpec      Color table for the TBrowse display</div>
+  <div>:colPos         Current cursor column position</div>
+  <div>:colSep         Column separator character</div>
+  <div>:footSep        Footing separator character</div>
+  <div>:freeze         Number of columns to freeze</div>
+  <div>:goBottomBlock  Code block executed by TBrowse:goBottom()</div>
+  <div>:goTopBlock     Code block executed by TBrowse:goTop()</div>
+  <div>:headSep        Heading separator character</div>
+  <div>:hitBottom      Indicates the end of available data</div>
+  <div>:hitTop         Indicates the beginning of available data</div>
+  <div>:leftVisible    Indicates position of leftmost unfrozen column in display</div>
+  <div>:nBottom        Bottom row number for the TBrowse display</div>
+  <div>:nLeft          Leftmost column for the TBrowse display</div>
+  <div>:nRight         Rightmost column for the TBrowse display</div>
+  <div>:nTop           Top row number for the TBrowse display</div>
+  <div>:rightVisible   Indicates position of rightmost unfrozen column in display</div>
+  <div>:rowCount       Number of visible data rows in the TBrowse display</div>
+  <div>:rowPos         Current cursor row position</div>
+  <div>:skipBlock      Code block used to reposition data source</div>
+  <div>:stable         Indicates if the TBrowse object is stable</div>
+  <div>:aRedraw        Array of logical items indicating, is appropriate row need to be redraw</div>
+  <div>:RelativePos    Indicates record position relatively position of first record on the screen</div>
+  <div>:lHeaders       Internal variable which indicates whether there are column footers to paint</div>
+  <div>:lFooters       Internal variable which indicates whether there are column footers to paint</div>
+  <div>:aRect          The rectangle specified with ColorRect()</div>
+  <div>:aRectColor     The color positions to use in the rectangle specified with ColorRect()</div>
+  <div>:aKeys        Holds the Default movement keys</div>
+</div>
+<div class="d-d">Methods link</div>
+<div class="d-it">
+  <div>AddColumn() Adds an new TBColumn object to the current Browse</div>
+  <div>Applykey()  Perform the Browse Key movement</div>
+  <div>SetKey()    Add an New key to the Keyboard dictionary</div>
+</div>
+<div class="d-d">Methods no link</div>
+<div class="d-it">
+  <div>New(nTop, nLeft, nBottom, nRight) Create an new Browse class and set the default values</div>
+  <div>Down()       Moves the cursor down one row</div>
+  <div>End()        Moves the cursor to the rightmost visible data column</div>
+  <div>GoBottom()   Repositions the data source to the bottom of file</div>
+  <div>GoTop()      Repositions the data source to the top of file</div>
+  <div>Home()       Moves the cursor to the leftmost visible data column</div>
+  <div>Left()       Moves the cursor left one column</div>
+  <div>PageDown()   Repositions the data source downward</div>
+  <div>PageUp()     Repositions the data source upward</div>
+  <div>PanEnd()     Moves the cursor to the rightmost data column</div>
+  <div>PanHome()    Moves the cursor to the leftmost visible data column</div>
+  <div>PanLeft()    Pans left without changing the cursor position</div>
+  <div>PanRight()   Pans right without changing the cursor position</div>
+  <div>Right()      Moves the cursor right one column</div>
+  <div>Up()         Moves the cursor up one row</div>
+  <div>ColCount()    Return the Current number of Columns</div>
+  <div>ColorRect()   Alters the color of a rectangular group of cells</div>
+  <div>ColWidth( nColumn )  Returns the display width of a particular column</div>
+  <div>Configure( nMode )   Reconfigures the internal settings of the TBrowse object nMode is an undocumented parameter in CA-Cl*pper</div>
+  <div>LeftDetermine()      Determine leftmost unfrozen column in display</div>
+  <div>DeHilite()           Dehighlights the current cell</div>
+  <div>DelColumn( nPos )    Delete a column object from a browse</div>
+  <div>ForceStable()        Performs a full stabilization</div>
+  <div>GetColumn( nColumn ) Gets a specific TBColumn object</div>
+  <div>Hilite()             Highlights the current cell</div>
+  <div>InsColumn( nPos, oCol )   Insert a column object in a browse</div>
+  <div>Invalidate()        Forces entire redraw during next stabilization</div>
+  <div>RefreshAll()        Causes all data to be recalculated during the next stabilize</div>
+  <div>RefreshCurrent()    Causes the current row to be refilled and repainted on next stabilize</div>
+  <div>SetColumn( nColumn, oCol )   Replaces one TBColumn object with another</div>
+  <div>Stabilize()          Performs incremental stabilization</div>
+  <div>DispCell( nColumn, cColor )  Displays a single cell</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+See tests/tbrowse.prg
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">Started</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">This functions is Compatible with CA-Cl*pper 5.2. The applykey() and SetKey() methods are only visible if HB_COMPAT_C53 is defined.</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">Library is core</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">TBrowse class</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#tbrowsenew">TBrowseNew()</a></code>, <code><a href="#tbcolumnnew">TBColumnNew()</a></code></div>
+</section>
+
+<section id="_002">
+<span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/tbrowse.txt">Improve this doc</a></span>
+<h4><code></code></h4>
+<div class="d-ol">Add an New Column to an TBrowse Object</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>:AddColumn() AddColumn( &lt;oCol&gt; ) &rarr; Self</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">&lt;oCol&gt;  Is an TbColumn object</div>
+<div class="d-d">Returns</div>
+<div class="d-it">&lt;Self&gt;  The Current object</div>
+<div class="d-d">Description</div>
+<div class="d-it">This method add an new column object specified as &lt;oCol&gt; to the assigned browsing object.</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">TBrowse Method</div>
+</section>
+
+<section id="_001">
+<span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/tbrowse.txt">Improve this doc</a></span>
+<h4><code></code></h4>
+<div class="d-ol">Evaluates an code block associated with an specific key</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>:Applykey() ApplyKey( &lt;nKey&gt; ) &rarr; nResult</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">&lt;nKey&gt;      An valid Inkey code</div>
+<div class="d-d">Returns</div>
+<div class="d-it">
+  <div>&lt;nResult&gt;   Value returned from the evaluated Code Block See Table Below</div>
+  <div class="d-t d-t1">
+  <div>Value    Meaning</div>
+  <div>-1       User request for the browse lost input focus</div>
+  <div>0        Code block associated with &lt;nkey&gt; was evaluated</div>
+  <div>1        Unable to locate &lt;nKey&gt; in the dictionary, Key was not processed</div>
+</div>
+  <div></div>
+</div>
+<div class="d-d">Description</div>
+<div class="d-it">This method evaluate an code block associated with &lt;nkey&gt; that is contained in the TBrowse:SetKey() dictionary.</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+DO WHILE .T.
+   oTb:forceStable()
+   IF oTb:applykey( Inkey( 0 ) ) == -1
+      EXIT
+   ENDIF
+ENDDO
+</pre>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">TBrowse Method</div>
+</section>
+
+<section id="">
+<span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/tbrowse.txt">Improve this doc</a></span>
+<h4><code></code></h4>
+<div class="d-ol">Get an optionaly Set an new Code block associated to a inkey value</div>
+<div class="d-d">Syntax</div>
+<div class="d-it"><code>:SetKey() SetKey( &lt;nKey&gt;[, &lt;bBlock&gt;] ) &rarr; bOldBlock</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div>&lt;nKey&gt; An valid inkey Code</div>
+  <div>&lt;bBlock&gt;  An optional action to associate to the inkey value.</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">&lt;bOldBlock&gt;  If an Keypress has it code block changes, it will return the previus one; otherwise, it will return the current one</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This method Get an optionaly set an code block that is associated to an inkey value. The table below show the default keypress/Code Block definitions</div>
+  <div class="d-t d-t1">
+  <div>Inkey Value    Code Block</div>
+  <div>K_DOWN         {| oB, nKey | oB:Down(), 0 }</div>
+  <div>K_END          {| oB, nKey | oB:End(), 0 }</div>
+  <div>K_CTRL_PGDN    {| oB, nKey | oB:GoBottom(), 0 }</div>
+  <div>K_CTRL_PGUP    {| oB, nKey | oB:GoTop(), 0 }</div>
+  <div>K_HOME         {| oB, nKey | oB:Home(), 0 }</div>
+  <div>K_LEFT         {| oB, nKey | oB:Left(), 0 }</div>
+  <div>K_PGDN         {| oB, nKey | oB:PageDown(), 0 }</div>
+  <div>K_PGUP         {| oB, nKey | oB:PageUp(), 0 }</div>
+  <div>K_CTRL_END     {| oB, nKey | oB:PanEnd(), 0 }</div>
+  <div>K_CTRL_HOME    {| oB, nKey | oB:PanHome(), 0 }</div>
+  <div>K_CTRL_LEFT    {| oB, nKey | oB:PanLeft(), 0 }</div>
+  <div>K_CTRL_RIGHT   {| oB, nKey | oB:PanRight(), 0 }</div>
+  <div>K_RIGHT        {| oB, nKey | oB:Right(), 0 }</div>
+  <div>K_UP           {| oB, nKey | oB:Up(), 0 }</div>
+  <div>K_ESC          {| oB, nKey | -1 }</div>
+</div>
+  <div><p>The keys handlers can be queried, added and replace an removed from the internal keyboard dictionary. See the example.</div>
+  <div><p>oTb:SetKey( K_TAB, {| oTb, nKey | -1 } )</div>
+  <div><p>An default key handler can be declared by specifyin a value of 0 for &lt;nKey&gt;. It associate code block will be evaluated each time TBrowse:Applykey() is called  with an key value that is not contained in the dictionary. For example</div>
+  <div><p>oTb:SetKey( 0, {| oTb, nKey | DefKeyHandler( otb, nkey } ) This call the a function named DefKeyHandler() when nKey is not contained in the dictionary.</div>
+  <div><p>To remove an keypress/code block definition, specify NIL for &lt;bBlock&gt; oTb:SetKey( K_ESC, NIL )</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+oTb:SeyKey( K_F10, {| otb, nkey | ShowListByname( otb ) }
+</pre>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">TBrowse Method</div>
+</section>
+
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-28 10:37 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/0550bdb">0550bdb</a></div>
+<div>Generated by hbdoc on 2016-10-28 16:15 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/9b82cba">9b82cba</a></div>
 </footer>
