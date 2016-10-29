@@ -13,7 +13,7 @@ header {
   background-color: #0974c5;
   color: #f0f0f0;
   border: none;
-  padding: 0;
+  padding: 0 20px;
 }
 
 header > div {
@@ -384,12 +384,8 @@ p {
 }
 
 @media screen and (max-width: 737px) {
-  header h1 {
+  header > div {
     width: auto;
-  }
-
-  header h1 div:last-child {
-    float: none;
   }
 
   main {
