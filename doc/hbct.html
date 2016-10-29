@@ -18,6 +18,184 @@
 <h1>Harbour Reference Guide<div>hbct contrib</div></h1>
 </header>
 
+<aside>
+<ul>
+<li><a href="#acos"><code>Acos()</code></a>
+<li><a href="#addascii"><code>AddAscii()</code></a>
+<li><a href="#addmonth"><code>AddMonth()</code></a>
+<li><a href="#afteratnum"><code>AfterAtNum()</code></a>
+<li><a href="#asciisum"><code>AsciiSum()</code></a>
+<li><a href="#ascpos"><code>AscPos()</code></a>
+<li><a href="#asin"><code>Asin()</code></a>
+<li><a href="#atan"><code>Atan()</code></a>
+<li><a href="#atadjust"><code>AtAdjust()</code></a>
+<li><a href="#atn2"><code>Atn2()</code></a>
+<li><a href="#atnum"><code>AtNum()</code></a>
+<li><a href="#atrepl"><code>AtRepl()</code></a>
+<li><a href="#attoken"><code>AtToken()</code></a>
+<li><a href="#beforatnum"><code>BeforAtNum()</code></a>
+<li><a href="#bittoc"><code>BitToC()</code></a>
+<li><a href="#bom"><code>BoM()</code></a>
+<li><a href="#boq"><code>BoQ()</code></a>
+<li><a href="#boy"><code>BoY()</code></a>
+<li><a href="#ceiling"><code>Ceiling()</code></a>
+<li><a href="#celsius"><code>Celsius()</code></a>
+<li><a href="#charadd"><code>CharAdd()</code></a>
+<li><a href="#charand"><code>CharAnd()</code></a>
+<li><a href="#chareven"><code>CharEven()</code></a>
+<li><a href="#charhist"><code>CharHist()</code></a>
+<li><a href="#charlist"><code>CharList()</code></a>
+<li><a href="#charmirr"><code>CharMirr()</code></a>
+<li><a href="#charmix"><code>CharMix()</code></a>
+<li><a href="#charnolist"><code>CharNoList()</code></a>
+<li><a href="#charnot"><code>CharNot()</code></a>
+<li><a href="#charodd"><code>CharOdd()</code></a>
+<li><a href="#charone"><code>CharOne()</code></a>
+<li><a href="#charonly"><code>CharOnly()</code></a>
+<li><a href="#charor"><code>CharOr()</code></a>
+<li><a href="#charpix"><code>CharPix()</code></a>
+<li><a href="#charrela"><code>CharRelA()</code></a>
+<li><a href="#charrelrep"><code>CharRelRep()</code></a>
+<li><a href="#charrem"><code>CharRem()</code></a>
+<li><a href="#charrepl"><code>CharRepl()</code></a>
+<li><a href="#charrll"><code>CharRll()</code></a>
+<li><a href="#charrlr"><code>CharRlr()</code></a>
+<li><a href="#charshl"><code>CharShl()</code></a>
+<li><a href="#charshr"><code>CharShr()</code></a>
+<li><a href="#charslist"><code>CharSList()</code></a>
+<li><a href="#charsort"><code>CharSort()</code></a>
+<li><a href="#charsub"><code>CharSub()</code></a>
+<li><a href="#charswap"><code>CharSwap()</code></a>
+<li><a href="#charwin"><code>CharWin()</code></a>
+<li><a href="#charxor"><code>CharXor()</code></a>
+<li><a href="#colorrepl"><code>ColorRepl()</code></a>
+<li><a href="#colorton"><code>ColorToN()</code></a>
+<li><a href="#colorwin"><code>ColorWin()</code></a>
+<li><a href="#cos"><code>Cos()</code></a>
+<li><a href="#cosh"><code>Cosh()</code></a>
+<li><a href="#cot"><code>Cot()</code></a>
+<li><a href="#countleft"><code>CountLeft()</code></a>
+<li><a href="#countright"><code>CountRight()</code></a>
+<li><a href="#csetargerr"><code>CSetArgErr()</code></a>
+<li><a href="#csetatmupa"><code>CSetAtMupa()</code></a>
+<li><a href="#csetref"><code>CSetRef()</code></a>
+<li><a href="#ctobit"><code>CToBit()</code></a>
+<li><a href="#ctodow"><code>CToDoW()</code></a>
+<li><a href="#ctof"><code>CToF()</code></a>
+<li><a href="#ctomonth"><code>CToMonth()</code></a>
+<li><a href="#cton"><code>CToN()</code></a>
+<li><a href="#dmy"><code>DMY()</code></a>
+<li><a href="#doy"><code>DoY()</code></a>
+<li><a href="#dtor"><code>DToR()</code></a>
+<li><a href="#enhanced"><code>Enhanced()</code></a>
+<li><a href="#eom"><code>EoM()</code></a>
+<li><a href="#eoq"><code>EoQ()</code></a>
+<li><a href="#eoy"><code>EoY()</code></a>
+<li><a href="#exponent"><code>Exponent()</code></a>
+<li><a href="#fact"><code>Fact()</code></a>
+<li><a href="#fahrenheit"><code>Fahrenheit()</code></a>
+<li><a href="#floor"><code>Floor()</code></a>
+<li><a href="#ftoc"><code>FToC()</code></a>
+<li><a href="#fv"><code>FV()</code></a>
+<li><a href="#getprec"><code>GetPrec()</code></a>
+<li><a href="#infinity"><code>Infinity()</code></a>
+<li><a href="#invertattr"><code>InvertAttr()</code></a>
+<li><a href="#invertwin"><code>InvertWin()</code></a>
+<li><a href="#isleap"><code>IsLeap()</code></a>
+<li><a href="#justleft"><code>JustLeft()</code></a>
+<li><a href="#justright"><code>JustRight()</code></a>
+<li><a href="#ksetcaps"><code>KSetCaps()</code></a>
+<li><a href="#ksetins"><code>KSetIns()</code></a>
+<li><a href="#ksetnum"><code>KSetNum()</code></a>
+<li><a href="#ksetscroll"><code>KSetScroll()</code></a>
+<li><a href="#lastdayom"><code>LastDayOM()</code></a>
+<li><a href="#log10"><code>Log10()</code></a>
+<li><a href="#mantissa"><code>Mantissa()</code></a>
+<li><a href="#mdy"><code>MDY()</code></a>
+<li><a href="#ntoc"><code>NToC()</code></a>
+<li><a href="#ntocdow"><code>NToCDoW()</code></a>
+<li><a href="#ntocmonth"><code>NToCMonth()</code></a>
+<li><a href="#ntocolor"><code>NToColor()</code></a>
+<li><a href="#numat"><code>NumAt()</code></a>
+<li><a href="#numtoken"><code>NumToken()</code></a>
+<li><a href="#padleft"><code>PadLeft()</code></a>
+<li><a href="#padright"><code>PadRight()</code></a>
+<li><a href="#payment"><code>Payment()</code></a>
+<li><a href="#periods"><code>Periods()</code></a>
+<li><a href="#pi"><code>Pi()</code></a>
+<li><a href="#posalpha"><code>PosAlpha()</code></a>
+<li><a href="#poschar"><code>PosChar()</code></a>
+<li><a href="#posdel"><code>PosDel()</code></a>
+<li><a href="#posdiff"><code>PosDiff()</code></a>
+<li><a href="#posequal"><code>PosEqual()</code></a>
+<li><a href="#posins"><code>PosIns()</code></a>
+<li><a href="#poslower"><code>PosLower()</code></a>
+<li><a href="#posrange"><code>PosRange()</code></a>
+<li><a href="#posrepl"><code>PosRepl()</code></a>
+<li><a href="#posupper"><code>PosUpper()</code></a>
+<li><a href="#printready"><code>PrintReady()</code></a>
+<li><a href="#printstat"><code>PrintStat()</code></a>
+<li><a href="#pv"><code>PV()</code></a>
+<li><a href="#quarter"><code>Quarter()</code></a>
+<li><a href="#rangerem"><code>RangeRem()</code></a>
+<li><a href="#rate"><code>Rate()</code></a>
+<li><a href="#rangerepl"><code>RANGEREPL</code></a>
+<li><a href="#remall"><code>RemAll()</code></a>
+<li><a href="#remleft"><code>RemLeft()</code></a>
+<li><a href="#remright"><code>RemRight()</code></a>
+<li><a href="#replall"><code>ReplAll()</code></a>
+<li><a href="#replleft"><code>ReplLeft()</code></a>
+<li><a href="#replright"><code>ReplRight()</code></a>
+<li><a href="#resttoken"><code>RestToken()</code></a>
+<li><a href="#rtod"><code>RToD()</code></a>
+<li><a href="#savetoken"><code>SaveToken()</code></a>
+<li><a href="#sayscreen"><code>SayScreen()</code></a>
+<li><a href="#screenattr"><code>ScreenAttr()</code></a>
+<li><a href="#screenmix"><code>ScreenMix()</code></a>
+<li><a href="#screentext"><code>ScreenText()</code></a>
+<li><a href="#setatlike"><code>SetAtLike()</code></a>
+<li><a href="#setdate_001"><code>SetDate()</code></a>
+<li><a href="#setfont"><code>SetFont()</code></a>
+<li><a href="#setprec"><code>SetPrec()</code></a>
+<li><a href="#settime"><code>SetTime()</code></a>
+<li><a href="#sign"><code>Sign()</code></a>
+<li><a href="#sin"><code>Sin()</code></a>
+<li><a href="#sinh"><code>Sinh()</code></a>
+<li><a href="#standard"><code>Standard()</code></a>
+<li><a href="#strdiff"><code>StrDiff()</code></a>
+<li><a href="#strswap"><code>StrSwap()</code></a>
+<li><a href="#tabexpand"><code>TabExpand()</code></a>
+<li><a href="#tabpack"><code>TabPack()</code></a>
+<li><a href="#tan"><code>Tan()</code></a>
+<li><a href="#tanh"><code>Tanh()</code></a>
+<li><a href="#timevalid"><code>TimeValid()</code></a>
+<li><a href="#token"><code>Token()</code></a>
+<li><a href="#tokenat"><code>TokenAt()</code></a>
+<li><a href="#tokenend"><code>TokenEnd()</code></a>
+<li><a href="#tokenexit"><code>TokenExit()</code></a>
+<li><a href="#tokeninit"><code>TokenInit()</code></a>
+<li><a href="#tokenlower"><code>TokenLower()</code></a>
+<li><a href="#tokennext"><code>TokenNext()</code></a>
+<li><a href="#tokennum"><code>TokenNum()</code></a>
+<li><a href="#tokensep"><code>TokenSep()</code></a>
+<li><a href="#tokenupper"><code>TokenUpper()</code></a>
+<li><a href="#unselected"><code>Unselected()</code></a>
+<li><a href="#untextwin"><code>UnTextWin()</code></a>
+<li><a href="#valpos"><code>ValPos()</code></a>
+<li><a href="#vgapalette"><code>VGAPalette()</code></a>
+<li><a href="#videotype"><code>VideoType()</code></a>
+<li><a href="#waitperiod"><code>WaitPeriod()</code></a>
+<li><a href="#week"><code>Week()</code></a>
+<li><a href="#wordone"><code>WordOne()</code></a>
+<li><a href="#wordonly"><code>WordOnly()</code></a>
+<li><a href="#wordrem"><code>WordRem()</code></a>
+<li><a href="#wordrepl"><code>WordRepl()</code></a>
+<li><a href="#wordswap"><code>WordSwap()</code></a>
+<li><a href="#wordtochar"><code>WordToChar()</code></a>
+<li><a href="#xtoc"><code>XToC()</code></a>
+</ul>
+</aside>
+
 <main>
 
 <section id="addmonth">
@@ -1227,7 +1405,7 @@ ENDDO
 <div class="d-it">
   <div><p>Rate() calculates the rate of interest per period for the given loan, payment per periods and number of periods. This is done with the same equation used in the Payment() or Periods() function:</div>
   <div><p>&lt;nPayment&gt; = &lt;nLoan&gt;*(&lt;nInterest&gt;/100)/(1-(1+&lt;nInterest&gt;/100)^(-&lt;nPeriods&gt;))</div>
-  <div><p>However, this equation can not be solved for &lt;nInterest&gt; in a &quot;closed&quot; manner, i.e. &lt;nInterest&gt; = ..., so that the result can only be estimated.</div>
+  <div><p>However, this equation cannot be solved for &lt;nInterest&gt; in a &quot;closed&quot; manner, i.e. &lt;nInterest&gt; = ..., so that the result can only be estimated.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -3995,7 +4173,7 @@ TokenExit()                // free the memory used for the global TE
 <div class="d-d">Returns</div>
 <div class="d-it">&lt;lTokenEnd&gt;              .T., if additional tokens are available</div>
 <div class="d-d">Description</div>
-<div class="d-it">The TokenEnd() function can be used to check whether the next call to TokenNext() would return a new token. This can not be decided with TokenNext() alone, since an empty token cannot be distinguished from a &quot;no more&quot; tokens. If the parameter &lt;@cTokenEnvironment&gt; is supplied (must be by reference), the information from this token environment is used, otherwise the global TE is used. With a combination of TokenEnd() and TokenNext(), all tokens from a string can be retrieved successivly (see example).</div>
+<div class="d-it">The TokenEnd() function can be used to check whether the next call to TokenNext() would return a new token. This cannot be decided with TokenNext() alone, since an empty token cannot be distinguished from a &quot;no more&quot; tokens. If the parameter &lt;@cTokenEnvironment&gt; is supplied (must be by reference), the information from this token environment is used, otherwise the global TE is used. With a combination of TokenEnd() and TokenNext(), all tokens from a string can be retrieved successivly (see example).</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 TokenInit( &quot;a.b.c.d&quot;, &quot;.&quot;, 1 )  // initialize global TE
@@ -5071,6 +5249,6 @@ CSetAtMupa( .T. )
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-28 16:15 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/9b82cba">9b82cba</a></div>
+<div>Generated by hbdoc on 2016-10-29 12:25 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/3f69ce6">3f69ce6</a></div>
 </footer>

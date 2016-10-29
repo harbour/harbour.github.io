@@ -18,6 +18,201 @@
 <h1>Harbour Reference Guide<div>gtwvw contrib</div></h1>
 </header>
 
+<aside>
+<ul>
+<li><a href="#wvw__makedlgtemplate"><code>wvw__MakeDlgTemplate()</code></a>
+<li><a href="#wvw_addrows"><code>wvw_AddRows()</code></a>
+<li><a href="#wvw_appendmenu"><code>wvw_AppendMenu()</code></a>
+<li><a href="#wvw_cbaddstring"><code>wvw_cbAddString()</code></a>
+<li><a href="#wvw_cbcreate"><code>wvw_cbCreate()</code></a>
+<li><a href="#wvw_cbdestroy"><code>wvw_cbDestroy()</code></a>
+<li><a href="#wvw_cbenable"><code>wvw_cbEnable()</code></a>
+<li><a href="#wvw_cbfindstring"><code>wvw_cbFindString()</code></a>
+<li><a href="#wvw_cbgetcurtext"><code>wvw_cbGetCurText()</code></a>
+<li><a href="#wvw_cbgetindex"><code>wvw_cbGetIndex()</code></a>
+<li><a href="#wvw_cbisdropped"><code>wvw_cbIsDropped()</code></a>
+<li><a href="#wvw_cbisfocused"><code>wvw_cbIsFocused()</code></a>
+<li><a href="#wvw_cbsetcodeblock"><code>wvw_cbSetCodeblock()</code></a>
+<li><a href="#wvw_cbsetcursel"><code>wvw_cbSetCurSel()</code></a>
+<li><a href="#wvw_cbsetfont"><code>wvw_cbSetFont()</code></a>
+<li><a href="#wvw_cbsetindex"><code>wvw_cbSetIndex()</code></a>
+<li><a href="#wvw_cxcreate"><code>wvw_cxCreate()</code></a>
+<li><a href="#wvw_cxdestroy"><code>wvw_cxDestroy()</code></a>
+<li><a href="#wvw_cxenable"><code>wvw_cxEnable()</code></a>
+<li><a href="#wvw_cxgetcheck"><code>wvw_cxGetCheck()</code></a>
+<li><a href="#wvw_cxsetcheck"><code>wvw_cxSetCheck()</code></a>
+<li><a href="#wvw_cxsetcodeblock"><code>wvw_cxSetCodeblock()</code></a>
+<li><a href="#wvw_cxsetfocus"><code>wvw_cxSetFocus()</code></a>
+<li><a href="#wvw_centerwindow"><code>wvw_CenterWindow()</code></a>
+<li><a href="#wvw_choosecolor"><code>wvw_ChooseColor()</code></a>
+<li><a href="#wvw_choosefont"><code>wvw_ChooseFont()</code></a>
+<li><a href="#wvw_clienttoscreen"><code>wvw_ClientToScreen()</code></a>
+<li><a href="#wvw_createdialogdynamic"><code>wvw_CreateDialogDynamic()</code></a>
+<li><a href="#wvw_createdialogmodal"><code>wvw_CreateDialogModal()</code></a>
+<li><a href="#wvw_createfont"><code>wvw_CreateFont()</code></a>
+<li><a href="#wvw_createmenu"><code>wvw_CreateMenu()</code></a>
+<li><a href="#wvw_createpopupmenu"><code>wvw_CreatePopupMenu()</code></a>
+<li><a href="#wvw_deletemenu"><code>wvw_DeleteMenu()</code></a>
+<li><a href="#wvw_destroymenu"><code>wvw_DestroyMenu()</code></a>
+<li><a href="#wvw_dlgseticon"><code>wvw_DlgSetIcon()</code></a>
+<li><a href="#wvw_drawboxget"><code>wvw_DrawBoxGet()</code></a>
+<li><a href="#wvw_drawboxgroup"><code>wvw_DrawBoxGroup()</code></a>
+<li><a href="#wvw_drawboxraised"><code>wvw_DrawBoxRaised()</code></a>
+<li><a href="#wvw_drawboxrecessed"><code>wvw_DrawBoxRecessed()</code></a>
+<li><a href="#wvw_drawbutton"><code>wvw_DrawButton()</code></a>
+<li><a href="#wvw_drawcolorrect"><code>wvw_DrawColorRect()</code></a>
+<li><a href="#wvw_drawellipse"><code>wvw_DrawEllipse()</code></a>
+<li><a href="#wvw_drawfocusrect"><code>wvw_DrawFocusRect()</code></a>
+<li><a href="#wvw_drawgridhorz"><code>wvw_DrawGridHorz()</code></a>
+<li><a href="#wvw_drawgridvert"><code>wvw_DrawGridVert()</code></a>
+<li><a href="#wvw_drawimage"><code>wvw_DrawImage()</code></a>
+<li><a href="#wvw_drawlabel"><code>wvw_DrawLabel()</code></a>
+<li><a href="#wvw_drawlabelex"><code>wvw_DrawLabelEx()</code></a>
+<li><a href="#wvw_drawlabelobj"><code>wvw_DrawLabelObj()</code></a>
+<li><a href="#wvw_drawline"><code>wvw_DrawLine()</code></a>
+<li><a href="#wvw_drawlineex"><code>wvw_DrawLineEx()</code></a>
+<li><a href="#wvw_drawmenubar"><code>wvw_DrawMenuBar()</code></a>
+<li><a href="#wvw_drawoutline"><code>wvw_DrawOutline()</code></a>
+<li><a href="#wvw_drawoutlineex"><code>wvw_DrawOutlineEx()</code></a>
+<li><a href="#wvw_drawpicture"><code>wvw_DrawPicture()</code></a>
+<li><a href="#wvw_drawprogressbar"><code>wvw_DrawProgressBar()</code></a>
+<li><a href="#wvw_drawrectangle"><code>wvw_DrawRectangle()</code></a>
+<li><a href="#wvw_drawroundrect"><code>wvw_DrawRoundRect()</code></a>
+<li><a href="#wvw_drawscrollbutton"><code>wvw_DrawScrollButton()</code></a>
+<li><a href="#wvw_drawscrollthumbhorz"><code>wvw_DrawScrollThumbHorz()</code></a>
+<li><a href="#wvw_drawscrollthumbvert"><code>wvw_DrawScrollThumbVert()</code></a>
+<li><a href="#wvw_drawshadedrect"><code>wvw_DrawShadedRect()</code></a>
+<li><a href="#wvw_drawstatusbar"><code>wvw_DrawStatusBar()</code></a>
+<li><a href="#wvw_drawtextbox"><code>wvw_DrawTextBox()</code></a>
+<li><a href="#wvw_drawtoolbuttonstate"><code>wvw_DrawToolButtonState()</code></a>
+<li><a href="#wvw_enablemaximize"><code>wvw_EnableMaximize()</code></a>
+<li><a href="#wvw_enablemenuitem"><code>wvw_EnableMenuItem()</code></a>
+<li><a href="#wvw_enableshortcuts"><code>wvw_EnableShortcuts()</code></a>
+<li><a href="#wvw_fillrectangle"><code>wvw_FillRectangle()</code></a>
+<li><a href="#wvw_getclipboard"><code>wvw_GetClipboard()</code></a>
+<li><a href="#wvw_getcursorpos"><code>wvw_GetCursorPos()</code></a>
+<li><a href="#wvw_getfontinfo"><code>wvw_GetFontInfo()</code></a>
+<li><a href="#wvw_getlastmenuevent"><code>wvw_GetLastMenuEvent()</code></a>
+<li><a href="#wvw_getmenu"><code>wvw_GetMenu()</code></a>
+<li><a href="#wvw_getpaintrect"><code>wvw_GetPaintRect()</code></a>
+<li><a href="#wvw_getpalette"><code>wvw_GetPalette()</code></a>
+<li><a href="#wvw_getrgbcolor"><code>wvw_GetRGBColor()</code></a>
+<li><a href="#wvw_getrowcolfromxy"><code>wvw_GetRowColFromXY()</code></a>
+<li><a href="#wvw_getscreenheight"><code>wvw_GetScreenHeight()</code></a>
+<li><a href="#wvw_getscreenwidth"><code>wvw_GetScreenWidth()</code></a>
+<li><a href="#wvw_gettitle"><code>wvw_GetTitle()</code></a>
+<li><a href="#wvw_gettooltipbkcolor"><code>wvw_GetToolTipBkColor()</code></a>
+<li><a href="#wvw_gettooltiptextcolor"><code>wvw_GetToolTipTextColor()</code></a>
+<li><a href="#wvw_gettooltipwidth"><code>wvw_GetToolTipWidth()</code></a>
+<li><a href="#wvw_getwindowhandle"><code>wvw_GetWindowHandle()</code></a>
+<li><a href="#wvw_getxyfromrowcol"><code>wvw_GetXYFromRowCol()</code></a>
+<li><a href="#wvw_invalidaterect"><code>wvw_InvalidateRect()</code></a>
+<li><a href="#wvw_islbuttonpressed"><code>wvw_IsLButtonPressed()</code></a>
+<li><a href="#wvw_killtimer"><code>wvw_KillTimer()</code></a>
+<li><a href="#wvw_lbaddstring"><code>wvw_lbAddString()</code></a>
+<li><a href="#wvw_lbsetcursel"><code>wvw_lbSetCurSel()</code></a>
+<li><a href="#wvw_lclosewindow"><code>wvw_lCloseWindow()</code></a>
+<li><a href="#wvw_loadfont"><code>wvw_LoadFont()</code></a>
+<li><a href="#wvw_loadpen"><code>wvw_LoadPen()</code></a>
+<li><a href="#wvw_loadpicture"><code>wvw_LoadPicture()</code></a>
+<li><a href="#wvw_maximize"><code>wvw_Maximize()</code></a>
+<li><a href="#wvw_maxmaxcol"><code>wvw_MaxMaxCol()</code></a>
+<li><a href="#wvw_maxmaxrow"><code>wvw_MaxMaxRow()</code></a>
+<li><a href="#wvw_messagebox"><code>wvw_MessageBox()</code></a>
+<li><a href="#wvw_minimize"><code>wvw_Minimize()</code></a>
+<li><a href="#wvw_ncolofs"><code>wvw_nColOfs()</code></a>
+<li><a href="#wvw_nnumwindows"><code>wvw_nNumWindows()</code></a>
+<li><a href="#wvw_nopenwindow"><code>wvw_nOpenWindow()</code></a>
+<li><a href="#wvw_nrowofs"><code>wvw_nRowOfs()</code></a>
+<li><a href="#wvw_nsetcurwindow"><code>wvw_nSetCurWindow()</code></a>
+<li><a href="#wvw_noclose"><code>wvw_NoClose()</code></a>
+<li><a href="#wvw_nostartupsubwindow"><code>wvw_NoStartupSubWindow()</code></a>
+<li><a href="#wvw_numbmcache"><code>wvw_NumBMCache()</code></a>
+<li><a href="#wvw_pbcreate"><code>wvw_pbCreate()</code></a>
+<li><a href="#wvw_pbdestroy"><code>wvw_pbDestroy()</code></a>
+<li><a href="#wvw_pbenable"><code>wvw_pbEnable()</code></a>
+<li><a href="#wvw_pbsetcodeblock"><code>wvw_pbSetCodeblock()</code></a>
+<li><a href="#wvw_pbsetfocus"><code>wvw_pbSetFocus()</code></a>
+<li><a href="#wvw_pbsetfont"><code>wvw_pbSetFont()</code></a>
+<li><a href="#wvw_pbsetstyle"><code>wvw_pbSetStyle()</code></a>
+<li><a href="#wvw_pgcreate"><code>wvw_pgCreate()</code></a>
+<li><a href="#wvw_pgdestroy"><code>wvw_pgDestroy()</code></a>
+<li><a href="#wvw_pggetpos"><code>wvw_pgGetPos()</code></a>
+<li><a href="#wvw_pgsetpos"><code>wvw_pgSetPos()</code></a>
+<li><a href="#wvw_pastefromclipboard"><code>wvw_PasteFromClipboard()</code></a>
+<li><a href="#wvw_processmessages"><code>wvw_ProcessMessages()</code></a>
+<li><a href="#wvw_restore"><code>wvw_Restore()</code></a>
+<li><a href="#wvw_restscreen"><code>wvw_RestScreen()</code></a>
+<li><a href="#wvw_sbaddpart"><code>wvw_sbAddPart()</code></a>
+<li><a href="#wvw_sbcreate"><code>wvw_sbCreate()</code></a>
+<li><a href="#wvw_sbdestroy"><code>wvw_sbDestroy()</code></a>
+<li><a href="#wvw_sbgetparts"><code>wvw_sbGetParts()</code></a>
+<li><a href="#wvw_sbgettext"><code>wvw_sbGetText()</code></a>
+<li><a href="#wvw_sbrefresh"><code>wvw_sbRefresh()</code></a>
+<li><a href="#wvw_sbsettext"><code>wvw_sbSetText()</code></a>
+<li><a href="#wvw_savescreen"><code>wvw_SaveScreen()</code></a>
+<li><a href="#wvw_setaltf4close"><code>wvw_SetAltF4Close()</code></a>
+<li><a href="#wvw_setasnormal"><code>wvw_SetAsNormal()</code></a>
+<li><a href="#wvw_setbrush"><code>wvw_SetBrush()</code></a>
+<li><a href="#wvw_setclipboard"><code>wvw_SetClipboard()</code></a>
+<li><a href="#wvw_setcodepage"><code>wvw_SetCodepage()</code></a>
+<li><a href="#wvw_setdefcentrewindow"><code>wvw_SetDefCentreWindow()</code></a>
+<li><a href="#wvw_setdefhcentrewindow"><code>wvw_SetDefHCentreWindow()</code></a>
+<li><a href="#wvw_setdeflinespacing"><code>wvw_SetDefLineSpacing()</code></a>
+<li><a href="#wvw_setdeflspacecolor"><code>wvw_SetDefLSpaceColor()</code></a>
+<li><a href="#wvw_setdefvcentrewindow"><code>wvw_SetDefVCentreWindow()</code></a>
+<li><a href="#wvw_setfont"><code>wvw_SetFont()</code></a>
+<li><a href="#wvw_seticon"><code>wvw_SetIcon()</code></a>
+<li><a href="#wvw_setlastmenuevent"><code>wvw_SetLastMenuEvent()</code></a>
+<li><a href="#wvw_setlinespacing"><code>wvw_SetLineSpacing()</code></a>
+<li><a href="#wvw_setlspacecolor"><code>wvw_SetLSpaceColor()</code></a>
+<li><a href="#wvw_setmaincoord"><code>wvw_SetMainCoord()</code></a>
+<li><a href="#wvw_setmaxbmcache"><code>wvw_SetMaxBMCache()</code></a>
+<li><a href="#wvw_setmenu"><code>wvw_SetMenu()</code></a>
+<li><a href="#wvw_setmenukeyevent"><code>wvw_SetMenuKeyEvent()</code></a>
+<li><a href="#wvw_setmousemove"><code>wvw_SetMouseMove()</code></a>
+<li><a href="#wvw_setmousepos"><code>wvw_SetMousePos()</code></a>
+<li><a href="#wvw_setontop"><code>wvw_SetOnTop()</code></a>
+<li><a href="#wvw_setpaintrefresh"><code>wvw_SetPaintRefresh()</code></a>
+<li><a href="#wvw_setpalette"><code>wvw_SetPalette()</code></a>
+<li><a href="#wvw_setpen"><code>wvw_SetPen()</code></a>
+<li><a href="#wvw_setpointer"><code>wvw_SetPointer()</code></a>
+<li><a href="#wvw_setpopupmenu"><code>wvw_SetPopupMenu()</code></a>
+<li><a href="#wvw_settimer"><code>wvw_SetTimer()</code></a>
+<li><a href="#wvw_settitle"><code>wvw_SetTitle()</code></a>
+<li><a href="#wvw_settooltip"><code>wvw_SetToolTip()</code></a>
+<li><a href="#wvw_settooltipactive"><code>wvw_SetToolTipActive()</code></a>
+<li><a href="#wvw_settooltipbkcolor"><code>wvw_SetToolTipBkColor()</code></a>
+<li><a href="#wvw_settooltipmargin"><code>wvw_SetToolTipMargin()</code></a>
+<li><a href="#wvw_settooltiptext"><code>wvw_SetToolTipText()</code></a>
+<li><a href="#wvw_settooltiptextcolor"><code>wvw_SetToolTipTextColor()</code></a>
+<li><a href="#wvw_settooltiptitle"><code>wvw_SetToolTipTitle()</code></a>
+<li><a href="#wvw_settooltipwidth"><code>wvw_SetToolTipWidth()</code></a>
+<li><a href="#wvw_setvertcaret"><code>wvw_SetVertCaret()</code></a>
+<li><a href="#wvw_setwindowcentre"><code>wvw_SetWindowCentre()</code></a>
+<li><a href="#wvw_setwindowpos"><code>wvw_SetWindowPos()</code></a>
+<li><a href="#wvw_setwinstyle"><code>wvw_SetWinStyle()</code></a>
+<li><a href="#wvw_showwindow"><code>wvw_ShowWindow()</code></a>
+<li><a href="#wvw_tbaddbutton"><code>wvw_tbAddButton()</code></a>
+<li><a href="#wvw_tbbuttoncount"><code>wvw_tbButtonCount()</code></a>
+<li><a href="#wvw_tbcmd2index"><code>wvw_tbCmd2Index()</code></a>
+<li><a href="#wvw_tbcreate"><code>wvw_tbCreate()</code></a>
+<li><a href="#wvw_tbdelbutton"><code>wvw_tbDelButton()</code></a>
+<li><a href="#wvw_tbdestroy"><code>wvw_tbDestroy()</code></a>
+<li><a href="#wvw_tbenablebutton"><code>wvw_tbEnableButton()</code></a>
+<li><a href="#wvw_tbindex2cmd"><code>wvw_tbIndex2Cmd()</code></a>
+<li><a href="#wvw_trackpopupmenu"><code>wvw_TrackPopupMenu()</code></a>
+<li><a href="#wvw_unreachedbr"><code>wvw_UnreachedBr()</code></a>
+<li><a href="#wvw_updatewindow"><code>wvw_UpdateWindow()</code></a>
+<li><a href="#wvw_xbcreate"><code>wvw_xbCreate()</code></a>
+<li><a href="#wvw_xbdestroy"><code>wvw_xbDestroy()</code></a>
+<li><a href="#wvw_xbenable"><code>wvw_xbEnable()</code></a>
+<li><a href="#wvw_xbinfo"><code>wvw_xbInfo()</code></a>
+<li><a href="#wvw_xbupdate"><code>wvw_xbUpdate()</code></a>
+<li><a href="#wvw_xreposwindow"><code>wvw_XReposWindow()</code></a>
+</ul>
+</aside>
+
 <main>
 
 <section id="wvw__makedlgtemplate">
@@ -1307,7 +1502,7 @@
 <div class="d-d">Argument(s)</div>
 <div class="d-it">&lt;nWinNum&gt; Window number. Default is current window.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">Returns array of paint pending rect {top, left, bottom, right}. Warning: unlike WVT, top maybe &gt; bottom or left maybe &gt; right. in these cases, no paint request is pending (in WVT these is reflected in {0,0,0,0}).</div>
+<div class="d-it">Returns array of paint pending rect { top, left, bottom, right }. Warning: unlike WVT, top maybe &gt; bottom or left maybe &gt; right. in these cases, no paint request is pending (in WVT these is reflected in { 0, 0, 0, 0 }).</div>
 <div class="d-d">Description</div>
 <div class="d-it">Gets coordinates of screen with pending paint.</div>
 <div class="d-d">Platform(s)</div>
@@ -2284,11 +2479,11 @@
 <div class="d-d">Syntax</div>
 <div class="d-it"><code>wvw_SetAltF4Close( lOn )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;lOn&gt; .T. if application can be finished using ALT F4 key. .F. if application can not be finished usgin ALT F4 key.</div>
+<div class="d-it">&lt;lOn&gt; .T. if application can be finished using &lt;Alt F4&gt; key. .F. if application cannot be finished using &lt;Alt F4&gt; key.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Old configuration.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Identify if the application can be finished using ALT F4 key.</div>
+<div class="d-it">Identify if the application can be finished using &lt;Alt F4&gt; key.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -2998,7 +3193,7 @@
 <div class="d-it"><code>wvw_tbAddButton( nWinNum, nCommand, xBitmap, cLabel, nBitmapType, lMap3DColors )</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCommand&gt; ID of action to be executed when user press button. &lt;xBitmap&gt; ID of bitmap resource in .RC file (in this case, the image can not have more than 256 colors) or full path to a file name. &lt;cLabel&gt; Text of button. If passed &lt;lDisplayText&gt; (in function wvw_tbCreate()) to .T., the text will be showed below image, otherwise will be used as a tooltip. &lt;nBitmapType&gt; Bitmap type. Can be: 0 1 2 3 Custom Standard windows bitmaps (COPY, PAST, FIND, OPEN, etc.) System view bitmaps System history bitmaps</div>
+  <div>&lt;nWinNum&gt; Window number. Default is current window. &lt;nCommand&gt; ID of action to be executed when user press button. &lt;xBitmap&gt; ID of bitmap resource in .RC file (in this case, the image cannot have more than 256 colors) or full path to a file name. &lt;cLabel&gt; Text of button. If passed &lt;lDisplayText&gt; (in function wvw_tbCreate()) to .T., the text will be showed below image, otherwise will be used as a tooltip. &lt;nBitmapType&gt; Bitmap type. Can be: 0 1 2 3 Custom Standard windows bitmaps (COPY, PAST, FIND, OPEN, etc.) System view bitmaps System history bitmaps</div>
   <div>&lt;lMap3DColors&gt; If the image will be transparent (meaningful for custom bitmap only).</div>
 </div>
 <div class="d-d">Returns</div>
@@ -3298,6 +3493,6 @@
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-28 16:15 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/9b82cba">9b82cba</a></div>
+<div>Generated by hbdoc on 2016-10-29 12:25 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/3f69ce6">3f69ce6</a></div>
 </footer>

@@ -18,6 +18,218 @@
 <h1>Harbour Reference Guide<div>hbnf contrib</div></h1>
 </header>
 
+<aside>
+<ul>
+<li><a href="#ft_aaddition"><code>ft_AAddition()</code></a>
+<li><a href="#ft_aavg"><code>ft_AAvg()</code></a>
+<li><a href="#ft_acctadj"><code>ft_AcctAdj()</code></a>
+<li><a href="#ft_acctmonth"><code>ft_AcctMonth()</code></a>
+<li><a href="#ft_acctqtr"><code>ft_AcctQtr()</code></a>
+<li><a href="#ft_acctweek"><code>ft_AcctWeek()</code></a>
+<li><a href="#ft_acctyear"><code>ft_AcctYear()</code></a>
+<li><a href="#ft_adapter"><code>ft_Adapter()</code></a>
+<li><a href="#ft_adder"><code>ft_Adder()</code></a>
+<li><a href="#ft_addwkdy"><code>ft_AddWkDy()</code></a>
+<li><a href="#ft_adessort"><code>ft_ADesSort()</code></a>
+<li><a href="#ft_aemaxlen"><code>ft_AEMaxLen()</code></a>
+<li><a href="#ft_aeminlen"><code>ft_AEMinLen()</code></a>
+<li><a href="#ft_alt"><code>ft_Alt()</code></a>
+<li><a href="#ft_amedian"><code>ft_AMedian()</code></a>
+<li><a href="#ft_anomatches"><code>ft_ANoMatches()</code></a>
+<li><a href="#ft_aredit"><code>ft_ArEdit()</code></a>
+<li><a href="#ft_asum"><code>ft_ASum()</code></a>
+<li><a href="#ft_at2"><code>ft_At2()</code></a>
+<li><a href="#ft_bitclr"><code>ft_BitClr()</code></a>
+<li><a href="#ft_bitset"><code>ft_BitSet()</code></a>
+<li><a href="#ft_blink"><code>ft_Blink()</code></a>
+<li><a href="#ft_brwswhl"><code>ft_BrwsWhl()</code></a>
+<li><a href="#ft_byt2bit"><code>ft_Byt2Bit()</code></a>
+<li><a href="#ft_byt2hex"><code>ft_Byt2Hex()</code></a>
+<li><a href="#ft_byteand"><code>ft_ByteAnd()</code></a>
+<li><a href="#ft_byteneg"><code>ft_ByteNeg()</code></a>
+<li><a href="#ft_bytenot"><code>ft_ByteNot()</code></a>
+<li><a href="#ft_byteor"><code>ft_ByteOr()</code></a>
+<li><a href="#ft_bytexor"><code>ft_ByteXor()</code></a>
+<li><a href="#ft_calendar"><code>ft_Calendar()</code></a>
+<li><a href="#ft_caplock"><code>ft_CapLock()</code></a>
+<li><a href="#ft_chdir"><code>ft_ChDir()</code></a>
+<li><a href="#ft_civ2mil"><code>ft_Civ2Mil()</code></a>
+<li><a href="#ft_clrsel"><code>ft_ClrSel()</code></a>
+<li><a href="#ft_cls"><code>ft_CLS()</code></a>
+<li><a href="#ft_color2n"><code>ft_Color2N()</code></a>
+<li><a href="#ft_ctrl"><code>ft_Ctrl()</code></a>
+<li><a href="#ft_d2e"><code>ft_D2E()</code></a>
+<li><a href="#ft_datecnfg"><code>ft_DateCnfg()</code></a>
+<li><a href="#ft_dayofyr"><code>ft_DayOfYr()</code></a>
+<li><a href="#ft_daytobow"><code>ft_DayToBoW()</code></a>
+<li><a href="#ft_dec2bin"><code>ft_Dec2Bin()</code></a>
+<li><a href="#ft_default"><code>ft_Default()</code></a>
+<li><a href="#ft_descend"><code>ft_Descend()</code></a>
+<li><a href="#ft_dfclose"><code>ft_DFClose()</code></a>
+<li><a href="#ft_dfsetup"><code>ft_DFSetup()</code></a>
+<li><a href="#ft_dispfile"><code>ft_DispFile()</code></a>
+<li><a href="#ft_dispmsg"><code>ft_DispMsg()</code></a>
+<li><a href="#ft_dosver"><code>ft_DosVer()</code></a>
+<li><a href="#ft_doy"><code>ft_DoY()</code></a>
+<li><a href="#ft_dskfree"><code>ft_DskFree()</code></a>
+<li><a href="#ft_dsksize"><code>ft_DskSize()</code></a>
+<li><a href="#ft_e2d"><code>ft_E2D()</code></a>
+<li><a href="#ft_easter"><code>ft_Easter()</code></a>
+<li><a href="#ft_elapmin"><code>ft_ElapMin()</code></a>
+<li><a href="#ft_elapsed"><code>ft_Elapsed()</code></a>
+<li><a href="#ft_eltime"><code>ft_ElTime()</code></a>
+<li><a href="#ft_esccode"><code>ft_EscCode()</code></a>
+<li><a href="#ft_fappend"><code>ft_FAppend()</code></a>
+<li><a href="#ft_fbof"><code>ft_FBof()</code></a>
+<li><a href="#ft_fday"><code>ft_FDay()</code></a>
+<li><a href="#ft_fdelete"><code>ft_FDelete()</code></a>
+<li><a href="#ft_feof"><code>ft_FEof()</code></a>
+<li><a href="#ft_ferror"><code>ft_FError()</code></a>
+<li><a href="#ft_fgobot"><code>ft_FGoBot()</code></a>
+<li><a href="#ft_fgoto"><code>ft_FGoto()</code></a>
+<li><a href="#ft_fgotop"><code>ft_FGoTop()</code></a>
+<li><a href="#ft_fill"><code>ft_Fill()</code></a>
+<li><a href="#ft_findith"><code>ft_FindITh()</code></a>
+<li><a href="#ft_finsert"><code>ft_FInsert()</code></a>
+<li><a href="#ft_floptst"><code>ft_FlopTst()</code></a>
+<li><a href="#ft_flastre"><code>ft_FLastRe()</code></a>
+<li><a href="#ft_freadln"><code>ft_FReadLn()</code></a>
+<li><a href="#ft_frecno"><code>ft_FRecNo()</code></a>
+<li><a href="#ft_fselect"><code>ft_FSelect()</code></a>
+<li><a href="#ft_fskip"><code>ft_FSkip()</code></a>
+<li><a href="#ft_fuse"><code>ft_FUse()</code></a>
+<li><a href="#ft_fwriteln"><code>ft_FWriteLn()</code></a>
+<li><a href="#ft_gcd"><code>ft_GCD()</code></a>
+<li><a href="#ft_gete"><code>ft_GetE()</code></a>
+<li><a href="#ft_getmode"><code>ft_GetMode()</code></a>
+<li><a href="#ft_getvcur"><code>ft_GetVCur()</code></a>
+<li><a href="#ft_getvpg"><code>ft_GetVPg()</code></a>
+<li><a href="#ft_hex2dec"><code>ft_Hex2Dec()</code></a>
+<li><a href="#ft_inp"><code>ft_inp()</code></a>
+<li><a href="#ft_int86"><code>ft_int86()</code></a>
+<li><a href="#ft_iamidle"><code>ft_IAmIdle()</code></a>
+<li><a href="#ft_idle"><code>ft_Idle()</code></a>
+<li><a href="#ft_invclr"><code>ft_InvClr()</code></a>
+<li><a href="#ft_isbit"><code>ft_IsBit()</code></a>
+<li><a href="#ft_isbiton"><code>ft_IsBitOn()</code></a>
+<li><a href="#ft_isprint"><code>ft_IsPrint()</code></a>
+<li><a href="#ft_isshare"><code>ft_IsShare()</code></a>
+<li><a href="#ft_lastkey"><code>ft_LastKey()</code></a>
+<li><a href="#ft_lastkey_001"><code>ft_LastKey()</code></a>
+<li><a href="#ft_lday"><code>ft_LDay()</code></a>
+<li><a href="#ft_linked"><code>ft_Linked()</code></a>
+<li><a href="#ft_madd"><code>ft_MAdd()</code></a>
+<li><a href="#ft_mbutprs"><code>ft_MButPrs()</code></a>
+<li><a href="#ft_mbutrel"><code>ft_MButRel()</code></a>
+<li><a href="#ft_mconoff"><code>ft_MCOnOff()</code></a>
+<li><a href="#ft_mcursor"><code>ft_MCursor()</code></a>
+<li><a href="#ft_mdblclk"><code>ft_MDblClk()</code></a>
+<li><a href="#ft_mdefcrs"><code>ft_MDefCrs()</code></a>
+<li><a href="#ft_menu1"><code>ft_Menu1()</code></a>
+<li><a href="#ft_menu2"><code>ft_Menu2()</code></a>
+<li><a href="#ft_menuto"><code>ft_MenuTo()</code></a>
+<li><a href="#ft_metaph"><code>ft_Metaph()</code></a>
+<li><a href="#ft_mgetcoord"><code>ft_MGetCoord()</code></a>
+<li><a href="#ft_mgetpage"><code>ft_MGetPage()</code></a>
+<li><a href="#ft_mgetpos"><code>ft_MGetPos()</code></a>
+<li><a href="#ft_mgetsens"><code>ft_MGetSens()</code></a>
+<li><a href="#ft_mgetx"><code>ft_MGetX()</code></a>
+<li><a href="#ft_mgety"><code>ft_MGetY()</code></a>
+<li><a href="#ft_mhidecrs"><code>ft_MHideCrs()</code></a>
+<li><a href="#ft_mil2civ"><code>ft_Mil2Civ()</code></a>
+<li><a href="#ft_mil2min"><code>ft_Mil2Min()</code></a>
+<li><a href="#ft_min2dhm"><code>ft_Min2Dhm()</code></a>
+<li><a href="#ft_min2mil"><code>ft_Min2Mil()</code></a>
+<li><a href="#ft_minit"><code>ft_MInit()</code></a>
+<li><a href="#ft_minregion"><code>ft_MInRegion()</code></a>
+<li><a href="#ft_mkdir"><code>ft_MkDir()</code></a>
+<li><a href="#ft_mmickeys"><code>ft_MMickeys()</code></a>
+<li><a href="#ft_month"><code>ft_Month()</code></a>
+<li><a href="#ft_mreset"><code>ft_MReset()</code></a>
+<li><a href="#ft_msetcoord"><code>ft_MSetCoord()</code></a>
+<li><a href="#ft_msetpage"><code>ft_MSetPage()</code></a>
+<li><a href="#ft_msetpos"><code>ft_MSetPos()</code></a>
+<li><a href="#ft_msetsens"><code>ft_MSetSens()</code></a>
+<li><a href="#ft_mshowcrs"><code>ft_MShowCrs()</code></a>
+<li><a href="#ft_mversion"><code>ft_MVersion()</code></a>
+<li><a href="#ft_mxlimit"><code>ft_MXLimit()</code></a>
+<li><a href="#ft_mylimit"><code>ft_MYLimit()</code></a>
+<li><a href="#ft_n2color"><code>ft_N2Color()</code></a>
+<li><a href="#ft_netpv"><code>ft_NetPV()</code></a>
+<li><a href="#ft_nooccur"><code>ft_NoOccur()</code></a>
+<li><a href="#ft_ntow"><code>ft_NToW()</code></a>
+<li><a href="#ft_numlock"><code>ft_NumLock()</code></a>
+<li><a href="#ft_nwlstat"><code>ft_NWLStat()</code></a>
+<li><a href="#ft_nwsemclose"><code>ft_NWSemClose()</code></a>
+<li><a href="#ft_nwsemex"><code>ft_NWSemEx()</code></a>
+<li><a href="#ft_nwsemlock"><code>ft_NWSemLock()</code></a>
+<li><a href="#ft_nwsemopen"><code>ft_NWSemOpen()</code></a>
+<li><a href="#ft_nwsemsig"><code>ft_NWSemSig()</code></a>
+<li><a href="#ft_nwsemunlock"><code>ft_NWSemUnlock()</code></a>
+<li><a href="#ft_nwsemwait"><code>ft_NWSemWait()</code></a>
+<li><a href="#ft_nwuid"><code>ft_NWUID()</code></a>
+<li><a href="#ft_outp"><code>ft_outp()</code></a>
+<li><a href="#ft_ontick"><code>ft_OnTick()</code></a>
+<li><a href="#ft_origin"><code>ft_Origin()</code></a>
+<li><a href="#ft_pchr"><code>ft_PChr()</code></a>
+<li><a href="#ft_peek"><code>ft_Peek()</code></a>
+<li><a href="#ft_pegs"><code>ft_Pegs()</code></a>
+<li><a href="#ft_pending"><code>ft_Pending()</code></a>
+<li><a href="#ft_pickday"><code>ft_PickDay()</code></a>
+<li><a href="#ft_poke"><code>ft_Poke()</code></a>
+<li><a href="#ft_popvid"><code>ft_PopVid()</code></a>
+<li><a href="#ft_prompt"><code>ft_Prompt()</code></a>
+<li><a href="#ft_proper"><code>ft_Proper()</code></a>
+<li><a href="#ft_prtscr"><code>ft_PrtScr()</code></a>
+<li><a href="#ft_pushvid"><code>ft_PushVid()</code></a>
+<li><a href="#ft_putkey"><code>ft_PutKey()</code></a>
+<li><a href="#ft_qtr"><code>ft_Qtr()</code></a>
+<li><a href="#ft_rand1"><code>ft_Rand1()</code></a>
+<li><a href="#ft_rat2"><code>ft_RAt2()</code></a>
+<li><a href="#ft_reboot"><code>ft_Reboot()</code></a>
+<li><a href="#ft_restarr"><code>ft_RestArr()</code></a>
+<li><a href="#ft_restatt"><code>ft_RestAtt()</code></a>
+<li><a href="#ft_restsets"><code>ft_RestSets()</code></a>
+<li><a href="#ft_revattr"><code>ft_RevAttr()</code></a>
+<li><a href="#ft_revchr"><code>ft_RevChr()</code></a>
+<li><a href="#ft_rgnstack"><code>ft_RgnStack()</code></a>
+<li><a href="#ft_rmdir"><code>ft_RmDir()</code></a>
+<li><a href="#ft_round"><code>ft_Round()</code></a>
+<li><a href="#ft_rstrgn"><code>ft_RstRgn()</code></a>
+<li><a href="#ft_savearr"><code>ft_SaveArr()</code></a>
+<li><a href="#ft_saveatt"><code>ft_SaveAtt()</code></a>
+<li><a href="#ft_savesets"><code>ft_SaveSets()</code></a>
+<li><a href="#ft_savrgn"><code>ft_SavRgn()</code></a>
+<li><a href="#ft_scancode"><code>ft_ScanCode()</code></a>
+<li><a href="#ft_setattr"><code>ft_SetAttr()</code></a>
+<li><a href="#ft_setcentury"><code>ft_SetCentury()</code></a>
+<li><a href="#ft_setdate"><code>ft_SetDate()</code></a>
+<li><a href="#ft_setmode"><code>ft_SetMode()</code></a>
+<li><a href="#ft_setrate"><code>ft_SetRate()</code></a>
+<li><a href="#ft_settime"><code>ft_SetTime()</code></a>
+<li><a href="#ft_setvcur"><code>ft_SetVCur()</code></a>
+<li><a href="#ft_setvpg"><code>ft_SetVPg()</code></a>
+<li><a href="#ft_shadow"><code>ft_Shadow()</code></a>
+<li><a href="#ft_shift"><code>ft_Shift()</code></a>
+<li><a href="#ft_sinkey"><code>ft_SInkey()</code></a>
+<li><a href="#ft_sleep"><code>ft_Sleep()</code></a>
+<li><a href="#ft_sqzn"><code>ft_Sqzn()</code></a>
+<li><a href="#ft_stod"><code>ft_SToD()</code></a>
+<li><a href="#ft_sys2mil"><code>ft_Sys2Mil()</code></a>
+<li><a href="#ft_sysmem"><code>ft_SysMem()</code></a>
+<li><a href="#ft_tempfil"><code>ft_TempFil()</code></a>
+<li><a href="#ft_unsqzn"><code>ft_Unsqzn()</code></a>
+<li><a href="#ft_vidstr"><code>ft_VidStr()</code></a>
+<li><a href="#ft_week"><code>ft_Week()</code></a>
+<li><a href="#ft_workdays"><code>ft_Workdays()</code></a>
+<li><a href="#ft_woy"><code>ft_WoY()</code></a>
+<li><a href="#ft_wrtchr"><code>ft_WrtChr()</code></a>
+<li><a href="#ft_xbox"><code>ft_XBox()</code></a>
+<li><a href="#ft_xtoy"><code>ft_XToY()</code></a>
+<li><a href="#ft_year"><code>ft_Year()</code></a>
+</ul>
+</aside>
+
 <main>
 
 <section id="ft_aaddition">
@@ -3528,8 +3740,8 @@ ENDIF
 <div class="d-it"><code><a href="#ft_caplock">ft_CapLock()</a></code>, <code><a href="#ft_numlock">ft_NumLock()</a></code>, <code><a href="#ft_prtscr">ft_PrtScr()</a></code>, <code><a href="#ft_shift">ft_Shift()</a></code>, <code><a href="#ft_alt">ft_Alt()</a></code></div>
 </section>
 
-<section id="ft_lastkey_001">
-<span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/setlastk.txt">Improve this doc</a></span>
+<section id="ft_lastkey">
+<span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/setkeys.txt">Improve this doc</a></span>
 <h4><code>ft_LastKey()</code></h4>
 <div class="d-ol">Force LastKey() to return a programmer-defined value.</div>
 <div class="d-d">Syntax</div>
@@ -3557,8 +3769,8 @@ ft_LastKey( K_F1 )
 <div class="d-it">Keyboard/Mouse</div>
 </section>
 
-<section id="ft_lastkey">
-<span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/setkeys.txt">Improve this doc</a></span>
+<section id="ft_lastkey_001">
+<span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/setlastk.txt">Improve this doc</a></span>
 <h4><code>ft_LastKey()</code></h4>
 <div class="d-ol">Force LastKey() to return a programmer-defined value.</div>
 <div class="d-d">Syntax</div>
@@ -6785,6 +6997,6 @@ the status of SetBlink().  It uses direct video writes FOR speed.
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-28 16:15 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/9b82cba">9b82cba</a></div>
+<div>Generated by hbdoc on 2016-10-29 12:25 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/3f69ce6">3f69ce6</a></div>
 </footer>

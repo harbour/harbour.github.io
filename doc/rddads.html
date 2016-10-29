@@ -18,6 +18,47 @@
 <h1>Harbour Reference Guide<div>rddads contrib</div></h1>
 </header>
 
+<aside>
+<ul>
+<li><a href="#adsoverview"><code>ADS Overview</code></a>
+<li><a href="#adsblob2file"><code>AdsBlob2File()</code></a>
+<li><a href="#adscacheopencursors"><code>AdsCacheOpenCursors()</code></a>
+<li><a href="#adscacheopentables"><code>AdsCacheOpenTables()</code></a>
+<li><a href="#adsclearaof"><code>AdsClearAOF()</code></a>
+<li><a href="#adsclosecachedtables"><code>AdsCloseCachedTables()</code></a>
+<li><a href="#adsclrcallback"><code>AdsClrCallback()</code></a>
+<li><a href="#adsconnect60"><code>AdsConnect60()</code></a>
+<li><a href="#adscustomizeaof"><code>AdsCustomizeAOF()</code></a>
+<li><a href="#adsddaddtable"><code>AdsDDAddTable()</code></a>
+<li><a href="#adsevalaof"><code>AdsEvalAOF()</code></a>
+<li><a href="#adsfile2blob"><code>AdsFile2Blob()</code></a>
+<li><a href="#adsgetaof"><code>AdsGetAOF()</code></a>
+<li><a href="#adsgetaofnoopt"><code>AdsGetAOFNoOpt()</code></a>
+<li><a href="#adsgetaofoptlevel"><code>AdsGetAOFOptLevel()</code></a>
+<li><a href="#adsgetconnectiontype"><code>AdsGetConnectionType()</code></a>
+<li><a href="#adsgetlasterror"><code>AdsGetLastError()</code></a>
+<li><a href="#adsgetrelkeypos"><code>AdsGetRelKeyPos()</code></a>
+<li><a href="#adsgettablecontype"><code>AdsGetTableConType()</code></a>
+<li><a href="#adsisexprvalid"><code>AdsIsExprValid()</code></a>
+<li><a href="#adsisindexed"><code>AdsIsIndexed()</code></a>
+<li><a href="#adsisrecordinaof"><code>AdsIsRecordInAOF()</code></a>
+<li><a href="#adskeycount"><code>AdsKeyCount()</code></a>
+<li><a href="#adskeyno"><code>AdsKeyNo()</code></a>
+<li><a href="#adslocking"><code>AdsLocking()</code></a>
+<li><a href="#adsrefreshaof"><code>AdsRefreshAOF()</code></a>
+<li><a href="#adsregcallback"><code>AdsRegCallback()</code></a>
+<li><a href="#adsrightscheck"><code>AdsRightsCheck()</code></a>
+<li><a href="#adssetaof"><code>AdsSetAOF()</code></a>
+<li><a href="#adssetchartype"><code>AdsSetCharType()</code></a>
+<li><a href="#adssetdefault"><code>AdsSetDefault() *</code></a>
+<li><a href="#adssetdeleted"><code>AdsSetDeleted() *</code></a>
+<li><a href="#adssetexact"><code>AdsSetExact() *</code></a>
+<li><a href="#adssetrelkeypos"><code>AdsSetRelKeyPos()</code></a>
+<li><a href="#adssetsearchpath"><code>AdsSetSearchPath() *</code></a>
+<li><a href="#adstestreclocks"><code>AdsTestRecLocks()</code></a>
+</ul>
+</aside>
+
 <main>
 
 <section id="adsoverview">
@@ -327,7 +368,7 @@ ENDIF
 <div class="d-it">
   <div>&lt;nRecno | aRecNos&gt; Can be either a single record number or an array of record numbers to add or delete from the AOF. If omitted, defaults to the current record.</div>
   <div>&lt;nType&gt;   The type of operation:</div>
-  <div class="d-t">
+  <div class="d-t d-t0">
   <div>ADS_AOF_ADD_RECORD      Add the record to the AOF (set the bit). This is the default operation.</div>
   <div>ADS_AOF_REMOVE_RECORD   Remove the record from the AOF (clear the bit).</div>
   <div>ADS_AOF_TOGGLE_RECORD   Switch the record into or out of the AOF.</div>
@@ -738,7 +779,7 @@ ENDIF
   <div>&lt;cIgnoredIndexFile&gt;   This parameter is not processed. In other Harbour RDDs, the second parameter to &quot;ordKeyCount&quot; takes a second argument to identify a particular Index File in cases where two files are open that contain orders with the same name. The ADS driver does not support this and will select the first order with the requested name. To stay consistent with other RDDs, therefore, the second parameter is reserved and the &lt;nFilterOption&gt; is passed as a third parameter.</div>
   <div>&lt;nFilterOption&gt; Indicates if filters and/or scopes are to be respected if set.</div>
   <div>Options are defined in ads.ch:</div>
-  <div class="d-t">
+  <div class="d-t d-t0">
   <div>   ADS_RESPECTFILTERS   Respect filters and scopes</div>
   <div>   ADS_IGNOREFILTERS    Ignore filters and scopes</div>
   <div>   ADS_RESPECTSCOPES    Respect scopes only</div>
@@ -775,7 +816,7 @@ ENDIF
   <div>&lt;cIgnoredIndexFile&gt;   This parameter is not processed. In other Harbour RDDs, the second parameter to &quot;ordKeyNo&quot; takes a second argument to identify a particular Index File in cases where two files are open that contain orders with the same name. The ADS driver does not support this and will select the first order with the requested name. To stay consistent with other RDDs, therefore, the second parameter is reserved and the &lt;nFilterOption&gt; is passed as a third parameter.</div>
   <div>&lt;nFilterOption&gt; Indicates if filters and/or scopes are to be respected if set.</div>
   <div>Options are defined in ads.ch:</div>
-  <div class="d-t">
+  <div class="d-t d-t0">
   <div>   ADS_RESPECTFILTERS   Respect filters and scopes</div>
   <div>   ADS_IGNOREFILTERS    Ignore filters and scopes</div>
   <div>   ADS_RESPECTSCOPES    Respect scopes only</div>
@@ -1160,6 +1201,6 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-28 16:15 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/9b82cba">9b82cba</a></div>
+<div>Generated by hbdoc on 2016-10-29 12:25 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/3f69ce6">3f69ce6</a></div>
 </footer>

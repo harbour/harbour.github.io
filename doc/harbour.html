@@ -18,6 +18,504 @@
 <h1>Harbour Reference Guide<div>Harbour core</div></h1>
 </header>
 
+<aside>
+<ul>
+<li><a href="#compileroptions"><code>Compiler Options</code></a>
+<li><a href="#harbourextensions"><code>Harbour Extensions</code></a>
+<li><a href="#macrocompiler"><code>Macro compiler</code></a>
+<li><a href="#thegarbagecollector"><code>The Garbage Collector</code></a>
+<li><a href="#theidlestates"><code>The idle states</code></a>
+<li><a href="#welcometoharbour"><code>Welcome to Harbour</code></a>
+<li><a href="#__atprompt"><code>__AtPrompt()</code></a>
+<li><a href="#__dbcopystruct"><code>__dbCopyStruct()</code></a>
+<li><a href="#__dbcopyxstruct"><code>__dbCopyXStruct()</code></a>
+<li><a href="#__dbcreate"><code>__dbCreate()</code></a>
+<li><a href="#__dbdelim"><code>__dbDelim()</code></a>
+<li><a href="#__dbsdf"><code>__dbSDF()</code></a>
+<li><a href="#__dbstructfilter"><code>__dbStructFilter()</code></a>
+<li><a href="#__dir"><code>__Dir()*</code></a>
+<li><a href="#__fledit"><code>__FLedit()*</code></a>
+<li><a href="#__input"><code>__Input()</code></a>
+<li><a href="#__keyboard"><code>__Keyboard()</code></a>
+<li><a href="#__mvclear"><code>__mvClear()</code></a>
+<li><a href="#__mvdbginfo"><code>__mvDbgInfo()</code></a>
+<li><a href="#__mvexist"><code>__mvExist()</code></a>
+<li><a href="#__mvget"><code>__mvGet()</code></a>
+<li><a href="#__mvprivate"><code>__mvPrivate()</code></a>
+<li><a href="#__mvpublic"><code>__mvPublic()</code></a>
+<li><a href="#__mvput"><code>__mvPut()</code></a>
+<li><a href="#__mvrelease"><code>__mvRelease()</code></a>
+<li><a href="#__mvscope"><code>__mvScope()</code></a>
+<li><a href="#__mvxrelease"><code>__mvXRelease()</code></a>
+<li><a href="#__menuto"><code>__MenuTo()</code></a>
+<li><a href="#__nonoalert"><code>__NoNoAlert()</code></a>
+<li><a href="#__objadddata"><code>__objAddData()</code></a>
+<li><a href="#__objaddinline"><code>__objAddInline()</code></a>
+<li><a href="#__objaddmethod"><code>__objAddMethod()</code></a>
+<li><a href="#__objdeldata"><code>__objDelData()</code></a>
+<li><a href="#__objdelinline"><code>__objDelInline()</code></a>
+<li><a href="#__objdelmethod"><code>__objDelMethod()</code></a>
+<li><a href="#__objderivedfrom"><code>__objDerivedFrom()</code></a>
+<li><a href="#__objgetmethodlist"><code>__objGetMethodList()</code></a>
+<li><a href="#__objgetmsglist"><code>__objGetMsgList()</code></a>
+<li><a href="#__objgetvaluelist"><code>__objGetValueList()</code></a>
+<li><a href="#__objhasdata"><code>__objHasData()</code></a>
+<li><a href="#__objhasmethod"><code>__objHasMethod()</code></a>
+<li><a href="#__objmodinline"><code>__objModInline()</code></a>
+<li><a href="#__objmodmethod"><code>__objModMethod()</code></a>
+<li><a href="#__objsetvaluelist"><code>__objSetValueList()</code></a>
+<li><a href="#__quit"><code>__Quit()</code></a>
+<li><a href="#__run"><code>__Run()</code></a>
+<li><a href="#__setcentury"><code>__SetCentury()</code></a>
+<li><a href="#__setfunction"><code>__SetFunction()</code></a>
+<li><a href="#__sethelpk"><code>__SetHelpK()</code></a>
+<li><a href="#__textrestore"><code>__TextRestore()</code></a>
+<li><a href="#__textsave"><code>__TextSave()</code></a>
+<li><a href="#__typefile"><code>__TypeFile()</code></a>
+<li><a href="#__wait"><code>__Wait()</code></a>
+<li><a href="#__xhelp"><code>__XHelp()</code></a>
+<li><a href="#__xrestscreen"><code>__XRestScreen()</code></a>
+<li><a href="#__xsavescreen"><code>__XSaveScreen()</code></a>
+<li><a href="#get"><code>@...GET</code></a>
+<li><a href="#prompt"><code>@...PROMPT</code></a>
+<li><a href="#say"><code>@...SAY</code></a>
+<li><a href="#aadd"><code>AAdd()</code></a>
+<li><a href="#abs"><code>Abs()</code></a>
+<li><a href="#achoice"><code>AChoice()</code></a>
+<li><a href="#aclone"><code>AClone()</code></a>
+<li><a href="#acopy"><code>ACopy()</code></a>
+<li><a href="#adel"><code>ADel()</code></a>
+<li><a href="#adir"><code>ADir()</code></a>
+<li><a href="#aeval"><code>AEval()</code></a>
+<li><a href="#afields"><code>AFields()*</code></a>
+<li><a href="#afill"><code>AFill()</code></a>
+<li><a href="#ains"><code>AIns()</code></a>
+<li><a href="#alert"><code>Alert()</code></a>
+<li><a href="#alias"><code>Alias()</code></a>
+<li><a href="#alltrim"><code>AllTrim()</code></a>
+<li><a href="#array"><code>Array()</code></a>
+<li><a href="#asc"><code>Asc()</code></a>
+<li><a href="#ascan"><code>AScan()</code></a>
+<li><a href="#asize"><code>ASize()</code></a>
+<li><a href="#asort"><code>ASort()</code></a>
+<li><a href="#at"><code>At()</code></a>
+<li><a href="#atail"><code>ATail()</code></a>
+<li><a href="#base1003"><code>BASE/1003</code></a>
+<li><a href="#base1068"><code>BASE/1068</code></a>
+<li><a href="#base1068_001"><code>BASE/1068</code></a>
+<li><a href="#base1068_002"><code>BASE/1068</code></a>
+<li><a href="#base1069"><code>BASE/1069</code></a>
+<li><a href="#base1072"><code>BASE/1072</code></a>
+<li><a href="#base1073"><code>BASE/1073</code></a>
+<li><a href="#base1074"><code>BASE/1074</code></a>
+<li><a href="#base1075"><code>BASE/1075</code></a>
+<li><a href="#base1076"><code>BASE/1076</code></a>
+<li><a href="#base1076_001"><code>BASE/1076</code></a>
+<li><a href="#base1076_002"><code>BASE/1076</code></a>
+<li><a href="#base1077"><code>BASE/1077</code></a>
+<li><a href="#base1078"><code>BASE/1078</code></a>
+<li><a href="#base1078_001"><code>BASE/1078</code></a>
+<li><a href="#base1079"><code>BASE/1079</code></a>
+<li><a href="#base1081"><code>BASE/1081</code></a>
+<li><a href="#base1082"><code>BASE/1082</code></a>
+<li><a href="#base1085"><code>BASE/1085</code></a>
+<li><a href="#base1089"><code>BASE/1089</code></a>
+<li><a href="#base1090"><code>BASE/1090</code></a>
+<li><a href="#base1092"><code>BASE/1092</code></a>
+<li><a href="#base1093"><code>BASE/1093</code></a>
+<li><a href="#base1094"><code>BASE/1094</code></a>
+<li><a href="#base1095"><code>BASE/1095</code></a>
+<li><a href="#base1096"><code>BASE/1096</code></a>
+<li><a href="#base1097"><code>BASE/1097</code></a>
+<li><a href="#base1098"><code>BASE/1098</code></a>
+<li><a href="#base1099"><code>BASE/1099</code></a>
+<li><a href="#base1100"><code>BASE/1100</code></a>
+<li><a href="#base1101"><code>BASE/1101</code></a>
+<li><a href="#base1102"><code>BASE/1102</code></a>
+<li><a href="#base1103"><code>BASE/1103</code></a>
+<li><a href="#base1104"><code>BASE/1104</code></a>
+<li><a href="#base1105"><code>BASE/1105</code></a>
+<li><a href="#base1106"><code>BASE/1106</code></a>
+<li><a href="#base1107"><code>BASE/1107</code></a>
+<li><a href="#base1108"><code>BASE/1108</code></a>
+<li><a href="#base1110"><code>BASE/1110</code></a>
+<li><a href="#base1110_001"><code>BASE/1110</code></a>
+<li><a href="#base1112"><code>BASE/1112</code></a>
+<li><a href="#base1113"><code>BASE/1113</code></a>
+<li><a href="#base1114"><code>BASE/1114</code></a>
+<li><a href="#base1115"><code>BASE/1115</code></a>
+<li><a href="#base1116"><code>BASE/1116</code></a>
+<li><a href="#base1117"><code>BASE/1117</code></a>
+<li><a href="#base1120"><code>BASE/1120</code></a>
+<li><a href="#base1122"><code>BASE/1122</code></a>
+<li><a href="#base1124"><code>BASE/1124</code></a>
+<li><a href="#base1126"><code>BASE/1126</code></a>
+<li><a href="#base1132"><code>BASE/1132</code></a>
+<li><a href="#base1133"><code>BASE/1133</code></a>
+<li><a href="#base2010"><code>BASE/2010</code></a>
+<li><a href="#base2012"><code>BASE/2012</code></a>
+<li><a href="#base2017"><code>BASE/2017</code></a>
+<li><a href="#base2020"><code>BASE/2020</code></a>
+<li><a href="#base3001"><code>BASE/3001</code></a>
+<li><a href="#base3002"><code>BASE/3002</code></a>
+<li><a href="#base3003"><code>BASE/3003</code></a>
+<li><a href="#base3004"><code>BASE/3004</code></a>
+<li><a href="#base3005"><code>BASE/3005</code></a>
+<li><a href="#base3007"><code>BASE/3007</code></a>
+<li><a href="#base3008"><code>BASE/3008</code></a>
+<li><a href="#base3009"><code>BASE/3009</code></a>
+<li><a href="#base3010"><code>BASE/3010</code></a>
+<li><a href="#base3011"><code>BASE/3011</code></a>
+<li><a href="#base3012"><code>BASE/3012</code></a>
+<li><a href="#base3101"><code>BASE/3101</code></a>
+<li><a href="#base3102"><code>BASE/3102</code></a>
+<li><a href="#base3103"><code>BASE/3103</code></a>
+<li><a href="#bin2i"><code>Bin2I()</code></a>
+<li><a href="#bin2l"><code>Bin2L()</code></a>
+<li><a href="#bof"><code>Bof()</code></a>
+<li><a href="#break"><code>Break()</code></a>
+<li><a href="#browse"><code>Browse()</code></a>
+<li><a href="#cdow"><code>CDoW()</code></a>
+<li><a href="#chr"><code>Chr()</code></a>
+<li><a href="#class"><code>CLASS</code></a>
+<li><a href="#classvar"><code>CLASS VAR</code></a>
+<li><a href="#clipinit"><code>CLIPINIT()</code></a>
+<li><a href="#cmonth"><code>CMonth()</code></a>
+<li><a href="#col"><code>Col()</code></a>
+<li><a href="#copyfile"><code>COPY FILE</code></a>
+<li><a href="#copystructure"><code>COPY STRUCTURE</code></a>
+<li><a href="#copystructureextended"><code>COPY STRUCTURE EXTENDED</code></a>
+<li><a href="#create"><code>CREATE</code></a>
+<li><a href="#createfrom"><code>CREATE FROM</code></a>
+<li><a href="#ctod"><code>CToD()</code></a>
+<li><a href="#curdir"><code>CurDir()</code></a>
+<li><a href="#dbappend"><code>dbAppend()</code></a>
+<li><a href="#dbclearfilter"><code>dbClearFilter()</code></a>
+<li><a href="#dbcloseall"><code>dbCloseAll()</code></a>
+<li><a href="#dbclosearea"><code>dbCloseArea()</code></a>
+<li><a href="#dbcommit"><code>dbCommit()</code></a>
+<li><a href="#dbcommitall"><code>dbCommitAll()</code></a>
+<li><a href="#dbcreate"><code>dbCreate()</code></a>
+<li><a href="#dbdelete"><code>dbDelete()</code></a>
+<li><a href="#dbedit"><code>dbEdit()*</code></a>
+<li><a href="#dbeval"><code>dbEval()</code></a>
+<li><a href="#dbfilter"><code>dbFilter()</code></a>
+<li><a href="#dbgobottom"><code>dbGoBottom()</code></a>
+<li><a href="#dbgoto"><code>dbGoto()</code></a>
+<li><a href="#dbgotop"><code>dbGoTop()</code></a>
+<li><a href="#dbrecall"><code>dbRecall()</code></a>
+<li><a href="#dbrlock"><code>dbRLock()</code></a>
+<li><a href="#dbrlocklist"><code>dbRLockList()</code></a>
+<li><a href="#dbrunlock"><code>dbRUnlock()</code></a>
+<li><a href="#dbseek"><code>dbSeek()</code></a>
+<li><a href="#dbselectarea"><code>dbSelectArea()</code></a>
+<li><a href="#dbsetdriver"><code>dbSetDriver()</code></a>
+<li><a href="#dbsetfilter"><code>dbSetFilter()</code></a>
+<li><a href="#dbskip"><code>dbSkip()</code></a>
+<li><a href="#dbstruct"><code>dbStruct()</code></a>
+<li><a href="#dbunlock"><code>dbUnlock()</code></a>
+<li><a href="#dbunlockall"><code>dbUnlockAll()</code></a>
+<li><a href="#dbusearea"><code>dbUseArea()</code></a>
+<li><a href="#date"><code>Date()</code></a>
+<li><a href="#day"><code>Day()</code></a>
+<li><a href="#days"><code>Days()</code></a>
+<li><a href="#dbf"><code>Dbf()</code></a>
+<li><a href="#deleted"><code>Deleted()</code></a>
+<li><a href="#descend"><code>Descend()</code></a>
+<li><a href="#devoutpict"><code>DevOutPict()</code></a>
+<li><a href="#deletefile"><code>DELETE FILE</code></a>
+<li><a href="#dirchange"><code>DirChange()</code></a>
+<li><a href="#dirremove"><code>DirRemove()</code></a>
+<li><a href="#diskspace"><code>DiskSpace()</code></a>
+<li><a href="#dir"><code>DIR</code></a>
+<li><a href="#do"><code>Do()</code></a>
+<li><a href="#dow"><code>DoW()</code></a>
+<li><a href="#dtoc"><code>DToC()</code></a>
+<li><a href="#dtos"><code>DToS()</code></a>
+<li><a href="#eject"><code>EJECT</code></a>
+<li><a href="#elaptime"><code>ElapTime()</code></a>
+<li><a href="#empty"><code>Empty()</code></a>
+<li><a href="#endclass"><code>ENDCLASS</code></a>
+<li><a href="#eof"><code>Eof()</code></a>
+<li><a href="#errorsys"><code>ErrorSys()</code></a>
+<li><a href="#erase"><code>ERASE</code></a>
+<li><a href="#errorhandler"><code>ERROR HANDLER</code></a>
+<li><a href="#eval"><code>Eval()</code></a>
+<li><a href="#exp"><code>Exp()</code></a>
+<li><a href="#fclose"><code>FClose()</code></a>
+<li><a href="#fcount"><code>FCount()</code></a>
+<li><a href="#fcreate"><code>FCreate()</code></a>
+<li><a href="#ferase"><code>FErase()</code></a>
+<li><a href="#ferror"><code>FError()</code></a>
+<li><a href="#fieldblock"><code>FieldBlock()</code></a>
+<li><a href="#fieldget"><code>FieldGet()</code></a>
+<li><a href="#fieldname"><code>FieldName()</code></a>
+<li><a href="#fieldpos"><code>FieldPos()</code></a>
+<li><a href="#fieldput"><code>FieldPut()</code></a>
+<li><a href="#fieldwblock"><code>FieldWBlock()</code></a>
+<li><a href="#file"><code>File()</code></a>
+<li><a href="#field"><code>FIELD</code></a>
+<li><a href="#flock"><code>FLock()</code></a>
+<li><a href="#found"><code>Found()</code></a>
+<li><a href="#fopen"><code>FOpen()</code></a>
+<li><a href="#fread"><code>FRead()</code></a>
+<li><a href="#freadstr"><code>FReadStr()</code></a>
+<li><a href="#frename"><code>FRename()</code></a>
+<li><a href="#fseek"><code>FSeek()</code></a>
+<li><a href="#fwrite"><code>FWrite()</code></a>
+<li><a href="#gete"><code>GetE()</code></a>
+<li><a href="#getenv"><code>GetEnv()</code></a>
+<li><a href="#hb_at"><code>hb_At()</code></a>
+<li><a href="#hb_cdpselect"><code>hb_cdpSelect()</code></a>
+<li><a href="#hb_colorindex"><code>hb_ColorIndex()</code></a>
+<li><a href="#hb_diskspace"><code>hb_DiskSpace()</code></a>
+<li><a href="#hb_eol"><code>hb_eol()</code></a>
+<li><a href="#hb_feof"><code>hb_FEof()</code></a>
+<li><a href="#hb_flock"><code>hb_FLock()</code></a>
+<li><a href="#hb_funlock"><code>hb_FUnlock()</code></a>
+<li><a href="#hb_gcall"><code>hb_gcAll()</code></a>
+<li><a href="#hb_gcalloc"><code>hb_gcAlloc()</code></a>
+<li><a href="#hb_gccollectall"><code>hb_gcCollectAll()</code></a>
+<li><a href="#hb_gcfree"><code>hb_gcFree()</code></a>
+<li><a href="#hb_gcitemref"><code>hb_gcItemRef()</code></a>
+<li><a href="#hb_getenv"><code>hb_GetEnv()</code></a>
+<li><a href="#hb_hash"><code>hb_Hash()</code></a>
+<li><a href="#hb_hallocate"><code>hb_HAllocate()</code></a>
+<li><a href="#hb_hautoadd"><code>hb_HAutoAdd()</code></a>
+<li><a href="#hb_hbinary"><code>hb_HBinary()</code></a>
+<li><a href="#hb_hcasematch"><code>hb_HCaseMatch()</code></a>
+<li><a href="#hb_hclone"><code>hb_HClone()</code></a>
+<li><a href="#hb_hcopy"><code>hb_HCopy()</code></a>
+<li><a href="#hb_hdefault"><code>hb_HDefault()</code></a>
+<li><a href="#hb_hdel"><code>hb_HDel()</code></a>
+<li><a href="#hb_hdelat"><code>hb_HDelAt()</code></a>
+<li><a href="#hb_heval"><code>hb_HEval()</code></a>
+<li><a href="#hb_hfill"><code>hb_HFill()</code></a>
+<li><a href="#hb_hget"><code>hb_HGet()</code></a>
+<li><a href="#hb_hgetdef"><code>hb_HGetDef()</code></a>
+<li><a href="#hb_hhaskey"><code>hb_HHasKey()</code></a>
+<li><a href="#hb_hkeyat"><code>hb_HKeyAt()</code></a>
+<li><a href="#hb_hkeys"><code>hb_HKeys()</code></a>
+<li><a href="#hb_hmerge"><code>hb_HMerge()</code></a>
+<li><a href="#hb_hpairat"><code>hb_HPairAt()</code></a>
+<li><a href="#hb_hpos"><code>hb_HPos()</code></a>
+<li><a href="#hb_hscan"><code>hb_HScan()</code></a>
+<li><a href="#hb_hset"><code>hb_HSet()</code></a>
+<li><a href="#hb_hsort"><code>hb_HSort()</code></a>
+<li><a href="#hb_hvalueat"><code>hb_HValueAt()</code></a>
+<li><a href="#hb_hvalues"><code>hb_HValues()</code></a>
+<li><a href="#hb_idleadd"><code>hb_idleAdd()</code></a>
+<li><a href="#hb_idledel"><code>hb_idleDel()</code></a>
+<li><a href="#hb_idlestate"><code>hb_idleState()</code></a>
+<li><a href="#hb_idlestate_001"><code>hb_idleState()</code></a>
+<li><a href="#hb_inetaccept"><code>hb_inetAccept()</code></a>
+<li><a href="#hb_inetaddress"><code>hb_inetAddress()</code></a>
+<li><a href="#hb_inetcleanup"><code>hb_inetCleanup()</code></a>
+<li><a href="#hb_inetclearerror"><code>hb_inetClearError()</code></a>
+<li><a href="#hb_inetclearperiodcallback"><code>hb_inetClearPeriodCallback()</code></a>
+<li><a href="#hb_inetcleartimelimit"><code>hb_inetClearTimeLimit()</code></a>
+<li><a href="#hb_inetcleartimeout"><code>hb_inetClearTimeout()</code></a>
+<li><a href="#hb_inetclose"><code>hb_inetClose()</code></a>
+<li><a href="#hb_inetconnect"><code>hb_inetConnect()</code></a>
+<li><a href="#hb_inetconnectip"><code>hb_inetConnectIP()</code></a>
+<li><a href="#hb_inetcount"><code>hb_inetCount()</code></a>
+<li><a href="#hb_inetcreate"><code>hb_inetCreate()</code></a>
+<li><a href="#hb_inetcrlf"><code>hb_inetCRLF()</code></a>
+<li><a href="#hb_inetdataready"><code>hb_inetDataReady()</code></a>
+<li><a href="#hb_inetdgram"><code>hb_inetDGram()</code></a>
+<li><a href="#hb_inetdgrambind"><code>hb_inetDGramBind()</code></a>
+<li><a href="#hb_inetdgramrecv"><code>hb_inetDGramRecv()</code></a>
+<li><a href="#hb_inetdgramsend"><code>hb_inetDGramSend()</code></a>
+<li><a href="#hb_ineterrorcode"><code>hb_inetErrorCode()</code></a>
+<li><a href="#hb_ineterrordesc"><code>hb_inetErrorDesc()</code></a>
+<li><a href="#hb_inetfd"><code>hb_inetFD()</code></a>
+<li><a href="#hb_inetgetalias"><code>hb_inetGetAlias()</code></a>
+<li><a href="#hb_inetgethosts"><code>hb_inetGetHosts()</code></a>
+<li><a href="#hb_inetgetrcvbufsize"><code>hb_inetGetRcvBufSize()</code></a>
+<li><a href="#hb_inetgetsndbufsize"><code>hb_inetGetSndBufSize()</code></a>
+<li><a href="#hb_inetinit"><code>hb_inetInit()</code></a>
+<li><a href="#hb_inetissocket"><code>hb_inetIsSocket()</code></a>
+<li><a href="#hb_inetperiodcallback"><code>hb_inetPeriodCallback()</code></a>
+<li><a href="#hb_inetport"><code>hb_inetPort()</code></a>
+<li><a href="#hb_inetrecv"><code>hb_inetRecv()</code></a>
+<li><a href="#hb_inetrecvall"><code>hb_inetRecvAll()</code></a>
+<li><a href="#hb_inetrecvendblock"><code>hb_inetRecvEndblock()</code></a>
+<li><a href="#hb_inetrecvline"><code>hb_inetRecvLine()</code></a>
+<li><a href="#hb_inetstatus"><code>hb_inetstatus()</code></a>
+<li><a href="#hb_inetsend"><code>hb_inetSend()</code></a>
+<li><a href="#hb_inetsendall"><code>hb_inetSendAll()</code></a>
+<li><a href="#hb_inetserver"><code>hb_inetServer()</code></a>
+<li><a href="#hb_inetsetrcvbufsize"><code>hb_inetSetRcvBufSize()</code></a>
+<li><a href="#hb_inetsetsndbufsize"><code>hb_inetSetSndBufSize()</code></a>
+<li><a href="#hb_inettimelimit"><code>hb_inetTimeLimit()</code></a>
+<li><a href="#hb_inettimeout"><code>hb_inetTimeout()</code></a>
+<li><a href="#hb_keyput"><code>hb_keyPut()</code></a>
+<li><a href="#hb_langerrmsg"><code>hb_langErrMsg()</code></a>
+<li><a href="#hb_langmessage"><code>hb_langMessage()</code></a>
+<li><a href="#hb_langname"><code>hb_langName()</code></a>
+<li><a href="#hb_langselect"><code>hb_langSelect()</code></a>
+<li><a href="#hb_matherblock"><code>hb_matherBlock()</code></a>
+<li><a href="#hb_mathermode"><code>hb_matherMode()</code></a>
+<li><a href="#hb_mathgeterrmode"><code>hb_mathGetErrMode()</code></a>
+<li><a href="#hb_mathgethandler"><code>hb_mathGetHandler()</code></a>
+<li><a href="#hb_mathgetlasterror"><code>hb_mathGetLastError()</code></a>
+<li><a href="#hb_mathismatherr"><code>hb_mathIsMathErr()</code></a>
+<li><a href="#hb_mathreseterror"><code>hb_mathResetError()</code></a>
+<li><a href="#hb_mathseterrmode"><code>hb_mathSetErrMode()</code></a>
+<li><a href="#hb_mathsethandler"><code>hb_mathSetHandler()</code></a>
+<li><a href="#hb_memoread"><code>hb_MemoRead()</code></a>
+<li><a href="#hb_memowrit"><code>hb_MemoWrit()</code></a>
+<li><a href="#hb_pisbyref"><code>hb_PIsByRef()</code></a>
+<li><a href="#hb_pvalue"><code>hb_PValue()</code></a>
+<li><a href="#hb_rat"><code>hb_RAt()</code></a>
+<li><a href="#hb_setlisteneradd"><code>hb_setListenerAdd()</code></a>
+<li><a href="#hb_setlistenernotify"><code>hb_setListenerNotify()</code></a>
+<li><a href="#hb_setlistenerremove"><code>hb_setListenerRemove()</code></a>
+<li><a href="#hb_setkeycheck"><code>hb_SetKeyCheck()</code></a>
+<li><a href="#hb_setkeyget"><code>hb_SetKeyGet()</code></a>
+<li><a href="#hb_setkeysave"><code>hb_SetKeySave()</code></a>
+<li><a href="#hb_setmacro"><code>hb_SetMacro()</code></a>
+<li><a href="#hb_translate"><code>hb_Translate()</code></a>
+<li><a href="#hb_valtostr"><code>hb_ValToStr()</code></a>
+<li><a href="#hardcr"><code>HardCR()</code></a>
+<li><a href="#hbclass"><code>HBClass()</code></a>
+<li><a href="#header"><code>Header()</code></a>
+<li><a href="#i2bin"><code>I2Bin()</code></a>
+<li><a href="#indexext"><code>IndexExt()</code></a>
+<li><a href="#indexkey"><code>IndexKey()</code></a>
+<li><a href="#indexord"><code>IndexOrd()</code></a>
+<li><a href="#inkey"><code>Inkey()</code></a>
+<li><a href="#int"><code>Int()</code></a>
+<li><a href="#isaffirm"><code>IsAffirm()</code></a>
+<li><a href="#isalpha"><code>IsAlpha()</code></a>
+<li><a href="#isdigit"><code>IsDigit()</code></a>
+<li><a href="#isdisk"><code>IsDisk()</code></a>
+<li><a href="#islower"><code>IsLower()</code></a>
+<li><a href="#isnegative"><code>IsNegative()</code></a>
+<li><a href="#isupper"><code>IsUpper()</code></a>
+<li><a href="#keyboard"><code>KEYBOARD</code></a>
+<li><a href="#l2bin"><code>L2Bin()</code></a>
+<li><a href="#lastkey"><code>LastKey()</code></a>
+<li><a href="#lastrec"><code>LastRec()</code></a>
+<li><a href="#labelform"><code>LABEL FORM</code></a>
+<li><a href="#left"><code>Left()</code></a>
+<li><a href="#len"><code>Len()</code></a>
+<li><a href="#log"><code>Log()</code></a>
+<li><a href="#lower"><code>Lower()</code></a>
+<li><a href="#local"><code>LOCAL</code></a>
+<li><a href="#ltrim"><code>LTrim()</code></a>
+<li><a href="#lupdate"><code>LUpdate()</code></a>
+<li><a href="#makedir"><code>MakeDir()</code></a>
+<li><a href="#max"><code>Max()</code></a>
+<li><a href="#maxcol"><code>MaxCol()</code></a>
+<li><a href="#maxrow"><code>MaxRow()</code></a>
+<li><a href="#mcol"><code>MCol()</code></a>
+<li><a href="#memoread"><code>MemoRead()</code></a>
+<li><a href="#memotran"><code>MemoTran()</code></a>
+<li><a href="#memowrit"><code>MemoWrit()</code></a>
+<li><a href="#memvarblock"><code>MemVarBlock()</code></a>
+<li><a href="#memvar"><code>MEMVAR</code></a>
+<li><a href="#menuto"><code>MENU TO</code></a>
+<li><a href="#message"><code>MESSAGE</code></a>
+<li><a href="#method"><code>METHOD</code></a>
+<li><a href="#min"><code>Min()</code></a>
+<li><a href="#mod"><code>Mod()</code></a>
+<li><a href="#month"><code>Month()</code></a>
+<li><a href="#mrow"><code>MRow()</code></a>
+<li><a href="#nationmsg"><code>NationMsg()</code></a>
+<li><a href="#neterr"><code>NetErr()</code></a>
+<li><a href="#nextkey"><code>NextKey()</code></a>
+<li><a href="#ordbagext"><code>ordBagExt()</code></a>
+<li><a href="#ordbagname"><code>ordBagName()</code></a>
+<li><a href="#ordcondset"><code>ordCondSet()</code></a>
+<li><a href="#ordcreate"><code>ordCreate()</code></a>
+<li><a href="#orddestroy"><code>ordDestroy()</code></a>
+<li><a href="#ordfor"><code>ordFor()</code></a>
+<li><a href="#ordkey"><code>ordKey()</code></a>
+<li><a href="#onerror"><code>ON ERROR</code></a>
+<li><a href="#os"><code>OS()</code></a>
+<li><a href="#outerr"><code>OutErr()</code></a>
+<li><a href="#outstd"><code>OutStd()</code></a>
+<li><a href="#padc"><code>PadC()</code></a>
+<li><a href="#padl"><code>PadL()</code></a>
+<li><a href="#padr"><code>PadR()</code></a>
+<li><a href="#pack"><code>PACK</code></a>
+<li><a href="#pcount"><code>PCount()</code></a>
+<li><a href="#procfile"><code>ProcFile()</code></a>
+<li><a href="#procline"><code>ProcLine()</code></a>
+<li><a href="#procname"><code>ProcName()</code></a>
+<li><a href="#rat"><code>RAt()</code></a>
+<li><a href="#readkey"><code>ReadKey()*</code></a>
+<li><a href="#readvar"><code>ReadVar()</code></a>
+<li><a href="#reccount"><code>RecCount()</code></a>
+<li><a href="#recno"><code>RecNo()</code></a>
+<li><a href="#recsize"><code>RecSize()</code></a>
+<li><a href="#replicate"><code>Replicate()</code></a>
+<li><a href="#rename"><code>RENAME</code></a>
+<li><a href="#reportform"><code>REPORT FORM</code></a>
+<li><a href="#restorescreen"><code>RESTORE SCREEN</code></a>
+<li><a href="#right"><code>Right()</code></a>
+<li><a href="#rlock"><code>RLock()</code></a>
+<li><a href="#round"><code>Round()</code></a>
+<li><a href="#row"><code>Row()</code></a>
+<li><a href="#rtrim"><code>RTrim()</code></a>
+<li><a href="#run"><code>RUN</code></a>
+<li><a href="#savescreen"><code>SAVE SCREEN</code></a>
+<li><a href="#seconds"><code>Seconds()</code></a>
+<li><a href="#secs"><code>Secs()</code></a>
+<li><a href="#select"><code>Select()</code></a>
+<li><a href="#set"><code>Set()</code></a>
+<li><a href="#setkey"><code>SetKey()</code></a>
+<li><a href="#setmode"><code>SetMode()</code></a>
+<li><a href="#settypeahead"><code>SetTypeahead()</code></a>
+<li><a href="#setalternate"><code>SET ALTERNATE</code></a>
+<li><a href="#setbell"><code>SET BELL</code></a>
+<li><a href="#setcentury"><code>SET CENTURY</code></a>
+<li><a href="#setconsole"><code>SET CONSOLE</code></a>
+<li><a href="#setdate"><code>SET DATE</code></a>
+<li><a href="#setdecimals"><code>SET DECIMALS</code></a>
+<li><a href="#setdefault"><code>SET DEFAULT</code></a>
+<li><a href="#setdevice"><code>SET DEVICE</code></a>
+<li><a href="#setepoch"><code>SET EPOCH</code></a>
+<li><a href="#setfixed"><code>SET FIXED</code></a>
+<li><a href="#setfunction"><code>SET FUNCTION</code></a>
+<li><a href="#setintensity"><code>SET INTENSITY</code></a>
+<li><a href="#setkey_001"><code>SET KEY</code></a>
+<li><a href="#setmessage"><code>SET MESSAGE</code></a>
+<li><a href="#setpath"><code>SET PATH</code></a>
+<li><a href="#setprinter"><code>SET PRINTER</code></a>
+<li><a href="#setwrap"><code>SET WRAP</code></a>
+<li><a href="#space"><code>Space()</code></a>
+<li><a href="#sqrt"><code>Sqrt()</code></a>
+<li><a href="#str"><code>Str()</code></a>
+<li><a href="#strtran"><code>StrTran()</code></a>
+<li><a href="#strzero"><code>StrZero()</code></a>
+<li><a href="#substr"><code>SubStr()</code></a>
+<li><a href="#tbrowseaddcolumn"><code>TBrowse():AddColumn()</code></a>
+<li><a href="#tbrowseapplykey"><code>TBrowse():ApplyKey()</code></a>
+<li><a href="#tbrowsesetkey"><code>TBrowse():SetKey()</code></a>
+<li><a href="#tbrowsedb"><code>TBrowseDB()</code></a>
+<li><a href="#tbrowsenew"><code>TBrowseNew()</code></a>
+<li><a href="#term2013"><code>TERM/2013</code></a>
+<li><a href="#time"><code>Time()</code></a>
+<li><a href="#tone"><code>Tone()</code></a>
+<li><a href="#tools4001"><code>TOOLS/4001</code></a>
+<li><a href="#transform"><code>Transform()</code></a>
+<li><a href="#trim"><code>Trim()</code></a>
+<li><a href="#type_001"><code>Type()</code></a>
+<li><a href="#type"><code>TYPE</code></a>
+<li><a href="#upper"><code>Upper()</code></a>
+<li><a href="#used"><code>Used()</code></a>
+<li><a href="#val"><code>Val()</code></a>
+<li><a href="#valtype"><code>ValType()</code></a>
+<li><a href="#var"><code>VAR</code></a>
+<li><a href="#version"><code>Version()</code></a>
+<li><a href="#word"><code>Word()</code></a>
+<li><a href="#year"><code>Year()</code></a>
+<li><a href="#zap"><code>ZAP</code></a>
+</ul>
+</aside>
+
 <main>
 
 <section id="welcometoharbour">
@@ -1037,7 +1535,7 @@ PROCEDURE Main()
       ? &quot;Last update:&quot;, Bin2I( cYear ), Bin2I( cMonth ), Bin2I( cDay )
       hb_vfClose( hFile )
    ELSE
-      ? &quot;Can not open file&quot;
+      ? &quot;Cannot open file&quot;
    ENDIF
    RETURN
 </pre>
@@ -1081,7 +1579,7 @@ PROCEDURE Main()
       ? &quot;Number of records in file:&quot;, Bin2L( cBuffer )
       hb_vfClose( hFile )
    ELSE
-      ? &quot;Can not open file&quot;
+      ? &quot;Cannot open file&quot;
    ENDIF
    RETURN
 </pre>
@@ -1163,7 +1661,7 @@ PROCEDURE Main()
       ? &quot;New update date is:&quot;, LUpdate()
       dbCloseArea()
    ELSE
-      ? &quot;Can not open file&quot;
+      ? &quot;Cannot open file&quot;
    ENDIF
    RETURN
 </pre>
@@ -1992,7 +2490,7 @@ PROCEDURE Main()
   <div>database structure</div>
   <div>&lt;cRDD&gt;      Name of the RDD</div>
   <div>&lt;lKeepOpen&gt; 3-way toggle to Open the file in New or Current workarea:</div>
-  <div class="d-t">
+  <div class="d-t d-t0">
   <div>                 NIL     The file is not opened.</div>
   <div>                 True    It is opened in a New area.</div>
   <div>                 False   It is opened in the current area.</div>
@@ -4537,7 +5035,7 @@ RUN command                    // Gives a OS shell
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>SetMode() is a function that change the video mode depend on the video card and monitor combination, to match the number of rows and columns specified. Note that there are only a real few combination or rows/cols pairs that produce the video mode change. The followings are availables for GTDOS:</div>
-  <div class="d-t">
+  <div class="d-t d-t0">
   <div>   12 rows x 40 columns   12 rows x 80 columns</div>
   <div>   25 rows x 40 columns   25 rows x 80 columns</div>
   <div>   28 rows x 40 columns   28 rows x 80 columns</div>
@@ -4545,7 +5043,7 @@ RUN command                    // Gives a OS shell
   <div>                          50 rows x 80 columns</div>
 </div>
   <div><p>The follow modes are available to Windows</div>
-  <div class="d-t">
+  <div class="d-t d-t0">
   <div>   25 rows x 40 columns   25 rows x 80 columns</div>
   <div>   50 rows x 40 columns   43 rows x 80 columns</div>
   <div>   50 rows x 80 columns</div>
@@ -5416,7 +5914,7 @@ ENDIF
 IF FErase( &quot;test.txt&quot; ) != F_ERROR
    ? &quot;File successfully erased&quot;
 ELSE
-   ? &quot;File can not be deleted&quot;
+   ? &quot;File cannot be deleted&quot;
 ENDIF
 </pre>
 <div class="d-d">Status</div>
@@ -8323,7 +8821,7 @@ PROCEDURE Main()
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>hb_Translate() try to convert a source string from one code page into the other. If a code page ID is not recognized, or not linked in, the default code page is used. hb_Translate() is used usually to convert between the Dos and the Windows code pages of the same language.</div>
-  <div><p>NOTE: If the source code page and target code page does not have the same number of characters, a translation can not be done and the destination string is a copy of the source string.</div>
+  <div><p>NOTE: If the source code page and target code page does not have the same number of characters, a translation cannot be done and the destination string is a copy of the source string.</div>
   <div><p>NOTE: You must REQUEST every code page module you intend to use. For example: to use the Russian RU866 code page you must add the following to your program: REQUEST HB_CODEPAGE_RU866</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -10877,7 +11375,7 @@ FUNCTION MakeEmpty( xField )
   <div><p>- Second, if both components make up the value of &lt;cTemplate&gt;, the</div>
   <div><p>function string must precede the template string. Otherwise, the function string may appear with out the template string and vice versa.</div>
   <div><p>The table below shows the possible function strings available with the Transform() function.</div>
-  <div class="d-t">
+  <div class="d-t d-t0">
   <div>@B   Left justify the string within the format.</div>
   <div>@C   Issue a CR after format is numbers are positive.</div>
   <div>@D   Put dates in SET DATE format.</div>
@@ -10890,7 +11388,7 @@ FUNCTION MakeEmpty( xField )
   <div>@!   Convert alpha characters to uppercased format.</div>
 </div>
   <div><p>The second part of &lt;cTemplate&gt; consists of the format string. Each character in the string may be formatted based on using the follow characters as template markers for the string.</div>
-  <div class="d-t">
+  <div class="d-t d-t0">
   <div>A,N,X,9,#   Any data type</div>
   <div>L           Shows logical as &quot;T&quot; or &quot;F&quot;</div>
   <div>Y           Shows logical as &quot;Y&quot; or &quot;N&quot;</div>
@@ -11047,7 +11545,7 @@ LOCAL dDate := Date()
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>__TypeFile() function type the content of a text file on the screen with an option to send this information also to the printer. The file is displayed as is without any headings or formatting.</div>
-  <div><p>If &lt;cFile&gt; contain no path, __TypeFile() try to find the file first in the SET DEFAULT directory and then in search all of the SET PATH directories. If &lt;cFile&gt; can not be found a run-time error occur.</div>
+  <div><p>If &lt;cFile&gt; contain no path, __TypeFile() try to find the file first in the SET DEFAULT directory and then in search all of the SET PATH directories. If &lt;cFile&gt; cannot be found a run-time error occur.</div>
   <div><p>Use SET CONSOLE OFF to suppress screen output. You can pause the output using Ctrl-S, press any key to resume.</div>
   <div><p>__TypeFile() function is used in the preprocessing of the TYPE command.</div>
 </div>
@@ -12212,7 +12710,7 @@ OutErr( hb_DateTime(), &quot;Core meltdown detected&quot; )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>OutStd() write one or more values into the standard output device. Character and Memo values are printed as is, Dates are printed according to the SET DATE FORMAT, Numeric values are converted to strings, Logical values are printed as .T. or .F., NIL are printed as NIL, values of any other kind are printed as empty string. There is one space separating each two values. Note that Numeric value can take varying length when converted into string depending on its source (see Str() for detail).</div>
-  <div><p>OutStd() is similar to QQOut() with the different that QQOut() send its output to the Harbour console stream, which can or can not be redirected according with the screen driver, and OutStd() send its output to the standard output device (STDOUT) and can be redirected.</div>
+  <div><p>OutStd() is similar to QQOut() with the different that QQOut() send its output to the Harbour console stream, which can or cannot be redirected according with the screen driver, and OutStd() send its output to the standard output device (STDOUT) and can be redirected.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -14135,7 +14633,7 @@ SET EPOCH TO 2000
 <div class="d-it">
   <div><p>This command activates a system wide fixed placement of decimals places shown for all numeric outputs. If the value of &lt;lFixed&gt; is a logical true (.T.), FIXED will be turned ON; otherwise it will be turned OFF.</div>
   <div><p>When SET DECIMALS OFF is used, the following rules apply to the number of decimal placed displayed.</div>
-  <div class="d-t">
+  <div class="d-t d-t0">
   <div> Addition         Same as operand with the greatest number of decimal digits</div>
   <div> Subtraction      Same as operand with the greatest number of decimal digits</div>
   <div> Multiplication   Sum of operand decimal digits</div>
@@ -14549,7 +15047,7 @@ RENAME test.txt TO test.old
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>TYPE command type the content of a text file on the screen with an option to send this information also to the printer or to an alternate file. The file is displayed as is without any headings or formatting.</div>
-  <div><p>If &lt;xcFile&gt; contain no path, TYPE try to find the file first in the SET DEFAULT directory and then in search all of the SET PATH directories. If &lt;xcFile&gt; can not be found a run-time error occur.</div>
+  <div><p>If &lt;xcFile&gt; contain no path, TYPE try to find the file first in the SET DEFAULT directory and then in search all of the SET PATH directories. If &lt;xcFile&gt; cannot be found a run-time error occur.</div>
   <div><p>If &lt;xcDestFile&gt; contain no path it is created in the SET DEFAULT directory.</div>
   <div><p>Use SET CONSOLE OFF to suppress screen output. You can pause the output using Ctrl-S, press any key to resume.</div>
 </div>
@@ -14785,7 +15283,7 @@ PROCEDURE Main()
   <div><p>If the VALID clause is specified and &lt;lValid&gt; evaluates to it logical true (.T.) condition the current GET will be considered valid and the get operation will continue onto the next active GET object. If not, the cursor will remain on this GET object until aborted or until the condition in &lt;lValid&gt; evaluates to true (.T.). The name of a user-defined function returning a logical true (.T.) or false (.F.) or it code block may be specified in &lt;lValid&gt;. This clause is not activated until a READ command or ReadModal( ) function call is issued.</div>
   <div><p>If the RANGE clause is specified instead of the VALID clause, the two inclusive range values for &lt;xVar&gt; must be specified in &lt;xStart&gt; and &lt;xEnd&gt;. Id &lt;xVar&gt; is a date data type, &lt;xStart&gt; and &lt;xEnd&gt; must also be date data types; if &lt;xVar&gt; is a numeric data type &lt;xStart&gt; and &lt;xEnd&gt; must also be numeric data types. If a value fails the RANGE test ,a message of OUT OF RANGE will appear in the SCOREBOARD area (row = 0, col = 60). The RANGE message may be turned off it the SET SCOREBOARD command or Set() function appropriately toggled.</div>
   <div><p>NOTE       GET functions/formatting rules:</div>
-  <div class="d-t">
+  <div class="d-t d-t0">
   <div>@A          Allows only alphabetic characters.</div>
   <div>@B          Numbers will be left justified</div>
   <div>@C          All positive numbers will be followed by CR.</div>
@@ -14804,7 +15302,7 @@ PROCEDURE Main()
   <div>@)          Displays negative numbers in parentheses without leading spaces.</div>
 </div>
   <div><p>GET templates/formatting rules:</div>
-  <div class="d-t">
+  <div class="d-t d-t0">
   <div>A   Only alphabetic characters allowed.</div>
   <div>N   Only alphabetic and numeric characters allowed</div>
   <div>X   Any character allowed.</div>
@@ -15076,12 +15574,12 @@ PROCEDURE Main()
 <div class="d-it">Run time errors</div>
 </section>
 
-<section id="base1068_002">
+<section id="base1068">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/subcodes.txt">Improve this doc</a></span>
 <h4><code>BASE/1068</code></h4>
-<div class="d-ol">Bound error in array element assignment</div>
+<div class="d-ol">Invalid type of argument</div>
 <div class="d-d">Description</div>
-<div class="d-it">The specified index into an array was greater then the number of elements in the array.</div>
+<div class="d-it">The used data is not of logical type.</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
 <div class="d-d">Tag(s)</div>
@@ -15100,12 +15598,12 @@ PROCEDURE Main()
 <div class="d-it">Run time errors</div>
 </section>
 
-<section id="base1068">
+<section id="base1068_002">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/subcodes.txt">Improve this doc</a></span>
 <h4><code>BASE/1068</code></h4>
-<div class="d-ol">Invalid type of argument</div>
+<div class="d-ol">Bound error in array element assignment</div>
 <div class="d-d">Description</div>
-<div class="d-it">The used data is not of logical type.</div>
+<div class="d-it">The specified index into an array was greater then the number of elements in the array.</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
 <div class="d-d">Tag(s)</div>
@@ -15188,12 +15686,16 @@ PROCEDURE Main()
 <div class="d-it">Run time errors</div>
 </section>
 
-<section id="base1076_002">
+<section id="base1076">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/subcodes.txt">Improve this doc</a></span>
 <h4><code>BASE/1076</code></h4>
 <div class="d-ol">Invalid type of arguments</div>
 <div class="d-d">Description</div>
-<div class="d-it">The arguments of '$' operator are not a strings.</div>
+<div class="d-it">The type of compared arguments do not match.</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+&gt;=
+</pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
 <div class="d-d">Tag(s)</div>
@@ -15216,16 +15718,12 @@ PROCEDURE Main()
 <div class="d-it">Run time errors</div>
 </section>
 
-<section id="base1076">
+<section id="base1076_002">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/subcodes.txt">Improve this doc</a></span>
 <h4><code>BASE/1076</code></h4>
 <div class="d-ol">Invalid type of arguments</div>
 <div class="d-d">Description</div>
-<div class="d-it">The type of compared arguments do not match.</div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-&gt;=
-</pre>
+<div class="d-it">The arguments of '$' operator are not a strings.</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
 <div class="d-d">Tag(s)</div>
@@ -15248,22 +15746,6 @@ PROCEDURE Main()
 <div class="d-it">Run time errors</div>
 </section>
 
-<section id="base1078_001">
-<span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/subcodes.txt">Improve this doc</a></span>
-<h4><code>BASE/1078</code></h4>
-<div class="d-ol">Invalid type of arguments</div>
-<div class="d-d">Description</div>
-<div class="d-it">The type of one or both arguments is not a logical.</div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-.AND.
-</pre>
-<div class="d-d">Compliance</div>
-<div class="d-it">CA-Cl*pper v5.x compatible</div>
-<div class="d-d">Tag(s)</div>
-<div class="d-it">Run time errors</div>
-</section>
-
 <section id="base1078">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/subcodes.txt">Improve this doc</a></span>
 <h4><code>BASE/1078</code></h4>
@@ -15273,6 +15755,22 @@ PROCEDURE Main()
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ==
+</pre>
+<div class="d-d">Compliance</div>
+<div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">Run time errors</div>
+</section>
+
+<section id="base1078_001">
+<span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/subcodes.txt">Improve this doc</a></span>
+<h4><code>BASE/1078</code></h4>
+<div class="d-ol">Invalid type of arguments</div>
+<div class="d-d">Description</div>
+<div class="d-it">The type of one or both arguments is not a logical.</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+.AND.
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
@@ -15648,22 +16146,6 @@ At()
 <div class="d-it">Run time errors</div>
 </section>
 
-<section id="base1110_001">
-<span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/subcodes.txt">Improve this doc</a></span>
-<h4><code>BASE/1110</code></h4>
-<div class="d-ol">Invalid argument passed to function</div>
-<div class="d-d">Description</div>
-<div class="d-it">The passed argument is neither a string nor an array.</div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-Len()
-</pre>
-<div class="d-d">Compliance</div>
-<div class="d-it">CA-Cl*pper v5.x compatible</div>
-<div class="d-d">Tag(s)</div>
-<div class="d-it">Run time errors</div>
-</section>
-
 <section id="base1110">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/subcodes.txt">Improve this doc</a></span>
 <h4><code>BASE/1110</code></h4>
@@ -15673,6 +16155,22 @@ Len()
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 SubStr()
+</pre>
+<div class="d-d">Compliance</div>
+<div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">Run time errors</div>
+</section>
+
+<section id="base1110_001">
+<span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/subcodes.txt">Improve this doc</a></span>
+<h4><code>BASE/1110</code></h4>
+<div class="d-ol">Invalid argument passed to function</div>
+<div class="d-d">Description</div>
+<div class="d-it">The passed argument is neither a string nor an array.</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+Len()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
@@ -16296,12 +16794,12 @@ See tests/tbrowse.prg
 <div class="d-it"><code><a href="#tbrowsenew">TBrowseNew()</a></code>, <code><a href="#tbcolumnnew">TBColumnNew()</a></code></div>
 </section>
 
-<section id="_002">
+<section id="tbrowseaddcolumn">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/tbrowse.txt">Improve this doc</a></span>
-<h4><code></code></h4>
+<h4><code>TBrowse():AddColumn()</code></h4>
 <div class="d-ol">Add an New Column to an TBrowse Object</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>:AddColumn() AddColumn( &lt;oCol&gt; ) &rarr; Self</code></div>
+<div class="d-it"><code>:AddColumn( &lt;oCol&gt; ) &rarr; Self</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">&lt;oCol&gt;  Is an TbColumn object</div>
 <div class="d-d">Returns</div>
@@ -16312,12 +16810,12 @@ See tests/tbrowse.prg
 <div class="d-it">TBrowse Method</div>
 </section>
 
-<section id="_001">
+<section id="tbrowseapplykey">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/tbrowse.txt">Improve this doc</a></span>
-<h4><code></code></h4>
+<h4><code>TBrowse():ApplyKey()</code></h4>
 <div class="d-ol">Evaluates an code block associated with an specific key</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>:Applykey() ApplyKey( &lt;nKey&gt; ) &rarr; nResult</code></div>
+<div class="d-it"><code>:ApplyKey( &lt;nKey&gt; ) &rarr; nResult</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">&lt;nKey&gt;      An valid Inkey code</div>
 <div class="d-d">Returns</div>
@@ -16346,12 +16844,12 @@ ENDDO
 <div class="d-it">TBrowse Method</div>
 </section>
 
-<section id="">
+<section id="tbrowsesetkey">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/tbrowse.txt">Improve this doc</a></span>
-<h4><code></code></h4>
+<h4><code>TBrowse():SetKey()</code></h4>
 <div class="d-ol">Get an optionaly Set an new Code block associated to a inkey value</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>:SetKey() SetKey( &lt;nKey&gt;[, &lt;bBlock&gt;] ) &rarr; bOldBlock</code></div>
+<div class="d-it"><code>:SetKey( &lt;nKey&gt;[, &lt;bBlock&gt;] ) &rarr; bOldBlock</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div>&lt;nKey&gt; An valid inkey Code</div>
@@ -16397,6 +16895,6 @@ oTb:SeyKey( K_F10, {| otb, nkey | ShowListByname( otb ) }
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-28 16:15 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/9b82cba">9b82cba</a></div>
+<div>Generated by hbdoc on 2016-10-29 12:25 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/3f69ce6">3f69ce6</a></div>
 </footer>
