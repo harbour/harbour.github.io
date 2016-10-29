@@ -385,6 +385,7 @@ p {
 
 @media screen and (max-width: 737px) {
   header > div {
+    height: 70px;
     width: auto;
   }
 
