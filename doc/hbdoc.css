@@ -30,6 +30,7 @@ header > div > div:first-child {
 
 header > div > div:last-child {
   float: right;
+  padding-left: 15px;
 }
 
 header a {
