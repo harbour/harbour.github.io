@@ -165,6 +165,10 @@ aside ul a:hover {
   color: #fdfdfd;
 }
 
+aside ul a:visited {
+  color: #000;
+}
+
 section {
   border-top: 1px solid rgba(0, 0, 0, .1);
   margin-top: 0;
