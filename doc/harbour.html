@@ -286,6 +286,9 @@
 <a href="#fwrite" title="FWrite()"><code>FWrite()</code></a>
 <a href="#gete" title="GetE()"><code>GetE()</code></a>
 <a href="#getenv" title="GetEnv()"><code>GetEnv()</code></a>
+<a href="#hb_adel" title="hb_ADel()"><code>hb_ADel()</code></a>
+<a href="#hb_ains" title="hb_AIns()"><code>hb_AIns()</code></a>
+<a href="#hb_ascan" title="hb_AScan()"><code>hb_AScan()</code></a>
 <a href="#hb_at" title="hb_At()"><code>hb_At()</code></a>
 <a href="#hb_cdpselect" title="hb_cdpSelect()"><code>hb_cdpSelect()</code></a>
 <a href="#hb_colorindex" title="hb_ColorIndex()"><code>hb_ColorIndex()</code></a>
@@ -1046,18 +1049,18 @@ PROCEDURE Main()
 <div class="d-ol">Dynamically add an element to an array</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>AAdd( &lt;aArray&gt;[, &lt;xValue&gt;] ) → Value</code></div>
+<code>AAdd( &lt;aArray&gt;, [&lt;xValue&gt;] ) → xValue</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>aArray</code> The name of an array</div>
   <div><code>xValue</code> Element to add to array <code>aArray</code></div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>Value</code> if specified <code>xValue</code>, <code>xValue</code> will return , otherwise this function returns a NIL value.</div>
+<div class="d-it"><code>xValue</code> if specified <code>xValue</code>, <code>xValue</code> will be returned, otherwise this function returns a NIL value.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function dynamically increases the length of the array named <code>aArray</code> by one element and stores the value of <code>xValue</code> to that newly created element.</div>
-  <div><p><code>xValue</code> may be an array reference pointer, which in turn may be stored to an array's subscript position.</div>
+  <div><p>This function dynamically increases the length of the <code>aArray</code> by adding one new element to the end of the array and optionally stores the value <code>xValue</code> to that newlly created element.</div>
+  <div><p><code>xValue</code> may be of an data type, including an array reference pointer, which in turn may be stored to an array's subscript position.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -1135,13 +1138,9 @@ aOne[ 1 ] := &quot;The Harbour Compiler&quot;
 <div class="d-it"><code>aTarget</code> an array pointer reference</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function copies array elements from <code>aSource</code> to <code>aTarget</code>.</div>
-  <div><p><code>nStart</code> is the beginning element to be copied from <code>aSource</code>; the default is 1.</div>
-  <div><p><code>nCount</code> is the number of elements to be copied from <code>aSource</code>; the default is the entire array.</div>
-  <div><p><code>nTargetPos</code> is the subscript number in the target array, <code>aTarget</code>,</div>
-  <div><p>to which array elements are to be copied; the default is 1</div>
-  <div><p>This function will copy all data types in <code>aSource</code> to <code>aTarget</code>.</div>
-  <div><p>If an array element in <code>aSource</code> is a pointer reference to another array, that array pointer will be copied to <code>aTarget</code>; not all subdimensions will be copied from one array to the next. This must be accomplished via the AClone() function.</div>
+  <div><p>This function copies array elements from <code>aSource</code> to <code>aTarget</code>. <code>nStart</code> is the beginning element to be copied from <code>aSource</code>; the default is 1.</div>
+  <div><p><code>nCount</code> is the number of elements to be copied from <code>aSource</code>; the default is the entire array. <code>nTargetPos</code> is the subscript number in the target array, <code>aTarget</code>, to which array elements are to be copied; the default is 1.</div>
+  <div><p>This function will copy all data types in <code>aSource</code> to <code>aTarget</code>. If an array element in <code>aSource</code> is a pointer reference to another array, that array pointer will be copied to <code>aTarget</code>; not all subdimensions will be copied from one array to the next. This must be accomplished via the AClone() function.</div>
   <div><p>Note: If array <code>aSource</code> is larger then <code>aTarget</code>, array elements will start copying at <code>nTargetPos</code> and continue copying until the end of array <code>aTarget</code> is reached. The ACopy() function doesn't append subscript positions to the target array, the size of the target array <code>aTarget</code> remains constant.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -1150,6 +1149,7 @@ LOCAL nCount := 2, nStart := 1, aOne, aTwo
 aOne := { &quot;Harbour&quot;, &quot; is &quot;, &quot;Power&quot; }
 aTwo := { &quot;Clipper&quot;, &quot; was &quot;, &quot;Power&quot; }
 ACopy( aOne, aTwo, nStart, nCount )
+// aTwo --&gt; { &quot;Harbour&quot;, &quot; is &quot;, &quot;Power&quot; }
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -1169,20 +1169,24 @@ ACopy( aOne, aTwo, nStart, nCount )
 <div class="d-ol">Delete an element form an array.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>ADel( &lt;aArray&gt;, &lt;nPos&gt; ) → aTarget</code></div>
+<code>ADel( &lt;aArray&gt;, &lt;nPos&gt; ) → aArray</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>aArray</code> Name of array from which an element is to be removed.</div>
   <div><code>nPos</code>   Subscript of the element to be removed.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>aTarget</code> an array pointer reference.</div>
+<div class="d-it"><code>aArray</code> an array pointer reference.</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function deletes the element found at <code>nPos</code> subscript position in the array <code>aArray</code>. All elements in the array <code>aArray</code> below the given subscript position <code>nPos</code> will move up one position in the array. In other words, what was formerly the sixth subscript position will become the fifth subscript position. The length of the array <code>aArray</code> will remain unchanged, as the last element in the array will become a NIL data type.</div>
+<div class="d-it">
+  <div><p>This function deletes the element found at <code>nPos</code> subscript position in the array <code>aArray</code>. All elements in the array <code>aArray</code> below the given subscript position <code>nPos</code> will move up one position in the array.</div>
+  <div><p>In other words, what was formerly the sixth subscript position will become the fifth subscript position. The length of the array <code>aArray</code> will remain unchanged, as the last element in the array will become a NIL data type.</div>
+  <div><p>Note: To completely remove an element and decrease the length of array you can use hb_ADel() that supports autosizing.</div>
+</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 LOCAL aArray := { &quot;Harbour&quot;, &quot;is&quot;, &quot;Power&quot; }
-ADel( aArray, 2 ) // Result: aArray is { &quot;Harbour&quot;, &quot;Power&quot; }
+ADel( aArray, 2 ) // Result: aArray is { &quot;Harbour&quot;, &quot;Power&quot;, NIL }
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -1193,7 +1197,7 @@ ADel( aArray, 2 ) // Result: aArray is { &quot;Harbour&quot;, &quot;Power&quot; 
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Array</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="#acopy">ACopy()</a></code>, <code><a href="#ains">AIns()</a></code>, <code><a href="#afill">AFill()</a></code></div>
+<div class="d-it"><code><a href="#hb_adel">hb_ADel()</a></code>, <code><a href="#acopy">ACopy()</a></code>, <code><a href="#ains">AIns()</a></code>, <code><a href="#afill">AFill()</a></code></div>
 </section>
 
 <section id="aeval">
@@ -1214,10 +1218,24 @@ ADel( aArray, 2 ) // Result: aArray is { &quot;Harbour&quot;, &quot;Power&quot; 
 <div class="d-it"><code>aArray</code> an array pointer reference.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function will evaluate and process the subscript elements in <code>aArray</code>. A code block passed as <code>bBlock</code> defines the operation to be executed on each element of the array. All elements in <code>aArray</code> will be evaluated unless specified by a beginning subscript position in <code>nStart</code> for <code>nCount</code> elements.</div>
-  <div><p>Two parameters are passed to the code block <code>bBlock</code>. The individual elements in an array are the first parameter and the subscript position is the second.</div>
-  <div><p>AEval() does not replace a FOR...NEXT loop for processing arrays. If an array is an autonomous unit, AEval() is appropriate. If the array is to be altered or if elements are to be reevaluated, a FOR...NEXT loop is more appropriate.</div>
+  <div><p>This function evaluates the elements of <code>aArray</code>, and executes for each of them the processing that's defined with <code>bBlock</code>. By default, all the elements of array are being processed, starting from 1st and up to the last element.</div>
+  <div><p>If  <code>nStart</code> and/or <code>nCount</code> parameters are given, then the processing starts from <code>nStart</code> element and continues for the next <code>nCount</code> elements (if defined) or up to the last element of the array.</div>
+  <div><p>The <code>bBlock</code> code block receives two parameters: the element value and element's index (position) into the array. i.e. {|xValue, nIndex| ... } Worth to note that elements are passed to code block 'by value', thus any change being made to this value doesn't  affects the value of element in the array.</div>
 </div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+PROCEDURE Main()
+   LOCAL a := { 10, 20, 30 }
+   AEval( a, {| e, n | QOut( e * n + 1 , a[ n ] ) } )
+   QOut( a[ 1 ], a[ 2 ], a[ 3 ] )  // array elements unchanged
+   ? &quot;----&quot;
+   AEval( a, {| e, n | QOut( e * n + 1, a[ n ] *= n + 1 ) }, 2, 1 )
+   // here the 2nd element been changed, because we've explicitly used
+   // its pointer 'a[ n ] *= ...' into array.
+   QOut( a[ 1 ], a[ 2 ], a[ 3 ] )
+   WAIT
+   RETURN
+</pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
@@ -1236,7 +1254,7 @@ ADel( aArray, 2 ) // Result: aArray is { &quot;Harbour&quot;, &quot;Power&quot; 
 <div class="d-ol">Fill an array with a specified value</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>AFill( &lt;aArray&gt;, &lt;xValue&gt;, [&lt;nStart&gt;], [&lt;nCount&gt;] ) → aTarget</code></div>
+<code>AFill( &lt;aArray&gt;, &lt;xValue&gt;, [&lt;nStart&gt;], [&lt;nCount&gt;] ) → aArray</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>aArray</code> Name of array to be filled.</div>
@@ -1245,10 +1263,11 @@ ADel( aArray, 2 ) // Result: aArray is { &quot;Harbour&quot;, &quot;Power&quot; 
   <div><code>nCount</code> Number of subscript to be filled</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>aTarget</code> an array pointer.</div>
+<div class="d-it"><code>aArray</code> pointer to the array.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function will fill each element of an array named <code>aArray</code> with the value <code>xValue</code>. If specified, <code>nStart</code> denotes the beginning element to be filled and the array elements will continue to be filled for <code>nCount</code> positions. If Not specified, the value of <code>nStart</code> will be 1, and the value of <code>nCount</code> will be the value of Len( <code>aArray</code> ); thus, all subscript positions in the array <code>aArray</code> will be filled with the value of <code>xValue</code>.</div>
+  <div><p>This function will fill each element of an array named <code>aArray</code> with the value <code>xValue</code>. If specified, <code>nStart</code> denotes the beginning element to be filled and the array elements will continue to be filled for <code>nCount</code> positions.</div>
+  <div><p>If neither <code>nStart</code>/<code>nCount</code> specified, the value of <code>nStart</code> will be 1, and the value of <code>nCount</code> will be the value of Len( <code>aArray</code> ); thus, all subscript positions in the array <code>aArray</code> will be filled with the value of <code>xValue</code>.</div>
   <div><p>This function will work on only a single dimension of <code>aArray</code>. If there are array pointer references within a subscript <code>aArray</code>, those values will be lost, since this function will overwrite those values with new values.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -1274,18 +1293,19 @@ AFill( aTest, 5 )
 <div class="d-ol">Insert a NIL value at an array subscript position.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>AIns( &lt;aArray&gt;, &lt;nPos&gt; ) → aTarget</code></div>
+<code>AIns( &lt;aArray&gt;, &lt;nPos&gt; ) → &lt;aArray&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>aArray</code> Array name.</div>
   <div><code>nPos</code> Subscript position in <code>aArray</code></div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>aTarget</code> an array pointer reference.</div>
+<div class="d-it">a reference to <code>aArray</code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>This function inserts a NIL value in the array named <code>aArray</code> at the <code>nPos</code>th position.</div>
   <div><p>All array elements starting with the <code>nPos</code>th position will be shifted down one subscript position in the array list and the last item in the array will be removed completely. In other words, if an array element were to be inserted at the fifth subscript position, the element previously in the fifth position would now be located at the sixth position. The length of the array <code>aArray</code> will remain unchanged.</div>
+  <div><p>Note: To avoid loosing last element, you can use hb_AIns() which supports autosizing of array.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -1301,7 +1321,7 @@ AIns( aArray, 4 )
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Array</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="#aadd">AAdd()</a></code>, <code><a href="#acopy">ACopy()</a></code>, <code><a href="#adel">ADel()</a></code>, <code><a href="#aeval">AEval()</a></code>, <code><a href="#afill">AFill()</a></code>, <code><a href="#asize">ASize()</a></code></div>
+<div class="d-it"><code><a href="#hb_ains">hb_AIns()</a></code>, <code><a href="#aadd">AAdd()</a></code>, <code><a href="#acopy">ACopy()</a></code>, <code><a href="#adel">ADel()</a></code>, <code><a href="#aeval">AEval()</a></code>, <code><a href="#afill">AFill()</a></code>, <code><a href="#asize">ASize()</a></code></div>
 </section>
 
 <section id="array">
@@ -1310,7 +1330,7 @@ AIns( aArray, 4 )
 <div class="d-ol">Create an uninitialized array of specified length</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>Array( &lt;nElements&gt; [, &lt;nElements&gt;...] ) → aArray</code></div>
+<code>Array( &lt;nElements&gt;[, &lt;nElements&gt;...] ) → aArray</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>nElements</code> is the number of elements in the specified dimension.</div>
 <div class="d-d">Returns</div>
@@ -1351,10 +1371,10 @@ PROCEDURE Main()
 <div class="d-ol">Scan array elements for a specified condition</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>AScan( &lt;aTarget&gt;, &lt;xSearch&gt;, [&lt;nStart&gt;], [&lt;nCount&gt;] ) → nStoppedAt</code></div>
+<code>AScan( &lt;aArray&gt;, &lt;xSearch&gt;, [&lt;nStart&gt;], [&lt;nCount&gt;] ) → nStoppedAt</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>aTarget</code>   Array to be scanned.</div>
+  <div><code>aArray</code>    Array to be scanned.</div>
   <div><code>xSearch</code>   Expression to search for in <code>aTarget</code></div>
   <div><code>nStart</code>    Beginning subscript position at which to start the search.</div>
   <div><code>nCount</code>    Number of elements to scan with <code>aTarget</code>.</div>
@@ -1363,9 +1383,8 @@ PROCEDURE Main()
 <div class="d-it"><code>nStoppedAt</code> A numeric value of subscript position where <code>xSearch</code> was found, or 0 if <code>xSearch</code> is not found.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function scan the content of array named <code>aTarget</code> for the value of <code>xSearch</code>. The return value is the position in the array <code>aTarget</code> in which <code>xSearch</code> was found. If it was not found, the return value will be 0.</div>
-  <div><p>If specified, the beginning subscript position at which to start scanning may be set with the value passed as <code>nStart</code>. The default is 1.</div>
-  <div><p>If specified, the number of array elements to scan may be set with the value passed as <code>nCount</code>. The default is the number of elements in the array <code>aTarget</code>.</div>
+  <div><p>This function scan the content of array named <code>aArray</code> for the value of <code>xSearch</code>. The return value is the position in the array <code>aArray</code> in which <code>xSearch</code> was found. If it was not found, the return value will be 0.</div>
+  <div><p><code>nStart</code> is the position from which to start scanning. The default is 1. (1st element) <code>nCount</code>, if specified, is the number of array elements to be scanned. The default is all elements in the array <code>aArray</code>.</div>
   <div><p>If <code>xSearch</code> is a code block, the operation of the function is slightly different. Each array subscript pointer reference is passed to the code block to be evaluated. The scanning routine will continue until the value obtained from the code block is a logical true (<code>.T.</code>) or until the end of the array has been reached.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -1376,7 +1395,7 @@ AScan( aDir,,, {| x, y | x[ 1 ] := &quot;test.prg&quot;, HB_SYMBOL_UNUSED( y ) }
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">This function is not CA-Cl*pper compatible.  CA-Cl*pper AScan() is affected by the SET EXACT ON/OFF Condition</div>
+<div class="d-it">This function is not CA-Cl*pper compatible. CA-Cl*pper AScan() is affected by the SET EXACT ON/OFF Condition</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1391,18 +1410,19 @@ AScan( aDir,,, {| x, y | x[ 1 ] := &quot;test.prg&quot;, HB_SYMBOL_UNUSED( y ) }
 <div class="d-ol">Adjust the size of an array</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>ASize( &lt;aArray&gt;, &lt;nLen&gt; ) → aTarget</code></div>
+<code>ASize( &lt;aArray&gt;, &lt;nLen&gt; ) → aArray</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>aArray</code> Name of array to be dynamically altered</div>
-  <div><code>nLen</code> Numeric value representing the new size of <code>aArray</code></div>
+  <div><code>nLen</code>  Numeric value representing the new size (i.e. number of elements)</div>
+  <div>of <code>aArray</code></div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>aTarget</code> an array pointer reference to <code>aTarget</code>.</div>
+<div class="d-it">The function returns a reference to <code>aArray</code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>This function will dynamically increase or decrease the size of <code>aArray</code> by adjusting the length of the array to <code>nLen</code> subscript positions.</div>
-  <div><p>If the length of the array <code>aArray</code> is shortened, those former subscript positions are lost. If the length of the array is lengthened a NIL value is assigned to the new subscript position.</div>
+  <div><p>If the length of the array <code>aArray</code> is shortened, the redundant elements are removed from the end of array. If the length of the array is lengthened the new elements are added to the end of array and they are assigned a NIL value.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -1433,15 +1453,15 @@ ASize( aArray, 1 )         // Result: aArray is { 1 }
 <div class="d-it">
   <div><code>aArray</code> Array to be sorted.</div>
   <div><code>nStart</code> The first element to start the sort from, default is 1.</div>
-  <div><code>nCount</code> Number of elements starting from <code>nStart</code> to sort, default is all elements.</div>
+  <div><code>nCount</code> Number of elements starting from <code>nStart</code> to sort, default</div>
+  <div>is all elements.</div>
   <div><code>bSort</code> Code block for sorting order, default is ascending order {| x, y | x <code> y }. The code block should accept two parameters and must return .</code>T<code>. if the sort is in order, .</code>F`. if not.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>aArray</code> reference to the now sorted <code>aArray</code> or NIL if the passed <code>aArray</code> is not an array.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ASort() sort all or part of a given array. If <code>bSort</code> is omitted, the function expect <code>aArray</code> to be one dimensional array containing single data type (one of: Character, Date, Logical, Numeric) and sort this array in ascending order: Character are sorted by their ASCII value, Dates are sorted chronologically, Logical put <code>.F.</code> values before <code>.T.</code>, Numeric are sorted by their value.</div>
-  <div><p>If <code>bSort</code> is specified, it is used to handle the sorting order. With each time the block is evaluate, two array elements are passed to the code block, and <code>bSort</code> must return a logical value that state if those elements are in order (<code>.T.</code>) or not (<code>.F.</code>). Using this block you can sort multidimensional array, descending orders or even (but why would you want to do that) sort array that contain different data type.</div>
+  <div><p>ASort() sort all or part of a given array. If <code>bSort</code> is omitted, the function expect <code>aArray</code> to be one dimensional array containing single data type (one of: Character, Date, Logical, Numeric) and sort this array in ascending order: Character are sorted by their ASCII value, Dates are sorted chronologically, Logical put <code>.F.</code> values before <code>.T.</code>, Numeric are sorted by their value. If <code>bSort</code> is specified, it is used to handle the sorting order. With each time the block is evaluate, two array elements are passed to the code block, and <code>bSort</code> must return a logical value that state if those elements are in order (<code>.T.</code>) or not (<code>.F.</code>). Using this block you can sort multidimensional array, descending orders or even (but why would you want to do that) sort array that contain different data type.</div>
   <div><p>Codeblock calling frequency and order differs from CA-Cl*pper, since Harbour uses a different (faster) sorting algorithm (quicksort).</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -1474,16 +1494,16 @@ ASort( aPair,,, {| x, y | x[ 2 ] &lt; y[ 2 ] } )
 <section id="atail">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/array.txt">Improve this doc</a></span>
 <h4><code>ATail()</code></h4>
-<div class="d-ol">Returns the rightmost element of an array</div>
+<div class="d-ol">Returns the last element of an array</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>ATail( &lt;aArray&gt; ) → Element</code></div>
+<code>ATail( &lt;aArray&gt; ) → xValue</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>aArray</code> is the array.</div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>Element</code> the expression of the last element in the array.</div>
+<div class="d-it"><code>xValue</code> the value of the last element in the array.</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function return the value of the last element in the array named <code>aArray</code>. This function does not alter the size of the array or any of the subscript values.</div>
+<div class="d-it">This function return the value of the last element in the array named <code>aArray</code>. Same as xValue := aArray[ Len( aArray ) ]</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 LOCAL aArray := { &quot;Harbour&quot;, &quot;is&quot;, &quot;Supreme&quot;, &quot;Power&quot; }
@@ -1499,6 +1519,132 @@ LOCAL aArray := { &quot;Harbour&quot;, &quot;is&quot;, &quot;Supreme&quot;, &quo
 <div class="d-it">API, Array</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#len">Len()</a></code>, <code><a href="#array">Array()</a></code>, <code><a href="#asize">ASize()</a></code>, <code><a href="#aadd">AAdd()</a></code></div>
+</section>
+
+<section id="hb_adel">
+<span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/array.txt">Improve this doc</a></span>
+<h4><code>hb_ADel()</code></h4>
+<div class="d-ol">Delete an element from an array.</div>
+<div class="d-d">Syntax</div>
+<div class="d-it d-sy">
+<code>hb_ADel( &lt;aArray&gt;, [&lt;nPos&gt;], [&lt;lAutoSize&gt;] ) → &lt;aArray&gt;</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div><code>aArray</code> Name of array from which an element is to be removed.</div>
+  <div><code>nPos</code>  Subscript of the element to be removed. Default value: 1.</div>
+  <div><code>lAutoSize</code> Boolean flag specifying if the array will be resized or not.</div>
+  <div>Default value: <code>.F.</code> (no resize).</div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it"><code>aArray</code> an array pointer reference.</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function deletes the element value (not the element itself!) stored in position <code>nPos</code> and shifts all the following values, one position up.</div>
+  <div><p>If <code>lAutoSize</code> is <code>.T.</code>, then the last element is removed and the size of the array is decreased by one, otherwise the length of the array remains unchanged and a NIL value will be stored in the last element, just like in ADel().</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+LOCAL aArray := { &quot;Harbour&quot;, &quot;is&quot;, &quot;Power&quot; }
+hb_ADel( aArray, 2 ) // Result: aArray is { &quot;Harbour&quot;, &quot;Power&quot;, NIL } - array length: 3 (unchanged)
+hb_ADel( aArray, 2, .T. ) // Result: aArray is { &quot;Harbour&quot;, &quot;Power&quot; } - array length: 2 (decreased)
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">Ready</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">Harbour specific</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">Library is core</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">API, Array</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#adel">ADel()</a></code>, <code><a href="#acopy">ACopy()</a></code>, <code><a href="#ains">AIns()</a></code>, <code><a href="#afill">AFill()</a></code></div>
+</section>
+
+<section id="hb_ains">
+<span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/array.txt">Improve this doc</a></span>
+<h4><code>hb_AIns()</code></h4>
+<div class="d-ol">Inserts a value at an array subscript position and optionally increases the length of array.</div>
+<div class="d-d">Syntax</div>
+<div class="d-it d-sy">
+<code>hb_AIns( &lt;aArray&gt;, [&lt;nPos&gt;], [&lt;xValue&gt;], [&lt;lAutoSize&gt;] ) → &lt;aArray&gt;</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div><code>aArray</code> The array name into which the value <code>xValue</code> will be inserted.</div>
+  <div><code>nPos</code> Subscript position in <code>aArray</code>. Default: 1st prosition</div>
+  <div><code>xValue</code> Value to be inserted</div>
+  <div><code>lAutoSize</code> Boolean flag to increase or not the size of <code>aArray</code>.</div>
+  <div>Default value: <code>.F.</code></div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it">A refference to array <code>aArray</code></div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>This function inserts <code>xValue</code> in the <code>nPos</code> position of the array, moving all the items one position down in the array list. If <code>lAutoSize</code> is <code>.T.</code>, a new element will be added at the end of array, making room for the previous last element, which means the length of array will be increased by 1.</div>
+  <div><p>If <code>lAutoSize</code> is <code>.F.</code> (or is not passed) the function behaves like AIns(), that is, the size of <code>aArray</code> won't change and the last item of <code>aArray</code> will be lost.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+LOCAL aArray := { &quot;Harbour&quot;, &quot;Power!&quot; }
+hb_AIns( aArray, 2,  &quot;is&quot;, .F. ) // --&gt; { &quot;Harbour&quot;, &quot;is&quot; }
+hb_AIns( aArray, 2,  &quot;is&quot;, .T. ) // --&gt; { &quot;Harbour&quot;, &quot;is&quot;, &quot;Power!&quot; }
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">Ready</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">Harbour specific</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">Library is core</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">API, Array</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#ains">AIns()</a></code>, <code><a href="#aadd">AAdd()</a></code>, <code><a href="#adel">ADel()</a></code>, <code><a href="#afill">AFill()</a></code>, <code><a href="#asize">ASize()</a></code></div>
+</section>
+
+<section id="hb_ascan">
+<span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/doc/en/array.txt">Improve this doc</a></span>
+<h4><code>hb_AScan()</code></h4>
+<div class="d-ol">Scan array elements for a specified condition</div>
+<div class="d-d">Syntax</div>
+<div class="d-it d-sy">
+<code>hb_AScan( &lt;aArray&gt;, &lt;xSearch&gt;, [&lt;nStart&gt;], [&lt;nCount&gt;], [&lt;lExact&gt;] ) → &lt;nPosition&gt;</code></div>
+<div class="d-d">Argument(s)</div>
+<div class="d-it">
+  <div><code>aArray</code>    Array to be scanned.</div>
+  <div><code>xSearch</code>   Expression to search for in <code>aArray</code></div>
+  <div><code>nStart</code>    Beginning subscript position at which to start the search.</div>
+  <div>Default value: 1</div>
+  <div><code>nCount</code>    Number of elements to be scanned within <code>aArray</code>.</div>
+  <div>Default value: All elements.</div>
+  <div><code>lExact</code>    Boolean flag specifying if an &quot;Exact&quot; search will be</div>
+  <div>performed or not. Default value: <code>.F.</code></div>
+</div>
+<div class="d-d">Returns</div>
+<div class="d-it"><code>nPosition</code> A numeric value &gt; 0 indicating the array position where <code>xSearch</code> was found, or 0 if nothing found.</div>
+<div class="d-d">Description</div>
+<div class="d-it">
+  <div><p>The function scans (left to right) for <code>xSearch</code> into <code>aArray</code> and returns <code>nPosition</code> of <code>aArray</code> in which <code>xSearch</code> was found or 0 (zero) if nothing found.</div>
+  <div><p>If <code>lExact</code> is <code>.T.</code>, then an exact search will be performed. When <code>xSearch</code> is a code block, the operation of the function is slightly different. See AScan() for details.</div>
+</div>
+<div class="d-d">Example(s)</div>
+<pre class="d-ex">
+PROCEDURE Main()
+   LOCAL a := { &quot;there&quot;, &quot;here&quot; }
+   ? AScan( a, &quot;he&quot; ) // --&gt; 2
+   ? hb_AScan( a, &quot;he&quot;,,,.F.) // --&gt; 2
+   ? hb_AScan( a, &quot;he&quot;,,,.T.) // --&gt; 0
+   WAIT
+   RETURN
+</pre>
+<div class="d-d">Status</div>
+<div class="d-it">Ready</div>
+<div class="d-d">Compliance</div>
+<div class="d-it">Harbour specific</div>
+<div class="d-d">File(s)</div>
+<div class="d-it">Library is core</div>
+<div class="d-d">Tag(s)</div>
+<div class="d-it">API, Array</div>
+<div class="d-d">See also</div>
+<div class="d-it"><code><a href="#ascan">AScan()</a></code>, <code><a href="#aeval">AEval()</a></code></div>
 </section>
 
 <section id="hbclass">
@@ -17524,6 +17670,6 @@ oTb:SeyKey( K_F10, {| otb, nkey | ShowListByname( otb ) }
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-31 11:13 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/4757499">4757499</a></div>
+<div>Generated by hbdoc on 2016-10-31 11:54 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/3c9de7d">3c9de7d</a></div>
 </footer>
