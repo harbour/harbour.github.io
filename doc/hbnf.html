@@ -315,7 +315,7 @@ ft_AAddition( aList1, aList2, .F. , .F. )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>This function is used to get a numeric average of selected or all elements of an array.</div>
-  <div><p>This routine requires ft_ASum().</div>
+  <div><p>This routine requires <code><a href="#ft_asum">ft_ASum()</a></code>.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -530,7 +530,7 @@ ft_ArEdit( &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;Arr
   <div>[ <code>bGetFunc</code> ] is get editing function for handling individual elements</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">Value of element positioned on when exit ft_ArEdit() The type of this value depends on what is displayed.</div>
+<div class="d-it">Value of element positioned on when exit <code><a href="#ft_aredit">ft_ArEdit()</a></code> The type of this value depends on what is displayed.</div>
 <div class="d-d">Description</div>
 <div class="d-it">This function allows you to position yourself in an array, add and delete rows with the <code>F7</code> and <code>F8</code> keys, and pass a UDF with information to edit the individual gets.</div>
 <div class="d-d">Example(s)</div>
@@ -623,7 +623,7 @@ ft_ArEdit( 3, 5, 18, 75, ar, @nElem, aHeadings, aBlocks, bGetFunc )
 <div class="d-it">Return an array variable.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_RestArr() restores an array which was saved to a disc file using ft_SaveArr().</div>
+  <div><p><code><a href="#ft_restarr">ft_RestArr()</a></code> restores an array which was saved to a disc file using <code><a href="#ft_savearr">ft_SaveArr()</a></code>.</div>
   <div><p>[1992-10-01 Librarian note:</div>
   <div><p>This function does not appear to work with multi-dimensional arrays.  If you'd care to modify it to support this feature, please do and send it to Glenn Scott 71620,1521.]</div>
 </div>
@@ -668,7 +668,7 @@ ENDIF
 <div class="d-it"><code>.F.</code> if there was a DOS file error or the array contained code blocks, otherwise returns <code>.T.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_SaveArr() saves any Clipper array, except those containing compiled code blocks, to a disc file.  The array can be restored from the disc file using ft_RestArr().</div>
+  <div><p><code><a href="#ft_savearr">ft_SaveArr()</a></code> saves any Clipper array, except those containing compiled code blocks, to a disc file.  The array can be restored from the disc file using <code><a href="#ft_restarr">ft_RestArr()</a></code>.</div>
   <div><p>[1992-10-01 Librarian note:</div>
   <div><p>This function does not appear to work with multi-dimensional arrays.  If you'd care to modify it to support this feature, please do and send it to Glenn Scott 71620,1521.]</div>
 </div>
@@ -825,7 +825,7 @@ ENDIF
 <div class="d-d">Returns</div>
 <div class="d-it">The inverse of <code>exp</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">This function is a replacement for CA-Cl*pper's Descend() function, which is known to produce memory corruption occassionally.</div>
+<div class="d-it">This function is a replacement for CA-Cl*pper's <code><a href="harbour.html#descend">Descend()</a></code> function, which is known to produce memory corruption occassionally.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? ft_Descend( 1 )      // Returns -1
@@ -902,7 +902,7 @@ SET DEVICE TO PRINTER    // get ready to print
 <div class="d-d">Returns</div>
 <div class="d-it">A decimal number.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Converts a hexadecimal number to a BASE 10 decimal number. Useful for using ft_int86().</div>
+<div class="d-it">Converts a hexadecimal number to a BASE 10 decimal number. Useful for using <code>ft_int86()</code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ft_int86( ft_Hex2Dex( &quot;21&quot; ), aRegs )
@@ -950,7 +950,7 @@ ft_int86( ft_Hex2Dex( &quot;21&quot; ), aRegs )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Translates numeric input to a text string.</div>
-  <div><p>ft_NToW() is intended to be used with integers only.  Since I don't know what your application will be, I can't assume the type of fraction you want returned (ninety nine cents, 99/100, .99, etc). If you want the fraction in words, just pass it as an integer.</div>
+  <div><p><code><a href="#ft_ntow">ft_NToW()</a></code> is intended to be used with integers only.  Since I don't know what your application will be, I can't assume the type of fraction you want returned (ninety nine cents, 99/100, .99, etc). If you want the fraction in words, just pass it as an integer.</div>
   <div><p>Do not pass a negative number!  Handle negative numbers any way you need to in your code.  (ie: CR, DB, Negative, Minus, etc.)</div>
   <div><p>Also, numeric 0 is returned as a null string.  You will need to make a decision how to output it (zero dollars, no dollars, etc).</div>
 </div>
@@ -989,7 +989,7 @@ string := iif( x &lt; 0, &quot;Credit of &quot;, &quot;Debit of &quot; )
 <div class="d-d">Returns</div>
 <div class="d-it">cCompressed  - Compressed string, 50% the size of nSize</div>
 <div class="d-d">Description</div>
-<div class="d-it">The ft_Sqzn() function allows a numeric value to be compressed when stored in the database.  The compression is 50% the storage space of the original number.  The companion function, ft_Unsqzn() returns the original number from the compressed string.</div>
+<div class="d-it">The <code><a href="#ft_sqzn">ft_Sqzn()</a></code> function allows a numeric value to be compressed when stored in the database.  The compression is 50% the storage space of the original number.  The companion function, <code><a href="#ft_unsqzn">ft_Unsqzn()</a></code> returns the original number from the compressed string.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 TRANS-&gt;cust_id := ft_Sqzn( mcust_id, 8 )
@@ -1013,7 +1013,7 @@ TRANS-&gt;amount  := ft_Sqzn( mamount, 12, 2 )
 <div class="d-d">Returns</div>
 <div class="d-it">A Clipper date type.</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function allows the programmer to hard code a date into the program without knowing what the current date type is.  This function is the converse of the Clipper DToS() function.</div>
+<div class="d-it">This function allows the programmer to hard code a date into the program without knowing what the current date type is.  This function is the converse of the Clipper <code><a href="harbour.html#dtos">DToS()</a></code> function.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? ft_SToD( &quot;19901127&quot; )
@@ -1025,13 +1025,13 @@ TRANS-&gt;amount  := ft_Sqzn( mamount, 12, 2 )
 <section id="ft_unsqzn">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/sqzn.txt">Improve this doc</a></span>
 <h4><code>ft_Unsqzn()</code></h4>
-<div class="d-ol">Uncompress a numeric compressed by ft_Sqzn()</div>
+<div class="d-ol">Uncompress a numeric compressed by <code><a href="#ft_sqzn">ft_Sqzn()</a></code></div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>ft_Unsqzn( &lt;cCompressed&gt;, &lt;nSize&gt; [, &lt;nDecimals&gt; ] ) → nValue</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>cCompressed</code>  - Compressed string, obtained from ft_Sqzn()</div>
+  <div><code>cCompressed</code>  - Compressed string, obtained from <code><a href="#ft_sqzn">ft_Sqzn()</a></code></div>
   <div><code>nSize</code>        - Size of numeric field</div>
   <div><code>nDecimals</code>    - Optional number of decimal places</div>
 </div>
@@ -1039,8 +1039,8 @@ TRANS-&gt;amount  := ft_Sqzn( mamount, 12, 2 )
 <div class="d-it">nValue       - Uncompressed numeric value</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>The ft_Unsqzn() function returns the numeric value from the compressed string.  The compression is 50% the storage space of the original number.  The original number must have been compressed using the ft_Sqzn() function.</div>
-  <div><p>This function, along with ft_Sqzn() can be used to reduce disk storage requirements for numeric fields in a database file.</div>
+  <div><p>The <code><a href="#ft_unsqzn">ft_Unsqzn()</a></code> function returns the numeric value from the compressed string.  The compression is 50% the storage space of the original number.  The original number must have been compressed using the <code><a href="#ft_sqzn">ft_Sqzn()</a></code> function.</div>
+  <div><p>This function, along with <code><a href="#ft_sqzn">ft_Sqzn()</a></code> can be used to reduce disk storage requirements for numeric fields in a database file.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -1073,7 +1073,7 @@ ft_XToY( &lt;xValueToConvert&gt;, &lt;cTypeToConvertTo&gt; ;
 <div class="d-d">Returns</div>
 <div class="d-it">The original value converted to the new type.</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function converts a value of character, date, numeric, logical, array or code block type to any of the other type.  While it is guaranteed to return a value of the correct type, that value may not be meaningful (i.e., converting from a code block returns an Empty() value of the desired type).</div>
+<div class="d-it">This function converts a value of character, date, numeric, logical, array or code block type to any of the other type.  While it is guaranteed to return a value of the correct type, that value may not be meaningful (i.e., converting from a code block returns an <code><a href="harbour.html#empty">Empty()</a></code> value of the desired type).</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 nNumericValue := ft_XToY( cInputValue, &quot;N&quot; )
@@ -1092,7 +1092,7 @@ lLogicalValue := ft_XToY( nInputValue, &quot;L&quot; )
 <code>ft_AcctAdj( [ &lt;dGivenDate&gt; ], [ &lt;lIsEnd&gt; ] ) → dDate</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>dGivenDate</code> is any valid date in any valid format. Defaults to Date() if not supplied.</div>
+  <div><code>dGivenDate</code> is any valid date in any valid format. Defaults to <code><a href="harbour.html#date">Date()</a></code> if not supplied.</div>
   <div><code>lIsEnd</code> is a logical variable. <code>.F.</code> = adjust for beginning of period mode, <code>.T.</code> = adjust for end of period mode.  Defaults to beginning of period mode.</div>
 </div>
 <div class="d-d">Returns</div>
@@ -1156,7 +1156,7 @@ End of period mode (lIsEnd == .T.)
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_AcctMonth() creates an array containing data about the accounting month containing the given date.</div>
+  <div><p><code><a href="#ft_acctmonth">ft_AcctMonth()</a></code> creates an array containing data about the accounting month containing the given date.</div>
   <div><p>An accounting period has the following characteristics:</div>
   <div><p>If the first week of the period contains 4 or more 'work' days, it is included in the period; otherwise, the first week was included in the prior period.</div>
   <div><p>If the last week of the period contains 4 or more 'work' days it is included in the period; otherwise, the last week is included in the next period.  This results in 13 week 'quarters' and 4 or 5 week 'months'.  Every 5 or 6 years, a 'quarter' will contain 14 weeks and the year will contain 53 weeks.</div>
@@ -1200,7 +1200,7 @@ aDateInfo := ft_AcctMonth( hb_SToD( &quot;19900915&quot; ), 5 )
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_AcctQtr() creates an array containing data about the accounting quarter containing the given date.</div>
+  <div><p><code><a href="#ft_acctqtr">ft_AcctQtr()</a></code> creates an array containing data about the accounting quarter containing the given date.</div>
   <div><p>An accounting period has the following characteristics:</div>
   <div><p>If the first week of the period contains 4 or more 'work' days, it is included in the period; otherwise, the first week was included in the prior period.</div>
   <div><p>If the last week of the period contains 4 or more 'work' days it is included in the period; otherwise, the last week is included in the next period.  This results in 13 week 'quarters' and 4 or 5 week 'months'.  Every 5 or 6 years, a 'quarter' will contain 14 weeks and the year will contain 53 weeks.</div>
@@ -1244,7 +1244,7 @@ aDateInfo := ft_AcctQtr( hb_SToD( &quot;19900915&quot; ), 2 )
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_AcctWeek() returns an array containing data about the accounting week containing the given date.</div>
+  <div><p><code><a href="#ft_acctweek">ft_AcctWeek()</a></code> returns an array containing data about the accounting week containing the given date.</div>
   <div><p>An accounting period has the following characteristics:</div>
   <div><p>If the first week of the period contains 4 or more 'work' days, it is included in the period; otherwise, the first week was included in the prior period.</div>
   <div><p>If the last week of the period contains 4 or more 'work' days it is included in the period; otherwise, the last week is included in the next period.  This results in 13 week 'quarters' and 4 or 5 week 'months'.  Every 5 or 6 years, a 'quarter' will contain 14 weeks and the year will contain 53 weeks.</div>
@@ -1285,7 +1285,7 @@ aDateInfo := ft_AcctWeek( hb_SToD( &quot;19900915&quot; ), 25 )
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_AcctYear() creates an array containing data about the accounting year containing the given date.</div>
+  <div><p><code><a href="#ft_acctyear">ft_AcctYear()</a></code> creates an array containing data about the accounting year containing the given date.</div>
   <div><p>An accounting period has the following characteristics:</div>
   <div><p>If the first week of the period contains 4 or more 'work' days, it is included in the period; otherwise, the first week was included in the prior period.</div>
   <div><p>If the last week of the period contains 4 or more 'work' days it is included in the period; otherwise, the last week is included in the next period.  This results in 13 week 'quarters' and 4 or 5 week 'months'.  Every 5 or 6 years, a 'quarter' will contain 14 weeks and the year will contain 53 weeks.</div>
@@ -1323,7 +1323,7 @@ aDateInfo := ft_AcctYear( hb_SToD( &quot;19900915&quot; ) )
   <div><p>Let's say you are given the problem:</div>
   <div><p>&quot;All invoices are due 10 working days from the date they are printed.  Please display the due date on the invoice.&quot;</div>
   <div><p>When is the due date?  Assuming you are printing the invoices today, your answer is:</div>
-  <div><p>dDueDate := Date() + ft_addWkDay( Date(), 10 )</div>
+  <div><p>dDueDate := <code><a href="harbour.html#date">Date()</a></code> + ft_addWkDay( <code><a href="harbour.html#date">Date()</a></code>, 10 )</div>
   <div><p>A work day is defined as Monday through Friday.  Unfortunately this routine does <i>not</i> account for holidays.</div>
   <div><p>This documentation was written by Glenn Scott so if it's wrong, blame him.</div>
 </div>
@@ -1360,9 +1360,9 @@ ft_Calendar( [ &lt;nRow&gt; ], [ &lt;nCol&gt; ], [ &lt;cColor&gt; ], [ &lt;lShad
   <div><code>cColor</code> is an optional color string for displayed messages,</div>
   <div>default is bright white text over green background.</div>
   <div><code>lShadow</code> is an optional logical variable. If true (<code>.T.</code>),</div>
-  <div>it uses ft_Shadow() to add a transparent shadow to the display, default (<code>.F.</code>).</div>
+  <div>it uses <code><a href="#ft_shadow">ft_Shadow()</a></code> to add a transparent shadow to the display, default (<code>.F.</code>).</div>
   <div><code>lShowHelp</code> is an optional logical variable. If true, uses</div>
-  <div>ft_XBox() to display  a four line help message if the F1 key is pressed, default (<code>.F.</code>).</div>
+  <div><code><a href="#ft_xbox">ft_XBox()</a></code> to display  a four line help message if the F1 key is pressed, default (<code>.F.</code>).</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">
@@ -1371,9 +1371,9 @@ ft_Calendar( [ &lt;nRow&gt; ], [ &lt;nCol&gt; ], [ &lt;cColor&gt; ], [ &lt;lShad
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_Calendar() simply displays today's date, time and julian day in a two line display with an optional box shadow. Cursor keys may be used to page through the calendar by day, week, month or year increments. Returns an 8 element array of calendar data:</div>
+  <div><p><code><a href="#ft_calendar">ft_Calendar()</a></code> simply displays today's date, time and julian day in a two line display with an optional box shadow. Cursor keys may be used to page through the calendar by day, week, month or year increments. Returns an 8 element array of calendar data:</div>
   <div><p>Element  Value [ 1 ]    Date in current date format. [ 2 ]    Numeric month number. [ 3 ]    Numeric day number. [ 4 ]    Numeric year number. [ 5 ]    Month in character format. [ 6 ]    Day of the week in character format. [ 7 ]    Numeric Julian day. [ 8 ]    Current time in time format.</div>
-  <div><p>WARNING: ft_Calendar() uses ft_Shadow() and ft_XBox()</div>
+  <div><p>WARNING: <code><a href="#ft_calendar">ft_Calendar()</a></code> uses <code><a href="#ft_shadow">ft_Shadow()</a></code> and <code><a href="#ft_xbox">ft_XBox()</a></code></div>
   <div><p>from the Nanforum Toolkit!</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -1435,7 +1435,7 @@ LOCAL aRetVal := ft_Calendar( 10, 40, &quot;W+/RB&quot;, .T., .T. )
 <code>ft_DateCnfg( [ &lt;cFYStart&gt; ], [ &lt;nDow&gt; ] ) → aDateInfo</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>cFYStart</code> is a character date string in the user's system date format, i.e., the same as the user would enter for CToD().  If this argument is NIL, the current value is unchanged.</div>
+  <div><code>cFYStart</code> is a character date string in the user's system date format, i.e., the same as the user would enter for <code><a href="harbour.html#ctod">CToD()</a></code>.  If this argument is NIL, the current value is unchanged.</div>
   <div>Note: The year portion of the date string must be present and be a valid year; however, it has no real meaning.</div>
   <div><code>nDow</code> is a number from 1 to 7 (1 = Sunday) indicating the desired start of a work week.  If this argument is NIL, the current value is unchanged.</div>
 </div>
@@ -1449,11 +1449,11 @@ LOCAL aRetVal := ft_Calendar( 10, 40, &quot;W+/RB&quot;, .T., .T. )
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_DateCnfg() is called internally by many of the date functions in the library to determine the beginning of year date and beginning of week day.</div>
-  <div><p>The default beginning of the year is January 1st and the default beginning of the week is Sunday (day 1).  Either or both of these settings may be changed by calling ft_DateCnfg() with the proper arguments.  They will retain their values for the duration of the program or until they are changed again by a subsequent call to ft_DateCnfg().</div>
-  <div><p>It is not necessary to call ft_DateCnfg() unless you need to change the defaults.</div>
-  <div><p>ft_DateCnfg() affects the following library functions:</div>
-  <div><p>ft_Week()       ft_AcctWeek()       ft_DayToBoW() ft_Month()      ft_AcctMonth()      ft_DayOfYr() ft_Qtr()        ft_AcctQtr()        ft_AcctAdj() ft_Year()       ft_AcctYear()</div>
+  <div><p><code><a href="#ft_datecnfg">ft_DateCnfg()</a></code> is called internally by many of the date functions in the library to determine the beginning of year date and beginning of week day.</div>
+  <div><p>The default beginning of the year is January 1st and the default beginning of the week is Sunday (day 1).  Either or both of these settings may be changed by calling <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code> with the proper arguments.  They will retain their values for the duration of the program or until they are changed again by a subsequent call to <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code>.</div>
+  <div><p>It is not necessary to call <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code> unless you need to change the defaults.</div>
+  <div><p><code><a href="#ft_datecnfg">ft_DateCnfg()</a></code> affects the following library functions:</div>
+  <div><p><code><a href="#ft_week">ft_Week()</a></code>       <code><a href="#ft_acctweek">ft_AcctWeek()</a></code>       <code><a href="#ft_daytobow">ft_DayToBoW()</a></code> <code><a href="#ft_month">ft_Month()</a></code>      <code><a href="#ft_acctmonth">ft_AcctMonth()</a></code>      <code><a href="#ft_dayofyr">ft_DayOfYr()</a></code> <code><a href="#ft_qtr">ft_Qtr()</a></code>        <code><a href="#ft_acctqtr">ft_AcctQtr()</a></code>        <code><a href="#ft_acctadj">ft_AcctAdj()</a></code> <code><a href="#ft_year">ft_Year()</a></code>       <code><a href="#ft_acctyear">ft_AcctYear()</a></code></div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -1512,8 +1512,8 @@ ft_DayOfYr( [ &lt;dGivenDate&gt; ], [ &lt;nDayNum&gt; ], [ &lt;lIsAcct&gt; ] )
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_DayOfYr() returns an array containing data about a day in the calendar or fiscal year containing the given date.</div>
-  <div><p>The beginning of year date defaults to January 1st but may be changed with ft_DateCnfg().</div>
+  <div><p><code><a href="#ft_dayofyr">ft_DayOfYr()</a></code> returns an array containing data about a day in the calendar or fiscal year containing the given date.</div>
+  <div><p>The beginning of year date defaults to January 1st but may be changed with <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code>.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -1550,7 +1550,7 @@ aDateInfo := ft_DayOfYr( , 90, .T. )
 <div class="d-d">Returns</div>
 <div class="d-it">A positive number of days to beginning of week, range 0 to 6.</div>
 <div class="d-d">Description</div>
-<div class="d-it">ft_DayToBoW() returns the number of days to the beginning of the week.  Normally this will be one less than the value that would be returned by the Clipper function DoW(), unless the day for the beginning of the week has been changed with ft_DateCnfg().</div>
+<div class="d-it"><code><a href="#ft_daytobow">ft_DayToBoW()</a></code> returns the number of days to the beginning of the week.  Normally this will be one less than the value that would be returned by the Clipper function <code><a href="harbour.html#dow">DoW()</a></code>, unless the day for the beginning of the week has been changed with <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 dDate := hb_SToD( &quot;19900915&quot; )
@@ -1672,8 +1672,8 @@ ft_Elapsed([ &lt;dStart&gt; ], [ &lt;dEnd&gt; ], ;
 </div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>dStart</code> is any valid date in any date format. Defaults to Date().</div>
-  <div><code>dEnd</code> is any valid date in any date format. Defaults to Date().</div>
+  <div><code>dStart</code> is any valid date in any date format. Defaults to <code><a href="harbour.html#date">Date()</a></code>.</div>
+  <div><code>dEnd</code> is any valid date in any date format. Defaults to <code><a href="harbour.html#date">Date()</a></code>.</div>
   <div><code>cTimeStart</code> is a valid Time string of the format 'hh:mm:ss' where hh is hours in 24-hour format.</div>
   <div><code>cTimeEnd</code> is a valid Time string of the format 'hh:mm:ss' where hh is hours in 24-hour format.</div>
 </div>
@@ -1681,7 +1681,7 @@ ft_Elapsed([ &lt;dStart&gt; ], [ &lt;dEnd&gt; ], ;
 <div class="d-it">A two-dimensional array containing elapsed time data.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_Elapsed() calculates the elapsed time between two Date/Time events.</div>
+  <div><p><code><a href="#ft_elapsed">ft_Elapsed()</a></code> calculates the elapsed time between two Date/Time events.</div>
   <div><p>It returns an array which contains the following data:</div>
   <div><p>aRetVal[ 1, 1 ]  Integer Days      aRetVal[ 1, 2 ] Total Days    (nn.nnnn) aRetVal[ 2, 1 ]  Integer Hours     aRetVal[ 2, 2 ] Total Hours   (nn.nnnn) aRetVal[ 3, 1 ]  Integer Minutes   aRetVal[ 3, 2 ] Total Minutes (nn.nnnn) aRetVal[ 4, 1 ]  Integer Seconds   aRetVal[ 4, 2 ] Total Seconds (nn)</div>
 </div>
@@ -1798,7 +1798,7 @@ ft_MAdd( [ &lt;dGivenDate&gt; ], [ &lt;nAddMonths&gt; ], [ &lt;lMakeEOM&gt; ] )
 <div class="d-it">A date.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_MAdd() adds or subtracts months to/from a given date.</div>
+  <div><p><code><a href="#ft_madd">ft_MAdd()</a></code> adds or subtracts months to/from a given date.</div>
   <div><p>If MakeEOM is passed and dGivenDate is the last day of a month, it will return the EOM of calculated month.  Otherwise it will return the same day as the day of the passed date.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -1947,10 +1947,10 @@ aDHM_ := ft_Min2Dhm( 16789 )
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_Month() returns an array containing data about the month containing the given date.</div>
+  <div><p><code><a href="#ft_month">ft_Month()</a></code> returns an array containing data about the month containing the given date.</div>
   <div><p>Normally the return data will be based on a year beginning on January 1st with weeks beginning on Sunday.</div>
-  <div><p>The beginning of year date and/or beginning of week day can be changed by using ft_DateCnfg(), which will affect all subsequent calls to ft_Month() until another call to ft_DateCnfg().</div>
-  <div><p>The beginning of year date and beginning of week day may be reset to January 1 and Sunday by calling ft_DateCnfg() with no parameters.</div>
+  <div><p>The beginning of year date and/or beginning of week day can be changed by using <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code>, which will affect all subsequent calls to <code><a href="#ft_month">ft_Month()</a></code> until another call to <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code>.</div>
+  <div><p>The beginning of year date and beginning of week day may be reset to January 1 and Sunday by calling <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code> with no parameters.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -1997,10 +1997,10 @@ aDateInfo := ft_Month( , 5 )
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_Qtr() returns an array containing data about the quarter containing the given date.</div>
+  <div><p><code><a href="#ft_qtr">ft_Qtr()</a></code> returns an array containing data about the quarter containing the given date.</div>
   <div><p>Normally the return data will be based on a year beginning on January 1st with weeks beginning on Sunday.</div>
-  <div><p>The beginning of year date and/or beginning of week day can be changed by using ft_DateCnfg(), which will affect all subsequent calls to ft_Qtr() until another call to ft_DateCnfg().</div>
-  <div><p>The beginning of year date and beginning of week day may be reset to January 1 and Sunday by calling ft_DateCnfg() with no parameters.</div>
+  <div><p>The beginning of year date and/or beginning of week day can be changed by using <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code>, which will affect all subsequent calls to <code><a href="#ft_qtr">ft_Qtr()</a></code> until another call to <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code>.</div>
+  <div><p>The beginning of year date and beginning of week day may be reset to January 1 and Sunday by calling <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code> with no parameters.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -2070,10 +2070,10 @@ aDateInfo := ft_Qtr( , 2 )
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_Week() returns an array containing data about the week containing the given date.</div>
+  <div><p><code><a href="#ft_week">ft_Week()</a></code> returns an array containing data about the week containing the given date.</div>
   <div><p>Normally the return data will be based on a year beginning on January 1st with weeks beginning on Sunday.</div>
-  <div><p>The beginning of year date and/or beginning of week day can be changed by using ft_DateCnfg(), which will affect all subsequent calls to ft_Week() until another call to ft_DateCnfg().</div>
-  <div><p>The beginning of year date and beginning of week day may be reset to January 1 and Sunday by calling ft_DateCnfg() with no parameters.</div>
+  <div><p>The beginning of year date and/or beginning of week day can be changed by using <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code>, which will affect all subsequent calls to <code><a href="#ft_week">ft_Week()</a></code> until another call to <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code>.</div>
+  <div><p>The beginning of year date and beginning of week day may be reset to January 1 and Sunday by calling <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code> with no parameters.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -2116,7 +2116,7 @@ aDateInfo := ft_Week( , 25 )
 <div class="d-d">Returns</div>
 <div class="d-it">The number of work days (Monday through Friday) between two dates.</div>
 <div class="d-d">Description</div>
-<div class="d-it">ft_Workdays() returns a number indicating the number of work days between two dates.  Work days are considered Monday through Friday. (The five day work week none of us Clipper programmers have.)</div>
+<div class="d-it"><code><a href="#ft_workdays">ft_Workdays()</a></code> returns a number indicating the number of work days between two dates.  Work days are considered Monday through Friday. (The five day work week none of us Clipper programmers have.)</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? ft_Workdays( hb_SToD( &quot;19910516&quot; ), hb_SToD( &quot;19910520&quot; ) ) // 3  (Th - Mo)
@@ -2184,10 +2184,10 @@ nWkNum := ft_WoY( hb_SToD( &quot;19911231&quot; ) ) // result: 53
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_Year() returns an array containing data about the year containing the given date.</div>
+  <div><p><code><a href="#ft_year">ft_Year()</a></code> returns an array containing data about the year containing the given date.</div>
   <div><p>Normally the return data will be based on a year beginning on January 1st.</div>
-  <div><p>The beginning of year date can be changed by using ft_DateCnfg(), which will affect all subsequent calls to ft_Year() until another call to ft_DateCnfg().</div>
-  <div><p>The beginning of year date may be reset to January 1 by calling ft_DateCnfg() with no parameters.</div>
+  <div><p>The beginning of year date can be changed by using <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code>, which will affect all subsequent calls to <code><a href="#ft_year">ft_Year()</a></code> until another call to <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code>.</div>
+  <div><p>The beginning of year date may be reset to January 1 by calling <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code> with no parameters.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -2275,7 +2275,7 @@ ENDIF
 <div class="d-it">A character string with the major version number first, a period (&quot;.&quot;), then the minor version number (e.g., &quot;3.30&quot;)</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_DosVer() invokes DOS interrupt 21h, service 30 in order to return the current DOS version.  It does this by setting up an array corresponding to machine registers and then calling the toolkit function ft_int86().</div>
+  <div><p><code><a href="#ft_dosver">ft_DosVer()</a></code> invokes DOS interrupt 21h, service 30 in order to return the current DOS version.  It does this by setting up an array corresponding to machine registers and then calling the toolkit function <code>ft_int86()</code>.</div>
   <div><p>It returns a character string corresponding to the DOS version, as follows:  The major version, a period (&quot;.&quot;), then the minor version.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -2300,7 +2300,7 @@ ENDIF
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Function to return the available space on the passed drive letter or the default drive if no drive is passed.</div>
-  <div><p>Uses ft_int86() through the internal function _ftDiskInfo().</div>
+  <div><p>Uses <code>ft_int86()</code> through the internal function <code>_ftDiskInfo()</code>.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -2322,7 +2322,7 @@ ENDIF
 <div class="d-d">Returns</div>
 <div class="d-it">An integer representing the maximum disk capacity in bytes.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Function utilizing ft_int86() to return Maximum Disk Size. Uses ft_int86() through the internal function _ftDiskInfo().</div>
+<div class="d-it">Function utilizing <code>ft_int86()</code> to return Maximum Disk Size. Uses <code>ft_int86()</code> through the internal function <code>_ftDiskInfo()</code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? ft_DskSize()      // Maximum capacity for default drive
@@ -2348,8 +2348,8 @@ ENDIF
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_FlopTst() is designed as a full replacement for ISDRIVE().  Where ISDRIVE() returns just <code>.T.</code> or <code>.F.</code> depending if the diskette drive is ready or not, ft_FlopTst() returns a numeric code designating the diskette drive's status.</div>
-  <div><p>ft_FlopTst() is particularly useful in backup and restore programs that need to test the floppy drive before writing/reading from a floppy disk.</div>
+  <div><p><code><a href="#ft_floptst">ft_FlopTst()</a></code> is designed as a full replacement for <code>ISDRIVE()</code>.  Where <code>ISDRIVE()</code> returns just <code>.T.</code> or <code>.F.</code> depending if the diskette drive is ready or not, <code><a href="#ft_floptst">ft_FlopTst()</a></code> returns a numeric code designating the diskette drive's status.</div>
+  <div><p><code><a href="#ft_floptst">ft_FlopTst()</a></code> is particularly useful in backup and restore programs that need to test the floppy drive before writing/reading from a floppy disk.</div>
   <div><p>No testing has been performed on systems with more than 2 floppy drives.  If the third drive is &quot;C&quot; and the fourth &quot;D&quot; then there should be no problems.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -2421,13 +2421,13 @@ ENDCASE
 <div class="d-it">
   <div><p>It is occasionally useful to be able to call interrupts directly from Clipper, without having to write a separate routine in C or ASM.  This function allows you that capability.</div>
   <div><p>Given Clipper's high-level orientation, this function is necessarily somewhat messy to use.  First, declare an array of ten elements to hold the eight values for the CPU registers and two string parameters. Then initialize the array elements with the values that you want the CPU registers to contain when the interrupt is executed.  You need not initialize all the elements.  For example, if the interrupt requires you to specify values for AX, DX, and DS, you would only need to initialize elements 1, 4, and 8.</div>
-  <div><p>Once you have done the required register setup, call ft_int86(), passing the interrupt number and the register array as parameters. The function will load the CPU with your specified values, execute the interrupt, and then store the contents of the CPU registers back into your array.  This will allow you to evaluate the results of the interrupt.</div>
-  <div><p>Some interrupt services require you to pass the address of a string in a pair of registers.  This function is capable of handling these sorts of situations, but it will take a little work on your part.  If you need to pass a string that uses the DS register, store the string in element 8;  if you need to pass a string that uses the ES register, store the string in element 9.  ft_int86() will detect that you've supplied a string instead of a numeric value and will behave accordingly.</div>
-  <div><p>That takes care of obtaining the segment portion of the pointer.  To specify which register is to contain the offset, use the values REG_DS and REG_ES which are defined in the ftint86.ch file.  When one of these values is found in an array element, it alerts ft_int86() to use the offset portion of a pointer instead of a numeric value.  REG_DS tells ft_int86() to use the offset of the string in element 8, while REG_ES tells ft_int86() to use the offset of the string in element 9.</div>
-  <div><p>All the CPU registers are sixteen bits in size.  Some, however, are also split into two 8-bit registers.  This function is only capable of receiving and returning registers that are 16 bits in size.  To split a 16-bit register into two 8-bit values, you can use the pseudo-functions HighByte() and LowByte(), contained in the .ch file.</div>
-  <div><p>To alter an 8-bit number so it will appear in the high-order byte of a register when passed to the ft_int86() function, use the MakeHI() pseudo-function contained in the .ch file.</div>
-  <div><p>When run in real mode, this function is a shell for __ftint86(), which is written in assembler and does the actual work of executing the interrupt.  __ftint86() is callable from C, so feel free to incorporate it into any C routines for which it might be useful.  The source for __ftint86() can be found in the file AINT86.ASM.</div>
-  <div><p>When run in protected mode, this function is a shell for cpmiInt86(), which is written in assembler and makes a DPMI call to drop into real mode and execute the interrupt.  cpmiInt86() is also callable from C, so feel free to incorporate it into any C routines for which it might be useful.  cpmiInt86() is part of the CPMI API.  See the CPMI documentation for more information.</div>
+  <div><p>Once you have done the required register setup, call <code>ft_int86()</code>, passing the interrupt number and the register array as parameters. The function will load the CPU with your specified values, execute the interrupt, and then store the contents of the CPU registers back into your array.  This will allow you to evaluate the results of the interrupt.</div>
+  <div><p>Some interrupt services require you to pass the address of a string in a pair of registers.  This function is capable of handling these sorts of situations, but it will take a little work on your part.  If you need to pass a string that uses the DS register, store the string in element 8;  if you need to pass a string that uses the ES register, store the string in element 9.  <code>ft_int86()</code> will detect that you've supplied a string instead of a numeric value and will behave accordingly.</div>
+  <div><p>That takes care of obtaining the segment portion of the pointer.  To specify which register is to contain the offset, use the values REG_DS and REG_ES which are defined in the <code><a href="https://github.com/vszakats/harbour-core/blob/fa042c6/contrib/hbnf/ftint86.ch">ftint86.ch</a></code> file.  When one of these values is found in an array element, it alerts <code>ft_int86()</code> to use the offset portion of a pointer instead of a numeric value.  REG_DS tells <code>ft_int86()</code> to use the offset of the string in element 8, while REG_ES tells <code>ft_int86()</code> to use the offset of the string in element 9.</div>
+  <div><p>All the CPU registers are sixteen bits in size.  Some, however, are also split into two 8-bit registers.  This function is only capable of receiving and returning registers that are 16 bits in size.  To split a 16-bit register into two 8-bit values, you can use the pseudo-functions <code>HighByte()</code> and <code>LowByte()</code>, contained in the .ch file.</div>
+  <div><p>To alter an 8-bit number so it will appear in the high-order byte of a register when passed to the <code>ft_int86()</code> function, use the <code>MakeHI()</code> pseudo-function contained in the .ch file.</div>
+  <div><p>When run in real mode, this function is a shell for <code>__ftint86()</code>, which is written in assembler and does the actual work of executing the interrupt.  <code>__ftint86()</code> is callable from C, so feel free to incorporate it into any C routines for which it might be useful.  The source for <code>__ftint86()</code> can be found in the file AINT86.ASM.</div>
+  <div><p>When run in protected mode, this function is a shell for <code>cpmiInt86()</code>, which is written in assembler and makes a DPMI call to drop into real mode and execute the interrupt.  <code>cpmiInt86()</code> is also callable from C, so feel free to incorporate it into any C routines for which it might be useful.  <code>cpmiInt86()</code> is part of the CPMI API.  See the CPMI documentation for more information.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -2496,7 +2496,7 @@ ft_int86( 16, aRegs )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Some multitasking operating environments (e.g. Windows or OS/2) can function more efficiently when applications release the CPU during idle states.  This function allows you &quot;announce&quot; to the operating system that your application is idle.</div>
-  <div><p>Note that if you use this function in conjunction with ft_OnIdle(), you can cause Clipper to automatically release the CPU whenever Clipper itself detects an idle state.</div>
+  <div><p>Note that if you use this function in conjunction with <code>ft_OnIdle()</code>, you can cause Clipper to automatically release the CPU whenever Clipper itself detects an idle state.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -2533,7 +2533,7 @@ Inkey( 0 )              // Automatically reports idleness until key is pressed!
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>The Clipper IsPrinter() function is somewhat limited because it only works with LPT1.  Furthermore, it talks directly to the hardware, so if you have redirected LPT1 via the DOS MODE command, the IsPrinter() function will return erroneous results.</div>
+  <div><p>The Clipper <code><a href="harbour.html#isprinter">IsPrinter()</a></code> function is somewhat limited because it only works with LPT1.  Furthermore, it talks directly to the hardware, so if you have redirected LPT1 via the DOS MODE command, the <code><a href="harbour.html#isprinter">IsPrinter()</a></code> function will return erroneous results.</div>
   <div><p>This function offers a better alternative.  Instead of talking to the hardware, it issues a DOS call that checks to see if the device is ready or not.  That gives DOS an opportunity to deal with any redirections, and since you pass the device name as a parameter, you can test any device, not just LPT1 (note that the function defaults to PRN if you fail to pass a valid parameter).</div>
   <div><p>The function also temporarily traps the DOS critical error handler so you don't get any nasty error messages if the device isn't ready.  It restores the old critical error handler before exiting.</div>
   <div><p>Note that although this function is mainly designed for testing printers, you can also check to see if a drive is ready.  Since DOS thinks the NUL device exists on every drive, you can pass a drive letter followed by NUL as a parameter.  If DOS is able to open the NUL device, then the drive is ready, otherwise the door is open or something else is wrong.</div>
@@ -2664,7 +2664,7 @@ ENDIF
   <div><code>nValue</code> will be -1 if invalid parameters were passed.</div>
 </div>
 <div class="d-d">Description</div>
-<div class="d-it">Use this function if you have a need to examine a specific memory location.  The function will return the byte at the specified address as a numeric value.  If you need this value as a character, use the hb_BChar() function to convert it.</div>
+<div class="d-it">Use this function if you have a need to examine a specific memory location.  The function will return the byte at the specified address as a numeric value.  If you need this value as a character, use the <code><a href="harbour.html#hb_bchar">hb_BChar()</a></code> function to convert it.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? ft_Peek( 0, 0x449 )  // Get the current video mode (MS-DOS)
@@ -2693,7 +2693,7 @@ ENDIF
   <div><code>lResult</code> will be <code>.F.</code> if invalid parameters were passed.</div>
 </div>
 <div class="d-d">Description</div>
-<div class="d-it">Use this function if you have a need to change the value at a specific memory location.  The function will write the specified byte to the specified address.  The value must be passed as a numeric; if the byte you wish to use is stored as a character, use the hb_BCode() function to convert it.</div>
+<div class="d-it">Use this function if you have a need to change the value at a specific memory location.  The function will write the specified byte to the specified address.  The value must be passed as a numeric; if the byte you wish to use is stored as a character, use the <code><a href="harbour.html#hb_bcode">hb_BCode()</a></code> function to convert it.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ft_Poke( 0, 0x417, 0x40 )  // Turn CapsLock on (MS-DOS)
@@ -2715,7 +2715,7 @@ ft_Poke( 0, 0x417, 0x40 )  // Turn CapsLock on (MS-DOS)
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function is valuable if you need to reboot the PC for some reason; e.g. an installation routine that modifies CONFIG.SYS or AUTOEXEC.BAT`.</div>
+  <div><p>This function is valuable if you need to reboot the PC for some reason; e.g. an installation routine that modifies CONFIG.SYS or AUTOEXEC.BAT.</div>
   <div><p>The source code is written to adhere to Turbo Assembler's IDEAL mode. To use another assembler, you will need to rearrange the PROC and SEGMENT directives, and also the ENDP and ENDS directives (a very minor task).</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -2770,9 +2770,9 @@ ft_Reboot( WARM )
   <div>It is up to you to send in a valid date.  The year must be within the range 1980 through 2099.  If DOS thinks the date is not valid, it won't change the date.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>lResult</code> is simply the result of ft_int86(), passed back to your program.</div>
+<div class="d-it"><code>lResult</code> is simply the result of <code>ft_int86()</code>, passed back to your program.</div>
 <div class="d-d">Description</div>
-<div class="d-it">ft_SetDate() uses NANFOR.LIB's ft_int86() function to invoke the DOS Set Date service (Interrupt 33, service 43).</div>
+<div class="d-it"><code><a href="#ft_setdate">ft_SetDate()</a></code> uses NANFOR.LIB's <code>ft_int86()</code> function to invoke the DOS Set Date service (Interrupt 33, service 43).</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 // The following program takes a date from the command-line and sets
@@ -2804,9 +2804,9 @@ PROCEDURE Main( cDate )
   <div>Use 24-hour time.  It is up to you to send in a valid time.  If DOS doesn't think it is valid, it won't reset the time anyway.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>lResult</code> is simply the result of ft_int86(), passed back to your program.</div>
+<div class="d-it"><code>lResult</code> is simply the result of <code>ft_int86()</code>, passed back to your program.</div>
 <div class="d-d">Description</div>
-<div class="d-it">ft_SetTime() uses NANFOR.LIB's ft_int86() function to invoke the DOS Set Time service (Interrupt 33, service 45).</div>
+<div class="d-it"><code><a href="#ft_settime">ft_SetTime()</a></code> uses NANFOR.LIB's <code>ft_int86()</code> function to invoke the DOS Set Time service (Interrupt 33, service 45).</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 // The following program takes a time string from the command-line and sets
@@ -2837,7 +2837,7 @@ PROCEDURE Main( cTime )
 <div class="d-d">Returns</div>
 <div class="d-it">A numeric corresponding to the number of KiB memory.</div>
 <div class="d-d">Description</div>
-<div class="d-it">ft_SysMem() simply reports the amount of conventional memory installed.</div>
+<div class="d-it"><code><a href="#ft_sysmem">ft_SysMem()</a></code> simply reports the amount of conventional memory installed.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? &quot;Conventional memory:&quot;, hb_ntos( ft_SysMem() ), &quot;KiB installed&quot;
@@ -2866,7 +2866,7 @@ PROCEDURE Main( cTime )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>This function uses DOS Interrupt 21, service 5Ah (Create temporary file) to create a unique filename in a directory you specify. There will be no extension.  After the file is created, you may do any I/O you need (see the test driver in the source code).</div>
-  <div><p>This function requires ft_int86().</div>
+  <div><p>This function requires <code>ft_int86()</code>.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -2894,14 +2894,14 @@ PROCEDURE Main( cTime )
 <div class="d-it">
   <div><code>xReceiveVar</code> is the variable to receive the environment data.</div>
   <div><code>xReceiveVar</code> can be a character type variable, in which case the function will place all environment strings in the variable separated by carriage return/line feeds (Chr( 13 ) + Chr( 10 )).</div>
-  <div><code>xReceiveVar</code> can be an array type, in which case the function will place each string in an array element.  The array MUST be declared with the proper number of elements prior to passing it to the function.  This can be done by calling ft_GetE() without parameters first to get the number of strings in the environment.</div>
+  <div><code>xReceiveVar</code> can be an array type, in which case the function will place each string in an array element.  The array MUST be declared with the proper number of elements prior to passing it to the function.  This can be done by calling <code><a href="#ft_gete">ft_GetE()</a></code> without parameters first to get the number of strings in the environment.</div>
   <div>Note that the argument MUST be passed by reference. Since arrays are by nature passed by reference, the &quot;@&quot; symbol is optional when passing an array.</div>
-  <div>If no argument is passed, ft_GetE() merely returns the number of strings in the environment.</div>
+  <div>If no argument is passed, <code><a href="#ft_gete">ft_GetE()</a></code> merely returns the number of strings in the environment.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">ft_GetE() returns the total number of strings found in the current program's environment.</div>
+<div class="d-it"><code><a href="#ft_gete">ft_GetE()</a></code> returns the total number of strings found in the current program's environment.</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function stores ALL of the current program's environment variables in either a block of text lines or in an array.  It is useful for looking at the entire environment at once, or recording a snapshot of it to a file for later inspection, such as when a program error occurs.  If the value of ONE SPECIFIC variable is desired, use Clipper's built-in GetE() function.</div>
+<div class="d-it">This function stores ALL of the current program's environment variables in either a block of text lines or in an array.  It is useful for looking at the entire environment at once, or recording a snapshot of it to a file for later inspection, such as when a program error occurs.  If the value of ONE SPECIFIC variable is desired, use Clipper's built-in <code><a href="harbour.html#gete">GetE()</a></code> function.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 // Get the environment in text form and browse it:
@@ -2946,8 +2946,8 @@ ft_GetE( aEnvArray )
 <div class="d-it">
   <div><p>This function would be used in data driven application to determine whether or not a macro compiled function was linked in.</div>
   <div><p>Several functions can be passed, and nested, in <code>cString</code>.</div>
-  <div><p>Caveat: Some function calls are converted by the preprocessor into other function calls. You cannot have these types of functions in a macro compiled string as they never exist at runtime. ft_Linked() will correctly tell you that they are invalid.</div>
-  <div><p>For instance: there is no function called SORT() in any of the Nantucket Libraries, but it is a valid CLIPPER command because the preprocessor will convert it to other function calls.</div>
+  <div><p>Caveat: Some function calls are converted by the preprocessor into other function calls. You cannot have these types of functions in a macro compiled string as they never exist at runtime. <code><a href="#ft_linked">ft_Linked()</a></code> will correctly tell you that they are invalid.</div>
+  <div><p>For instance: there is no function called <code>SORT()</code> in any of the Nantucket Libraries, but it is a valid CLIPPER command because the preprocessor will convert it to other function calls.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -2997,7 +2997,7 @@ ENDIF
 <div class="d-it d-sy">
 <code>ft_RestSets( [ &lt;aOldSets&gt; ] ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">aOldSets is an array of SET settings created by ft_SaveSets()</div>
+<div class="d-it">aOldSets is an array of SET settings created by <code><a href="#ft_savesets">ft_SaveSets()</a></code></div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -3050,7 +3050,7 @@ aOldSets := ft_SaveSets()
 <div class="d-d">Returns</div>
 <div class="d-it">The state of the CENTURY setting upon entry to the routine</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function returns the state (ON/OFF, TRUE/FALSE) of the CENTURY and optionally sets it ON or OFF`.</div>
+<div class="d-it">This function returns the state (ON/OFF, TRUE/FALSE) of the CENTURY and optionally sets it ON or OFF.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? ft_SetCentury()       // Get current CENTURY Setting
@@ -3112,7 +3112,7 @@ ENDDO
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>This function effectively allows you to run tasks in the background by transparently and periodically calling a designated routine.</div>
-  <div><p>To halt the execution of the background function, call ft_OnTick() with no arguments.</div>
+  <div><p>To halt the execution of the background function, call <code><a href="#ft_ontick">ft_OnTick()</a></code> with no arguments.</div>
   <div><p>This function makes heavy use of several undocumented internal routines.  If this fact makes you uncomfortable then don't use this function, you quivering sack of cowardly slime.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -3139,7 +3139,7 @@ PROCEDURE Clock()
 <section id="ft_dfclose">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/dfile.txt">Improve this doc</a></span>
 <h4><code>ft_DFClose()</code></h4>
-<div class="d-ol">Close file displayed by ft_DispFile()</div>
+<div class="d-ol">Close file displayed by <code><a href="#ft_dispfile">ft_DispFile()</a></code></div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>ft_DFClose() → NIL</code></div>
@@ -3148,7 +3148,7 @@ PROCEDURE Clock()
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
-<div class="d-it">Closes the file opened by ft_DFSetup()</div>
+<div class="d-it">Closes the file opened by <code><a href="#ft_dfsetup">ft_DFSetup()</a></code></div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 #include &quot;inkey.ch&quot;
@@ -3173,7 +3173,7 @@ ft_DFClose()
 <section id="ft_dfsetup">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/dfile.txt">Improve this doc</a></span>
 <h4><code>ft_DFSetup()</code></h4>
-<div class="d-ol">Set up parameters for ft_DispFile()</div>
+<div class="d-ol">Set up parameters for <code><a href="#ft_dispfile">ft_DispFile()</a></code></div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <pre>
@@ -3189,7 +3189,7 @@ ft_DFSetup( &lt;cInFile&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;n
   <div><code>lBrowse</code>     - act-like-a-browse-routine flag <code>nColSkip</code>    - col increment for left/right arrows <code>nRMargin</code>    - right margin - anything to right is truncated <code>nBuffSize</code>   - size of the paging buffer</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">0 if successful, FError() code if not</div>
+<div class="d-it">0 if successful, <code><a href="harbour.html#ferror">FError()</a></code> code if not</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Note: make sure you allocate a buffer large enough to hold enough data for the number of lines that you have in the window.  Use the following formula as a guideline:</div>
@@ -3227,7 +3227,7 @@ ft_DFClose()
 <div class="d-d">Argument(s)</div>
 <div class="d-it">None</div>
 <div class="d-d">Returns</div>
-<div class="d-it">The ASCII keystroke that terminated ft_DispFile()</div>
+<div class="d-it">The ASCII keystroke that terminated <code><a href="#ft_dispfile">ft_DispFile()</a></code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>This routine displays a text file within a defined window using as little memory as possible.  The text file to display has to be present or an error value of 0 is returned (as a character.)</div>
@@ -3274,13 +3274,13 @@ ft_DFClose()
   <div>If <code>nLines</code> is omitted, one record is appended.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">lSuccess.  If FALSE, check ^bft_FError()^n for the error code.</div>
+<div class="d-it">lSuccess.  If FALSE, check ^<code>bft_FError()</code>^n for the error code.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function appends a line of text to the file in the currently selected text file workarea.  Text lines are delimited with a CRLF/LF`.  The record pointer is moved to the last appended record.</div>
-  <div><p>Multiple lines may be appended with one call to ft_FAppend().</div>
-  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF`. Each line appended with this function will be empty.</div>
-  <div><p>NOTE:  Occasionally a text file may contain a non-CRLF/LF terminated line, at the end of the file (&quot;stragglers&quot;).  This function assumes these stragglers to be the last line of the file, and begins appending the new lines after this line.  In other words, if the last line in the text file is not terminated with a CRLF/LF prior to calling ft_FAppend(), the function will terminate that last line before appending any new lines.</div>
+  <div><p>This function appends a line of text to the file in the currently selected text file workarea.  Text lines are delimited with a CRLF/LF.  The record pointer is moved to the last appended record.</div>
+  <div><p>Multiple lines may be appended with one call to <code><a href="#ft_fappend">ft_FAppend()</a></code>.</div>
+  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF. Each line appended with this function will be empty.</div>
+  <div><p>NOTE:  Occasionally a text file may contain a non-CRLF/LF terminated line, at the end of the file (&quot;stragglers&quot;).  This function assumes these stragglers to be the last line of the file, and begins appending the new lines after this line.  In other words, if the last line in the text file is not terminated with a CRLF/LF prior to calling <code><a href="#ft_fappend">ft_FAppend()</a></code>, the function will terminate that last line before appending any new lines.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -3312,8 +3312,8 @@ ft_FAppend()
 <div class="d-it"><code>.T.</code> if an attempt was made to skip past the first record of the currently selected text file, otherwise <code>.F.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function is similar to the Clipper Bof() function.</div>
-  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF`.</div>
+  <div><p>This function is similar to the Clipper <code><a href="harbour.html#bof">Bof()</a></code> function.</div>
+  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -3346,9 +3346,9 @@ ft_FSkip( -1 )
   <div>If ^b<code>nLines</code>^n is omitted, the current record is deleted only.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">TRUE if successful, otherwise check ^bft_FError()^n for error code.</div>
+<div class="d-it">TRUE if successful, otherwise check ^<code>bft_FError()</code>^n for error code.</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function deletes one or several lines of text from the file in the currently selected text file workarea.  Text lines are delimited with a CRLF/LF`.  The record pointer is not moved, unless the deleted lines occur at the end of the file, in which case ^bft_FRecNo()^n will equal ^bft_FLastRe()^n and ^bft_FEof()^n will be set to TRUE.</div>
+<div class="d-it">This function deletes one or several lines of text from the file in the currently selected text file workarea.  Text lines are delimited with a CRLF/LF.  The record pointer is not moved, unless the deleted lines occur at the end of the file, in which case ^<code>bft_FRecNo()</code>^n will equal ^<code>bft_FLastRe()</code>^n and ^<code>bft_FEof()</code>^n will be set to TRUE.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 // delete the next 4 lines from a file
@@ -3375,8 +3375,8 @@ ft_FDelete( 4 )
 <div class="d-it"><code>.T.</code> if an attempt was made to skip past the last record of the currently selected text file, otherwise <code>.F.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function is similar to the CLIPPER Eof() function.</div>
-  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF`.</div>
+  <div><p>This function is similar to the CLIPPER <code><a href="harbour.html#eof">Eof()</a></code> function.</div>
+  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -3437,8 +3437,8 @@ ENDIF
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>This function moves the record pointer to the last record of the file in the currently selected text file workarea.</div>
-  <div><p>If a read error occurs ^bft_FError()^n will contain the error code.</div>
-  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF`.</div>
+  <div><p>If a read error occurs ^<code>bft_FError()</code>^n will contain the error code.</div>
+  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -3470,7 +3470,7 @@ ft_FGoBot()
 <div class="d-it">
   <div><p>This function moves the record pointer to a specific record in the file in the currently selected text file workarea.  If the record number requested is greater than the number of records in the file, the record pointer will be positioned at the last record.</div>
   <div><p>Internally, the function operates differently depending on how you invoke it.  Passing a value for ^b<code>nLine</code>^n results in what is effectively a skip operation, which is fairly quick.  However if you pass 0 for ^b<code>nLine</code>^n, e.g. ft_FGoto( 0 ), the function internally goes to the top of the file, then skips down the required number of records.  Hence if your file is relatively large and the current record is a high number, you may see some delay as ft_FGoto( 0 ) skips through the file.</div>
-  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF`.</div>
+  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -3502,7 +3502,7 @@ ft_FGoto( 5 )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>This function moves the record pointer to the first record in the currently selected text file workarea.</div>
-  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF`.</div>
+  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -3536,12 +3536,12 @@ ft_FGoTop()              // go back to top
   <div>If ^b<code>nLines</code>^n is omitted, one record is inserted.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">^blSuccess^n is TRUE if the insert succeeded, FALSE if not.  If false check the return value of ^bft_FError()^n for the reason.</div>
+<div class="d-it">^blSuccess^n is TRUE if the insert succeeded, FALSE if not.  If false check the return value of ^<code>bft_FError()</code>^n for the reason.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function inserts a line of text in the file in the currently selected text file workarea.  Text lines are delimited with a CRLF/LF`.</div>
+  <div><p>This function inserts a line of text in the file in the currently selected text file workarea.  Text lines are delimited with a CRLF/LF.</div>
   <div><p>The record pointer is not moved.</div>
-  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF`. Each line inserted with this function will be empty.</div>
+  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF. Each line inserted with this function will be empty.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -3572,7 +3572,7 @@ ft_FInsert( 5 )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>This function returns the number of the last record in a text file.</div>
-  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF`.</div>
+  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -3599,10 +3599,10 @@ ft_FUse( &quot;test.txt&quot; )
 <div class="d-it">A string containing the current record in a text file.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function returns a line of text read from the file in the currently selected text file workarea.  Text lines are delimited with a CRLF/LF`.  The record pointer is not moved.</div>
-  <div><p>Currently the maximum record size is 4096 characters.  You may increase the maximum record size by changing the value of ^b#define ^bBUFFSIZE^n in the C source and recompiling, however you should consider the performance implications if you do (all read and writes use this buffer size, including ft_FSkip()'s and ft_FGoto()'s).</div>
-  <div><p>If a read error occurs ^ft_FError()^n will contain the error code.</div>
-  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF`.</div>
+  <div><p>This function returns a line of text read from the file in the currently selected text file workarea.  Text lines are delimited with a CRLF/LF.  The record pointer is not moved.</div>
+  <div><p>Currently the maximum record size is 4096 characters.  You may increase the maximum record size by changing the value of ^b#define ^bBUFFSIZE^n in the C source and recompiling, however you should consider the performance implications if you do (all read and writes use this buffer size, including <code><a href="#ft_fskip">ft_FSkip()</a></code>'s and <code><a href="#ft_fgoto">ft_FGoto()</a></code>'s).</div>
+  <div><p>If a read error occurs ^<code><a href="#ft_ferror">ft_FError()</a></code>^n will contain the error code.</div>
+  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -3635,7 +3635,7 @@ ENDDO
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>This function returns the current record number of the file open in the currently selected text file workarea.</div>
-  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF`.</div>
+  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -3710,8 +3710,8 @@ nFile2 := ft_FUse( &quot;temp.h&quot; )
 <div class="d-it">
   <div><p>This function moves the text file record pointer, similar to the CLIPPER SKIP command.</div>
   <div><p>Use the return value to determine how many records were actually skipped, for example to write a custom skipper function for TBrowse'g text files.</div>
-  <div><p>If a read error occurs ^ft_FError()^n will contain the error code.</div>
-  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF`.</div>
+  <div><p>If a read error occurs ^<code><a href="#ft_ferror">ft_FError()</a></code>^n will contain the error code.</div>
+  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -3740,17 +3740,17 @@ ENDDO
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div>^b<code>cFile</code>^n is the text file you want to open.  If not specified, the file currently open, if any, will be closed.</div>
-  <div>^b<code>nMode</code>^n is the open mode for the file.  Please refer to the discussion of file open modes in fileio.ch for a list of allowable open modes.  If not specified, the file will be opened with a mode of FO_READ + FO_SHARED.</div>
+  <div>^b<code>nMode</code>^n is the open mode for the file.  Please refer to the discussion of file open modes in <code>fileio.ch</code> for a list of allowable open modes.  If not specified, the file will be opened with a mode of FO_READ + FO_SHARED.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">
-  <div>If ^b<code>cFile</code>^n is passed and the file is opened successfully, an integer containing the text file's workarea.  If the file cannot be opened, F_ERROR (-1) will be returned.  In this case, check the return value of ^bft_FError()^n for the cause of the error.</div>
-  <div>If ft_FUse() is called without any arguments, it will close the text file in the current &quot;text area&quot; and return 0.</div>
-  <div>If a read error occurs ^ft_FError()^n will contain the error code.</div>
+  <div>If ^b<code>cFile</code>^n is passed and the file is opened successfully, an integer containing the text file's workarea.  If the file cannot be opened, F_ERROR (-1) will be returned.  In this case, check the return value of ^<code>bft_FError()</code>^n for the cause of the error.</div>
+  <div>If <code><a href="#ft_fuse">ft_FUse()</a></code> is called without any arguments, it will close the text file in the current &quot;text area&quot; and return 0.</div>
+  <div>If a read error occurs ^<code><a href="#ft_ferror">ft_FError()</a></code>^n will contain the error code.</div>
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>The ft_F*() file functions are for reading text files, that is, files where each line (record) is delimited by a CRLF/LF`.</div>
+  <div><p>The ft_F*() file functions are for reading text files, that is, files where each line (record) is delimited by a CRLF/LF.</div>
   <div><p>Each file is opened in its own &quot;workarea&quot;, similar to the concept use by dbf files.  As provided, a maximum of 10 files (in 10 workareas) can be opened (assuming there are sufficient file handles available).  That number may be increased by modifying the #define TEXT_WORKAREAS in the C source code and recompiling.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -3783,17 +3783,17 @@ ft_FUse()
 <div class="d-it">
   <div><code>cData</code> is a string of data to write to the file at the current</div>
   <div>record position.</div>
-  <div><code>lInsert</code> is a logical indicating whether the contents of the current record are to be preserved, that is, if lInsert evaluates to <code>.T.</code>, the a new record is inserted at the current position.  The current record then is pushed down to ft_FRecNo()+1.</div>
+  <div><code>lInsert</code> is a logical indicating whether the contents of the current record are to be preserved, that is, if lInsert evaluates to <code>.T.</code>, the a new record is inserted at the current position.  The current record then is pushed down to <code><a href="#ft_frecno">ft_FRecNo()</a></code>+1.</div>
   <div>If lInsert is <code>.F.</code> or omitted, the current record is replaced by cData.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">TRUE if successful, otherwise check ^ft_FError()^n for error code.</div>
+<div class="d-it">TRUE if successful, otherwise check ^<code><a href="#ft_ferror">ft_FError()</a></code>^n for error code.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function writes a line of text to the file in the currently selected text file workarea.  Text lines are delimited with a CRLF/LF`.  The record pointer is not moved.</div>
+  <div><p>This function writes a line of text to the file in the currently selected text file workarea.  Text lines are delimited with a CRLF/LF.  The record pointer is not moved.</div>
   <div><p>The contents of the current record are updated to reflect the new new line written, unless the Insert option is selected.</div>
-  <div><p>Writing a null string has the effect of clearing the current line if in overstrike mode, else inserting a new line (same as ft_FInsert()).</div>
-  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF`.</div>
+  <div><p>Writing a null string has the effect of clearing the current line if in overstrike mode, else inserting a new line (same as <code><a href="#ft_finsert">ft_FInsert()</a></code>).</div>
+  <div><p>A text file &quot;record&quot; is a line of text terminated by a CRLF/LF.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -3846,7 +3846,7 @@ ft_Pegs()
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if Alt key is pressed, <code>.F.</code> if otherwise.</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function is useful for times you need to know whether or not the Alt key is pressed, such as during a MemoEdit().</div>
+<div class="d-it">This function is useful for times you need to know whether or not the Alt key is pressed, such as during a <code><a href="harbour.html#memoedit">MemoEdit()</a></code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 IF ft_Alt()
@@ -3901,7 +3901,7 @@ ENDIF
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if Ctrl key is pressed, <code>.F.</code> if otherwise.</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function is useful for times you need to know whether or not the Ctrl key is pressed, such as during a MemoEdit().</div>
+<div class="d-it">This function is useful for times you need to know whether or not the Ctrl key is pressed, such as during a <code><a href="harbour.html#memoedit">MemoEdit()</a></code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 IF ft_Ctrl()
@@ -3919,17 +3919,17 @@ ENDIF
 <section id="ft_lastkey">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/setkeys.txt">Improve this doc</a></span>
 <h4><code>ft_LastKey()</code></h4>
-<div class="d-ol">Force LastKey() to return a programmer-defined value.</div>
+<div class="d-ol">Force <code><a href="harbour.html#lastkey">LastKey()</a></code> to return a programmer-defined value.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>ft_LastKey( &lt;nKey&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nKey</code> is the Inkey() value of the desired key.</div>
+<div class="d-it"><code>nKey</code> is the <code><a href="harbour.html#inkey">Inkey()</a></code> value of the desired key.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>It is occasionally useful to force LastKey() to return a known value. This is easily accomplishing by using the KEYBOARD command, but this has undesireable side effects (the keyboard buffer is cleared, and the keystroke is processed whether you needed it to be or not).  This function accomplishes the same task but without the side effects.  It does so by directly modifying the memory location where Clipper stores the LastKey() value.</div>
+  <div><p>It is occasionally useful to force <code><a href="harbour.html#lastkey">LastKey()</a></code> to return a known value. This is easily accomplishing by using the KEYBOARD command, but this has undesireable side effects (the keyboard buffer is cleared, and the keystroke is processed whether you needed it to be or not).  This function accomplishes the same task but without the side effects.  It does so by directly modifying the memory location where Clipper stores the <code><a href="harbour.html#lastkey">LastKey()</a></code> value.</div>
   <div><p>Some highly unorthodox programming techniques, not to mention rather strange use of Clipper internals, was necessary to make this function work.  If this makes you uncomfortable, then don't use this function, you worthless crybaby.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -3949,17 +3949,17 @@ ft_LastKey( K_F1 )
 <section id="ft_lastkey_001">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/setlastk.txt">Improve this doc</a></span>
 <h4><code>ft_LastKey()</code></h4>
-<div class="d-ol">Force LastKey() to return a programmer-defined value.</div>
+<div class="d-ol">Force <code><a href="harbour.html#lastkey">LastKey()</a></code> to return a programmer-defined value.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>ft_LastKey( &lt;nKey&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nKey</code> is the Inkey() value of the desired key.</div>
+<div class="d-it"><code>nKey</code> is the <code><a href="harbour.html#inkey">Inkey()</a></code> value of the desired key.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>It is occasionally useful to force LastKey() to return a known value. This is easily accomplishing by using the KEYBOARD command, but this has undesireable side effects (the keyboard buffer is cleared, and the keystroke is processed whether you needed it to be or not).  This function accomplishes the same task but without the side effects.  It does so by directly modifying the memory location where Clipper stores the LastKey() value.</div>
+  <div><p>It is occasionally useful to force <code><a href="harbour.html#lastkey">LastKey()</a></code> to return a known value. This is easily accomplishing by using the KEYBOARD command, but this has undesireable side effects (the keyboard buffer is cleared, and the keystroke is processed whether you needed it to be or not).  This function accomplishes the same task but without the side effects.  It does so by directly modifying the memory location where Clipper stores the <code><a href="harbour.html#lastkey">LastKey()</a></code> value.</div>
   <div><p>Some highly unorthodox programming techniques, not to mention rather strange use of Clipper internals, was necessary to make this function work.  If this makes you uncomfortable, then don't use this function, you worthless crybaby.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -4066,8 +4066,8 @@ ENDIF
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function tells the mouse driver to hide the cursor if it is in the given region. The driver hides the cursor by decrementing the cursor flag. A call to ft_MShowCrs() is required to turn the cursor back on. Calling ft_MShowCrs() also disables this function.</div>
-  <div><p>See ft_MShowCrs() for a discussion of the cursor display flag.</div>
+  <div><p>This function tells the mouse driver to hide the cursor if it is in the given region. The driver hides the cursor by decrementing the cursor flag. A call to <code><a href="#ft_mshowcrs">ft_MShowCrs()</a></code> is required to turn the cursor back on. Calling <code><a href="#ft_mshowcrs">ft_MShowCrs()</a></code> also disables this function.</div>
+  <div><p>See <code><a href="#ft_mshowcrs">ft_MShowCrs()</a></code> for a discussion of the cursor display flag.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -4094,7 +4094,7 @@ ft_MCOnOff( 10, 10, 11, 20 )
 <div class="d-d">Returns</div>
 <div class="d-it">A logical indicating the previous mouse cursor state.</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function works like most Clipper state functions.  If no value is sent to ft_MCursor() it will return the state of the mouse cursor.</div>
+<div class="d-it">This function works like most Clipper state functions.  If no value is sent to <code><a href="#ft_mcursor">ft_MCursor()</a></code> it will return the state of the mouse cursor.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 IF ! ft_MCursor()
@@ -4118,8 +4118,8 @@ ft_MDblClk( [ &lt;nClick&gt; [, &lt;nButton&gt; [, &lt;nInterval&gt; [, &lt;nRow
 </div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>nClick</code> is a numeric value.  If it is zero ft_MDblClk() will not</div>
-  <div>check for the first press but rather will simply wait the specified period for a single press. This is useful if this routine is called from one which in turn responded to a button press. If it is not present or not equal to 0, then ft_MDblClk() will wait for two presses of the specified button.</div>
+  <div><code>nClick</code> is a numeric value.  If it is zero <code><a href="#ft_mdblclk">ft_MDblClk()</a></code> will not</div>
+  <div>check for the first press but rather will simply wait the specified period for a single press. This is useful if this routine is called from one which in turn responded to a button press. If it is not present or not equal to 0, then <code><a href="#ft_mdblclk">ft_MDblClk()</a></code> will wait for two presses of the specified button.</div>
   <div><code>nButton</code> is the mouse button number</div>
   <div>0 - Left   Button 1 - Right  Button 2 - Middle Button [if applicable]</div>
   <div><code>nInterval</code> is the interval to wait for the first click if requested</div>
@@ -4229,7 +4229,7 @@ LOCAL nButton := ft_MGetCoord( @nX, @nY )
   <div>displayed</div>
 </div>
 <div class="d-d">Description</div>
-<div class="d-it">This function gets the display page for the mouse cursor. The valid values of nPage is dependent upon the display mode. See ft_SetVPg() for changing the current video page</div>
+<div class="d-it">This function gets the display page for the mouse cursor. The valid values of nPage is dependent upon the display mode. See <code><a href="#ft_setvpg">ft_SetVPg()</a></code> for changing the current video page</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 nPage := ft_MGetPage( )  // Gets the mouse cursor display page
@@ -4292,7 +4292,7 @@ LOCAL nButton := ft_MGetPos( @nX, @nY )
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function returns the current values of the mouse movement sensitivity parameters. The first two arguments control the amount of movement necessary to move the cursor a given amount. The third argument determines the threshold above which the mouse moves at twice the normal speed. For further discussion of these values see ft_MSetSens()</div>
+<div class="d-it">This function returns the current values of the mouse movement sensitivity parameters. The first two arguments control the amount of movement necessary to move the cursor a given amount. The third argument determines the threshold above which the mouse moves at twice the normal speed. For further discussion of these values see <code><a href="#ft_msetsens">ft_MSetSens()</a></code></div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ft_MGetSens( @nHoriz, @nVert, @nDouble )
@@ -4366,7 +4366,7 @@ ft_MGetSens( @nHoriz, @nVert, @nDouble )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Hides the mouse cursor. Make sure to turn the mouse cursor off when redrawing screens.  The mouse cursor dutifully saves the screen under it, so if you draw over the mouse cursor it will create a &quot;hole&quot; in your screen when you move the mouse cursor.</div>
-  <div><p>Note: A call to ft_MHideCrs() decrements a mouse driver variable which indicates whether the cursor is shown. The cursor is visible only when the variable = 0. Thus multiple calls to ft_MHideCrs() require an equal number of calls to ft_MShowCrs() before the cursor will again be visible. Once the variable is 0 calls to ft_MShowCrs() does not increment the varaible above 0.</div>
+  <div><p>Note: A call to <code><a href="#ft_mhidecrs">ft_MHideCrs()</a></code> decrements a mouse driver variable which indicates whether the cursor is shown. The cursor is visible only when the variable = 0. Thus multiple calls to <code><a href="#ft_mhidecrs">ft_MHideCrs()</a></code> require an equal number of calls to <code><a href="#ft_mshowcrs">ft_MShowCrs()</a></code> before the cursor will again be visible. Once the variable is 0 calls to <code><a href="#ft_mshowcrs">ft_MShowCrs()</a></code> does not increment the varaible above 0.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -4392,7 +4392,7 @@ ft_MShowCrs()
 <div class="d-d">Returns</div>
 <div class="d-it">An logical representing the mouse status (<code>.F.</code> == mouse not installed)</div>
 <div class="d-d">Description</div>
-<div class="d-it">Initializes the mouse drive, associated variables and returns mouse status. It checks to see if the mouse has been previously initialized and if so it does not reinitialize. The row and column limits of mouse movement is set to the maximum for the current video mode. Use ft_MShowCrs() to display the mouse cursor.</div>
+<div class="d-it">Initializes the mouse drive, associated variables and returns mouse status. It checks to see if the mouse has been previously initialized and if so it does not reinitialize. The row and column limits of mouse movement is set to the maximum for the current video mode. Use <code><a href="#ft_mshowcrs">ft_MShowCrs()</a></code> to display the mouse cursor.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 IF ! ft_MInit()
@@ -4469,8 +4469,8 @@ ft_MMickeys( @nX, @nY )
 <div class="d-it">An integer representing the mouse status (0 == mouse not installed)</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>Resets the mouse driver and returns mouse status. Use ft_MShowCrs() to display the mouse cursor. The mouse is set to allow it to cover the complete screen (as defined by MaxCol() and MaxRow()). This is necessary because at least some versions of the mouse drivers do not operate according to the documentation when confronted with a 43 or 50 line screen.</div>
-  <div><p>Normally, ft_MInit() should be used to initialize the mouse since it will not reinitialize if already done.</div>
+  <div><p>Resets the mouse driver and returns mouse status. Use <code><a href="#ft_mshowcrs">ft_MShowCrs()</a></code> to display the mouse cursor. The mouse is set to allow it to cover the complete screen (as defined by <code><a href="harbour.html#maxcol">MaxCol()</a></code> and <code><a href="harbour.html#maxrow">MaxRow()</a></code>). This is necessary because at least some versions of the mouse drivers do not operate according to the documentation when confronted with a 43 or 50 line screen.</div>
+  <div><p>Normally, <code><a href="#ft_minit">ft_MInit()</a></code> should be used to initialize the mouse since it will not reinitialize if already done.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -4523,7 +4523,7 @@ ft_MSetCoord( 10, 20 )     // position mouse cursor at row 10, col 20
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function sets the display page for the mouse cursor. The valid values of nPage is dependent upon the display mode. See ft_SetVPg() for changing the current video page</div>
+<div class="d-it">This function sets the display page for the mouse cursor. The valid values of nPage is dependent upon the display mode. See <code><a href="#ft_setvpg">ft_SetVPg()</a></code> for changing the current video page</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ft_MSetPage( 1 )  // Sets the mouse cursor to page 1
@@ -4610,7 +4610,7 @@ ft_MSetSens( 75, 75, 50 )     // a little less mouse movement necessary.
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Displays the mouse cursor. Make sure to turn the mouse cursor off when redrawing screens.  The mouse cursor dutifully saves the screen under it, so if you draw over the mouse cursor it will create a &quot;hole&quot; in your screen when you move the mouse cursor.</div>
-  <div><p>Note: A call to ft_MHideCrs() decrements a mouse driver variable which indicates whether the cursor is shown. The cursor is visible only when the variable = 0. Thus multiple calls to ft_MHideCrs() require an equal number of calls to ft_MShowCrs() before the cursor will again be visible. Once the variable is 0 calls to ft_MShowCrs() does not increment the variable above 0.</div>
+  <div><p>Note: A call to <code><a href="#ft_mhidecrs">ft_MHideCrs()</a></code> decrements a mouse driver variable which indicates whether the cursor is shown. The cursor is visible only when the variable = 0. Thus multiple calls to <code><a href="#ft_mhidecrs">ft_MHideCrs()</a></code> require an equal number of calls to <code><a href="#ft_mshowcrs">ft_MShowCrs()</a></code> before the cursor will again be visible. Once the variable is 0 calls to <code><a href="#ft_mshowcrs">ft_MShowCrs()</a></code> does not increment the variable above 0.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -4782,12 +4782,12 @@ MemVar := ft_PrtScr()  // Get the current status
 <div class="d-it d-sy">
 <code>ft_PutKey( &lt;nKeyValue&gt; ) → lResult</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nKeyValue</code> is the Inkey() value of the keystroke to be stuffed.</div>
+<div class="d-it"><code>nKeyValue</code> is the <code><a href="harbour.html#inkey">Inkey()</a></code> value of the keystroke to be stuffed.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if the keystroke was put into the keyboard buffer. <code>.F.</code> if nKeyValue was invalid or the buffer was full.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function is similar to the KEYBOARD command, with a few exceptions. First, this function does not clear the keyboard buffer before inserting the keystroke.  In addition, since it uses the Inkey() value, you can stuff any key, including function keys, into the keyboard buffer. However, this also means that unlike the KEYBOARD command, you can only stuff one keystroke at a time.</div>
+  <div><p>This function is similar to the KEYBOARD command, with a few exceptions. First, this function does not clear the keyboard buffer before inserting the keystroke.  In addition, since it uses the <code><a href="harbour.html#inkey">Inkey()</a></code> value, you can stuff any key, including function keys, into the keyboard buffer. However, this also means that unlike the KEYBOARD command, you can only stuff one keystroke at a time.</div>
   <div><p>You can easily create a User-Defined Command that makes this function even more like the KEYBOARD command.  For example,</div>
   <div><p>#xcommand KEYSTROKE <code>key</code> =&gt; ft_PutKey( <code>key</code> )</div>
   <div><p>will create a command called KEYSTROKE that could be used as a companion command to KEYBOARD.  The only difference is that it would insert a single keystroke instead of a string.</div>
@@ -4817,14 +4817,14 @@ KEYBOARD 28       //  Stuff the F1 key using a User-Defined Command
 <div class="d-it">A two-character string, corresponding to the keyboard scan code.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_ScanCode() enables you to distinguish the different scancodes of similar keys (such as Grey minus versus regular minus), thus increasing the number of keys your input routine can recognize.</div>
-  <div><p>It works like Inkey(), in that it waits for a key to be pressed. The scan code consists of two bytes, which are returned as a two-character string.</div>
-  <div><p>For example, calling ft_ScanCode() and pressing the Grey-minus key will return a two character string:</div>
+  <div><p><code><a href="#ft_scancode">ft_ScanCode()</a></code> enables you to distinguish the different scancodes of similar keys (such as Grey minus versus regular minus), thus increasing the number of keys your input routine can recognize.</div>
+  <div><p>It works like <code><a href="harbour.html#inkey">Inkey()</a></code>, in that it waits for a key to be pressed. The scan code consists of two bytes, which are returned as a two-character string.</div>
+  <div><p>For example, calling <code><a href="#ft_scancode">ft_ScanCode()</a></code> and pressing the Grey-minus key will return a two character string:</div>
   <div><p>hb_BChar( 45 ) + hb_BChar( 74 )</div>
-  <div><p>LastKey() is not updated by ft_ScanCode(), so don't try to test LastKey() to see what was pressed during an ft_ScanCode() call.  Simply assign the return value to a variable and test that (see the test driver below).</div>
+  <div><p><code><a href="harbour.html#lastkey">LastKey()</a></code> is not updated by <code><a href="#ft_scancode">ft_ScanCode()</a></code>, so don't try to test <code><a href="harbour.html#lastkey">LastKey()</a></code> to see what was pressed during an <code><a href="#ft_scancode">ft_ScanCode()</a></code> call.  Simply assign the return value to a variable and test that (see the test driver below).</div>
   <div><p>*  This was adapted from a short C routine posted by John Kaster on</div>
-  <div><p>NANFORUM.  It was written in Clipper to help demonstrate the ft_int86() function of the Nanforum Toolkit.</div>
-  <div><p>This program requires ft_int86().</div>
+  <div><p>NANFORUM.  It was written in Clipper to help demonstrate the <code>ft_int86()</code> function of the Nanforum Toolkit.</div>
+  <div><p>This program requires <code>ft_int86()</code>.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -4879,7 +4879,7 @@ ft_SetRate( 11, 1 )   // Set keyboard to PS/2 defaults (10cps,500ms delay)
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if a shift key is pressed, <code>.F.</code> if otherwise.</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function is useful for times you need to know whether or not the shift key is pressed, such as during a MemoEdit().</div>
+<div class="d-it">This function is useful for times you need to know whether or not the shift key is pressed, such as during a <code><a href="harbour.html#memoedit">MemoEdit()</a></code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 IF ft_Shift()
@@ -4897,18 +4897,18 @@ ENDIF
 <section id="ft_sinkey">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/sinkey.txt">Improve this doc</a></span>
 <h4><code>ft_SInkey()</code></h4>
-<div class="d-ol">Replacement for Inkey() that tests for SET KEY procedures</div>
+<div class="d-ol">Replacement for <code><a href="harbour.html#inkey">Inkey()</a></code> that tests for SET KEY procedures</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>ft_SInkey( [ &lt;nWaitTime&gt; ] ) → nKey</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWaitTime</code> is the number of seconds to wait.  If zero, ft_SInkey() will wait indefinitely for a keypress.  If not passed, ft_SInkey() does not wait for a keypress.  If NIL, it is treated the same as 0.</div>
+<div class="d-it"><code>nWaitTime</code> is the number of seconds to wait.  If zero, <code><a href="#ft_sinkey">ft_SInkey()</a></code> will wait indefinitely for a keypress.  If not passed, <code><a href="#ft_sinkey">ft_SInkey()</a></code> does not wait for a keypress.  If NIL, it is treated the same as 0.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">The Inkey() value of the key pressed.</div>
+<div class="d-it">The <code><a href="harbour.html#inkey">Inkey()</a></code> value of the key pressed.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_SInkey() is similar to the function provided by Nantucket in keyboard.prg, with one significant difference: you can pass NIL to Inkey(), which will be treated as a zero (i.e., wait indefinitely for keypress).  Therefore, it is necessary to differentiate between an explicit NIL and one that is a result of a formal parameter NOT being received.</div>
-  <div><p>ft_SInkey() differs from the standard Inkey() in that it will respond to any keys set with SET KEY TO or SetKey().</div>
+  <div><p><code><a href="#ft_sinkey">ft_SInkey()</a></code> is similar to the function provided by Nantucket in keyboard.prg, with one significant difference: you can pass NIL to <code><a href="harbour.html#inkey">Inkey()</a></code>, which will be treated as a zero (i.e., wait indefinitely for keypress).  Therefore, it is necessary to differentiate between an explicit NIL and one that is a result of a formal parameter NOT being received.</div>
+  <div><p><code><a href="#ft_sinkey">ft_SInkey()</a></code> differs from the standard <code><a href="harbour.html#inkey">Inkey()</a></code> in that it will respond to any keys set with SET KEY TO or <code><a href="harbour.html#setkey">SetKey()</a></code>.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -4996,8 +4996,8 @@ ft_NetPV( &lt;nInitialInvestment&gt;, &lt;nInterestRate&gt;, &lt;aCashFlow&gt; ;
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Generates a non-integer random number based on the Linear Congruential Method.</div>
-  <div><p>If you need a random number between 1 and <code>nMax</code> inclusive, Int() the result and add 1.</div>
-  <div><p>If you need a random number between 0 and <code>nMax</code> inclusive, then you should Round() the result.</div>
+  <div><p>If you need a random number between 1 and <code>nMax</code> inclusive, <code><a href="harbour.html#int">Int()</a></code> the result and add 1.</div>
+  <div><p>If you need a random number between 0 and <code>nMax</code> inclusive, then you should <code><a href="harbour.html#round">Round()</a></code> the result.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -5082,10 +5082,10 @@ ft_Round( &lt;nNumber&gt; [, &lt;nRoundToAmount&gt;           ;
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>PopAdder() gives you an adding machine inside your Clipper 5.2 application. It has the basic functions add, subtract, multiply, and divide. You may move it from one side of the screen to the other. It even displays a scrollable tape, if you want it.</div>
+  <div><p><code>PopAdder()</code> gives you an adding machine inside your Clipper 5.2 application. It has the basic functions add, subtract, multiply, and divide. You may move it from one side of the screen to the other. It even displays a scrollable tape, if you want it.</div>
   <div><p>There are a few HOT Keys while using the Adder:</div>
-  <div><p><code>D</code>ecimals - change # of decimals <code>M</code>ove     - the Adder from right display to left <code>T</code>ape     - turn the Tape Display On or Off <code>S</code>croll   - the tape display <code>DEL</code> <hr>-- 1st Clear entry</div>
-  <div><p>+-- 2nd Clear ADDER</div>
+  <div><p><code>D</code>ecimals - change # of decimals <code>M</code>ove     - the Adder from right display to left <code>T</code>ape     - turn the Tape Display On or Off <code>S</code>croll   - the tape display <code>DEL</code> <hr>— 1st Clear entry</div>
+  <div><p>+— 2nd Clear ADDER</div>
   <div><p><code>ESC</code>      - Quit <code>F10</code>      - return a <code>TOTAL</code> to the active get</div>
   <div><p>A couple of notes about the adder:</div>
   <div><p>1. It was designed to be used on an Enhanced keyboard with</div>
@@ -5096,12 +5096,12 @@ ft_Round( &lt;nNumber&gt; [, &lt;nRoundToAmount&gt;           ;
   <div><p>to the application press <code>F10</code>. The adder will place the Total in the active GET variable using oGet:varPut(). The adder will only return a Total to a numerical GET!</div>
   <div><p>4. There are many support functions that you might find</div>
   <div><p>interesting. They are part of my personal library, but are necessary to the operation of the adder. You might want to pull these out to reduce the overall size of the adder. Many are worth at least a little time studying.</div>
-  <div><p>5. To make ft_Adder() a Hot key from inside your application</div>
+  <div><p>5. To make <code><a href="#ft_adder">ft_Adder()</a></code> a Hot key from inside your application</div>
   <div><p>at the beginning of your application add the line:</div>
-  <div><p>SetKey( K_ALT_A, {|| ft_Adder() } )</div>
+  <div><p>SetKey( K_ALT_A, {|| <code><a href="#ft_adder">ft_Adder()</a></code> } )</div>
   <div><p>This will make <code>ALT-A</code> a key &quot;Hot&quot; and permit you to Pop - Up the adder from anywhere in the application.</div>
-  <div><p>6. If you use ft_SInkey(), you can even have active hotkeys</div>
-  <div><p>in an Inkey().</div>
+  <div><p>6. If you use <code><a href="#ft_sinkey">ft_SInkey()</a></code>, you can even have active hotkeys</div>
+  <div><p>in an <code><a href="harbour.html#inkey">Inkey()</a></code>.</div>
 </div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Menus/Prompts</div>
@@ -5161,7 +5161,7 @@ ft_BrwsWhl( &lt;aFields&gt;, &lt;bWhileCond&gt;, &lt;cKey&gt;,                  
   <div><code>cColorList</code> is a list of colors for the TBrowse columns. The 1st color is used as SAY/TBrowse Background and the 3rd and 4th colors are used as part of column:defColor := { 3, 4 }</div>
   <div>Thus if you pass a cColorList, you MUST pass at least 4 colors. Defaults to &quot;N/W, N/BG, B/W, B/BG, B/W, B/BG, R/W, B/R&quot; if not passed.</div>
   <div><code>cColorShad</code> is the color of the TBrowse box shadow.  Defaults to &quot;N/N&quot; if not passed.</div>
-  <div><code>nTop</code>, <code>nLeft</code>, <code>nBottom</code>, <code>nRight</code> are the coordinates of the area to display the TBrowse in.  Defaults to 2, 2, MaxRow() - 2, MaxCol() - 2 with shadowed box, i.e. full screen.</div>
+  <div><code>nTop</code>, <code>nLeft</code>, <code>nBottom</code>, <code>nRight</code> are the coordinates of the area to display the TBrowse in.  Defaults to 2, 2, <code><a href="harbour.html#maxrow">MaxRow()</a></code> - 2, <code><a href="harbour.html#maxcol">MaxCol()</a></code> - 2 with shadowed box, i.e. full screen.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">nRecno is the number of the record selected by the <code>Enter</code> key. 0 is returned if there are either no records matching the WHILE condition or an <code>Esc</code> is pressed instead of an <code>Enter</code></div>
@@ -5219,24 +5219,24 @@ ENDIF
   <div>If Setting type is &quot;M&quot; (Menu) the colors are...</div>
   <div>1.  Prompt Color 2.  Message Color 3.  HotKey Color 4.  LightBar Color 5.  LightBar HotKey Color</div>
   <div>Note: While there are many ways to code the individual</div>
-  <div>color combinations,  they should be in the same format that gets returned from SetColor(), so the defaults can be found in the color palette.</div>
+  <div>color combinations,  they should be in the same format that gets returned from <code><a href="harbour.html#setcolor">SetColor()</a></code>, so the defaults can be found in the color palette.</div>
   <div>foreground [+] / background [*] i.e. &quot;GR+/BG*, N/W*, N+/N, , W/N&quot;</div>
   <div>[ 3 ] cType  is the type of color setting</div>
   <div>Default is &quot;W&quot; (Window)</div>
-  <div>T = Title     Only 1 color element D = Desktop   Background color and character M = Menu      For ft_MenuTo() style menus W = Window    Windows with radio buttons G = Get       For use with @ SAY... B = Browse    For TBrowse() and *dbEdit() A = aChoice   Pick-lists etc...</div>
+  <div>T = Title     Only 1 color element D = Desktop   Background color and character M = Menu      For <code><a href="#ft_menuto">ft_MenuTo()</a></code> style menus W = Window    Windows with radio buttons G = Get       For use with @ SAY... B = Browse    For <code><a href="harbour.html#tbrowse">TBrowse()</a></code> and *<code><a href="harbour.html#dbedit">dbEdit()</a></code> A = aChoice   Pick-lists etc...</div>
   <div>W/G/B/A are functionally the same but will provide a more appropriate test display.</div>
   <div>[ 4 ] cFillChar  is the character (for desktop background only)</div>
   <div>Default is &quot;▒▒▒▒▒▒▒▒▒▒▒▒▒▒&quot;</div>
   <div><code>lClrMode</code>   <code>.T.</code>  use color palette</div>
   <div><code>.F.</code>  use monochrome palette</div>
-  <div>Default is the IsColor() setting</div>
+  <div>Default is the <code><a href="harbour.html#iscolor">IsColor()</a></code> setting</div>
   <div><code>cTestChr</code>  2 Byte character string for color test display</div>
   <div>Default is &quot;■■&quot;</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">An array identical to the one passed, with new selected colors</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function allows users to select their own color combinations for all the different types of screen I/O in a typical application. This facilitates an easy implementation of Ted Means' replacement of the  @..PROMPT/MENU TO found in the NanForum Toolkit.  If you are not using ft_MenuTo(), you can specify &quot;A&quot; for setting type and have a normal color string returned.</div>
+<div class="d-it">This function allows users to select their own color combinations for all the different types of screen I/O in a typical application. This facilitates an easy implementation of Ted Means' replacement of the  @..PROMPT/MENU TO found in the NanForum Toolkit.  If you are not using <code><a href="#ft_menuto">ft_MenuTo()</a></code>, you can specify &quot;A&quot; for setting type and have a normal color string returned.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 LOCAL aClrs
@@ -5283,20 +5283,20 @@ ft_DispMsg( &lt;aMessageArray&gt;, [ &lt;cKey2Check&gt; ],
   <div>The first dimension of the array contains one or more elements, each representing one line in the message box, up to the maximum number of rows on the screen.</div>
   <div>Within each line of the message individual characters or groups of characters may be delimited with braces ([]).  The braces will be stripped out and the character(s) inside those braces will be highlighted.</div>
   <div>The second dimension of the array contains a color attribute for the corresponding element in dimension one, plus one additional element for the color of the box border.  Dimension two will always contain one more element than dimension one.  If an attribute is omitted, the last color selected will be used.</div>
-  <div><code>Key2Check</code> is a character string of one or more keys to check for.  If omitted, the message is displayed and control is returned to the calling procedure.  If one character is specified, ft_DispMsg() waits for one keypress, restores the screen and returns.  If multiple characters are specified, ft_DispMsg() remains in a loop until one of the specified keys has been pressed, then restores the screen and returns.</div>
+  <div><code>Key2Check</code> is a character string of one or more keys to check for.  If omitted, the message is displayed and control is returned to the calling procedure.  If one character is specified, <code><a href="#ft_dispmsg">ft_DispMsg()</a></code> waits for one keypress, restores the screen and returns.  If multiple characters are specified, <code><a href="#ft_dispmsg">ft_DispMsg()</a></code> remains in a loop until one of the specified keys has been pressed, then restores the screen and returns.</div>
   <div><code>nTopBoxRow</code> is the upper row for the message box.  If omitted, the box is centered vertically.</div>
   <div><code>nLeftBoxColumn</code> is the leftmost column for the box.  If omitted, the box is centered horizontally.</div>
-  <div><code>cnBoxType</code> is a string of characters or a variable for the box border.  See the DispBox() function.  If omitted, a double box is drawn.</div>
-  <div><code>lShadow</code> is a logical variable.  If true (<code>.T.</code>) or omitted, it uses ft_Shadow() to add a transparent shadow to the box.  If false (<code>.F.</code>), the box is drawn without the shadow.</div>
+  <div><code>cnBoxType</code> is a string of characters or a variable for the box border.  See the <code><a href="harbour.html#dispbox">DispBox()</a></code> function.  If omitted, a double box is drawn.</div>
+  <div><code>lShadow</code> is a logical variable.  If true (<code>.T.</code>) or omitted, it uses <code><a href="#ft_shadow">ft_Shadow()</a></code> to add a transparent shadow to the box.  If false (<code>.F.</code>), the box is drawn without the shadow.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">
-  <div>If <code>Key2Check</code> is not specified, ft_DispMsg() will return false (<code>.F.</code>).</div>
-  <div>If <code>Key2Check</code> is a one-character string, ft_DispMsg() will return true (<code>.T.</code>) if the user presses that key, or false (<code>.F.</code>) if any other key is pressed.</div>
-  <div>If <code>Key2Check</code> consists of multiple characters, it will lock the user in a loop until one of those keys are pressed and return the Inkey() value of the keypress.</div>
+  <div>If <code>Key2Check</code> is not specified, <code><a href="#ft_dispmsg">ft_DispMsg()</a></code> will return false (<code>.F.</code>).</div>
+  <div>If <code>Key2Check</code> is a one-character string, <code><a href="#ft_dispmsg">ft_DispMsg()</a></code> will return true (<code>.T.</code>) if the user presses that key, or false (<code>.F.</code>) if any other key is pressed.</div>
+  <div>If <code>Key2Check</code> consists of multiple characters, it will lock the user in a loop until one of those keys are pressed and return the <code><a href="harbour.html#inkey">Inkey()</a></code> value of the keypress.</div>
 </div>
 <div class="d-d">Description</div>
-<div class="d-it">ft_DispMsg() is a multi-purpose pop-up for user messages. Multiple lines may be displayed, each with a different attribute. The box will be automatically centered on the screen, or the row and/or column can be specified by the programmer.  It also centers each line of the message within the box.</div>
+<div class="d-it"><code><a href="#ft_dispmsg">ft_DispMsg()</a></code> is a multi-purpose pop-up for user messages. Multiple lines may be displayed, each with a different attribute. The box will be automatically centered on the screen, or the row and/or column can be specified by the programmer.  It also centers each line of the message within the box.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 // The following example displays a simple two-line message
@@ -5327,7 +5327,7 @@ ft_DispMsg( { { &quot;Please Do Not Interrupt&quot; }, ;
 <section id="ft_fill">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/menu1.txt">Improve this doc</a></span>
 <h4><code>ft_Fill()</code></h4>
-<div class="d-ol">Declare menu options for ft_Menu1()</div>
+<div class="d-ol">Declare menu options for <code><a href="#ft_menu1">ft_Menu1()</a></code></div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <pre>
@@ -5337,15 +5337,15 @@ ft_Fill( &lt;aSubArrayName&gt;, &lt;cMenuSelection&gt;, &lt;bFunction&gt;,
 </div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>aSubArrayName</code> is a sub-array of <code>acOptions</code> in ft_Menu1() denoting the group in which to include the selection -- e.g., acOptions[ 1 ]</div>
+  <div><code>aSubArrayName</code> is a sub-array of <code>acOptions</code> in <code><a href="#ft_menu1">ft_Menu1()</a></code> denoting the group in which to include the selection — e.g., acOptions[ 1 ]</div>
   <div><code>cMenuSelection</code> is the character string that will appear on the menu.</div>
-  <div><code>bFunction</code> is the code block to be executed when that menu option is selected.  i.e. {|| MyFunction() } would execute the function called MyFunction().  {|| <code>.F.</code> } would exit the ft_Menu1() and return to the calling routine.  {|| <code>.T.</code> } would do nothing.</div>
+  <div><code>bFunction</code> is the code block to be executed when that menu option is selected.  i.e. {|| <code>MyFunction()</code> } would execute the function called <code>MyFunction()</code>.  {|| <code>.F.</code> } would exit the <code><a href="#ft_menu1">ft_Menu1()</a></code> and return to the calling routine.  {|| <code>.T.</code> } would do nothing.</div>
   <div><code>lSelectable</code> is a logical variable that determines whether the corresponding menu option is selectable or not.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
-<div class="d-it">ft_Fill() is a function used to set up the menu options prior to calling ft_Menu1().</div>
+<div class="d-it"><code><a href="#ft_fill">ft_Fill()</a></code> is a function used to set up the menu options prior to calling <code><a href="#ft_menu1">ft_Menu1()</a></code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ft_Fill( aOptions[ 1 ], &quot;A. Execute A Dummy Procedure&quot; , {|| fubar() }, .T. )
@@ -5395,14 +5395,14 @@ ft_Menu1( &lt;acBarNames&gt;, &lt;acOptions&gt;, &lt;acAction&gt;,
   <div><code>acOptions</code> is a multi-dimensional array with one element for each selection to appear on the pulldown menus.</div>
   <div><code>acColors</code> is an array containing the colors for the menu groups.</div>
   <div><code>nTopRow</code> is a numeric value that determines the row for the menu bar.  If omitted, it defaults to 0.</div>
-  <div><code>lShadow</code> is a logical variable.  If true (<code>.T.</code>) or omitted, it uses ft_Shadow() to add a transparent shadow to the each pulldown menu.  If false (<code>.F.</code>), the menu is drawn without the shadow.</div>
+  <div><code>lShadow</code> is a logical variable.  If true (<code>.T.</code>) or omitted, it uses <code><a href="#ft_shadow">ft_Shadow()</a></code> to add a transparent shadow to the each pulldown menu.  If false (<code>.F.</code>), the menu is drawn without the shadow.</div>
   <div>All arguments except nTopRow and lShadow are required.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_Menu1() is a function that displays a pulldown menu for each item on the menu bar and executes the corresponding function for the item selected.  When a called function returns false, ft_Menu1() returns control to the calling program.</div>
+  <div><p><code><a href="#ft_menu1">ft_Menu1()</a></code> is a function that displays a pulldown menu for each item on the menu bar and executes the corresponding function for the item selected.  When a called function returns false, <code><a href="#ft_menu1">ft_Menu1()</a></code> returns control to the calling program.</div>
   <div><p>Valid keystrokes and their corresponding actions:</div>
   <div><p>Home             -  Activates Pulldown for first item on the menu bar End              -  Activates Pulldown for last item on the menu bar Left Arrow       -  Activates next Pulldown to the left Right Arrow      -  Activates next Pulldown to the right Tab              -  Same as Right Arrow Shift-Tab        -  Same as Left Arrow Page Up          -  Top item on current Pulldown menu Page Down        -  Bottom item on current Pulldown menu Enter            -  Selects current item Alpha Character  -  Moves to closest match and selects Alt-<code>Key</code>        -  Moves to corresponding menu bar item Escape           -  Prompts for confirmation and either returns to</div>
   <div><p>the calling routine or resumes</div>
@@ -5484,15 +5484,19 @@ ft_Menu1( aBar, aOptions, aColors, 0 )
   <div><code>aMenuarray</code> is an array of menu options, messages, and action</div>
   <div>blocks.</div>
   <div>Each element in this array is a nested array with the structure:</div>
-  <div>element[ x, 1 ] = menu option element[ x, 2 ] = message to be displayed when option is highlighted element[ x, 3 ] = code block to be executed when option is selected</div>
-  <div><code>cColors</code> is a string containing colors for the prompts, in the same format as that returned by Set( _SET_COLOR ).  If not supplied, colors default to the current color setting.</div>
+  <div class="d-t d-t0">
+  <div>element[ x ][ 1 ] = menu option</div>
+  <div>element[ x ][ 2 ] = message to be displayed when option is highlighted</div>
+  <div>element[ x ][ 3 ] = code block to be executed when option is selected</div>
+</div>
+  <div> <code>cColors</code> is a string containing colors for the prompts, in the same format as that returned by <code>Set( _SET_COLOR )</code>.  If not supplied, colors default to the current color setting.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>This function greatly simplifies the process of displaying light-bar menus.  All prompts are padded out with spaces so they are the same length, a box is drawn around the prompts, the box is automatically centered on the screen, and the underlying screen is restored after a menu selection has been made.</div>
-  <div><p>Additionally, because you can tie action blocks to each menu option, you can save on a lot of DO CASE or IF`..ELSEIF code in your main program.  See the test code for a succinct demonstration.</div>
+  <div><p>Additionally, because you can tie action blocks to each menu option, you can save on a lot of <code>DO CASE</code> or <code>IF..ELSEIF</code> code in your main program.  See the test code for a succinct demonstration.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -5526,8 +5530,8 @@ MENU TO &lt;var&gt; [COLD]
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This enhanced version of MENU TO requires the inclusion of the header file ftmenuto.ch in any source file that uses it.  It may be used in place of the standard Clipper MENU TO command.  However, in the interests of functionality it is NOT 100% compatible (in particular, you should make sure that the target memvar exists before executing the menu -- the Clipper version will create a PRIVATE memvar for you if it does not already exist, but this version does not).  No whining! If compatibility is such a big deal then use the standard Clipper command.</div>
-  <div><p>Note that this command can also be called using function-style syntax.  See the entry for ft_MenuTo() for further details.</div>
+  <div><p>This enhanced version of MENU TO requires the inclusion of the header file <code><a href="https://github.com/vszakats/harbour-core/blob/fa042c6/contrib/hbnf/ftmenuto.ch">ftmenuto.ch</a></code> in any source file that uses it.  It may be used in place of the standard Clipper MENU TO command.  However, in the interests of functionality it is NOT 100% compatible (in particular, you should make sure that the target memvar exists before executing the menu — the Clipper version will create a PRIVATE memvar for you if it does not already exist, but this version does not).  No whining! If compatibility is such a big deal then use the standard Clipper command.</div>
+  <div><p>Note that this command can also be called using function-style syntax.  See the entry for <code><a href="#ft_menuto">ft_MenuTo()</a></code> for further details.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -5567,7 +5571,7 @@ ft_Pending( &lt;cMsg&gt;, [ &lt;nRow&gt; ], [ &lt;nCol&gt; ], ;
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>A good way to display information messages during the running of an application is to send them all to the SAME line on the screen where users are expected to look for them. In order to give users a chance to read the current message before the next one is displayed we may need to insert a delay after each message.</div>
-  <div><p>ft_Pending() function displays messages by keeping track of the time of the last message and providing a delay ONLY if the next pending message is issued much too soon after the current one.</div>
+  <div><p><code><a href="#ft_pending">ft_Pending()</a></code> function displays messages by keeping track of the time of the last message and providing a delay ONLY if the next pending message is issued much too soon after the current one.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -5611,7 +5615,7 @@ ft_Pending( &quot;Message three&quot; ) // Displays &quot;Message three&quot;, a
 <section id="ft_prompt">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/menutonf.txt">Improve this doc</a></span>
 <h4><code>ft_Prompt()</code></h4>
-<div class="d-ol">Define a menu item for use with ft_MenuTo()</div>
+<div class="d-ol">Define a menu item for use with <code><a href="#ft_menuto">ft_MenuTo()</a></code></div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <pre>
@@ -5639,7 +5643,7 @@ ft_Pending( &quot;Message three&quot; ) // Displays &quot;Message three&quot;, a
   <div><code>nRow</code> is the row at which the prompt is to appear.</div>
   <div><code>nCol</code> is the column at which the prompt will appear.</div>
   <div><code>cPrompt</code> is the menu item string.</div>
-  <div><code>cColor</code> is optional and is the color attribute of the prompt.  Note that two colors are required; one for the standard setting and one for the enhanced setting (i.e. the light bar color).  See the example below if this isn't clear.  If <code>cColor</code> is not specified then the current SetColor() value is used by default.</div>
+  <div><code>cColor</code> is optional and is the color attribute of the prompt.  Note that two colors are required; one for the standard setting and one for the enhanced setting (i.e. the light bar color).  See the example below if this isn't clear.  If <code>cColor</code> is not specified then the current <code><a href="harbour.html#setcolor">SetColor()</a></code> value is used by default.</div>
   <div><code>cMessage</code> is optional and is the message associated with the prompt. If not specified, then no message will be displayed.</div>
   <div><code>nMsgRow</code> is optional and is the row at which the message, if any, will appear.  If not specified, the default is the current setting of the SET MESSAGE TO command.</div>
   <div><code>nMsgCol</code> is optional and is the column at which the message, if any, will appear.  If not specified, the default is either zero or centered, depending on the current setting of the CENTER option of the SET MESSAGE TO command.</div>
@@ -5657,8 +5661,8 @@ ft_Pending( &quot;Message three&quot; ) // Displays &quot;Message three&quot;, a
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Clipper's @...PROMPT and MENU TO commands are fine as far as they go.  But many times you need more flexibility.  As you'll no doubt notice if you read the argument list, this function is almost completely flexible. You can adjust locations and colors for every part of the prompt and its associated message.  In addition, since you can control the effect of the arrow keys, you can allow both horizontal and vertical movement, or even disable certain arrow keys if you so desire.  Support for nested menus is also available, since the prompts are stored in stack-based static arrays.</div>
-  <div><p>Note that this command can also be called using function-style syntax.  See the entry for ft_Prompt() for further details.</div>
-  <div><p>This enhanced version of @...PROMPT requires the inclusion of the header file ftmenuto.ch in any source file that uses it. It is may be used in place of the standard Clipper @...PROMPT command.  However, in the interests of functionality it is NOT 100% compatible.  No whining!  If compatibility is such a big deal then use the standard Clipper commands.</div>
+  <div><p>Note that this command can also be called using function-style syntax.  See the entry for <code><a href="#ft_prompt">ft_Prompt()</a></code> for further details.</div>
+  <div><p>This enhanced version of @...PROMPT requires the inclusion of the header file <code><a href="https://github.com/vszakats/harbour-core/blob/fa042c6/contrib/hbnf/ftmenuto.ch">ftmenuto.ch</a></code> in any source file that uses it. It is may be used in place of the standard Clipper @...PROMPT command.  However, in the interests of functionality it is NOT 100% compatible.  No whining!  If compatibility is such a big deal then use the standard Clipper commands.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -5700,14 +5704,14 @@ ft_Pending( &quot;Message three&quot; ) // Displays &quot;Message three&quot;, a
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>nSeconds</code> is the number of seconds to pause</div>
-  <div><code>nInitial</code> is an optional clock value (from a call to Seconds())</div>
+  <div><code>nInitial</code> is an optional clock value (from a call to <code><a href="harbour.html#seconds">Seconds()</a></code>)</div>
   <div>from which the <code>nSeconds</code> seconds are to elapse. Useful for setting a minimum time between the start of events which could take a variable amount of time due to the execution of intervening code.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This routine will wait a specified period of time. It provides resolution based upon the execution of the Seconds() function. It does not use an input state such as Inkey(). The specified time is the minimum time sleeping and will usually be slightly longer.</div>
+  <div><p>This routine will wait a specified period of time. It provides resolution based upon the execution of the <code><a href="harbour.html#seconds">Seconds()</a></code> function. It does not use an input state such as <code><a href="harbour.html#inkey">Inkey()</a></code>. The specified time is the minimum time sleeping and will usually be slightly longer.</div>
   <div><p>The second optional argument allows one to begin timing an event prior to executing some operation. This is useful when, for example, you input a key or mouse click and wish to do something but still want to note if the user double entered (mouse or key) within a certain time which in turn may have meaning within your program's context.</div>
   <div><p>The routine correctly handles passing through midnight but will not work for more than 24 hours.</div>
 </div>
@@ -5756,7 +5760,7 @@ ft_XBox( [ &lt;cJustType&gt; ], [ &lt;cRetWait&gt; ], [ &lt;cBorType&gt; ],   ;
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_XBox() allows the programmer to display a message box on the screen without needing to calculate the dimensions of the box.  Only the upper left corner needs to be defined.  The function will calculate the lower right corner based on the number and length of strings passed.</div>
+  <div><p><code><a href="#ft_xbox">ft_XBox()</a></code> allows the programmer to display a message box on the screen without needing to calculate the dimensions of the box.  Only the upper left corner needs to be defined.  The function will calculate the lower right corner based on the number and length of strings passed.</div>
   <div><p>A maximum of eight strings can be displayed.  If a string is too long to fit on the screen it is truncated.</div>
   <div><p>The first seven parameters are optional.  The default settings are:</div>
   <div><p>Lines of text are centered. Control is returned to the calling routine immediately. A single line border is painted. The border is black on white. The text is white on black. The box is centered both vertically and horizontally.</div>
@@ -5795,7 +5799,7 @@ ft_XBox( &quot;L&quot;, &quot;W&quot;, &quot;D&quot;, &quot;GR+/R&quot;, &quot;W
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>In order to find out information about a particular node logged in to a NetWare server, you will need the logical station number, also known as a &quot;connection number.&quot;  This function will return that number.  This will be a number from 1 to 100 under NetWare 286, or from 1 to 250 under NetWare 386.  This is <strong>not</strong> the same as a physical station number.</div>
-  <div><p>This function requires ft_int86().</div>
+  <div><p>This function requires <code>ft_int86()</code>.</div>
   <div><p>This function does NOT test for the existence of the NetWare shell. The behavior is undefined if no shell is loaded.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -5814,7 +5818,7 @@ ft_XBox( &quot;L&quot;, &quot;W&quot;, &quot;D&quot;, &quot;GR+/R&quot;, &quot;W
 <div class="d-it d-sy">
 <code>ft_NWSemClose( &lt;nHandle&gt; )  → nRc</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nHandle</code> is the semaphore handle, returned from a previous call to ft_NWSemOpen().</div>
+<div class="d-it"><code>nHandle</code> is the semaphore handle, returned from a previous call to <code><a href="#ft_nwsemopen">ft_NWSemOpen()</a></code>.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
   <div>nRc, a numeric, as follows:</div>
@@ -5822,7 +5826,7 @@ ft_XBox( &quot;L&quot;, &quot;W&quot;, &quot;D&quot;, &quot;GR+/R&quot;, &quot;W
   <div>255 - invalid semaphore handle</div>
 </div>
 <div class="d-d">Description</div>
-<div class="d-it">Call ft_NWSemClose() when the app is finished.  This decrements the open count for the semaphore.  If the open count hits zero, the semaphore is deleted by NetWare.</div>
+<div class="d-it">Call <code><a href="#ft_nwsemclose">ft_NWSemClose()</a></code> when the app is finished.  This decrements the open count for the semaphore.  If the open count hits zero, the semaphore is deleted by NetWare.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? &quot;Close returns:&quot;, ft_NWSemClose( nHandle )
@@ -5842,7 +5846,7 @@ ft_XBox( &quot;L&quot;, &quot;W&quot;, &quot;D&quot;, &quot;GR+/R&quot;, &quot;W
 <code>ft_NWSemEx( &lt;nHandle&gt;, &lt;@nValue&gt;, &lt;@nOpenCnt&gt; ) → nRc</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>nHandle</code> is the semaphore handle, returned from a previous call to ft_NWSemOpen().</div>
+  <div><code>nHandle</code> is the semaphore handle, returned from a previous call to <code><a href="#ft_nwsemopen">ft_NWSemOpen()</a></code>.</div>
   <div><code>@nValue</code> will get the current semaphore value.  THIS NUMERIC ARGUMENT MUST BE PASSED BY REFERENCE!</div>
   <div><code>@nOpenCnt</code> will get the current number of workstations that have opened the semaphore.  THIS NUMERIC ARGUMENT MUST BE PASSED BY REFERENCE!</div>
 </div>
@@ -5854,7 +5858,7 @@ ft_XBox( &quot;L&quot;, &quot;W&quot;, &quot;D&quot;, &quot;GR+/R&quot;, &quot;W
   <div>In addition, nValue will be set to the semaphore's current value, and nOpenCnt will be set to the number of stations that have opened the semaphore.</div>
 </div>
 <div class="d-d">Description</div>
-<div class="d-it">See the description for ft_NWSemOpen().</div>
+<div class="d-it">See the description for <code><a href="#ft_nwsemopen">ft_NWSemOpen()</a></code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 nInitVal := 2
@@ -5894,11 +5898,11 @@ ft_NWSemEx( nHandle, @nValue, @nOpenCnt )
 <div class="d-it">lRet == <code>.T.</code> if you get the lock, <code>.T.</code> if you don't. If the lock succeeds, <code>nHandle</code> will contain the semaphore handle.  If it fails, the value of <code>nHandle</code> is undefined.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_NWSemLock() uses the Nanforum Toolkit's NetWare Semaphore API functions in order to provide a general purpose &quot;lock&quot; you can use in a NetWare environment.</div>
-  <div><p>An interesting byproduct of NetWare's semaphore functions is the &quot;open count&quot; which tells you how many connections have this semaphore open.  This is different from the semaphore's <i>value</i>, which is set when the semaphore is opened and changed with Signal() and wait().</div>
+  <div><p><code><a href="#ft_nwsemlock">ft_NWSemLock()</a></code> uses the Nanforum Toolkit's NetWare Semaphore API functions in order to provide a general purpose &quot;lock&quot; you can use in a NetWare environment.</div>
+  <div><p>An interesting byproduct of NetWare's semaphore functions is the &quot;open count&quot; which tells you how many connections have this semaphore open.  This is different from the semaphore's <i>value</i>, which is set when the semaphore is opened and changed with <code><a href="hbxpp.html#signal">Signal()</a></code> and <code>wait()</code>.</div>
   <div><p>The point of semaphores is that you don't care how many users are using the resource; you merely wait on a semaphore until the resource becomes available or you give up.  When you're done, you signal it and off you go.</div>
-  <div><p>Back to the open count.  ft_NWSemLock() opens the semaphore as named in <code>cSemaphore</code>.  After it is opened, the open count is checked.  If it is anything other than 1, that means someone else has it (or you failed in your open) so the semaphore is closed and the &quot;lock&quot; is refused.  If the value is 1, then your app is that 1 station so the &quot;lock&quot; is granted.</div>
-  <div><p>You can use a semaphore lock to control access to anything that Clipper's RLock() and FLock() can't help you with, such as text files written with the low level file i/o functions, etc.</div>
+  <div><p>Back to the open count.  <code><a href="#ft_nwsemlock">ft_NWSemLock()</a></code> opens the semaphore as named in <code>cSemaphore</code>.  After it is opened, the open count is checked.  If it is anything other than 1, that means someone else has it (or you failed in your open) so the semaphore is closed and the &quot;lock&quot; is refused.  If the value is 1, then your app is that 1 station so the &quot;lock&quot; is granted.</div>
+  <div><p>You can use a semaphore lock to control access to anything that Clipper's <code><a href="harbour.html#rlock">RLock()</a></code> and <code><a href="harbour.html#flock">FLock()</a></code> can't help you with, such as text files written with the low level file i/o functions, etc.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -5947,10 +5951,10 @@ ft_NWSemUnlock( nHandle )
   <div><p>A semaphore is simply a label that indirectly controls network activity.  There is a semaphore name, which can be up to 127 characters, and an associated value, which can range from 0 to 127.</div>
   <div><p>A semaphore can be used for many things, but is most often used to limit the number of users in an application, and to control access to a network resource.</div>
   <div><p>A semaphore essentially allows you to place locks on resources other than files.</div>
-  <div><p>An application begins the process by calling ft_NWSemOpen(). If the semaphore doesn't exist, NetWare will create it. ft_NWSemOpen() returns a handle that is used in other semaphore calls.</div>
-  <div><p>Applications use ft_NWSemWait() to wait for a semaphore to become available.  ft_NWSemWait() decrements the semaphore's value by 1.  If the value &gt; 0, then the application should be allowed to access the semaphore's resource.  If the value goes negative, then the application is placed in a queue. How long your app is in the queue is determined by how you set the timeout parameter.  If you can't get the resource in the time you allot, you're let out of the queue and the value increments by 1 again.</div>
-  <div><p>When an application finishes with a semaphore, it should call ft_NWSemSig() to increment the value, and then ft_NWSemClose() to close the semaphore.  When the semaphore's open count goes to 0, NetWare deletes it.</div>
-  <div><p>ft_NWSemEx() can be used to examine the value and open count without affecting them.</div>
+  <div><p>An application begins the process by calling <code><a href="#ft_nwsemopen">ft_NWSemOpen()</a></code>. If the semaphore doesn't exist, NetWare will create it. <code><a href="#ft_nwsemopen">ft_NWSemOpen()</a></code> returns a handle that is used in other semaphore calls.</div>
+  <div><p>Applications use <code><a href="#ft_nwsemwait">ft_NWSemWait()</a></code> to wait for a semaphore to become available.  <code><a href="#ft_nwsemwait">ft_NWSemWait()</a></code> decrements the semaphore's value by 1.  If the value &gt; 0, then the application should be allowed to access the semaphore's resource.  If the value goes negative, then the application is placed in a queue. How long your app is in the queue is determined by how you set the timeout parameter.  If you can't get the resource in the time you allot, you're let out of the queue and the value increments by 1 again.</div>
+  <div><p>When an application finishes with a semaphore, it should call <code><a href="#ft_nwsemsig">ft_NWSemSig()</a></code> to increment the value, and then <code><a href="#ft_nwsemclose">ft_NWSemClose()</a></code> to close the semaphore.  When the semaphore's open count goes to 0, NetWare deletes it.</div>
+  <div><p><code><a href="#ft_nwsemex">ft_NWSemEx()</a></code> can be used to examine the value and open count without affecting them.</div>
   <div><p>For an interesting discussion on the operating system aspects of semaphores, check &quot;Operating Systems Design and Implementation&quot; by A. Tanenbaum, page 60.  For more details on NetWare's semaphore facilities, refer to Charles Rose's &quot;Programmer's Guide to NetWare&quot;.  The &quot;Programmer's Guide&quot; will make an excellent companion guide to the source code for all NetWare functions in the Nanforum Toolkit.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -5980,7 +5984,7 @@ ENDIF
 <div class="d-it d-sy">
 <code>ft_NWSemSig( nHandle ) → nRc</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nHandle</code> is the semaphore handle, returned from a previous call to ft_NWSemOpen().</div>
+<div class="d-it"><code>nHandle</code> is the semaphore handle, returned from a previous call to <code><a href="#ft_nwsemopen">ft_NWSemOpen()</a></code>.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
   <div>nRc, a numeric, as follows</div>
@@ -5989,8 +5993,8 @@ ENDIF
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>Use ft_NWSemSig() when your app has finished with the resource locked by a semaphore.  This will increase the value (thus making a slot available to another app).</div>
-  <div><p>For more information, see the description under ft_NWSemOpen().</div>
+  <div><p>Use <code><a href="#ft_nwsemsig">ft_NWSemSig()</a></code> when your app has finished with the resource locked by a semaphore.  This will increase the value (thus making a slot available to another app).</div>
+  <div><p>For more information, see the description under <code><a href="#ft_nwsemopen">ft_NWSemOpen()</a></code>.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -6005,16 +6009,16 @@ ENDIF
 <section id="ft_nwsemunlock">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/nwsem.txt">Improve this doc</a></span>
 <h4><code>ft_NWSemUnlock()</code></h4>
-<div class="d-ol">&quot;Unlock&quot; a semaphore locked by ft_NWSemLock()</div>
+<div class="d-ol">&quot;Unlock&quot; a semaphore locked by <code><a href="#ft_nwsemlock">ft_NWSemLock()</a></code></div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>ft_NWSemUnlock( &lt;nHandle&gt; ) → lRet</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nHandle</code> is the semaphore handle returned from ft_NWSemLock()</div>
+<div class="d-it"><code>nHandle</code> is the semaphore handle returned from <code><a href="#ft_nwsemlock">ft_NWSemLock()</a></code></div>
 <div class="d-d">Returns</div>
 <div class="d-it">lRet == <code>.T.</code> if you successfully unlock the semaphore, <code>.F.</code> if you don't.  If this call fails, it could be that you're passing an invalid semaphore handle.</div>
 <div class="d-d">Description</div>
-<div class="d-it">This call unlocks a semaphore prevsiously locked via ft_NWSemLock(). It is important that you get a valid semaphore handle from ft_NWSemLock() before you use this call.  Make sure when you call ft_NWSemLock() that you pass a numeric parameter in for the handle BY REFERENCE.</div>
+<div class="d-it">This call unlocks a semaphore prevsiously locked via <code><a href="#ft_nwsemlock">ft_NWSemLock()</a></code>. It is important that you get a valid semaphore handle from <code><a href="#ft_nwsemlock">ft_NWSemLock()</a></code> before you use this call.  Make sure when you call <code><a href="#ft_nwsemlock">ft_NWSemLock()</a></code> that you pass a numeric parameter in for the handle BY REFERENCE.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 LOCAL nHandle := 0
@@ -6045,7 +6049,7 @@ ft_NWSemUnlock( nHandle )
 <code>ft_NWSemWait( &lt;nHandle&gt; [, nTimeout ] ) → nRc</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>nHandle</code> is the semaphore handle, returned from a previous call to ft_NWSemOpen().</div>
+  <div><code>nHandle</code> is the semaphore handle, returned from a previous call to <code><a href="#ft_nwsemopen">ft_NWSemOpen()</a></code>.</div>
   <div><code>nTimeOut</code> is an optional parameter telling how long you wish to wait on this semaphore.  This is a numeric indicating the number of clock ticks (approx 1/18 sec ) to wait.  A zero (the default) means &quot;don't wait.&quot;</div>
 </div>
 <div class="d-d">Returns</div>
@@ -6055,7 +6059,7 @@ ft_NWSemUnlock( nHandle )
   <div>254 - timeout failure 255 - invalid semaphore handle</div>
 </div>
 <div class="d-d">Description</div>
-<div class="d-it">See the description for the ft_NWSemOpen() function.</div>
+<div class="d-it">See the description for the <code><a href="#ft_nwsemopen">ft_NWSemOpen()</a></code> function.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ft_NWSemOpen( &quot;Semaphore Test&quot;, nInitVal, @nHandle, @nOpenCnt )
@@ -6080,14 +6084,14 @@ ENDIF
 <div class="d-it d-sy">
 <code>ft_NWUID( [ &lt;nConnection&gt; ] ) → cUid</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nConnection</code> is a connection number, or logical station number, to find a userid for.  Under NetWare 286, this number can be from 1 to 100.  Under NetWare 386, 1-250.  If not supplied, ft_NWUID() defaults to the current connection (i.e., the connection running the application).</div>
+<div class="d-it"><code>nConnection</code> is a connection number, or logical station number, to find a userid for.  Under NetWare 286, this number can be from 1 to 100.  Under NetWare 386, 1-250.  If not supplied, <code><a href="#ft_nwuid">ft_NWUID()</a></code> defaults to the current connection (i.e., the connection running the application).</div>
 <div class="d-d">Returns</div>
 <div class="d-it">A string containing the userid, or &quot;login name.&quot; The maximum length of this string, as defined by current versions of Novell NetWare, is 48 characters.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_NWUID() returns the current NetWare userid, or &quot;login name.&quot;  This is useful for implementing security or audit trail procedures within your programs.</div>
+  <div><p><code><a href="#ft_nwuid">ft_NWUID()</a></code> returns the current NetWare userid, or &quot;login name.&quot;  This is useful for implementing security or audit trail procedures within your programs.</div>
   <div><p>There is no simple way a user can &quot;fool&quot; this function into retrieving an incorrect value, provided a NetWare shell is loaded.</div>
-  <div><p>This function requires ft_int86() and ft_NWLStat()</div>
+  <div><p>This function requires <code>ft_int86()</code> and <code><a href="#ft_nwlstat">ft_NWLStat()</a></code></div>
   <div><p>This function does NOT test for the existence of the NetWare shell. The behavior is undefined if no shell is loaded. You'll usually get garbage.  This function has not been tested on NetWare 386.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -6156,7 +6160,7 @@ cTarget := &quot;This is the day that the Lord has made.&quot;
 <div class="d-it">Returns new byte, with designated bit cleared (reset). If parameters are faulty, returns NIL.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>In effect, ANDs argument byte with a byte that has all bits set except the target bit.  If bit is already clear (0), it remains clear. Note: Calls ft_IsBit() which is also in this Library.</div>
+  <div><p>In effect, ANDs argument byte with a byte that has all bits set except the target bit.  If bit is already clear (0), it remains clear. Note: Calls <code><a href="#ft_isbit">ft_IsBit()</a></code> which is also in this Library.</div>
   <div><p>This function is presented to illustrate that bit-wise operations are possible with Clipper code.  For greater speed, write .c or .asm versions and use the Clipper Extend system.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -6193,7 +6197,7 @@ cNewByte := ft_BitClr( hb_BChar( 115 ), 4 )
 <div class="d-it">Returns new byte, with designated bit set.  If parameters are faulty, returns NIL.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>In effect, ORs argument byte with a byte that has only the target bit set.  If bit is already set, it remains set. Note: Calls ft_IsBit() which is also in this Library.</div>
+  <div><p>In effect, ORs argument byte with a byte that has only the target bit set.  If bit is already set, it remains set. Note: Calls <code><a href="#ft_isbit">ft_IsBit()</a></code> which is also in this Library.</div>
   <div><p>This function is presented to illustrate that bit-wise operations are possible with Clipper code.  For greater speed, write .c or .asm versions and use the Clipper Extend system.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -6224,7 +6228,7 @@ cNewbyte := ft_BitSet( hb_BChar( 107 ), 4 )
 <div class="d-it d-sy">
 <code>ft_ByteAnd( &lt;cByte1&gt;, &lt;cByte2&gt; ) → cByte</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>cByte1</code> and <code>cByte2</code> are characters from hb_BChar( 0 ) to hb_BChar( 255 ). May be passed in hb_BChar() form, as character literals, or as expressions evaluating to character values.</div>
+<div class="d-it"><code>cByte1</code> and <code>cByte2</code> are characters from hb_BChar( 0 ) to hb_BChar( 255 ). May be passed in <code><a href="harbour.html#hb_bchar">hb_BChar()</a></code> form, as character literals, or as expressions evaluating to character values.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Returns resulting byte, as a string.  If parameters are faulty, returns NIL.</div>
 <div class="d-d">Description</div>
@@ -6256,7 +6260,7 @@ cNewbyte := ft_ByteAnd( hb_BChar( 123 ), hb_BChar( 15 ) )
 <div class="d-it d-sy">
 <code>ft_ByteNeg( &lt;cByte&gt; ) → cNewByte</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>cByte</code> is a character from hb_BChar( 0 ) to hb_BChar( 255 ). May be passed in hb_BChar() form, as character literals, or as expressions evaluating to character values.</div>
+<div class="d-it"><code>cByte</code> is a character from hb_BChar( 0 ) to hb_BChar( 255 ). May be passed in <code><a href="harbour.html#hb_bchar">hb_BChar()</a></code> form, as character literals, or as expressions evaluating to character values.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Returns resulting byte, as a string.  If parameters are faulty, returns NIL.</div>
 <div class="d-d">Description</div>
@@ -6285,7 +6289,7 @@ cNewByte := ft_ByteNot( hb_BChar( 32 ) )
 <div class="d-it d-sy">
 <code>ft_ByteNot( &lt;cByte&gt; ) → cNewByte</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>cByte</code> is a character from hb_BChar( 0 ) to hb_BChar( 255 ). May be passed in hb_BChar() form, as character literals, or as expressions evaluating to character values.</div>
+<div class="d-it"><code>cByte</code> is a character from hb_BChar( 0 ) to hb_BChar( 255 ). May be passed in <code><a href="harbour.html#hb_bchar">hb_BChar()</a></code> form, as character literals, or as expressions evaluating to character values.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Returns resulting byte, as a string.  If parameters are faulty, returns NIL.</div>
 <div class="d-d">Description</div>
@@ -6314,7 +6318,7 @@ cNewByte := ft_ByteNot( hb_BChar( 32 ) )
 <div class="d-it d-sy">
 <code>ft_ByteOr( &lt;cByte1&gt;, &lt;cByte2&gt; ) → cNewByte</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>cByte1</code> and <code>cByte2</code> are characters from hb_BChar( 0 ) to hb_BChar( 255 ). May be passed in hb_BChar() form, as character literals, or as expressions evaluating to character values.</div>
+<div class="d-it"><code>cByte1</code> and <code>cByte2</code> are characters from hb_BChar( 0 ) to hb_BChar( 255 ). May be passed in <code><a href="harbour.html#hb_bchar">hb_BChar()</a></code> form, as character literals, or as expressions evaluating to character values.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Returns resulting byte, as a string.  If parameters are faulty, returns NIL.</div>
 <div class="d-d">Description</div>
@@ -6345,7 +6349,7 @@ cNewByte := ft_ByteOr( hb_BChar( 20 ), hb_BChar( 10 ) )
 <div class="d-it d-sy">
 <code>ft_ByteXor( &lt;cByte1&gt;, &lt;cByte2&gt; ) → cNewByte</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>cByte1</code> and <code>cByte2</code> are characters from hb_BChar( 0 ) to hb_BChar( 255 ). May be passed in hb_BChar() form, as character literals, or as expressions evaluating to character values.</div>
+<div class="d-it"><code>cByte1</code> and <code>cByte2</code> are characters from hb_BChar( 0 ) to hb_BChar( 255 ). May be passed in <code><a href="harbour.html#hb_bchar">hb_BChar()</a></code> form, as character literals, or as expressions evaluating to character values.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Returns resulting byte, as a string.  If parameters are faulty, returns NIL.</div>
 <div class="d-d">Description</div>
@@ -6450,7 +6454,7 @@ ft_FindITh( &lt;cCheckFor&gt;, &lt;cCheckIn&gt;, &lt;nWhichOccurrence&gt; ;
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>Tests for status of any selected bit in the byte passed as a parameter. Byte must be presented in hb_BChar() form, as a literal constant, or as the one-byte character result of an expression.</div>
+  <div><p>Tests for status of any selected bit in the byte passed as a parameter. Byte must be presented in <code><a href="harbour.html#hb_bchar">hb_BChar()</a></code> form, as a literal constant, or as the one-byte character result of an expression.</div>
   <div><p>This function is presented to illustrate that bit-wise operations are possible with Clipper code.  For greater speed, write .c versions and use the Clipper Extend system.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -6487,7 +6491,7 @@ lBitflag := ft_IsBit( hb_BChar( 107 ), 3 )
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if the specified bit was on., <code>.F.</code> if off.</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function is useful when dealing with binary integers.  It will come in very handy if you use the ft_int86() function, because the CPU flags are returned as a series of bits.  Using this function, you can determine the state of each CPU flag.</div>
+<div class="d-it">This function is useful when dealing with binary integers.  It will come in very handy if you use the <code>ft_int86()</code> function, because the CPU flags are returned as a series of bits.  Using this function, you can determine the state of each CPU flag.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 IF ft_IsBitOn( nCPUFlags, 0 )
@@ -6518,7 +6522,7 @@ ENDIF
 <div class="d-d">Returns</div>
 <div class="d-it">A phonetically spelled character string</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function is a character function use to index and search for sound-alike or phonetic matches.  It is an alternative to the SoundEx() function, and addresses some basic pronunciation rules, by looking at surrounding letters to determine how parts of the string are pronounced.  ft_Metaph() will group sound-alikes together, and forgive shortcomings in spelling ability.</div>
+<div class="d-it">This function is a character function use to index and search for sound-alike or phonetic matches.  It is an alternative to the <code><a href="harbour.html#soundex">SoundEx()</a></code> function, and addresses some basic pronunciation rules, by looking at surrounding letters to determine how parts of the string are pronounced.  <code><a href="#ft_metaph">ft_Metaph()</a></code> will group sound-alikes together, and forgive shortcomings in spelling ability.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 USE persons
@@ -6659,9 +6663,9 @@ cSetUp := &quot;27,116,1&quot;
 <div class="d-it">A string of the same length as <code>cString</code>, only converted to proper name case (upper/lower case).</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_Proper() uses a brute-force algorithm to convert a string to propername case.  First, it capitalizes the first letter of all words starting after a blank, dash, or apostrophe.  This catches most names, including special cases such as names beginning with O' (O'Malley, O'Reilly) and hyphenated names (such as Susan Chia-Mei Lo).</div>
+  <div><p><code><a href="#ft_proper">ft_Proper()</a></code> uses a brute-force algorithm to convert a string to propername case.  First, it capitalizes the first letter of all words starting after a blank, dash, or apostrophe.  This catches most names, including special cases such as names beginning with O' (O'Malley, O'Reilly) and hyphenated names (such as Susan Chia-Mei Lo).</div>
   <div><p>Next, it does a specific adjustment for words beginning in &quot;Mc&quot; It finds the first 'Mc' and capitalizes the next character after it.  It does this for all occurrences of Mc.</div>
-  <div><p>The original ft_Proper() was written in Clipper by Glenn Scott and Mark Zechiel; it was re-written in C (and thus, optimized and enhanced) by Robert DiFalco.</div>
+  <div><p>The original <code><a href="#ft_proper">ft_Proper()</a></code> was written in Clipper by Glenn Scott and Mark Zechiel; it was re-written in C (and thus, optimized and enhanced) by Robert DiFalco.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -6809,7 +6813,7 @@ PROCEDURE Main( cMode )
 <div class="d-it d-sy">
 <code>ft_GetVCur( [&lt;nPage&gt;] ) → &lt;aCurInfo&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nPage</code> is the video page to get the cursor information for. Defaults to the current page, as returned by ft_GetVPg().</div>
+<div class="d-it"><code>nPage</code> is the video page to get the cursor information for. Defaults to the current page, as returned by <code><a href="#ft_getvpg">ft_GetVPg()</a></code>.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
   <div>A four-element array (<code>aCurInfo</code>), set up as follows:</div>
@@ -6817,7 +6821,7 @@ PROCEDURE Main( cMode )
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_GetVCur() uses ft_int86() to invoke interrupt 10h, function 3, to return the character cursor location for the specified video page.</div>
+  <div><p><code><a href="#ft_getvcur">ft_GetVCur()</a></code> uses <code>ft_int86()</code> to invoke interrupt 10h, function 3, to return the character cursor location for the specified video page.</div>
   <div><p>The top line and bottom line of cursor are set depending on the current cursor mode, and are only meaningful in alphanumeric video modes.</div>
   <div><p>For more information on graphics programming, cursors, and cursor modes, refer to Richard Wilton's <i>Programmer's Guide to PC and PS/2 Video Systems</i> (Microsoft Press).</div>
 </div>
@@ -6868,7 +6872,7 @@ nPage := ft_GetVPg()
 <div class="d-d">Returns</div>
 <div class="d-it">The number of items remaining in the internal stack.</div>
 <div class="d-d">Description</div>
-<div class="d-it">This is the complementary function to ft_PushVid().  At some time after saving the video states it will probably be necessary to restore them.  This is done by restoring the settings from the last call to ft_PushVid().  The number of items on the internal stack is then reduced by one.  Note that the use of stack logic means that items on the stack are retrieved in Last In First Out order.</div>
+<div class="d-it">This is the complementary function to <code><a href="#ft_pushvid">ft_PushVid()</a></code>.  At some time after saving the video states it will probably be necessary to restore them.  This is done by restoring the settings from the last call to <code><a href="#ft_pushvid">ft_PushVid()</a></code>.  The number of items on the internal stack is then reduced by one.  Note that the use of stack logic means that items on the stack are retrieved in Last In First Out order.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ft_PopVid()          // Restore video states
@@ -6889,9 +6893,9 @@ ft_PopVid()          // Restore video states
 <div class="d-d">Argument(s)</div>
 <div class="d-it">None</div>
 <div class="d-d">Returns</div>
-<div class="d-it">The current size of the internal stack (i.e. the number of times ft_PushVid() has been called).</div>
+<div class="d-it">The current size of the internal stack (i.e. the number of times <code><a href="#ft_pushvid">ft_PushVid()</a></code> has been called).</div>
 <div class="d-d">Description</div>
-<div class="d-it">Menus, picklists, browses, and other video-intensive items often require you to save certain video states -- screen image, cursor position, and so forth.  Constantly saving and restoring these items can get very tedious.  This function attempts to alleviate this problem.  When called, it saves the cursor position, color setting, screen image, cursor style, blink setting, scoreboard setting, snow setting, and maximum row and column to a series of static arrays.  All that is needed to restore the saved settings is a call to ft_PopVid().</div>
+<div class="d-it">Menus, picklists, browses, and other video-intensive items often require you to save certain video states — screen image, cursor position, and so forth.  Constantly saving and restoring these items can get very tedious.  This function attempts to alleviate this problem.  When called, it saves the cursor position, color setting, screen image, cursor style, blink setting, scoreboard setting, snow setting, and maximum row and column to a series of static arrays.  All that is needed to restore the saved settings is a call to <code><a href="#ft_popvid">ft_PopVid()</a></code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ft_PushVid()          // Save the current video states
@@ -6912,13 +6916,13 @@ ft_PushVid()          // Save the current video states
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>nTop</code>, <code>nLeft</code>, <code>nBottom</code>, and <code>nRight</code> define the screen region. <code>cAttributes</code> is a character string containing the attribute bytes</div>
-  <div>for the screen region.  This will most often be a string previously returned by ft_SaveAtt(), but any character string may be used (provided it is of the proper size).</div>
+  <div>for the screen region.  This will most often be a string previously returned by <code><a href="#ft_saveatt">ft_SaveAtt()</a></code>, but any character string may be used (provided it is of the proper size).</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function is similar to Clipper's RestScreen(), except that it only restores the attribute bytes.  This is useful if you want to change the screen color without affecting the text.</div>
+  <div><p>This function is similar to Clipper's <code><a href="harbour.html#restscreen">RestScreen()</a></code>, except that it only restores the attribute bytes.  This is useful if you want to change the screen color without affecting the text.</div>
   <div><p><strong>*</strong> INTERNALS ALERT <strong>*</strong></div>
   <div><p>This function calls the Clipper internals __gtSave and __gtRest to manipulate the the screen image.  If you're too gutless to use internals, then this function isn't for you.</div>
 </div>
@@ -6972,7 +6976,7 @@ ft_RevAttr( 0, 0, MaxRow(), MaxCol() )
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
-<div class="d-it">This is a high speed function to reverse the color of a single character on the screen without changing the character itself. This function is the same as ft_RevAttr() except that it changes only one character on screen and hence is faster and uses less memory.</div>
+<div class="d-it">This is a high speed function to reverse the color of a single character on the screen without changing the character itself. This function is the same as <code><a href="#ft_revattr">ft_RevAttr()</a></code> except that it changes only one character on screen and hence is faster and uses less memory.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ft_RevChr( 10, 20 )
@@ -6998,19 +7002,19 @@ ft_RgnStack( &lt;cAction&gt;, [ &lt;nTop&gt; ], [ &lt;nLeft&gt; ], [ &lt;nBottom
 </div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>cAction</code> determines what action ft_RgnStack() will take.  The allowable values for this parameter are &quot;push&quot;, &quot;pop&quot;, and &quot;pop all&quot;. If the function is called with any other string as the first parameter no action is performed.</div>
+  <div><code>cAction</code> determines what action <code><a href="#ft_rgnstack">ft_RgnStack()</a></code> will take.  The allowable values for this parameter are &quot;push&quot;, &quot;pop&quot;, and &quot;pop all&quot;. If the function is called with any other string as the first parameter no action is performed.</div>
   <div><code>cAction</code> with a value of &quot;push&quot; will push a saved screen region onto the stack.  A value of &quot;pop&quot; will restore the most recently pushed screen region.  &quot;pop all&quot; tells the function to restore all screen images which are currently on the stack.</div>
   <div>The use of <code>nTop</code>, <code>nLeft</code>, <code>nBottom</code>, and <code>nRight</code> depends on the <code>cAction</code> parameter.  If <code>cAction</code> is &quot;push&quot;, the next four parameters define the screen region to save.  If <code>cAction</code> is &quot;pop&quot; or &quot;pop all&quot; the following four parameters are ignored.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">ft_RgnStack() returns NIL.</div>
+<div class="d-it"><code><a href="#ft_rgnstack">ft_RgnStack()</a></code> returns NIL.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_RgnStack() allows multiple screens to be saved and restored from a stack.  The stack is implemented with Clipper static array that is visible only to ft_RgnStack().</div>
-  <div><p>The purpose of ft_RgnStack() is to allow multiple screen regions to be managed without the need to remember the original coordinates or to create variables for each one.</div>
-  <div><p>When called with &quot;push&quot;, ft_RgnStack() places the saved screen area at the end of the static array.  The array size is incremented by one to accommodate the new screen area.</div>
+  <div><p><code><a href="#ft_rgnstack">ft_RgnStack()</a></code> allows multiple screens to be saved and restored from a stack.  The stack is implemented with Clipper static array that is visible only to <code><a href="#ft_rgnstack">ft_RgnStack()</a></code>.</div>
+  <div><p>The purpose of <code><a href="#ft_rgnstack">ft_RgnStack()</a></code> is to allow multiple screen regions to be managed without the need to remember the original coordinates or to create variables for each one.</div>
+  <div><p>When called with &quot;push&quot;, <code><a href="#ft_rgnstack">ft_RgnStack()</a></code> places the saved screen area at the end of the static array.  The array size is incremented by one to accommodate the new screen area.</div>
   <div><p>When called with &quot;pop&quot;, the function restores the screen image stored in the last element of the array, and the array size is decremented by one.  If &quot;pop all&quot; is specified, all the saved screens are restored until the array is empty.</div>
-  <div><p>ft_RgnStack() calls ft_SavRgn() and ft_RstRgn().  Refer to the documentation for these two functions for more information.</div>
+  <div><p><code><a href="#ft_rgnstack">ft_RgnStack()</a></code> calls <code><a href="#ft_savrgn">ft_SavRgn()</a></code> and <code><a href="#ft_rstrgn">ft_RstRgn()</a></code>.  Refer to the documentation for these two functions for more information.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -7041,22 +7045,22 @@ ft_RgnStack( &quot;pop all&quot; )    // restore the 3's, 2's and 1's regions
 <section id="ft_rstrgn">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/scregion.txt">Improve this doc</a></span>
 <h4><code>ft_RstRgn()</code></h4>
-<div class="d-ol">Restore region of the screen saved with ft_SavRgn()</div>
+<div class="d-ol">Restore region of the screen saved with <code><a href="#ft_savrgn">ft_SavRgn()</a></code></div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>ft_RstRgn( &lt;cScreen&gt;, [ &lt;nTop&gt; ], [ &lt;nLeft&gt; ] ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>cScreen</code> is a screen region previously returned from ft_SavRgn().</div>
+  <div><code>cScreen</code> is a screen region previously returned from <code><a href="#ft_savrgn">ft_SavRgn()</a></code>.</div>
   <div><code>nTop</code> and <code>nLeft</code> are optional parameters that define a new location for the upper left corner of the screen area contained in <code>cScreen</code>. Allowable values are 0 through 255.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">ft_RstRgn() returns NIL.</div>
+<div class="d-it"><code><a href="#ft_rstrgn">ft_RstRgn()</a></code> returns NIL.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_RstRgn() restores a screen region previously saved with ft_SavRgn().  Calling ft_RstRgn() with <code>cScreen</code> as the only parameter will restore the saved region to its original location. <code>nTop</code> and <code>nLeft</code> may be used to define a new location for the upper left corner of the saved region.</div>
+  <div><p><code><a href="#ft_rstrgn">ft_RstRgn()</a></code> restores a screen region previously saved with <code><a href="#ft_savrgn">ft_SavRgn()</a></code>.  Calling <code><a href="#ft_rstrgn">ft_RstRgn()</a></code> with <code>cScreen</code> as the only parameter will restore the saved region to its original location. <code>nTop</code> and <code>nLeft</code> may be used to define a new location for the upper left corner of the saved region.</div>
   <div><p><code>nTop</code> and <code>nLeft</code> are dependent upon each other. You may not specify one without the other.</div>
-  <div><p>ft_RstRgn() calls Clipper's RestScreen().  Refer to the Clipper documentation for more information regarding this function.</div>
+  <div><p><code><a href="#ft_rstrgn">ft_RstRgn()</a></code> calls Clipper's <code><a href="harbour.html#restscreen">RestScreen()</a></code>.  Refer to the Clipper documentation for more information regarding this function.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -7091,7 +7095,7 @@ ft_RstRgn( cScreen, 20, 60 )           // restore to a different location
 <div class="d-it">A character string containing the screen attribute bytes for the specified region.  If the memory to store the return value could not be allocated, the function returns NIL.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function is similar to Clipper's SaveScreen(), except that it only saves the attribute bytes.  This is useful if you want to change the screen color without affecting the text.</div>
+  <div><p>This function is similar to Clipper's <code><a href="harbour.html#savescreen">SaveScreen()</a></code>, except that it only saves the attribute bytes.  This is useful if you want to change the screen color without affecting the text.</div>
   <div><p><strong>*</strong> INTERNALS ALERT <strong>*</strong></div>
   <div><p>This function calls the Clipper internal __gtMaxCol to obtain the maximum column value for the current video mode.  If you're too gutless to use internals, then this function isn't for you.</div>
 </div>
@@ -7119,12 +7123,12 @@ cBuffer := ft_SaveAtt( 10, 20, 14, 59 )
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>nTop</code>, <code>nLeft</code>, <code>nBottom</code>, and <code>nRight</code> define the portion of the screen to save.  Allowable values are 0 through 255.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">ft_SavRgn() returns the saved screen region and its coordinates as a character string.</div>
+<div class="d-it"><code><a href="#ft_savrgn">ft_SavRgn()</a></code> returns the saved screen region and its coordinates as a character string.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_SavRgn() is similar to Clipper's SaveScreen(), but it saves the screen coordinates as well as the display information.  The saved area can be restored by passing the returned string to ft_RstRgn().</div>
-  <div><p>Note that the strings returned from ft_SavRgn() and Clipper's SaveScreen() are not interchangeable.  A screen region saved with with ft_SavRgn() must be restored using ft_RstRgn().</div>
-  <div><p>ft_SavRgn() calls Clipper's SaveScreen().  Refer to the Clipper documentation for more information regarding this function.</div>
+  <div><p><code><a href="#ft_savrgn">ft_SavRgn()</a></code> is similar to Clipper's <code><a href="harbour.html#savescreen">SaveScreen()</a></code>, but it saves the screen coordinates as well as the display information.  The saved area can be restored by passing the returned string to <code><a href="#ft_rstrgn">ft_RstRgn()</a></code>.</div>
+  <div><p>Note that the strings returned from <code><a href="#ft_savrgn">ft_SavRgn()</a></code> and Clipper's <code><a href="harbour.html#savescreen">SaveScreen()</a></code> are not interchangeable.  A screen region saved with with <code><a href="#ft_savrgn">ft_SavRgn()</a></code> must be restored using <code><a href="#ft_rstrgn">ft_RstRgn()</a></code>.</div>
+  <div><p><code><a href="#ft_savrgn">ft_SavRgn()</a></code> calls Clipper's <code><a href="harbour.html#savescreen">SaveScreen()</a></code>.  Refer to the Clipper documentation for more information regarding this function.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -7206,7 +7210,7 @@ PROCEDURE Main( cMode )
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>nPage</code> is the video page (defaults to current page, determined</div>
-  <div>by ft_GetVPg()</div>
+  <div>by <code><a href="#ft_getvpg">ft_GetVPg()</a></code></div>
   <div><code>nRow</code>  is the row coordinate (defaults to 0 )</div>
   <div><code>nCol</code>  is the column coordinate (defaults to 0 )</div>
 </div>
@@ -7214,7 +7218,7 @@ PROCEDURE Main( cMode )
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>ft_SetVCur() sets the cursor position on a specific video page. It uses ft_int86() to invoke interrupt 10h, function 2.</div>
+  <div><p><code><a href="#ft_setvcur">ft_SetVCur()</a></code> sets the cursor position on a specific video page. It uses <code>ft_int86()</code> to invoke interrupt 10h, function 2.</div>
   <div><p>For more information on graphics programming, cursors, and video pages, refer to Richard Wilton's <i>Programmer's Guide to PC and PS/2 Video Systems</i> (Microsoft Press).</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -7297,7 +7301,7 @@ ft_Shadow( 10, 10, 15, 40, 47 )  // draw a green shadow
   <div><code>cString</code> is the string to be printed on the screen.</div>
   <div><code>nColor</code> is an integer representing the color attribute. The formula is:</div>
   <div>nFore + ( nBack * 16 )</div>
-  <div>ft_VidStr() will display the string in the current color if <code>nColor</code> is not passed.</div>
+  <div><code><a href="#ft_vidstr">ft_VidStr()</a></code> will display the string in the current color if <code>nColor</code> is not passed.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
@@ -7331,7 +7335,7 @@ ft_VidStr( 10, 20, &quot;Enter Name :&quot;, 165 )
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
-<div class="d-it">This is a high speed function to display a single ASCII character on screen in a specified color attribute.  This function is useful for constructing screens with a lot of text or repetitive screen prints where speed is important.  It is faster and requires less memory than ft_VidStr().</div>
+<div class="d-it">This is a high speed function to display a single ASCII character on screen in a specified color attribute.  This function is useful for constructing screens with a lot of text or repetitive screen prints where speed is important.  It is faster and requires less memory than <code><a href="#ft_vidstr">ft_VidStr()</a></code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 FOR nX := 1 TO MaxRow()
@@ -7351,6 +7355,6 @@ the status of SetBlink().  It uses direct video writes FOR speed.
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-31 11:54 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/3c9de7d">3c9de7d</a></div>
+<div>Generated by hbdoc on 2016-10-31 19:41 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/fa042c6">fa042c6</a></div>
 </footer>

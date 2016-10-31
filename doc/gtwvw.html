@@ -268,7 +268,7 @@ aItens6, aItens7, aItens8, aItens9, aItens10 )
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful, <code>.F.</code> otherwise.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Adds or reduces lines from window. The new lines will be colored from column zero color, from prior line. There's no checking to determine if the window is bigger than desktop area (except if in maincoord mode, because we need these boundaries to MaxRow() function).</div>
+<div class="d-it">Adds or reduces lines from window. The new lines will be colored from column zero color, from prior line. There's no checking to determine if the window is bigger than desktop area (except if in maincoord mode, because we need these boundaries to <code><a href="harbour.html#maxrow">MaxRow()</a></code> function).</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -282,7 +282,7 @@ aItens6, aItens7, aItens8, aItens9, aItens10 )
 <div class="d-it d-sy">
 <code>wvw_AppendMenu( hMenu, nFlags, nMenuItemId, cCaption )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>hMenu</code> Identifies the menu to be changed. <code>nFlags</code> Specifies flags to control the appearance and behavior of the new menu item. This parameter can be a combination of values (all flags can be viewed in winuser.ch file). <code>nMenuItemId</code> Specifies either the identifier of the new menu item or, if the uFlags parameter is set to MF_POPUP, the handle to the drop-down menu or submenu. <code>cCaption</code> Specifies the string content of the new menu item or full path to a bitmap to the new menu item.</div>
+<div class="d-it"><code>hMenu</code> Identifies the menu to be changed. <code>nFlags</code> Specifies flags to control the appearance and behavior of the new menu item. This parameter can be a combination of values (all flags can be viewed in <code>winuser.ch</code> file). <code>nMenuItemId</code> Specifies either the identifier of the new menu item or, if the uFlags parameter is set to MF_POPUP, the handle to the drop-down menu or submenu. <code>cCaption</code> Specifies the string content of the new menu item or full path to a bitmap to the new menu item.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">If successful, a value greater than zero. Otherwise zero.</div>
 <div class="d-d">Description</div>
@@ -820,7 +820,7 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Returns</div>
 <div class="d-it">Handle of new created menu. If failed, returns NULL.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Creates a menu. Initially, the menu is empty, but can be filled with items through function wvw_AppendMenu().</div>
+<div class="d-it">Creates a menu. Initially, the menu is empty, but can be filled with items through function <code><a href="#wvw_appendmenu">wvw_AppendMenu()</a></code>.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -838,7 +838,7 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Returns</div>
 <div class="d-it">Handle of new popup menu. If failed, return NULL.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Creates a drop-down menu, submenu or shortcut menu. The menu is initialy empty, but you can insert or append menu items by using the wvw_AppendMenu() function.</div>
+<div class="d-it">Creates a drop-down menu, submenu or shortcut menu. The menu is initialy empty, but you can insert or append menu items by using the <code><a href="#wvw_appendmenu">wvw_AppendMenu()</a></code> function.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -1009,7 +1009,7 @@ nRGBColor )
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Draws a color rectangle. wvw_FillRectangle(). This function is for compatibility with GWTWVT, similar to</div>
+<div class="d-it">Draws a color rectangle. <code><a href="#wvw_fillrectangle">wvw_FillRectangle()</a></code>. This function is for compatibility with GWTWVT, similar to</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -1123,7 +1123,7 @@ nQuality, nCharSet, lItalic, lUnderline, lStrikeOut )
 </div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>nRow, nCol</code> Row/column to draw a label. <code>cLabel</code> String to be draw. <code>nAlign</code> String alignment. Default is TA_LEFT (another definitions: see file wingdi.ch). <code>nEscapement</code> Specifies angle. <code>nTextColor</code> Color index of label. <code>nBkColor</code> Color index of background of label. <code>cFontFace</code> Name of the font. <code>nHeight</code> Height of the font's character. <code>nWidth</code> Specifies average width of character in the font. <code>nWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). <code>nQuality</code> Specifies the output quality.</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>nRow, nCol</code> Row/column to draw a label. <code>cLabel</code> String to be draw. <code>nAlign</code> String alignment. Default is TA_LEFT (another definitions: see file <code>wingdi.ch</code>). <code>nEscapement</code> Specifies angle. <code>nTextColor</code> Color index of label. <code>nBkColor</code> Color index of background of label. <code>cFontFace</code> Name of the font. <code>nHeight</code> Height of the font's character. <code>nWidth</code> Specifies average width of character in the font. <code>nWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). <code>nQuality</code> Specifies the output quality.</div>
   <div><code>nCharSet</code> Specifies set of characters to be used. <code>lItalic</code> Specifies an italic font if set to TRUE. <code>lUnderline</code> Specifies an underline font if set to TRUE. <code>lStrikeOut</code> Specifies a strikeout font if set to TRUE.</div>
 </div>
 <div class="d-d">Returns</div>
@@ -1147,7 +1147,7 @@ nSlotFont )
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nRow, nCol</code> Row/column to draw a label. <code>cLabel</code> String to be draw. <code>nAlign</code> Text alignment. Default is TA_LEFT (see wingdi.ch to another definitions). <code>cTextColor</code> Index color of the font. <code>nBkColor</code> Index color of label background. <code>nSlotFont</code> Index of application cache fonts. If image cache is empty (or index does not exist), function will be not executed.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nRow, nCol</code> Row/column to draw a label. <code>cLabel</code> String to be draw. <code>nAlign</code> Text alignment. Default is TA_LEFT (see <code>wingdi.ch</code> to another definitions). <code>cTextColor</code> Index color of the font. <code>nBkColor</code> Index color of label background. <code>nSlotFont</code> Index of application cache fonts. If image cache is empty (or index does not exist), function will be not executed.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful (draws a label), <code>.F.</code> otherwise (returns <code>.F.</code> if <code>nSlotFont</code> invalid).</div>
 <div class="d-d">Description</div>
@@ -1195,7 +1195,7 @@ nFormat, nAlign, nStyle, nThick, nColor, aOffset )
   <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a line. <code>nOrient</code> Line orientation: 0 1 Horizontal Vertical</div>
   <div><code>nFormat</code> Line format: 0 1 2 Raised Recessed Plain</div>
   <div><code>nAlign</code> Line alignment: 0 1 2 3 4 Center Top Bottom Left Right</div>
-  <div><code>nStyle</code> Specifies pen style. See wingdi.ch (PS_SOLID, PS_DOT, etc.). <code>nThick</code> Specifies the width of the pen, in logical units. If zero, the pen is a single pixel wide, regardless of the current transformation. Default is zero (width of one pixel). <code>nColor</code> Specifies a color reference for the pen color ( a 32-bit value from RGB color). <code>aOffset</code> Array of four row/column. elements with top/left, bottom/right of coordinates to align line with</div>
+  <div><code>nStyle</code> Specifies pen style. See <code>wingdi.ch</code> (PS_SOLID, PS_DOT, etc.). <code>nThick</code> Specifies the width of the pen, in logical units. If zero, the pen is a single pixel wide, regardless of the current transformation. Default is zero (width of one pixel). <code>nColor</code> Specifies a color reference for the pen color ( a 32-bit value from RGB color). <code>aOffset</code> Array of four row/column. elements with top/left, bottom/right of coordinates to align line with</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">Always <code>.T.</code></div>
@@ -1263,7 +1263,7 @@ nRGBColor )
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a box. <code>nThick</code> Style of pen. See wingdi.ch file for definitions (PS_SOLID, PS_DOT, etc.). <code>nShape</code> Ignored. <code>nRGBColor</code> Specifies color reference for pen (a 32-bit RGB color value).</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a box. <code>nThick</code> Style of pen. See <code>wingdi.ch</code> file for definitions (PS_SOLID, PS_DOT, etc.). <code>nShape</code> Ignored. <code>nRGBColor</code> Specifies color reference for pen (a 32-bit RGB color value).</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Always <code>.T.</code></div>
 <div class="d-d">Description</div>
@@ -1449,7 +1449,7 @@ nThumbPos )
 <div class="d-it d-sy">
 <code>wvw_DrawShadedRect( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels, nHorVert, aRGBb, aRGBe )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a rectangle. <code>aOffPixels</code> Array of four elements with top/left, bottom/right coordinates to align rectangle with row/column. <code>nHorVert</code> Specifies draws method and how to interpret rectangle fill array ( <code>aRGBb</code> and <code>aRGBe</code>). Default is GRADIENT_FILL_RECT_H (see wingdi.ch file for all definitions). <code>aRGBb</code> Array of four color position (Red, Gree, Blue, Alpha), with initial rectangle position. <code>aRGBe</code> Array of four color position (Red, Gree, Blue, Alpha), with final rectangle position.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a rectangle. <code>aOffPixels</code> Array of four elements with top/left, bottom/right coordinates to align rectangle with row/column. <code>nHorVert</code> Specifies draws method and how to interpret rectangle fill array ( <code>aRGBb</code> and <code>aRGBe</code>). Default is GRADIENT_FILL_RECT_H (see <code>wingdi.ch</code> file for all definitions). <code>aRGBb</code> Array of four color position (Red, Gree, Blue, Alpha), with initial rectangle position. <code>aRGBe</code> Array of four color position (Red, Gree, Blue, Alpha), with final rectangle position.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful, otherwise <code>.F.</code></div>
 <div class="d-d">Description</div>
@@ -1471,7 +1471,7 @@ nThumbPos )
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Draws a status bar. Only for compatibility with GTWVT`. wvw_sb*() functions are recommended instead.</div>
+<div class="d-it">Draws a status bar. Only for compatibility with GTWVT. wvw_sb*() functions are recommended instead.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -1492,7 +1492,7 @@ hFont )
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw text. <code>aOffPixels</code> Array of four row/column. <code>cText</code> Text to be draw. <code>nAlignHorz</code> Specifies text alignment inside coordinates: 0 1 2 Left (default) Right Centralized elements with top/left, bottom/right coordinates to align text with</div>
-  <div><code>nAlignVert</code> Ignored. <code>nTextColor</code> Color of text. <code>nBackColor</code> Background color. <code>nBackMode</code> Background mode how color is used. Default is OPAQUE (see wingdi.ch for all definitions). <code>hFont</code> Font of the text.</div>
+  <div><code>nAlignVert</code> Ignored. <code>nTextColor</code> Color of text. <code>nBackColor</code> Background color. <code>nBackMode</code> Background mode how color is used. Default is OPAQUE (see <code>wingdi.ch</code> for all definitions). <code>hFont</code> Font of the text.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
@@ -1537,7 +1537,7 @@ nState )
 <div class="d-d">Returns</div>
 <div class="d-it">Old maximize box state, before applying the new style.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Read/Set maximize button. In order to enable MAXIMIZE button, app should have WVW_SIZE() callback function.</div>
+<div class="d-it">Read/Set maximize button. In order to enable MAXIMIZE button, app should have <code>WVW_SIZE()</code> callback function.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -2027,7 +2027,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nSlotFont</code> Index of font cache. <code>cFontName</code> Name of the font. <code>nHeight</code> Height of the font's character. <code>nWidth</code> Specifies average width of character in the font. <code>nWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). <code>lItalic</code> Specifies an italic font if set to TRUE. <code>lUnderline</code> Specifies an underlined font if set to TRUE. <code>lStrikeout</code> Specifies a strikeout font if set to TRUE. <code>nCharSet</code> Identify the character set. For example, ANSI_CHARSET, DEFAULT_CHARSET, OEM_CHARSET, etc. (all models can be viewed in file wingdi.ch). <code>nQuality</code> Specifies the output quality. <code>nEscapement</code> Angle of escapement of the font.</div>
+<div class="d-it"><code>nSlotFont</code> Index of font cache. <code>cFontName</code> Name of the font. <code>nHeight</code> Height of the font's character. <code>nWidth</code> Specifies average width of character in the font. <code>nWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). <code>lItalic</code> Specifies an italic font if set to TRUE. <code>lUnderline</code> Specifies an underlined font if set to TRUE. <code>lStrikeout</code> Specifies a strikeout font if set to TRUE. <code>nCharSet</code> Identify the character set. For example, ANSI_CHARSET, DEFAULT_CHARSET, OEM_CHARSET, etc. (all models can be viewed in file <code>wingdi.ch</code>). <code>nQuality</code> Specifies the output quality. <code>nEscapement</code> Angle of escapement of the font.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
@@ -2085,7 +2085,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Maximize current window (argument <code>nWinNum</code> is ignored). If application define a callback function WVW_Size() the window will be maximized, otherwise, only restores window.</div>
+<div class="d-it">Maximize current window (argument <code>nWinNum</code> is ignored). If application define a callback function <code>WVW_Size()</code> the window will be maximized, otherwise, only restores window.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -2103,7 +2103,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Returns</div>
 <div class="d-it">Maximum number of columns.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Returns maximum <code>nWinNum</code>. possible MaxCol() in current screen setting for font used by window</div>
+<div class="d-it">Returns maximum <code>nWinNum</code>. possible <code><a href="harbour.html#maxcol">MaxCol()</a></code> in current screen setting for font used by window</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -2121,7 +2121,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Returns</div>
 <div class="d-it">Maximum number of rows.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Returns maximum <code>nWinNum</code>. possible MaxRow() in current screen setting for font used by window</div>
+<div class="d-it">Returns maximum <code>nWinNum</code>. possible <code><a href="harbour.html#maxrow">MaxRow()</a></code> in current screen setting for font used by window</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -2135,9 +2135,9 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-it d-sy">
 <code>wvw_MessageBox( nWinNum, cMessage, cTitle, nOption )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>cMessage</code> Message to be displayed. <code>cTitle</code> Dialog box title. <code>nOption</code> Specifies a set of buttons that determine the contents and behavior of the dialog box. Default is MB_OK ( OK button, without icons). You can see all definitions in file winuser.ch.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>cMessage</code> Message to be displayed. <code>cTitle</code> Dialog box title. <code>nOption</code> Specifies a set of buttons that determine the contents and behavior of the dialog box. Default is MB_OK ( OK button, without icons). You can see all definitions in file <code>winuser.ch</code>.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">Number of selected option (IDOK to OK button, IDCANCEL to Cancel button, etc.) You can see all definitions in file winuser.ch</div>
+<div class="d-it">Number of selected option (IDOK to OK button, IDCANCEL to Cancel button, etc.) You can see all definitions in file <code>winuser.ch</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">Creates, displays, and operates a message box. The message box contains an applicationdefined message and title, plus any combination of predefined icons and push buttons.</div>
 <div class="d-d">Platform(s)</div>
@@ -2211,11 +2211,11 @@ nExStyle )
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>cWinName </code> Title of window. If omitted, the name of executable will be used. <code>row1, col1, row2, col2 </code> Specifies initial row/column and final row/column of the window coordinates are relative to main window, not to current window. This coordinates are used to: 1) Put window in initial position. 2) Determine size of the window (new MaxRow() and MaxCol()). 3) Save in RowOfs and ColOfs to MainCoord mode. <code>nStyle </code> Style of the window. All definitions are in file winuser.ch. Default is WS_CAPTION|WS_SYSMENU|WS_CLIPCHILDREN. If you will use controls such as PUSHBUTTON, you MUST include WS_CLIPCHILDREN. <code>nParentWin</code> Is the mother of the new window. Default is current window (in Standard mode) and the last window (in MainCoord mode). If you want the new window to not have parent, pass -1 as argument. <code>nExStyle</code> Extended style to window (for example: WS_EX_TOOLTIPWINDOW). Default is NIL. Note: this parameter does not exist in original GTWVW to be opened. This</div>
+<div class="d-it"><code>cWinName </code> Title of window. If omitted, the name of executable will be used. <code>row1, col1, row2, col2 </code> Specifies initial row/column and final row/column of the window coordinates are relative to main window, not to current window. This coordinates are used to: 1) Put window in initial position. 2) Determine size of the window (new <code><a href="harbour.html#maxrow">MaxRow()</a></code> and <code><a href="harbour.html#maxcol">MaxCol()</a></code>). 3) Save in RowOfs and Co<code>winuser.ch</code>inCoord mode. <code>nStyle </code> Style of the window. All definitions are in file winuser.ch. Default is WS_CAPTION|WS_SYSMENU|WS_CLIPCHILDREN. If you will use controls such as PUSHBUTTON, you MUST include WS_CLIPCHILDREN. <code>nParentWin</code> Is the mother of the new window. Default is current window (in Standard mode) and the last window (in MainCoord mode). If you want the new window to not have parent, pass -1 as argument. <code>nExStyle</code> Extended style to window (for example: WS_EX_TOOLTIPWINDOW). Default is NIL. Note: this parameter does not exist in original GTWVW to be opened. This</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Number of window, if successful, zero if failed.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Opens a window in specified coordinates. Depending of parameter in function wvw_NoStartupSubWindow() the window will be displayed or remains invisible ( until we call function wvw_ShowWindow()).</div>
+<div class="d-it">Opens a window in specified coordinates. Depending of parameter in function <code><a href="#wvw_nostartupsubwindow">wvw_NoStartupSubWindow()</a></code> the window will be displayed or remains invisible ( until we call function <code><a href="#wvw_showwindow">wvw_ShowWindow()</a></code>).</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -2287,7 +2287,7 @@ nExStyle )
 <div class="d-d">Returns</div>
 <div class="d-it">Returns new configuration (if argument <code>lOn</code> is passed) or actual configuration.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Informs to the system that the window, when created, will be displayed or remains invisible until we call funtion wvw_ShowWindow().</div>
+<div class="d-it">Informs to the system that the window, when created, will be displayed or remains invisible until we call funtion <code><a href="#wvw_showwindow">wvw_ShowWindow()</a></code>.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -2440,7 +2440,7 @@ nQuality, lItalic, lUnderline, lStrikeout )
 <code>wvw_pbSetStyle( nWinNum, nPBId, nStyle )</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>nPBId</code> ID of pushbutton. <code>nStyle</code> Define style of pushbutton. You can see all possibilities BS_PUSHBUTTON, BS_DEFPUSHBUTTON, etc.). Typical usage: BS_DEFPUSHBUTTON BS_PUSHBUTTON in file winuser.ch (</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>nPBId</code> ID of pushbutton. <code>nStyle</code> Define style of pushbutton. You can see all possibilities BS_PUSHBUTTON, BS_DEFPUSHBUTTON, etc.). Typical usage: BS_DEFPUSHBUTTON BS_PUSHBUTTON in file <code>winuser.ch</code> (</div>
   <div>1: Turn the button into default button (thick border) 0: Turn the button into regular pushbutton</div>
 </div>
 <div class="d-d">Returns</div>
@@ -2576,7 +2576,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Restores the window (<code>nWinNum</code> is ignored). Restoring window from its maximized state might need handling in callback function WVW_SIZE(), because this function assumes no change in MaxRow()/MaxCol().</div>
+<div class="d-it">Restores the window (<code>nWinNum</code> is ignored). Restoring window from its maximized state might need handling in callback function <code>WVW_SIZE()</code>, because this function assumes no change in <code><a href="harbour.html#maxrow">MaxRow()</a></code>/<code><a href="harbour.html#maxcol">MaxCol()</a></code>.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -2590,11 +2590,11 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-it d-sy">
 <code>wvw_RestScreen( nWinNum, nTop, nLeft, nBottom, nRight, aScr, lDoNotDestroyBMP )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Screen coordinates to display data saved by function wvw_SaveScreen(). <code>aScr</code> Array with three elements (height, width and handle of bitmap). <code>lDoNotDestroyBMP</code> If <code>.T.</code>, after restore screen, delete the bitmap used to save screen. If <code>.F.</code>, the bitmap will not be erased. (default)</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Screen coordinates to display data saved by function <code><a href="#wvw_savescreen">wvw_SaveScreen()</a></code>. <code>aScr</code> Array with three elements (height, width and handle of bitmap). <code>lDoNotDestroyBMP</code> If <code>.T.</code>, after restore screen, delete the bitmap used to save screen. If <code>.F.</code>, the bitmap will not be erased. (default)</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful, <code>.F.</code> otherwise.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Restores screen, saved by function wvw_SaveScreen().</div>
+<div class="d-it">Restores screen, saved by function <code><a href="#wvw_savescreen">wvw_SaveScreen()</a></code>.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -2777,7 +2777,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful, <code>.F.</code> otherwise.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Returns window into normal state (opposing to function wvw_SetOnTop()).</div>
+<div class="d-it">Returns window into normal state (opposing to function <code><a href="#wvw_setontop">wvw_SetOnTop()</a></code>).</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -2791,7 +2791,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-it d-sy">
 <code>wvw_SetBrush( nStyle, nColor, nHatch )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nStyle</code> Identify pen style. All definitions can be viewed in file wingdi.ch ( BS_SOLID, BS_NULL, etc.). <code>nColor</code> Index color to pen draw. <code>nHatch</code> Define the filling pattern of pen. All definitions can be viewed in file wingdi.ch ( HS_VERTICAL, HS_HORIZONTAL, etc.).</div>
+<div class="d-it"><code>nStyle</code> Identify pen style. All definitions can be viewed in file <code>wingdi.ch</code> ( BS_SOLID, BS_NULL, etc.). <code>nColor</code> Index color to pen draw. <code>nHatch</code> Define the filling pattern of pen. All definitions can be viewed in file <code>wingdi.ch</code> ( HS_VERTICAL, HS_HORIZONTAL, etc.).</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful, <code>.F.</code> otherwise.</div>
 <div class="d-d">Description</div>
@@ -2975,7 +2975,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Returns</div>
 <div class="d-it">Last valid configuration.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Set the last selected item of the menu (returned from wvw_GetLastMenuEvent())</div>
+<div class="d-it">Set the last selected item of the menu (returned from <code><a href="#wvw_getlastmenuevent">wvw_GetLastMenuEvent()</a></code>)</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -2993,7 +2993,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Returns</div>
 <div class="d-it">Returns old configuration, if <code>nLineSpacing</code> is passed, or actual configuration.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Read/set line spacing for current window. If window size will become too high, line spacing is restored. To change default line spacing for next window open, use wvw_SetDefLineSpacing().</div>
+<div class="d-it">Read/set line spacing for current window. If window size will become too high, line spacing is restored. To change default line spacing for next window open, use <code><a href="#wvw_setdeflinespacing">wvw_SetDefLineSpacing()</a></code>.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -3011,7 +3011,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Returns</div>
 <div class="d-it">Returns old configuration, if <code>nColorIndex</code> is passed, otherwise actual configuration.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Change color to line spacing for current window. To change default line space color for next window open, use wvw_SetDefLineSpacing().</div>
+<div class="d-it">Change color to line spacing for current window. To change default line space color for next window open, use <code><a href="#wvw_setdeflinespacing">wvw_SetDefLineSpacing()</a></code>.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -3047,7 +3047,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Returns</div>
 <div class="d-it">Returns old setting of maximum user-bitmap cache.</div>
 <div class="d-d">Description</div>
-<div class="d-it">To minimize bitmap loading operation, wvw_drawimage caches bitmap once it reads from disk. Ie., subsequent wvw_drawimage will use the bitmap from the memory. When the maximum number of cache is used, the least recently opened bitmap will be discarded from the cache. There is no way to discard a specific bitmap from the cache. If you want to control bitmap caching manually, use wvw_LoadPicture() instead.</div>
+<div class="d-it">To minimize bitmap loading operation, wvw_drawimage caches bitmap once it reads from disk. Ie., subsequent wvw_drawimage will use the bitmap from the memory. When the maximum number of cache is used, the least recently opened bitmap will be discarded from the cache. There is no way to discard a specific bitmap from the cache. If you want to control bitmap caching manually, use <code><a href="#wvw_loadpicture">wvw_LoadPicture()</a></code> instead.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -3151,11 +3151,11 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-it d-sy">
 <code>wvw_SetPaintRefresh( nPaintRefresh )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nPaintRefresh</code> Interval in milliseconds to call WVW_PAINT(). Must be &gt;= 50, or == 0, causing repaint to execute immediately.</div>
+<div class="d-it"><code>nPaintRefresh</code> Interval in milliseconds to call <code>WVW_PAINT()</code>. Must be &gt;= 50, or == 0, causing repaint to execute immediately.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Old setting value.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Determine interval to calling WVW_PAINT() function, responsible to repaint screen.</div>
+<div class="d-it">Determine interval to calling <code>WVW_PAINT()</code> function, responsible to repaint screen.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -3187,7 +3187,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-it d-sy">
 <code>wvw_SetPen( nPenStyle, nWidth, nColor )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nPenStyle</code> Defines pen style. All definition are in file wingdi.ch ( PS_SOLID, PS_DOT, etc.). <code>nWidth</code> Specifies width of the pen. <code>nColor</code> Index color of pen.</div>
+<div class="d-it"><code>nPenStyle</code> Defines pen style. All definition are in file <code>wingdi.ch</code> ( PS_SOLID, PS_DOT, etc.). <code>nWidth</code> Specifies width of the pen. <code>nColor</code> Index color of pen.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful, <code>.F.</code> otherwise.</div>
 <div class="d-d">Description</div>
@@ -3205,7 +3205,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-it d-sy">
 <code>wvw_SetPointer( nWinNum, nIcon )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nIcon</code> Model of icon to be read. May be a string which identify a resource in a RC file or may be a predefined window model (default is IDC_ARROW). All definition are in winuser.ch file.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nIcon</code> Model of icon to be read. May be a string which identify a resource in a RC file or may be a predefined window model (default is IDC_ARROW). All definition are in <code>winuser.ch</code> file.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
@@ -3245,7 +3245,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful, <code>.F.</code> otherwise.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Set timer event for every <code>nInterval</code> milliseconds (it can be usefull to update clock on status bar). Effective only if WVW_TIMER() function exists</div>
+<div class="d-it">Set timer event for every <code>nInterval</code> milliseconds (it can be usefull to update clock on status bar). Effective only if <code>WVW_TIMER()</code> function exists</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
@@ -3492,7 +3492,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-it d-sy">
 <code>wvw_ShowWindow( nWinNum, nMode )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nMode</code> Points out how window will be showed. Default is SW_SHOWNORMAL (another definitions in file winuser.ch).</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nMode</code> Points out how window will be showed. Default is SW_SHOWNORMAL (another definitions in file <code>winuser.ch</code>).</div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
@@ -3511,7 +3511,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <code>wvw_tbAddButton( nWinNum, nCommand, xBitmap, cLabel, nBitmapType, lMap3DColors )</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>nCommand</code> ID of action to be executed when user press button. <code>xBitmap</code> ID of bitmap resource in .RC file (in this case, the image cannot have more than 256 colors) or full path to a file name. <code>cLabel</code> Text of button. If passed <code>lDisplayText</code> (in function wvw_tbCreate()) to <code>.T.</code>, the text will be showed below image, otherwise will be used as a tooltip. <code>nBitmapType</code> Bitmap type. Can be: 0 1 2 3 Custom Standard windows bitmaps (COPY, PAST, FIND, OPEN, etc.) System view bitmaps System history bitmaps</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>nCommand</code> ID of action to be executed when user press button. <code>xBitmap</code> ID of bitmap resource in .RC file (in this case, the image cannot have more than 256 colors) or full path to a file name. <code>cLabel</code> Text of button. If passed <code>lDisplayText</code> (in function <code><a href="#wvw_tbcreate">wvw_tbCreate()</a></code>) to <code>.T.</code>, the text will be showed below image, otherwise will be used as a tooltip. <code>nBitmapType</code> Bitmap type. Can be: 0 1 2 3 Custom Standard windows bitmaps (COPY, PAST, FIND, OPEN, etc.) System view bitmaps System history bitmaps</div>
   <div><code>lMap3DColors</code> If the image will be transparent (meaningful for custom bitmap only).</div>
 </div>
 <div class="d-d">Returns</div>
@@ -3831,6 +3831,6 @@ nImageHeight )
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-31 11:54 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/3c9de7d">3c9de7d</a></div>
+<div>Generated by hbdoc on 2016-10-31 19:41 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/fa042c6">fa042c6</a></div>
 </footer>
