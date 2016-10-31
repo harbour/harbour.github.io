@@ -55,11 +55,12 @@
 <h4><code>Bin2U()</code></h4>
 <div class="d-ol">Convert unsigned long encoded bytes into Harbour numeric</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>Bin2U( &lt;cBuffer&gt; ) &rarr; nNumber</code></div>
+<div class="d-it d-sy">
+<code>Bin2U( &lt;cBuffer&gt; ) → nNumber</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cBuffer&gt; is a character string that contains 32-bit encoded unsigned long integer (least significant byte first). The first four bytes are taken into account, the rest if any are ignored.</div>
+<div class="d-it"><code>cBuffer</code> is a character string that contains 32-bit encoded unsigned long integer (least significant byte first). The first four bytes are taken into account, the rest if any are ignored.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">Bin2U() return numeric integer (or 0 if &lt;cBuffer&gt; is not a string).</div>
+<div class="d-it">Bin2U() return numeric integer (or 0 if <code>cBuffer</code> is not a string).</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Bin2U() is one of the low level binary conversion functions, those functions convert between Harbour numeric and a character representation of numeric value. Bin2U() take four bytes of encoded 32-bit unsigned long integer and convert it into standard Harbour numeric value.</div>
@@ -99,11 +100,12 @@ PROCEDURE Main()
 <h4><code>Bin2W()</code></h4>
 <div class="d-ol">Convert unsigned short encoded bytes into Harbour numeric</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>Bin2W( &lt;cBuffer&gt; ) &rarr; nNumber</code></div>
+<div class="d-it d-sy">
+<code>Bin2W( &lt;cBuffer&gt; ) → nNumber</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cBuffer&gt; is a character string that contains 16-bit encoded unsigned short integer (least significant byte first). The first two bytes are taken into account, the rest if any are ignored.</div>
+<div class="d-it"><code>cBuffer</code> is a character string that contains 16-bit encoded unsigned short integer (least significant byte first). The first two bytes are taken into account, the rest if any are ignored.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">Bin2W() return numeric integer (or 0 if &lt;cBuffer&gt; is not a string).</div>
+<div class="d-it">Bin2W() return numeric integer (or 0 if <code>cBuffer</code> is not a string).</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Bin2W() is one of the low level binary conversion functions, those functions convert between Harbour numeric and a character representation of numeric value. Bin2W() take two bytes of encoded 16-bit unsigned short integer and convert it into standard Harbour numeric value.</div>
@@ -143,9 +145,10 @@ PROCEDURE Main()
 <h4><code>U2Bin()</code></h4>
 <div class="d-ol">Convert Harbour numeric into unsigned long encoded bytes</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>U2Bin( &lt;nNumber&gt; ) &rarr; cBuffer</code></div>
+<div class="d-it d-sy">
+<code>U2Bin( &lt;nNumber&gt; ) → cBuffer</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;nNumber&gt; is a numeric value to convert (decimal digits are ignored).</div>
+<div class="d-it"><code>nNumber</code> is a numeric value to convert (decimal digits are ignored).</div>
 <div class="d-d">Returns</div>
 <div class="d-it">U2Bin() return four bytes character string that contains 32-bit encoded unsigned long integer (least significant byte first).</div>
 <div class="d-d">Description</div>
@@ -171,9 +174,10 @@ PROCEDURE Main()
 <h4><code>W2Bin()</code></h4>
 <div class="d-ol">Convert Harbour numeric into unsigned short encoded bytes</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>W2Bin( &lt;nNumber&gt; ) &rarr; cBuffer</code></div>
+<div class="d-it d-sy">
+<code>W2Bin( &lt;nNumber&gt; ) → cBuffer</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;nNumber&gt; is a numeric value to convert (decimal digits are ignored).</div>
+<div class="d-it"><code>nNumber</code> is a numeric value to convert (decimal digits are ignored).</div>
 <div class="d-d">Returns</div>
 <div class="d-it">W2Bin() return two bytes character string that contains 16-bit encoded unsigned short integer (least significant byte first).</div>
 <div class="d-d">Description</div>
@@ -199,9 +203,10 @@ PROCEDURE Main()
 <h4><code>dbSkipper()</code></h4>
 <div class="d-ol">Helper function to skip a database</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>dbSkipper( &lt;nRecs&gt; ) &rarr; nSkipped</code></div>
+<div class="d-it d-sy">
+<code>dbSkipper( &lt;nRecs&gt; ) → nSkipped</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;nRecs&gt; is the number of records to skip relative to current record. Positive number would try to move the record pointer forward, while a negative number would try to move the record pointer back &lt;nRecs&gt; records.</div>
+<div class="d-it"><code>nRecs</code> is the number of records to skip relative to current record. Positive number would try to move the record pointer forward, while a negative number would try to move the record pointer back <code>nRecs</code> records.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">dbSkipper() return the number of actual record skipped.</div>
 <div class="d-d">Description</div>
@@ -232,6 +237,6 @@ dbCloseArea()
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-30 17:36 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/03c4cbb">03c4cbb</a></div>
+<div>Generated by hbdoc on 2016-10-31 11:13 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/4757499">4757499</a></div>
 </footer>

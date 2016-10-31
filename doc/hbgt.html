@@ -70,12 +70,13 @@
 <h4><code>gt_ClrFlag()</code></h4>
 <div class="d-ol">Set a number of flags to FALSE in a bit flag string.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_ClrFlag( &lt;cFlagString&gt;, [&lt;nStart&gt;], [&lt;nEnd&gt;] ) &rarr; cFlagString</code></div>
+<div class="d-it d-sy">
+<code>gt_ClrFlag( &lt;cFlagString&gt;, [&lt;nStart&gt;], [&lt;nEnd&gt;] ) → cFlagString</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div>&lt;cFlagString&gt; is a bit flag string created with gt_NewFlag()</div>
-  <div>&lt;nStart&gt; is the starting flag. This is an optional numeric value. If not supplied it defaults to 1.</div>
-  <div>&lt;nEnd&gt; is the ending flag. This is an optional numeric value. If not supplied it defaults to &lt;nStart&gt;.</div>
+  <div><code>cFlagString</code> is a bit flag string created with gt_NewFlag()</div>
+  <div><code>nStart</code> is the starting flag. This is an optional numeric value. If not supplied it defaults to 1.</div>
+  <div><code>nEnd</code> is the ending flag. This is an optional numeric value. If not supplied it defaults to <code>nStart</code>.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">The bit map string with the new flag settings.</div>
@@ -113,11 +114,12 @@ cFlags := gt_ClrFlag( cFlags )
 <h4><code>gt_IsFlag()</code></h4>
 <div class="d-ol">Test the setting of a flag in a bit flag string.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_IsFlag( &lt;cFlagString&gt;, [&lt;nFlag&gt;] ) &rarr; lSetting</code></div>
+<div class="d-it d-sy">
+<code>gt_IsFlag( &lt;cFlagString&gt;, [&lt;nFlag&gt;] ) → lSetting</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div>&lt;cFlagString&gt; is a bit flag string created with gt_NewFlag()</div>
-  <div>&lt;nFlag&gt; is the flag to be tested.</div>
+  <div><code>cFlagString</code> is a bit flag string created with gt_NewFlag()</div>
+  <div><code>nFlag</code> is the flag to be tested.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">A boolean value, TRUE if the flag is on, FALSE if it's off.</div>
@@ -142,9 +144,10 @@ NEXT
 <h4><code>gt_NewFlag()</code></h4>
 <div class="d-ol">Create a new bit flag string.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_NewFlag( &lt;nFlagCount&gt; ) &rarr; cFlagString</code></div>
+<div class="d-it d-sy">
+<code>gt_NewFlag( &lt;nFlagCount&gt; ) → cFlagString</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;nFlagCount&gt; is the number of flags you wish to store.</div>
+<div class="d-it"><code>nFlagCount</code> is the number of flags you wish to store.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">A string to hold the bit flags. All flags are set to FALSE.</div>
 <div class="d-d">Description</div>
@@ -167,12 +170,13 @@ cFlags := gt_NewFlag( 20 )   // Create a bit flag string for 20 logical values.
 <h4><code>gt_SetFlag()</code></h4>
 <div class="d-ol">Set a number of flags to TRUE in a bit flag string.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_SetFlag( &lt;cFlagString&gt;, [&lt;nStart&gt;], [&lt;nEnd&gt;] ) &rarr; cFlagString</code></div>
+<div class="d-it d-sy">
+<code>gt_SetFlag( &lt;cFlagString&gt;, [&lt;nStart&gt;], [&lt;nEnd&gt;] ) → cFlagString</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div>&lt;cFlagString&gt; is a bit flag string created with gt_NewFlag()</div>
-  <div>&lt;nStart&gt; is the starting flag. This is an optional numeric value. If not supplied it defaults to 1.</div>
-  <div>&lt;nEnd&gt; is the ending flag. This is an optional numeric value. If not supplied it defaults to &lt;nStart&gt;.</div>
+  <div><code>cFlagString</code> is a bit flag string created with gt_NewFlag()</div>
+  <div><code>nStart</code> is the starting flag. This is an optional numeric value. If not supplied it defaults to 1.</div>
+  <div><code>nEnd</code> is the ending flag. This is an optional numeric value. If not supplied it defaults to <code>nStart</code>.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">The bit map string with the new flag settings.</div>
@@ -206,11 +210,12 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_AsciiSum()</code></h4>
 <div class="d-ol">Sum the ASCII values in a string.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_AsciiSum( &lt;cStr&gt; ) &rarr; nSum</code></div>
+<div class="d-it d-sy">
+<code>gt_AsciiSum( &lt;cStr&gt; ) → nSum</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cStr&gt;  - The string to sum</div>
+<div class="d-it"><code>cStr</code>  - The string to sum</div>
 <div class="d-d">Returns</div>
-<div class="d-it">&lt;nSum&gt;    - The sum of all ASCII values in &lt;cStr&gt;.</div>
+<div class="d-it"><code>nSum</code>    - The sum of all ASCII values in <code>cStr</code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Sum the ASCII value of every character in the passed string and return the result.</div>
 <div class="d-d">Status</div>
@@ -226,11 +231,12 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_AscPos()</code></h4>
 <div class="d-ol">Return the ASCII value of a specified character in a string</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_AscPos( &lt;cStr&gt;, &lt;nPos&gt; ) &rarr; nAscVal</code></div>
+<div class="d-it d-sy">
+<code>gt_AscPos( &lt;cStr&gt;, &lt;nPos&gt; ) → nAscVal</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cStr&gt;  - The string &lt;nPos&gt;  - The position in &lt;cStr&gt;</div>
+<div class="d-it"><code>cStr</code>  - The string <code>nPos</code>  - The position in <code>cStr</code></div>
 <div class="d-d">Returns</div>
-<div class="d-it">&lt;nAscVal&gt; - The ASCII value of hb_BSubStr( &lt;cStr&gt;, &lt;nPos&gt;, 1 )</div>
+<div class="d-it"><code>nAscVal</code> - The ASCII value of hb_BSubStr( <code>cStr</code>, <code>nPos</code>, 1 )</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return the ASCII value of a specified character in a string Equivalent (but much faster) to</div>
@@ -256,14 +262,15 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_AtDiff()</code></h4>
 <div class="d-ol">Return the position where two strings begin to differ</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_AtDiff( &lt;cStr1&gt;, &lt;cStr2&gt; ) &rarr; nPos</code></div>
+<div class="d-it d-sy">
+<code>gt_AtDiff( &lt;cStr1&gt;, &lt;cStr2&gt; ) → nPos</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cStr1&gt;  - A character string to compare &lt;cStr2&gt;  - The string to compare with</div>
+<div class="d-it"><code>cStr1</code>  - A character string to compare <code>cStr2</code>  - The string to compare with</div>
 <div class="d-d">Returns</div>
-<div class="d-it">&lt;nPos&gt;     - The position in &lt;cStr2&gt; where &lt;cStr1&gt; begins to differ</div>
+<div class="d-it"><code>nPos</code>     - The position in <code>cStr2</code> where <code>cStr1</code> begins to differ</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>Return the position in &lt;cStr2&gt; where &lt;cStr1&gt; begins to differ. If the strings differ in the first character gt_AtDiff() will return 1.  If the two strings are identical (or identical upto the last character in &lt;cStr2&gt;) the function will return 0.</div>
+  <div><p>Return the position in <code>cStr2</code> where <code>cStr1</code> begins to differ. If the strings differ in the first character gt_AtDiff() will return 1.  If the two strings are identical (or identical upto the last character in <code>cStr2</code>) the function will return 0.</div>
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
@@ -285,14 +292,15 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_CharEven()</code></h4>
 <div class="d-ol">Return a string of all the characters in even positions</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_CharEven( &lt;cStr&gt; ) &rarr; cRet</code></div>
+<div class="d-it d-sy">
+<code>gt_CharEven( &lt;cStr&gt; ) → cRet</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cStr&gt;   - A character string to extract chars from</div>
+<div class="d-it"><code>cStr</code>   - A character string to extract chars from</div>
 <div class="d-d">Returns</div>
-<div class="d-it">&lt;cRet&gt;     - A string of all the chars in even positions</div>
+<div class="d-it"><code>cRet</code>     - A string of all the chars in even positions</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>Return a string consisting of all the characters in even positions in &lt;cStr1&gt;.</div>
+  <div><p>Return a string consisting of all the characters in even positions in <code>cStr1</code>.</div>
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
@@ -313,17 +321,18 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_CharMix()</code></h4>
 <div class="d-ol">Amalgamate two strings to form the return value</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_CharMix( &lt;cStr1&gt;, &lt;cStr2&gt; ) &rarr; cRet</code></div>
+<div class="d-it d-sy">
+<code>gt_CharMix( &lt;cStr1&gt;, &lt;cStr2&gt; ) → cRet</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cStr1&gt;  - A character string to mix &lt;cStr2&gt;  - A character string to mix with</div>
+<div class="d-it"><code>cStr1</code>  - A character string to mix <code>cStr2</code>  - A character string to mix with</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
-  <div>&lt;cRet&gt;     - A string consisting of all the characters in &lt;cStr1&gt;</div>
-  <div>mixed with all the characters in &lt;cStr2&gt;</div>
+  <div><code>cRet</code>     - A string consisting of all the characters in <code>cStr1</code></div>
+  <div>mixed with all the characters in <code>cStr2</code></div>
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>Return a string consisting of all the characters in &lt;cStr1&gt; mixed with the characters from &lt;cStr2&gt;.</div>
+  <div><p>Return a string consisting of all the characters in <code>cStr1</code> mixed with the characters from <code>cStr2</code>.</div>
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
@@ -346,14 +355,15 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_CharOdd()</code></h4>
 <div class="d-ol">Return a string of all the characters in odd positions</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_CharOdd( &lt;cStr&gt; ) &rarr; cRet</code></div>
+<div class="d-it d-sy">
+<code>gt_CharOdd( &lt;cStr&gt; ) → cRet</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cStr&gt;   - A character string to extract chars from</div>
+<div class="d-it"><code>cStr</code>   - A character string to extract chars from</div>
 <div class="d-d">Returns</div>
-<div class="d-it">&lt;cRet&gt;     - A string of all the chars in odd positions</div>
+<div class="d-it"><code>cRet</code>     - A string of all the chars in odd positions</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>Return a string consisting of all the characters in odd positions in &lt;cStr1&gt;.</div>
+  <div><p>Return a string consisting of all the characters in odd positions in <code>cStr1</code>.</div>
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
@@ -374,11 +384,12 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_ChrCount()</code></h4>
 <div class="d-ol">Count the number of times a character appears in a string</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_ChrCount( &lt;cChr&gt;, &lt;cStr&gt; ) &rarr; nFreq</code></div>
+<div class="d-it d-sy">
+<code>gt_ChrCount( &lt;cChr&gt;, &lt;cStr&gt; ) → nFreq</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cChr&gt;  - The character to find the frequence of &lt;cStr&gt;  - The string in which to find the character</div>
+<div class="d-it"><code>cChr</code>  - The character to find the frequence of <code>cStr</code>  - The string in which to find the character</div>
 <div class="d-d">Returns</div>
-<div class="d-it">nFreq   - The number of times &lt;cChr&gt; occurs in &lt;cStr&gt;</div>
+<div class="d-it">nFreq   - The number of times <code>cChr</code> occurs in <code>cStr</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gt_ChrCount() counts how many times a specified character appears in a string.</div>
@@ -402,16 +413,17 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_ChrFirst()</code></h4>
 <div class="d-ol">Find which character occurs first in a string</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_ChrFirst( &lt;cChars&gt;, &lt;cStr&gt; ) &rarr; nAsc</code></div>
+<div class="d-it d-sy">
+<code>gt_ChrFirst( &lt;cChars&gt;, &lt;cStr&gt; ) → nAsc</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cChars&gt; - The set of characters to find &lt;cStr&gt;   - The input string</div>
+<div class="d-it"><code>cChars</code> - The set of characters to find <code>cStr</code>   - The input string</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
-  <div>&lt;nAsc&gt;     - The ASCII value of the first character in &lt;cChars&gt;</div>
-  <div>which appears first in &lt;cStr&gt;</div>
+  <div><code>nAsc</code>     - The ASCII value of the first character in <code>cChars</code></div>
+  <div>which appears first in <code>cStr</code></div>
 </div>
 <div class="d-d">Description</div>
-<div class="d-it">Return the ASCII value of a character in &lt;cChars&gt; which appears first in &lt;cStr&gt;.</div>
+<div class="d-it">Return the ASCII value of a character in <code>cChars</code> which appears first in <code>cStr</code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? hb_BChar( gt_ChrFirst( &quot;sa &quot;, &quot;This is a test&quot; ) )  // prints &quot;s&quot;
@@ -430,17 +442,18 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_ChrTotal()</code></h4>
 <div class="d-ol">Find number of times a set of characters appears in a string</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_ChrTotal( &lt;cChrs&gt;, &lt;cStr&gt; ) &rarr; nTotOcc</code></div>
+<div class="d-it d-sy">
+<code>gt_ChrTotal( &lt;cChrs&gt;, &lt;cStr&gt; ) → nTotOcc</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cChrs&gt; - The set of characters &lt;cStr&gt;  - The string to search</div>
+<div class="d-it"><code>cChrs</code> - The set of characters <code>cStr</code>  - The string to search</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
-  <div>&lt;nTotOcc&gt; - The number of times the characters specified in</div>
-  <div>&lt;cChrs&gt; appears in &lt;cStr&gt;</div>
+  <div><code>nTotOcc</code> - The number of times the characters specified in</div>
+  <div><code>cChrs</code> appears in <code>cStr</code></div>
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>Returns the numnber of occurrences of characters belonging to the set &lt;cChrs&gt; in the string &lt;cStr&gt;.  If no characters in &lt;cChrs&gt; appears in &lt;cStr&gt; gt_ChrTotal() will return 0.</div>
+  <div><p>Returns the numnber of occurrences of characters belonging to the set <code>cChrs</code> in the string <code>cStr</code>.  If no characters in <code>cChrs</code> appears in <code>cStr</code> gt_ChrTotal() will return 0.</div>
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
@@ -464,14 +477,15 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <h4><code>gt_StrCount()</code></h4>
 <div class="d-ol">Count the number of times a substring appears in a string</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_StrCount( &lt;cChrs&gt;, &lt;cStr&gt; ) &rarr; nFreq</code></div>
+<div class="d-it d-sy">
+<code>gt_StrCount( &lt;cChrs&gt;, &lt;cStr&gt; ) → nFreq</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cChrs&gt; - The substring to find the frequence of &lt;cStr&gt;  - The string in which to find the character</div>
+<div class="d-it"><code>cChrs</code> - The substring to find the frequence of <code>cStr</code>  - The string in which to find the character</div>
 <div class="d-d">Returns</div>
-<div class="d-it">&lt;nFreq&gt;   - The number of times &lt;cChrs&gt; occurs in &lt;cStr&gt;</div>
+<div class="d-it"><code>nFreq</code>   - The number of times <code>cChrs</code> occurs in <code>cStr</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>gt_StrCount() counts how many times a specified substring appears in a string. If the substring does NOT appear in &lt;cStr&gt; this function will return 0. If the substring is a single character use gt_ChrCount() as it will be faster.</div>
+  <div><p>gt_StrCount() counts how many times a specified substring appears in a string. If the substring does NOT appear in <code>cStr</code> this function will return 0. If the substring is a single character use gt_ChrCount() as it will be faster.</div>
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
@@ -492,11 +506,12 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <h4><code>gt_StrCSPN()</code></h4>
 <div class="d-ol">Return length of prefix in string of chars NOT in set.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_StrCSPN( &lt;cString&gt;, &lt;cSet&gt; ) &rarr; nLength</code></div>
+<div class="d-it d-sy">
+<code>gt_StrCSPN( &lt;cString&gt;, &lt;cSet&gt; ) → nLength</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cString&gt; - The string to find the prefix in &lt;cSet&gt;    - The set of characters</div>
+<div class="d-it"><code>cString</code> - The string to find the prefix in <code>cSet</code>    - The set of characters</div>
 <div class="d-d">Returns</div>
-<div class="d-it">&lt;nLength&gt;   - The length of a string upto a character in the set</div>
+<div class="d-it"><code>nLength</code>   - The length of a string upto a character in the set</div>
 <div class="d-d">Description</div>
 <div class="d-it">Return the number of characters in the leading segment of a string that consists solely of characters NOT in the set.</div>
 <div class="d-d">Example(s)</div>
@@ -517,17 +532,18 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <h4><code>gt_StrDiff()</code></h4>
 <div class="d-ol">Return a string where it begins to differ from another</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_StrDiff( &lt;cStr1&gt;, &lt;cStr2&gt; ) &rarr; cRet</code></div>
+<div class="d-it d-sy">
+<code>gt_StrDiff( &lt;cStr1&gt;, &lt;cStr2&gt; ) → cRet</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cStr1&gt;  - A character string to compare &lt;cStr2&gt;  - The string to compare with</div>
+<div class="d-it"><code>cStr1</code>  - A character string to compare <code>cStr2</code>  - The string to compare with</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
-  <div>&lt;cRet&gt;     - A string beginning at the position in &lt;cStr2&gt; where</div>
-  <div>&lt;cStr1&gt; begins to differ from &lt;cStr1&gt;</div>
+  <div><code>cRet</code>     - A string beginning at the position in <code>cStr2</code> where</div>
+  <div><code>cStr1</code> begins to differ from <code>cStr1</code></div>
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>Return a string beginning at the position in &lt;cStr2&gt; where &lt;cStr1&gt; begins to differ from &lt;cStr1&gt;. If the two strings are identical (or identical upto the last character in &lt;cStr2&gt;) the function will return &quot;&quot;.</div>
+  <div><p>Return a string beginning at the position in <code>cStr2</code> where <code>cStr1</code> begins to differ from <code>cStr1</code>. If the two strings are identical (or identical upto the last character in <code>cStr2</code>) the function will return &quot;&quot;.</div>
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
@@ -549,12 +565,13 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <h4><code>gt_StrExpand()</code></h4>
 <div class="d-ol">Insert fillers between characters in a passed string</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_StrExpand( &lt;cStr&gt;, [&lt;nNum&gt;], [&lt;cChar&gt;] ) &rarr; cRet</code></div>
+<div class="d-it d-sy">
+<code>gt_StrExpand( &lt;cStr&gt;, [&lt;nNum&gt;], [&lt;cChar&gt;] ) → cRet</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cStr1&gt;  - A character string to insert chars into &lt;nNum&gt;   - The number of fill characters to insert (default 1) &lt;cChar&gt;  - The fill chararacter (default space)</div>
+<div class="d-it"><code>cStr1</code>  - A character string to insert chars into <code>nNum</code>   - The number of fill characters to insert (default 1) <code>cChar</code>  - The fill chararacter (default space)</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
-  <div>&lt;cRet&gt;     - The input string with fill characters inserted between</div>
+  <div><code>cRet</code>     - The input string with fill characters inserted between</div>
   <div>every character in the original.</div>
 </div>
 <div class="d-d">Description</div>
@@ -582,14 +599,15 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <h4><code>gt_StrLeft()</code></h4>
 <div class="d-ol">Find length of prefix of a string</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_StrLeft( &lt;cStr&gt;, &lt;cChars&gt; ) &rarr; nLen</code></div>
+<div class="d-it d-sy">
+<code>gt_StrLeft( &lt;cStr&gt;, &lt;cChars&gt; ) → nLen</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cStr&gt;   - The input string &lt;cChars&gt; - The set of characters to find</div>
+<div class="d-it"><code>cStr</code>   - The input string <code>cChars</code> - The set of characters to find</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nLen     - The length of the prefix found.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>Return the length of the leading segment in the passed string &lt;cStr&gt; that consists solely of the characters in the character set &lt;cChars&gt;.</div>
+  <div><p>Return the length of the leading segment in the passed string <code>cStr</code> that consists solely of the characters in the character set <code>cChars</code>.</div>
   <div><p>If no characters in the the search set are found, the function shall return 0</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -611,16 +629,17 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <h4><code>gt_StrPBRK()</code></h4>
 <div class="d-ol">Return string after 1st char from a set</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_StrPBRK( &lt;cStr&gt;, &lt;cSet&gt; ) &rarr; cString</code></div>
+<div class="d-it d-sy">
+<code>gt_StrPBRK( &lt;cStr&gt;, &lt;cSet&gt; ) → cString</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cStr&gt;   - The input string &lt;cSet&gt;   - The set of characters to find</div>
+<div class="d-it"><code>cStr</code>   - The input string <code>cSet</code>   - The set of characters to find</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
-  <div>&lt;cString&gt;  - The input string after the first occurance of any</div>
-  <div>character from &lt;cSet&gt;</div>
+  <div><code>cString</code>  - The input string after the first occurance of any</div>
+  <div>character from <code>cSet</code></div>
 </div>
 <div class="d-d">Description</div>
-<div class="d-it">Return a string after the first occurance of any character from the input set &lt;cSet&gt;.</div>
+<div class="d-it">Return a string after the first occurance of any character from the input set <code>cSet</code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? gt_StrPBRK( &quot;This is a test&quot;, &quot;sa &quot; )  // prints &quot;s is a test&quot;
@@ -639,14 +658,15 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <h4><code>gt_StrRight()</code></h4>
 <div class="d-ol">Find length of a suffix of a string</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gt_StrRight( &lt;cStr&gt;, &lt;cChars&gt; ) &rarr; nLen</code></div>
+<div class="d-it d-sy">
+<code>gt_StrRight( &lt;cStr&gt;, &lt;cChars&gt; ) → nLen</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cStr&gt;   - The input string &lt;cChars&gt; - The set of characters to find</div>
+<div class="d-it"><code>cStr</code>   - The input string <code>cChars</code> - The set of characters to find</div>
 <div class="d-d">Returns</div>
-<div class="d-it">&lt;nLen&gt;     - The length of the prefix found.</div>
+<div class="d-it"><code>nLen</code>     - The length of the prefix found.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>Return the length of the trailing segment in the passed string &lt;cStr&gt; that consists solely of the characters in the character set &lt;cChars&gt;.</div>
+  <div><p>Return the length of the trailing segment in the passed string <code>cStr</code> that consists solely of the characters in the character set <code>cChars</code>.</div>
   <div><p>If no characters in the the search set are found, the function shall return 0</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -666,6 +686,6 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-30 17:36 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/03c4cbb">03c4cbb</a></div>
+<div>Generated by hbdoc on 2016-10-31 11:13 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/4757499">4757499</a></div>
 </footer>

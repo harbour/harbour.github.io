@@ -104,14 +104,15 @@
 <h4><code>gdImageArc()</code></h4>
 <div class="d-ol">Draws a partial ellipse centered at a given point.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageArc( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;s&gt;, &lt;e&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageArc( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;s&gt;, &lt;e&gt;, &lt;nColor&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;cx&gt;           - center point horizontal position &lt;cy&gt;           - center point vertical position &lt;w&gt;            - width &lt;h&gt;            - height &lt;s&gt;            - start degree &lt;e&gt;            - end degree &lt;nColor&gt;       - Color index</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>cx</code>           - center point horizontal position <code>cy</code>           - center point vertical position <code>w</code>            - width <code>h</code>            - height <code>s</code>            - start degree <code>e</code>            - end degree <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>gdImageArc() is used to draw a partial ellipse centered at the given point, with the specified width and height in pixels. The arc begins at the position in degrees specified by s and ends at the position specified by e. The arc is drawn in the color specified by the last argument. A circle can be drawn by beginning from 0 degrees and ending at 360 degrees, with width and height being equal. &lt;e&gt; must be greater than &lt;s&gt;. Values greater than 360 are interpreted modulo 360.</div>
+  <div><p>gdImageArc() is used to draw a partial ellipse centered at the given point, with the specified width and height in pixels. The arc begins at the position in degrees specified by s and ends at the position specified by e. The arc is drawn in the color specified by the last argument. A circle can be drawn by beginning from 0 degrees and ending at 360 degrees, with width and height being equal. <code>e</code> must be greater than <code>s</code>. Values greater than 360 are interpreted modulo 360.</div>
   <div><p>To set the color index you have to use gdImageColorAllocate() function.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -151,11 +152,12 @@ PROCEDURE Main()
 <h4><code>gdImageCreate()</code></h4>
 <div class="d-ol">Create a palette-based image in memory with no more that 256 colors.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageCreate( &lt;nPixelWidth&gt;, &lt;nPixelHeight&gt; ) &rarr; &lt;pImage&gt;</code></div>
+<div class="d-it d-sy">
+<code>gdImageCreate( &lt;nPixelWidth&gt;, &lt;nPixelHeight&gt; ) → &lt;pImage&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;nPixelWidth&gt;  - image width &lt;nPixelHeight&gt; - image height</div>
+<div class="d-it"><code>nPixelWidth</code>  - image width <code>nPixelHeight</code> - image height</div>
 <div class="d-d">Returns</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer</div>
+<div class="d-it"><code>pImage</code>       - Image pointer</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageCreate() creates an empty image in memory. This image has no more than 256 colors.</div>
@@ -187,11 +189,12 @@ PROCEDURE Main()
 <h4><code>gdImageCreateFromGD()</code></h4>
 <div class="d-ol">Load a GD image file.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageCreateFromGD( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) &rarr; &lt;pImage&gt;</code></div>
+<div class="d-it d-sy">
+<code>gdImageCreateFromGD( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → &lt;pImage&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;pPointer&gt;     - Memory image pointer &lt;nSize&gt;        - Image size</div>
+<div class="d-it"><code>cFile</code>        - Image file name <code>nHandle</code>      - File handle <code>pPointer</code>     - Memory image pointer <code>nSize</code>        - Image size</div>
 <div class="d-d">Returns</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer</div>
+<div class="d-it"><code>pImage</code>       - Image pointer</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageCreateFromGD() creates a GD image from a file or a handle or another image in memory.</div>
@@ -230,11 +233,12 @@ PROCEDURE Main()
 <h4><code>gdImageCreateFromGif()</code></h4>
 <div class="d-ol">Load a Gif image file.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageCreateFromGif( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) &rarr; &lt;pImage&gt;</code></div>
+<div class="d-it d-sy">
+<code>gdImageCreateFromGif( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → &lt;pImage&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;pPointer&gt;     - Memory image pointer &lt;nSize&gt;        - Image size</div>
+<div class="d-it"><code>cFile</code>        - Image file name <code>nHandle</code>      - File handle <code>pPointer</code>     - Memory image pointer <code>nSize</code>        - Image size</div>
 <div class="d-d">Returns</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer</div>
+<div class="d-it"><code>pImage</code>       - Image pointer</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageCreateFromGif() creates a GIF image from a file or a handle or another image in memory.</div>
@@ -273,11 +277,12 @@ PROCEDURE Main()
 <h4><code>gdImageCreateFromJpeg()</code></h4>
 <div class="d-ol">Load a JPEG image file.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageCreateFromJpeg( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) &rarr; &lt;pImage&gt;</code></div>
+<div class="d-it d-sy">
+<code>gdImageCreateFromJpeg( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → &lt;pImage&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;pPointer&gt;     - Memory image pointer &lt;nSize&gt;        - Image size</div>
+<div class="d-it"><code>cFile</code>        - Image file name <code>nHandle</code>      - File handle <code>pPointer</code>     - Memory image pointer <code>nSize</code>        - Image size</div>
 <div class="d-d">Returns</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer</div>
+<div class="d-it"><code>pImage</code>       - Image pointer</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageCreateFromJpeg() creates a JPEG image from a file or a handle or another image in memory.</div>
@@ -316,11 +321,12 @@ PROCEDURE Main()
 <h4><code>gdImageCreateFromPng()</code></h4>
 <div class="d-ol">Load a PNG image file.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageCreateFromPng( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) &rarr; &lt;pImage&gt;</code></div>
+<div class="d-it d-sy">
+<code>gdImageCreateFromPng( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → &lt;pImage&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;pPointer&gt;     - Memory image pointer &lt;nSize&gt;        - Image size</div>
+<div class="d-it"><code>cFile</code>        - Image file name <code>nHandle</code>      - File handle <code>pPointer</code>     - Memory image pointer <code>nSize</code>        - Image size</div>
 <div class="d-d">Returns</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer</div>
+<div class="d-it"><code>pImage</code>       - Image pointer</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageCreateFromPng() creates a PNG image from a file or a handle or another image in memory.</div>
@@ -359,11 +365,12 @@ PROCEDURE Main()
 <h4><code>gdImageCreateFromWBmp()</code></h4>
 <div class="d-ol">Load a WBmp image file.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageCreateFromWBmp( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) &rarr; &lt;pImage&gt;</code></div>
+<div class="d-it d-sy">
+<code>gdImageCreateFromWBmp( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → &lt;pImage&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;pPointer&gt;     - Memory image pointer &lt;nSize&gt;        - Image size</div>
+<div class="d-it"><code>cFile</code>        - Image file name <code>nHandle</code>      - File handle <code>pPointer</code>     - Memory image pointer <code>nSize</code>        - Image size</div>
 <div class="d-d">Returns</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer</div>
+<div class="d-it"><code>pImage</code>       - Image pointer</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageCreateFromWBmp() creates a WBmp image from a file or a handle or another image in memory.</div>
@@ -402,11 +409,12 @@ PROCEDURE Main()
 <h4><code>gdImageCreateTrueColor()</code></h4>
 <div class="d-ol">Create a true color image in memory.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageCreateTrueColor( &lt;nPixelWidth&gt;, &lt;nPixelHeight&gt; ) &rarr; &lt;pImage&gt;</code></div>
+<div class="d-it d-sy">
+<code>gdImageCreateTrueColor( &lt;nPixelWidth&gt;, &lt;nPixelHeight&gt; ) → &lt;pImage&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;nPixelWidth&gt;  - image width &lt;nPixelHeight&gt; - image height</div>
+<div class="d-it"><code>nPixelWidth</code>  - image width <code>nPixelHeight</code> - image height</div>
 <div class="d-d">Returns</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer</div>
+<div class="d-it"><code>pImage</code>       - Image pointer</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>gdImageCreateTrueColor() creates an empty image in memory. This image has true colors.</div>
@@ -438,9 +446,10 @@ PROCEDURE Main()
 <h4><code>gdImageDashedLine()</code></h4>
 <div class="d-ol">Draws a dashed line between two end points (x1, y1 and x2, y2) with a particular color index.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageDashedLine( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageDashedLine( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;x1&gt;           - 1st point horizontal position &lt;y1&gt;           - 1st point vertical position &lt;x2&gt;           - 2nd point horizontal position &lt;y2&gt;           - 2nd point vertical position &lt;nColor&gt;       - Color index</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>x1</code>           - 1st point horizontal position <code>y1</code>           - 1st point vertical position <code>x2</code>           - 2nd point horizontal position <code>y2</code>           - 2nd point vertical position <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -485,9 +494,10 @@ PROCEDURE Main()
 <h4><code>gdImageFill()</code></h4>
 <div class="d-ol">floods a portion of the image with the specified color.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageFill( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageFill( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nColor&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;x&gt;            - start point horizontal position &lt;y&gt;            - start point vertical position &lt;nColor&gt;       - Color index of filling color</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>x</code>            - start point horizontal position <code>y</code>            - start point vertical position <code>nColor</code>       - Color index of filling color</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -536,16 +546,17 @@ PROCEDURE Main()
 <h4><code>gdImageFilledArc()</code></h4>
 <div class="d-ol">Draws a partial filled ellipse centered at a given point.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageArc( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;s&gt;, &lt;e&gt;, &lt;nColor&gt;, &lt;nStyle&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageArc( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;s&gt;, &lt;e&gt;, &lt;nColor&gt;, &lt;nStyle&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;cx&gt;           - center point horizontal position &lt;cy&gt;           - center point vertical position &lt;w&gt;            - width &lt;h&gt;            - height &lt;s&gt;            - start degree &lt;e&gt;            - end degree &lt;nColor&gt;       - Color index &lt;nStyle&gt;       - fill style</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>cx</code>           - center point horizontal position <code>cy</code>           - center point vertical position <code>w</code>            - width <code>h</code>            - height <code>s</code>            - start degree <code>e</code>            - end degree <code>nColor</code>       - Color index <code>nStyle</code>       - fill style</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>gdImageFilledArc() is used to draw a partial ellipse centered at the given point, with the specified width and height in pixels. The arc begins at the position in degrees specified by s and ends at the position specified by e. The arc is drawn in the color specified by the last argument. A circle can be drawn by beginning from 0 degrees and ending at 360 degrees, with width and height being equal. &lt;e&gt; must be greater than &lt;s&gt;. Values greater than 360 are interpreted modulo 360.</div>
+  <div><p>gdImageFilledArc() is used to draw a partial ellipse centered at the given point, with the specified width and height in pixels. The arc begins at the position in degrees specified by s and ends at the position specified by e. The arc is drawn in the color specified by the last argument. A circle can be drawn by beginning from 0 degrees and ending at 360 degrees, with width and height being equal. <code>e</code> must be greater than <code>s</code>. Values greater than 360 are interpreted modulo 360.</div>
   <div><p>To set the color index you have to use gdImageColorAllocate() function.</div>
-  <div><p>Last parameter &lt;nStyle&gt; is a bitwise OR of the following possibilities: gdArc gdChord gdPie (synonym for gdArc) gdNoFill gdEdged</div>
+  <div><p>Last parameter <code>nStyle</code> is a bitwise OR of the following possibilities: gdArc gdChord gdPie (synonym for gdArc) gdNoFill gdEdged</div>
   <div><p>gdArc and gdChord are mutually exclusive; gdChord just connects the starting and ending angles with a straight line, while gdArc produces a rounded edge. gdPie is a synonym for gdArc. gdNoFill indicates that the arc or chord should be outlined, not filled. gdEdged, used together with gdNoFill, indicates that the beginning and ending angles should be connected to the center; this is a good way to outline (rather than fill) a 'pie slice'</div>
   <div><p>these constants are defined in gd.ch</div>
 </div>
@@ -588,9 +599,10 @@ PROCEDURE Main()
 <h4><code>gdImageFilledEllipse()</code></h4>
 <div class="d-ol">Draws a filled ellipse centered at a given point.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageFilledEllipse( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageFilledEllipse( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;nColor&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;cx&gt;           - center point horizontal position &lt;cy&gt;           - center point vertical position &lt;w&gt;            - width &lt;h&gt;            - height &lt;nColor&gt;       - Color index</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>cx</code>           - center point horizontal position <code>cy</code>           - center point vertical position <code>w</code>            - width <code>h</code>            - height <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -635,12 +647,13 @@ PROCEDURE Main()
 <h4><code>gdImageFilledPolygon()</code></h4>
 <div class="d-ol">Draws a filled polygon with verticies (at least 3) with a particular color index.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageFilledPolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageFilledPolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;aVerticies&gt;   - Array of point array { &lt;x&gt;, &lt;y&gt; } where</div>
-  <div>&lt;x&gt; is horizontal position &lt;y&gt; is vertical position</div>
-  <div>&lt;nColor&gt;       - Color index</div>
+  <div><code>pImage</code>       - Image pointer <code>aVerticies</code>   - Array of point array { <code>x</code>, <code>y</code> } where</div>
+  <div><code>x</code> is horizontal position <code>y</code> is vertical position</div>
+  <div><code>nColor</code>       - Color index</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
@@ -690,9 +703,10 @@ PROCEDURE Main()
 <h4><code>gdImageFilledRectangle()</code></h4>
 <div class="d-ol">Draws a filled rectangle with a particular color index.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageFilledRectangle( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageFilledRectangle( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;x1&gt;           - upper left point horizontal position &lt;y1&gt;           - upper left point vertical position &lt;x2&gt;           - lower right point horizontal position &lt;y2&gt;           - lower right point vertical position &lt;nColor&gt;       - Color index</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>x1</code>           - upper left point horizontal position <code>y1</code>           - upper left point vertical position <code>x2</code>           - lower right point horizontal position <code>y2</code>           - lower right point vertical position <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -737,9 +751,10 @@ PROCEDURE Main()
 <h4><code>gdImageFillToBorder()</code></h4>
 <div class="d-ol">floods a portion of the image with the specified color.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageFillToBorder( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nBorder&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageFillToBorder( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nBorder&gt;, &lt;nColor&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;x&gt;            - start point horizontal position &lt;y&gt;            - start point vertical position &lt;nBorder&gt;      - Color index where fill stops &lt;nColor&gt;       - Color index of filling color</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>x</code>            - start point horizontal position <code>y</code>            - start point vertical position <code>nBorder</code>      - Color index where fill stops <code>nColor</code>       - Color index of filling color</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -788,9 +803,10 @@ PROCEDURE Main()
 <h4><code>gdImageGD()</code></h4>
 <div class="d-ol">Save a GD image.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageGD( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageGD( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>cFile</code>        - Image file name <code>nHandle</code>      - File handle</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -828,9 +844,10 @@ PROCEDURE Main()
 <h4><code>gdImageGif()</code></h4>
 <div class="d-ol">Save a GIF image.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageGif( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageGif( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>cFile</code>        - Image file name <code>nHandle</code>      - File handle</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -868,10 +885,11 @@ PROCEDURE Main()
 <h4><code>gdImageJpeg()</code></h4>
 <div class="d-ol">Save a JPEG image.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageJpeg( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nCompressionLevel&gt; ] ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageJpeg( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nCompressionLevel&gt; ] ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;nCompressionLevel&gt; - a numeric value between 0=max compression and 95=min compression (best quality)</div>
+  <div><code>pImage</code>       - Image pointer <code>cFile</code>        - Image file name <code>nHandle</code>      - File handle <code>nCompressionLevel</code> - a numeric value between 0=max compression and 95=min compression (best quality)</div>
   <div>default is -1=auto</div>
 </div>
 <div class="d-d">Returns</div>
@@ -911,9 +929,10 @@ PROCEDURE Main()
 <h4><code>gdImageLine()</code></h4>
 <div class="d-ol">Draws a line between two end points (x1, y1 and x2, y2) with a particular color index.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageLine( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageLine( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;x1&gt;           - 1st point horizontal position &lt;y1&gt;           - 1st point vertical position &lt;x2&gt;           - 2nd point horizontal position &lt;y2&gt;           - 2nd point vertical position &lt;nColor&gt;       - Color index</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>x1</code>           - 1st point horizontal position <code>y1</code>           - 1st point vertical position <code>x2</code>           - 2nd point horizontal position <code>y2</code>           - 2nd point vertical position <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -958,12 +977,13 @@ PROCEDURE Main()
 <h4><code>gdImageOpenPolygon()</code></h4>
 <div class="d-ol">Draws an open polygon with verticies (at least 3) with a particular color index.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageOpenPolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageOpenPolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;aVerticies&gt;   - Array of point array { &lt;x&gt;, &lt;y&gt; } where</div>
-  <div>&lt;x&gt; is horizontal position &lt;y&gt; is vertical position</div>
-  <div>&lt;nColor&gt;       - Color index</div>
+  <div><code>pImage</code>       - Image pointer <code>aVerticies</code>   - Array of point array { <code>x</code>, <code>y</code> } where</div>
+  <div><code>x</code> is horizontal position <code>y</code> is vertical position</div>
+  <div><code>nColor</code>       - Color index</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
@@ -1013,10 +1033,11 @@ PROCEDURE Main()
 <h4><code>gdImagePng()</code></h4>
 <div class="d-ol">Save a PNG image.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImagePng( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nCompressionLevel&gt; ] ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImagePng( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nCompressionLevel&gt; ] ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;nCompressionLevel&gt; - a numeric value between 0=no compression and 9=max compression</div>
+  <div><code>pImage</code>       - Image pointer <code>cFile</code>        - Image file name <code>nHandle</code>      - File handle <code>nCompressionLevel</code> - a numeric value between 0=no compression and 9=max compression</div>
   <div>default is -1=auto</div>
 </div>
 <div class="d-d">Returns</div>
@@ -1056,12 +1077,13 @@ PROCEDURE Main()
 <h4><code>gdImagePolygon()</code></h4>
 <div class="d-ol">Draws a closed polygon with verticies (at least 3) with a particular color index.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImagePolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImagePolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div>&lt;pImage&gt;       - Image pointer &lt;aVerticies&gt;   - Array of point array { &lt;x&gt;, &lt;y&gt; } where</div>
-  <div>&lt;x&gt; is horizontal position &lt;y&gt; is vertical position</div>
-  <div>&lt;nColor&gt;       - Color index</div>
+  <div><code>pImage</code>       - Image pointer <code>aVerticies</code>   - Array of point array { <code>x</code>, <code>y</code> } where</div>
+  <div><code>x</code> is horizontal position <code>y</code> is vertical position</div>
+  <div><code>nColor</code>       - Color index</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
@@ -1111,9 +1133,10 @@ PROCEDURE Main()
 <h4><code>gdImageRectangle()</code></h4>
 <div class="d-ol">Draws a rectangle with a particular color index.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageRectangle( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageRectangle( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;x1&gt;           - upper left point horizontal position &lt;y1&gt;           - upper left point vertical position &lt;x2&gt;           - lower right point horizontal position &lt;y2&gt;           - lower right point vertical position &lt;nColor&gt;       - Color index</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>x1</code>           - upper left point horizontal position <code>y1</code>           - upper left point vertical position <code>x2</code>           - lower right point horizontal position <code>y2</code>           - lower right point vertical position <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -1158,9 +1181,10 @@ PROCEDURE Main()
 <h4><code>gdImageSetAntiAliased()</code></h4>
 <div class="d-ol">specify the actual foreground color to be used when drawing antialiased lines.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageSetAntiAliased( &lt;pImage&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageSetAntiAliased( &lt;pImage&gt;, &lt;nColor&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;nColor&gt;       - Color index of filling color</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>nColor</code>       - Color index of filling color</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -1214,9 +1238,10 @@ PROCEDURE Main()
 <h4><code>gdImageSetAntiAliasedDontBlend()</code></h4>
 <div class="d-ol">indicate the special color that the foreground should stand out more clearly against.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageSetAntiAliasedDontBlend( &lt;pImage&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageSetAntiAliasedDontBlend( &lt;pImage&gt;, &lt;nColor&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;nColor&gt;       - Color index of filling color</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>nColor</code>       - Color index of filling color</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -1271,9 +1296,10 @@ PROCEDURE Main()
 <h4><code>gdImageSetBrush()</code></h4>
 <div class="d-ol">A &quot;brush&quot; is an image used to draw wide, shaped strokes in another image.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageSetBrush( &lt;pImage&gt;, &lt;pBrush&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageSetBrush( &lt;pImage&gt;, &lt;pBrush&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;pBrush&gt;       - Brush Image pointer</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>pBrush</code>       - Brush Image pointer</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -1326,9 +1352,10 @@ PROCEDURE Main()
 <h4><code>gdImageSetPixel()</code></h4>
 <div class="d-ol">Set a pixel to a particular color index.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageSetPixel( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nColor&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageSetPixel( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nColor&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;x&gt;            - Horizontal position &lt;y&gt;            - Vertical position &lt;nColor&gt;       - Color index</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>x</code>            - Horizontal position <code>y</code>            - Vertical position <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -1373,9 +1400,10 @@ PROCEDURE Main()
 <h4><code>gdImageSetStyle()</code></h4>
 <div class="d-ol">set any desired series of colors to be repeated during the drawing of a line.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageSetStyle( &lt;pImage&gt;, &lt;aStyle&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageSetStyle( &lt;pImage&gt;, &lt;aStyle&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;aStyle&gt;       - Array of colors and special colors used to &quot;style&quot; a line</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>aStyle</code>       - Array of colors and special colors used to &quot;style&quot; a line</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -1444,9 +1472,10 @@ PROCEDURE Main()
 <h4><code>gdImageSetThickness()</code></h4>
 <div class="d-ol">determines the width of lines drawn in pixels.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageSetThickness( &lt;pImage&gt;, &lt;nThickness&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageSetThickness( &lt;pImage&gt;, &lt;nThickness&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;nThickness&gt;   - width of line in pixel</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>nThickness</code>   - width of line in pixel</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -1494,9 +1523,10 @@ PROCEDURE Main()
 <h4><code>gdImageSetTile()</code></h4>
 <div class="d-ol">A &quot;tile&quot; is an image used to fill an area with a repeated pattern.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageSetTile( &lt;pImage&gt;, &lt;pTile&gt; ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageSetTile( &lt;pImage&gt;, &lt;pTile&gt; ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;pTile&gt;        - Tile Image pointer</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>pTile</code>        - Tile Image pointer</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -1551,9 +1581,10 @@ PROCEDURE Main()
 <h4><code>gdImageWBmp()</code></h4>
 <div class="d-ol">Save a WBMP image.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it"><code>gdImageWBmp( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nFGcolor&gt; ] ) &rarr; NIL</code></div>
+<div class="d-it d-sy">
+<code>gdImageWBmp( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nFGcolor&gt; ] ) → NIL</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it">&lt;pImage&gt;       - Image pointer &lt;cFile&gt;        - Image file name &lt;nHandle&gt;      - File handle &lt;nFGcolor&gt;     - foreground color value to be used as foreground, the others are background</div>
+<div class="d-it"><code>pImage</code>       - Image pointer <code>cFile</code>        - Image file name <code>nHandle</code>      - File handle <code>nFGcolor</code>     - foreground color value to be used as foreground, the others are background</div>
 <div class="d-d">Returns</div>
 <div class="d-it">NIL</div>
 <div class="d-d">Description</div>
@@ -1602,6 +1633,6 @@ PROCEDURE Main()
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-30 17:36 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/03c4cbb">03c4cbb</a></div>
+<div>Generated by hbdoc on 2016-10-31 11:13 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/4757499">4757499</a></div>
 </footer>
