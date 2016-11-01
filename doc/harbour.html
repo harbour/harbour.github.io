@@ -566,7 +566,7 @@
   <div><p>Clipper is a trademark of Computer Associates and will often be referred to as CA-Cl*pper within Harbour documents. Regardless of this variant, Clipper is recognized as Computer Associates' trademark.</div>
   <div><p>Harbour is a free software compiler for the xBase superset language often referred to as Clipper (the language that is implemented by the compiler Clipper). The goal of Harbour is to produce a cross platform CA-Cl*pper compatible compiler.</div>
   <div><p>The Harbour website is at <a href="https://vszakats.github.io/harbour-core/">https://vszakats.github.io/harbour-core/</a>. If you have any problem with this copy of Harbour please visit our web site and ensure that you are using the latest release.</div>
-  <div><p>If you are reading this file as part of a source distribution of Harbour you probably want to start by reading <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/doc/dirstruc.txt">doc/dirstruc.txt</a></code> because this is your map to the Harbour source directories.</div>
+  <div><p>If you are reading this file as part of a source distribution of Harbour you probably want to start by reading <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/doc/dirstruc.txt">doc/dirstruc.txt</a></code> because this is your map to the Harbour source directories.</div>
   <div><p>Harbour is a superset of Clipper and is backwards compatible with nearly 100% of all Clipper 5.2x or 5.3 code. Most Clipper S'87 code will also compile and run fine, but may require some modifications to run well.</div>
 </div>
 <div class="d-d">Tag(s)</div>
@@ -725,7 +725,7 @@
   <div><p>In practice, CA-Cl*pper will call the <code>COUNT()</code> function two times: the first time before addition and the second one after addition. In Harbour, <code>COUNT()</code> will be called only once, before addition.</div>
   <div><p>The Harbour (non-strict) method is:</div>
   <div><p>1) faster 2) it guarantees that the same instance variable of the same object will be changed</div>
-  <div><p>(See also: <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hbexpra.c">include/hbexpra.c</a></code>, <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hbexprb.c">include/hbexprb.c</a></code>)</div>
+  <div><p>(See also: <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbexpra.c">include/hbexpra.c</a></code>, <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbexprb.c">include/hbexprb.c</a></code>)</div>
   <div><p><strong>Initialization of static variables      </strong></div>
   <div><p><hr></div>
   <div><p>There is a difference in the initialization of static variables that are initialized with a codeblock that refers to a local variable. For example:</div>
@@ -781,7 +781,7 @@ PROCEDURE Main()
   <div><p>* <code><a href="#procname">ProcName()</a></code> support for class Method names.</div>
   <div><p>Class Methods can be retrieved from the call stack.</div>
   <div><p>* <code><a href="#memory">Memory()</a></code> has new return values.</div>
-  <div><p>See <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hbmemory.ch">hbmemory.ch</a></code></div>
+  <div><p>See <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmemory.ch">hbmemory.ch</a></code></div>
   <div><p>* <code><a href="#transform">Transform()</a></code> → new function in format string</div>
   <div><p>@0      Make a zero padded string out of the number.</div>
   <div><p>* <code><a href="#stod">SToD()</a></code> → dDate</div>
@@ -795,7 +795,7 @@ PROCEDURE Main()
   <div><p>- Class TDbMenu implement both pulldown and popup menus.</div>
   <div><p><strong>RTL enhanced functionality:</strong> <hr></div>
   <div><p>- hb_vfDirSpace( <code>nDir</code>, <code>nType</code> )</div>
-  <div><p>The second parameter is a Harbour (optional) parameter and indicates the type of diskinfo being requested.  See <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/doc/en/diskspac.txt">doc/en/diskspac.txt</a></code> for info.</div>
+  <div><p>The second parameter is a Harbour (optional) parameter and indicates the type of diskinfo being requested.  See <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/doc/en/diskspac.txt">doc/en/diskspac.txt</a></code> for info.</div>
 </div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Document</div>
@@ -870,9 +870,9 @@ pItem = hb_itemNew( hb_param( 1, IT_BLOCK ) );
 <div class="d-it"><code>xRetVal</code> A value that was returned from called function.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function can be called either by the Harbour compiler or by user. The compiler always passes the item of <code>IT_SYMBOL</code> type that stores the name of procedure specified in DO <code>proc</code> <code>WITH</code> ... statement.</div>
+  <div><p>This function can be called either by the Harbour compiler or by user. The compiler always passes the item of <code>IT_SYMBOL</code> type that stores the name of procedure specified in <code>DO &lt;proc&gt; <code>WITH</code> ...</code> statement.</div>
   <div><p>If called procedure/function doesn't exist then a runtime error is generated.</div>
-  <div><p>This function can be used as replacement of macro operator. It is also used internally to implement DO <code>proc</code> <code>WITH</code> <code>args...</code> In this case <code>xFuncProc</code> is of type <code>HB_SYMB</code>.</div>
+  <div><p>This function can be used as replacement of macro operator. It is also used internally to implement <code>DO &lt;proc&gt; <code>WITH</code> &lt;args...&gt;</code> In this case <code>xFuncProc</code> is of type <code>HB_SYMB</code>.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -977,11 +977,9 @@ PROCEDURE Test( xExp )
 <div class="d-it">This function is added to the RTL for full compatibility. It always returns an empty string.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   ? ProcFile()
-   ? ProcFile( NIL )
-   ? ProcFile( 2 )
-   RETURN
+? ProcFile()
+? ProcFile( NIL )
+? ProcFile( 2 )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -1010,10 +1008,8 @@ PROCEDURE Main()
 <div class="d-it">This function looks at the top of the stack and gets the current line number of the executed function if no arguments are passed. Otherwise it returns the line number of the function or procedure at <code>nLevel</code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   ? ProcLine( 0 )
-   ? ProcName( 2 )
-   RETURN
+? ProcLine( 0 )
+? ProcName( 2 )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -1244,17 +1240,15 @@ ADel( aArray, 2 ) // Result: aArray is { &quot;Harbour&quot;, &quot;Power&quot;,
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL a := { 10, 20, 30 }
-   AEval( a, {| e, n | QOut( e * n + 1 , a[ n ] ) } )
-   QOut( a[ 1 ], a[ 2 ], a[ 3 ] )  // array elements unchanged
-   ? &quot;----&quot;
-   AEval( a, {| e, n | QOut( e * n + 1, a[ n ] *= n + 1 ) }, 2, 1 )
-   // here the 2nd element been changed, because we've explicitly used
-   // its pointer 'a[ n ] *= ...' into array.
-   QOut( a[ 1 ], a[ 2 ], a[ 3 ] )
-   WAIT
-   RETURN
+LOCAL a := { 10, 20, 30 }
+AEval( a, {| e, n | QOut( e * n + 1 , a[ n ] ) } )
+QOut( a[ 1 ], a[ 2 ], a[ 3 ] )  // array elements unchanged
+? &quot;----&quot;
+AEval( a, {| e, n | QOut( e * n + 1, a[ n ] *= n + 1 ) }, 2, 1 )
+// here the 2nd element been changed, because we've explicitly used
+// its pointer 'a[ n ] *= ...' into array.
+QOut( a[ 1 ], a[ 2 ], a[ 3 ] )
+WAIT
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -1364,14 +1358,12 @@ AIns( aArray, 4 )
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL aArray := Array( 10 )
-   LOCAL x
-   FOR x := 1 TO Len( aArray )
-      aArray[ x ] := Array( x )
-   NEXT
-   // Result is: { { NIL }, { NIL, NIL }, ... }
-   RETURN
+LOCAL aArray := Array( 10 )
+LOCAL x
+FOR x := 1 TO Len( aArray )
+   aArray[ x ] := Array( x )
+NEXT
+// Result is: { { NIL }, { NIL, NIL }, ... }
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -1475,13 +1467,13 @@ ASize( aArray, 1 )         // Result: aArray is { 1 }
   <div><code>nStart</code> The first element to start the sort from, default is 1.</div>
   <div><code>nCount</code> Number of elements starting from <code>nStart</code> to sort, default</div>
   <div>is all elements.</div>
-  <div><span class="d-key">bSort</span> Code block for sorting order, default is ascending order <code>{| x, y | x &lt; y }</code>. The code block should accept two parameters and must return <code>.T.</code> if the sort is in order, <code>.F.</code> if not.</div>
+  <div><code>bSort</code> Code block for sorting order, default is ascending order <code>{| x, y | x &lt; y }</code>. The code block should accept two parameters and must return <code>.T.</code> if the sort is in order, <code>.F.</code> if not.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>aArray</code> reference to the now sorted <code>aArray</code> or <code>NIL</code> if the passed <code>aArray</code> is not an array.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p><code><a href="#asort">ASort()</a></code> sort all or part of a given array. If <span class="d-key">bSort</span> is omitted, the function expect <code>aArray</code> to be one dimensional array containing single data type (one of: Character, Date, Logical, Numeric) and sort this array in ascending order: Character are sorted by their <code>ASCII</code> value, Dates are sorted chronologically, Logical put <code>.F.</code> values before <code>.T.</code>, Numeric are sorted by their value. If <span class="d-key">bSort</span> is specified, it is used to handle the sorting order. With each time the block is evaluate, two array elements are passed to the code block, and <span class="d-key">bSort</span> must return a logical value that state if those elements are in order (<code>.T.</code>) or not (<code>.F.</code>). Using this block you can sort multidimensional array, descending orders or even (but why would you want to do that) sort array that contain different data type.</div>
+  <div><p><code><a href="#asort">ASort()</a></code> sort all or part of a given array. If <code>bSort</code> is omitted, the function expect <code>aArray</code> to be one dimensional array containing single data type (one of: Character, Date, Logical, Numeric) and sort this array in ascending order: Character are sorted by their <code>ASCII</code> value, Dates are sorted chronologically, Logical put <code>.F.</code> values before <code>.T.</code>, Numeric are sorted by their value. If <code>bSort</code> is specified, it is used to handle the sorting order. With each time the block is evaluate, two array elements are passed to the code block, and <code>bSort</code> must return a logical value that state if those elements are in order (<code>.T.</code>) or not (<code>.F.</code>). Using this block you can sort multidimensional array, descending orders or even (but why would you want to do that) sort array that contain different data type.</div>
   <div><p>Codeblock calling frequency and order differs from CA-Cl*pper, since Harbour uses a different (faster) sorting algorithm (quicksort).</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -1647,13 +1639,11 @@ hb_AIns( aArray, 2,  &quot;is&quot;, .T. ) // --&gt; { &quot;Harbour&quot;, &quo
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL a := { &quot;there&quot;, &quot;here&quot; }
-   ? AScan( a, &quot;he&quot; ) // --&gt; 2
-   ? hb_AScan( a, &quot;he&quot;,,,.F.) // --&gt; 2
-   ? hb_AScan( a, &quot;he&quot;,,,.T.) // --&gt; 0
-   WAIT
-   RETURN
+LOCAL a := { &quot;there&quot;, &quot;here&quot; }
+? AScan( a, &quot;he&quot; ) // --&gt; 2
+? hb_AScan( a, &quot;he&quot;,,,.F.) // --&gt; 2
+? hb_AScan( a, &quot;he&quot;,,,.T.) // --&gt; 0
+WAIT
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -2285,7 +2275,7 @@ dbCreate( &quot;onlyname.dbf&quot;, __dbStructFilter( aStruct, aList ) )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/dbstruct.ch">dbstruct.ch</a></code> Library is rdd</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/dbstruct.ch">dbstruct.ch</a></code> Library is rdd</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Database</div>
 <div class="d-d">See also</div>
@@ -2354,12 +2344,12 @@ dbCreate( &quot;onlyname.dbf&quot;, __FLedit( aStruct, aList ) )
 <div class="d-d">Compliance</div>
 <div class="d-it">
   <div>CA-Cl*pper has internal undocumented function named <code><a href="#__fledit">__FLedit()</a></code>, in Harbour we name it <code><a href="#__dbstructfilter">__dbStructFilter()</a></code>. The new name gives a better description of what this function does. In Harbour <code><a href="#__fledit">__FLedit()</a></code> simply calls <code><a href="#__dbstructfilter">__dbStructFilter()</a></code> and therefor the latter is the recommended function to use.</div>
-  <div>This function is only visible if <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/src/rdd/dbstrux.prg">src/rdd/dbstrux.prg</a></code> was compiled with the <code>HB_CLP_UNDOC</code> flag.</div>
+  <div>This function is only visible if <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/src/rdd/dbstrux.prg">src/rdd/dbstrux.prg</a></code> was compiled with the <code>HB_CLP_UNDOC</code> flag.</div>
 </div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/dbstruct.ch">dbstruct.ch</a></code> Library is rdd</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/dbstruct.ch">dbstruct.ch</a></code> Library is rdd</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Database</div>
 <div class="d-d">See also</div>
@@ -2444,15 +2434,11 @@ PROCEDURE PrintFields( nCount )
 <div class="d-it">This function returns the alias of the work area indicated by <code>nWorkArea</code> If <code>nWorkArea</code> is not provided, the alias of the current work area is returned.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-
-   USE test
-   SELECT 0
-   ? iif( Alias() == &quot;&quot;, &quot;No Name&quot;, Alias() )
-   ? test-&gt;( Alias() )
-   ? Alias( 1 )
-
-   RETURN
+USE test
+SELECT 0
+? iif( Alias() == &quot;&quot;, &quot;No Name&quot;, Alias() )
+? test-&gt;( Alias() )
+? Alias( 1 )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -2479,16 +2465,14 @@ PROCEDURE Main()
 <div class="d-it">This function determines if the beginning of the file marker has been reached. If so, the function will return a logical true (<code>.T.</code>); otherwise, a logical false (<code>.F.</code>) will be returned. By default, <code><a href="#bof">Bof()</a></code> will apply to the currently selected database unless the function is preceded by an alias</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   USE test NEW
-   ? &quot;Is Bof()&quot;, Bof()
-   dbGoTop()
-   DO WHILE ! Bof()
-      dbSkip( -1 )
-   ENDDO
-   ? &quot;Is Bof()&quot;, Bof()
-   dbCloseArea()
-   RETURN
+USE test NEW
+? &quot;Is Bof()&quot;, Bof()
+dbGoTop()
+DO WHILE ! Bof()
+   dbSkip( -1 )
+ENDDO
+? &quot;Is Bof()&quot;, Bof()
+dbCloseArea()
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -2521,13 +2505,11 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL cName := &quot;Harbour&quot;, nId := 10
-   USE test
-   test-&gt;( dbAppend() )
-   test-&gt;Name := cName
-   test-&gt;Id   := nId
-   RETURN
+LOCAL cName := &quot;Harbour&quot;, nId := 10
+USE test
+test-&gt;( dbAppend() )
+test-&gt;Name := cName
+test-&gt;Id   := nId
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -2554,12 +2536,10 @@ PROCEDURE Main()
 <div class="d-it">This function clears any active filter condiction for the current or selected work area.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   USE test
-   SET FILTER TO hb_LeftEq( test-&gt;Name, &quot;An&quot; )
-   dbEdit()
-   Test-&gt;( dbClearFilter() )
-   RETURN
+USE test
+SET FILTER TO hb_LeftEq( test-&gt;Name, &quot;An&quot; )
+dbEdit()
+Test-&gt;( dbClearFilter() )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -2586,13 +2566,11 @@ PROCEDURE Main()
 <div class="d-it">This function close all open databases and all associated indexes. In addition, it closes all format files and moves the work area pointer to the first position</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   USE test NEW
-   dbEdit()
-   USE test1 NEW
-   dbEdit()
-   dbCloseAll()
-   RETURN
+USE test NEW
+dbEdit()
+USE test1 NEW
+dbEdit()
+dbCloseAll()
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -2617,11 +2595,9 @@ PROCEDURE Main()
 <div class="d-it">This function  will close any database open in the selected or aliased work area.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   USE test
-   dbEdit()
-   Test-&gt;( dbCloseArea() )
-   RETURN
+USE test
+dbEdit()
+Test-&gt;( dbCloseArea() )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -2646,23 +2622,21 @@ PROCEDURE Main()
 <div class="d-it">This function updates all of the information for a give, selected, or active workarea. This operation includes all database and index buffers for that work area only. This function does not update all open work areas.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL cName := Space( 40 )
-   LOCAL nId := 0
+LOCAL cName := Space( 40 )
+LOCAL nId := 0
 
-   USE test EXCLUSIVE NEW
+USE test EXCLUSIVE NEW
 
-   @ 10, 10 GET cName
-   @ 11, 10 GET nId
-   READ
+@ 10, 10 GET cName
+@ 11, 10 GET nId
+READ
 
-   IF Updated()
-      dbAppend()
-      test-&gt;Name := cName
-      test-&gt;Id   := nId
-      dbCommit()
-   ENDIF
-   RETURN
+IF Updated()
+   dbAppend()
+   test-&gt;Name := cName
+   test-&gt;Id   := nId
+   dbCommit()
+ENDIF
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -2687,28 +2661,26 @@ PROCEDURE Main()
 <div class="d-it">This function performs a hard-disk write for all work areas. Before the disk write is performed, all buffers are flushed. open work areas.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL cName := Space( 40 )
-   LOCAL nId := 0
+LOCAL cName := Space( 40 )
+LOCAL nId := 0
 
-   USE test EXCLUSIVE NEW
-   USE testid NEW INDEX testid
+USE test EXCLUSIVE NEW
+USE testid NEW INDEX testid
 
-   @ 10, 10 GET cName
-   @ 11, 10 GET nId
-   READ
+@ 10, 10 GET cName
+@ 11, 10 GET nId
+READ
 
-   IF Updated()
-      dbAppend()
-      test-&gt;Name := cName
-      test-&gt;Id   := nId
-      IF ! testid-&gt;( dbSeek( nId ) )
-         testid-&gt;( dbAppend() )
-         testid-&gt;Id := nId
-      ENDIF
+IF Updated()
+   dbAppend()
+   test-&gt;Name := cName
+   test-&gt;Id   := nId
+   IF ! testid-&gt;( dbSeek( nId ) )
+      testid-&gt;( dbAppend() )
+      testid-&gt;Id := nId
    ENDIF
-   dbCommitAll()
-   RETURN
+ENDIF
+dbCommitAll()
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -2761,28 +2733,25 @@ dbCreate( &lt;cFile&gt;, &lt;aStruct&gt;, [&lt;cRDD&gt;], [&lt;lKeepOpen&gt;], [
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL aStruct := { ;
-      { &quot;CHARACTER&quot;, &quot;C&quot;, 25, 0 }, ;
-      { &quot;NUMERIC&quot;,   &quot;N&quot;,  8, 0 }, ;
-      { &quot;DOUBLE&quot;,    &quot;N&quot;,  8, 2 }, ;
-      { &quot;DATE&quot;,      &quot;D&quot;,  8, 0 }, ;
-      { &quot;LOGICAL&quot;,   &quot;L&quot;,  1, 0 }, ;
-      { &quot;MEMO1&quot;,     &quot;M&quot;, 10, 0 }, ;
-      { &quot;MEMO2&quot;,     &quot;M&quot;, 10, 0 } }
+LOCAL aStruct := { ;
+   { &quot;CHARACTER&quot;, &quot;C&quot;, 25, 0 }, ;
+   { &quot;NUMERIC&quot;,   &quot;N&quot;,  8, 0 }, ;
+   { &quot;DOUBLE&quot;,    &quot;N&quot;,  8, 2 }, ;
+   { &quot;DATE&quot;,      &quot;D&quot;,  8, 0 }, ;
+   { &quot;LOGICAL&quot;,   &quot;L&quot;,  1, 0 }, ;
+   { &quot;MEMO1&quot;,     &quot;M&quot;, 10, 0 }, ;
+   { &quot;MEMO2&quot;,     &quot;M&quot;, 10, 0 } }
 
-   REQUEST DBFCDX
+REQUEST DBFCDX
 
-   dbCreate( &quot;testdbf&quot;, aStruct, &quot;DBFCDX&quot;, .T., &quot;MYALIAS&quot; )
-
-   RETURN
+dbCreate( &quot;testdbf&quot;, aStruct, &quot;DBFCDX&quot;, .T., &quot;MYALIAS&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">This function is not CA-Cl*pper compliant</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rdd Header is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/dbstruct.ch">dbstruct.ch</a></code></div>
+<div class="d-it">Library is rdd Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/dbstruct.ch">dbstruct.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Database</div>
 <div class="d-d">See also</div>
@@ -2998,14 +2967,13 @@ dbRecall()
 <div class="d-it">This function attempts to lock a record which is identified by <code>xIdentity</code> in the active data set. If the lock is successful the function will return a logical true (<code>.T.</code>) value; otherwise a logical false (<code>.F.</code>) will be returned. If <code>xIdentity</code> is not passed it will be assumed to lock the current active record/data item.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL x
-   USE test NEW
-   FOR x := 1 TO LastRec()
-      IF ! dbRLock()
-         dbUnlock()
-      ENDIF
-   NEXT
+LOCAL x
+USE test NEW
+FOR x := 1 TO LastRec()
+   IF ! dbRLock()
+      dbUnlock()
+   ENDIF
+NEXT
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -3032,18 +3000,16 @@ PROCEDURE Main()
 <div class="d-it">This function will return an array of locked records in a given and active work area. If the return array is an empty array (meaning no elements in it), then there are no locked records in that work area.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL aList, x
-   USE test NEW
-   dbGoto( 10 )
-   RLock()
-   dbGoto( 100 )
-   RLock()
-   aList := dbRLockList()
-   FOR EACH x IN aList
-      ? x
-   NEXT
-   RETURN
+LOCAL aList, x
+USE test NEW
+dbGoto( 10 )
+RLock()
+dbGoto( 100 )
+RLock()
+aList := dbRLockList()
+FOR EACH x IN aList
+   ? x
+NEXT
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -3070,14 +3036,12 @@ PROCEDURE Main()
 <div class="d-it">This function will attempt to unlock the record specified as <code>xIdentity</code>, which in a .dbf format is the record number. If not specified, them the current active record/data item will be unlocked</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   USE test NEW
-   dbGoto( 10 )
-   IF RLock()
-      ? test-&gt;ID
-      dbRUnlock()
-   ENDIF
-   RETURN
+USE test NEW
+dbGoto( 10 )
+IF RLock()
+   ? test-&gt;ID
+   dbRUnlock()
+ENDIF
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -3159,18 +3123,16 @@ ENDIF
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL nId
-   USE test NEW INDEX test
-   USE test1 NEW INDEX test1
-   dbSelectArea( 1 )
-   nId := test-&gt;Id
-   dbSelectArea( 2 )
-   IF dbSeek( nId )
-      ? test1-&gt;cName
-   ENDIF
-   dbCloseAll()
-   RETURN
+LOCAL nId
+USE test NEW INDEX test
+USE test1 NEW INDEX test1
+dbSelectArea( 1 )
+nId := test-&gt;Id
+dbSelectArea( 2 )
+IF dbSeek( nId )
+   ? test1-&gt;cName
+ENDIF
+dbCloseAll()
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -3229,10 +3191,9 @@ dbSetDriver( &quot;ADS&quot; )
 <div class="d-it">This function masks a database so that only those records that meet the condition prescribed by the expression in the code block <code>bCondition</code> and literally expressed as <code>cCondition</code> are visible. If <code>cCondition</code> is not passed to this function, then the <code><a href="#dbfilter">dbFilter()</a></code> function will return an empty string showing no filter in that work area which in fact, would be not correct.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   USE test NEW
-   dbSetFilter( {|| test-&gt;Id &lt; 100 }, &quot;test-&gt;Id &lt;100&quot; )
-   dbGoTop()
+USE test NEW
+dbSetFilter( {|| test-&gt;Id &lt; 100 }, &quot;test-&gt;Id &lt;100&quot; )
+dbGoTop()
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -3259,14 +3220,12 @@ PROCEDURE Main()
 <div class="d-it">This function moves the record pointer <code>nRecords</code> in the selected or aliased work area. The default value for <code>nRecords</code> will be 1. A dbSkip( 0 ) will flush and refresh the internal database bufer and make any changes made to the record visible without moving the record pointer in either direction.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   USE test NEW
-   dbGoTop()
-   DO WHILE ! Eof()
-      ? test-&gt;Id, test-&gt;Name
-      dbSkip()
-   ENDDO
-   RETURN
+USE test NEW
+dbGoTop()
+DO WHILE ! Eof()
+   ? test-&gt;Id, test-&gt;Name
+   dbSkip()
+ENDDO
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -3308,7 +3267,7 @@ PROCEDURE Main()
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rdd Header is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/dbstruct.ch">dbstruct.ch</a></code></div>
+<div class="d-it">Library is rdd Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/dbstruct.ch">dbstruct.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Database</div>
 <div class="d-d">See also</div>
@@ -3439,15 +3398,11 @@ dbUseArea( .T.,, &quot;test&quot; )
 <div class="d-it">This function returns the same alias name ofthe currently selected work area.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-
-   USE test
-   SELECT 0
-   ? iif( Dbf() == &quot;&quot;, &quot;No Name&quot;, Dbf() )
-   ? test-&gt;( Dbf() )
-   ? Alias( 1 )
-
-   RETURN
+USE test
+SELECT 0
+? iif( Dbf() == &quot;&quot;, &quot;No Name&quot;, Dbf() )
+? test-&gt;( Dbf() )
+? Alias( 1 )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -3476,14 +3431,12 @@ PROCEDURE Main()
 <div class="d-it">This function returns a logical true (<code>.T.</code>) if the current record in the selected or designated work area has been marked for deletion. If not, the function will return a logical false (<code>.F.</code>).</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   USE test NEW
-   dbGoto()
-   dbDelete()
-   ? &quot;Is Record Deleted&quot;, Test-&gt;( Deleted() )
-   dbRecall()
-   dbCloseArea()
-   RETURN
+USE test NEW
+dbGoto()
+dbDelete()
+? &quot;Is Record Deleted&quot;, Test-&gt;( Deleted() )
+dbRecall()
+dbCloseArea()
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -3512,17 +3465,15 @@ PROCEDURE Main()
 <div class="d-it">This function determines if the end-of-file marker has been reached. If it has, the function will return a logical true (<code>.T.</code>); otherwise a logical false (<code>.F.</code>) will be returned</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   USE test NEW
-   dbGoTop()
-   ? &quot;Is Eof()&quot;, Eof()
-   dbGoBottom()
-   DO WHILE ! Eof()
-      dbSkip()
-   ENDDO
-   ? &quot;Is Eof()&quot;, Eof()
-   dbCloseArea()
-   RETURN
+USE test NEW
+dbGoTop()
+? &quot;Is Eof()&quot;, Eof()
+dbGoBottom()
+DO WHILE ! Eof()
+   dbSkip()
+ENDDO
+? &quot;Is Eof()&quot;, Eof()
+dbCloseArea()
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -3549,11 +3500,9 @@ PROCEDURE Main()
 <div class="d-it">This function returns the number of fields in the current or designated work area. If no database is open in this work area, the function will return 0.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   USE test NEW
-   ? &quot;This database has&quot;, test-&gt;( FCount() ), &quot;fields&quot;
-   dbCloseArea()
-   RETURN
+USE test NEW
+? &quot;This database has&quot;, test-&gt;( FCount() ), &quot;fields&quot;
+dbCloseArea()
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -3582,11 +3531,9 @@ PROCEDURE Main()
 <div class="d-it">This function returns the value of the field at the <code>nField</code>th location in the selected or designed work area. If the value in <code>nField</code> does not correspond to n available field position in this work area, the function will return a <code>NIL</code> data type.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   USE test NEW
-   ? test-&gt;( FieldGet( 1 ) )
-   dbCloseArea()
-   RETURN
+USE test NEW
+? test-&gt;( FieldGet( 1 ) )
+dbCloseArea()
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -3615,14 +3562,12 @@ PROCEDURE Main()
 <div class="d-it">This function return the name of the field at the <code>nPosition</code>th position. If the numeric value passed to this function does not correspond to an existing field in the designated or selected work area, this function will return a <code>NULL</code> byte.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL x
-   USE test NEW
-   FOR x := 1 TO test-&gt;( FCount() )
-      ? &quot;Field Name:&quot;, FieldName( x )
-   NEXT
-   dbCloseArea()
-   RETURN
+LOCAL x
+USE test NEW
+FOR x := 1 TO test-&gt;( FCount() )
+   ? &quot;Field Name:&quot;, FieldName( x )
+NEXT
+dbCloseArea()
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -3651,11 +3596,9 @@ PROCEDURE Main()
 <div class="d-it">This function return the ordinal position of the specified field <code>cField</code> in the current or aliased work areaIf there isn't field under the name of <code>cField</code> or of no database is open in the selected work area, the function will return a 0.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   USE test NEW
-   ? test-&gt;( FieldPos( &quot;ID&quot; ) )
-   dbCloseArea()
-   RETURN
+USE test NEW
+? test-&gt;( FieldPos( &quot;ID&quot; ) )
+dbCloseArea()
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -3947,11 +3890,9 @@ USE test NEW
 <div class="d-it">This function returns the date recorded by the OS when the selected or designated database was last written to disk. This function will only work for those database files in <code>USE</code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   USE test NEW
-   ? LUpdate()
-   dbCloseArea()
-   RETURN
+USE test NEW
+? LUpdate()
+dbCloseArea()
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -5882,19 +5823,16 @@ dbEval( &lt;bBlock&gt;,
 <div class="d-it">Performs a code block operation on the current Database</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL nCount
+LOCAL nCount
 
-   USE test
+USE test
 
-   dbGoto( 4 )
-   ? RecNo()
-   COUNT TO nCount
-   ? RecNo(), nCount
-   COUNT TO nCount NEXT 10
-   ? RecNo(), nCount
-
-   RETURN
+dbGoto( 4 )
+? RecNo()
+COUNT TO nCount
+? RecNo(), nCount
+COUNT TO nCount NEXT 10
+? RecNo(), nCount
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Started</div>
@@ -5930,15 +5868,13 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL bBlock := {|| NIL }
-   ? Eval( 1 )
-   ? Eval( @bBlock )
+LOCAL bBlock := {|| NIL }
+? Eval( 1 )
+? Eval( @bBlock )
 
-   ? Eval( {| p1 | p1 }, &quot;A&quot;, &quot;B&quot; )
-   ? Eval( {| p1, p2 | p1 + p2 }, &quot;A&quot;, &quot;B&quot; )
-   ? Eval( {| p1, p2, p3 | p1 }, &quot;A&quot;, &quot;B&quot; )
-   RETURN
+? Eval( {| p1 | p1 }, &quot;A&quot;, &quot;B&quot; )
+? Eval( {| p1, p2 | p1 + p2 }, &quot;A&quot;, &quot;B&quot; )
+? Eval( {| p1, p2, p3 | p1 }, &quot;A&quot;, &quot;B&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -6188,7 +6124,7 @@ ENDIF
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/fileio.ch">fileio.ch</a></code></div>
+<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/fileio.ch">fileio.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, FileSys</div>
 </section>
@@ -6265,7 +6201,7 @@ ENDIF
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/fileio.ch">fileio.ch</a></code></div>
+<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/fileio.ch">fileio.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, FileSys</div>
 <div class="d-d">See also</div>
@@ -6437,7 +6373,7 @@ ENDIF
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/fileio.ch">fileio.ch</a></code></div>
+<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/fileio.ch">fileio.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, FileSys</div>
 <div class="d-d">See also</div>
@@ -6630,7 +6566,7 @@ FUNCTION FReadLn( nH, cB, nMaxLine )
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/fileio.ch">fileio.ch</a></code></div>
+<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/fileio.ch">fileio.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, FileSys</div>
 <div class="d-d">See also</div>
@@ -6722,7 +6658,7 @@ FClose( nHandle )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/fileio.ch">fileio.ch</a></code></div>
+<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/fileio.ch">fileio.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, FileSys</div>
 </section>
@@ -7760,7 +7696,7 @@ hb_idleDel( nTask2 )
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>nScope</code> = the scope of variables for which an information is asked</div>
-  <div>Supported values (defined in <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hbmemvar.ch">hbmemvar.ch</a></code>) <code>HB_MV_PUBLIC</code> <code>HB_MV_PRIVATE</code> (or any other value)</div>
+  <div>Supported values (defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmemvar.ch">hbmemvar.ch</a></code>) <code>HB_MV_PUBLIC</code> <code>HB_MV_PRIVATE</code> (or any other value)</div>
   <div><code>nPosition</code> = the position of asked variable on the list of variables with specified scope - it should start from position 1 <code>cVarName</code> = the value is filled with a variable name if passed by reference and <code>nPosition</code> is specified</div>
 </div>
 <div class="d-d">Returns</div>
@@ -9092,7 +9028,7 @@ PROCEDURE Main()
 <div class="d-it d-sy">
 <code>hb_langErrMsg( &lt;nErrorCode&gt; ) → cErrorMessage</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nErrorCode</code> is one of the generic error codes (EG_...) defined in <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/error.ch">error.ch</a></code></div>
+<div class="d-it"><code>nErrorCode</code> is one of the generic error codes (EG_...) defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/error.ch">error.ch</a></code></div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code><a href="#hb_langerrmsg">hb_langErrMsg()</a></code> return the error message string represented by the code <code>nErrorCode</code>.</div>
 <div class="d-d">Description</div>
@@ -9116,7 +9052,7 @@ PROCEDURE Main()
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/error.ch">error.ch</a></code></div>
+<div class="d-it">Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/error.ch">error.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Language and Nation</div>
 <div class="d-d">See also</div>
@@ -9140,7 +9076,7 @@ PROCEDURE Main()
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#hb_langmessage">hb_langMessage()</a></code> is similar to <code><a href="#nationmsg">NationMsg()</a></code> but give access to the whole list of language messages: Day and month names, generic error messages, internal errors, and others...</div>
-  <div><p>Use the header file <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hblang.ch">hblang.ch</a></code> for a list of base values for <code>nMsg</code>.</div>
+  <div><p>Use the header file <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hblang.ch">hblang.ch</a></code> for a list of base values for <code>nMsg</code>.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -9162,7 +9098,7 @@ PROCEDURE Main()
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hblang.ch">hblang.ch</a></code></div>
+<div class="d-it">Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hblang.ch">hblang.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Language and Nation</div>
 <div class="d-d">See also</div>
@@ -9467,7 +9403,7 @@ ENDDO
 <code>hb_SetMacro( &lt;nOption&gt;, [&lt;lOnOff&gt;] ) → &lt;lOldSetting&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>nOption</code> One of the <code>HB_SM_</code>* constants defined in <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/set.ch">set.ch</a></code>.</div>
+  <div><code>nOption</code> One of the <code>HB_SM_</code>* constants defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/set.ch">set.ch</a></code>.</div>
   <div><code>lOnOff</code> <code>.T.</code> to enable or <code>.F.</code> to disable a feature</div>
 </div>
 <div class="d-d">Returns</div>
@@ -9498,7 +9434,7 @@ INIT PROCEDURE IWANTCLIPPER()
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/set.ch">set.ch</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/set.ch">set.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Macro</div>
 <div class="d-d">See also</div>
@@ -9520,16 +9456,15 @@ INIT PROCEDURE IWANTCLIPPER()
 <div class="d-it">This function yields the absolute value of the numeric value or expression <code>nNumber</code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL nNumber := 50
-   LOCAL nNumber1 := 27
-   CLS
+LOCAL nNumber := 50
+LOCAL nNumber1 := 27
+CLS
 
-   ? nNumber - nNumber1
-   ? nNumber1 - nNumber
-   ? Abs( nNumber - nNumber1 )
-   ? Abs( nNumber1 - nNumber )
-   ? Abs( -1 * 345 )
+? nNumber - nNumber1
+? nNumber1 - nNumber
+? Abs( nNumber - nNumber1 )
+? Abs( nNumber1 - nNumber )
+? Abs( -1 * 345 )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -9605,7 +9540,7 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div>[<code>nNumber</code>]   new math error handling mode, one of the following</div>
-  <div>constants, defined in <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hbmath.ch">hbmath.ch</a></code>:</div>
+  <div>constants, defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.ch">hbmath.ch</a></code>:</div>
   <div><code>HB_MATH_ERRMODE_DEFAULT</code> <code>HB_MATH_ERRMODE_CDEFAULT</code> <code>HB_MATH_ERRMODE_USER</code> <code>HB_MATH_ERRMODE_USERDEFAULT</code> <code>HB_MATH_ERRMODE_USERCDEFAULT</code></div>
 </div>
 <div class="d-d">Returns</div>
@@ -9615,7 +9550,7 @@ PROCEDURE Main()
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hbmath.ch">hbmath.ch</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.ch">hbmath.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Math</div>
 </section>
@@ -10234,7 +10169,7 @@ NEXT
 <div class="d-it">
   <div><p><code><a href="#__objgetmsglist">__objGetMsgList()</a></code> is a low level class support function that let you find all instance variable or method names for a given object.</div>
   <div><p>If specified, the following table shows the values for <code>nClassType</code> that allow you to distinguish between VAR and <code>CLASS</code> VAR:</div>
-  <div><p>table&gt; <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hboo.ch">hboo.ch</a></code>           Meaning</div>
+  <div><p>table&gt; <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hboo.ch">hboo.ch</a></code>           Meaning</div>
   <div><p><code>HB_MSGLISTALL</code>     All types <code>HB_MSGLISTCLASS</code>   <code>CLASS</code> VAR only <code>HB_MSGLISTPURE</code>    VAR only /table&gt;</div>
   <div><p>VAR are instance variable usable within each object from a class, where each object has its own VARs.</div>
   <div><p><code>CLASS</code> VAR are shared by all objects from a Class, so the changed value within Object1 will be reflected when accessing the <code>CLASS</code> VAR from Object2.</div>
@@ -10261,7 +10196,7 @@ NEXT
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hboo.ch">hboo.ch</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hboo.ch">hboo.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Objects</div>
 <div class="d-d">See also</div>
@@ -10302,7 +10237,7 @@ NEXT
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hboo.ch">hboo.ch</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hboo.ch">hboo.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Objects</div>
 <div class="d-d">See also</div>
@@ -10526,7 +10461,7 @@ __objSetValueList( oB, aData )
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hboo.ch">hboo.ch</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hboo.ch">hboo.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Objects</div>
 <div class="d-d">See also</div>
@@ -12230,7 +12165,7 @@ DevOutPict( -1.25, &quot;@D$ 99,999.99 ) // -&gt; $(     1.25)
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>CA-Cl*pper has a color spec string, which has more than one color in it, separated with commas.</div>
-  <div><p>This function will extract a given item from this list. You may use the manifest constants defined in <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/color.ch">color.ch</a></code> to identify and extract common colors.</div>
+  <div><p>This function will extract a given item from this list. You may use the manifest constants defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/color.ch">color.ch</a></code> to identify and extract common colors.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -12801,13 +12736,13 @@ ENDCASE
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">
-  <div>This function is sensitive to <code>HB_CLP_STRICT</code> settings during the compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/src/rtl/alert.prg">src/rtl/alert.prg</a></code></div>
+  <div>This function is sensitive to <code>HB_CLP_STRICT</code> settings during the compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/src/rtl/alert.prg">src/rtl/alert.prg</a></code></div>
   <div><strong>defined</strong>: <code>xMessage</code> accept Character values only and return <code>NIL</code> if other types are passed.</div>
   <div><strong>undefined</strong>: <code>xMessage</code> could be any type, and internally converted to Character string. If type is Array, multi-line message is displayed.</div>
   <div><strong>defined</strong>: Only the first four valid <code>aOptions</code> are taken.</div>
   <div><strong>undefined</strong>: <code>aOptions</code> could contain as many as needed options.</div>
-  <div>If <code>HB_COMPAT_C53</code> was define during compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/src/rtl/alert.prg">src/rtl/alert.prg</a></code> the Left-Mouse button could be used to select an option.</div>
-  <div>The interpretation of the <code>//NOALERT</code> command-line switch is done only if <code>HB_CLP_UNDOC</code> was define during compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/src/rtl/alert.prg">src/rtl/alert.prg</a></code></div>
+  <div>If <code>HB_COMPAT_C53</code> was define during compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/src/rtl/alert.prg">src/rtl/alert.prg</a></code> the Left-Mouse button could be used to select an option.</div>
+  <div>The interpretation of the <code>//NOALERT</code> command-line switch is done only if <code>HB_CLP_UNDOC</code> was define during compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/src/rtl/alert.prg">src/rtl/alert.prg</a></code></div>
   <div><code>cColorNorm</code> is a Harbour extension, or at least un-documented in Clipper 5.2 NG.</div>
   <div><code>nDelay</code> is a Harbour extension.</div>
 </div>
@@ -12973,7 +12908,7 @@ dbEdit()
   <div>There is an undocumented result code (3) from the user defined function in CA-Cl*pper (both 87 and 5.x). This is an Append Mode which: &quot;split the screen to allow data to be appended in windowed area&quot;. This mode is not supported by Harbour.</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header files are <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/dbedit.ch">dbedit.ch</a></code>, <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/inkey.ch">inkey.ch</a></code> Library is core</div>
+<div class="d-it">Header files are <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/dbedit.ch">dbedit.ch</a></code>, <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/inkey.ch">inkey.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, User interface</div>
 <div class="d-d">See also</div>
@@ -13021,7 +12956,7 @@ hb_keyPut( K_F11 ); ? Inkey()  // -&gt; -40
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>nTimeout</code> is an optional timeout value in seconds, with a granularity of 1/10th of a second. If omitted, <code><a href="#inkey">Inkey()</a></code> returns immediately. If set to 0, <code><a href="#inkey">Inkey()</a></code> waits until an input event occurs. If set to any other value, <code><a href="#inkey">Inkey()</a></code> will return either when an input event occurs or when the timeout period has elapsed. If only this parameter is specified and it is not numeric, it will be treated as if it were 0. But if both parameters are specified and this parameter is not numeric, it will be treated as if it were not present.</div>
-  <div><code>nEvents</code> is an optional mask of input events that are to be enabled. If omitted, defaults to hb_set.HB_SET_EVENTMASK. Valid input masks are in <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/inkey.ch">inkey.ch</a></code> and are explained below. It is recommended that the mask names be used rather than their numeric values, in case the numeric values change in future releases of Harbour. To allow more than one type of input event, simply add the various mask names together.</div>
+  <div><code>nEvents</code> is an optional mask of input events that are to be enabled. If omitted, defaults to hb_set.HB_SET_EVENTMASK. Valid input masks are in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/inkey.ch">inkey.ch</a></code> and are explained below. It is recommended that the mask names be used rather than their numeric values, in case the numeric values change in future releases of Harbour. To allow more than one type of input event, simply add the various mask names together.</div>
   <div class="d-t d-t1">
   <div>  inkey.ch            Meaning</div>
   <div>  INKEY_MOVE          Mouse motion events are allowed</div>
@@ -13037,7 +12972,7 @@ hb_keyPut( K_F11 ); ? Inkey()  // -&gt; -40
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">
-  <div>0 in case of timeout with no input event, otherwise returns a value in the range -47 to 386 for keyboard events or the range 1001 to 1007 for mouse events. Mouse events and non-printable keyboard events are represented by the <code>K_&lt;event&gt;</code> values listed in <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/inkey.ch">inkey.ch</a></code>. Keyboard event return codes in the range 32 through 127 are equivalent to the printable <code>ASCII</code> character set. Keyboard event return codes in the range 128 through 255 are assumed to be printable, but results may vary based on hardware and nationality. If <code>HB_INKEY_EXTENDED</code> mode is used, then the return value for keyboard events ranges from 1 through 767 and 1077 through 1491, although not all codes are used.</div>
+  <div>0 in case of timeout with no input event, otherwise returns a value in the range -47 to 386 for keyboard events or the range 1001 to 1007 for mouse events. Mouse events and non-printable keyboard events are represented by the <code>K_&lt;event&gt;</code> values listed in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/inkey.ch">inkey.ch</a></code>. Keyboard event return codes in the range 32 through 127 are equivalent to the printable <code>ASCII</code> character set. Keyboard event return codes in the range 128 through 255 are assumed to be printable, but results may vary based on hardware and nationality. If <code>HB_INKEY_EXTENDED</code> mode is used, then the return value for keyboard events ranges from 1 through 767 and 1077 through 1491, although not all codes are used.</div>
   <div>Extended key codes consist of the PC keyboard scan code and one or more offset values. If no keyboard modifier was used, then <code>HB_INKEY_NONE</code> is added. The <span class="d-key">Alt</span> key adds <code>HB_INKEY_ALT</code>, the <span class="d-key">Ctrl</span> key adds <code>HB_INKEY_CTRL</code>, the <span class="d-key">Shift</span> key adds <code>HB_INKEY_SHIFT</code>, and enhanced keys (<span class="d-key">KeyPad+/</span> and <span class="d-key">CursorPad</span> keys) add <code>HB_INKEY_ENHANCED</code>. For example, <span class="d-key">F1</span> is scan code 59, so if you just press <span class="d-key">F1</span>, you get key code 315, but <span class="d-key">Alt+F1</span> gives 443, <span class="d-key">Ctrl+F1</span> gives 571, and <span class="d-key">Shift+F1</span> gives 699. And <code>NumPad+/</code> gives 1077, 1205, 1333, and 1461. At this time, the only value that can combine with other values is <code>HB_INKEY_ENHANCED</code> (i.e., there are no <span class="d-key">Alt+Ctrl</span> combinations, etc.)</div>
   <div>Note: The extended key code set is larger than the normal key code set. As a result, if you switch between the normal and extended modes, you need to be aware that some codes get translated into a zero in normal mode (because there is no corresponding code in normal mode) and that these codes get removed from the keyboard input buffer in normal mode and you won't be able to go back and fetch them later in extended mode.</div>
 </div>
@@ -13282,7 +13217,7 @@ KEYBOARD &quot;AB&quot;; ? NextKey(), NextKey()  // -&gt;   65   65
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#outerr">OutErr()</a></code> write one or more values into the standard error device. Character and Memo values are printed as is, Dates are printed according to the <code>SET <code>DATE</code> <code>FORMAT</code></code>, Numeric values are converted to strings, Logical values are printed as <code>.T.</code> or <code>.F.</code>, <code>NIL</code> are printed as <code>NIL</code>, values of any other kind are printed as empty string. There is one space separating each two values. Note that Numeric value can take varying length when converted into string depending on its source (see <code><a href="#str">Str()</a></code> for detail).</div>
-  <div><p>There is an undocumented CA-Cl*pper command-line switch <code>//STDERR</code> which can set the file handle to write output from <code><a href="#outerr">OutErr()</a></code>. If not specified the default <code>STDERR</code> is used, <code>//STDERR</code> or <code>//STDERR:0</code> set <code><a href="#outerr">OutErr()</a></code> to output to the same file handle as <code><a href="#outstd">OutStd()</a></code>, <code>//STDERR:n</code> set output to file handle n. Like other undocumented features this switch is available only if <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/src/rtl/console.c">src/rtl/console.c</a></code> was compiled with the <code>HB_CLP_UNDOC</code> flag.</div>
+  <div><p>There is an undocumented CA-Cl*pper command-line switch <code>//STDERR</code> which can set the file handle to write output from <code><a href="#outerr">OutErr()</a></code>. If not specified the default <code>STDERR</code> is used, <code>//STDERR</code> or <code>//STDERR:0</code> set <code><a href="#outerr">OutErr()</a></code> to output to the same file handle as <code><a href="#outstd">OutStd()</a></code>, <code>//STDERR:n</code> set output to file handle n. Like other undocumented features this switch is available only if <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/src/rtl/console.c">src/rtl/console.c</a></code> was compiled with the <code>HB_CLP_UNDOC</code> flag.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -13678,7 +13613,7 @@ None Avaliable
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>cVarName</code> = a string with a variable name to check</div>
 <div class="d-d">Returns</div>
-<div class="d-it">The symbolic values are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hbmemvar.ch">hbmemvar.ch</a></code> <code>HB_MV_NOT_FOUND</code>     =variable is not declared (not found in symbol table) <code>HB_MV_UNKNOWN</code>       =if variable doesn't exist (but found in symbol table) <code>HB_MV_ERROR</code>         =if information cannot be obtained (memory error or argument error) <code>HB_MV_PUBLIC</code>         =for public variables <code>HB_MV_PRIVATE_GLOBAL</code> =for private variables declared outside of current function/procedure <code>HB_MV_PRIVATE_LOCAL</code>  =for private variables declared in current function/procedure</div>
+<div class="d-it">The symbolic values are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmemvar.ch">hbmemvar.ch</a></code> <code>HB_MV_NOT_FOUND</code>     =variable is not declared (not found in symbol table) <code>HB_MV_UNKNOWN</code>       =if variable doesn't exist (but found in symbol table) <code>HB_MV_ERROR</code>         =if information cannot be obtained (memory error or argument error) <code>HB_MV_PUBLIC</code>         =for public variables <code>HB_MV_PRIVATE_GLOBAL</code> =for private variables declared outside of current function/procedure <code>HB_MV_PRIVATE_LOCAL</code>  =for private variables declared in current function/procedure</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 PROCEDURE Main()
@@ -13784,18 +13719,16 @@ PROCEDURE Main()
 <div class="d-it">This function checks if an expression has empty value and returns a logical indicating whether it the expression is empty or not.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   ? Empty( &quot;I'm not empty&quot; ) // .F.
-   ? Empty( NIL )             // .T.
-   ? Empty( 0 )               // .T.
-   ? Empty( .F. )             // .T.
-   ? Empty( &quot;&quot; )              // .T.
-   ? Empty( &quot;  &quot; )            // .T.
-   ? Empty( 1 )               // .F.
-   ? Empty( .T. )             // .F.
-   ? Empty( &quot;smile&quot; )         // .F.
-   ? Empty( Date() )          // .F.
-   RETURN
+? Empty( &quot;I'm not empty&quot; ) // .F.
+? Empty( NIL )             // .T.
+? Empty( 0 )               // .T.
+? Empty( .F. )             // .T.
+? Empty( &quot;&quot; )              // .T.
+? Empty( &quot;  &quot; )            // .T.
+? Empty( 1 )               // .F.
+? Empty( .T. )             // .F.
+? Empty( &quot;smile&quot; )         // .F.
+? Empty( Date() )          // .F.
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -13872,17 +13805,14 @@ STATIC PROCEDURE Test( Arg1, Arg2, Arg3, Arg4 )
 <div class="d-it">This function returns the string length or the size of an array or the size of a hash table. If it is used with a multidimensional array it returns the size of the first dimension.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL cName
+LOCAL cName
 
-   ? Len( &quot;Harbour&quot; )          // --&gt; 7
-   ? Len( { &quot;One&quot;, &quot;Two&quot; } )   // --&gt; 2
+? Len( &quot;Harbour&quot; )          // --&gt; 7
+? Len( { &quot;One&quot;, &quot;Two&quot; } )   // --&gt; 2
 
-   cName := &quot;&quot;
-   ACCEPT &quot;Enter your name: &quot; TO cName
-   ? Len( cName )
-
-   RETURN
+cName := &quot;&quot;
+ACCEPT &quot;Enter your name: &quot; TO cName
+? Len( cName )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -13911,16 +13841,12 @@ PROCEDURE Main()
 <div class="d-it">This function returns a codeblock that sets/gets the value of <code>PRIVATE</code> or <code>PUBLIC</code> variable. When this codeblock is evaluated without any parameters passed then it returns the current value of given variable. If the second parameter is passed for the codeblock evaluation then its value is used to set the new value of given variable - the passed value is also returned as a value of the codeblock evaluation.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
+LOCAL cbSetGet
+PUBLIC xPublic
 
-   LOCAL cbSetGet
-   PUBLIC xPublic
-
-   cbSetGet := MemVarBlock( &quot;xPublic&quot; )
-   Eval( cbSetGet, &quot;new value&quot; )
-   ? &quot;Value of xPublic variable&quot;, Eval( cbSetGet )
-
-   RETURN
+cbSetGet := MemVarBlock( &quot;xPublic&quot; )
+Eval( cbSetGet, &quot;new value&quot; )
+? &quot;Value of xPublic variable&quot;, Eval( cbSetGet )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -14048,18 +13974,16 @@ PRIVATE lCond := 0
 <div class="d-it">This function returns one character which represents the data type of the argument.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   ? ValType( Array( 1 ) )   // &quot;A&quot;
-   ? ValType( {|| 1 + 1 } )  // &quot;B&quot;
-   ? ValType( &quot;Harbour&quot; )    // &quot;C&quot;
-   ? ValType( Date() )       // &quot;D&quot;
-   ? ValType( .T. )          // &quot;L&quot;
-   ? ValType( 1 )            // &quot;N&quot;
-   ? ValType( TBrowse() )    // &quot;O&quot;
-   ? ValType( hb_idleAdd() ) // &quot;P&quot; Harbour extension
-   ? ValType( @QOut() )      // &quot;S&quot; Harbour extension
-   ? ValType( NIL )          // &quot;U&quot;
-   RETURN
+? ValType( Array( 1 ) )   // &quot;A&quot;
+? ValType( {|| 1 + 1 } )  // &quot;B&quot;
+? ValType( &quot;Harbour&quot; )    // &quot;C&quot;
+? ValType( Date() )       // &quot;D&quot;
+? ValType( .T. )          // &quot;L&quot;
+? ValType( 1 )            // &quot;N&quot;
+? ValType( TBrowse() )    // &quot;O&quot;
+? ValType( hb_idleAdd() ) // &quot;P&quot; Harbour extension
+? ValType( @QOut() )      // &quot;S&quot; Harbour extension
+? ValType( NIL )          // &quot;U&quot;
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -14244,7 +14168,7 @@ hb_mathGetErrMode( void ) → imode
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 <div class="d-d">See also</div>
@@ -14278,7 +14202,7 @@ hb_mathGetHandler( void ) → HB_MATH_HANDLERPROC handlerproc
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 </section>
@@ -14303,7 +14227,7 @@ hb_mathGetLastError( HB_MATH_EXCEPTION * phb_exc )
   <div>the structure will be filled with information about the last math error:</div>
   <div>typedef struct <code>_HB_MATH_EXCEPTION</code> {</div>
   <div>int type;        // Math error type, is one of the constants</div>
-  <div>// <code>HB_MATH_ERR_</code>xxx defined in <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hbmath.ch">hbmath.ch</a></code></div>
+  <div>// <code>HB_MATH_ERR_</code>xxx defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.ch">hbmath.ch</a></code></div>
   <div>char *funcname;  // Pointer to name of the math C RTL routine</div>
   <div>// that caused the error.</div>
   <div>char *error;     // Pointer to error description. double arg1;     // First and double arg2;     // Second double argument to the math routine. double retval;   // Corrected return value for the math routine. int retvalwidth; // Width and int retvaldec;   // Decimals of the corrected return value,</div>
@@ -14321,7 +14245,7 @@ hb_mathGetLastError( HB_MATH_EXCEPTION * phb_exc )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 </section>
@@ -14348,7 +14272,7 @@ hb_mathIsMathErr( void ) → int iIsMathHandler
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 </section>
@@ -14373,7 +14297,7 @@ hb_mathResetError( void )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 </section>
@@ -14394,7 +14318,7 @@ hb_mathSetErrMode( int imode ) → int ioldmode
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div>imode        math error handling mode, one of the following</div>
-  <div>constants, defined in <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hbmath.ch">hbmath.ch</a></code>:</div>
+  <div>constants, defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.ch">hbmath.ch</a></code>:</div>
   <div><code>HB_MATH_ERRMODE_DEFAULT</code> <code>HB_MATH_ERRMODE_CDEFAULT</code> <code>HB_MATH_ERRMODE_USER</code> <code>HB_MATH_ERRMODE_USERDEFAULT</code> <code>HB_MATH_ERRMODE_USERCDEFAULT</code></div>
 </div>
 <div class="d-d">Returns</div>
@@ -14406,7 +14330,7 @@ hb_mathSetErrMode( int imode ) → int ioldmode
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 <div class="d-d">See also</div>
@@ -14444,7 +14368,7 @@ hb_mathSetHandler( HB_MATH_HANDLERPROC handlerproc )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 </section>
@@ -15872,11 +15796,9 @@ LABEL FORM &lt;cLabelName&gt; [TO PRINTER] [TO FILE &lt;cFile&gt;] [&lt;cScope&g
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   USE test NEW
-   LABEL FORM test.lbl
-   dbCloseArea()
-   RETURN
+USE test NEW
+LABEL FORM test.lbl
+dbCloseArea()
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -15929,11 +15851,9 @@ REPORT FORM &lt;cReportName&gt; [TO PRINTER] [TO FILE &lt;cFile&gt;] [&lt;cScope
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   USE test NEW
-   REPORT FORM test.frm
-   dbCloseArea()
-   RETURN
+USE test NEW
+REPORT FORM test.frm
+dbCloseArea()
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -16009,16 +15929,12 @@ dbCloseArea()
 <div class="d-it">This command declares the names of fields <code>xField</code> (and <code>xFieldn</code> and following) with an optional alias identifier as <code>cDatabase</code> for each. This command allow  Harbour to resolve any reference to a field specified in the field list by viewing it as a field when it is not referenced by an alias. If a field is not listed in this list and it is not  explicity tagged with an alias indentifier, it may be viewed as a memory variable, which may cause run-time errors. This command has no effect on memory variables or on field reference buried within a macro expression.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-
-   FIELD Id
-   FIELD Name
-   USE test.dbf NEW
-   Name := &quot;Sales&quot;
-   Id := 5
-   dbCloseArea()
-
-   RETURN
+FIELD Id
+FIELD Name
+USE test.dbf NEW
+Name := &quot;Sales&quot;
+Id := 5
+dbCloseArea()
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -16109,16 +16025,14 @@ GET &lt;xVar&gt; [PICTURE &lt;cGetPict&gt;] [WHEN &lt;lWhen&gt;] [COLOR &lt;cGet
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL cVar := Space( 50 )
-   LOCAL nId := 0
-   CLS
-   @ 3, 1 SAY &quot;Name&quot; GET cVar PICTURE &quot;@!S 30&quot;
-   @ 4, 1 SAY &quot;Id&quot;   GET nId  PICTURE &quot;999.999&quot;
-   READ
-   ? &quot;The name you entered is&quot;, cVar
-   ? &quot;The id you entered is&quot;, nId
-   RETURN
+LOCAL cVar := Space( 50 )
+LOCAL nId := 0
+CLS
+@ 3, 1 SAY &quot;Name&quot; GET cVar PICTURE &quot;@!S 30&quot;
+@ 4, 1 SAY &quot;Id&quot;   GET nId  PICTURE &quot;999.999&quot;
+READ
+? &quot;The name you entered is&quot;, cVar
+? &quot;The id you entered is&quot;, nId
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -16200,12 +16114,10 @@ ENDCASE
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   CLS
-   @ 2, 1 SAY &quot;Harbour&quot;
-   @ 3, 1 SAY &quot;is&quot; COLOR &quot;b/r+&quot;
-   @ 4, 1 SAY &quot;Power&quot; PICTURE &quot;@!&quot;
-   RETURN
+CLS
+@ 2, 1 SAY &quot;Harbour&quot;
+@ 3, 1 SAY &quot;is&quot; COLOR &quot;b/r+&quot;
+@ 4, 1 SAY &quot;Power&quot; PICTURE &quot;@!&quot;
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -16278,17 +16190,13 @@ KEYBOARD &quot;Hello&quot;; CLEAR TYPEAHEAD; ? Inkey()  // -&gt; 0
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
+LOCAL n, lVar
 
-   LOCAL n, lVar
-
-   n := iif( lVar, &quot;A&quot;, 3 )
-   n := 2
-   n := &quot;a&quot;
-   n := Seconds() + 2
-   n := Int( Seconds() + 2 )
-
-   RETURN
+n := iif( lVar, &quot;A&quot;, 3 )
+n := 2
+n := &quot;a&quot;
+n := Seconds() + 2
+n := Int( Seconds() + 2 )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -17699,6 +17607,6 @@ oTb:SeyKey( K_F10, {| otb, nkey | ShowListByname( otb ) }
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-01 17:50 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/bd63aa6">bd63aa6</a></div>
+<div>Generated by hbdoc on 2016-11-01 19:08 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/0bba37b">0bba37b</a></div>
 </footer>

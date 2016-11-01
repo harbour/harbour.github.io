@@ -86,7 +86,7 @@
 <div class="d-it">This function receives a valid zip file name as parameter, and returns the global comment stored within.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-? &quot;The comment in test.zip is &quot;, hb_GetZipComment( &quot;test.zip&quot; )
+? &quot;The comment in test.zip is:&quot;, hb_GetZipComment( &quot;test.zip&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -229,21 +229,17 @@ hb_UnzipFile( &lt;cFile&gt;, &lt;bBlock&gt;, &lt;lWithPath&gt;, &lt;cPassword&gt
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
+LOCAL aExtract
 
-   LOCAL aExtract
+aExtract := hb_GetFilesInZip( &quot;test.zip&quot; )  // extract all files in zip
+IF hb_UnzipFile( &quot;test.zip&quot;,,,, &quot;.&quot; + hb_ps(), aExtract )
+   ? &quot;File was successfully extracted&quot;
+ENDIF
 
-   aExtract := hb_GetFilesInZip( &quot;test.zip&quot; )  // extract all files in zip
-   IF hb_UnzipFile( &quot;test.zip&quot;,,,, &quot;.&quot; + hb_ps(), aExtract )
-      ? &quot;File was successfully extracted&quot;
-   ENDIF
-
-   aExtract := hb_GetFilesInZip( &quot;test2.zip&quot; )  // extract all files in zip
-   IF hb_UnzipFile( &quot;test2.zip&quot;, {| cFile | QOut( cFile ) },,, &quot;.&quot; + hb_ps(), aExtract )
-      ? &quot;File was successfully extracted&quot;
-   ENDIF
-
-   RETURN
+aExtract := hb_GetFilesInZip( &quot;test2.zip&quot; )  // extract all files in zip
+IF hb_UnzipFile( &quot;test2.zip&quot;, {| cFile | QOut( cFile ) },,, &quot;.&quot; + hb_ps(), aExtract )
+   ? &quot;File was successfully extracted&quot;
+ENDIF
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -279,7 +275,7 @@ PROCEDURE Main()
 <div class="d-it">This  function removes files from an Zip archive.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-? &quot;has the file zipnew.i been deleted &quot;, iif( hb_ZipDeleteFiles( &quot;test23.zip&quot;, &quot;zipnew.i&quot; ), &quot;Yes&quot;, &quot;No&quot; )
+? &quot;has the file zipnew.i been deleted:&quot;, iif( hb_ZipDeleteFiles( &quot;test23.zip&quot;, &quot;zipnew.i&quot; ), &quot;Yes&quot;, &quot;No&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -334,26 +330,23 @@ hb_ZipFile( &lt;cFile&gt;, &lt;cFileToCompress&gt; | &lt;aFiles&gt;, &lt;nLevel&
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
+IF hb_ZipFile( &quot;test.zip&quot;, &quot;test.prg&quot; )
+   ? &quot;File was successfully created&quot;
+ENDIF
 
-   IF hb_ZipFile( &quot;test.zip&quot;, &quot;test.prg&quot; )
-      ? &quot;File was successfully created&quot;
-   ENDIF
+IF hb_ZipFile( &quot;test1.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; } )
+   ? &quot;File was successfully created&quot;
+ENDIF
 
-   IF hb_ZipFile( &quot;test1.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; } )
-      ? &quot;File was successfully created&quot;
-   ENDIF
+IF hb_ZipFile( &quot;test2.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; }, 9, {| cFile, nPos | QOut( cFile ) } )
+   ? &quot;File was successfully created&quot;
+ENDIF
 
-   IF hb_ZipFile( &quot;test2.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; }, 9, {| cFile, nPos | QOut( cFile ) } )
-      ? &quot;File was successfully created&quot;
-   ENDIF
-
-   aFiles := { &quot;test.prg&quot;, &quot;test.hbp&quot; }
-   nLen   := Len( aFiles )
-   aGauge := GaugeNew( 5, 5, 7, 40, &quot;W/B&quot;, &quot;W+/B&quot; , &quot;.&quot; )
-   GaugeDisplay( aGauge )
-   hb_ZipFile( &quot;test33.zip&quot;, aFiles, 9, {| cFile, nPos | GaugeUpdate( aGauge, nPos / nLen ) },, &quot;hello&quot; )
-   RETURN
+aFiles := { &quot;test.prg&quot;, &quot;test.hbp&quot; }
+nLen   := Len( aFiles )
+aGauge := GaugeNew( 5, 5, 7, 40, &quot;W/B&quot;, &quot;W+/B&quot; , &quot;.&quot; )
+GaugeDisplay( aGauge )
+hb_ZipFile( &quot;test33.zip&quot;, aFiles, 9, {| cFile, nPos | GaugeUpdate( aGauge, nPos / nLen ) },, &quot;hello&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -409,28 +402,25 @@ hb_ZipFileByPKSpan( &lt;cFile&gt;, &lt;cFileToCompress&gt; | &lt;aFiles&gt;, &lt
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
+hb_SetDiskZip( {| nDisk | Alert( &quot;Please insert disk no &quot; + hb_ntos( nDisk ) ) } )
 
-   hb_SetDiskZip( {| nDisk | Alert( &quot;Please insert disk no &quot; + hb_ntos( nDisk ) ) } )
+IF hb_ZipFileByPKSpan( &quot;test.zip&quot;, &quot;test.prg&quot; )
+   ? &quot;File was successfully created&quot;
+ENDIF
 
-   IF hb_ZipFileByPKSpan( &quot;test.zip&quot;, &quot;test.prg&quot; )
-      ? &quot;File was successfully created&quot;
-   ENDIF
+IF hb_ZipFileByPKSpan( &quot;test1.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; } )
+   ? &quot;File was successfully created&quot;
+ENDIF
 
-   IF hb_ZipFileByPKSpan( &quot;test1.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; } )
-      ? &quot;File was successfully created&quot;
-   ENDIF
+IF hb_ZipFileByPKSpan( &quot;test2.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; }, 9, {| nPos, cFile | QOut( cFile ) } )
+   ? &quot;File was successfully created&quot;
+ENDIF
 
-   IF hb_ZipFileByPKSpan( &quot;test2.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; }, 9, {| nPos, cFile | QOut( cFile ) } )
-      ? &quot;File was successfully created&quot;
-   ENDIF
-
-   aFiles := { &quot;test.prg&quot;, &quot;test.hbp&quot; }
-   nLen   := Len( aFiles )
-   aGauge := GaugeNew( 5, 5, 7, 40, &quot;W/B&quot;, &quot;W+/B&quot;, &quot;.&quot; )
-   GaugeDisplay( aGauge )
-   hb_ZipFileByPKSpan( &quot;test33.zip&quot;, aFiles, 9, {| cFile, nPos | GaugeUpdate( aGauge, nPos / nLen ) },, &quot;hello&quot; )
-   RETURN
+aFiles := { &quot;test.prg&quot;, &quot;test.hbp&quot; }
+nLen   := Len( aFiles )
+aGauge := GaugeNew( 5, 5, 7, 40, &quot;W/B&quot;, &quot;W+/B&quot;, &quot;.&quot; )
+GaugeDisplay( aGauge )
+hb_ZipFileByPKSpan( &quot;test33.zip&quot;, aFiles, 9, {| cFile, nPos | GaugeUpdate( aGauge, nPos / nLen ) },, &quot;hello&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -485,26 +475,23 @@ hb_ZipFileByTDSpan( &lt;cFile&gt;, &lt;cFileToCompress&gt; | &lt;aFiles&gt;, &lt
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
+IF hb_ZipFileByTDSpan( &quot;test.zip&quot;, &quot;test.prg&quot; )
+   ? &quot;File was successfully created&quot;
+ENDIF
 
-   IF hb_ZipFileByTDSpan( &quot;test.zip&quot;, &quot;test.prg&quot; )
-      ? &quot;File was successfully created&quot;
-   ENDIF
+IF hb_ZipFileByTDSpan( &quot;test1.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; } )
+   ? &quot;File was successfully created&quot;
+ENDIF
 
-   IF hb_ZipFileByTDSpan( &quot;test1.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; } )
-      ? &quot;File was successfully created&quot;
-   ENDIF
+IF hb_ZipFileByTDSpan( &quot;test2.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; }, 9, {| nPos, cFile | QOut( cFile ) }, &quot;hello&quot;,, 521421 )
+   ? &quot;File was successfully created&quot;
+ENDIF
 
-   IF hb_ZipFileByTDSpan( &quot;test2.zip&quot;, { &quot;test.prg&quot;, &quot;test.hbp&quot; }, 9, {| nPos, cFile | QOut( cFile ) }, &quot;hello&quot;,, 521421 )
-      ? &quot;File was successfully created&quot;
-   ENDIF
-
-   aFiles := { &quot;test.prg&quot;, &quot;test.hbp&quot; }
-   nLen   := Len( aFiles )
-   aGauge := GaugeNew( 5, 5, 7, 40, &quot;W/B&quot;, &quot;W+/B&quot;, &quot;.&quot; )
-   GaugeDisplay( aGauge )
-   hb_ZipFileByTDSpan( &quot;test33.zip&quot;, aFiles, 9, {| cFile, nPos | GaugeUpdate( aGauge, nPos / nLen ) },, &quot;hello&quot;,, 6585452 )
-   RETURN
+aFiles := { &quot;test.prg&quot;, &quot;test.hbp&quot; }
+nLen   := Len( aFiles )
+aGauge := GaugeNew( 5, 5, 7, 40, &quot;W/B&quot;, &quot;W+/B&quot;, &quot;.&quot; )
+GaugeDisplay( aGauge )
+hb_ZipFileByTDSpan( &quot;test33.zip&quot;, aFiles, 9, {| cFile, nPos | GaugeUpdate( aGauge, nPos / nLen ) },, &quot;hello&quot;,, 6585452 )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -560,6 +547,6 @@ ENDIF
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-01 17:50 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/bd63aa6">bd63aa6</a></div>
+<div>Generated by hbdoc on 2016-11-01 19:08 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/0bba37b">0bba37b</a></div>
 </footer>

@@ -133,23 +133,20 @@
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage
-   LOCAL blue
+LOCAL pImage
+LOCAL blue
 
-   // Create an image in memory
-   pImage := gdImageCreate( 100, 100 )
+// Create an image in memory
+pImage := gdImageCreate( 100, 100 )
 
-   // Allocate color
-   blue := gdImageColorAllocate( pImage, 0, 0, 255 )
+// Allocate color
+blue := gdImageColorAllocate( pImage, 0, 0, 255 )
 
-   // Draw an ellipse
-   gdImageArc( pImage, 50, 25, 98, 48, 0, 360, blue )
+// Draw an ellipse
+gdImageArc( pImage, 50, 25, 98, 48, 0, 360, blue )
 
-   // Save the image
-   gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
-
-   RETURN
+// Save the image
+gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -181,12 +178,9 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage := gdImageCreate( 64, 64 )
+LOCAL pImage := gdImageCreate( 64, 64 )
 
-   // Use image here
-
-   RETURN
+// Use image here
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -225,12 +219,9 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage := gdImageCreateFromGD( &quot;myimage.gd&quot; )
+LOCAL pImage := gdImageCreateFromGD( &quot;myimage.gd&quot; )
 
-   // Use image here
-
-   RETURN
+// Use image here
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -269,12 +260,9 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage := gdImageCreateFromGif( &quot;myimage.gif&quot; )
+LOCAL pImage := gdImageCreateFromGif( &quot;myimage.gif&quot; )
 
-   // Use image here
-
-   RETURN
+// Use image here
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -313,12 +301,9 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage := gdImageCreateFromJpeg( &quot;myimage.jpg&quot; )
+LOCAL pImage := gdImageCreateFromJpeg( &quot;myimage.jpg&quot; )
 
-   // Use image here
-
-   RETURN
+// Use image here
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -357,12 +342,9 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage := gdImageCreateFromPng( &quot;myimage.png&quot; )
+LOCAL pImage := gdImageCreateFromPng( &quot;myimage.png&quot; )
 
-   // Use image here
-
-   RETURN
+// Use image here
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -401,12 +383,9 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage := gdImageCreateFromWBmp( &quot;myimage.wbmp&quot; )
+LOCAL pImage := gdImageCreateFromWBmp( &quot;myimage.wbmp&quot; )
 
-   // Use image here
-
-   RETURN
+// Use image here
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -438,12 +417,9 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage := gdImageCreateTrueColor( 64, 64 )
+LOCAL pImage := gdImageCreateTrueColor( 64, 64 )
 
-   // Use image here
-
-   RETURN
+// Use image here
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -475,23 +451,20 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage
-   LOCAL blue
+LOCAL pImage
+LOCAL blue
 
-   // Create an image in memory
-   pImage := gdImageCreate( 100, 100 )
+// Create an image in memory
+pImage := gdImageCreate( 100, 100 )
 
-   // Allocate color
-   blue := gdImageColorAllocate( pImage, 0, 0, 255 )
+// Allocate color
+blue := gdImageColorAllocate( pImage, 0, 0, 255 )
 
-   // Draw a dashed line
-   gdImageDashedLine( pImage, 10, 10, 90, 90, blue )
+// Draw a dashed line
+gdImageDashedLine( pImage, 10, 10, 90, 90, blue )
 
-   // Save the image
-   gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
-
-   RETURN
+// Save the image
+gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -523,27 +496,24 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage
-   LOCAL blue, red
+LOCAL pImage
+LOCAL blue, red
 
-   // Create an image in memory
-   pImage := gdImageCreate( 100, 100 )
+// Create an image in memory
+pImage := gdImageCreate( 100, 100 )
 
-   // Allocate color
-   blue := gdImageColorAllocate( pImage, 0, 0, 255 )
-   red  := gdImageColorAllocate( pImage, 255, 0, 0 )
+// Allocate color
+blue := gdImageColorAllocate( pImage, 0, 0, 255 )
+red  := gdImageColorAllocate( pImage, 255, 0, 0 )
 
-   // Draw an ellipse
-   gdImageArc( pImage, 50, 25, 98, 48, 0, 360, blue )
+// Draw an ellipse
+gdImageArc( pImage, 50, 25, 98, 48, 0, 360, blue )
 
-   // Fill the ellipse
-   gdImageFill( pImage, 50, 50, red )
+// Fill the ellipse
+gdImageFill( pImage, 50, 50, red )
 
-   // Save the image
-   gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
-
-   RETURN
+// Save the image
+gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -574,7 +544,7 @@ PROCEDURE Main()
   <div><p>To set the color index you have to use <code><a href="#gdimagecolorallocate">gdImageColorAllocate()</a></code> function.</div>
   <div><p>Last parameter <code>nStyle</code> is a bitwise OR of the following possibilities: gdArc gdChord gdPie (synonym for gdArc) gdNoFill gdEdged</div>
   <div><p>gdArc and gdChord are mutually exclusive; gdChord just connects the starting and ending angles with a straight line, while gdArc produces a rounded edge. gdPie is a synonym for gdArc. gdNoFill indicates that the arc or chord should be outlined, not filled. gdEdged, used together with gdNoFill, indicates that the beginning and ending angles should be connected to the center; this is a good way to outline (rather than fill) a 'pie slice'</div>
-  <div><p>these constants are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/bd63aa6/contrib/hbgd/gd.ch">gd.ch</a></code></div>
+  <div><p>these constants are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/hbgd/gd.ch">gd.ch</a></code></div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -628,23 +598,20 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage
-   LOCAL blue
+LOCAL pImage
+LOCAL blue
 
-   // Create an image in memory
-   pImage := gdImageCreate( 100, 100 )
+// Create an image in memory
+pImage := gdImageCreate( 100, 100 )
 
-   // Allocate color
-   blue := gdImageColorAllocate( pImage, 0, 0, 255 )
+// Allocate color
+blue := gdImageColorAllocate( pImage, 0, 0, 255 )
 
-   // Draw an ellipse
-   gdImageFilledEllipse( pImage, 50, 25, 98, 48, blue )
+// Draw an ellipse
+gdImageFilledEllipse( pImage, 50, 25, 98, 48, blue )
 
-   // Save the image
-   gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
-
-   RETURN
+// Save the image
+gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -680,27 +647,24 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage
-   LOCAL blue
-   LOCAL aVerticies := { ;
-      { 50,  0 }, ;
-      { 99, 99 }, ;
-      {  0, 99 } }
+LOCAL pImage
+LOCAL blue
+LOCAL aVerticies := { ;
+   { 50,  0 }, ;
+   { 99, 99 }, ;
+   {  0, 99 } }
 
-   // Create an image in memory
-   pImage := gdImageCreate( 100, 100 )
+// Create an image in memory
+pImage := gdImageCreate( 100, 100 )
 
-   // Allocate color
-   blue := gdImageColorAllocate( pImage, 0, 0, 255 )
+// Allocate color
+blue := gdImageColorAllocate( pImage, 0, 0, 255 )
 
-   // Draw a filled polygon
-   gdImageFilledPolygon( pImage, aVerticies, blue )
+// Draw a filled polygon
+gdImageFilledPolygon( pImage, aVerticies, blue )
 
-   // Save the image
-   gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
-
-   RETURN
+// Save the image
+gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -732,23 +696,20 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage
-   LOCAL blue
+LOCAL pImage
+LOCAL blue
 
-   // Create an image in memory
-   pImage := gdImageCreate( 100, 100 )
+// Create an image in memory
+pImage := gdImageCreate( 100, 100 )
 
-   // Allocate color
-   blue := gdImageColorAllocate( pImage, 0, 0, 255 )
+// Allocate color
+blue := gdImageColorAllocate( pImage, 0, 0, 255 )
 
-   // Draw a filled rectangle
-   gdImageFilledRectangle( pImage, 10, 10, 50, 50, blue )
+// Draw a filled rectangle
+gdImageFilledRectangle( pImage, 10, 10, 50, 50, blue )
 
-   // Save the image
-   gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
-
-   RETURN
+// Save the image
+gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -780,27 +741,24 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage
-   LOCAL blue, red
+LOCAL pImage
+LOCAL blue, red
 
-   // Create an image in memory
-   pImage := gdImageCreate( 100, 100 )
+// Create an image in memory
+pImage := gdImageCreate( 100, 100 )
 
-   // Allocate color
-   blue := gdImageColorAllocate( pImage, 0, 0, 255 )
-   red  := gdImageColorAllocate( pImage, 255, 0, 0 )
+// Allocate color
+blue := gdImageColorAllocate( pImage, 0, 0, 255 )
+red  := gdImageColorAllocate( pImage, 255, 0, 0 )
 
-   // Draw an ellipse
-   gdImageArc( pImage, 50, 25, 98, 48, 0, 360, blue )
+// Draw an ellipse
+gdImageArc( pImage, 50, 25, 98, 48, 0, 360, blue )
 
-   // Fill the ellipse
-   gdImageFillToBorder( pImage, 50, 50, blue, red )
+// Fill the ellipse
+gdImageFillToBorder( pImage, 50, 50, blue, red )
 
-   // Save the image
-   gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
-
-   RETURN
+// Save the image
+gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -835,13 +793,10 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage := gdImageCreateFromGif( &quot;myimage.gif&quot; )
+LOCAL pImage := gdImageCreateFromGif( &quot;myimage.gif&quot; )
 
-   // Image conversion
-   gdImageGD( pImage, &quot;myimage.gd&quot; )
-
-   RETURN
+// Image conversion
+gdImageGD( pImage, &quot;myimage.gd&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -876,13 +831,10 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage := gdImageCreateFromJpeg( &quot;myimage.jpg&quot; )
+LOCAL pImage := gdImageCreateFromJpeg( &quot;myimage.jpg&quot; )
 
-   // Image conversion
-   gdImageGif( pImage, &quot;myimage.gif&quot; )
-
-   RETURN
+// Image conversion
+gdImageGif( pImage, &quot;myimage.gif&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -920,13 +872,10 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage := gdImageCreateFromGif( &quot;myimage.gif&quot; )
+LOCAL pImage := gdImageCreateFromGif( &quot;myimage.gif&quot; )
 
-   // Image conversion
-   gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
-
-   RETURN
+// Image conversion
+gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -958,23 +907,20 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage
-   LOCAL blue
+LOCAL pImage
+LOCAL blue
 
-   // Create an image in memory
-   pImage := gdImageCreate( 100, 100 )
+// Create an image in memory
+pImage := gdImageCreate( 100, 100 )
 
-   // Allocate color
-   blue := gdImageColorAllocate( pImage, 0, 0, 255 )
+// Allocate color
+blue := gdImageColorAllocate( pImage, 0, 0, 255 )
 
-   // Draw a line
-   gdImageLine( pImage, 10, 10, 90, 90, blue )
+// Draw a line
+gdImageLine( pImage, 10, 10, 90, 90, blue )
 
-   // Save the image
-   gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
-
-   RETURN
+// Save the image
+gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -1010,27 +956,24 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage
-   LOCAL blue
-   LOCAL aVerticies := { ;
-      { 50,  0 }, ;
-      { 99, 99 }, ;
-      {  0, 99 } }
+LOCAL pImage
+LOCAL blue
+LOCAL aVerticies := { ;
+   { 50,  0 }, ;
+   { 99, 99 }, ;
+   {  0, 99 } }
 
-   // Create an image in memory
-   pImage := gdImageCreate( 100, 100 )
+// Create an image in memory
+pImage := gdImageCreate( 100, 100 )
 
-   // Allocate color
-   blue := gdImageColorAllocate( pImage, 0, 0, 255 )
+// Allocate color
+blue := gdImageColorAllocate( pImage, 0, 0, 255 )
 
-   // Draws an open polygon
-   gdImageOpenPolygon( pImage, aVerticies, blue )
+// Draws an open polygon
+gdImageOpenPolygon( pImage, aVerticies, blue )
 
-   // Save the image
-   gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
-
-   RETURN
+// Save the image
+gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -1068,13 +1011,10 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage := gdImageCreateFromGif( &quot;myimage.gif&quot; )
+LOCAL pImage := gdImageCreateFromGif( &quot;myimage.gif&quot; )
 
-   // Image conversion
-   gdImagePng( pImage, &quot;myimage.png&quot; )
-
-   RETURN
+// Image conversion
+gdImagePng( pImage, &quot;myimage.png&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -1110,27 +1050,24 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage
-   LOCAL blue
-   LOCAL aVerticies := { ;
-      { 50,  0 }, ;
-      { 99, 99 }, ;
-      {  0, 99 } }
+LOCAL pImage
+LOCAL blue
+LOCAL aVerticies := { ;
+   { 50,  0 }, ;
+   { 99, 99 }, ;
+   {  0, 99 } }
 
-   // Create an image in memory
-   pImage := gdImageCreate( 100, 100 )
+// Create an image in memory
+pImage := gdImageCreate( 100, 100 )
 
-   // Allocate color
-   blue := gdImageColorAllocate( pImage, 0, 0, 255 )
+// Allocate color
+blue := gdImageColorAllocate( pImage, 0, 0, 255 )
 
-   // Draw a polygon
-   gdImagePolygon( pImage, aVerticies, blue )
+// Draw a polygon
+gdImagePolygon( pImage, aVerticies, blue )
 
-   // Save the image
-   gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
-
-   RETURN
+// Save the image
+gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -1162,23 +1099,20 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage
-   LOCAL blue
+LOCAL pImage
+LOCAL blue
 
-   // Create an image in memory
-   pImage := gdImageCreate( 100, 100 )
+// Create an image in memory
+pImage := gdImageCreate( 100, 100 )
 
-   // Allocate color
-   blue := gdImageColorAllocate( pImage, 0, 0, 255 )
+// Allocate color
+blue := gdImageColorAllocate( pImage, 0, 0, 255 )
 
-   // Draw a rectangle
-   gdImageRectangle( pImage, 10, 10, 50, 50, blue )
+// Draw a rectangle
+gdImageRectangle( pImage, 10, 10, 50, 50, blue )
 
-   // Save the image
-   gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
-
-   RETURN
+// Save the image
+gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -1325,31 +1259,28 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage, pBrush
-   LOCAL blue, red
+LOCAL pImage, pBrush
+LOCAL blue, red
 
-   // Create an image in memory
-   pImage := gdImageCreate( 100, 100 )
+// Create an image in memory
+pImage := gdImageCreate( 100, 100 )
 
-   // Open the brush PNG. For best results, portions of the brush that should be transparent
-   // (ie, not part of the brush shape) should have the transparent color index.
-   pBrush := gdImageCreateFromPng( &quot;mybrush.png&quot; )
+// Open the brush PNG. For best results, portions of the brush that should be transparent
+// (ie, not part of the brush shape) should have the transparent color index.
+pBrush := gdImageCreateFromPng( &quot;mybrush.png&quot; )
 
-   // Allocate color  (background color is the first allocate)
-   black := gdImageColorAllocate( pImage, 0, 0, 0 )
+// Allocate color  (background color is the first allocate)
+black := gdImageColorAllocate( pImage, 0, 0, 0 )
 
-   // Set the brush
-   gdImageSetBrush( pImage, pBrush )
+// Set the brush
+gdImageSetBrush( pImage, pBrush )
 
-   // Draw a line from the upper left corner to the lower
-   // right corner using the brush.
-   gdImageLine( pImage, 0, 0, 99, 99, gdBrushed )
+// Draw a line from the upper left corner to the lower
+// right corner using the brush.
+gdImageLine( pImage, 0, 0, 99, 99, gdBrushed )
 
-   // Save the image
-   gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
-
-   RETURN
+// Save the image
+gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -1381,23 +1312,20 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage
-   LOCAL white
+LOCAL pImage
+LOCAL white
 
-   // Create an image in memory
-   pImage := gdImageCreate( 100, 100 )
+// Create an image in memory
+pImage := gdImageCreate( 100, 100 )
 
-   // Allocate color
-   white := gdImageColorAllocate( pImage, 255, 255, 255 )
+// Allocate color
+white := gdImageColorAllocate( pImage, 255, 255, 255 )
 
-   // Draw a pixel
-   gdImageSetPixel( pImage, 50, 50, white )
+// Draw a pixel
+gdImageSetPixel( pImage, 50, 50, white )
 
-   // Save the image
-   gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
-
-   RETURN
+// Save the image
+gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -1553,32 +1481,29 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage, pTile
-   LOCAL blue, red
+LOCAL pImage, pTile
+LOCAL blue, red
 
-   // Create an image in memory
-   pImage := gdImageCreate( 100, 100 )
+// Create an image in memory
+pImage := gdImageCreate( 100, 100 )
 
-   // Open the tile PNG. For best results, portions of the
-   // tile that should be transparent (ie, allowing the
-   // background to shine through) should have the transparent
-   // color index.
-   pTile := gdImageCreateFromPng( &quot;mytile.png&quot; )
+// Open the tile PNG. For best results, portions of the
+// tile that should be transparent (ie, allowing the
+// background to shine through) should have the transparent
+// color index.
+pTile := gdImageCreateFromPng( &quot;mytile.png&quot; )
 
-   // Allocate color  (background color is the first allocate)
-   black := gdImageColorAllocate( pImage, 0, 0, 0 )
+// Allocate color  (background color is the first allocate)
+black := gdImageColorAllocate( pImage, 0, 0, 0 )
 
-   // Set the tile
-   gdImageSetTile( pImage, pTile )
+// Set the tile
+gdImageSetTile( pImage, pTile )
 
-   // Fill an area using the tile
-   gdImageFilledRectangle( pImage, 25, 25, 75, 75, gdTiled )
+// Fill an area using the tile
+gdImageFilledRectangle( pImage, 25, 25, 75, 75, gdTiled )
 
-   // Save the image
-   gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
-
-   RETURN
+// Save the image
+gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -1613,26 +1538,23 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-PROCEDURE Main()
-   LOCAL pImage
-   LOCAL white, black
+LOCAL pImage
+LOCAL white, black
 
-   // Create an image in memory
-   pImage := gdImageCreate( 100, 100 )
+// Create an image in memory
+pImage := gdImageCreate( 100, 100 )
 
-   // Allocate background
-   white := gdImageColorAllocate( pImage, 255, 255, 255 )
+// Allocate background
+white := gdImageColorAllocate( pImage, 255, 255, 255 )
 
-   // Allocate drawing color
-   black := gdImageColorAllocate( pImage, 0, 0, 0 )
+// Allocate drawing color
+black := gdImageColorAllocate( pImage, 0, 0, 0 )
 
-   // Draw a rectangle
-   gdImageRectangle( pImage, 0, 0, 99, 99, black )
+// Draw a rectangle
+gdImageRectangle( pImage, 0, 0, 99, 99, black )
 
-   // Save the image with black as foreground color
-   gdImageWBmp( pImage, &quot;myimage.wbmp&quot;, black )
-
-   RETURN
+// Save the image with black as foreground color
+gdImageWBmp( pImage, &quot;myimage.wbmp&quot;, black )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -1649,6 +1571,6 @@ PROCEDURE Main()
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-01 17:50 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/bd63aa6">bd63aa6</a></div>
+<div>Generated by hbdoc on 2016-11-01 19:08 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/0bba37b">0bba37b</a></div>
 </footer>
