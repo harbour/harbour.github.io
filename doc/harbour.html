@@ -24,7 +24,15 @@
 
 <header>
 <div>
-<div><a href="index.html">Harbour Reference Guide</a></div>
+<div><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2260 2260">
+ <path d="M900 1908c137.17-53.265 443.401-77.006 600-52.437-27.114-474.75-34.113-758.178-7.68-1116.318 2.056-27.195 4.283-54.9 6.68-83.245-34.633 68.628-579.454 1206.43-599 1252z"/>
+ <path d="M1503 297c-123.836 327.12-161.3 844.46-213.465 1389.52-169.502-13.113-449.007 19.795-659.305 108.824C643.758 1771.594 1401.461 465.26 1503 297z"/>
+ <path d="M1172 1270c-224.304-65.046-473.09 64.996-694 204C631.353 1238.571 1091.25 537.106 1489 0c-301.506 419.861-317.184 1087.933-317 1270z"/>
+ <path d="M620.796 2258.73c.662-1.037 1.36-2.165 2.068-3.191 36.736-55.29 105.692-101.177 205.103-96.72 193.8 8.619 357.238 25.577 652.18 7.207-290.1-9.342-643.351-48.142-1069.102-124.55 105.834 77.98 193.83 195.404 209.763 217.253"/>
+ <path d="M2259.24 2007.878c-351.827 85.376-1111.265 54.312-2014.169-105.238 59.534 32.024 105.241 68.44 160.567 113.871 884.551 158.714 1465.735 153.54 1808.655 60.37 31.307-22.43 35.385-37.956 44.934-69.006"/>
+ <path d="M2250.776 1985.617c-316.53 76.867-975.996 46.6-1793.466-72.332-79.588-11.605-308.233-46.57-445.63-69.063-7.464-15.506-11.282-40.462-11.282-70.79 509.451 68.675 1799.558 275.424 2243.969 168.26 2.015 12.02 7.115 18.487 6.527 43.929"/>
+</svg>
+Harbour Reference Guide</a></div>
 <div>
 <nav class="menu">
 <nav class="dropdown">
@@ -566,7 +574,7 @@
   <div><p>Clipper is a trademark of Computer Associates and will often be referred to as CA-Cl*pper within Harbour documents. Regardless of this variant, Clipper is recognized as Computer Associates' trademark.</div>
   <div><p>Harbour is a free software compiler for the xBase superset language often referred to as Clipper (the language that is implemented by the compiler Clipper). The goal of Harbour is to produce a cross platform CA-Cl*pper compatible compiler.</div>
   <div><p>The Harbour website is at <a href="https://vszakats.github.io/harbour-core/">https://vszakats.github.io/harbour-core/</a>. If you have any problem with this copy of Harbour please visit our web site and ensure that you are using the latest release.</div>
-  <div><p>If you are reading this file as part of a source distribution of Harbour you probably want to start by reading <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/doc/dirstruc.txt">doc/dirstruc.txt</a></code> because this is your map to the Harbour source directories.</div>
+  <div><p>If you are reading this file as part of a source distribution of Harbour you probably want to start by reading <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/doc/dirstruc.txt">doc/dirstruc.txt</a></code> because this is your map to the Harbour source directories.</div>
   <div><p>Harbour is a superset of Clipper and is backwards compatible with nearly 100% of all Clipper 5.2x or 5.3 code. Most Clipper S'87 code will also compile and run fine, but may require some modifications to run well.</div>
 </div>
 <div class="d-d">Tag(s)</div>
@@ -725,7 +733,7 @@
   <div><p>In practice, CA-Cl*pper will call the <code>COUNT()</code> function two times: the first time before addition and the second one after addition. In Harbour, <code>COUNT()</code> will be called only once, before addition.</div>
   <div><p>The Harbour (non-strict) method is:</div>
   <div><p>1) faster 2) it guarantees that the same instance variable of the same object will be changed</div>
-  <div><p>(See also: <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbexpra.c">include/hbexpra.c</a></code>, <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbexprb.c">include/hbexprb.c</a></code>)</div>
+  <div><p>(See also: <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hbexpra.c">include/hbexpra.c</a></code>, <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hbexprb.c">include/hbexprb.c</a></code>)</div>
   <div><p><strong>Initialization of static variables      </strong></div>
   <div><p><hr></div>
   <div><p>There is a difference in the initialization of static variables that are initialized with a codeblock that refers to a local variable. For example:</div>
@@ -781,7 +789,7 @@ PROCEDURE Main()
   <div><p>* <code><a href="#procname">ProcName()</a></code> support for class Method names.</div>
   <div><p>Class Methods can be retrieved from the call stack.</div>
   <div><p>* <code><a href="#memory">Memory()</a></code> has new return values.</div>
-  <div><p>See <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmemory.ch">hbmemory.ch</a></code></div>
+  <div><p>See <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hbmemory.ch">hbmemory.ch</a></code></div>
   <div><p>* <code><a href="#transform">Transform()</a></code> → new function in format string</div>
   <div><p>@0      Make a zero padded string out of the number.</div>
   <div><p>* <code><a href="#stod">SToD()</a></code> → dDate</div>
@@ -795,7 +803,7 @@ PROCEDURE Main()
   <div><p>- Class TDbMenu implement both pulldown and popup menus.</div>
   <div><p><strong>RTL enhanced functionality:</strong> <hr></div>
   <div><p>- hb_vfDirSpace( <code>nDir</code>, <code>nType</code> )</div>
-  <div><p>The second parameter is a Harbour (optional) parameter and indicates the type of diskinfo being requested.  See <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/doc/en/diskspac.txt">doc/en/diskspac.txt</a></code> for info.</div>
+  <div><p>The second parameter is a Harbour (optional) parameter and indicates the type of diskinfo being requested.  See <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/doc/en/diskspac.txt">doc/en/diskspac.txt</a></code> for info.</div>
 </div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Document</div>
@@ -2275,7 +2283,7 @@ dbCreate( &quot;onlyname.dbf&quot;, __dbStructFilter( aStruct, aList ) )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/dbstruct.ch">dbstruct.ch</a></code> Library is rdd</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/dbstruct.ch">dbstruct.ch</a></code> Library is rdd</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Database</div>
 <div class="d-d">See also</div>
@@ -2344,12 +2352,12 @@ dbCreate( &quot;onlyname.dbf&quot;, __FLedit( aStruct, aList ) )
 <div class="d-d">Compliance</div>
 <div class="d-it">
   <div>CA-Cl*pper has internal undocumented function named <code><a href="#__fledit">__FLedit()</a></code>, in Harbour we name it <code><a href="#__dbstructfilter">__dbStructFilter()</a></code>. The new name gives a better description of what this function does. In Harbour <code><a href="#__fledit">__FLedit()</a></code> simply calls <code><a href="#__dbstructfilter">__dbStructFilter()</a></code> and therefor the latter is the recommended function to use.</div>
-  <div>This function is only visible if <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/src/rdd/dbstrux.prg">src/rdd/dbstrux.prg</a></code> was compiled with the <code>HB_CLP_UNDOC</code> flag.</div>
+  <div>This function is only visible if <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/src/rdd/dbstrux.prg">src/rdd/dbstrux.prg</a></code> was compiled with the <code>HB_CLP_UNDOC</code> flag.</div>
 </div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/dbstruct.ch">dbstruct.ch</a></code> Library is rdd</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/dbstruct.ch">dbstruct.ch</a></code> Library is rdd</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Database</div>
 <div class="d-d">See also</div>
@@ -2751,7 +2759,7 @@ dbCreate( &quot;testdbf&quot;, aStruct, &quot;DBFCDX&quot;, .T., &quot;MYALIAS&q
 <div class="d-d">Compliance</div>
 <div class="d-it">This function is not CA-Cl*pper compliant</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rdd Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/dbstruct.ch">dbstruct.ch</a></code></div>
+<div class="d-it">Library is rdd Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/dbstruct.ch">dbstruct.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Database</div>
 <div class="d-d">See also</div>
@@ -3267,7 +3275,7 @@ PROCEDURE Main()
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rdd Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/dbstruct.ch">dbstruct.ch</a></code></div>
+<div class="d-it">Library is rdd Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/dbstruct.ch">dbstruct.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Database</div>
 <div class="d-d">See also</div>
@@ -6124,7 +6132,7 @@ ENDIF
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/fileio.ch">fileio.ch</a></code></div>
+<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/fileio.ch">fileio.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, FileSys</div>
 </section>
@@ -6201,7 +6209,7 @@ ENDIF
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/fileio.ch">fileio.ch</a></code></div>
+<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/fileio.ch">fileio.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, FileSys</div>
 <div class="d-d">See also</div>
@@ -6373,7 +6381,7 @@ ENDIF
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/fileio.ch">fileio.ch</a></code></div>
+<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/fileio.ch">fileio.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, FileSys</div>
 <div class="d-d">See also</div>
@@ -6566,7 +6574,7 @@ FUNCTION FReadLn( nH, cB, nMaxLine )
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/fileio.ch">fileio.ch</a></code></div>
+<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/fileio.ch">fileio.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, FileSys</div>
 <div class="d-d">See also</div>
@@ -6658,7 +6666,7 @@ FClose( nHandle )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/fileio.ch">fileio.ch</a></code></div>
+<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/fileio.ch">fileio.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, FileSys</div>
 </section>
@@ -7696,7 +7704,7 @@ hb_idleDel( nTask2 )
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>nScope</code> = the scope of variables for which an information is asked</div>
-  <div>Supported values (defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmemvar.ch">hbmemvar.ch</a></code>) <code>HB_MV_PUBLIC</code> <code>HB_MV_PRIVATE</code> (or any other value)</div>
+  <div>Supported values (defined in <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hbmemvar.ch">hbmemvar.ch</a></code>) <code>HB_MV_PUBLIC</code> <code>HB_MV_PRIVATE</code> (or any other value)</div>
   <div><code>nPosition</code> = the position of asked variable on the list of variables with specified scope - it should start from position 1 <code>cVarName</code> = the value is filled with a variable name if passed by reference and <code>nPosition</code> is specified</div>
 </div>
 <div class="d-d">Returns</div>
@@ -9028,7 +9036,7 @@ PROCEDURE Main()
 <div class="d-it d-sy">
 <code>hb_langErrMsg( &lt;nErrorCode&gt; ) → cErrorMessage</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nErrorCode</code> is one of the generic error codes (EG_...) defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/error.ch">error.ch</a></code></div>
+<div class="d-it"><code>nErrorCode</code> is one of the generic error codes (EG_...) defined in <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/error.ch">error.ch</a></code></div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code><a href="#hb_langerrmsg">hb_langErrMsg()</a></code> return the error message string represented by the code <code>nErrorCode</code>.</div>
 <div class="d-d">Description</div>
@@ -9052,7 +9060,7 @@ PROCEDURE Main()
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/error.ch">error.ch</a></code></div>
+<div class="d-it">Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/error.ch">error.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Language and Nation</div>
 <div class="d-d">See also</div>
@@ -9076,7 +9084,7 @@ PROCEDURE Main()
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#hb_langmessage">hb_langMessage()</a></code> is similar to <code><a href="#nationmsg">NationMsg()</a></code> but give access to the whole list of language messages: Day and month names, generic error messages, internal errors, and others...</div>
-  <div><p>Use the header file <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hblang.ch">hblang.ch</a></code> for a list of base values for <code>nMsg</code>.</div>
+  <div><p>Use the header file <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hblang.ch">hblang.ch</a></code> for a list of base values for <code>nMsg</code>.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -9098,7 +9106,7 @@ PROCEDURE Main()
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hblang.ch">hblang.ch</a></code></div>
+<div class="d-it">Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hblang.ch">hblang.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Language and Nation</div>
 <div class="d-d">See also</div>
@@ -9403,7 +9411,7 @@ ENDDO
 <code>hb_SetMacro( &lt;nOption&gt;, [&lt;lOnOff&gt;] ) → &lt;lOldSetting&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>nOption</code> One of the <code>HB_SM_</code>* constants defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/set.ch">set.ch</a></code>.</div>
+  <div><code>nOption</code> One of the <code>HB_SM_</code>* constants defined in <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/set.ch">set.ch</a></code>.</div>
   <div><code>lOnOff</code> <code>.T.</code> to enable or <code>.F.</code> to disable a feature</div>
 </div>
 <div class="d-d">Returns</div>
@@ -9434,7 +9442,7 @@ INIT PROCEDURE IWANTCLIPPER()
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/set.ch">set.ch</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/set.ch">set.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Macro</div>
 <div class="d-d">See also</div>
@@ -9540,7 +9548,7 @@ CLS
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div>[<code>nNumber</code>]   new math error handling mode, one of the following</div>
-  <div>constants, defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.ch">hbmath.ch</a></code>:</div>
+  <div>constants, defined in <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hbmath.ch">hbmath.ch</a></code>:</div>
   <div><code>HB_MATH_ERRMODE_DEFAULT</code> <code>HB_MATH_ERRMODE_CDEFAULT</code> <code>HB_MATH_ERRMODE_USER</code> <code>HB_MATH_ERRMODE_USERDEFAULT</code> <code>HB_MATH_ERRMODE_USERCDEFAULT</code></div>
 </div>
 <div class="d-d">Returns</div>
@@ -9550,7 +9558,7 @@ CLS
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.ch">hbmath.ch</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hbmath.ch">hbmath.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Math</div>
 </section>
@@ -10169,7 +10177,7 @@ NEXT
 <div class="d-it">
   <div><p><code><a href="#__objgetmsglist">__objGetMsgList()</a></code> is a low level class support function that let you find all instance variable or method names for a given object.</div>
   <div><p>If specified, the following table shows the values for <code>nClassType</code> that allow you to distinguish between VAR and <code>CLASS</code> VAR:</div>
-  <div><p>table&gt; <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hboo.ch">hboo.ch</a></code>           Meaning</div>
+  <div><p>table&gt; <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hboo.ch">hboo.ch</a></code>           Meaning</div>
   <div><p><code>HB_MSGLISTALL</code>     All types <code>HB_MSGLISTCLASS</code>   <code>CLASS</code> VAR only <code>HB_MSGLISTPURE</code>    VAR only /table&gt;</div>
   <div><p>VAR are instance variable usable within each object from a class, where each object has its own VARs.</div>
   <div><p><code>CLASS</code> VAR are shared by all objects from a Class, so the changed value within Object1 will be reflected when accessing the <code>CLASS</code> VAR from Object2.</div>
@@ -10196,7 +10204,7 @@ NEXT
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hboo.ch">hboo.ch</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hboo.ch">hboo.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Objects</div>
 <div class="d-d">See also</div>
@@ -10237,7 +10245,7 @@ NEXT
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hboo.ch">hboo.ch</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hboo.ch">hboo.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Objects</div>
 <div class="d-d">See also</div>
@@ -10461,7 +10469,7 @@ __objSetValueList( oB, aData )
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hboo.ch">hboo.ch</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hboo.ch">hboo.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Objects</div>
 <div class="d-d">See also</div>
@@ -12165,7 +12173,7 @@ DevOutPict( -1.25, &quot;@D$ 99,999.99 ) // -&gt; $(     1.25)
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>CA-Cl*pper has a color spec string, which has more than one color in it, separated with commas.</div>
-  <div><p>This function will extract a given item from this list. You may use the manifest constants defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/color.ch">color.ch</a></code> to identify and extract common colors.</div>
+  <div><p>This function will extract a given item from this list. You may use the manifest constants defined in <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/color.ch">color.ch</a></code> to identify and extract common colors.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -12736,13 +12744,13 @@ ENDCASE
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">
-  <div>This function is sensitive to <code>HB_CLP_STRICT</code> settings during the compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/src/rtl/alert.prg">src/rtl/alert.prg</a></code></div>
+  <div>This function is sensitive to <code>HB_CLP_STRICT</code> settings during the compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/src/rtl/alert.prg">src/rtl/alert.prg</a></code></div>
   <div><strong>defined</strong>: <code>xMessage</code> accept Character values only and return <code>NIL</code> if other types are passed.</div>
   <div><strong>undefined</strong>: <code>xMessage</code> could be any type, and internally converted to Character string. If type is Array, multi-line message is displayed.</div>
   <div><strong>defined</strong>: Only the first four valid <code>aOptions</code> are taken.</div>
   <div><strong>undefined</strong>: <code>aOptions</code> could contain as many as needed options.</div>
-  <div>If <code>HB_COMPAT_C53</code> was define during compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/src/rtl/alert.prg">src/rtl/alert.prg</a></code> the Left-Mouse button could be used to select an option.</div>
-  <div>The interpretation of the <code>//NOALERT</code> command-line switch is done only if <code>HB_CLP_UNDOC</code> was define during compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/src/rtl/alert.prg">src/rtl/alert.prg</a></code></div>
+  <div>If <code>HB_COMPAT_C53</code> was define during compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/src/rtl/alert.prg">src/rtl/alert.prg</a></code> the Left-Mouse button could be used to select an option.</div>
+  <div>The interpretation of the <code>//NOALERT</code> command-line switch is done only if <code>HB_CLP_UNDOC</code> was define during compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/src/rtl/alert.prg">src/rtl/alert.prg</a></code></div>
   <div><code>cColorNorm</code> is a Harbour extension, or at least un-documented in Clipper 5.2 NG.</div>
   <div><code>nDelay</code> is a Harbour extension.</div>
 </div>
@@ -12908,7 +12916,7 @@ dbEdit()
   <div>There is an undocumented result code (3) from the user defined function in CA-Cl*pper (both 87 and 5.x). This is an Append Mode which: &quot;split the screen to allow data to be appended in windowed area&quot;. This mode is not supported by Harbour.</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header files are <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/dbedit.ch">dbedit.ch</a></code>, <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/inkey.ch">inkey.ch</a></code> Library is core</div>
+<div class="d-it">Header files are <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/dbedit.ch">dbedit.ch</a></code>, <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/inkey.ch">inkey.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, User interface</div>
 <div class="d-d">See also</div>
@@ -12956,7 +12964,7 @@ hb_keyPut( K_F11 ); ? Inkey()  // -&gt; -40
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>nTimeout</code> is an optional timeout value in seconds, with a granularity of 1/10th of a second. If omitted, <code><a href="#inkey">Inkey()</a></code> returns immediately. If set to 0, <code><a href="#inkey">Inkey()</a></code> waits until an input event occurs. If set to any other value, <code><a href="#inkey">Inkey()</a></code> will return either when an input event occurs or when the timeout period has elapsed. If only this parameter is specified and it is not numeric, it will be treated as if it were 0. But if both parameters are specified and this parameter is not numeric, it will be treated as if it were not present.</div>
-  <div><code>nEvents</code> is an optional mask of input events that are to be enabled. If omitted, defaults to hb_set.HB_SET_EVENTMASK. Valid input masks are in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/inkey.ch">inkey.ch</a></code> and are explained below. It is recommended that the mask names be used rather than their numeric values, in case the numeric values change in future releases of Harbour. To allow more than one type of input event, simply add the various mask names together.</div>
+  <div><code>nEvents</code> is an optional mask of input events that are to be enabled. If omitted, defaults to hb_set.HB_SET_EVENTMASK. Valid input masks are in <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/inkey.ch">inkey.ch</a></code> and are explained below. It is recommended that the mask names be used rather than their numeric values, in case the numeric values change in future releases of Harbour. To allow more than one type of input event, simply add the various mask names together.</div>
   <div class="d-t d-t1">
   <div>  inkey.ch            Meaning</div>
   <div>  INKEY_MOVE          Mouse motion events are allowed</div>
@@ -12972,7 +12980,7 @@ hb_keyPut( K_F11 ); ? Inkey()  // -&gt; -40
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">
-  <div>0 in case of timeout with no input event, otherwise returns a value in the range -47 to 386 for keyboard events or the range 1001 to 1007 for mouse events. Mouse events and non-printable keyboard events are represented by the <code>K_&lt;event&gt;</code> values listed in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/inkey.ch">inkey.ch</a></code>. Keyboard event return codes in the range 32 through 127 are equivalent to the printable <code>ASCII</code> character set. Keyboard event return codes in the range 128 through 255 are assumed to be printable, but results may vary based on hardware and nationality. If <code>HB_INKEY_EXTENDED</code> mode is used, then the return value for keyboard events ranges from 1 through 767 and 1077 through 1491, although not all codes are used.</div>
+  <div>0 in case of timeout with no input event, otherwise returns a value in the range -47 to 386 for keyboard events or the range 1001 to 1007 for mouse events. Mouse events and non-printable keyboard events are represented by the <code>K_&lt;event&gt;</code> values listed in <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/inkey.ch">inkey.ch</a></code>. Keyboard event return codes in the range 32 through 127 are equivalent to the printable <code>ASCII</code> character set. Keyboard event return codes in the range 128 through 255 are assumed to be printable, but results may vary based on hardware and nationality. If <code>HB_INKEY_EXTENDED</code> mode is used, then the return value for keyboard events ranges from 1 through 767 and 1077 through 1491, although not all codes are used.</div>
   <div>Extended key codes consist of the PC keyboard scan code and one or more offset values. If no keyboard modifier was used, then <code>HB_INKEY_NONE</code> is added. The <span class="d-key">Alt</span> key adds <code>HB_INKEY_ALT</code>, the <span class="d-key">Ctrl</span> key adds <code>HB_INKEY_CTRL</code>, the <span class="d-key">Shift</span> key adds <code>HB_INKEY_SHIFT</code>, and enhanced keys (<span class="d-key">KeyPad+/</span> and <span class="d-key">CursorPad</span> keys) add <code>HB_INKEY_ENHANCED</code>. For example, <span class="d-key">F1</span> is scan code 59, so if you just press <span class="d-key">F1</span>, you get key code 315, but <span class="d-key">Alt+F1</span> gives 443, <span class="d-key">Ctrl+F1</span> gives 571, and <span class="d-key">Shift+F1</span> gives 699. And <code>NumPad+/</code> gives 1077, 1205, 1333, and 1461. At this time, the only value that can combine with other values is <code>HB_INKEY_ENHANCED</code> (i.e., there are no <span class="d-key">Alt+Ctrl</span> combinations, etc.)</div>
   <div>Note: The extended key code set is larger than the normal key code set. As a result, if you switch between the normal and extended modes, you need to be aware that some codes get translated into a zero in normal mode (because there is no corresponding code in normal mode) and that these codes get removed from the keyboard input buffer in normal mode and you won't be able to go back and fetch them later in extended mode.</div>
 </div>
@@ -13217,7 +13225,7 @@ KEYBOARD &quot;AB&quot;; ? NextKey(), NextKey()  // -&gt;   65   65
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#outerr">OutErr()</a></code> write one or more values into the standard error device. Character and Memo values are printed as is, Dates are printed according to the <code>SET <code>DATE</code> <code>FORMAT</code></code>, Numeric values are converted to strings, Logical values are printed as <code>.T.</code> or <code>.F.</code>, <code>NIL</code> are printed as <code>NIL</code>, values of any other kind are printed as empty string. There is one space separating each two values. Note that Numeric value can take varying length when converted into string depending on its source (see <code><a href="#str">Str()</a></code> for detail).</div>
-  <div><p>There is an undocumented CA-Cl*pper command-line switch <code>//STDERR</code> which can set the file handle to write output from <code><a href="#outerr">OutErr()</a></code>. If not specified the default <code>STDERR</code> is used, <code>//STDERR</code> or <code>//STDERR:0</code> set <code><a href="#outerr">OutErr()</a></code> to output to the same file handle as <code><a href="#outstd">OutStd()</a></code>, <code>//STDERR:n</code> set output to file handle n. Like other undocumented features this switch is available only if <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/src/rtl/console.c">src/rtl/console.c</a></code> was compiled with the <code>HB_CLP_UNDOC</code> flag.</div>
+  <div><p>There is an undocumented CA-Cl*pper command-line switch <code>//STDERR</code> which can set the file handle to write output from <code><a href="#outerr">OutErr()</a></code>. If not specified the default <code>STDERR</code> is used, <code>//STDERR</code> or <code>//STDERR:0</code> set <code><a href="#outerr">OutErr()</a></code> to output to the same file handle as <code><a href="#outstd">OutStd()</a></code>, <code>//STDERR:n</code> set output to file handle n. Like other undocumented features this switch is available only if <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/src/rtl/console.c">src/rtl/console.c</a></code> was compiled with the <code>HB_CLP_UNDOC</code> flag.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -13613,7 +13621,7 @@ None Avaliable
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>cVarName</code> = a string with a variable name to check</div>
 <div class="d-d">Returns</div>
-<div class="d-it">The symbolic values are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmemvar.ch">hbmemvar.ch</a></code> <code>HB_MV_NOT_FOUND</code>     =variable is not declared (not found in symbol table) <code>HB_MV_UNKNOWN</code>       =if variable doesn't exist (but found in symbol table) <code>HB_MV_ERROR</code>         =if information cannot be obtained (memory error or argument error) <code>HB_MV_PUBLIC</code>         =for public variables <code>HB_MV_PRIVATE_GLOBAL</code> =for private variables declared outside of current function/procedure <code>HB_MV_PRIVATE_LOCAL</code>  =for private variables declared in current function/procedure</div>
+<div class="d-it">The symbolic values are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hbmemvar.ch">hbmemvar.ch</a></code> <code>HB_MV_NOT_FOUND</code>     =variable is not declared (not found in symbol table) <code>HB_MV_UNKNOWN</code>       =if variable doesn't exist (but found in symbol table) <code>HB_MV_ERROR</code>         =if information cannot be obtained (memory error or argument error) <code>HB_MV_PUBLIC</code>         =for public variables <code>HB_MV_PRIVATE_GLOBAL</code> =for private variables declared outside of current function/procedure <code>HB_MV_PRIVATE_LOCAL</code>  =for private variables declared in current function/procedure</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 PROCEDURE Main()
@@ -14168,7 +14176,7 @@ hb_mathGetErrMode( void ) → imode
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 <div class="d-d">See also</div>
@@ -14202,7 +14210,7 @@ hb_mathGetHandler( void ) → HB_MATH_HANDLERPROC handlerproc
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 </section>
@@ -14227,7 +14235,7 @@ hb_mathGetLastError( HB_MATH_EXCEPTION * phb_exc )
   <div>the structure will be filled with information about the last math error:</div>
   <div>typedef struct <code>_HB_MATH_EXCEPTION</code> {</div>
   <div>int type;        // Math error type, is one of the constants</div>
-  <div>// <code>HB_MATH_ERR_</code>xxx defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.ch">hbmath.ch</a></code></div>
+  <div>// <code>HB_MATH_ERR_</code>xxx defined in <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hbmath.ch">hbmath.ch</a></code></div>
   <div>char *funcname;  // Pointer to name of the math C RTL routine</div>
   <div>// that caused the error.</div>
   <div>char *error;     // Pointer to error description. double arg1;     // First and double arg2;     // Second double argument to the math routine. double retval;   // Corrected return value for the math routine. int retvalwidth; // Width and int retvaldec;   // Decimals of the corrected return value,</div>
@@ -14245,7 +14253,7 @@ hb_mathGetLastError( HB_MATH_EXCEPTION * phb_exc )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 </section>
@@ -14272,7 +14280,7 @@ hb_mathIsMathErr( void ) → int iIsMathHandler
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 </section>
@@ -14297,7 +14305,7 @@ hb_mathResetError( void )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 </section>
@@ -14318,7 +14326,7 @@ hb_mathSetErrMode( int imode ) → int ioldmode
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div>imode        math error handling mode, one of the following</div>
-  <div>constants, defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.ch">hbmath.ch</a></code>:</div>
+  <div>constants, defined in <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hbmath.ch">hbmath.ch</a></code>:</div>
   <div><code>HB_MATH_ERRMODE_DEFAULT</code> <code>HB_MATH_ERRMODE_CDEFAULT</code> <code>HB_MATH_ERRMODE_USER</code> <code>HB_MATH_ERRMODE_USERDEFAULT</code> <code>HB_MATH_ERRMODE_USERCDEFAULT</code></div>
 </div>
 <div class="d-d">Returns</div>
@@ -14330,7 +14338,7 @@ hb_mathSetErrMode( int imode ) → int ioldmode
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 <div class="d-d">See also</div>
@@ -14368,7 +14376,7 @@ hb_mathSetHandler( HB_MATH_HANDLERPROC handlerproc )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 </section>
@@ -17607,6 +17615,6 @@ oTb:SeyKey( K_F10, {| otb, nkey | ShowListByname( otb ) }
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-01 19:08 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/0bba37b">0bba37b</a></div>
+<div>Generated by hbdoc on 2016-11-01 19:29 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/c33d219">c33d219</a></div>
 </footer>

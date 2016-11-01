@@ -24,7 +24,15 @@
 
 <header>
 <div>
-<div><a href="index.html">Harbour Reference Guide</a></div>
+<div><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2260 2260">
+ <path d="M900 1908c137.17-53.265 443.401-77.006 600-52.437-27.114-474.75-34.113-758.178-7.68-1116.318 2.056-27.195 4.283-54.9 6.68-83.245-34.633 68.628-579.454 1206.43-599 1252z"/>
+ <path d="M1503 297c-123.836 327.12-161.3 844.46-213.465 1389.52-169.502-13.113-449.007 19.795-659.305 108.824C643.758 1771.594 1401.461 465.26 1503 297z"/>
+ <path d="M1172 1270c-224.304-65.046-473.09 64.996-694 204C631.353 1238.571 1091.25 537.106 1489 0c-301.506 419.861-317.184 1087.933-317 1270z"/>
+ <path d="M620.796 2258.73c.662-1.037 1.36-2.165 2.068-3.191 36.736-55.29 105.692-101.177 205.103-96.72 193.8 8.619 357.238 25.577 652.18 7.207-290.1-9.342-643.351-48.142-1069.102-124.55 105.834 77.98 193.83 195.404 209.763 217.253"/>
+ <path d="M2259.24 2007.878c-351.827 85.376-1111.265 54.312-2014.169-105.238 59.534 32.024 105.241 68.44 160.567 113.871 884.551 158.714 1465.735 153.54 1808.655 60.37 31.307-22.43 35.385-37.956 44.934-69.006"/>
+ <path d="M2250.776 1985.617c-316.53 76.867-975.996 46.6-1793.466-72.332-79.588-11.605-308.233-46.57-445.63-69.063-7.464-15.506-11.282-40.462-11.282-70.79 509.451 68.675 1799.558 275.424 2243.969 168.26 2.015 12.02 7.115 18.487 6.527 43.929"/>
+</svg>
+Harbour Reference Guide</a></div>
 <div>
 <nav class="menu">
 <nav class="dropdown">
@@ -2439,7 +2447,7 @@ ENDCASE
   <div><p>Given Clipper's high-level orientation, this function is necessarily somewhat messy to use.  First, declare an array of ten elements to hold the eight values for the CPU registers and two string parameters. Then initialize the array elements with the values that you want the CPU registers to contain when the interrupt is executed.  You need not initialize all the elements.  For example, if the interrupt requires you to specify values for AX, DX, and DS, you would only need to initialize elements 1, 4, and 8.</div>
   <div><p>Once you have done the required register setup, call <code>ft_int86()</code>, passing the interrupt number and the register array as parameters. The function will load the CPU with your specified values, execute the interrupt, and then store the contents of the CPU registers back into your array.  This will allow you to evaluate the results of the interrupt.</div>
   <div><p>Some interrupt services require you to pass the address of a string in a pair of registers.  This function is capable of handling these sorts of situations, but it will take a little work on your part.  If you need to pass a string that uses the DS register, store the string in element 8;  if you need to pass a string that uses the ES register, store the string in element 9.  <code>ft_int86()</code> will detect that you've supplied a string instead of a numeric value and will behave accordingly.</div>
-  <div><p>That takes care of obtaining the segment portion of the pointer.  To specify which register is to contain the offset, use the values <code>REG_DS</code> and <code>REG_ES</code> which are defined in the <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/hbnf/ftint86.ch">ftint86.ch</a></code> file.  When one of these values is found in an array element, it alerts <code>ft_int86()</code> to use the offset portion of a pointer instead of a numeric value.  <code>REG_DS</code> tells <code>ft_int86()</code> to use the offset of the string in element 8, while <code>REG_ES</code> tells <code>ft_int86()</code> to use the offset of the string in element 9.</div>
+  <div><p>That takes care of obtaining the segment portion of the pointer.  To specify which register is to contain the offset, use the values <code>REG_DS</code> and <code>REG_ES</code> which are defined in the <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/hbnf/ftint86.ch">ftint86.ch</a></code> file.  When one of these values is found in an array element, it alerts <code>ft_int86()</code> to use the offset portion of a pointer instead of a numeric value.  <code>REG_DS</code> tells <code>ft_int86()</code> to use the offset of the string in element 8, while <code>REG_ES</code> tells <code>ft_int86()</code> to use the offset of the string in element 9.</div>
   <div><p>All the CPU registers are sixteen bits in size.  Some, however, are also split into two 8-bit registers.  This function is only capable of receiving and returning registers that are 16 bits in size.  To split a 16-bit register into two 8-bit values, you can use the pseudo-functions <code>HighByte()</code> and <code>LowByte()</code>, contained in the .ch file.</div>
   <div><p>To alter an 8-bit number so it will appear in the high-order byte of a register when passed to the <code>ft_int86()</code> function, use the <code>MakeHI()</code> pseudo-function contained in the .ch file.</div>
   <div><p>When run in real mode, this function is a shell for <code>__ftint86()</code>, which is written in assembler and does the actual work of executing the interrupt.  <code>__ftint86()</code> is callable from C, so feel free to incorporate it into any C routines for which it might be useful.  The source for <code>__ftint86()</code> can be found in the file <code>AINT86</code>.ASM.</div>
@@ -5546,7 +5554,7 @@ MENU TO &lt;var&gt; [COLD]
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This enhanced version of <code>MENU</code> <code>TO</code> requires the inclusion of the header file <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/hbnf/ftmenuto.ch">ftmenuto.ch</a></code> in any source file that uses it.  It may be used in place of the standard Clipper <code>MENU</code> <code>TO</code> command.  However, in the interests of functionality it is NOT 100% compatible (in particular, you should make sure that the target memvar exists before executing the menu — the Clipper version will create a <code>PRIVATE</code> memvar for you if it does not already exist, but this version does not).  No whining! If compatibility is such a big deal then use the standard Clipper command.</div>
+  <div><p>This enhanced version of <code>MENU</code> <code>TO</code> requires the inclusion of the header file <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/hbnf/ftmenuto.ch">ftmenuto.ch</a></code> in any source file that uses it.  It may be used in place of the standard Clipper <code>MENU</code> <code>TO</code> command.  However, in the interests of functionality it is NOT 100% compatible (in particular, you should make sure that the target memvar exists before executing the menu — the Clipper version will create a <code>PRIVATE</code> memvar for you if it does not already exist, but this version does not).  No whining! If compatibility is such a big deal then use the standard Clipper command.</div>
   <div><p>Note that this command can also be called using function-style syntax.  See the entry for <code><a href="#ft_menuto">ft_MenuTo()</a></code> for further details.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -5678,7 +5686,7 @@ ft_Pending( &quot;Message three&quot; ) // Displays &quot;Message three&quot;, a
 <div class="d-it">
   <div><p>Clipper's @...PROMPT and <code>MENU</code> <code>TO</code> commands are fine as far as they go.  But many times you need more flexibility.  As you'll no doubt notice if you read the argument list, this function is almost completely flexible. You can adjust locations and colors for every part of the prompt and its associated message.  In addition, since you can control the effect of the arrow keys, you can allow both horizontal and vertical movement, or even disable certain arrow keys if you so desire.  Support for nested menus is also available, since the prompts are stored in stack-based static arrays.</div>
   <div><p>Note that this command can also be called using function-style syntax.  See the entry for <code><a href="#ft_prompt">ft_Prompt()</a></code> for further details.</div>
-  <div><p>This enhanced version of @...PROMPT requires the inclusion of the header file <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/hbnf/ftmenuto.ch">ftmenuto.ch</a></code> in any source file that uses it. It is may be used in place of the standard Clipper @...PROMPT command.  However, in the interests of functionality it is NOT 100% compatible.  No whining!  If compatibility is such a big deal then use the standard Clipper commands.</div>
+  <div><p>This enhanced version of @...PROMPT requires the inclusion of the header file <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/hbnf/ftmenuto.ch">ftmenuto.ch</a></code> in any source file that uses it. It is may be used in place of the standard Clipper @...PROMPT command.  However, in the interests of functionality it is NOT 100% compatible.  No whining!  If compatibility is such a big deal then use the standard Clipper commands.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -7365,6 +7373,6 @@ the status of SetBlink().  It uses direct video writes FOR speed.
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-01 19:08 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/0bba37b">0bba37b</a></div>
+<div>Generated by hbdoc on 2016-11-01 19:29 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/c33d219">c33d219</a></div>
 </footer>

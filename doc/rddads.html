@@ -24,7 +24,15 @@
 
 <header>
 <div>
-<div><a href="index.html">Harbour Reference Guide</a></div>
+<div><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2260 2260">
+ <path d="M900 1908c137.17-53.265 443.401-77.006 600-52.437-27.114-474.75-34.113-758.178-7.68-1116.318 2.056-27.195 4.283-54.9 6.68-83.245-34.633 68.628-579.454 1206.43-599 1252z"/>
+ <path d="M1503 297c-123.836 327.12-161.3 844.46-213.465 1389.52-169.502-13.113-449.007 19.795-659.305 108.824C643.758 1771.594 1401.461 465.26 1503 297z"/>
+ <path d="M1172 1270c-224.304-65.046-473.09 64.996-694 204C631.353 1238.571 1091.25 537.106 1489 0c-301.506 419.861-317.184 1087.933-317 1270z"/>
+ <path d="M620.796 2258.73c.662-1.037 1.36-2.165 2.068-3.191 36.736-55.29 105.692-101.177 205.103-96.72 193.8 8.619 357.238 25.577 652.18 7.207-290.1-9.342-643.351-48.142-1069.102-124.55 105.834 77.98 193.83 195.404 209.763 217.253"/>
+ <path d="M2259.24 2007.878c-351.827 85.376-1111.265 54.312-2014.169-105.238 59.534 32.024 105.241 68.44 160.567 113.871 884.551 158.714 1465.735 153.54 1808.655 60.37 31.307-22.43 35.385-37.956 44.934-69.006"/>
+ <path d="M2250.776 1985.617c-316.53 76.867-975.996 46.6-1793.466-72.332-79.588-11.605-308.233-46.57-445.63-69.063-7.464-15.506-11.282-40.462-11.282-70.79 509.451 68.675 1799.558 275.424 2243.969 168.26 2.015 12.02 7.115 18.487 6.527 43.929"/>
+</svg>
+Harbour Reference Guide</a></div>
 <div>
 <nav class="menu">
 <nav class="dropdown">
@@ -113,7 +121,7 @@ REQUEST ADS
 rddRegister( &quot;ADS&quot;, 1 )
 rddSetDefault( &quot;ADS&quot; )
 </pre>
-  <div><p>By default rddads is tuned for remote server and cdx indexes. To change this you may use these commands defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code>:</div>
+  <div><p>By default rddads is tuned for remote server and cdx indexes. To change this you may use these commands defined in <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code>:</div>
 <pre>
 SET SERVER LOCAL
 SET SERVER REMOTE
@@ -122,7 +130,7 @@ SET FILETYPE TO NTX
 SET FILETYPE TO ADT
 SET FILETYPE TO CDX
 </pre>
-  <div><p>or functions <code><a href="#adssetservertype">AdsSetServerType()</a></code>, <code><a href="#adssetfiletype">AdsSetFileType()</a></code>. See the header file <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code> for details.</div>
+  <div><p>or functions <code><a href="#adssetservertype">AdsSetServerType()</a></code>, <code><a href="#adssetfiletype">AdsSetFileType()</a></code>. See the header file <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code> for details.</div>
   <div><p>Note that the default local server is useable for file sharing on a small network.  The default DLL is limited to 5 users, but an unlimited version is available from Extended Systems.</div>
   <div><p>MAX <code>OPEN</code> <code>TABLES</code>: The server (even local) has its own setting for Max Tables allowed open.  For the Local Server, it can be set in <code>adslocal.cfg</code>.  The default is only 50! For the Windows Remote Servers, use the Configuration Utility, or increase the setting for the <code>TABLES</code> configuration value in the Advantage Database Server configuration registry key using the Registry Editor. For NetWare, edit the configuration file <code>ads.cfg</code>.</div>
   <div><p>See <code>ace.hlp</code> under <code>adslocal.cfg</code>, or the Advantage Error Guide for error 7005.</div>
@@ -199,7 +207,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -233,7 +241,7 @@ AdsCacheOpenCursors( 0 )
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -267,7 +275,7 @@ AdsCacheOpenTables( 25 )
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -294,7 +302,7 @@ AdsCacheOpenTables( 25 )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -329,7 +337,7 @@ AdsCloseCachedTables()
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -357,7 +365,7 @@ AdsCloseCachedTables()
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -394,7 +402,7 @@ ENDIF
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -436,7 +444,7 @@ ENDIF
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -476,7 +484,7 @@ ENDIF
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -493,7 +501,7 @@ ENDIF
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>cFilter</code>       Expression to test.</div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>nOptimizationLevel</code> Values are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code>: <code>ADS_OPTIMIZED_FULL</code>, <code>ADS_OPTIMIZED_PART</code>, <code>ADS_OPTIMIZED_NONE</code>. <code>IMPORTANT</code> <code>NOTE</code>: These values are NOT the same as those returned by <code><a href="harbour.html#dborderinfo">dbOrderInfo()</a></code>.</div>
+<div class="d-it"><code>nOptimizationLevel</code> Values are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code>: <code>ADS_OPTIMIZED_FULL</code>, <code>ADS_OPTIMIZED_PART</code>, <code>ADS_OPTIMIZED_NONE</code>. <code>IMPORTANT</code> <code>NOTE</code>: These values are NOT the same as those returned by <code><a href="harbour.html#dborderinfo">dbOrderInfo()</a></code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">See <code>ace.hlp</code> for full details about the Advantage Database Server.</div>
 <div class="d-d">Status</div>
@@ -503,7 +511,7 @@ ENDIF
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -534,7 +542,7 @@ ENDIF
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -561,7 +569,7 @@ ENDIF
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -588,7 +596,7 @@ ENDIF
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -605,7 +613,7 @@ ENDIF
 <div class="d-d">Argument(s)</div>
 <div class="d-it">None</div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>nOptimizationLevel</code> Values are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code>: <code>ADS_OPTIMIZED_FULL</code>, <code>ADS_OPTIMIZED_PART</code>, <code>ADS_OPTIMIZED_NONE</code>.</div>
+<div class="d-it"><code>nOptimizationLevel</code> Values are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code>: <code>ADS_OPTIMIZED_FULL</code>, <code>ADS_OPTIMIZED_PART</code>, <code>ADS_OPTIMIZED_NONE</code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">See <code>ace.hlp</code> for full details about the Advantage Database Server.</div>
 <div class="d-d">Status</div>
@@ -615,7 +623,7 @@ ENDIF
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -645,7 +653,7 @@ ENDIF
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -675,7 +683,7 @@ ENDIF
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 </section>
@@ -703,7 +711,7 @@ ENDIF
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -733,7 +741,7 @@ ENDIF
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -766,7 +774,7 @@ ENDIF
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 </section>
@@ -817,7 +825,7 @@ ENDIF
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -836,7 +844,7 @@ ENDIF
   <div><code>xTag</code>     Numeric order number OR index tag name. Default is current index.</div>
   <div><code>cIgnoredIndexFile</code>   This parameter is not processed. In other Harbour RDDs, the second parameter to &quot;ordKeyCount&quot; takes a second argument to identify a particular Index File in cases where two files are open that contain orders with the same name. The ADS driver does not support this and will select the first order with the requested name. To stay consistent with other RDDs, therefore, the second parameter is reserved and the <code>nFilterOption</code> is passed as a third parameter.</div>
   <div><code>nFilterOption</code> Indicates if filters and/or scopes are to be respected if set.</div>
-  <div>Options are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code>:</div>
+  <div>Options are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code>:</div>
   <div class="d-t d-t0">
   <div>   ADS_RESPECTFILTERS   Respect filters and scopes</div>
   <div>   ADS_IGNOREFILTERS    Ignore filters and scopes</div>
@@ -855,7 +863,7 @@ ENDIF
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -874,7 +882,7 @@ ENDIF
   <div><code>xTag</code>          Numeric order number OR index tag name. Default is current index.</div>
   <div><code>cIgnoredIndexFile</code>   This parameter is not processed. In other Harbour RDDs, the second parameter to &quot;ordKeyNo&quot; takes a second argument to identify a particular Index File in cases where two files are open that contain orders with the same name. The ADS driver does not support this and will select the first order with the requested name. To stay consistent with other RDDs, therefore, the second parameter is reserved and the <code>nFilterOption</code> is passed as a third parameter.</div>
   <div><code>nFilterOption</code> Indicates if filters and/or scopes are to be respected if set.</div>
-  <div>Options are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code>:</div>
+  <div>Options are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code>:</div>
   <div class="d-t d-t0">
   <div>   ADS_RESPECTFILTERS   Respect filters and scopes</div>
   <div>   ADS_IGNOREFILTERS    Ignore filters and scopes</div>
@@ -893,7 +901,7 @@ ENDIF
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -924,7 +932,7 @@ ENDIF
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -951,7 +959,7 @@ ENDIF
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -998,7 +1006,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -1028,7 +1036,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -1045,7 +1053,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>cFilter</code>         Filter expression to set.</div>
-  <div><code>nResolveOption</code>  Option to indicate how the filter should be resolved in the event that the expression cannot be fully optimized. Options are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code>: <code>ADS_RESOLVE_IMMEDIATE</code>, <code>ADS_RESOLVE_DYNAMIC</code>.</div>
+  <div><code>nResolveOption</code>  Option to indicate how the filter should be resolved in the event that the expression cannot be fully optimized. Options are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code>: <code>ADS_RESOLVE_IMMEDIATE</code>, <code>ADS_RESOLVE_DYNAMIC</code>.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>lSuccess</code>   True if AOF is created.</div>
@@ -1058,7 +1066,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -1088,7 +1096,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -1118,7 +1126,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 </section>
@@ -1146,7 +1154,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 </section>
@@ -1174,7 +1182,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 </section>
@@ -1202,7 +1210,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 <div class="d-d">See also</div>
@@ -1232,7 +1240,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 </section>
@@ -1264,7 +1272,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
   <div>Available on Linux</div>
 </div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/0bba37b/contrib/rddads/ads.ch">ads.ch</a></code></div>
+<div class="d-it">Library is rddads Header is <code><a href="https://github.com/vszakats/harbour-core/blob/c33d219/contrib/rddads/ads.ch">ads.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Advantage Database RDD</div>
 </section>
@@ -1272,6 +1280,6 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-01 19:08 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/0bba37b">0bba37b</a></div>
+<div>Generated by hbdoc on 2016-11-01 19:29 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/c33d219">c33d219</a></div>
 </footer>
