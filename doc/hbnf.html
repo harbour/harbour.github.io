@@ -1450,7 +1450,7 @@ LOCAL aRetVal := ft_Calendar( 10, 40, &quot;W+/RB&quot;, .T., .T. )
 <div class="d-d">Returns</div>
 <div class="d-it">
   <div>A 2-element array containing the following information:</div>
-  <div>aDateInfo[ 1 ] - an <code>ANSI</code> date string indicating the beginning</div>
+  <div>aDateInfo[ 1 ] - an ANSI date string indicating the beginning</div>
   <div>date of the year.  Only the month and day are meaningful.</div>
   <div>aDateInfo[ 2 ] - the number of the first day of the week</div>
   <div>(1 = Sunday)</div>
@@ -2431,7 +2431,7 @@ ENDCASE
   <div><p>Given Clipper's high-level orientation, this function is necessarily somewhat messy to use.  First, declare an array of ten elements to hold the eight values for the CPU registers and two string parameters. Then initialize the array elements with the values that you want the CPU registers to contain when the interrupt is executed.  You need not initialize all the elements.  For example, if the interrupt requires you to specify values for AX, DX, and DS, you would only need to initialize elements 1, 4, and 8.</div>
   <div><p>Once you have done the required register setup, call <code>ft_int86()</code>, passing the interrupt number and the register array as parameters. The function will load the CPU with your specified values, execute the interrupt, and then store the contents of the CPU registers back into your array.  This will allow you to evaluate the results of the interrupt.</div>
   <div><p>Some interrupt services require you to pass the address of a string in a pair of registers.  This function is capable of handling these sorts of situations, but it will take a little work on your part.  If you need to pass a string that uses the DS register, store the string in element 8;  if you need to pass a string that uses the ES register, store the string in element 9.  <code>ft_int86()</code> will detect that you've supplied a string instead of a numeric value and will behave accordingly.</div>
-  <div><p>That takes care of obtaining the segment portion of the pointer.  To specify which register is to contain the offset, use the values <code>REG_DS</code> and <code>REG_ES</code> which are defined in the <code><a href="https://github.com/vszakats/harbour-core/blob/7839959/contrib/hbnf/ftint86.ch">ftint86.ch</a></code> file.  When one of these values is found in an array element, it alerts <code>ft_int86()</code> to use the offset portion of a pointer instead of a numeric value.  <code>REG_DS</code> tells <code>ft_int86()</code> to use the offset of the string in element 8, while <code>REG_ES</code> tells <code>ft_int86()</code> to use the offset of the string in element 9.</div>
+  <div><p>That takes care of obtaining the segment portion of the pointer.  To specify which register is to contain the offset, use the values <code>REG_DS</code> and <code>REG_ES</code> which are defined in the <code><a href="https://github.com/vszakats/harbour-core/blob/0508292/contrib/hbnf/ftint86.ch">ftint86.ch</a></code> file.  When one of these values is found in an array element, it alerts <code>ft_int86()</code> to use the offset portion of a pointer instead of a numeric value.  <code>REG_DS</code> tells <code>ft_int86()</code> to use the offset of the string in element 8, while <code>REG_ES</code> tells <code>ft_int86()</code> to use the offset of the string in element 9.</div>
   <div><p>All the CPU registers are sixteen bits in size.  Some, however, are also split into two 8-bit registers.  This function is only capable of receiving and returning registers that are 16 bits in size.  To split a 16-bit register into two 8-bit values, you can use the pseudo-functions <code>HighByte()</code> and <code>LowByte()</code>, contained in the .ch file.</div>
   <div><p>To alter an 8-bit number so it will appear in the high-order byte of a register when passed to the <code>ft_int86()</code> function, use the <code>MakeHI()</code> pseudo-function contained in the .ch file.</div>
   <div><p>When run in real mode, this function is a shell for <code>__ftint86()</code>, which is written in assembler and does the actual work of executing the interrupt.  <code>__ftint86()</code> is callable from C, so feel free to incorporate it into any C routines for which it might be useful.  The source for <code>__ftint86()</code> can be found in the file <code>AINT86</code>.ASM.</div>
@@ -5101,7 +5101,7 @@ ft_Round( &lt;nNumber&gt; [, &lt;nRoundToAmount&gt;           ;
   <div><p>2. You do not have to display the tape. You may turn it on</div>
   <div><p>at any time by pressing <span class="d-key">T</span>. You may <code>SCROLL</code> back through the tape once there are more than 16 entries in the adder, by pressing <span class="d-key">S</span>.</div>
   <div><p>3. To Quit the Adder just press <span class="d-key">ESC</span>. To return your Total</div>
-  <div><p>to the application press <span class="d-key">F10</span>. The adder will place the Total in the active GET variable using oGet:varPut(). The adder will only return a Total to a numerical GET!</div>
+  <div><p>to the application press <span class="d-key">F10</span>. The adder will place the Total in the active <code>GET</code> variable using oGet:varPut(). The adder will only return a Total to a numerical <code>GET</code>!</div>
   <div><p>4. There are many support functions that you might find</div>
   <div><p>interesting. They are part of my personal library, but are necessary to the operation of the adder. You might want to pull these out to reduce the overall size of the adder. Many are worth at least a little time studying.</div>
   <div><p>5. To make <code><a href="#ft_adder">ft_Adder()</a></code> a Hot key from inside your application</div>
@@ -5497,7 +5497,7 @@ ft_Menu1( aBar, aOptions, aColors, 0 )
   <div>element[ x ][ 2 ] = message to be displayed when option is highlighted</div>
   <div>element[ x ][ 3 ] = code block to be executed when option is selected</div>
 </div>
-  <div> <code>cColors</code> is a string containing colors for the prompts, in the same format as that returned by <code>Set( _SET_COLOR )</code>.  If not supplied, colors default to the current color setting.</div>
+  <div> <code>cColors</code> is a string containing colors for the prompts, in the same format as that returned by <code>Set( <code>_SET_COLOR</code> )</code>.  If not supplied, colors default to the current color setting.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>NIL</code></div>
@@ -5538,7 +5538,7 @@ MENU TO &lt;var&gt; [COLD]
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This enhanced version of <code>MENU</code> <code>TO</code> requires the inclusion of the header file <code><a href="https://github.com/vszakats/harbour-core/blob/7839959/contrib/hbnf/ftmenuto.ch">ftmenuto.ch</a></code> in any source file that uses it.  It may be used in place of the standard Clipper <code>MENU</code> <code>TO</code> command.  However, in the interests of functionality it is NOT 100% compatible (in particular, you should make sure that the target memvar exists before executing the menu — the Clipper version will create a <code>PRIVATE</code> memvar for you if it does not already exist, but this version does not).  No whining! If compatibility is such a big deal then use the standard Clipper command.</div>
+  <div><p>This enhanced version of <code>MENU</code> <code>TO</code> requires the inclusion of the header file <code><a href="https://github.com/vszakats/harbour-core/blob/0508292/contrib/hbnf/ftmenuto.ch">ftmenuto.ch</a></code> in any source file that uses it.  It may be used in place of the standard Clipper <code>MENU</code> <code>TO</code> command.  However, in the interests of functionality it is NOT 100% compatible (in particular, you should make sure that the target memvar exists before executing the menu — the Clipper version will create a <code>PRIVATE</code> memvar for you if it does not already exist, but this version does not).  No whining! If compatibility is such a big deal then use the standard Clipper command.</div>
   <div><p>Note that this command can also be called using function-style syntax.  See the entry for <code><a href="#ft_menuto">ft_MenuTo()</a></code> for further details.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -5670,7 +5670,7 @@ ft_Pending( &quot;Message three&quot; ) // Displays &quot;Message three&quot;, a
 <div class="d-it">
   <div><p>Clipper's @...PROMPT and <code>MENU</code> <code>TO</code> commands are fine as far as they go.  But many times you need more flexibility.  As you'll no doubt notice if you read the argument list, this function is almost completely flexible. You can adjust locations and colors for every part of the prompt and its associated message.  In addition, since you can control the effect of the arrow keys, you can allow both horizontal and vertical movement, or even disable certain arrow keys if you so desire.  Support for nested menus is also available, since the prompts are stored in stack-based static arrays.</div>
   <div><p>Note that this command can also be called using function-style syntax.  See the entry for <code><a href="#ft_prompt">ft_Prompt()</a></code> for further details.</div>
-  <div><p>This enhanced version of @...PROMPT requires the inclusion of the header file <code><a href="https://github.com/vszakats/harbour-core/blob/7839959/contrib/hbnf/ftmenuto.ch">ftmenuto.ch</a></code> in any source file that uses it. It is may be used in place of the standard Clipper @...PROMPT command.  However, in the interests of functionality it is NOT 100% compatible.  No whining!  If compatibility is such a big deal then use the standard Clipper commands.</div>
+  <div><p>This enhanced version of @...PROMPT requires the inclusion of the header file <code><a href="https://github.com/vszakats/harbour-core/blob/0508292/contrib/hbnf/ftmenuto.ch">ftmenuto.ch</a></code> in any source file that uses it. It is may be used in place of the standard Clipper @...PROMPT command.  However, in the interests of functionality it is NOT 100% compatible.  No whining!  If compatibility is such a big deal then use the standard Clipper commands.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -7363,6 +7363,6 @@ the status of SetBlink().  It uses direct video writes FOR speed.
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-01 02:38 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/7839959">7839959</a></div>
+<div>Generated by hbdoc on 2016-11-01 11:29 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/0508292">0508292</a></div>
 </footer>
