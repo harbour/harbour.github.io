@@ -91,15 +91,15 @@
 <div class="d-ol">Read me file for GD Library</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>HBGD is basically a wrapper of Thomas Boutell's GD Library version 2.0.33. GD Library is a powerfull graphic library very usefull expecially under CGI environment.</div>
-  <div><p>HBGD actually contains almost all GD functions, more a set of functions that extends original library and a set of classes that make easier to work with this library.</div>
-  <div><p>Thomas Boutell's GD library actually supports these graphic formats: PNG, JPEG, GIF, Animated GIF, GD, GD2, WBMP, XBM, XPM WBMP is Wireless Bitmap, not Windows Bitmap, and it is used for WAP. It is a B&amp;W bitmap.</div>
-  <div><p>HBGD actually supports PNG, JPEG, GIF, GD, WBMP The other Animated GIF, GD2, XBM and XPM are not wrapped actually.</div>
+  <div><p><code>HBGD</code> is basically a wrapper of Thomas Boutell's GD Library version 2.0.33. GD Library is a powerfull graphic library very usefull expecially under CGI environment.</div>
+  <div><p><code>HBGD</code> actually contains almost all GD functions, more a set of functions that extends original library and a set of classes that make easier to work with this library.</div>
+  <div><p>Thomas Boutell's GD library actually supports these graphic formats: PNG, <code>JPEG</code>, GIF, Animated GIF, GD, GD2, <code>WBMP</code>, XBM, XPM <code>WBMP</code> is Wireless Bitmap, not Windows Bitmap, and it is used for WAP. It is a B&amp;W bitmap.</div>
+  <div><p><code>HBGD</code> actually supports PNG, <code>JPEG</code>, GIF, GD, <code>WBMP</code> The other Animated GIF, GD2, XBM and XPM are not wrapped actually.</div>
   <div><p>Using this library you can, as a little example: - create an image in memory, true color or with a 256 colors palette; - load and save an image of above formats and convert it to another supported format; - draw dots, lines, dashed lines, polygons, rectangles, arcs, circles and ellipses; - fill with colors; - draw with brushes; - check a point or part or full image with a lot of query functions; - draw characters and words with internal fonts or using truetype fonts; - write strings on a base line or on a circle line and with any angle degree; - copy, resize and rotate part or full image;</div>
   <div><p>and, over this, some functions to clone, crop, zoom, rotate outside and inside.</div>
   <div><p>The prefix for all functions is GD (i.e. <code><a href="#gdimagecreate">gdImageCreate()</a></code> )</div>
   <div><p>You can use directly all API functions or TGD class.</div>
-  <div><p>NOTE: Not all functions are wrapped.</div>
+  <div><p><code>NOTE</code>: Not all functions are wrapped.</div>
 </div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Document</div>
@@ -117,7 +117,7 @@
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>cx</code>           - center point horizontal position <code>cy</code>           - center point vertical position <code>w</code>            - width <code>h</code>            - height <code>s</code>            - start degree <code>e</code>            - end degree <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimagearc">gdImageArc()</a></code> is used to draw a partial ellipse centered at the given point, with the specified width and height in pixels. The arc begins at the position in degrees specified by s and ends at the position specified by e. The arc is drawn in the color specified by the last argument. A circle can be drawn by beginning from 0 degrees and ending at 360 degrees, with width and height being equal. <code>e</code> must be greater than <code>s</code>. Values greater than 360 are interpreted modulo 360.</div>
@@ -169,7 +169,7 @@ PROCEDURE Main()
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimagecreate">gdImageCreate()</a></code> creates an empty image in memory. This image has no more than 256 colors.</div>
-  <div><p><code><a href="#gdimagecreate">gdImageCreate()</a></code> returns an image pointer or NIL if unable to create the image.</div>
+  <div><p><code><a href="#gdimagecreate">gdImageCreate()</a></code> returns an image pointer or <code>NIL</code> if unable to create the image.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -212,8 +212,8 @@ PROCEDURE Main()
   <div><p>pImage := gdImageCreateFromGD( nFileHandle, nSize )</div>
   <div><p>or</div>
   <div><p>pImage := gdImageCreateFromGD( pMemoryImagePtr, nSize )</div>
-  <div><p>the pImage pointer returned will be not NIL if successfull and will contains a memory pointer to the GD image.</div>
-  <div><p>HBGD uses it's own memory to manage an image, so it is important to use this function.</div>
+  <div><p>the pImage pointer returned will be not <code>NIL</code> if successfull and will contains a memory pointer to the GD image.</div>
+  <div><p><code>HBGD</code> uses it's own memory to manage an image, so it is important to use this function.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -256,8 +256,8 @@ PROCEDURE Main()
   <div><p>pImage := gdImageCreateFromGif( nFileHandle, nSize )</div>
   <div><p>or</div>
   <div><p>pImage := gdImageCreateFromGif( pMemoryImagePtr, nSize )</div>
-  <div><p>the pImage pointer returned will be not NIL if successfull and will contains a memory pointer to the gif image.</div>
-  <div><p>HBGD uses it's own memory to manage an image, so it is important to use this function.</div>
+  <div><p>the pImage pointer returned will be not <code>NIL</code> if successfull and will contains a memory pointer to the gif image.</div>
+  <div><p><code>HBGD</code> uses it's own memory to manage an image, so it is important to use this function.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -293,15 +293,15 @@ PROCEDURE Main()
 <div class="d-it"><code>pImage</code>       - Image pointer</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p><code><a href="#gdimagecreatefromjpeg">gdImageCreateFromJpeg()</a></code> creates a JPEG image from a file or a handle or another image in memory.</div>
+  <div><p><code><a href="#gdimagecreatefromjpeg">gdImageCreateFromJpeg()</a></code> creates a <code>JPEG</code> image from a file or a handle or another image in memory.</div>
   <div><p>You can use one of 3 syntax:</div>
   <div><p>pImage := gdImageCreateFromJpeg( &quot;myimage.jpg&quot; )</div>
   <div><p>or</div>
   <div><p>pImage := gdImageCreateFromJpeg( nFileHandle, nSize )</div>
   <div><p>or</div>
   <div><p>pImage := gdImageCreateFromJpeg( pMemoryImagePtr, nSize )</div>
-  <div><p>the pImage pointer returned will be not NIL if successfull and will contains a memory pointer to the jpeg image.</div>
-  <div><p>HBGD uses it's own memory to manage an image, so it is important to use this function.</div>
+  <div><p>the pImage pointer returned will be not <code>NIL</code> if successfull and will contains a memory pointer to the jpeg image.</div>
+  <div><p><code>HBGD</code> uses it's own memory to manage an image, so it is important to use this function.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -344,8 +344,8 @@ PROCEDURE Main()
   <div><p>pImage := gdImageCreateFromPng( nFileHandle, nSize )</div>
   <div><p>or</div>
   <div><p>pImage := gdImageCreateFromPng( pMemoryImagePtr, nSize )</div>
-  <div><p>the pImage pointer returned will be not NIL if successfull and will contains a memory pointer to the png image.</div>
-  <div><p>HBGD uses it's own memory to manage an image, so it is important to use this function.</div>
+  <div><p>the pImage pointer returned will be not <code>NIL</code> if successfull and will contains a memory pointer to the png image.</div>
+  <div><p><code>HBGD</code> uses it's own memory to manage an image, so it is important to use this function.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -388,8 +388,8 @@ PROCEDURE Main()
   <div><p>pImage := gdImageCreateFromWBmp( nFileHandle, nSize )</div>
   <div><p>or</div>
   <div><p>pImage := gdImageCreateFromWBmp( pMemoryImagePtr, nSize )</div>
-  <div><p>the pImage pointer returned will be not NIL if successfull and will contains a memory pointer to the WBmp image.</div>
-  <div><p>HBGD uses it's own memory to manage an image, so it is important to use this function.</div>
+  <div><p>the pImage pointer returned will be not <code>NIL</code> if successfull and will contains a memory pointer to the WBmp image.</div>
+  <div><p><code>HBGD</code> uses it's own memory to manage an image, so it is important to use this function.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -426,7 +426,7 @@ PROCEDURE Main()
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimagecreatetruecolor">gdImageCreateTrueColor()</a></code> creates an empty image in memory. This image has true colors.</div>
-  <div><p><code><a href="#gdimagecreatetruecolor">gdImageCreateTrueColor()</a></code> returns an image pointer or NIL if unable to create the image.</div>
+  <div><p><code><a href="#gdimagecreatetruecolor">gdImageCreateTrueColor()</a></code> returns an image pointer or <code>NIL</code> if unable to create the image.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -459,7 +459,7 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>x1</code>           - 1st point horizontal position <code>y1</code>           - 1st point vertical position <code>x2</code>           - 2nd point horizontal position <code>y2</code>           - 2nd point vertical position <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimagedashedline">gdImageDashedLine()</a></code> Draws a dashed line between two end points (x1, y1 and x2, y2) with a particular color index.</div>
@@ -507,7 +507,7 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>x</code>            - start point horizontal position <code>y</code>            - start point vertical position <code>nColor</code>       - Color index of filling color</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimagefill">gdImageFill()</a></code> floods a portion of the image with the specified color, beginning at the specified point and flooding the surrounding region of the same color as the starting point. For a way of flooding a region defined by a specific border color rather than by its interior color, see <code><a href="#gdimagefilltoborder">gdImageFillToBorder()</a></code>. The fill color can be gdTiled, resulting in a tile fill using another image as the tile. However, the tile image cannot be transparent. If the image you wish to fill with has a transparent color index, call gdImageTransparent on the tile image and set the transparent color index to -1 to turn off its transparency.</div>
@@ -559,14 +559,14 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>cx</code>           - center point horizontal position <code>cy</code>           - center point vertical position <code>w</code>            - width <code>h</code>            - height <code>s</code>            - start degree <code>e</code>            - end degree <code>nColor</code>       - Color index <code>nStyle</code>       - fill style</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimagefilledarc">gdImageFilledArc()</a></code> is used to draw a partial ellipse centered at the given point, with the specified width and height in pixels. The arc begins at the position in degrees specified by s and ends at the position specified by e. The arc is drawn in the color specified by the last argument. A circle can be drawn by beginning from 0 degrees and ending at 360 degrees, with width and height being equal. <code>e</code> must be greater than <code>s</code>. Values greater than 360 are interpreted modulo 360.</div>
   <div><p>To set the color index you have to use <code><a href="#gdimagecolorallocate">gdImageColorAllocate()</a></code> function.</div>
   <div><p>Last parameter <code>nStyle</code> is a bitwise OR of the following possibilities: gdArc gdChord gdPie (synonym for gdArc) gdNoFill gdEdged</div>
   <div><p>gdArc and gdChord are mutually exclusive; gdChord just connects the starting and ending angles with a straight line, while gdArc produces a rounded edge. gdPie is a synonym for gdArc. gdNoFill indicates that the arc or chord should be outlined, not filled. gdEdged, used together with gdNoFill, indicates that the beginning and ending angles should be connected to the center; this is a good way to outline (rather than fill) a 'pie slice'</div>
-  <div><p>these constants are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/fa042c6/contrib/hbgd/gd.ch">gd.ch</a></code></div>
+  <div><p>these constants are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/7839959/contrib/hbgd/gd.ch">gd.ch</a></code></div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -612,7 +612,7 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>cx</code>           - center point horizontal position <code>cy</code>           - center point vertical position <code>w</code>            - width <code>h</code>            - height <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimagefilledellipse">gdImageFilledEllipse()</a></code> is used to draw a filled ellipse centered at the given point, with the specified width and height in pixels.</div>
@@ -664,7 +664,7 @@ PROCEDURE Main()
   <div><code>nColor</code>       - Color index</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimagefilledpolygon">gdImageFilledPolygon()</a></code> Draws a filled polygon with verticies (at least 3) with a particular color index.</div>
@@ -716,7 +716,7 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>x1</code>           - upper left point horizontal position <code>y1</code>           - upper left point vertical position <code>x2</code>           - lower right point horizontal position <code>y2</code>           - lower right point vertical position <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimagefilledrectangle">gdImageFilledRectangle()</a></code> draws a filled rectangle between 2 points with a particular color index.</div>
@@ -764,7 +764,7 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>x</code>            - start point horizontal position <code>y</code>            - start point vertical position <code>nBorder</code>      - Color index where fill stops <code>nColor</code>       - Color index of filling color</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimagefilltoborder">gdImageFillToBorder()</a></code> floods a portion of the image with the specified color, beginning at the specified point and stopping at the specified border color. For a way of flooding an area defined by the color of the starting point, see <code><a href="#gdimagefill">gdImageFill()</a></code>.</div>
@@ -816,7 +816,7 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>cFile</code>        - Image file name <code>nHandle</code>      - File handle</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimagegd">gdImageGD()</a></code> saves a GD image to a file or a handle.</div>
@@ -857,7 +857,7 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>cFile</code>        - Image file name <code>nHandle</code>      - File handle</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimagegif">gdImageGif()</a></code> saves a GIF image to a file or a handle.</div>
@@ -901,10 +901,10 @@ PROCEDURE Main()
   <div>default is -1=auto</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p><code><a href="#gdimagejpeg">gdImageJpeg()</a></code> saves a JPEG image to a file or a handle.</div>
+  <div><p><code><a href="#gdimagejpeg">gdImageJpeg()</a></code> saves a <code>JPEG</code> image to a file or a handle.</div>
   <div><p>You can use one of 2 syntax:</div>
   <div><p>gdImageJpeg( pImage, &quot;myimage.jpg&quot; )</div>
   <div><p>or</div>
@@ -942,7 +942,7 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>x1</code>           - 1st point horizontal position <code>y1</code>           - 1st point vertical position <code>x2</code>           - 2nd point horizontal position <code>y2</code>           - 2nd point vertical position <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimageline">gdImageLine()</a></code> Draws a line between two end points (x1, y1 and x2, y2) with a particular color index.</div>
@@ -994,7 +994,7 @@ PROCEDURE Main()
   <div><code>nColor</code>       - Color index</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimageopenpolygon">gdImageOpenPolygon()</a></code> Draws an open polygon with verticies (at least 3) with a particular color index. Unlike <code><a href="#gdimagepolygon">gdImagePolygon()</a></code> the endpoints of the line sequence are not connected to close the polygon.</div>
@@ -1049,7 +1049,7 @@ PROCEDURE Main()
   <div>default is -1=auto</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimagepng">gdImagePng()</a></code> saves a PNG image to a file or a handle.</div>
@@ -1094,7 +1094,7 @@ PROCEDURE Main()
   <div><code>nColor</code>       - Color index</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimagepolygon">gdImagePolygon()</a></code> Draws a closed polygon with verticies (at least 3) with a particular color index.</div>
@@ -1146,7 +1146,7 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>x1</code>           - upper left point horizontal position <code>y1</code>           - upper left point vertical position <code>x2</code>           - lower right point horizontal position <code>y2</code>           - lower right point vertical position <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimagerectangle">gdImageRectangle()</a></code> draws a rectangle between 2 points with a particular color index.</div>
@@ -1194,7 +1194,7 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>nColor</code>       - Color index of filling color</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>&quot;Antialiasing&quot; is a process by which jagged edges associated with line drawing can be reduced by blending the foreground color with an appropriate percentage of the background, depending on how much of the pixel in question is actually within the boundaries of the line being drawn. All line-drawing functions, such as <code><a href="#gdimageline">gdImageLine()</a></code>, <code><a href="#gdimageopenpolygon">gdImageOpenPolygon()</a></code> and <code><a href="#gdimagepolygon">gdImagePolygon()</a></code>, will draw antialiased lines if the special &quot;color&quot; gdAntiAliased constant is used when calling them.</div>
@@ -1251,7 +1251,7 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>nColor</code>       - Color index of filling color</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Normally, when drawing lines with the special gdAntiAliased &quot;color,&quot; blending with the background to reduce jagged edges is the desired behavior. However, when it is desired that lines not be blended with one particular color when it is encountered in the background, the <code><a href="#gdimagesetantialiaseddontblend">gdImageSetAntiAliasedDontBlend()</a></code> function can be used to indicate the special color that the foreground should stand out more clearly against.</div>
@@ -1309,7 +1309,7 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>pBrush</code>       - Brush Image pointer</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>A &quot;brush&quot; is an image used to draw wide, shaped strokes in another image. Just as a paintbrush is not a single point, a brush image need not be a single pixel. Any gd image can be used as a brush, and by setting the transparent color index of the brush image with gdImageColorTransparent, a brush of any shape can be created. All line-drawing functions, such as gdImageLine, gdImageOpenPolygon and gdImagePolygon, will use the current brush if the special &quot;color&quot; gdBrushed or gdStyledBrushed is used when calling them. gdImageSetBrush is used to specify the brush to be used in a particular image. You can set any image to be the brush. If the brush image does not have the same color map as the first image, any colors missing from the first image will be allocated. If not enough colors can be allocated, the closest colors already available will be used. This allows arbitrary PNGs to be used as brush images. It also means, however, that you should not set a brush unless you will actually use it; if you set a rapid succession of different brush images, you can quickly fill your color map, and the results will not be optimal.</div>
@@ -1365,7 +1365,7 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>x</code>            - Horizontal position <code>y</code>            - Vertical position <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gdimagesetpixel">gdImageSetPixel()</a></code> sets a pixel to a particular color index.</div>
@@ -1413,7 +1413,7 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>aStyle</code>       - Array of colors and special colors used to &quot;style&quot; a line</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>It is often desirable to draw dashed lines, dotted lines, and other variations on a broken line. gdImageSetStyle can be used to set any desired series of colors, including a special color that leaves the background intact, to be repeated during the drawing of a line. To use gdImageSetStyle, create an array of integers and assign them the desired series of color values to be repeated. You can assign the special color value gdTransparent to indicate that the existing color should be left unchanged for that particular pixel (allowing a dashed line to be attractively drawn over an existing image).</div>
@@ -1485,7 +1485,7 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>nThickness</code>   - width of line in pixel</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">gdImageSetThickness determines the width of lines drawn by the gdImageLine, gdImagePolygon, gdImageOpenPolygon and related functions, in pixels.</div>
 <div class="d-d">Example(s)</div>
@@ -1536,7 +1536,7 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>pTile</code>        - Tile Image pointer</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>A &quot;tile&quot; is an image used to fill an area with a repeated pattern. Any gd image can be used as a tile, and by setting the transparent color index of the tile image with gdImageColorTransparent, a tile that allows certain parts of the underlying area to shine through can be created. All region-filling functions, such as gdImageFill and gdImageFilledPolygon, will use the current tile if the special &quot;color&quot; gdTiled is used when calling them.</div>
@@ -1594,10 +1594,10 @@ PROCEDURE Main()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>cFile</code>        - Image file name <code>nHandle</code>      - File handle <code>nFGcolor</code>     - foreground color value to be used as foreground, the others are background</div>
 <div class="d-d">Returns</div>
-<div class="d-it">NIL</div>
+<div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p><code><a href="#gdimagewbmp">gdImageWBmp()</a></code> saves a WBMP image to a file or a handle.</div>
+  <div><p><code><a href="#gdimagewbmp">gdImageWBmp()</a></code> saves a <code>WBMP</code> image to a file or a handle.</div>
   <div><p>You can use one of 2 syntax:</div>
   <div><p>gdImageWBmp( pImage, &quot;myimage.wbmp&quot;, nColor )</div>
   <div><p>or</div>
@@ -1641,6 +1641,6 @@ PROCEDURE Main()
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-31 21:19 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/fa042c6">fa042c6</a></div>
+<div>Generated by hbdoc on 2016-11-01 02:38 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/7839959">7839959</a></div>
 </footer>

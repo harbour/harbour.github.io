@@ -262,7 +262,7 @@ aItens6, aItens7, aItens8, aItens9, aItens10 )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_addrows">
@@ -280,7 +280,7 @@ aItens6, aItens7, aItens8, aItens9, aItens10 )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_appendmenu">
@@ -290,7 +290,7 @@ aItens6, aItens7, aItens8, aItens9, aItens10 )
 <div class="d-it d-sy">
 <code>wvw_AppendMenu( hMenu, nFlags, nMenuItemId, cCaption )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>hMenu</code> Identifies the menu to be changed. <code>nFlags</code> Specifies flags to control the appearance and behavior of the new menu item. This parameter can be a combination of values (all flags can be viewed in <code>winuser.ch</code> file). <code>nMenuItemId</code> Specifies either the identifier of the new menu item or, if the uFlags parameter is set to MF_POPUP, the handle to the drop-down menu or submenu. <code>cCaption</code> Specifies the string content of the new menu item or full path to a bitmap to the new menu item.</div>
+<div class="d-it"><code>hMenu</code> Identifies the menu to be changed. <code>nFlags</code> Specifies flags to control the appearance and behavior of the new menu item. This parameter can be a combination of values (all flags can be viewed in <code>winuser.ch</code> file). <code>nMenuItemId</code> Specifies either the identifier of the new menu item or, if the uFlags parameter is set to <code>MF_POPUP</code>, the handle to the drop-down menu or submenu. <code>cCaption</code> Specifies the string content of the new menu item or full path to a bitmap to the new menu item.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">If successful, a value greater than zero. Otherwise zero.</div>
 <div class="d-d">Description</div>
@@ -298,7 +298,7 @@ aItens6, aItens7, aItens8, aItens9, aItens10 )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cbaddstring">
@@ -316,7 +316,7 @@ aItens6, aItens7, aItens8, aItens9, aItens10 )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cbcreate">
@@ -331,9 +331,9 @@ nListLines, nReserved, nKbdType, aOffset )
 </div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop</code>, <code>nLeft</code> Coordinates of combobox. <code>nWidth</code> Width of combobox. <code>aText</code> Array with all combobox elements. Default is empty. <code>bBlock</code> Code block, executed for the following events: CBN_SELCHANGE: CBN_SETFOCUS: CBN_KILLFOCUS: User change selection (not executed when made by program itself) When focus go to combobox When focus lost from combobox</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop</code>, <code>nLeft</code> Coordinates of combobox. <code>nWidth</code> Width of combobox. <code>aText</code> Array with all combobox elements. Default is empty. <code>bBlock</code> Code block, executed for the following events: <code>CBN_SELCHANGE</code>: <code>CBN_SETFOCUS</code>: <code>CBN_KILLFOCUS</code>: User change selection (not executed when made by program itself) When focus go to combobox When focus lost from combobox</div>
   <div>This code block will be evaluated with the following arguments: nWinNum nCBId nType nIndex Actual windows number Combobox ID Event type (only the three types above are supported) Index on selected item (start from 0)</div>
-  <div><code>nListLines</code> Number of lines to list items (default is 3). will be automatically truncated if this parameter is greater than Len(aText). <code>nReserved</code> Reserved for future use. <code>nKbdType</code> Specifies the behavior of combobox. Can be one of the following values: 0: 1: Similar to standard windows convention (i.e., ENTER/ESC will kill focus from combobox) Similar to CA-Cl*pper (i.e., ENTER shows all combobox's items, UP/DOWN/TAB/SHIFTAB/ESC will kill focus from combobox)</div>
+  <div><code>nListLines</code> Number of lines to list items (default is 3). will be automatically truncated if this parameter is greater than Len(aText). <code>nReserved</code> Reserved for future use. <code>nKbdType</code> Specifies the behavior of combobox. Can be one of the following values: 0: 1: Similar to standard windows convention (i.e., <code>ENTER</code>/ESC will kill focus from combobox) Similar to CA-Cl*pper (i.e., <code>ENTER</code> shows all combobox's items, UP/<code>DOWN</code>/TAB/<code>SHIFTAB</code>/ESC will kill focus from combobox)</div>
   <div>Default is 0.</div>
   <div><code>aOffset</code> Array with four elements containing offsets to corner pixels {x1,y1,x2,y2}, to adjust dimension of combobox. Default is {-2,-2,+2,+2}. The third element (y2) is actually ignored. Height of combobox is always 1 char height.</div>
 </div>
@@ -344,7 +344,7 @@ nListLines, nReserved, nKbdType, aOffset )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cbdestroy">
@@ -362,7 +362,7 @@ nListLines, nReserved, nKbdType, aOffset )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cbenable">
@@ -380,7 +380,7 @@ nListLines, nReserved, nKbdType, aOffset )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cbfindstring">
@@ -398,7 +398,7 @@ nListLines, nReserved, nKbdType, aOffset )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cbgetcurtext">
@@ -416,7 +416,7 @@ nListLines, nReserved, nKbdType, aOffset )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cbgetindex">
@@ -434,7 +434,7 @@ nListLines, nReserved, nKbdType, aOffset )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cbisdropped">
@@ -452,7 +452,7 @@ nListLines, nReserved, nKbdType, aOffset )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cbisfocused">
@@ -470,7 +470,7 @@ nListLines, nReserved, nKbdType, aOffset )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cbsetcodeblock">
@@ -488,7 +488,7 @@ nListLines, nReserved, nKbdType, aOffset )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cbsetcursel">
@@ -506,7 +506,7 @@ nListLines, nReserved, nKbdType, aOffset )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cbsetfont">
@@ -520,7 +520,7 @@ nQuality, lItalic, lUnderline, lStrikeout )
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>cFontName</code> Name of the font. <code>nHeight</code> Height of the font's character. <code>nWidth</code> Specifies average width of character in the font. <code>nWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). <code>nQuality</code> Specifies the output quality. <code>lItalic</code> Specifies an italic font if set to TRUE. <code>lUnderline</code> Specifies an underlined font if set to TRUE. <code>lStrikeout</code> Specifies a strikeout font if set to TRUE.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>cFontName</code> Name of the font. <code>nHeight</code> Height of the font's character. <code>nWidth</code> Specifies average width of character in the font. <code>nWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). <code>nQuality</code> Specifies the output quality. <code>lItalic</code> Specifies an italic font if set to <code>TRUE</code>. <code>lUnderline</code> Specifies an underlined font if set to <code>TRUE</code>. <code>lStrikeout</code> Specifies a strikeout font if set to <code>TRUE</code>.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful, <code>.F.</code> otherwise.</div>
 <div class="d-d">Description</div>
@@ -528,7 +528,7 @@ nQuality, lItalic, lUnderline, lStrikeout )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cbsetindex">
@@ -546,7 +546,7 @@ nQuality, lItalic, lUnderline, lStrikeout )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cxcreate">
@@ -561,7 +561,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 </div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft</code> Row/column of top/left corner. <code>nBottom, nRight</code> Row/column of bottom/right corner. <code>cText</code> Text of checkbox. Default is empty. <code>cImage/nImage</code> If numeric, represent an resource ID from a .RC file. If string, represent a bitmap file name (must be supplied with a full path). <code>bBlock</code> Code block to exectue on every BN_CLICK event. This code block will be evaluated with these parameters: current window and checkbox id. If this parameter is omitted, the checkbox will not be created. <code>aOffSet</code> Array of four elements {x1,y1,x2,y2} with offsets to corner pixels to adjust dimension of checkbox. Default is {-2,-2,+2,+2}. <code>nStretchBitmap</code> A number between 0 and 1 (inclusive) as a factor to stretch the bitmap. Example: 1.0 0.5 0 Bitmap covers the whole button Bitmap covers 50% of button Bitmap is not stretch</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft</code> Row/column of top/left corner. <code>nBottom, nRight</code> Row/column of bottom/right corner. <code>cText</code> Text of checkbox. Default is empty. <code>cImage/nImage</code> If numeric, represent an resource ID from a .RC file. If string, represent a bitmap file name (must be supplied with a full path). <code>bBlock</code> Code block to exectue on every <code>BN_CLICK</code> event. This code block will be evaluated with these parameters: current window and checkbox id. If this parameter is omitted, the checkbox will not be created. <code>aOffSet</code> Array of four elements {x1,y1,x2,y2} with offsets to corner pixels to adjust dimension of checkbox. Default is {-2,-2,+2,+2}. <code>nStretchBitmap</code> A number between 0 and 1 (inclusive) as a factor to stretch the bitmap. Example: 1.0 0.5 0 Bitmap covers the whole button Bitmap covers 50% of button Bitmap is not stretch</div>
   <div>Default is 1. <code>lMap3Dcolors</code> If image will have transparent effect (<code>.T.</code>) or not (<code>.F.</code>). This will work on 256 colored bitmaps only.</div>
 </div>
 <div class="d-d">Returns</div>
@@ -571,7 +571,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cxdestroy">
@@ -589,7 +589,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cxenable">
@@ -607,7 +607,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cxgetcheck">
@@ -625,7 +625,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cxsetcheck">
@@ -643,7 +643,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cxsetcodeblock">
@@ -661,7 +661,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_cxsetfocus">
@@ -679,7 +679,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_centerwindow">
@@ -694,7 +694,7 @@ See function wvw_SetWindowCentre().
 </pre>
 </div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_choosecolor">
@@ -704,7 +704,7 @@ See function wvw_SetWindowCentre().
 <div class="d-it d-sy">
 <code>wvw_ChooseColor( nRGBInit, aRGB16, nFlags )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nRGBInit</code> Initial color. <code>aRGB16</code> Array of 16 elements, with color index. Default is an array with color set of button. <code>nFlags</code> A set of bit flags that you can use to initialize the color common dialog box. When the dialog box returns, it sets these flags to indicate the user's input. Default is a combination of CC_ANYCOLOR | CC_RGBINIT | CC_FULLOPEN.</div>
+<div class="d-it"><code>nRGBInit</code> Initial color. <code>aRGB16</code> Array of 16 elements, with color index. Default is an array with color set of button. <code>nFlags</code> A set of bit flags that you can use to initialize the color common dialog box. When the dialog box returns, it sets these flags to indicate the user's input. Default is a combination of <code>CC_ANYCOLOR</code> | <code>CC_RGBINIT</code> | <code>CC_FULLOPEN</code>.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Contains the RGB color value of the color selected by the user, if the user clicks OK button of the dialog box.</div>
 <div class="d-d">Description</div>
@@ -712,7 +712,7 @@ See function wvw_SetWindowCentre().
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_choosefont">
@@ -722,7 +722,7 @@ See function wvw_SetWindowCentre().
 <div class="d-it d-sy">
 <code>wvw_ChooseFont( cFontName, nHeight, nWidth, nWeight, nQuality, lItalic, lUnderline, lStrikeout )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>cFontName</code> Name of the font. <code>nHeight</code> Height of the font's character. <code>nWidth</code> Specifies average width of character in the font. <code>nWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section) <code>nQuality</code> Specifies the output quality. <code>lItalic</code> Specifies an italic font if set to TRUE. <code>lUnderline</code> Specifies an underlined font if set to TRUE. <code>lStrikeout</code> Specifies a strikeout font if set to TRUE.</div>
+<div class="d-it"><code>cFontName</code> Name of the font. <code>nHeight</code> Height of the font's character. <code>nWidth</code> Specifies average width of character in the font. <code>nWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section) <code>nQuality</code> Specifies the output quality. <code>lItalic</code> Specifies an italic font if set to <code>TRUE</code>. <code>lUnderline</code> Specifies an underlined font if set to <code>TRUE</code>. <code>lStrikeout</code> Specifies a strikeout font if set to <code>TRUE</code>.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
@@ -730,7 +730,7 @@ See function wvw_SetWindowCentre().
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_clienttoscreen">
@@ -748,7 +748,7 @@ See function wvw_SetWindowCentre().
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_createdialogdynamic">
@@ -770,7 +770,7 @@ cDlgProc|bDlgProc|nDlgProc, nFlag)
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_createdialogmodal">
@@ -792,7 +792,7 @@ bDlgProc|cDlgProc, nFlag, nHandle )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_createfont">
@@ -806,7 +806,7 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>cFontFace</code> Name of the font. <code>nHeight</code> Height of the font's character. <code>nWidth</code> Specifies average width of character in the font. <code>nWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section) <code>lItalic</code> Specifies an italic font if set to TRUE. <code>lUnderline</code> Specifies an underlined font if set to TRUE. <code>lStrikeOut</code> Specifies a strikeout font if set to TRUE. <code>nCharSet</code> Identify the character set. <code>nQuality</code> Specifies the output quality <code>nEscapement</code> Specifies the angle, in tenths of degrees, between the escapement vector and the x-axis of the device.</div>
+<div class="d-it"><code>cFontFace</code> Name of the font. <code>nHeight</code> Height of the font's character. <code>nWidth</code> Specifies average width of character in the font. <code>nWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section) <code>lItalic</code> Specifies an italic font if set to <code>TRUE</code>. <code>lUnderline</code> Specifies an underlined font if set to <code>TRUE</code>. <code>lStrikeOut</code> Specifies a strikeout font if set to <code>TRUE</code>. <code>nCharSet</code> Identify the character set. <code>nQuality</code> Specifies the output quality <code>nEscapement</code> Specifies the angle, in tenths of degrees, between the escapement vector and the x-axis of the device.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">If successful, the return value is a handle to a logical font. If failed, return zero.</div>
 <div class="d-d">Description</div>
@@ -814,7 +814,7 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_createmenu">
@@ -826,13 +826,13 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Argument(s)</div>
 <div class="d-it">None.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">Handle of new created menu. If failed, returns NULL.</div>
+<div class="d-it">Handle of new created menu. If failed, returns <code>NULL</code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Creates a menu. Initially, the menu is empty, but can be filled with items through function <code><a href="#wvw_appendmenu">wvw_AppendMenu()</a></code>.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_createpopupmenu">
@@ -844,13 +844,13 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Argument(s)</div>
 <div class="d-it">None.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">Handle of new popup menu. If failed, return NULL.</div>
+<div class="d-it">Handle of new popup menu. If failed, return <code>NULL</code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Creates a drop-down menu, submenu or shortcut menu. The menu is initialy empty, but you can insert or append menu items by using the <code><a href="#wvw_appendmenu">wvw_AppendMenu()</a></code> function.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_deletemenu">
@@ -860,7 +860,7 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-it d-sy">
 <code>wvw_DeleteMenu( hMenu, nPosition, nFlag )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>hMenu</code> Identifies the menu to be changed. <code>nPosition</code> Specifies a menu item to be changed. <code>nFlag</code> Specifies how <code>nPosition</code> will be interpreted. This parameter can be one of two values: MF_BYCOMMAND MF_BYPOSITION Indicates that <code>nPosition</code> gives the identifier of the menu item. The MF_BYCOMMAND flag is the default flag if neither the MF_BYCOMMAND nor MF_BYPOSITION flag is specified. Indicates that <code>nPosition</code> gives the zero-based relative position of the menu item.</div>
+<div class="d-it"><code>hMenu</code> Identifies the menu to be changed. <code>nPosition</code> Specifies a menu item to be changed. <code>nFlag</code> Specifies how <code>nPosition</code> will be interpreted. This parameter can be one of two values: <code>MF_BYCOMMAND</code> <code>MF_BYPOSITION</code> Indicates that <code>nPosition</code> gives the identifier of the menu item. The <code>MF_BYCOMMAND</code> flag is the default flag if neither the <code>MF_BYCOMMAND</code> nor <code>MF_BYPOSITION</code> flag is specified. Indicates that <code>nPosition</code> gives the zero-based relative position of the menu item.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">If the function succeeds, the return value is nonzero. If the function fails, the return value is zero.</div>
 <div class="d-d">Description</div>
@@ -868,7 +868,7 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_destroymenu">
@@ -886,7 +886,7 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_dlgseticon">
@@ -896,15 +896,15 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-it d-sy">
 <code>wvw_DlgSetIcon( nHandleDialog, ncIcon )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nHandleDialog</code> Handle of dialog window. <code>ncIcon</code> If numeric, identifies a RESOURCE in a RC file. If string, identifies an icon file name.</div>
+<div class="d-it"><code>nHandleDialog</code> Handle of dialog window. <code>ncIcon</code> If numeric, identifies a <code>RESOURCE</code> in a RC file. If string, identifies an icon file name.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">If successful, icon handle. Otherwise, NIL.</div>
+<div class="d-it">If successful, icon handle. Otherwise, <code>NIL</code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Defines an icon on a dialog window.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawboxget">
@@ -916,11 +916,11 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Returns</div>
 <div class="d-it">Always <code>.T.</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">Draws a box to an input get. Unlike GTWVT, GTWVW draw white lines on outer right and outer bottom. Besides, scope is the same as DRAWBOXRECESSED, ie., two pixel out of char boundary.</div>
+<div class="d-it">Draws a box to an input get. Unlike <code>GTWVT</code>, <code>GTWVW</code> draw white lines on outer right and outer bottom. Besides, scope is the same as <code>DRAWBOXRECESSED</code>, ie., two pixel out of char boundary.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawboxgroup">
@@ -938,7 +938,7 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawboxraised">
@@ -956,7 +956,7 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawboxrecessed">
@@ -974,7 +974,7 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawbutton">
@@ -999,7 +999,7 @@ cImage/nImage, nFormat, nTextColor, nBkClor, nImageAt )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawcolorrect">
@@ -1017,11 +1017,11 @@ nRGBColor )
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Draws a color rectangle. <code><a href="#wvw_fillrectangle">wvw_FillRectangle()</a></code>. This function is for compatibility with GWTWVT, similar to</div>
+<div class="d-it">Draws a color rectangle. <code><a href="#wvw_fillrectangle">wvw_FillRectangle()</a></code>. This function is for compatibility with <code>GWTWVT</code>, similar to</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawellipse">
@@ -1039,7 +1039,7 @@ nRGBColor )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawfocusrect">
@@ -1057,7 +1057,7 @@ nRGBColor )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawgridhorz">
@@ -1075,7 +1075,7 @@ nRGBColor )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawgridvert">
@@ -1093,7 +1093,7 @@ nRGBColor )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawimage">
@@ -1107,7 +1107,7 @@ cImage/nPictureSlot, lTight/aOffset, lTransparent )
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw an image. If <code>nBottom</code> is NIL, so image's height will be proportional to image's width. If <code>nRight</code> is NIL, so image's width will be proportional to image's height. If both <code>nbottom</code> and <code>nRight</code> are NIL, so original size of image will be used. <code>cImage/nPictureSlot</code> If string, an image will be read from <code>cImage</code> (full path). If numeric, will an index in an image list (previously loaded by application). WARNING: this function will always cache the image. Do not use it to draw large number of images, because image handle is never closed. <code>lTight/aOffset</code> Specifies how image will be adjusted (in pixels) to row/column coordinates. <code>lTransparent</code> If <code>.T.</code>, specifies a transparent image, otherwise <code>.F.</code> If <code>.T.</code>, transparency color will be the top left corner pixel.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw an image. If <code>nBottom</code> is <code>NIL</code>, so image's height will be proportional to image's width. If <code>nRight</code> is <code>NIL</code>, so image's width will be proportional to image's height. If both <code>nbottom</code> and <code>nRight</code> are <code>NIL</code>, so original size of image will be used. <code>cImage/nPictureSlot</code> If string, an image will be read from <code>cImage</code> (full path). If numeric, will an index in an image list (previously loaded by application). <code>WARNING</code>: this function will always cache the image. Do not use it to draw large number of images, because image handle is never closed. <code>lTight/aOffset</code> Specifies how image will be adjusted (in pixels) to row/column coordinates. <code>lTransparent</code> If <code>.T.</code>, specifies a transparent image, otherwise <code>.F.</code> If <code>.T.</code>, transparency color will be the top left corner pixel.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful (draws an image), <code>.F.</code> otherwise.</div>
 <div class="d-d">Description</div>
@@ -1115,7 +1115,7 @@ cImage/nPictureSlot, lTight/aOffset, lTransparent )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawlabel">
@@ -1131,8 +1131,8 @@ nQuality, nCharSet, lItalic, lUnderline, lStrikeOut )
 </div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>nRow, nCol</code> Row/column to draw a label. <code>cLabel</code> String to be draw. <code>nAlign</code> String alignment. Default is TA_LEFT (another definitions: see file <code>wingdi.ch</code>). <code>nEscapement</code> Specifies angle. <code>nTextColor</code> Color index of label. <code>nBkColor</code> Color index of background of label. <code>cFontFace</code> Name of the font. <code>nHeight</code> Height of the font's character. <code>nWidth</code> Specifies average width of character in the font. <code>nWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). <code>nQuality</code> Specifies the output quality.</div>
-  <div><code>nCharSet</code> Specifies set of characters to be used. <code>lItalic</code> Specifies an italic font if set to TRUE. <code>lUnderline</code> Specifies an underline font if set to TRUE. <code>lStrikeOut</code> Specifies a strikeout font if set to TRUE.</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>nRow, nCol</code> Row/column to draw a label. <code>cLabel</code> String to be draw. <code>nAlign</code> String alignment. Default is <code>TA_LEFT</code> (another definitions: see file <code>wingdi.ch</code>). <code>nEscapement</code> Specifies angle. <code>nTextColor</code> Color index of label. <code>nBkColor</code> Color index of background of label. <code>cFontFace</code> Name of the font. <code>nHeight</code> Height of the font's character. <code>nWidth</code> Specifies average width of character in the font. <code>nWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). <code>nQuality</code> Specifies the output quality.</div>
+  <div><code>nCharSet</code> Specifies set of characters to be used. <code>lItalic</code> Specifies an italic font if set to <code>TRUE</code>. <code>lUnderline</code> Specifies an underline font if set to <code>TRUE</code>. <code>lStrikeOut</code> Specifies a strikeout font if set to <code>TRUE</code>.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful, <code>.F.</code> otherwise.</div>
@@ -1141,7 +1141,7 @@ nQuality, nCharSet, lItalic, lUnderline, lStrikeOut )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawlabelex">
@@ -1155,7 +1155,7 @@ nSlotFont )
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nRow, nCol</code> Row/column to draw a label. <code>cLabel</code> String to be draw. <code>nAlign</code> Text alignment. Default is TA_LEFT (see <code>wingdi.ch</code> to another definitions). <code>cTextColor</code> Index color of the font. <code>nBkColor</code> Index color of label background. <code>nSlotFont</code> Index of application cache fonts. If image cache is empty (or index does not exist), function will be not executed.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nRow, nCol</code> Row/column to draw a label. <code>cLabel</code> String to be draw. <code>nAlign</code> Text alignment. Default is <code>TA_LEFT</code> (see <code>wingdi.ch</code> to another definitions). <code>cTextColor</code> Index color of the font. <code>nBkColor</code> Index color of label background. <code>nSlotFont</code> Index of application cache fonts. If image cache is empty (or index does not exist), function will be not executed.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful (draws a label), <code>.F.</code> otherwise (returns <code>.F.</code> if <code>nSlotFont</code> invalid).</div>
 <div class="d-d">Description</div>
@@ -1163,7 +1163,7 @@ nSlotFont )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawlabelobj">
@@ -1185,7 +1185,7 @@ nAlignHorz, nAlignVert, nTextColor, nBkColor, hFont, aOffset )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawline">
@@ -1203,7 +1203,7 @@ nFormat, nAlign, nStyle, nThick, nColor, aOffset )
   <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a line. <code>nOrient</code> Line orientation: 0 1 Horizontal Vertical</div>
   <div><code>nFormat</code> Line format: 0 1 2 Raised Recessed Plain</div>
   <div><code>nAlign</code> Line alignment: 0 1 2 3 4 Center Top Bottom Left Right</div>
-  <div><code>nStyle</code> Specifies pen style. See <code>wingdi.ch</code> (PS_SOLID, PS_DOT, etc.). <code>nThick</code> Specifies the width of the pen, in logical units. If zero, the pen is a single pixel wide, regardless of the current transformation. Default is zero (width of one pixel). <code>nColor</code> Specifies a color reference for the pen color ( a 32-bit value from RGB color). <code>aOffset</code> Array of four row/column. elements with top/left, bottom/right of coordinates to align line with</div>
+  <div><code>nStyle</code> Specifies pen style. See <code>wingdi.ch</code> (PS_SOLID, <code>PS_DOT</code>, etc.). <code>nThick</code> Specifies the width of the pen, in logical units. If zero, the pen is a single pixel wide, regardless of the current transformation. Default is zero (width of one pixel). <code>nColor</code> Specifies a color reference for the pen color ( a 32-bit value from RGB color). <code>aOffset</code> Array of four row/column. elements with top/left, bottom/right of coordinates to align line with</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">Always <code>.T.</code></div>
@@ -1212,7 +1212,7 @@ nFormat, nAlign, nStyle, nThick, nColor, aOffset )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawlineex">
@@ -1239,7 +1239,7 @@ nAlign, nSlotPen )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawmenubar">
@@ -1257,7 +1257,7 @@ nAlign, nSlotPen )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawoutline">
@@ -1271,7 +1271,7 @@ nRGBColor )
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a box. <code>nThick</code> Style of pen. See <code>wingdi.ch</code> file for definitions (PS_SOLID, PS_DOT, etc.). <code>nShape</code> Ignored. <code>nRGBColor</code> Specifies color reference for pen (a 32-bit RGB color value).</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a box. <code>nThick</code> Style of pen. See <code>wingdi.ch</code> file for definitions (PS_SOLID, <code>PS_DOT</code>, etc.). <code>nShape</code> Ignored. <code>nRGBColor</code> Specifies color reference for pen (a 32-bit RGB color value).</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Always <code>.T.</code></div>
 <div class="d-d">Description</div>
@@ -1279,7 +1279,7 @@ nRGBColor )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawoutlineex">
@@ -1297,7 +1297,7 @@ nRGBColor )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawpicture">
@@ -1315,7 +1315,7 @@ nRGBColor )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawprogressbar">
@@ -1338,7 +1338,7 @@ nDirection )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawrectangle">
@@ -1356,7 +1356,7 @@ nDirection )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawroundrect">
@@ -1378,7 +1378,7 @@ nRoundHeight, nRoundWidth)
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawscrollbutton">
@@ -1403,7 +1403,7 @@ nTLBR, lDepressed )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawscrollthumbhorz">
@@ -1425,7 +1425,7 @@ nThumbPos )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawscrollthumbvert">
@@ -1447,7 +1447,7 @@ nThumbPos )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawshadedrect">
@@ -1457,7 +1457,7 @@ nThumbPos )
 <div class="d-it d-sy">
 <code>wvw_DrawShadedRect( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels, nHorVert, aRGBb, aRGBe )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a rectangle. <code>aOffPixels</code> Array of four elements with top/left, bottom/right coordinates to align rectangle with row/column. <code>nHorVert</code> Specifies draws method and how to interpret rectangle fill array ( <code>aRGBb</code> and <code>aRGBe</code>). Default is GRADIENT_FILL_RECT_H (see <code>wingdi.ch</code> file for all definitions). <code>aRGBb</code> Array of four color position (Red, Gree, Blue, Alpha), with initial rectangle position. <code>aRGBe</code> Array of four color position (Red, Gree, Blue, Alpha), with final rectangle position.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a rectangle. <code>aOffPixels</code> Array of four elements with top/left, bottom/right coordinates to align rectangle with row/column. <code>nHorVert</code> Specifies draws method and how to interpret rectangle fill array ( <code>aRGBb</code> and <code>aRGBe</code>). Default is <code>GRADIENT_FILL_RECT_H</code> (see <code>wingdi.ch</code> file for all definitions). <code>aRGBb</code> Array of four color position (Red, Gree, Blue, Alpha), with initial rectangle position. <code>aRGBe</code> Array of four color position (Red, Gree, Blue, Alpha), with final rectangle position.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful, otherwise <code>.F.</code></div>
 <div class="d-d">Description</div>
@@ -1465,7 +1465,7 @@ nThumbPos )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawstatusbar">
@@ -1479,11 +1479,11 @@ nThumbPos )
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Draws a status bar. Only for compatibility with GTWVT. wvw_sb*() functions are recommended instead.</div>
+<div class="d-it">Draws a status bar. Only for compatibility with <code>GTWVT</code>. wvw_sb*() functions are recommended instead.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawtextbox">
@@ -1500,7 +1500,7 @@ hFont )
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw text. <code>aOffPixels</code> Array of four row/column. <code>cText</code> Text to be draw. <code>nAlignHorz</code> Specifies text alignment inside coordinates: 0 1 2 Left (default) Right Centralized elements with top/left, bottom/right coordinates to align text with</div>
-  <div><code>nAlignVert</code> Ignored. <code>nTextColor</code> Color of text. <code>nBackColor</code> Background color. <code>nBackMode</code> Background mode how color is used. Default is OPAQUE (see <code>wingdi.ch</code> for all definitions). <code>hFont</code> Font of the text.</div>
+  <div><code>nAlignVert</code> Ignored. <code>nTextColor</code> Color of text. <code>nBackColor</code> Background color. <code>nBackMode</code> Background mode how color is used. Default is <code>OPAQUE</code> (see <code>wingdi.ch</code> for all definitions). <code>hFont</code> Font of the text.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
@@ -1509,7 +1509,7 @@ hFont )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_drawtoolbuttonstate">
@@ -1531,7 +1531,7 @@ nState )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_enablemaximize">
@@ -1545,11 +1545,11 @@ nState )
 <div class="d-d">Returns</div>
 <div class="d-it">Old maximize box state, before applying the new style.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Read/Set maximize button. In order to enable MAXIMIZE button, app should have <code>WVW_SIZE()</code> callback function.</div>
+<div class="d-it">Read/Set maximize button. In order to enable <code>MAXIMIZE</code> button, app should have <code>WVW_SIZE()</code> callback function.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_enablemenuitem">
@@ -1559,7 +1559,7 @@ nState )
 <div class="d-it d-sy">
 <code>wvw_EnableMenuItem( hMenu, nPosition, nFlag )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>hMenu</code> ID of menu. <code>nPosition</code> Specifies position of item to be enabled/disabled (see <code>nFlag</code> argument). <code>nFlag</code> For Harbour, in practice, we should define only two values: MF_DISABLE MF_ENABLE Specifies item to be disabled. Specifies item to be enabled.</div>
+<div class="d-it"><code>hMenu</code> ID of menu. <code>nPosition</code> Specifies position of item to be enabled/disabled (see <code>nFlag</code> argument). <code>nFlag</code> For Harbour, in practice, we should define only two values: <code>MF_DISABLE</code> <code>MF_ENABLE</code> Specifies item to be disabled. Specifies item to be enabled.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Returns old configuration of menu item. If menu item is invalid, returns zero.</div>
 <div class="d-d">Description</div>
@@ -1567,7 +1567,7 @@ nState )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_enableshortcuts">
@@ -1585,7 +1585,7 @@ nState )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_fillrectangle">
@@ -1607,7 +1607,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_getclipboard">
@@ -1625,7 +1625,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_getcursorpos">
@@ -1643,7 +1643,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_getfontinfo">
@@ -1655,13 +1655,13 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Argument(s)</div>
 <div class="d-it">None.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">Array of seven elements: 1 2 3 4 5 6 7 ­ ­ ­ ­ ­ ­ ­ cFontFace cFontHeight nFontWidth nFontWeight cFontQuality PTEXTSIZE→x PTEXESIZE→y Name Height Width Weight Quality Font's width in pixels Font's size in pixels</div>
+<div class="d-it">Array of seven elements: 1 2 3 4 5 6 7 ­ ­ ­ ­ ­ ­ ­ cFontFace cFontHeight nFontWidth nFontWeight cFontQuality <code>PTEXTSIZE</code>→x <code>PTEXESIZE</code>→y Name Height Width Weight Quality Font's width in pixels Font's size in pixels</div>
 <div class="d-d">Description</div>
 <div class="d-it">Retrieves current font data.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_getlastmenuevent">
@@ -1679,7 +1679,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_getmenu">
@@ -1697,7 +1697,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_getpaintrect">
@@ -1715,7 +1715,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_getpalette">
@@ -1733,7 +1733,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_getrgbcolor">
@@ -1751,7 +1751,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_getrowcolfromxy">
@@ -1769,7 +1769,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_getscreenheight">
@@ -1787,7 +1787,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_getscreenwidth">
@@ -1805,7 +1805,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_gettitle">
@@ -1823,7 +1823,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_gettooltipbkcolor">
@@ -1841,7 +1841,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_gettooltiptextcolor">
@@ -1859,7 +1859,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_gettooltipwidth">
@@ -1877,7 +1877,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_getwindowhandle">
@@ -1895,7 +1895,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_getxyfromrowcol">
@@ -1913,7 +1913,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_invalidaterect">
@@ -1931,7 +1931,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_islbuttonpressed">
@@ -1949,7 +1949,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_killtimer">
@@ -1967,7 +1967,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_lbaddstring">
@@ -1985,7 +1985,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_lbsetcursel">
@@ -2003,7 +2003,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_lclosewindow">
@@ -2021,7 +2021,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_loadfont">
@@ -2035,7 +2035,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nSlotFont</code> Index of font cache. <code>cFontName</code> Name of the font. <code>nHeight</code> Height of the font's character. <code>nWidth</code> Specifies average width of character in the font. <code>nWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). <code>lItalic</code> Specifies an italic font if set to TRUE. <code>lUnderline</code> Specifies an underlined font if set to TRUE. <code>lStrikeout</code> Specifies a strikeout font if set to TRUE. <code>nCharSet</code> Identify the character set. For example, ANSI_CHARSET, DEFAULT_CHARSET, OEM_CHARSET, etc. (all models can be viewed in file <code>wingdi.ch</code>). <code>nQuality</code> Specifies the output quality. <code>nEscapement</code> Angle of escapement of the font.</div>
+<div class="d-it"><code>nSlotFont</code> Index of font cache. <code>cFontName</code> Name of the font. <code>nHeight</code> Height of the font's character. <code>nWidth</code> Specifies average width of character in the font. <code>nWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). <code>lItalic</code> Specifies an italic font if set to <code>TRUE</code>. <code>lUnderline</code> Specifies an underlined font if set to <code>TRUE</code>. <code>lStrikeout</code> Specifies a strikeout font if set to <code>TRUE</code>. <code>nCharSet</code> Identify the character set. For example, <code>ANSI_CHARSET</code>, <code>DEFAULT_CHARSET</code>, <code>OEM_CHARSET</code>, etc. (all models can be viewed in file <code>wingdi.ch</code>). <code>nQuality</code> Specifies the output quality. <code>nEscapement</code> Angle of escapement of the font.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
@@ -2043,7 +2043,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_loadpen">
@@ -2061,7 +2061,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_loadpicture">
@@ -2079,7 +2079,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_maximize">
@@ -2097,7 +2097,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_maxmaxcol">
@@ -2115,7 +2115,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_maxmaxrow">
@@ -2133,7 +2133,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_messagebox">
@@ -2143,15 +2143,15 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-it d-sy">
 <code>wvw_MessageBox( nWinNum, cMessage, cTitle, nOption )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>cMessage</code> Message to be displayed. <code>cTitle</code> Dialog box title. <code>nOption</code> Specifies a set of buttons that determine the contents and behavior of the dialog box. Default is MB_OK ( OK button, without icons). You can see all definitions in file <code>winuser.ch</code>.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>cMessage</code> Message to be displayed. <code>cTitle</code> Dialog box title. <code>nOption</code> Specifies a set of buttons that determine the contents and behavior of the dialog box. Default is <code>MB_OK</code> ( OK button, without icons). You can see all definitions in file <code>winuser.ch</code>.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">Number of selected option (IDOK to OK button, IDCANCEL to Cancel button, etc.) You can see all definitions in file <code>winuser.ch</code></div>
+<div class="d-it">Number of selected option (IDOK to OK button, <code>IDCANCEL</code> to Cancel button, etc.) You can see all definitions in file <code>winuser.ch</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">Creates, displays, and operates a message box. The message box contains an applicationdefined message and title, plus any combination of predefined icons and push buttons.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_minimize">
@@ -2169,7 +2169,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_ncolofs">
@@ -2183,11 +2183,11 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Returns</div>
 <div class="d-it">Number of offset columns.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Returns column offset of window <code>nWinNum</code> (0 == MAIN), relative to Main Window.</div>
+<div class="d-it">Returns column offset of window <code>nWinNum</code> (0 == <code>MAIN</code>), relative to Main Window.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_nnumwindows">
@@ -2205,7 +2205,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_nopenwindow">
@@ -2219,7 +2219,7 @@ nExStyle )
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>cWinName </code> Title of window. If omitted, the name of executable will be used. <code>row1, col1, row2, col2 </code> Specifies initial row/column and final row/column of the window coordinates are relative to main window, not to current window. This coordinates are used to: 1) Put window in initial position. 2) Determine size of the window (new <code><a href="harbour.html#maxrow">MaxRow()</a></code> and <code><a href="harbour.html#maxcol">MaxCol()</a></code>). 3) Save in RowOfs and Co<code>winuser.ch</code>inCoord mode. <code>nStyle </code> Style of the window. All definitions are in file winuser.ch. Default is WS_CAPTION|WS_SYSMENU|WS_CLIPCHILDREN. If you will use controls such as PUSHBUTTON, you MUST include WS_CLIPCHILDREN. <code>nParentWin</code> Is the mother of the new window. Default is current window (in Standard mode) and the last window (in MainCoord mode). If you want the new window to not have parent, pass -1 as argument. <code>nExStyle</code> Extended style to window (for example: WS_EX_TOOLTIPWINDOW). Default is NIL. Note: this parameter does not exist in original GTWVW to be opened. This</div>
+<div class="d-it"><code>cWinName </code> Title of window. If omitted, the name of executable will be used. <code>row1, col1, row2, col2 </code> Specifies initial row/column and final row/column of the window coordinates are relative to main window, not to current window. This coordinates are used to: 1) Put window in initial position. 2) Determine size of the window (new <code><a href="harbour.html#maxrow">MaxRow()</a></code> and <code><a href="harbour.html#maxcol">MaxCol()</a></code>). 3) Save in RowOfs and ColOfs to MainCoord mode. <code>nStyle </code> Style of the window. All definitions are in file <code>winuser.ch</code>. Default is <code>WS_CAPTION</code>|<code>WS_SYSMENU</code>|<code>WS_CLIPCHILDREN</code>. If you will use controls such as <code>PUSHBUTTON</code>, you <code>MUST</code> include <code>WS_CLIPCHILDREN</code>. <code>nParentWin</code> Is the mother of the new window. Default is current window (in Standard mode) and the last window (in MainCoord mode). If you want the new window to not have parent, pass -1 as argument. <code>nExStyle</code> Extended style to window (for example: <code>WS_EX_TOOLTIPWINDOW</code>). Default is <code>NIL</code>. Note: this parameter does not exist in original <code>GTWVW</code> to be opened. This</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Number of window, if successful, zero if failed.</div>
 <div class="d-d">Description</div>
@@ -2227,7 +2227,7 @@ nExStyle )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_nrowofs">
@@ -2245,7 +2245,7 @@ nExStyle )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_nsetcurwindow">
@@ -2263,7 +2263,7 @@ nExStyle )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_noclose">
@@ -2281,7 +2281,7 @@ nExStyle )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_nostartupsubwindow">
@@ -2299,7 +2299,7 @@ nExStyle )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_numbmcache">
@@ -2317,7 +2317,7 @@ nExStyle )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_pbcreate">
@@ -2332,7 +2332,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 </div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to create the button. <code>cText</code> Text of the button. Default is &quot;&quot;. <code>cImage/nImage</code> If specified as numeric, identify ID from Resource in a .RC file. If specified as string, must have a full path to an image file. <code>bBlock</code> Code block to be executed whenever a BN_CLICK event occurred (press and release the button). Always pass as a parameter: <code>nWinNum</code> and ID of button. <code>aOffset</code> Array of four row/column. elements with top/left, bottom/right coordinates to align button with</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to create the button. <code>cText</code> Text of the button. Default is &quot;&quot;. <code>cImage/nImage</code> If specified as numeric, identify ID from Resource in a .RC file. If specified as string, must have a full path to an image file. <code>bBlock</code> Code block to be executed whenever a <code>BN_CLICK</code> event occurred (press and release the button). Always pass as a parameter: <code>nWinNum</code> and ID of button. <code>aOffset</code> Array of four row/column. elements with top/left, bottom/right coordinates to align button with</div>
   <div><code>nStretchBitmap</code> Number between 0 and 1 (inclusive) as a stretch factor: 1.0 0.5 0 The bitmap will cover all button. The bitmap will cover only 50% of the button. The bitmap will not be stretched.</div>
   <div>Default is 1. <code>lMap3DColors</code> Specified if an image will be transparent (<code>.T.</code>) or not (<code>.F.</code>). This will work on 256 colored bitmaps only.</div>
 </div>
@@ -2343,7 +2343,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_pbdestroy">
@@ -2361,7 +2361,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_pbenable">
@@ -2379,7 +2379,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_pbsetcodeblock">
@@ -2397,7 +2397,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_pbsetfocus">
@@ -2415,7 +2415,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_pbsetfont">
@@ -2429,15 +2429,15 @@ nQuality, lItalic, lUnderline, lStrikeout )
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>cFontName</code> Name of the font. <code>nHeight</code> Height of the font's character. <code>nWidth</code> Specifies average width of character in the font. <code>nWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). <code>nQuality</code> Specifies the output quality. <code>lItalic</code> Specifies an italic font if set to TRUE. <code>lUnderline</code> Specifies an underlined font if set to TRUE. <code>lStrikeout</code> Specifies a strikeout font if set to TRUE.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>cFontName</code> Name of the font. <code>nHeight</code> Height of the font's character. <code>nWidth</code> Specifies average width of character in the font. <code>nWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). <code>nQuality</code> Specifies the output quality. <code>lItalic</code> Specifies an italic font if set to <code>TRUE</code>. <code>lUnderline</code> Specifies an underlined font if set to <code>TRUE</code>. <code>lStrikeout</code> Specifies a strikeout font if set to <code>TRUE</code>.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful, <code>.F.</code> if failed.</div>
 <div class="d-d">Description</div>
-<div class="d-it">This funtction will initialize font for ALL pushbuttons in window <code>nWinNum</code>, including ones created later on.</div>
+<div class="d-it">This funtction will initialize font for <code>ALL</code> pushbuttons in window <code>nWinNum</code>, including ones created later on.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_pbsetstyle">
@@ -2448,7 +2448,7 @@ nQuality, lItalic, lUnderline, lStrikeout )
 <code>wvw_pbSetStyle( nWinNum, nPBId, nStyle )</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>nPBId</code> ID of pushbutton. <code>nStyle</code> Define style of pushbutton. You can see all possibilities BS_PUSHBUTTON, BS_DEFPUSHBUTTON, etc.). Typical usage: BS_DEFPUSHBUTTON BS_PUSHBUTTON in file <code>winuser.ch</code> (</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>nPBId</code> ID of pushbutton. <code>nStyle</code> Define style of pushbutton. You can see all possibilities <code>BS_PUSHBUTTON</code>, <code>BS_DEFPUSHBUTTON</code>, etc.). Typical usage: <code>BS_DEFPUSHBUTTON</code> <code>BS_PUSHBUTTON</code> in file <code>winuser.ch</code> (</div>
   <div>1: Turn the button into default button (thick border) 0: Turn the button into regular pushbutton</div>
 </div>
 <div class="d-d">Returns</div>
@@ -2458,7 +2458,7 @@ nQuality, lItalic, lUnderline, lStrikeout )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_pgcreate">
@@ -2480,7 +2480,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_pgdestroy">
@@ -2498,7 +2498,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_pggetpos">
@@ -2516,7 +2516,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_pgsetpos">
@@ -2534,7 +2534,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_pastefromclipboard">
@@ -2552,7 +2552,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_processmessages">
@@ -2562,7 +2562,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-it d-sy">
 <code>wvw_ProcessMessages( nWinNum )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. NOTE: Despite the parameter, the following will actually process messages for all windows</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>NOTE</code>: Despite the parameter, the following will actually process messages for all windows</div>
 <div class="d-d">Returns</div>
 <div class="d-it">None (actually, returns number 1, with no use).</div>
 <div class="d-d">Description</div>
@@ -2570,7 +2570,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_restore">
@@ -2588,7 +2588,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_restscreen">
@@ -2606,7 +2606,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_sbaddpart">
@@ -2627,7 +2627,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_sbcreate">
@@ -2645,7 +2645,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_sbdestroy">
@@ -2663,7 +2663,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_sbgetparts">
@@ -2681,7 +2681,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_sbgettext">
@@ -2699,7 +2699,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_sbrefresh">
@@ -2717,7 +2717,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_sbsettext">
@@ -2735,7 +2735,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_savescreen">
@@ -2753,7 +2753,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setaltf4close">
@@ -2763,15 +2763,15 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-it d-sy">
 <code>wvw_SetAltF4Close( lOn )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>lOn</code> <code>.T.</code> if application can be finished using <code>Alt F4</code> key. <code>.F.</code> if application cannot be finished using <code>Alt F4</code> key.</div>
+<div class="d-it"><code>lOn</code> <code>.T.</code> if application can be finished using <span class="d-key">Alt F4</span> key. <code>.F.</code> if application cannot be finished using <span class="d-key">Alt F4</span> key.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Old configuration.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Identify if the application can be finished using <code>Alt F4</code> key.</div>
+<div class="d-it">Identify if the application can be finished using <span class="d-key">Alt F4</span> key.</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setasnormal">
@@ -2789,7 +2789,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setbrush">
@@ -2799,7 +2799,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-it d-sy">
 <code>wvw_SetBrush( nStyle, nColor, nHatch )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nStyle</code> Identify pen style. All definitions can be viewed in file <code>wingdi.ch</code> ( BS_SOLID, BS_NULL, etc.). <code>nColor</code> Index color to pen draw. <code>nHatch</code> Define the filling pattern of pen. All definitions can be viewed in file <code>wingdi.ch</code> ( HS_VERTICAL, HS_HORIZONTAL, etc.).</div>
+<div class="d-it"><code>nStyle</code> Identify pen style. All definitions can be viewed in file <code>wingdi.ch</code> ( <code>BS_SOLID</code>, <code>BS_NULL</code>, etc.). <code>nColor</code> Index color to pen draw. <code>nHatch</code> Define the filling pattern of pen. All definitions can be viewed in file <code>wingdi.ch</code> ( <code>HS_VERTICAL</code>, <code>HS_HORIZONTAL</code>, etc.).</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful, <code>.F.</code> otherwise.</div>
 <div class="d-d">Description</div>
@@ -2807,7 +2807,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setclipboard">
@@ -2825,7 +2825,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setcodepage">
@@ -2843,7 +2843,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setdefcentrewindow">
@@ -2861,7 +2861,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setdefhcentrewindow">
@@ -2879,7 +2879,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setdeflinespacing">
@@ -2897,7 +2897,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setdeflspacecolor">
@@ -2915,7 +2915,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setdefvcentrewindow">
@@ -2933,7 +2933,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setfont">
@@ -2951,7 +2951,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_seticon">
@@ -2969,7 +2969,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setlastmenuevent">
@@ -2987,7 +2987,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setlinespacing">
@@ -3005,7 +3005,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setlspacecolor">
@@ -3023,7 +3023,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setmaincoord">
@@ -3041,7 +3041,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setmaxbmcache">
@@ -3059,7 +3059,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setmenu">
@@ -3077,7 +3077,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setmenukeyevent">
@@ -3095,7 +3095,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setmousemove">
@@ -3113,7 +3113,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setmousepos">
@@ -3131,7 +3131,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setontop">
@@ -3149,7 +3149,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setpaintrefresh">
@@ -3167,7 +3167,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setpalette">
@@ -3185,7 +3185,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setpen">
@@ -3195,7 +3195,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-it d-sy">
 <code>wvw_SetPen( nPenStyle, nWidth, nColor )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nPenStyle</code> Defines pen style. All definition are in file <code>wingdi.ch</code> ( PS_SOLID, PS_DOT, etc.). <code>nWidth</code> Specifies width of the pen. <code>nColor</code> Index color of pen.</div>
+<div class="d-it"><code>nPenStyle</code> Defines pen style. All definition are in file <code>wingdi.ch</code> ( <code>PS_SOLID</code>, <code>PS_DOT</code>, etc.). <code>nWidth</code> Specifies width of the pen. <code>nColor</code> Index color of pen.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful, <code>.F.</code> otherwise.</div>
 <div class="d-d">Description</div>
@@ -3203,7 +3203,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setpointer">
@@ -3213,7 +3213,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-it d-sy">
 <code>wvw_SetPointer( nWinNum, nIcon )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nIcon</code> Model of icon to be read. May be a string which identify a resource in a RC file or may be a predefined window model (default is IDC_ARROW). All definition are in <code>winuser.ch</code> file.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nIcon</code> Model of icon to be read. May be a string which identify a resource in a RC file or may be a predefined window model (default is <code>IDC_ARROW</code>). All definition are in <code>winuser.ch</code> file.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
@@ -3221,7 +3221,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setpopupmenu">
@@ -3239,7 +3239,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_settimer">
@@ -3257,7 +3257,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_settitle">
@@ -3275,7 +3275,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_settooltip">
@@ -3293,7 +3293,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_settooltipactive">
@@ -3311,7 +3311,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_settooltipbkcolor">
@@ -3329,7 +3329,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_settooltipmargin">
@@ -3347,7 +3347,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_settooltiptext">
@@ -3365,7 +3365,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_settooltiptextcolor">
@@ -3383,7 +3383,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_settooltiptitle">
@@ -3400,7 +3400,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Description</div>
 <div class="d-it">None.</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_settooltipwidth">
@@ -3418,7 +3418,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setvertcaret">
@@ -3436,7 +3436,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setwindowcentre">
@@ -3454,7 +3454,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setwindowpos">
@@ -3472,7 +3472,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_setwinstyle">
@@ -3482,7 +3482,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-it d-sy">
 <code>wvw_SetWinStyle( nWinNum, nStyle )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nStyle</code> New windows style. If the windows has any control (PUSHBUTTON, SCROLLBAR, etc.), must be added WS_CLIPCHILDREN style.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nStyle</code> New windows style. If the windows has any control (PUSHBUTTON, <code>SCROLLBAR</code>, etc.), must be added <code>WS_CLIPCHILDREN</code> style.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Returns old style of the window.</div>
 <div class="d-d">Description</div>
@@ -3490,7 +3490,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_showwindow">
@@ -3500,7 +3500,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-it d-sy">
 <code>wvw_ShowWindow( nWinNum, nMode )</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nMode</code> Points out how window will be showed. Default is SW_SHOWNORMAL (another definitions in file <code>winuser.ch</code>).</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nMode</code> Points out how window will be showed. Default is <code>SW_SHOWNORMAL</code> (another definitions in file <code>winuser.ch</code>).</div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
@@ -3508,7 +3508,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_tbaddbutton">
@@ -3519,7 +3519,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <code>wvw_tbAddButton( nWinNum, nCommand, xBitmap, cLabel, nBitmapType, lMap3DColors )</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>nCommand</code> ID of action to be executed when user press button. <code>xBitmap</code> ID of bitmap resource in .RC file (in this case, the image cannot have more than 256 colors) or full path to a file name. <code>cLabel</code> Text of button. If passed <code>lDisplayText</code> (in function <code><a href="#wvw_tbcreate">wvw_tbCreate()</a></code>) to <code>.T.</code>, the text will be showed below image, otherwise will be used as a tooltip. <code>nBitmapType</code> Bitmap type. Can be: 0 1 2 3 Custom Standard windows bitmaps (COPY, PAST, FIND, OPEN, etc.) System view bitmaps System history bitmaps</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>nCommand</code> ID of action to be executed when user press button. <code>xBitmap</code> ID of bitmap resource in .RC file (in this case, the image cannot have more than 256 colors) or full path to a file name. <code>cLabel</code> Text of button. If passed <code>lDisplayText</code> (in function <code><a href="#wvw_tbcreate">wvw_tbCreate()</a></code>) to <code>.T.</code>, the text will be showed below image, otherwise will be used as a tooltip. <code>nBitmapType</code> Bitmap type. Can be: 0 1 2 3 Custom Standard windows bitmaps (COPY, <code>PAST</code>, <code>FIND</code>, <code>OPEN</code>, etc.) System view bitmaps System history bitmaps</div>
   <div><code>lMap3DColors</code> If the image will be transparent (meaningful for custom bitmap only).</div>
 </div>
 <div class="d-d">Returns</div>
@@ -3529,7 +3529,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_tbbuttoncount">
@@ -3547,7 +3547,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_tbcmd2index">
@@ -3565,7 +3565,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_tbcreate">
@@ -3580,7 +3580,7 @@ nImageHeight )
 </div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>lDIsplayText</code> <code>.T.</code> Text of button will be showed with the image <code>.F.</code> Text will be showed as a tooltip ( default) <code>nStyle</code> Style of toolbar. Default is TBSTYLE_FLAT | TBSTYLE_TOOLTIPS (another definitions are in file COMMCTRL.H). <code>nSystemBitmap</code> Points out if will be used Windows system bitmaps. Can be: 0 1 2 Do not use Windows system bitmaps Use Windows system bitmaps (small) Use Windows system bitmaps (large)</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>lDIsplayText</code> <code>.T.</code> Text of button will be showed with the image <code>.F.</code> Text will be showed as a tooltip ( default) <code>nStyle</code> Style of toolbar. Default is <code>TBSTYLE_FLAT</code> | <code>TBSTYLE_TOOLTIPS</code> (another definitions are in file <code>COMMCTRL</code>.H). <code>nSystemBitmap</code> Points out if will be used Windows system bitmaps. Can be: 0 1 2 Do not use Windows system bitmaps Use Windows system bitmaps (small) Use Windows system bitmaps (large)</div>
   <div><code>nImageWidth, nImageHeight</code> Length and width of image (meaningful only if <code>nSystemBitmap</code> is zero).</div>
 </div>
 <div class="d-d">Returns</div>
@@ -3590,7 +3590,7 @@ nImageHeight )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_tbdelbutton">
@@ -3608,7 +3608,7 @@ nImageHeight )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_tbdestroy">
@@ -3626,7 +3626,7 @@ nImageHeight )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_tbenablebutton">
@@ -3644,7 +3644,7 @@ nImageHeight )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_tbindex2cmd">
@@ -3662,7 +3662,7 @@ nImageHeight )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_trackpopupmenu">
@@ -3680,7 +3680,7 @@ nImageHeight )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_unreachedbr">
@@ -3698,7 +3698,7 @@ nImageHeight )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_updatewindow">
@@ -3716,7 +3716,7 @@ nImageHeight )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_xbcreate">
@@ -3727,10 +3727,10 @@ nImageHeight )
 <code>wvw_xbCreate( nWinNum, nStyle, nTop, nLeft, nLength, bBlock, aOffset )</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>nStyle</code> 0 Horizontal 1 Vertical <code>nTop, nLeft</code> Intital row/column of scrollbar (in characters). <code>nLength</code> Length of scrollbar (in characters). <code>bBlock</code> Code block to execute on every VM_VSCROLL/VM_HSCROLL. This code block will be evaluated with these parameters: nWinNum nXBid nXBmsg window number scrollbar ID scrollbar message. Can be divided in two categories:</div>
-  <div>The &quot;must be handled&quot; messages: SB_LINEUP/SB_LINELEFT SB_LINEDOWN/SB_LINERIGHT SB_PAGEUP/SB_PAGELEFT SB_PAGEDOWN/SB_PAGERIGHT 0: 1: 2: 3: up/left button clicked down/right button clicked upper/left shaft clicked lower/right shaft clicked</div>
-  <div>The &quot;may not be handled&quot; messages: SB_TUMBPOSITION SB_THUMBTRACK SB_ENDSCROLL nXBPos 4: scroll thumb is released at position nXBpos 5: scroll thumb is being dragged at position nXBpos 8: end of scroll</div>
-  <div>scrollthumb position (only if message = SB_THUMBPOSITION or SB_THUMBTRACK)</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>nStyle</code> 0 Horizontal 1 Vertical <code>nTop, nLeft</code> Intital row/column of scrollbar (in characters). <code>nLength</code> Length of scrollbar (in characters). <code>bBlock</code> Code block to execute on every <code>VM_VSCROLL</code>/<code>VM_HSCROLL</code>. This code block will be evaluated with these parameters: nWinNum nXBid nXBmsg window number scrollbar ID scrollbar message. Can be divided in two categories:</div>
+  <div>The &quot;must be handled&quot; messages: <code>SB_LINEUP</code>/<code>SB_LINELEFT</code> <code>SB_LINEDOWN</code>/<code>SB_LINERIGHT</code> <code>SB_PAGEUP</code>/<code>SB_PAGELEFT</code> <code>SB_PAGEDOWN</code>/<code>SB_PAGERIGHT</code> 0: 1: 2: 3: up/left button clicked down/right button clicked upper/left shaft clicked lower/right shaft clicked</div>
+  <div>The &quot;may not be handled&quot; messages: <code>SB_TUMBPOSITION</code> <code>SB_THUMBTRACK</code> <code>SB_ENDSCROLL</code> nXBPos 4: scroll thumb is released at position nXBpos 5: scroll thumb is being dragged at position nXBpos 8: end of scroll</div>
+  <div>scrollthumb position (only if message = <code>SB_THUMBPOSITION</code> or <code>SB_THUMBTRACK</code>)</div>
   <div><code>aOffset</code> Array with four elements with top/left, bottom/right coordinates, in pixels, to adjust the dimensions of scrollbar.</div>
 </div>
 <div class="d-d">Returns</div>
@@ -3740,7 +3740,7 @@ nImageHeight )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_xbdestroy">
@@ -3758,7 +3758,7 @@ nImageHeight )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_xbenable">
@@ -3776,7 +3776,7 @@ nImageHeight )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_xbinfo">
@@ -3797,7 +3797,7 @@ nImageHeight )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_xbupdate">
@@ -3815,7 +3815,7 @@ nImageHeight )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 <section id="wvw_xreposwindow">
@@ -3833,12 +3833,12 @@ nImageHeight )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tag(s)</div>
-<div class="d-it">API, GTWVW</div>
+<div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-31 21:19 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/fa042c6">fa042c6</a></div>
+<div>Generated by hbdoc on 2016-11-01 02:38 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/7839959">7839959</a></div>
 </footer>

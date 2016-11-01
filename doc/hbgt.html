@@ -130,7 +130,7 @@ cFlags := gt_ClrFlag( cFlags )
   <div><code>nFlag</code> is the flag to be tested.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">A boolean value, TRUE if the flag is on, FALSE if it's off.</div>
+<div class="d-it">A boolean value, <code>TRUE</code> if the flag is on, <code>FALSE</code> if it's off.</div>
 <div class="d-d">Description</div>
 <div class="d-it"><code><a href="#gt_isflag">gt_IsFlag()</a></code> is used to test the state of a flag with a bit flag string.</div>
 <div class="d-d">Example(s)</div>
@@ -157,7 +157,7 @@ NEXT
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>nFlagCount</code> is the number of flags you wish to store.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">A string to hold the bit flags. All flags are set to FALSE.</div>
+<div class="d-it">A string to hold the bit flags. All flags are set to <code>FALSE</code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gt_newflag">gt_NewFlag()</a></code> is used to construct a bit flag string. The bit flag functions can be used for storing a large number of logical values in a small space.</div>
@@ -223,9 +223,9 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>cStr</code>  - The string to sum</div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>nSum</code>    - The sum of all ASCII values in <code>cStr</code>.</div>
+<div class="d-it"><code>nSum</code>    - The sum of all <code>ASCII</code> values in <code>cStr</code>.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Sum the ASCII value of every character in the passed string and return the result.</div>
+<div class="d-it">Sum the <code>ASCII</code> value of every character in the passed string and return the result.</div>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">File(s)</div>
@@ -244,14 +244,14 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>cStr</code>  - The string <code>nPos</code>  - The position in <code>cStr</code></div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>nAscVal</code> - The ASCII value of hb_BSubStr( <code>cStr</code>, <code>nPos</code>, 1 )</div>
+<div class="d-it"><code>nAscVal</code> - The <code>ASCII</code> value of hb_BSubStr( <code>cStr</code>, <code>nPos</code>, 1 )</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>Return the ASCII value of a specified character in a string Equivalent (but much faster) to</div>
+  <div><p>Return the <code>ASCII</code> value of a specified character in a string Equivalent (but much faster) to</div>
   <div><p>hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )</div>
-  <div><p>NOTE:</div>
+  <div><p><code>NOTE</code>:</div>
   <div><p>invalid parameters will return -1 nPos &gt; hb_BLen( cStr ) will return -2</div>
-  <div><p>This last behaviour is different to the Funcky function of the same name.  I changed the behaviour because some of the strings I process contain embedded NULs.</div>
+  <div><p>This last behaviour is different to the Funcky function of the same name.  I changed the behaviour because some of the strings I process contain embedded <code>NUL</code>s.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -279,7 +279,7 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return the position in <code>cStr2</code> where <code>cStr1</code> begins to differ. If the strings differ in the first character <code><a href="#gt_atdiff">gt_AtDiff()</a></code> will return 1.  If the two strings are identical (or identical upto the last character in <code>cStr2</code>) the function will return 0.</div>
-  <div><p>NOTE:</div>
+  <div><p><code>NOTE</code>:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -309,7 +309,7 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return a string consisting of all the characters in even positions in <code>cStr1</code>.</div>
-  <div><p>NOTE:</div>
+  <div><p><code>NOTE</code>:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -341,7 +341,7 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return a string consisting of all the characters in <code>cStr1</code> mixed with the characters from <code>cStr2</code>.</div>
-  <div><p>NOTE:</div>
+  <div><p><code>NOTE</code>:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -372,7 +372,7 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return a string consisting of all the characters in odd positions in <code>cStr1</code>.</div>
-  <div><p>NOTE:</div>
+  <div><p><code>NOTE</code>:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -401,7 +401,7 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gt_chrcount">gt_ChrCount()</a></code> counts how many times a specified character appears in a string.</div>
-  <div><p>NOTE:</div>
+  <div><p><code>NOTE</code>:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -427,11 +427,11 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-it"><code>cChars</code> - The set of characters to find <code>cStr</code>   - The input string</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
-  <div><code>nAsc</code>     - The ASCII value of the first character in <code>cChars</code></div>
+  <div><code>nAsc</code>     - The <code>ASCII</code> value of the first character in <code>cChars</code></div>
   <div>which appears first in <code>cStr</code></div>
 </div>
 <div class="d-d">Description</div>
-<div class="d-it">Return the ASCII value of a character in <code>cChars</code> which appears first in <code>cStr</code>.</div>
+<div class="d-it">Return the <code>ASCII</code> value of a character in <code>cChars</code> which appears first in <code>cStr</code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? hb_BChar( gt_ChrFirst( &quot;sa &quot;, &quot;This is a test&quot; ) )  // prints &quot;s&quot;
@@ -462,7 +462,7 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Returns the numnber of occurrences of characters belonging to the set <code>cChrs</code> in the string <code>cStr</code>.  If no characters in <code>cChrs</code> appears in <code>cStr</code> <code><a href="#gt_chrtotal">gt_ChrTotal()</a></code> will return 0.</div>
-  <div><p>NOTE:</div>
+  <div><p><code>NOTE</code>:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -494,7 +494,7 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gt_strcount">gt_StrCount()</a></code> counts how many times a specified substring appears in a string. If the substring does NOT appear in <code>cStr</code> this function will return 0. If the substring is a single character use <code><a href="#gt_chrcount">gt_ChrCount()</a></code> as it will be faster.</div>
-  <div><p>NOTE:</div>
+  <div><p><code>NOTE</code>:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -552,7 +552,7 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return a string beginning at the position in <code>cStr2</code> where <code>cStr1</code> begins to differ from <code>cStr1</code>. If the two strings are identical (or identical upto the last character in <code>cStr2</code>) the function will return &quot;&quot;.</div>
-  <div><p>NOTE:</div>
+  <div><p><code>NOTE</code>:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -585,7 +585,7 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Inserts fill characters into a string.</div>
-  <div><p>NOTE:</div>
+  <div><p><code>NOTE</code>:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -694,6 +694,6 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-10-31 21:19 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/fa042c6">fa042c6</a></div>
+<div>Generated by hbdoc on 2016-11-01 02:38 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/7839959">7839959</a></div>
 </footer>
