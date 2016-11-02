@@ -151,7 +151,7 @@ cFlags := gt_ClrFlag( cFlags )
 <div class="d-it"><code><a href="#gt_isflag">gt_IsFlag()</a></code> is used to test the state of a flag with a bit flag string.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-// Print the setting of the flags in a flag string called ``cDave''
+// Print the setting of the flags in a flag string called `cDave`
 
 FOR nFlag := 1 TO hb_BLen( cDave ) * 8
    ? &quot;Flag number&quot;, nFlag, &quot;==&quot;, gt_IsFlag( cDave, nFlag )
@@ -260,13 +260,15 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>cStr</code>  - The string <code>nPos</code>  - The position in <code>cStr</code></div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>nAscVal</code> - The <code>ASCII</code> value of hb_BSubStr( <code>cStr</code>, <code>nPos</code>, 1 )</div>
+<div class="d-it"><code>nAscVal</code> - The <code>ASCII</code> value of <code>hb_BSubStr( &lt;cStr&gt;, &lt;nPos&gt;, 1 )</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return the <code>ASCII</code> value of a specified character in a string Equivalent (but much faster) to</div>
-  <div><p>hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )</div>
-  <div><p><code>NOTE</code>:</div>
-  <div><p>invalid parameters will return -1 nPos &gt; hb_BLen( cStr ) will return -2</div>
+<pre>
+hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
+</pre>
+  <div><p>NOTE:</div>
+  <div><p>invalid parameters will return -1 <code>nPos &gt; hb_BLen( cStr )</code> will return -2</div>
   <div><p>This last behaviour is different to the Funcky function of the same name.  I changed the behaviour because some of the strings I process contain embedded <code>NUL</code>s.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -295,7 +297,7 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return the position in <code>cStr2</code> where <code>cStr1</code> begins to differ. If the strings differ in the first character <code><a href="#gt_atdiff">gt_AtDiff()</a></code> will return 1.  If the two strings are identical (or identical upto the last character in <code>cStr2</code>) the function will return 0.</div>
-  <div><p><code>NOTE</code>:</div>
+  <div><p>NOTE:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -325,7 +327,7 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return a string consisting of all the characters in even positions in <code>cStr1</code>.</div>
-  <div><p><code>NOTE</code>:</div>
+  <div><p>NOTE:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -357,7 +359,7 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return a string consisting of all the characters in <code>cStr1</code> mixed with the characters from <code>cStr2</code>.</div>
-  <div><p><code>NOTE</code>:</div>
+  <div><p>NOTE:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -388,7 +390,7 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return a string consisting of all the characters in odd positions in <code>cStr1</code>.</div>
-  <div><p><code>NOTE</code>:</div>
+  <div><p>NOTE:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -417,7 +419,7 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gt_chrcount">gt_ChrCount()</a></code> counts how many times a specified character appears in a string.</div>
-  <div><p><code>NOTE</code>:</div>
+  <div><p>NOTE:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -478,7 +480,7 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Returns the numnber of occurrences of characters belonging to the set <code>cChrs</code> in the string <code>cStr</code>.  If no characters in <code>cChrs</code> appears in <code>cStr</code> <code><a href="#gt_chrtotal">gt_ChrTotal()</a></code> will return 0.</div>
-  <div><p><code>NOTE</code>:</div>
+  <div><p>NOTE:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -510,7 +512,7 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gt_strcount">gt_StrCount()</a></code> counts how many times a specified substring appears in a string. If the substring does NOT appear in <code>cStr</code> this function will return 0. If the substring is a single character use <code><a href="#gt_chrcount">gt_ChrCount()</a></code> as it will be faster.</div>
-  <div><p><code>NOTE</code>:</div>
+  <div><p>NOTE:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -568,7 +570,7 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return a string beginning at the position in <code>cStr2</code> where <code>cStr1</code> begins to differ from <code>cStr1</code>. If the two strings are identical (or identical upto the last character in <code>cStr2</code>) the function will return &quot;&quot;.</div>
-  <div><p><code>NOTE</code>:</div>
+  <div><p>NOTE:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -601,7 +603,7 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Inserts fill characters into a string.</div>
-  <div><p><code>NOTE</code>:</div>
+  <div><p>NOTE:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -710,6 +712,6 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-02 10:17 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/463c3d9">463c3d9</a></div>
+<div>Generated by hbdoc on 2016-11-02 15:14 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/c8274a5">c8274a5</a></div>
 </footer>
