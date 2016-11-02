@@ -468,46 +468,44 @@ aMonths := AMonths()
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>cFileName</code> is the required name of the file to be read.</div>
-  <div><code>nReadSize</code> is the optional size to use when reading from the file. The default value is 4096 and the allowed range is 1 through 65535.</div>
-  <div>Any value outside of this range causes the default value to be used.</div>
+  <div><code>nReadSize</code> is the optional size to use when reading from the file. The default value is 4096 and the allowed range is 1 through 65535. Any value outside of this range causes the default value to be used.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">An instance of the File Reader class</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p><code><a href="#tfileread">TFileRead()</a></code> is used to access a file one line at a time. You must</div>
-  <div><p>specify the name of the file when an instance of the class is created.</div>
+  <div><p><code><a href="#tfileread">TFileRead()</a></code> is used to access a file one line at a time. You must specify the name of the file when an instance of the class is created.</div>
   <div><p>The class data should be considered private to the class.</div>
   <div><p>The class methods are as follows:</div>
-  <div><p><code>New()</code>                Creates a new instance of the TFileRead class.</div>
-  <div><p>Open( [<code>nFlags</code>] )   Opens the file for reading. The optional nFlags</div>
-  <div><p>parameter can use any of the file open flags from <code>fileio.ch</code>. The default is <code>FO_READ</code> + <code>FO_SHARED</code>. Calling this method when the file is already open causes the next <code>ReadLine()</code> to start over</div>
-  <div><p>from the beginning of the file.</div>
-  <div><p><code>Close()</code>              Closes the file.</div>
-  <div><p><code>ReadLine()</code>           Returns one line from the file, stripping the</div>
-  <div><p>newline characters. The following sequences are treated as one newline: 1) CR CR LF; 2) CR LF;</div>
-  <div><p>3) LF; and 4) CR. Note: LF CR is 2 newlines.</div>
-  <div><p><code>Name()</code>               Returns the name of the file.</div>
-  <div><p><code>IsOpen()</code>             Returns <code>.T.</code> if the file is open.</div>
-  <div><p><code>MoreToRead()</code>         Returns <code>.T.</code> if there are more lines to be read</div>
+  <div><p><code><code>New()</code></code>                Creates a new instance of the TFileRead class.</div>
+  <div><p><code>Open( [&lt;nFlags&gt;] )</code>   Opens the file for reading. The optional nFlags</div>
+  <div><p>parameter can use any of the file open flags from <code><a href="https://github.com/vszakats/harbour-core/blob/c8274a5/include/fileio.ch">fileio.ch</a></code>. The default is <code>FO_READ</code> + <code>FO_SHARED</code>. Calling this method when the file is already open causes the next <code>ReadLine()</code> to start over from the beginning of the file.</div>
+  <div><p><code><code>Close()</code></code>              Closes the file.</div>
+  <div><p><code><code>ReadLine()</code></code>           Returns one line from the file, stripping the</div>
+  <div><p>newline characters. The following sequences are treated as one newline: 1) CR CR LF; 2) CR LF; 3) LF; and 4) CR. Note: LF CR is 2 newlines.</div>
+  <div><p><code><code>Name()</code></code>               Returns the name of the file.</div>
+  <div><p><code><code>IsOpen()</code></code>             Returns <code>.T.</code> if the file is open.</div>
+  <div><p><code><code>MoreToRead()</code></code>         Returns <code>.T.</code> if there are more lines to be read</div>
   <div><p>(think of it as an inverse EOF function).</div>
-  <div><p><code>Error()</code>              Returns <code>.T.</code> if an error has occurred.</div>
-  <div><p><code>ErrorNo()</code>            Returns the current error code.</div>
-  <div><p>ErrorMsg( [<code>cPre</code>] ) Returns a formatted error message.</div>
+  <div><p><code><code>Error()</code></code>              Returns <code>.T.</code> if an error has occurred.</div>
+  <div><p><code><code>ErrorNo()</code></code>            Returns the current error code.</div>
+  <div><p><code>ErrorMsg( [&lt;cPre&gt;] )</code> Returns a formatted error message.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-LOCAL oFile := TFileRead():New( cFile )
+PROCEDURE Main( cFile )
+   LOCAL oFile := TFileRead():New( cFile )
 
-oFile:Open()
-IF oFile:Error()
-   ? oFile:ErrorMsg( &quot;FileRead:&quot; )
-ELSE
-   DO WHILE oFile:MoreToRead()
-      ? oFile:ReadLine()
-   ENDDO
-   oFile:Close()
-ENDIF
+   oFile:Open()
+   IF oFile:Error()
+      ? oFile:ErrorMsg( &quot;FileRead:&quot; )
+   ELSE
+      DO WHILE oFile:MoreToRead()
+         ? oFile:ReadLine()
+      ENDDO
+      oFile:Close()
+   ENDIF
+   RETURN
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -528,17 +526,17 @@ ENDIF
 <code>StrFormat( &lt;cMask&gt;[, &lt;cPar1&gt;[, &lt;cParn&gt;[, ...]] ) → cString</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>cMask</code> Holds the mask for the resulting string <code>cParn</code> Holds the strings to be inserted in the mask</div>
+  <div><code>cMask</code> Holds the mask for the resulting string</div>
+  <div><code>cParn</code> Holds the strings to be inserted in the mask</div>
   <div>maximum 9 of them can be specified.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>cString</code> Return the mask with all the parameters inserted.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>String replacment, can be useful when writing international apps. You can separate the constant strings from the variable ones. Each %1 - %9 marks will be replaced with the appropriate parameter</div>
-  <div><p>from the parameter list.</div>
+  <div><p>String replacment, can be useful when writing international apps. You can separate the constant strings from the variable ones. Each <code>%1</code> - <code>%9</code> marks will be replaced with the appropriate parameter from the parameter list.</div>
   <div><p>Marks can be in any order, and can be duplicated.</div>
-  <div><p>You can print &quot;%&quot; character with &quot;%%&quot;.</div>
+  <div><p>You can print <code>%</code> character with <code>%%</code>.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -559,6 +557,6 @@ StrFormat( &quot;%2 %1 %2&quot;, &quot;Param1&quot;, &quot;Param2&quot; )
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-02 15:14 UTC</div>
+<div>Generated by hbdoc on 2016-11-02 16:09 UTC</div>
 <div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/c8274a5">c8274a5</a></div>
 </footer>
