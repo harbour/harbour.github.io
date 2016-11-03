@@ -476,7 +476,7 @@ p {
 /* Dropdown Button */
 .dropbtn {
   display: block;
-  cursor: pointer;
+  cursor: default;
   margin-left: 15px;
   transition: color .25s;
 }
@@ -513,10 +513,6 @@ p {
   text-align: left;
   text-decoration: none;
   transition: none;
-}
-
-.lang .dropbtn {
-  cursor: default;
 }
 
 .lang .dropdown-content {
