@@ -2347,7 +2347,7 @@ dbCreate( &quot;onlyname.dbf&quot;, __dbStructFilter( aStruct, aList ) )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#__fledit">__FLedit()</a></code> can be use to create a sub-set of a database structure, based on a given field list.</div>
-  <div><p>Note that field names in <code>aStruct</code> <i>must</i> be specified in uppercase or else no match would found.</div>
+  <div><p>Note that field names in <code>aStruct</code> <i>must</i> be specified in uppercase or else no match would be found.</div>
   <div><p><code>SET <code>EXACT</code></code> has no effect on the return value.</div>
   <div><p><code><a href="#__fledit">__FLedit()</a></code> is a compatibility function and it is synonym for <code><a href="#__dbstructfilter">__dbStructFilter()</a></code> which does exactly the same.</div>
 </div>
@@ -7172,13 +7172,16 @@ void * hb_gcAlloc( HB_SIZE nSize,
 <div class="d-ol">Returns a hash table</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_Hash( [ &lt;Key1&gt;, &lt;Value1&gt; ], [ &lt;KeyN&gt;, &lt;ValueN&gt; ], ... ) → hsTable</code></div>
+<code>hb_Hash( [ &lt;Key1&gt;, &lt;Value1&gt; ], [ &lt;KeyN&gt;, &lt;ValueN&gt; ], ... ) → hTable</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>Key1</code> entry key; can be of type: number, date, datetime, string, pointer</div>
   <div><code>Value1</code> entry value; can be of type: block, string, numeric, date/datetime, logical, nil, pointer, array, hash table</div>
   <div>Equivalent to:</div>
-  <div>hsTable := { =&gt; } hsTable := { <code>Key1</code> =&gt; <code>Value1</code>, <code>Key2</code> =&gt; <code>Value2</code>, <code>KeyN</code> =&gt; <code>ValueN</code> }</div>
+<pre>
+hTable := { =&gt; }
+hTable := { &lt;Key1&gt; =&gt; &lt;Value1&gt;, &lt;Key2&gt; =&gt; &lt;Value2&gt;, &lt;KeyN&gt; =&gt; &lt;ValueN&gt; }
+</pre>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">A hash table built from the initial key/value pairs</div>
@@ -7198,10 +7201,10 @@ void * hb_gcAlloc( HB_SIZE nSize,
 <div class="d-ol">Preallocates a hash table</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HAllocate( &lt;hsTable&gt;, &lt;nItems&gt; )</code></div>
+<code>hb_HAllocate( &lt;hTable&gt;, &lt;nItems&gt; )</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>nItems</code> number of items to preallocate in the hash table</div>
 </div>
 <div class="d-d">Status</div>
@@ -7220,10 +7223,10 @@ void * hb_gcAlloc( HB_SIZE nSize,
 <div class="d-ol">Sets the 'auto add' flag for the hash table</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HAutoAdd( &lt;hsTable&gt;, [&lt;lFlag&gt;] ) → &lt;lPreviousFlag&gt;</code></div>
+<code>hb_HAutoAdd( &lt;hTable&gt;, [&lt;lFlag&gt;] ) → &lt;lPreviousFlag&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>lFlag</code> a logical value indicating to turn on or off the 'auto add' flag of the hash table</div>
 </div>
 <div class="d-d">Returns</div>
@@ -7253,10 +7256,10 @@ lFlag := hb_HAutoAdd( hsTable, .T. )
 <div class="d-ol">Sets the 'binary' flag for the hash table</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HBinary( &lt;hsTable&gt;, [&lt;lFlag&gt;] ) → &lt;lPreviousFlag&gt;</code></div>
+<code>hb_HBinary( &lt;hTable&gt;, [&lt;lFlag&gt;] ) → &lt;lPreviousFlag&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>lFlag</code> a logical value indicating to turn on or off the 'binary' flag of the hash table</div>
 </div>
 <div class="d-d">Returns</div>
@@ -7286,10 +7289,10 @@ lFlag := hb_HBinary( hsTable, .T. )
 <div class="d-ol">Sets the 'case match' flag for the hash table</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HCaseMatch( &lt;hsTable&gt;, [&lt;lFlag&gt;] ) → &lt;lPreviousFlag&gt;</code></div>
+<code>hb_HCaseMatch( &lt;hTable&gt;, [&lt;lFlag&gt;] ) → &lt;lPreviousFlag&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>lFlag</code> a logical value indicating to turn on or off the 'case match' flag of the hash table</div>
 </div>
 <div class="d-d">Returns</div>
@@ -7319,9 +7322,9 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Creates a copy of a hash table</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HClone( &lt;hsTable&gt; ) → &lt;hsDestination&gt;</code></div>
+<code>hb_HClone( &lt;hTable&gt; ) → &lt;hsDestination&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>hsTable</code> a hash table</div>
+<div class="d-it"><code>hTable</code> a hash table</div>
 <div class="d-d">Returns</div>
 <div class="d-it">A cloned copy of the hash table</div>
 <div class="d-d">Status</div>
@@ -7366,10 +7369,10 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Returns/sets a default value for a hash table.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HDefault( &lt;hsTable&gt;, &lt;DefaultValue&gt; ) → &lt;OldDefaultValye&gt;</code></div>
+<code>hb_HDefault( &lt;hTable&gt;, &lt;DefaultValue&gt; ) → &lt;OldDefaultValue&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>DefaultValue</code></div>
 </div>
 <div class="d-d">Returns</div>
@@ -7392,10 +7395,10 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Removes a key/value pair from a hash table</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HDel( &lt;hsTable&gt;, &lt;Key&gt; ) → &lt;hsTable&gt;</code></div>
+<code>hb_HDel( &lt;hTable&gt;, &lt;Key&gt; ) → &lt;hTable&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>Key</code> key to be removed from the hash table; can be of type: number, date, datetime, string, pointer</div>
 </div>
 <div class="d-d">Returns</div>
@@ -7416,10 +7419,10 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Removes an entry from a hash table based on its index position</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HDelAt( &lt;hsTable&gt;, &lt;nPosition&gt; ) → &lt;hsTable&gt;</code></div>
+<code>hb_HDelAt( &lt;hTable&gt;, &lt;nPosition&gt; ) → &lt;hTable&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>nPosition</code> the position of an entry within the hash table that will be deleted</div>
 </div>
 <div class="d-d">Returns</div>
@@ -7440,10 +7443,10 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Evaluate a code block across the contents of a hash table</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HEval( &lt;hsTable&gt;, &lt;bBlock&gt;, [&lt;nStart&gt;], [&lt;nCount&gt;] ) → &lt;hsTable&gt;</code></div>
+<code>hb_HEval( &lt;hTable&gt;, &lt;bBlock&gt;, [&lt;nStart&gt;], [&lt;nCount&gt;] ) → &lt;hTable&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>bBlock</code> code block to be evaluated</div>
   <div><code>nStart</code> starting index, defaults to 1 if omitted</div>
   <div><code>nCount</code> counter, defaults to (length) - <code>nStart</code> is omitted</div>
@@ -7471,10 +7474,10 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Fills a hash table with a value</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HFill( &lt;hsTable&gt;, &lt;Value&gt; ) → &lt;hsTable&gt;</code></div>
+<code>hb_HFill( &lt;hTable&gt;, &lt;Value&gt; ) → &lt;hTable&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>Value</code> fill value; can be of type: block, string, numeric, date/datetime, logical, nil, pointer, array, hash table</div>
 </div>
 <div class="d-d">Returns</div>
@@ -7495,10 +7498,10 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Returns a hash value</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HGet( &lt;hsTable&gt;, &lt;Key&gt; ) → &lt;Value&gt;</code></div>
+<code>hb_HGet( &lt;hTable&gt;, &lt;Key&gt; ) → &lt;Value&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>Key</code> key to be retrieve from the hash table; can be of type: number, date, datetime, string, pointer</div>
 </div>
 <div class="d-d">Returns</div>
@@ -7522,10 +7525,10 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Returns a hash value, or a default value if the key is not present</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HGetDef( &lt;hsTable&gt;, &lt;Key&gt;, [&lt;DefaultValue&gt;] ) → &lt;Value&gt;</code></div>
+<code>hb_HGetDef( &lt;hTable&gt;, &lt;Key&gt;, [&lt;DefaultValue&gt;] ) → &lt;Value&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>Key</code> key to be retrieve from the hash table; can be of type: number, date, datetime, string, pointer</div>
   <div><code>DefaultValue</code> a default value to be returned if the hash table does not contain the key</div>
 </div>
@@ -7547,10 +7550,10 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Determines whether a hash table has an entry with a give key</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HHasKey( &lt;hsTable&gt;, &lt;Key&gt; ) → lExists</code></div>
+<code>hb_HHasKey( &lt;hTable&gt;, &lt;Key&gt; ) → lExists</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>Key</code> a key value to be queried for; can be of type: number, date, datetime, string, pointer</div>
 </div>
 <div class="d-d">Returns</div>
@@ -7571,10 +7574,10 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Gets a hash table key at a given position</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HKeyAt( &lt;hsTable&gt;, &lt;nPosition&gt; ) → &lt;Key&gt;</code></div>
+<code>hb_HKeyAt( &lt;hTable&gt;, &lt;nPosition&gt; ) → &lt;Key&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>nPosition</code> the position of an entry within the hash table that will be returned</div>
 </div>
 <div class="d-d">Returns</div>
@@ -7595,9 +7598,9 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Returns an array of the keys of a hash table</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HKeys( &lt;hsTable&gt; ) → &lt;aKeys&gt;</code></div>
+<code>hb_HKeys( &lt;hTable&gt; ) → &lt;aKeys&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>hsTable</code> a hash table</div>
+<div class="d-it"><code>hTable</code> a hash table</div>
 <div class="d-d">Returns</div>
 <div class="d-it">An array of all the hash table keys</div>
 <div class="d-d">Status</div>
@@ -7643,10 +7646,10 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Returns a two-dimensional array of a hash table entry key/value pair</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HPairAt( &lt;hsTable&gt;, &lt;nPosition&gt; ) → &lt;aKeyValue&gt;</code></div>
+<code>hb_HPairAt( &lt;hTable&gt;, &lt;nPosition&gt; ) → &lt;aKeyValue&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>nPosition</code> the position of an entry within the hash table that will be returned</div>
 </div>
 <div class="d-d">Returns</div>
@@ -7667,10 +7670,10 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Locates the index of a key within a hash table</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HPos( &lt;hsTable&gt;, &lt;Key&gt; ) → nPosition</code></div>
+<code>hb_HPos( &lt;hTable&gt;, &lt;Key&gt; ) → nPosition</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>Key</code> key for which its position is to be determined; can be of type: number, date, datetime, string, pointer</div>
 </div>
 <div class="d-d">Returns</div>
@@ -7694,10 +7697,10 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Scans a hash table</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HScan( &lt;hsTable&gt;, &lt;Value&gt;, [&lt;nStart&gt;], [&lt;nCount&gt;, [&lt;lExact&gt;] ) → nPosition</code></div>
+<code>hb_HScan( &lt;hTable&gt;, &lt;Value&gt;, [&lt;nStart&gt;], [&lt;nCount&gt;, [&lt;lExact&gt;] ) → nPosition</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>Value</code> to be located within the hash table</div>
   <div><code>nStart</code> starting index, defaults to 1 if omitted</div>
   <div><code>nCount</code> counter, defaults to (length) - <code>nStart</code> is omitted</div>
@@ -7721,10 +7724,10 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Sets a hash value</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HSet( &lt;hsTable&gt;, &lt;Key&gt;, &lt;Value&gt; ) → &lt;hsTable&gt;</code></div>
+<code>hb_HSet( &lt;hTable&gt;, &lt;Key&gt;, &lt;Value&gt; ) → &lt;hTable&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>Key</code> the key of the entry to be set; can be of type: number, date, datetime, string, pointer</div>
   <div><code>Value</code> the entry value</div>
 </div>
@@ -7746,9 +7749,9 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Reorganizes the internal list of the hash table to be sorted</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HSort( &lt;hsTable&gt; ) → &lt;hsSortedTable&gt;</code></div>
+<code>hb_HSort( &lt;hTable&gt; ) → &lt;hsSortedTable&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>hsTable</code> a hash table</div>
+<div class="d-it"><code>hTable</code> a hash table</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
   <div>The hash table sorted</div>
@@ -7770,10 +7773,10 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Gets/sets a hash value at a given position</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HValueAt( &lt;hsTable&gt;, &lt;nPosition&gt;, [&lt;NewValue&gt;] ) → &lt;Value&gt;</code></div>
+<code>hb_HValueAt( &lt;hTable&gt;, &lt;nPosition&gt;, [&lt;NewValue&gt;] ) → &lt;Value&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>hsTable</code> a hash table</div>
+  <div><code>hTable</code> a hash table</div>
   <div><code>nPosition</code> the position of an entry within the hash table that will be returned</div>
   <div><code>NewValue</code> a new value to be assigned to the hash table at the given position</div>
 </div>
@@ -7795,9 +7798,9 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-ol">Returns an array of the values of a hash table</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>hb_HValues( &lt;hsTable&gt; ) → &lt;aValues&gt;</code></div>
+<code>hb_HValues( &lt;hTable&gt; ) → &lt;aValues&gt;</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>hsTable</code> a hash table</div>
+<div class="d-it"><code>hTable</code> a hash table</div>
 <div class="d-d">Returns</div>
 <div class="d-it">An array of all the hash values</div>
 <div class="d-d">Status</div>
@@ -14084,8 +14087,6 @@ PROCEDURE CallProc()
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Variable management</div>
-<div class="d-d">See also</div>
-<div class="d-it"><code><a href="#include/hbmemvar.ch">include/hbmemvar.ch</a></code></div>
 </section>
 
 <section id="__mvxrelease" class="d-id">
@@ -18268,6 +18269,7 @@ oTb:SeyKey( K_F10, {| otb, nkey | ShowListByname( otb ) }
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-03 13:02 UTC</div>
+<div>Generated by hbdoc on 2016-11-03 14:49 UTC</div>
 <div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/80f488a">80f488a</a></div>
+<div>Content processing, layout&amp;design © 2016 <a href="https://github.com/vszakats">vszakats</a></div>
 </footer>
