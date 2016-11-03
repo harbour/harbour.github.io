@@ -248,7 +248,7 @@ Harbour Reference Guide</a></div>
 <div class="d-ol">add months to a date</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>AddMonth( [&lt;dDate&gt;,] &lt;nMonths&gt; ) → dShiftedDate</code></div>
+<code>AddMonth( [&lt;dDate&gt;,] &lt;nMonths&gt; ) → &lt;dShiftedDate&gt;</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">TODO: add documentation</div>
 <div class="d-d">Status</div>
@@ -338,7 +338,7 @@ Harbour Reference Guide</a></div>
 <div class="d-ol">convert name of day of the week to its ordinal number</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>CToDoW( &lt;cName&gt; ) → nOrdinal</code></div>
+<code>CToDoW( &lt;cName&gt; ) → &lt;nOrdinal&gt;</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">TODO: add documentation</div>
 <div class="d-d">Status</div>
@@ -361,7 +361,7 @@ Harbour Reference Guide</a></div>
 <div class="d-ol">convert name of month to its ordinal number</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>CToMonth( &lt;cName&gt; ) → nOrdinal</code></div>
+<code>CToMonth( &lt;cName&gt; ) → &lt;nOrdinal&gt;</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">TODO: add documentation</div>
 <div class="d-d">Status</div>
@@ -381,12 +381,15 @@ Harbour Reference Guide</a></div>
 <section id="dmy" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbct/doc/en/dattime2.txt">Improve this doc</a></span>
 <h4><code>DMY()</code></h4>
-<div class="d-ol">Returns the date as a string in DD Month YY format</div>
+<div class="d-ol">Returns the date as a string in <code>DD Month YY</code> format</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>DMY( [&lt;dDate&gt;][, &lt;lMode&gt;] ) → cDateString</code></div>
+<code>DMY( [&lt;dDate&gt;][, &lt;lMode&gt;] ) → &lt;cDateString&gt;</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">Returns the date as a string in DD Month YY format. If lmode is <code>TRUE</code>, a &quot;.&quot; is inserted after the DD TODO: add further documentation</div>
+<div class="d-it">
+  <div><p>Returns the date as a string in <code>DD Month YY</code> format. If <code>lMode</code> is <code>TRUE</code>, a &quot;.&quot; is inserted after the <code>DD</code>.</div>
+  <div><p>TODO: add further documentation</div>
+</div>
 <div class="d-d">Status</div>
 <div class="d-it">Started</div>
 <div class="d-d">Compliance</div>
@@ -407,9 +410,12 @@ Harbour Reference Guide</a></div>
 <div class="d-ol">Determines the day of the year for a specific date</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>DMY( [&lt;dDate&gt;] ) → nDayOfYear</code></div>
+<code>DMY( [&lt;dDate&gt;] ) → &lt;nDayOfYear&gt;</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">Determines the day of the year for a specific date if dDate is invalid, returns 0 TODO: add further documentation</div>
+<div class="d-it">
+  <div><p>Determines the day of the year for a specific date if <code>dDate</code> is invalid, returns 0.</div>
+  <div><p>TODO: add further documentation</div>
+</div>
 <div class="d-d">Status</div>
 <div class="d-it">Started</div>
 <div class="d-d">Compliance</div>
@@ -497,7 +503,7 @@ Harbour Reference Guide</a></div>
 <div class="d-ol">determines of year of date is a leap year</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>IsLeap( [&lt;dDate&gt;] ) → lIsLeap</code></div>
+<code>IsLeap( [&lt;dDate&gt;] ) → &lt;lIsLeap&gt;</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">TODO: add further documentation</div>
 <div class="d-d">Status</div>
@@ -518,9 +524,12 @@ Harbour Reference Guide</a></div>
 <div class="d-ol">Returns the the number of days in the month.</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>LastDayOM( [&lt;dDate|nMonth&gt;] ) → nDaysInMonth</code></div>
+<code>LastDayOM( [&lt;dDate|nMonth&gt;] ) → &lt;nDaysInMonth&gt;</code></div>
 <div class="d-d">Description</div>
-<div class="d-it"><code>dDate|nMonth</code> can be a date or a month number. If empty uses the system date.  If nMonth is a 2, <code><a href="#lastdayom">LastDayOM()</a></code> will not know if it is a leap year or not. If dDate is invalid, returns 0 TODO: add further documentation</div>
+<div class="d-it">
+  <div><p><code>dDate|nMonth</code> can be a date or a month number. If empty uses the system date.  If <code>nMonth</code> is a 2, <code><a href="#lastdayom">LastDayOM()</a></code> will not know if it is a leap year or not. If <code>dDate</code> is invalid, returns 0</div>
+  <div><p>TODO: add further documentation</div>
+</div>
 <div class="d-d">Status</div>
 <div class="d-it">Started</div>
 <div class="d-d">Compliance</div>
@@ -538,12 +547,15 @@ Harbour Reference Guide</a></div>
 <section id="mdy" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbct/doc/en/dattime2.txt">Improve this doc</a></span>
 <h4><code>MDY()</code></h4>
-<div class="d-ol">Returns the date as a string in Month DD, YY or Month DD, YYYY</div>
+<div class="d-ol">Returns the date as a string in <code>Month DD, YY</code> or <code>Month DD, YYYY</code></div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>MDY( [&lt;dDate&gt;] ) → cDateString</code></div>
+<code>MDY( [&lt;dDate&gt;] ) → &lt;cDateString&gt;</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">Returns the date as a string in Month DD, YY or Month DD, <code>YYYY</code> If dDate is <code>NULL</code>, the system date is used TODO: add further documentation</div>
+<div class="d-it">
+  <div><p>Returns the date as a string in <code>Month DD, YY</code> or <code>Month DD, <code>YYYY</code></code> If <code>dDate</code> is <code>NULL</code>, the system date is used.</div>
+  <div><p>TODO: add further documentation</div>
+</div>
 <div class="d-d">Status</div>
 <div class="d-it">Started</div>
 <div class="d-d">Compliance</div>
@@ -564,7 +576,7 @@ Harbour Reference Guide</a></div>
 <div class="d-ol">(num of day) → day name</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>NToCDoW( &lt;nDay&gt; ) → cDay</code></div>
+<code>NToCDoW( &lt;nDay&gt; ) → &lt;cDay&gt;</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">TODO: add documentation</div>
 <div class="d-d">Status</div>
@@ -587,7 +599,7 @@ Harbour Reference Guide</a></div>
 <div class="d-ol">(num of month ) → Month Name</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>NToCMonth( &lt;nMonth&gt; ) → cMonth</code></div>
+<code>NToCMonth( &lt;nMonth&gt; ) → &lt;cMonth&gt;</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">TODO: add documentation</div>
 <div class="d-d">Status</div>
@@ -610,9 +622,12 @@ Harbour Reference Guide</a></div>
 <div class="d-ol">Returns a number equal to the quarter in which a date falls</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>Quarter( [&lt;dDate&gt;] ) → nQuarter</code></div>
+<code>Quarter( [&lt;dDate&gt;] ) → &lt;nQuarter&gt;</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">Returns a number equal to the quarter in which ddate falls. If ddate  is empty, the system date is employed. TODO: add further documentation</div>
+<div class="d-it">
+  <div><p>Returns a number equal to the quarter in which <code>dDate</code> falls. If <code>dDate</code> is empty, the system date is employed.</div>
+  <div><p>TODO: add further documentation</div>
+</div>
 <div class="d-d">Status</div>
 <div class="d-it">Started</div>
 <div class="d-d">Compliance</div>
@@ -635,12 +650,12 @@ Harbour Reference Guide</a></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>dDate</code>  Designates which date to use to set the system date.</div>
-  <div><code>lMode</code>  Designates whether the date should also be set in the <code>CMOS</code>- RAM of an AT.  The default is do not write (<code>.F.</code>). Note that in Windows platform this adjust is automatic, therefore this parameter is without effect.</div>
+  <div><code>lMode</code>  Designates whether the date should also be set in the CMOS-RAM of an AT. The default is do not write (<code>.F.</code>). Note that in Windows platform this adjust is automatic, therefore this parameter is without effect.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code><a href="#setdate_001">SetDate()</a></code> <code>RETURN</code>s <code>.T.</code> when the date is successfully set.</div>
+<div class="d-it"><code><a href="#setdate_001">SetDate()</a></code> returns <code>.T.</code> when the date is successfully set.</div>
 <div class="d-d">Description</div>
-<div class="d-it">When you use this <code>FUNCTION</code> to set the system date from within your application, all files acquire this date with each write procedure.</div>
+<div class="d-it">When you use this function to set the system date from within your application, all files acquire this date with each write procedure.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 // Set the system date in each case; but the hardware clock only
@@ -653,7 +668,7 @@ ELSE
    SetDate( dNewDate )
 ENDIF
 
-Or, more compactly:
+// Or, more compactly:
 
 SetDate( dNewDate, IsAt() )
 </pre>
@@ -684,12 +699,12 @@ SetDate( dNewDate, IsAt() )
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>cTime</code>  Designates a character string that contains the time that is to become the system time.</div>
-  <div><code>lMode</code>  Designates whether the time should also be set in the <code>CMOS</code>-RAM of an AT.  The default is do not write to <code>CMOS</code>-RAM. Note that in Windows platform this adjust is automatic, therefore this parameter is without effect.</div>
+  <div><code>lMode</code>  Designates whether the time should also be set in the CMOS-RAM of an AT.  The default is do not write to CMOS-RAM. Note that in Windows platform this adjust is automatic, therefore this parameter is without effect.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">The <code>FUNCTION</code> <code>RETURN</code>s <code>.T.</code> when the time is set successfully.</div>
+<div class="d-it">The function returns <code>.T.</code> when the time is set successfully.</div>
 <div class="d-d">Description</div>
-<div class="d-it">When you use this <code>FUNCTION</code> to convert the time into the system time from within your application, all files acquire this time with each write procedure.</div>
+<div class="d-it">When you use this function to convert the time into the system time from within your application, all files acquire this time with each write procedure.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 // Set the system time in each case; but the hardware clock only
@@ -702,7 +717,7 @@ ELSE
    SetTime( cNewTime )
 ENDIF
 
-Or, more compactly:
+// Or, more compactly:
 
 SetTime( cNewTime, IsAt() )
 </pre>
@@ -726,24 +741,24 @@ SetTime( cNewTime, IsAt() )
 <section id="timevalid" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbct/doc/en/dattime3.txt">Improve this doc</a></span>
 <h4><code>TimeValid()</code></h4>
-<div class="d-ol">Determines whether a specIFied time is valid</div>
+<div class="d-ol">Determines whether a specified time is valid</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>TimeValid( &lt;cTime&gt; ) → lValid</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>cTime</code>  Designates a character string that contains the time to test.</div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code><a href="#timevalid">TimeValid()</a></code> <code>RETURN</code>s <code>.T.</code> when <code>cTime</code> is a valid time; or <code>.F.</code> when <code>cTime</code> is an invalid time.</div>
+<div class="d-it"><code><a href="#timevalid">TimeValid()</a></code> returns <code>.T.</code> when <code>cTime</code> is a valid time; or <code>.F.</code> when <code>cTime</code> is an invalid time.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>With input that requires time manipulation, writing your own UDF to check time inputs was unavoidable up to now.  <code><a href="#timevalid">TimeValid()</a></code> permits Complete checking of a time designation.  You can use this <code>FUNCTION</code> effectively with a <code>VALID</code> clause within a <code>READ</code> mask.</div>
+  <div><p>With input that requires time manipulation, writing your own UDF to check time inputs was unavoidable up to now. <code><a href="#timevalid">TimeValid()</a></code> permits Complete checking of a time designation.  You can use this function effectively with a <code>VALID</code> clause within a <code>READ</code> mask.</div>
   <div><p>Note</div>
-  <div><p>Note the format for time designations.  There must always be two digits for hours, minutes, seconds, and hundredths; otherwise, the time it is regarded as invalid.  Valid examples are &quot;12&quot;, &quot;12:59&quot;, &quot;12:59:59&quot;, and &quot;12:59:59:99&quot;.  By contrast, invalid examples are &quot;24&quot;, &quot;12:60&quot;, or &quot;12:1&quot;, and/or &quot;12:&quot;.  IF you work with time strings that are not completely filled and that you need to check with <code><a href="#timevalid">TimeValid()</a></code>, then they must be <code>TRIM</code>med prior to the use of <code><a href="#timevalid">TimeValid()</a></code> (see following Examples).</div>
+  <div><p>Note the format for time designations.  There must always be two digits for hours, minutes, seconds, and hundredths; otherwise, the time it is regarded as invalid.  Valid examples are <code>&quot;12&quot;</code>, <code>&quot;12:59&quot;</code>, <code>&quot;12:59:59&quot;</code>, and <code>&quot;12:59:59:99&quot;</code>.  By contrast, invalid examples are <code>&quot;24&quot;</code>, <code>&quot;12:60&quot;</code>, or <code>&quot;12:1&quot;</code>, and/or <code>&quot;12:&quot;</code>. If you work with time strings that are not completely filled and that you need to check with <code><a href="#timevalid">TimeValid()</a></code>, then they must be <code><a href="harbour.html#rtrim">RTrim()</a></code>-med prior to the use of <code><a href="#timevalid">TimeValid()</a></code> (see following Examples).</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-// Using the VALID clause with TRIM, all valid times are
-// accepted, even IF no seconds or minutes are specIFied:
+// Using the VALID clause with RTrim(), all valid times are
+// accepted, even if no seconds or minutes are specified:
 
 cBegin := Space( 11 )
 @ 5, 10 SAY &quot;Please input time for beginning work:&quot;;
@@ -754,7 +769,7 @@ READ
 // specified, so that TimeValid() can confirm a valid time:
 
 cBegin := Space( 5 )
-@ 5, 10 SAY &quot;Please input time for beginning work:&quot;;
+@ 5, 10 SAY &quot;Please input time for beginning work:&quot; ;
    GET cBegin VALID TimeValid( cBegin )
 READ
 </pre>
@@ -785,9 +800,9 @@ READ
 <div class="d-it"><code><a href="#waitperiod">WaitPeriod()</a></code> returns <code>.T.</code>, if the time span designated at initialization has not elapsed.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function sets a time span for a <code>DO</code> <code>WHILE</code> loop to run. The function must initialize prior to the loop, since you must specify the <code>nDelay</code> parameter in 1/100th seconds.  Subsequently, the function can be implemented without a parameter for additional loop conditions. It returns <code>.T.</code>, as long as the designated time span has not yet run out.</div>
-  <div><p>Note</div>
-  <div><p>The function notes the status of the internal timer at initialization.  From that point on, the initialization should always precede the respective <code>DO</code> <code>WHILE</code>; otherwise, the time delay is incorrect.  The passing of midnight (the time resets to the 0 value) is taken into account.</div>
+  <div><p>This function sets a time span for a <code>DO <code>WHILE</code></code> loop to run. The function must initialize prior to the loop, since you must specify the <code>nDelay</code> parameter in 1/100th seconds.  Subsequently, the function can be implemented without a parameter for additional loop conditions. It returns <code>.T.</code>, as long as the designated time span has not yet run out.</div>
+  <div><p>Note:</div>
+  <div><p>The function notes the status of the internal timer at initialization.  From that point on, the initialization should always precede the respective <code>DO <code>WHILE</code></code>; otherwise, the time delay is incorrect.  The passing of midnight (the time resets to the 0 value) is taken into account.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -816,14 +831,16 @@ ENDDO
 <div class="d-ol">Returns the calendar week a number</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<code>Week( [&lt;dDate&gt;][, &lt;lSWN&gt;] ) → nWeek</code></div>
+<code>Week( [&lt;dDate&gt;][, &lt;lSWN&gt;] ) → &lt;nWeek&gt;</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>Returns the calendar week a number. If no date is specified, the system date is used. An empty date via hb_SToD(&quot;&quot;) returns 0. If <code>lSWN</code> is <code>.T.</code>, <code><a href="#week">Week()</a></code> will calculate the &quot;simple week number&quot;, defined by</div>
+  <div><p>Returns the calendar week a number. If no date is specified, the system date is used. An empty date via <code><a href="harbour.html#hb_stod">hb_SToD()</a></code> returns 0.</div>
+  <div><p>If <code>lSWN</code> is <code>.T.</code>, <code><a href="#week">Week()</a></code> will calculate the &quot;simple week number&quot;, defined by</div>
   <div><p>- week #1 starts on January, 1st - week #(n+1) starts seven days after start of week #n</div>
-  <div><p>If <code>lSWN</code> is <code>.F.</code> (default), the <code>ISO8601</code> week number, defined by</div>
+  <div><p>If <code>lSWN</code> is <code>.F.</code> (default), the ISO 8601 week number, defined by</div>
   <div><p>- weeks start on mondays - week #1 is the one that includes January, 4</div>
-  <div><p>will be calculated TODO: add further documentation</div>
+  <div><p>will be calculated</div>
+  <div><p>TODO: add further documentation</div>
 </div>
 <div class="d-d">Status</div>
 <div class="d-it">Started</div>
@@ -850,8 +867,14 @@ ENDDO
 <div class="d-it"><code>nOldMode</code>     The current or old argument error throwing mode.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>All CT3 functions are very compliant in their reaction to wrong parameters. By using the <code><a href="#csetargerr">CSetArgErr()</a></code> function, you can make the library throw an error with the severity <code>nNewMode</code>. It is then up to the error handler to substitute the return value. <code>nNewMode</code> can be one of the severity modes defined in <code><a href="https://github.com/vszakats/harbour-core/blob/4c3d075/contrib/hbct/ct.ch">ct.ch</a></code>:</div>
-  <div><p><code>CT_ARGERR_WHOCARES</code>      corresponds to <code>ES_WHOCARES</code> <code>CT_ARGERR_WARNING</code>       corresponds to <code>ES_WARNING</code> <code>CT_ARGERR_ERROR</code>         corresponds to <code>ES_ERROR</code> <code>CT_ARGERR_CATASTROPHIC</code>  corresponds to <code>ES_CATASTROPHIC</code> <code>CT_ARGERR_IGNORE</code></div>
+  <div><p>All CT3 functions are very compliant in their reaction to wrong parameters. By using the <code><a href="#csetargerr">CSetArgErr()</a></code> function, you can make the library throw an error with the severity <code>nNewMode</code>. It is then up to the error handler to substitute the return value. <code>nNewMode</code> can be one of the severity modes defined in <code><a href="https://github.com/vszakats/harbour-core/blob/2a6b0fd/contrib/hbct/ct.ch">ct.ch</a></code>:</div>
+  <div class="d-t d-t0">
+  <div> CT_ARGERR_WHOCARES      corresponds to ES_WHOCARES</div>
+  <div> CT_ARGERR_WARNING       corresponds to ES_WARNING</div>
+  <div> CT_ARGERR_ERROR         corresponds to ES_ERROR</div>
+  <div> CT_ARGERR_CATASTROPHIC  corresponds to ES_CATASTROPHIC</div>
+  <div> CT_ARGERR_IGNORE</div>
+</div>
   <div><p>The last is the default behaviour and switches any argument error throwing off.</div>
 </div>
 <div class="d-d">Status</div>
@@ -878,11 +901,11 @@ ENDDO
 <div class="d-d">Returns</div>
 <div class="d-it"><code>nRadiant</code>      the angle whose cosine is <code>nCosine</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">The function <code><a href="#acos">Acos()</a></code> is the inverse function of <code><a href="#cos">Cos()</a></code>. It takes a cosine value and returns the smallest(!) angle whose cosine equals to the argument. The return value is given in radiants (full angle equals 2*Pi - see <code><a href="#dtor">DToR()</a></code> if you need to convert it into degress). Note, that <code>nCosine</code> must be between -1 and 1 and that <code>nRadiant</code> is always between 0 and <code><a href="#pi">Pi()</a></code>.</div>
+<div class="d-it">The function <code><a href="#acos">Acos()</a></code> is the inverse function of <code><a href="#cos">Cos()</a></code>. It takes a cosine value and returns the smallest(!) angle whose cosine equals to the argument. The return value is given in radiants (full angle equals <code>2 * <code><a href="#pi">Pi()</a></code></code> - see <code><a href="#dtor">DToR()</a></code> if you need to convert it into degrees). Note, that <code>nCosine</code> must be between -1 and 1 and that <code>nRadiant</code> is always between 0 and <code><a href="#pi">Pi()</a></code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-? Acos( 0.0 ) // --&gt; Pi() / 2
-? Acos( 0.5 ) // --&gt; 1.04719...
+? Acos( 0.0 )  // --&gt; Pi() / 2
+? Acos( 0.5 )  // --&gt; 1.04719...
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -910,7 +933,7 @@ ENDDO
 <div class="d-d">Returns</div>
 <div class="d-it"><code>nRadiant</code>      the angle whose sine is <code>nSine</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">The function <code><a href="#asin">Asin()</a></code> is the inverse function of <code><a href="#sin">Sin()</a></code>. It takes a sine value and returns the smallest(!) angle whose sine equals to the argument. The return value is given in radiants (full angle equals 2*Pi - see <code><a href="#dtor">DToR()</a></code> if you need to convert it into degress). Note, that <code>nSine</code> must be between -1 and 1 and that <code>nRadiant</code> is always between -<code><a href="#pi">Pi()</a></code>/2 and <code><a href="#pi">Pi()</a></code>/2.</div>
+<div class="d-it">The function <code><a href="#asin">Asin()</a></code> is the inverse function of <code><a href="#sin">Sin()</a></code>. It takes a sine value and returns the smallest(!) angle whose sine equals to the argument. The return value is given in radiants (full angle equals <code>2 * <code><a href="#pi">Pi()</a></code></code> - see <code><a href="#dtor">DToR()</a></code> if you need to convert it into degrees). Note, that <code>nSine</code> must be between -1 and 1 and that <code>nRadiant</code> is always between <code>-<code><a href="#pi">Pi()</a></code> / 2</code> and <code><code><a href="#pi">Pi()</a></code> / 2</code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? Asin( 0.0 ) // --&gt; 0.0
@@ -942,7 +965,7 @@ ENDDO
 <div class="d-d">Returns</div>
 <div class="d-it"><code>nRadiant</code>      the angle whose tangent is <code>nTangent</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">The function <code><a href="#atan">Atan()</a></code> is the inverse function of <code><a href="#tan">Tan()</a></code>. It takes a tangent value and returns the smallest(!) angle whose tangent equals to the argument. The return value is given in radiants between -<code><a href="#pi">Pi()</a></code>/2 and <code><a href="#pi">Pi()</a></code>/2 (full angle equals 2*Pi - see <code><a href="#dtor">DToR()</a></code> if you need to convert it into degress).</div>
+<div class="d-it">The function <code><a href="#atan">Atan()</a></code> is the inverse function of <code><a href="#tan">Tan()</a></code>. It takes a tangent value and returns the smallest(!) angle whose tangent equals to the argument. The return value is given in radiants between <code>-<code><a href="#pi">Pi()</a></code> / 2</code> and <code><code><a href="#pi">Pi()</a></code> / 2</code> (full angle equals <code>2 * <code><a href="#pi">Pi()</a></code></code> - see <code><a href="#dtor">DToR()</a></code> if you need to convert it into degrees).</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? Atan( 0.0 ) // --&gt; 0.0
@@ -974,7 +997,7 @@ ENDDO
 <div class="d-d">Returns</div>
 <div class="d-it"><code>nRadiant</code>      the angle whose tangent is <code>nSine</code>/<code>nCosine</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">The function <code><a href="#atn2">Atn2()</a></code> is an alternate function for calculating the arcus tangent, Atn2(x,y) = Atan(x/y). It takes two arguments, the sine and the cosine of the angle that should be calculated. Thus, in contrast to the <code><a href="#atan">Atan()</a></code> function, <code><a href="#atn2">Atn2()</a></code> can distinguish whether the sine or the cosine has a negative sign (or both being positive or negative), so that the return value can be between -<code><a href="#pi">Pi()</a></code> and <code><a href="#pi">Pi()</a></code> and covers the full angle. The return value is given in radiants (full angle equals 2*Pi - see <code><a href="#dtor">DToR()</a></code> if you need to convert it into degress).</div>
+<div class="d-it">The function <code><a href="#atn2">Atn2()</a></code> is an alternate function for calculating the arcus tangent, <code>Atn2( x, y )</code> = <code>Atan( x / y)</code>. It takes two arguments, the sine and the cosine of the angle that should be calculated. Thus, in contrast to the <code><a href="#atan">Atan()</a></code> function, <code><a href="#atn2">Atn2()</a></code> can distinguish whether the sine or the cosine has a negative sign (or both being positive or negative), so that the return value can be between <code>-<code><a href="#pi">Pi()</a></code></code> and <code><a href="#pi">Pi()</a></code> and covers the full angle. The return value is given in radiants (full angle equals <code>2 * <code><a href="#pi">Pi()</a></code></code> - see <code><a href="#dtor">DToR()</a></code> if you need to convert it into degrees).</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? Atn2( 0.0, 1.0 ) // --&gt; 0.0
@@ -1038,7 +1061,7 @@ ENDDO
 <div class="d-d">Returns</div>
 <div class="d-it"><code>nCosine</code>        the cosine of <code>nRadiant</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">The function <code><a href="#cos">Cos()</a></code> calculates the cosine of an angle whose size is given in radiants (full angle equals 2*Pi - see <code><a href="#dtor">DToR()</a></code> for angle size given in degress). A common geometric interpretation of the <code><a href="#cos">Cos()</a></code> function is the ankathede-hypotenuse-ratio of a right-angled triangle.</div>
+<div class="d-it">The function <code><a href="#cos">Cos()</a></code> calculates the cosine of an angle whose size is given in radiants (full angle equals <code>2 * <code><a href="#pi">Pi()</a></code></code> - see <code><a href="#dtor">DToR()</a></code> for angle size given in degrees). A common geometric interpretation of the <code><a href="#cos">Cos()</a></code> function is the ankathede-hypotenuse-ratio of a right-angled triangle.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? Cos( 0.0 ) // --&gt; 1.0
@@ -1102,7 +1125,7 @@ ENDDO
 <div class="d-d">Returns</div>
 <div class="d-it"><code>nCotangent</code>     the cotangent of <code>nRadiant</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">The function <code><a href="#cot">Cot()</a></code> calculates the cotangent of an angle whose size is given in radiants (full angle equals 2*Pi - see <code><a href="#dtor">DToR()</a></code> for angle size given in degress). A common geometric interpretation of the <code><a href="#cot">Cot()</a></code> function is the ankathede-counterkathede-ratio of a right-angled triangle, or, Cot(x) = Cos(x)/Sin(x)=1/Tan(x).</div>
+<div class="d-it">The function <code><a href="#cot">Cot()</a></code> calculates the cotangent of an angle whose size is given in radiants (full angle equals <code>2 * <code><a href="#pi">Pi()</a></code></code> - see <code><a href="#dtor">DToR()</a></code> for angle size given in degrees). A common geometric interpretation of the <code><a href="#cot">Cot()</a></code> function is the ankathede-counterkathede-ratio of a right-angled triangle, or, <code>Cot( x )</code> = <code>Cos( x ) / Sin( x )</code> = <code>1 / Tan( x )</code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? Cot( 1.0 ) // --&gt; 0.6420...
@@ -1615,7 +1638,7 @@ ENDDO
 <div class="d-d">Returns</div>
 <div class="d-it"><code>nSine</code>          the sine of <code>nRadiant</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">The function <code><a href="#sin">Sin()</a></code> calculates the sine of an angle whose size is given in radiants (full angle equals 2*Pi - see <code><a href="#dtor">DToR()</a></code> for angle size given in degress). A common geometric interpretation of the <code><a href="#sin">Sin()</a></code> function is the counterkathede-hypotenuse-ratio of a right-angled triangle.</div>
+<div class="d-it">The function <code><a href="#sin">Sin()</a></code> calculates the sine of an angle whose size is given in radiants (full angle equals <code>2 * <code><a href="#pi">Pi()</a></code></code> - see <code><a href="#dtor">DToR()</a></code> for angle size given in degrees). A common geometric interpretation of the <code><a href="#sin">Sin()</a></code> function is the counterkathede-hypotenuse-ratio of a right-angled triangle.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? Sin( 0.0 ) // --&gt; 0.0
@@ -1679,7 +1702,7 @@ ENDDO
 <div class="d-d">Returns</div>
 <div class="d-it"><code>nTangent</code>       the tangent of <code>nRadiant</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">The function <code><a href="#tan">Tan()</a></code> calculates the tangent of an angle whose size is given in radiants (full angle equals 2*Pi - see <code><a href="#dtor">DToR()</a></code> for angle size given in degress). A common geometric interpretation of the <code><a href="#tan">Tan()</a></code> function is the counterkathede-ankathede-ratio of a right-angled triangle, or, Tan(x) = Sin(x)/Cos(x).</div>
+<div class="d-it">The function <code><a href="#tan">Tan()</a></code> calculates the tangent of an angle whose size is given in radiants (full angle equals <code>2 * <code><a href="#pi">Pi()</a></code></code> - see <code><a href="#dtor">DToR()</a></code> for angle size given in degrees). A common geometric interpretation of the <code><a href="#tan">Tan()</a></code> function is the counterkathede-ankathede-ratio of a right-angled triangle, or, <code>Tan( x )</code> = <code>Sin( x ) / Cos( x )</code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 ? Tan( 0.0 ) // --&gt; 0.0
@@ -1741,13 +1764,19 @@ XToC( &lt;expValue&gt; ) → cValue
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>expValue</code> Designate an expression of some of the following data type: <code>NUMBER</code>, <code>CHARACTER</code>, <code>DATE</code>, <code>LOGICAL</code>.</div>
+<div class="d-it"><code>expValue</code> Designate an expression of some of the following data type: NUMBER, CHARACTER, DATE, LOGICAL.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code><a href="#xtoc">XToC()</a></code> return a string with the representation of data type of expValue.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Each data type always returns a string with a particular fixed length:</div>
-  <div><p><hr>Data Type    Result Length      Similar function <hr>Numeric      sizeof( <code>DOUBLE</code> )   <code><a href="#ftoc">FToC()</a></code> Logical      1 Date         8                  <code><a href="harbour.html#dtos">DToS()</a></code> String       Unchanged <hr></div>
+  <div class="d-t d-t1">
+  <div> Data Type    Result Length      Similar function</div>
+  <div> Numeric      sizeof( DOUBLE )   FToC()</div>
+  <div> Logical      1</div>
+  <div> Date         8                  DToS()</div>
+  <div> String       Unchanged</div>
+</div>
   <div><p>TODO: add documentation</div>
 </div>
 <div class="d-d">Status</div>
@@ -1812,7 +1841,7 @@ CToF( &lt;cFloatingPointNumber&gt; ) → nFloatingPointNumber
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>cFloatingPointNumber</code> Designate a string that contains a Harbour number in flotaing point format. <code>ATTENTION</code>: different implementations or platforms of Harbour, they could produce different format in the string returned by <code><a href="#ftoc">FToC()</a></code>.</div>
+<div class="d-it"><code>cFloatingPointNumber</code> Designate a string that contains a Harbour number in flotaing point format. ATTENTION: different implementations or platforms of Harbour, they could produce different format in the string returned by <code><a href="#ftoc">FToC()</a></code>.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code><a href="#ctof">CToF()</a></code> return the floating point number that corresponds to the string passed.</div>
 <div class="d-d">Description</div>
@@ -1868,10 +1897,12 @@ CToF( &lt;cFloatingPointNumber&gt; ) → nFloatingPointNumber
   <div><p>This function supplements <code><a href="#mantissa">Mantissa()</a></code> to return the exponent of the <code>nFloatingPointNumber</code> number.</div>
   <div><p>Values &gt; 1 or values ` -1 return a positive number 0 to 1023.</div>
   <div><p>Values <code> 1 or values </code> -1 return a negative number -1 to -1023.</div>
-  <div><p>The Exponent( 0 ), return 0.</div>
+  <div><p>The <code>Exponent( 0 )</code>, return 0.</div>
   <div><p>The following calculation reproduces the original value:</div>
-  <div><p>2^Exponent(<code>nFloatingPointNumber</code>) * Mantissa(<code>nFloatingPointNumber</code>) = <code>nFloatingPointNumber</code></div>
-  <div><p>TODO: add documentation</div>
+<pre>
+? 2 ^ Exponent( &lt;nFloatingPointNumber&gt; ) * Mantissa( &lt;nFloatingPointNumber&gt; )  // -&gt; &lt;nFloatingPointNumber&gt;
+</pre>
+  <div><p> TODO: add documentation</div>
 </div>
 <div class="d-d">Status</div>
 <div class="d-it">Started</div>
@@ -1899,10 +1930,10 @@ FToC( &lt;nFloatingPointNumber&gt; ) → cFloatingPointNumber
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>nFloatingPointNumber</code> Designate any Harbour number.</div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code><a href="#ftoc">FToC()</a></code> return a string with the size of <code>DOUBLE</code>. <code>ATTENTION</code>: different implementations or platforms of Harbour, they could produce different format in the string returned by <code><a href="#ftoc">FToC()</a></code>.</div>
+<div class="d-it"><code><a href="#ftoc">FToC()</a></code> return a string with the size of DOUBLE. ATTENTION: different implementations or platforms of Harbour, they could produce different format in the string returned by <code><a href="#ftoc">FToC()</a></code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>Harbour internal numbers in Floating Point are stored in data type <code>DOUBLE</code>. <code><a href="#ftoc">FToC()</a></code> returns these bits as an string. In this way, numbers con be saved more compactly.</div>
+  <div><p>Harbour internal numbers in Floating Point are stored in data type DOUBLE. <code><a href="#ftoc">FToC()</a></code> returns these bits as an string. In this way, numbers con be saved more compactly.</div>
   <div><p>TODO: add documentation</div>
 </div>
 <div class="d-d">Status</div>
@@ -1933,8 +1964,10 @@ FToC( &lt;nFloatingPointNumber&gt; ) → cFloatingPointNumber
   <div><p>This function supplements <code><a href="#exponent">Exponent()</a></code> to return the mantissa of the <code>nFloatingPointNumber</code> number.</div>
   <div><p>Note:  The mantissa value can be 0 or in the range of 1 to 2.</div>
   <div><p>The following calculation reproduces the original value:</div>
-  <div><p>Mantissa( <code>nFloatingPointNumber</code> ) * 2 ^ Exponent( <code>nFloatingPointNumber</code> ) = <code>nFloatingPointNumber</code></div>
-  <div><p>TODO: add documentation</div>
+<pre>
+? Mantissa( &lt;nFloatingPointNumber&gt; ) * 2 ^ Exponent( &lt;nFloatingPointNumber&gt; )  // -&gt; &lt;nFloatingPointNumber&gt;
+</pre>
+  <div><p> TODO: add documentation</div>
 </div>
 <div class="d-d">Status</div>
 <div class="d-it">Started</div>
@@ -2048,7 +2081,7 @@ FToC( &lt;nFloatingPointNumber&gt; ) → cFloatingPointNumber
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div>[<code>lPlatformIndependant</code>]   <code>.T.</code>, if the function should return</div>
-  <div>the maximum floating point value available (DBL_MAX) <code>.F.</code>, function should try to return the same value as the original CT3 lib did Default: <code>.F.</code></div>
+  <div>the maximum floating point value available (<code>DBL_MAX</code>) <code>.F.</code>, function should try to return the same value as the original CT3 lib did Default: <code>.F.</code></div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>nLargestNumber</code>     the largest floating point number available in the system</div>
@@ -2416,10 +2449,10 @@ AtToken( &lt;cString&gt;, [&lt;cTokenizer&gt;],
   <div>0 if such a token does not exist in <code>cString</code>.</div>
 </div>
 <div class="d-d">Description</div>
-<div class="d-it">The <code><a href="#attoken">AtToken()</a></code> function calculates the start position of tne <code>nTokenCount</code>th token in <code>cString</code>. By setting the new <code>nSkipWidth</code> parameter to a value different than 0, you can specify how many tokenizing characters are combined at most to one token stop. Be aware that this can result to empty tokens there the start position is not defined clearly. Then, <code><a href="#attoken">AtToken()</a></code> returns the position there the token <code>WOULD</code> start if its length is larger than 0. To check for empty tokens, simply look if the character at the returned position is within the tokenizer list.</div>
+<div class="d-it">The <code><a href="#attoken">AtToken()</a></code> function calculates the start position of tne <code>nTokenCount</code>th token in <code>cString</code>. By setting the new <code>nSkipWidth</code> parameter to a value different than 0, you can specify how many tokenizing characters are combined at most to one token stop. Be aware that this can result to empty tokens there the start position is not defined clearly. Then, <code><a href="#attoken">AtToken()</a></code> returns the position there the token <i>would</i> start if its length is larger than 0. To check for empty tokens, simply look if the character at the returned position is within the tokenizer list.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-AtToken( &quot;Hello, World!&quot; ) // --&gt; 8 (empty strings after tokenizer are not a token !)
+AtToken( &quot;Hello, World!&quot; )  // --&gt; 8 (empty strings after tokenizer are not a token !)
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -4169,7 +4202,7 @@ RangeRepl( &lt;cChar1|nChar1&gt;, &lt;cChar2|nChar2&gt;,
   <div><p>In the following CT3 functions, strings are compared on a character base:</div>
   <div><p><code><a href="#atadjust">AtAdjust()</a></code>    <code><a href="#atnum">AtNum()</a></code>    <code><a href="#afteratnum">AfterAtNum()</a></code> <code><a href="#beforatnum">BeforAtNum()</a></code>  <code><a href="#atrepl">AtRepl()</a></code>   <code><a href="#numat">NumAt()</a></code> <code><a href="#strdiff">StrDiff()</a></code></div>
   <div><p>With the <code><a href="#setatlike">SetAtLike()</a></code> function, one can determine when characters are considered to match within these functions. If <code>CT_SETATLIKE_WILDCARD</code> is set (e.g. &quot;?&quot;), then &quot;?&quot; matches every other character.</div>
-  <div><p><code>nMode</code> can be one of the following values that are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/4c3d075/contrib/hbct/ct.ch">ct.ch</a></code>:</div>
+  <div><p><code>nMode</code> can be one of the following values that are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/2a6b0fd/contrib/hbct/ct.ch">ct.ch</a></code>:</div>
   <div><p><code>CT_SETATLIKE_EXACT</code> <code>CT_SETATLIKE_WILDCARD</code></div>
 </div>
 <div class="d-d">Status</div>
@@ -4179,7 +4212,7 @@ RangeRepl( &lt;cChar1|nChar1&gt;, &lt;cChar2|nChar2&gt;,
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header is <code><a href="https://github.com/vszakats/harbour-core/blob/4c3d075/contrib/hbct/ct.ch">ct.ch</a></code>, library is hbct.</div>
+<div class="d-it">Header is <code><a href="https://github.com/vszakats/harbour-core/blob/2a6b0fd/contrib/hbct/ct.ch">ct.ch</a></code>, library is hbct.</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">CT3 string functions</div>
 </section>
@@ -4581,10 +4614,10 @@ TokenLower( &lt;[@]cString&gt;, [&lt;cTokenizer&gt;], [&lt;nTokenCount&gt;],
 <div class="d-it">The <code><a href="#tokenlower">TokenLower()</a></code> function changes the first letter of tokens in <code>cString</code> to lower case. To do this, it uses the same tokenizing mechanism as the <code><a href="#token">Token()</a></code> function. If <code><a href="#tokenlower">TokenLower()</a></code> extracts a token that starts with a letter, this letter will be changed to lower case. You can omit the return value of this function by setting the <code><a href="#csetref">CSetRef()</a></code> switch to <code>.T.</code>, but you must then pass <code>cString</code> by reference to get the result.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-? TokenLower( &quot;Hello, World, here I am!&quot; )         // &quot;hello, world, here i am!&quot;
-? TokenLower( &quot;Hello, World, here I am!&quot;,, 3 )     // &quot;hello, world, here I am!&quot;
-? TokenLower( &quot;Hello, World, here I am!&quot;, &quot;,&quot;, 3 ) // &quot;hello, World, here I am!&quot;
-? TokenLower( &quot;Hello, World, here I am!&quot;, &quot; W&quot; )   // &quot;hello, World, here i am!&quot;
+? TokenLower( &quot;Hello, World, here I am!&quot; )          // &quot;hello, world, here i am!&quot;
+? TokenLower( &quot;Hello, World, here I am!&quot;,, 3 )      // &quot;hello, world, here I am!&quot;
+? TokenLower( &quot;Hello, World, here I am!&quot;, &quot;,&quot;, 3 )  // &quot;hello, World, here I am!&quot;
+? TokenLower( &quot;Hello, World, here I am!&quot;, &quot; W&quot; )    // &quot;hello, World, here i am!&quot;
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -5594,6 +5627,6 @@ VGAPalette( [&lt;cColor|nColor&gt;, [&lt;nRedValue&gt;, &lt;nGreenValue&gt;,
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-02 19:48 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/4c3d075">4c3d075</a></div>
+<div>Generated by hbdoc on 2016-11-03 02:15 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/2a6b0fd">2a6b0fd</a></div>
 </footer>

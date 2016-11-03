@@ -157,7 +157,7 @@ hb_SetBuffer( 100000, 115214, 65242 )
 <div class="d-it">It always returns True</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function will set a codeblock that will be evaluated every time that an changedisk event is necessary. <code>bBlock</code> receives nDisk as a codeblock param that corresponds to the diskette number to be processed.</div>
+  <div><p>This function will set a codeblock that will be evaluated every time that an changedisk event is necessary. <code>bBlock</code> receives <code>nDisk</code> as a codeblock param that corresponds to the diskette number to be processed.</div>
   <div><p>Set this function before opening archives that are in removable media. This block will be released, when the caller finish it job.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -212,7 +212,7 @@ hb_ZipFile( &quot;test.zip&quot;, { &quot;ios.ini&quot;, &quot;win.ini&quot; } )
 <div class="d-it d-sy">
 <pre>
 hb_UnzipFile( &lt;cFile&gt;, &lt;bBlock&gt;, &lt;lWithPath&gt;, &lt;cPassword&gt;, &lt;cPath&gt;,
-              &lt;cFile&gt; | &lt;aFile&gt;, &lt;pFileProgress&gt; ) → lCompress
+              &lt;cFile&gt; | &lt;aFile&gt;, &lt;pFileProgress&gt; ) → &lt;lCompress&gt;
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
@@ -230,10 +230,10 @@ hb_UnzipFile( &lt;cFile&gt;, &lt;bBlock&gt;, &lt;lWithPath&gt;, &lt;cPassword&gt
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>This function restores all files contained inside the <code>cFile</code>. If the extension is omitted, .zip will be assumed. If a file already exists, it will be overwritten.</div>
-  <div><p>If <code>bBlock</code> is used, every time the file is opened to compress it will evaluate bBlock. Parameters of bBlock are cFile and nPos.</div>
-  <div><p>The <code>cPath</code> is a mandatory parameter. Set to &quot;." to extract to the current directory</div>
-  <div><p>If <code>cFile</code> or <code>aFiles</code> are not provided, no files will be extracted! Make sure you provide the file or files you want extracted</div>
-  <div><p>If <code>pFileProgress</code> is used, a codeblock is evaluated, showing the total of that file has being processed. The codeblock must be defined as <code>{| nPos, nTotal | GaugeUpdate( aGauge1, nPos / nTotal ) }</code></div>
+  <div><p>If <code>bBlock</code> is used, every time the file is opened to compress it will evaluate <code>bBlock</code>. Parameters of <code>bBlock</code> are <code>cFile</code> and <code>nPos</code>.</div>
+  <div><p>The <code>cPath</code> is a mandatory parameter. Set to <code>./</code> to extract to the current directory.</div>
+  <div><p>If <code>cFile</code> or <code>aFiles</code> are not provided, no files will be extracted! Make sure you provide the file or files you want extracted.</div>
+  <div><p>If <code>pFileProgress</code> is used, a codeblock is evaluated, showing the total of that file has being processed. The codeblock must be defined as: <code>{| nPos, nTotal | GaugeUpdate( aGauge1, nPos / nTotal ) }</code></div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -306,7 +306,7 @@ ENDIF
 <pre>
 hb_ZipFile( &lt;cFile&gt;, &lt;cFileToCompress&gt; | &lt;aFiles&gt;, &lt;nLevel&gt;,
 &lt;bBlock&gt;, &lt;lOverWrite&gt;, &lt;cPassword&gt;, &lt;lWithPath&gt;, &lt;lWithDrive&gt;,
-&lt;pFileProgress&gt; ) → lCompress
+&lt;pFileProgress&gt; ) → &lt;lCompress&gt;
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
@@ -329,12 +329,12 @@ hb_ZipFile( &lt;cFile&gt;, &lt;cFileToCompress&gt; | &lt;aFiles&gt;, &lt;nLevel&
 <div class="d-it">
   <div><p>This function creates a zip file named <code>cFile</code>. If the extension is omitted, .zip will be assumed. If the second parameter is a character string, this file will be added to the zip file. If the second parameter is an array, all file names contained in <code>aFiles</code> will be compressed.</div>
   <div><p>If <code>nLevel</code> is used, it determines the compression type where 0 means no compression and 9 means best compression.</div>
-  <div><p>If <code>bBlock</code> is used, every time the file is opened to compress it will evaluate bBlock. Parameters of bBlock are cFile and nPos.</div>
+  <div><p>If <code>bBlock</code> is used, every time the file is opened to compress it will evaluate <code>bBlock</code>. Parameters of <code>bBlock</code> are <code>cFile</code> and <code>nPos</code>.</div>
   <div><p>If <code>lOverWrite</code> is used, it toggles to overwrite or not the existing file. Default is to overwrite the file, otherwise if <code>lOverWrite</code> is false the new files are added to the <code>cFile</code>.</div>
   <div><p>If <code>cPassword</code> is used, all files that are added to the archive are encrypted with the password.</div>
   <div><p>If <code>lWithPath</code> is used, it tells  the path should also be stored with the file name. Default is false.</div>
   <div><p>If <code>lWithDrive</code> is used, it tells thats the Drive and path should also be stored with the file name. Default is false.</div>
-  <div><p>If <code>pFileProgress</code> is used, a codeblock is evaluated, showing the total of that file has being processed. The codeblock must be defined as <code>{| nPos, nTotal | GaugeUpdate( aGauge1, nPos / nTotal ) }</code></div>
+  <div><p>If <code>pFileProgress</code> is used, a codeblock is evaluated, showing the total of that file has being processed. The codeblock must be defined as: <code>{| nPos, nTotal | GaugeUpdate( aGauge1, nPos / nTotal ) }</code></div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -377,7 +377,7 @@ hb_ZipFile( &quot;test33.zip&quot;, aFiles, 9, {| cFile, nPos | GaugeUpdate( aGa
 <pre>
 hb_ZipFileByPKSpan( &lt;cFile&gt;, &lt;cFileToCompress&gt; | &lt;aFiles&gt;, &lt;nLevel&gt;,
 &lt;bBlock&gt;, &lt;lOverWrite&gt;, &lt;cPassword&gt;, &lt;lWithPath&gt;, &lt;lWithDrive&gt;,
-&lt;pFileProgress&gt; ) → lCompress
+&lt;pFileProgress&gt; ) → &lt;lCompress&gt;
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
@@ -400,12 +400,12 @@ hb_ZipFileByPKSpan( &lt;cFile&gt;, &lt;cFileToCompress&gt; | &lt;aFiles&gt;, &lt
 <div class="d-it">
   <div><p>This function creates a zip file named <code>cFile</code>. If the extension is omitted, .zip will be assumed. If the second parameter is a character string, this file will be added to the zip file. If the second parameter is an array, all file names contained in <code>aFiles</code> will be compressed.  Also, the use of this function is for creating backup in removable media like an floppy drive/zip drive.</div>
   <div><p>If <code>nLevel</code> is used, it determines the compression type where 0 means no compression and 9 means best compression.</div>
-  <div><p>If <code>bBlock</code> is used, every time the file is opened to compress it will evaluate bBlock. Parameters of bBlock are cFile and nPos.</div>
+  <div><p>If <code>bBlock</code> is used, every time the file is opened to compress it will evaluate <code>bBlock</code>. Parameters of <code>bBlock</code> are <code>cFile</code> and <code>nPos</code>.</div>
   <div><p>If <code>lOverWrite</code> is used , it toggles to overwrite or not the existing file. Default is to overwrite the file, otherwise if <code>lOverWrite</code> is false the new files are added to the <code>cFile</code>.</div>
   <div><p>If <code>cPassword</code> is used, all files that are added to the archive are encrypted with the password.</div>
   <div><p>If <code>lWithPath</code> is used, it tells thats the path should also be stored with the file name. Default is false.</div>
   <div><p>If <code>lWithDrive</code> is used, it tells thats the Drive and path should also be stored with the file name. Default is false.</div>
-  <div><p>If <code>pFileProgress</code> is used, a codeblock is evaluated, showing the total of that file has being processed. The codeblock must be defined as <code>{| nPos, nTotal | GaugeUpdate( aGauge1, nPos / nTotal ) }</code></div>
+  <div><p>If <code>pFileProgress</code> is used, a codeblock is evaluated, showing the total of that file has being processed. The codeblock must be defined as: <code>{| nPos, nTotal | GaugeUpdate( aGauge1, nPos / nTotal ) }</code></div>
   <div><p>Before calling this function, Set an Changedisk codeblock by calling the <code><a href="#hb_setdiskzip">hb_SetDiskZip()</a></code>.</div>
 </div>
 <div class="d-d">Example(s)</div>
@@ -451,7 +451,7 @@ hb_ZipFileByPKSpan( &quot;test33.zip&quot;, aFiles, 9, {| cFile, nPos | GaugeUpd
 <pre>
 hb_ZipFileByTDSpan( &lt;cFile&gt;, &lt;cFileToCompress&gt; | &lt;aFiles&gt;, &lt;nLevel&gt;,
 &lt;bBlock&gt;, &lt;lOverWrite&gt;, &lt;cPassword&gt;, &lt;iSize&gt;, &lt;lWithPath&gt;, &lt;lWithDrive&gt;,
-&lt;pFileProgress&gt;) → lCompress
+&lt;pFileProgress&gt;) → &lt;lCompress&gt;
 </pre>
 </div>
 <div class="d-d">Argument(s)</div>
@@ -475,11 +475,11 @@ hb_ZipFileByTDSpan( &lt;cFile&gt;, &lt;cFileToCompress&gt; | &lt;aFiles&gt;, &lt
 <div class="d-it">
   <div><p>This function creates a zip file named <code>cFile</code>. If the extension is omitted, .zip will be assumed. If the second parameter is a character string, this file will be added to the zip file. If the second parameter is an array, all file names contained in <code>aFiles</code> will be compressed.</div>
   <div><p>If <code>nLevel</code> is used, it determines the compression type where 0 means no compression and 9 means best compression.</div>
-  <div><p>If <code>bBlock</code> is used, every time the file is opened to compress it will evaluate bBlock. Parameters of bBlock are cFile and nPos.</div>
+  <div><p>If <code>bBlock</code> is used, every time the file is opened to compress it will evaluate <code>bBlock</code>. Parameters of <code>bBlock</code> are <code>cFile</code> and <code>nPos</code>.</div>
   <div><p>If <code>lOverWrite</code> is used, it toggles to overwrite or not the existing file. Default is to overwrite the file, otherwise if <code>lOverWrite</code> is false the new files are added to the <code>cFile</code>.</div>
   <div><p>If <code>lWithPath</code> is used, it tells thats the path should also be stored with the file name. Default is false.</div>
   <div><p>If <code>lWithDrive</code> is used, it tells thats the Drive and path should also be stored with the file name. Default is false.</div>
-  <div><p>If <code>pFileProgress</code> is used, a codeblock is evaluated, <code>showing</code> the total of that file has being processed. The codeblock must be defined as <code>{| nPos, nTotal | GaugeUpdate( aGauge1, nPos / nTotal ) }</code></div>
+  <div><p>If <code>pFileProgress</code> is used, a codeblock is evaluated, <code>showing</code> the total of that file has being processed. The codeblock must be defined as: <code>{| nPos, nTotal | GaugeUpdate( aGauge1, nPos / nTotal ) }</code></div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -555,6 +555,6 @@ ENDIF
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-02 19:49 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/4c3d075">4c3d075</a></div>
+<div>Generated by hbdoc on 2016-11-03 02:15 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/2a6b0fd">2a6b0fd</a></div>
 </footer>
