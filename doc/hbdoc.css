@@ -585,7 +585,7 @@ p {
   }
 
   header {
-    position: absolute;
+    -position: absolute;
     height: 74px;
     line-height: 36px;
   }
