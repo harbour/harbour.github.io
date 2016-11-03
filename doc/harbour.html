@@ -574,9 +574,11 @@ Harbour Reference Guide</a></div>
   <div><p>Clipper is a trademark of Computer Associates and will often be referred to as CA-Cl*pper within Harbour documents. Regardless of this variant, Clipper is recognized as Computer Associates' trademark.</div>
   <div><p>Harbour is a free software compiler for the xBase superset language often referred to as Clipper (the language that is implemented by the compiler Clipper). The goal of Harbour is to produce a cross platform CA-Cl*pper compatible compiler.</div>
   <div><p>The Harbour website is at <a href="https://vszakats.github.io/harbour-core/">https://vszakats.github.io/harbour-core/</a>. If you have any problem with this copy of Harbour please visit our web site and ensure that you are using the latest release.</div>
-  <div><p>If you are reading this file as part of a source distribution of Harbour you probably want to start by reading <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/doc/dirstruc.txt">doc/dirstruc.txt</a></code> because this is your map to the Harbour source directories.</div>
+  <div><p>If you are reading this file as part of a source distribution of Harbour you probably want to start by reading <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/doc/dirstruc.txt">doc/dirstruc.txt</a></code> because this is your map to the Harbour source directories.</div>
   <div><p>Harbour is a superset of Clipper and is backwards compatible with nearly 100% of all Clipper 5.2x or 5.3 code. Most Clipper S'87 code will also compile and run fine, but may require some modifications to run well.</div>
 </div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Document, Intro</div>
 </section>
@@ -700,7 +702,7 @@ harbour [options] &lt;file[.prg]&gt; [options]
   <div><p>The Harbour (non-strict) method is:</div>
   <div><p>1) faster</div>
   <div><p>2) it guarantees that the same instance variable of the same object will be changed</div>
-  <div><p>(See also: <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hbexpra.c">include/hbexpra.c</a></code>, <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hbexprb.c">include/hbexprb.c</a></code>)</div>
+  <div><p>(See also: <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hbexpra.c">include/hbexpra.c</a></code>, <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hbexprb.c">include/hbexprb.c</a></code>)</div>
   <div><p><strong>Initialization of static variables      </strong> <hr></div>
   <div><p>There is a difference in the initialization of static variables that are initialized with a codeblock that refers to a local variable. For example:</div>
 <pre>
@@ -717,6 +719,8 @@ PROCEDURE Main()
   <div><p>In Harbour this code generates a compile time error: <code>Error <code>E0009</code> Illegal variable (b) initializer: 'MyLocalVar'</code></div>
   <div><p>Both CA-Cl*pper and Harbour are handling all local variables used in a codeblock in a special way: they are detached from the local stack of function/procedure where they are declared. This allows access to these variables after the exit from a function/procedure. However, all static variables are initialized in a separate procedure (<code>STATICS$</code> in CA-Cl*pper and <code>(_INITSTATICS)</code> in Harbour) before the main procedure and before all <code>INIT</code> procedures. The local variables don't exist on the eval stack when static variables are initialized, so they cannot be detached.</div>
 </div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Document, Compiler</div>
 </section>
@@ -739,6 +743,8 @@ PROCEDURE Main()
 &amp;variable.text
 </pre>
 </div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Document, Compiler</div>
 </section>
@@ -760,7 +766,7 @@ PROCEDURE Main()
   <div><p>* <code><a href="#procname">ProcName()</a></code> support for class Method names.</div>
   <div><p>Class Methods can be retrieved from the call stack.</div>
   <div><p>* <code><a href="#memory">Memory()</a></code> has new return values.</div>
-  <div><p>See <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hbmemory.ch">hbmemory.ch</a></code></div>
+  <div><p>See <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hbmemory.ch">hbmemory.ch</a></code></div>
   <div><p>* <code><a href="#transform">Transform()</a></code> → new function in format string</div>
   <div><p>@0      Make a zero padded string out of the number.</div>
   <div><p>* <code><a href="#stod">SToD()</a></code> → dDate</div>
@@ -774,8 +780,10 @@ PROCEDURE Main()
   <div><p>- Class TDbMenu implement both pulldown and popup menus.</div>
   <div><p><strong>RTL enhanced functionality:</strong> <hr></div>
   <div><p>- <code>hb_vfDirSpace( &lt;nDir&gt;, &lt;nType&gt; )</code></div>
-  <div><p>The second parameter is a Harbour (optional) parameter and indicates the type of diskinfo being requested. See <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/doc/en/diskspac.txt">doc/en/diskspac.txt</a></code> for info.</div>
+  <div><p>The second parameter is a Harbour (optional) parameter and indicates the type of diskinfo being requested. See <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/doc/en/diskspac.txt">doc/en/diskspac.txt</a></code> for info.</div>
 </div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Document</div>
 </section>
@@ -809,6 +817,8 @@ pItem = hb_itemNew( hb_param( 1, IT_BLOCK ) );
   <div><p>Calling the garbage collector from Harbour code <hr></div>
   <div><p>The garbage collector can be called directly from the Harbour code. This is usefull in situations where there is no idle states available or the application is working in the loop with no user interaction and there is many memory allocations. See <code><a href="#hb_gcall">hb_gcAll()</a></code> for explanation of how to call this function from your Harbour code.</div>
 </div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Document</div>
 <div class="d-d">See also</div>
@@ -827,6 +837,8 @@ pItem = hb_itemNew( hb_param( 1, IT_BLOCK ) );
   <div><p>For direct call for background actions see <code><a href="#hb_idlestate_001">hb_idleState()</a></code> function.</div>
   <div><p>For signaling the idle state from C code see the <code><a href="#hb_idlestate_001">hb_idleState()</a></code> API function.</div>
 </div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Document</div>
 <div class="d-d">See also</div>
@@ -866,6 +878,8 @@ DO &amp;cFunction WITH 3
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -898,6 +912,8 @@ PROCEDURE Test( nValue, cString )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -933,6 +949,8 @@ PROCEDURE Test( xExp )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -964,6 +982,8 @@ PROCEDURE Test( xExp )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -994,6 +1014,8 @@ PROCEDURE Test( xExp )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1028,6 +1050,8 @@ ENDDO
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1069,6 +1093,8 @@ NEXT
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1104,6 +1130,8 @@ aOne[ 1 ] := &quot;The Harbour Compiler&quot;
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper will return <code>NIL</code> if the parameter is not an array.</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1148,6 +1176,8 @@ ACopy( aOne, aTwo, nStart, nCount )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1185,6 +1215,8 @@ ADel( aArray, 2 ) // Result: aArray is { &quot;Harbour&quot;, &quot;Power&quot;,
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1231,6 +1263,8 @@ WAIT
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1270,6 +1304,8 @@ AFill( aTest, 5 )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1307,6 +1343,8 @@ AIns( aArray, 4 )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1346,6 +1384,8 @@ NEXT
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1385,6 +1425,8 @@ AScan( aDir,,, {| x, y | x[ 1 ] := &quot;test.prg&quot;, HB_SYMBOL_UNUSED( y ) }
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">This function is not CA-Cl*pper compatible. CA-Cl*pper <code><a href="#ascan">AScan()</a></code> is affected by the <code>SET</code> <code>EXACT</code> <code>ON</code>/<code>OFF</code> Condition</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1423,6 +1465,8 @@ ASize( aArray, 1 )         // Result: aArray is { 1 }
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">If <code>HB_COMPAT_C53</code> is defined, the function generates an Error, else it will return the array itself.</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1472,6 +1516,8 @@ ASort( aPair,,, {| x, y | x[ 2 ] &lt; y[ 2 ] } )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1502,6 +1548,8 @@ LOCAL aArray := { &quot;Harbour&quot;, &quot;is&quot;, &quot;Supreme&quot;, &quo
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1541,6 +1589,8 @@ hb_ADel( aArray, 2, .T. ) // Result: aArray is { &quot;Harbour&quot;, &quot;Powe
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1581,6 +1631,8 @@ hb_AIns( aArray, 2,  &quot;is&quot;, .T. ) // --&gt; { &quot;Harbour&quot;, &quo
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1626,6 +1678,8 @@ WAIT
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1646,7 +1700,7 @@ oClass := HBClass():New( &quot;TMyClass&quot; )
   -or-
 
 HBClass() is usually accessed by defining a class with the commands
-defined in <a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hbclass.ch">hbclass.ch</a>:
+defined in <a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hbclass.ch">hbclass.ch</a>:
 
 CREATE CLASS HBGetList  // Calls HBClass() to create the HBGetList class
    ...
@@ -1725,6 +1779,8 @@ PROCEDURE Main()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1770,6 +1826,8 @@ PROCEDURE Main()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1800,6 +1858,8 @@ dbSeek( Descend( &quot;SMITH&quot; ) )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1855,6 +1915,8 @@ PROCEDURE Main()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1884,6 +1946,8 @@ PROCEDURE Main()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -1909,6 +1973,8 @@ PROCEDURE Main()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">The CA-Cl*pper NG states that <code><a href="#word">Word()</a></code> will only work when used in <code>CALL</code> commands parameter list, otherwise it will return <code>NIL</code>, in Harbour it will work anywhere.</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -2250,7 +2316,7 @@ dbCreate( &quot;onlyname.dbf&quot;, __dbStructFilter( aStruct, aList ) )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/dbstruct.ch">dbstruct.ch</a></code> Library is rdd</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/dbstruct.ch">dbstruct.ch</a></code> Library is rdd</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Database</div>
 <div class="d-d">See also</div>
@@ -2319,12 +2385,12 @@ dbCreate( &quot;onlyname.dbf&quot;, __FLedit( aStruct, aList ) )
 <div class="d-d">Compliance</div>
 <div class="d-it">
   <div>CA-Cl*pper has internal undocumented function named <code><a href="#__fledit">__FLedit()</a></code>, in Harbour we name it <code><a href="#__dbstructfilter">__dbStructFilter()</a></code>. The new name gives a better description of what this function does. In Harbour <code><a href="#__fledit">__FLedit()</a></code> simply calls <code><a href="#__dbstructfilter">__dbStructFilter()</a></code> and therefor the latter is the recommended function to use.</div>
-  <div>This function is only visible if <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/src/rdd/dbstrux.prg">src/rdd/dbstrux.prg</a></code> was compiled with the <code>HB_CLP_UNDOC</code> flag.</div>
+  <div>This function is only visible if <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/src/rdd/dbstrux.prg">src/rdd/dbstrux.prg</a></code> was compiled with the <code>HB_CLP_UNDOC</code> flag.</div>
 </div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/dbstruct.ch">dbstruct.ch</a></code> Library is rdd</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/dbstruct.ch">dbstruct.ch</a></code> Library is rdd</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Database</div>
 <div class="d-d">See also</div>
@@ -2386,6 +2452,8 @@ PROCEDURE PrintFields( nCount )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -2419,6 +2487,8 @@ SELECT 0
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -2453,6 +2523,8 @@ dbCloseArea()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -2490,6 +2562,8 @@ test-&gt;Id   := nId
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -2520,6 +2594,8 @@ Test-&gt;( dbClearFilter() )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -2551,6 +2627,8 @@ dbCloseAll()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -2578,6 +2656,8 @@ Test-&gt;( dbCloseArea() )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -2617,6 +2697,8 @@ ENDIF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -2661,6 +2743,8 @@ dbCommitAll()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -2725,8 +2809,10 @@ dbCreate( &quot;testdbf&quot;, aStruct, &quot;DBFCDX&quot;, .T., &quot;MYALIAS&q
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">This function is not CA-Cl*pper compliant</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rdd Header is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/dbstruct.ch">dbstruct.ch</a></code></div>
+<div class="d-it">Library is rdd Header is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/dbstruct.ch">dbstruct.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Database</div>
 <div class="d-d">See also</div>
@@ -2757,6 +2843,8 @@ ENDIF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -2791,6 +2879,8 @@ SELECT test
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -2820,6 +2910,8 @@ dbGoBottom()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -2860,6 +2952,8 @@ ENDDO
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -2889,6 +2983,8 @@ dbGoBottom()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -2919,6 +3015,8 @@ dbRecall()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -2954,6 +3052,8 @@ NEXT
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -2990,6 +3090,8 @@ NEXT
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3022,6 +3124,8 @@ ENDIF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3074,6 +3178,8 @@ ENDIF
 <div class="d-it">Started</div>
 <div class="d-d">Compliance</div>
 <div class="d-it"><code><a href="#dbseek">dbSeek()</a></code> is  Compatible with CA-Cl*pper 5.3</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3113,6 +3219,8 @@ dbCloseAll()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3142,6 +3250,8 @@ dbSetDriver( &quot;ADS&quot; )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3174,6 +3284,8 @@ dbGoTop()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3206,6 +3318,8 @@ ENDDO
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3241,8 +3355,10 @@ PROCEDURE Main()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is rdd Header is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/dbstruct.ch">dbstruct.ch</a></code></div>
+<div class="d-it">Library is rdd Header is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/dbstruct.ch">dbstruct.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Database</div>
 <div class="d-d">See also</div>
@@ -3274,6 +3390,8 @@ ENDIF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3309,6 +3427,8 @@ ENDIF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3352,6 +3472,8 @@ dbUseArea( .T.,, &quot;test&quot; )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3383,6 +3505,8 @@ SELECT 0
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3417,6 +3541,8 @@ dbCloseArea()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3454,6 +3580,8 @@ dbCloseArea()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3483,6 +3611,8 @@ dbCloseArea()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3514,6 +3644,8 @@ dbCloseArea()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3548,6 +3680,8 @@ dbCloseArea()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3579,6 +3713,8 @@ dbCloseArea()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3613,6 +3749,8 @@ dbCloseArea()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3644,6 +3782,8 @@ dbCloseArea()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3679,6 +3819,8 @@ dbCloseArea()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3710,6 +3852,8 @@ USE test NEW
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -3914,6 +4058,8 @@ dbCloseArea()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -4034,6 +4180,8 @@ ordCondSet( [&lt;cForCondition&gt;],
 <div class="d-it">Started</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -4223,6 +4371,8 @@ dbCloseAll()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -4259,6 +4409,8 @@ RecNo()            // Returns 50
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -4292,6 +4444,8 @@ RecSize()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -4334,6 +4488,8 @@ dbCloseArea()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -4368,6 +4524,8 @@ SELECT cOldArea
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -4404,6 +4562,8 @@ SELECT test
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -4949,6 +5109,8 @@ __Run( &quot;command&quot; )                // Gives a OS shell
 <div class="d-it">Either the current or previous century setting as a logical value</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -4975,15 +5137,11 @@ __Run( &quot;command&quot; )                // Gives a OS shell
 <pre class="d-ex">
 ? GetE( &quot;PATH&quot; )
 ? GetE( &quot;CONFIG&quot; )
-? GetE( &quot;HARBOURCMD&quot;, &quot;-n -l -es2&quot; )
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">
-  <div>This is CA-Cl*pper compliant.</div>
-  <div>The <code>cDefaultValue</code> parameter is a Harbour extension.</div>
-</div>
+<div class="d-it">CA-Cl*pper v5.x compatible</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
@@ -5275,6 +5433,8 @@ RUN command                    // Gives a OS shell
 <div class="d-it"><code><a href="#set">Set()</a></code> The current or previous setting</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -5363,6 +5523,8 @@ SetTypeahead( 12 )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -5472,6 +5634,8 @@ Break( NIL )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -5497,6 +5661,8 @@ Break( NIL )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -5528,6 +5694,8 @@ PROCEDURE EndApp( lYesNo )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -5612,6 +5780,8 @@ ENDDO
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -5652,6 +5822,8 @@ CASE nInKey == K_ESC
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -5687,6 +5859,8 @@ SetKey( K_F10, bOldF10, bOldF10Cond )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -5718,6 +5892,8 @@ hb_SetKeySave( aKeys )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -5761,6 +5937,8 @@ SetKey( K_F10, {|| GetActive():State := GE_WRITE },;
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it"><code><a href="#setkey">SetKey()</a></code> is mostly CA-Cl*pper compliant. The only difference is the addition of the condition code-block parameter, allowing set-keys to be conditionally turned off or on.  This condition-block cannot be returned once set - see <code>SetKeyGet()</code></div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -5812,6 +5990,8 @@ COUNT TO nCount NEXT 10
 <div class="d-it">Started</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is rdd</div>
 <div class="d-d">Tag(s)</div>
@@ -5959,6 +6139,8 @@ ENDIF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it"><code>aName</code> is going to be filled with long file name and not necessarily the 8.3 uppercase name.</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -6024,7 +6206,7 @@ ENDIF
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">This function is CA-Cl*pper 5.3 compliant</div>
+<div class="d-it">CA-Cl*pper v5.3 function available in builds with <code>HB_COMPAT_C53</code> option enabled (default)</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
@@ -6058,7 +6240,7 @@ ENDIF
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">This function is CA-Cl*pper 5.3 compliant</div>
+<div class="d-it">CA-Cl*pper v5.3 function available in builds with <code>HB_COMPAT_C53</code> option enabled (default)</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
@@ -6089,7 +6271,7 @@ ENDIF
 <pre class="d-ex">
 ? &quot;You can use:&quot;, hb_ntos( DiskSpace() ), &quot;bytes&quot;
 
-// NOTE: See <a href="https://github.com/vszakats/harbour-core/blob/2c06e53/tests/diskspac.prg">tests/diskspac.prg</a> for another example
+// NOTE: See <a href="https://github.com/vszakats/harbour-core/blob/b1b439a/tests/diskspac.prg">tests/diskspac.prg</a> for another example
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -6098,7 +6280,7 @@ ENDIF
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/fileio.ch">fileio.ch</a></code></div>
+<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/fileio.ch">fileio.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, FileSys</div>
 </section>
@@ -6127,6 +6309,8 @@ FClose( nHandle )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -6174,8 +6358,10 @@ ENDIF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/fileio.ch">fileio.ch</a></code></div>
+<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/fileio.ch">fileio.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, FileSys</div>
 <div class="d-d">See also</div>
@@ -6212,6 +6398,8 @@ ENDIF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -6263,6 +6451,8 @@ ENDIF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -6296,6 +6486,8 @@ ENDIF
 <div class="d-it">S (wild card support is missing)</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -6346,8 +6538,10 @@ ENDIF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/fileio.ch">fileio.ch</a></code></div>
+<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/fileio.ch">fileio.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, FileSys</div>
 <div class="d-d">See also</div>
@@ -6476,6 +6670,8 @@ ENDIF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -6539,8 +6735,10 @@ FUNCTION FReadLn( nH, cB, nMaxLine )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/fileio.ch">fileio.ch</a></code></div>
+<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/fileio.ch">fileio.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, FileSys</div>
 <div class="d-d">See also</div>
@@ -6623,7 +6821,7 @@ FClose( nHandle )
 ? &quot;You can use:&quot;, hb_ntos( hb_DiskSpace() ), &quot;bytes&quot;, ;
   &quot;Out of a total of&quot;, hb_ntos( hb_DiskSpace( &quot;C:&quot;, HB_FS_TOTAL ) )
 
-// NOTE: See <a href="https://github.com/vszakats/harbour-core/blob/2c06e53/tests/diskspac.prg">tests/diskspac.prg</a> for another example
+// NOTE: See <a href="https://github.com/vszakats/harbour-core/blob/b1b439a/tests/diskspac.prg">tests/diskspac.prg</a> for another example
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
@@ -6632,7 +6830,7 @@ FClose( nHandle )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/fileio.ch">fileio.ch</a></code></div>
+<div class="d-it">Library is core Header is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/fileio.ch">fileio.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, FileSys</div>
 </section>
@@ -6667,6 +6865,8 @@ ENDIF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -6783,7 +6983,7 @@ ENDIF
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">This function is CA-Cl*pper 5.3 compliant</div>
+<div class="d-it">CA-Cl*pper v5.3 function available in builds with <code>HB_COMPAT_C53</code> option enabled (default)</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
@@ -6817,7 +7017,7 @@ ENDIF
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">This function is CA-Cl*pper 5.3 compliant</div>
+<div class="d-it">CA-Cl*pper v5.3 function available in builds with <code>HB_COMPAT_C53</code> option enabled (default)</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
@@ -6840,7 +7040,7 @@ ENDIF
 <div class="d-d">Description</div>
 <div class="d-it">This function releases all memory blocks that are considered as the garbage.</div>
 <div class="d-d">Status</div>
-<div class="d-it">Harbour</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
 <div class="d-d">Platform(s)</div>
@@ -6873,7 +7073,7 @@ void * hb_gcAlloc( HB_SIZE nSize,
 <div class="d-d">Description</div>
 <div class="d-it"><code>hb_gcAlloc()</code> is used to allocate the memory that will be tracked by the garbage collector. It allows to properly release memory in case of self-referencing or cross-referencing Harbour level variables. Memory allocated with this function should be released with <code>hb_gcFree()</code> function or it will be automatically deallocated by the GC if it is not locked or if it is not referenced by some Harbour level variable.</div>
 <div class="d-d">Status</div>
-<div class="d-it">C</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
 <div class="d-d">Platform(s)</div>
@@ -6898,7 +7098,7 @@ void * hb_gcAlloc( HB_SIZE nSize,
 <div class="d-d">Description</div>
 <div class="d-it">This function scans the eval stack, the memvars table, the array of static variables and table of created classes for referenced memory blocks. After scanning all unused memory blocks and blocks that are not locked are released.</div>
 <div class="d-d">Status</div>
-<div class="d-it">C</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
 <div class="d-d">Platform(s)</div>
@@ -6926,7 +7126,7 @@ void * hb_gcAlloc( HB_SIZE nSize,
 <div class="d-d">Description</div>
 <div class="d-it"><code>hb_gcFree()</code> is used to deallocate the memory that was allocated with the <code>hb_gcAlloc()</code> function.</div>
 <div class="d-d">Status</div>
-<div class="d-it">C</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
 <div class="d-d">Platform(s)</div>
@@ -6955,7 +7155,7 @@ void * hb_gcAlloc( HB_SIZE nSize,
   <div><p>cannot be called from the user code - calling it can cause unpredicted results (memory blocks referenced by the passed item can be released prematurely during the closest garbage collection).</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">C</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
 <div class="d-d">Platform(s)</div>
@@ -6986,6 +7186,8 @@ void * hb_gcAlloc( HB_SIZE nSize,
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7006,6 +7208,8 @@ void * hb_gcAlloc( HB_SIZE nSize,
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7037,6 +7241,8 @@ lFlag := hb_HAutoAdd( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7068,6 +7274,8 @@ lFlag := hb_HBinary( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7099,6 +7307,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7118,6 +7328,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7142,6 +7354,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7164,6 +7378,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 <div class="d-d">See also</div>
@@ -7188,6 +7404,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7210,6 +7428,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7239,6 +7459,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7261,6 +7483,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7286,6 +7510,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7309,6 +7535,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7331,6 +7559,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7353,6 +7583,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7372,6 +7604,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7397,6 +7631,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7419,6 +7655,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7444,6 +7682,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7469,6 +7709,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7492,6 +7734,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7514,6 +7758,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7537,6 +7783,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7556,6 +7804,8 @@ lFlag := hb_HCaseMatch( hsTable, .T. )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Hash table</div>
 </section>
@@ -7670,7 +7920,7 @@ hb_idleDel( nTask2 )
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>nScope</code> = the scope of variables for which an information is asked</div>
-  <div>Supported values (defined in <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hbmemvar.ch">hbmemvar.ch</a></code>)</div>
+  <div>Supported values (defined in <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hbmemvar.ch">hbmemvar.ch</a></code>)</div>
   <div class="d-t d-t0">
   <div> HB_MV_PUBLIC</div>
   <div> HB_MV_PRIVATE (or any other value)</div>
@@ -7758,6 +8008,8 @@ PROCEDURE CountMemvars()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">This function should be called from the debugger only.</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -7779,6 +8031,8 @@ PROCEDURE CountMemvars()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -7801,7 +8055,7 @@ PROCEDURE CountMemvars()
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">Undocumented CA-Cl*pper v5.x function only available in builds with <code>HB_CLP_UNDOC</code> option enabled (default)</div>
+<div class="d-it">Undocumented CA-Cl*pper v5.x function available in builds with <code>HB_CLP_UNDOC</code> option enabled (default)</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
@@ -7826,7 +8080,7 @@ PROCEDURE CountMemvars()
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">Undocumented CA-Cl*pper v5.x function only available in builds with <code>HB_CLP_UNDOC</code> option enabled (default)</div>
+<div class="d-it">Undocumented CA-Cl*pper v5.x function available in builds with <code>HB_CLP_UNDOC</code> option enabled (default)</div>
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
@@ -7853,7 +8107,9 @@ PROCEDURE CountMemvars()
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">Undocumented CA-Cl*pper v5.x function only available in builds with <code>HB_CLP_UNDOC</code> option enabled (default)</div>
+<div class="d-it">Undocumented CA-Cl*pper v5.x function available in builds with <code>HB_CLP_UNDOC</code> option enabled (default)</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -7903,9 +8159,11 @@ PROCEDURE CountMemvars()
   <div><p>This error can be accessed using <code><a href="#hb_ineterrorcode">hb_inetErrorCode()</a></code> function.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -7927,9 +8185,11 @@ PROCEDURE CountMemvars()
   <div><p>TODO: have a version that returns a vector of 4 numbers.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -7946,9 +8206,11 @@ PROCEDURE CountMemvars()
 <div class="d-d">Description</div>
 <div class="d-it">Closes inet support; mainly used for Windows. Put it at the end of any program using Inet functions, just before the program exits.</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -7963,9 +8225,11 @@ PROCEDURE CountMemvars()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>socket</code> a socket previously created / opened</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -7980,9 +8244,11 @@ PROCEDURE CountMemvars()
 <div class="d-d">Argument(s)</div>
 <div class="d-it"><code>socket</code> a socket previously created / opened</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -7999,9 +8265,11 @@ PROCEDURE CountMemvars()
 <div class="d-d">Description</div>
 <div class="d-it">Clears the default time limit of the given socket.</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8018,9 +8286,11 @@ PROCEDURE CountMemvars()
 <div class="d-d">Description</div>
 <div class="d-it">Clears the default timeout of the given socket. Default timeout is used in all blocking operations.</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8043,9 +8313,11 @@ PROCEDURE CountMemvars()
   <div><p>The method does not destroy the socket, which can be used by subordinate threads to check that the socket is closed, and so they should stop as soon as they can. Don't destroy the socket unless you are sure that no other thread is using it.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8080,9 +8352,11 @@ hb_inetConnect( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
   <div><p>The second version of this function accepts a pre-built socket as a parameter. This allows to kill asyncronously a thread waiting for <code><a href="#hb_inetconnect">hb_inetConnect()</a></code> to connect, and then cleaning up the leftover socket data. Also, it is possible to give timeout to the given <code>SOCKET</code>, but this timeout will be used only in the connection phase, after that the network address resolution is completed. Use <code><a href="#hb_inetgethosts">hb_inetGetHosts()</a></code> and <code><a href="#hb_inetconnectip">hb_inetConnectIP()</a></code> for a finer timeout control. On error, the error of the returned socket is set. The error could be due to unavailable name resolving service, host name not valid, host address not reachable and host reachable but port not open.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8117,9 +8391,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
   <div><p>On error, the error of the returned socket is set.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8138,9 +8414,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Description</div>
 <div class="d-it">Returns the amount of characters read or written in the latest socket operation.</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8159,9 +8437,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Description</div>
 <div class="d-it">Creates the raw data of the socket, that can be passed to a asynchronous connection function (<code><a href="#hb_inetconnect">hb_inetConnect()</a></code> or <code><a href="#hb_inetconnectip">hb_inetConnectIP()</a></code>). This will prevent the connection function from allocating some data that could be never used in certain cases, i.e. an asynchronously detected timeout.</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8180,9 +8460,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Description</div>
 <div class="d-it">Returns a <code>CRLF</code> sequence used in many internet protocols.</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8210,9 +8492,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
   <div><p>On error, <code><a href="#hb_ineterrorcode">hb_inetErrorCode()</a></code> and <code><a href="#hb_ineterrordesc">hb_inetErrorDesc()</a></code> can be use to determine what kind of error happened.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8235,9 +8519,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
   <div><p>Returns the socket, and if an error occurs, the socket error message and code are set.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8265,9 +8551,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
   <div><p>If an error occurs, the socket error message and code are set.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8293,9 +8581,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
   <div><p>There isn't any guarantee that all the data required to be read is really sent from the kernel to the application: the kernel should just return the last complete datagram that has been received, up to <code>nSize</code> bytes.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8327,9 +8617,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
   <div><p>Returns -1 on error, or the number of bytes actually sent on success.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8351,9 +8643,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
   <div><p>Error codes are the ones used for winsock or UnixSockets (they are the same); 1 is reserved for &quot;connection closed&quot; message.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8372,9 +8666,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Description</div>
 <div class="d-it">Returns a string describing the last error that occurred in the socket; the string is system dependent, and should be used only for debugging purposes.</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8394,9 +8690,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Returns</div>
 <div class="d-it">?</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8418,9 +8716,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
   <div><p>Whether this function is able to have the complete list of aliases or not depends on the verbosity of the DNS server.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8444,9 +8744,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
   <div><p>On error, and if the server can't be found, the function returns <code>NIL</code>.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8465,9 +8767,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Description</div>
 <div class="d-it">Returns the socket receive buffer size or -1 if the socket is closed or an error occurs</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8486,9 +8790,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Description</div>
 <div class="d-it">Returns the socket send buffer size or -1 if the socket is closed or an error occurs</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8507,9 +8813,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Description</div>
 <div class="d-it">Activates inet support; mainly used for winsock start up at the moment, but could be used in the future for many other purpose. Put it at the beginning of every program using INET functions.</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8526,9 +8834,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Returns</div>
 <div class="d-it">Returns whether the passed parameter is a socket</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8553,9 +8863,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
   <div><p><code>xCallback</code> can be one of: a codeblock, an array of (...), or a (symbol) TODO: describe these better</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8574,9 +8886,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Description</div>
 <div class="d-it">Returns the port to which this socket is bound, or the remote port if this socket is connected with a remote host or client</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8603,9 +8917,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
   <div><p>Notice that there is no guarantee that all the available bytes will be read before the function returns, in fact, <code><a href="#hb_inetrecv">hb_inetRecv()</a></code> returns as soon it is able to fill <code>cString</code> with one or more bytes. To block the current process until the whole <code>cString</code> is filled (or <code>nAmount</code> bytes are read), use the <code><a href="#hb_inetrecvall">hb_inetRecvAll()</a></code>.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8628,9 +8944,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Description</div>
 <div class="d-it">This function works exactly as <code><a href="#hb_inetrecv">hb_inetRecv()</a></code> except that it blocks until <code>nAmount</code> bytes are read, if <code>nAmount</code> is given, or <code>cString</code> is filled for its whole length.</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8655,9 +8973,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Description</div>
 <div class="d-it">This function operates exactly the same way as <code><a href="#hb_inetrecvline">hb_inetRecvLine()</a></code>, but the &quot;record termination&quot; is customizable through the <code>cBlock</code> parameter. If not given, this parameter defaults to the <code>CRLF</code> sequence.</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8688,9 +9008,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
   <div><p>Finally, a <code>nBufSize</code> parameter can be given. If not, memory allocation will be increased by discrete amounts of 80 bytes. The programmer can provide here a different allocation strategy (e.g. setting <code>nBufSize</code> equal to <code>nMaxLength</code>, memory for reading the line will be allocated only once, at the beginning of the function).</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8707,9 +9029,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Returns</div>
 <div class="d-it">Returns 1 (one) if the socket exists, -1 if it does not</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8738,9 +9062,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
   <div><p>On error, the error in the socket is set.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8763,9 +9089,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Description</div>
 <div class="d-it">This function works exactly as <code><a href="#hb_inetsend">hb_inetSend()</a></code> but it ensures that all the data to be sent is written before returning.</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8793,9 +9121,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
   <div><p>On error, sets error description in the newly returned socket.</div>
 </div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8817,9 +9147,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Description</div>
 <div class="d-it">Sets the receive buffer size of a socket</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8841,9 +9173,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Description</div>
 <div class="d-it">Sets the send buffer size of a socket</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8865,9 +9199,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Description</div>
 <div class="d-it">Sets or changes the time limit value of the socket.</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -8889,9 +9225,11 @@ hb_inetConnectIP( &lt;cAddress&gt;, &lt;nPort&gt;, &lt;socket&gt; ) → NIL
 <div class="d-d">Description</div>
 <div class="d-it">Sets or changes the timeout value of the socket.</div>
 <div class="d-d">Status</div>
-<div class="d-it">Not started</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, INET</div>
 </section>
@@ -9006,7 +9344,7 @@ PROCEDURE Main()
 <div class="d-it d-sy">
 <code>hb_langErrMsg( &lt;nErrorCode&gt; ) → cErrorMessage</code></div>
 <div class="d-d">Argument(s)</div>
-<div class="d-it"><code>nErrorCode</code> is one of the generic error codes (<code>EG_...</code>) defined in <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/error.ch">error.ch</a></code></div>
+<div class="d-it"><code>nErrorCode</code> is one of the generic error codes (<code>EG_...</code>) defined in <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/error.ch">error.ch</a></code></div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code><a href="#hb_langerrmsg">hb_langErrMsg()</a></code> return the error message string represented by the code <code>nErrorCode</code>.</div>
 <div class="d-d">Description</div>
@@ -9030,7 +9368,7 @@ PROCEDURE Main()
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/error.ch">error.ch</a></code></div>
+<div class="d-it">Header is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/error.ch">error.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Language and Nation</div>
 <div class="d-d">See also</div>
@@ -9054,7 +9392,7 @@ PROCEDURE Main()
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#hb_langmessage">hb_langMessage()</a></code> is similar to <code><a href="#nationmsg">NationMsg()</a></code> but give access to the whole list of language messages: Day and month names, generic error messages, internal errors, and others...</div>
-  <div><p>Use the header file <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hblang.ch">hblang.ch</a></code> for a list of base values for <code>nMsg</code>.</div>
+  <div><p>Use the header file <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hblang.ch">hblang.ch</a></code> for a list of base values for <code>nMsg</code>.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -9076,7 +9414,7 @@ PROCEDURE Main()
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hblang.ch">hblang.ch</a></code></div>
+<div class="d-it">Header is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hblang.ch">hblang.ch</a></code></div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Language and Nation</div>
 <div class="d-d">See also</div>
@@ -9284,6 +9622,8 @@ ENDDO
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -9316,6 +9656,8 @@ ENDDO
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -9346,9 +9688,11 @@ DO WHILE ! IsAffirm( cYesNo )
 ENDDO
 </pre>
 <div class="d-d">Status</div>
-<div class="d-it">C</div>
+<div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -9366,7 +9710,7 @@ ENDDO
 <code>hb_SetMacro( &lt;nOption&gt;, [&lt;lOnOff&gt;] ) → &lt;lOldSetting&gt;</code></div>
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
-  <div><code>nOption</code> One of the <code>HB_SM_*</code> constants defined in <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/set.ch">set.ch</a></code>.</div>
+  <div><code>nOption</code> One of the <code>HB_SM_*</code> constants defined in <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/set.ch">set.ch</a></code>.</div>
   <div><code>lOnOff</code> <code>.T.</code> to enable or <code>.F.</code> to disable a feature</div>
 </div>
 <div class="d-d">Returns</div>
@@ -9398,7 +9742,7 @@ INIT PROCEDURE IWANTCLIPPER()
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/set.ch">set.ch</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/set.ch">set.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Macro</div>
 <div class="d-d">See also</div>
@@ -9504,7 +9848,7 @@ CLS
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div>[<code>nNumber</code>]   new math error handling mode, one of the following</div>
-  <div>constants, defined in <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hbmath.ch">hbmath.ch</a></code>:</div>
+  <div>constants, defined in <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hbmath.ch">hbmath.ch</a></code>:</div>
   <div class="d-t d-t0">
   <div>HB_MATH_ERRMODE_DEFAULT</div>
   <div>HB_MATH_ERRMODE_CDEFAULT</div>
@@ -9521,7 +9865,7 @@ CLS
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hbmath.ch">hbmath.ch</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hbmath.ch">hbmath.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Math</div>
 </section>
@@ -9796,6 +10140,8 @@ ENDIF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -9835,6 +10181,8 @@ __objAddInline( oHappy, &quot;Smile&quot;, bInline )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -9886,6 +10234,8 @@ STATIC FUNCTION MySmile( nType )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -9924,6 +10274,8 @@ __objDelData( oHappy, &quot;lHappy&quot; )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -9972,6 +10324,8 @@ STATIC FUNCTION MySmile( nType )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -10023,6 +10377,8 @@ STATIC FUNCTION MySmile( nType )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -10080,6 +10436,8 @@ ENDCLASS
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -10113,6 +10471,8 @@ NEXT
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -10170,8 +10530,10 @@ NEXT
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hboo.ch">hboo.ch</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hboo.ch">hboo.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Objects</div>
 <div class="d-d">See also</div>
@@ -10211,8 +10573,10 @@ NEXT
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hboo.ch">hboo.ch</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hboo.ch">hboo.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Objects</div>
 <div class="d-d">See also</div>
@@ -10246,6 +10610,8 @@ oB := TBrowseNew( 0, 0, 24, 79 )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -10281,6 +10647,8 @@ oB := TBrowseNew( 0, 0, 24, 79 )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -10324,6 +10692,8 @@ __objModInline( oHappy, &quot;Smile&quot;, bYourInline )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -10388,6 +10758,8 @@ STATIC FUNCTION YourSmile( nType )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -10435,8 +10807,10 @@ __objSetValueList( oB, aData )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hboo.ch">hboo.ch</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hboo.ch">hboo.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, Objects</div>
 <div class="d-d">See also</div>
@@ -10476,6 +10850,8 @@ Eval( bField, &quot;Mr X new name&quot; )
   <div>If the block is evaluate and there is no field with the name <code>cFieldName</code> in the current work area, the code block return <code>NIL</code>.</div>
   <div>CA-Cl*pper would raise <code>BASE</code>/1003 error if the field does not exist.</div>
 </div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -10525,6 +10901,8 @@ Eval( bField, &quot;Two has new name&quot; )
   <div>If the block is evaluate and there is no field with the name <code>cFieldName</code> in the given work area, the code block return <code>NIL</code>.</div>
   <div>CA-Cl*pper would raise <code>BASE</code>/1003 error if the field does not exist.</div>
 </div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -10889,6 +11267,8 @@ Set( _SET_DATEFORMAT, &quot;yyyy-mm-dd&quot; )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -10918,6 +11298,8 @@ Set( _SET_DATEFORMAT, &quot;yyyy-mm-dd&quot; )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -11231,6 +11613,8 @@ ENDIF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -11678,6 +12062,8 @@ FUNCTION MakeEmpty( xField )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -11782,6 +12168,8 @@ StrTran( &lt;cString&gt;, &lt;cLocString&gt;, [&lt;cRepString&gt;], [&lt;nPos&gt
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -12052,6 +12440,8 @@ SET CONSOLE ON
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -12115,6 +12505,8 @@ DevOutPict( -1.25, &quot;@D$ 99,999.99 ) // -&gt; $(     1.25)
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it"><code><a href="#devoutpict">DevOutPict()</a></code> is mostly CA-Cl*pper compliant. Any differences are due to enhancements in the Harbour <code><a href="#transform">Transform()</a></code> over CA-Cl*pper.</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -12140,7 +12532,7 @@ DevOutPict( -1.25, &quot;@D$ 99,999.99 ) // -&gt; $(     1.25)
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>CA-Cl*pper has a color spec string, which has more than one color in it, separated with commas.</div>
-  <div><p>This function will extract a given item from this list. You may use the manifest constants defined in <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/color.ch">color.ch</a></code> to identify and extract common colors.</div>
+  <div><p>This function will extract a given item from this list. You may use the manifest constants defined in <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/color.ch">color.ch</a></code> to identify and extract common colors.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -12150,6 +12542,8 @@ DevOutPict( -1.25, &quot;@D$ 99,999.99 ) // -&gt; $(     1.25)
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -12361,6 +12755,8 @@ ENDCASE
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -12386,6 +12782,8 @@ ENDCASE
 <div class="d-it">Started</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -12426,7 +12824,9 @@ KEYBOARD &quot;Hello&quot;; CLEAR TYPEAHEAD; ? Inkey()  // -&gt; 0
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it"><code><a href="#__keyboard">__Keyboard()</a></code> is compliant with CA-Cl*pper 5.3</div>
+<div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -12495,6 +12895,8 @@ ENDIF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -12522,7 +12924,9 @@ __NoNoAlert()
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it">Undocumented CA-Cl*pper v5.x function only available in builds with <code>HB_CLP_UNDOC</code> option enabled (default)</div>
+<div class="d-it">Undocumented CA-Cl*pper v5.x function available in builds with <code>HB_CLP_UNDOC</code> option enabled (default)</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -12648,6 +13052,8 @@ ENDIF
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -12711,16 +13117,18 @@ ENDCASE
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">
-  <div>This function is sensitive to <code>HB_CLP_STRICT</code> settings during the compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/src/rtl/alert.prg">src/rtl/alert.prg</a></code></div>
+  <div>This function is sensitive to <code>HB_CLP_STRICT</code> settings during the compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/src/rtl/alert.prg">src/rtl/alert.prg</a></code></div>
   <div><strong>defined</strong>: <code>xMessage</code> accept Character values only and return <code>NIL</code> if other types are passed.</div>
   <div><strong>undefined</strong>: <code>xMessage</code> could be any type, and internally converted to Character string. If type is Array, multi-line message is displayed.</div>
   <div><strong>defined</strong>: Only the first four valid <code>aOptions</code> are taken.</div>
   <div><strong>undefined</strong>: <code>aOptions</code> could contain as many as needed options.</div>
-  <div>If <code>HB_COMPAT_C53</code> was define during compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/src/rtl/alert.prg">src/rtl/alert.prg</a></code> the Left-Mouse button could be used to select an option.</div>
-  <div>The interpretation of the <code>//NOALERT</code> command-line switch is done only if <code>HB_CLP_UNDOC</code> was define during compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/src/rtl/alert.prg">src/rtl/alert.prg</a></code></div>
+  <div>If <code>HB_COMPAT_C53</code> was define during compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/src/rtl/alert.prg">src/rtl/alert.prg</a></code> the Left-Mouse button could be used to select an option.</div>
+  <div>The interpretation of the <code>//NOALERT</code> command-line switch is done only if <code>HB_CLP_UNDOC</code> was define during compilation of <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/src/rtl/alert.prg">src/rtl/alert.prg</a></code></div>
   <div><code>cColorNorm</code> is a Harbour extension, or at least un-documented in Clipper 5.2 NG.</div>
   <div><code>nDelay</code> is a Harbour extension.</div>
 </div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -12786,6 +13194,8 @@ Browse()
 <div class="d-it">Started</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -12881,8 +13291,10 @@ dbEdit()
   <div>The CA-Cl*pper 5.2 NG state that the return value is <code>NIL</code>, this is wrong and should be read logical.</div>
   <div>There is an undocumented result code (3) from the user defined function in CA-Cl*pper (both 87 and 5.x). This is an Append Mode which: &quot;split the screen to allow data to be appended in windowed area&quot;. This mode is not supported by Harbour.</div>
 </div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header files are <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/dbedit.ch">dbedit.ch</a></code>, <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/inkey.ch">inkey.ch</a></code> Library is core</div>
+<div class="d-it">Header files are <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/dbedit.ch">dbedit.ch</a></code>, <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/inkey.ch">inkey.ch</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, User interface</div>
 <div class="d-d">See also</div>
@@ -12912,6 +13324,8 @@ hb_keyPut( K_F11 ); ? Inkey()  // -&gt; -40
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -12930,7 +13344,7 @@ hb_keyPut( K_F11 ); ? Inkey()  // -&gt; -40
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div><code>nTimeout</code> is an optional timeout value in seconds, with a granularity of 1/10th of a second. If omitted, <code><a href="#inkey">Inkey()</a></code> returns immediately. If set to 0, <code><a href="#inkey">Inkey()</a></code> waits until an input event occurs. If set to any other value, <code><a href="#inkey">Inkey()</a></code> will return either when an input event occurs or when the timeout period has elapsed. If only this parameter is specified and it is not numeric, it will be treated as if it were 0. But if both parameters are specified and this parameter is not numeric, it will be treated as if it were not present.</div>
-  <div><code>nEvents</code> is an optional mask of input events that are to be enabled. If omitted, defaults to hb_set.HB_SET_EVENTMASK. Valid input masks are in <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/inkey.ch">inkey.ch</a></code> and are explained below. It is recommended that the mask names be used rather than their numeric values, in case the numeric values change in future releases of Harbour. To allow more than one type of input event, simply add the various mask names together.</div>
+  <div><code>nEvents</code> is an optional mask of input events that are to be enabled. If omitted, defaults to hb_set.HB_SET_EVENTMASK. Valid input masks are in <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/inkey.ch">inkey.ch</a></code> and are explained below. It is recommended that the mask names be used rather than their numeric values, in case the numeric values change in future releases of Harbour. To allow more than one type of input event, simply add the various mask names together.</div>
   <div class="d-t d-t1">
   <div> inkey.ch            Meaning</div>
   <div> INKEY_MOVE          Mouse motion events are allowed</div>
@@ -12946,7 +13360,7 @@ hb_keyPut( K_F11 ); ? Inkey()  // -&gt; -40
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">
-  <div>0 in case of timeout with no input event, otherwise returns a value in the range -47 to 386 for keyboard events or the range 1001 to 1007 for mouse events. Mouse events and non-printable keyboard events are represented by the <code>K_&lt;event&gt;</code> values listed in <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/inkey.ch">inkey.ch</a></code>. Keyboard event return codes in the range 32 through 127 are equivalent to the printable ASCII character set. Keyboard event return codes in the range 128 through 255 are assumed to be printable, but results may vary based on hardware and nationality. If <code>HB_INKEY_EXTENDED</code> mode is used, then the return value for keyboard events ranges from 1 through 767 and 1077 through 1491, although not all codes are used.</div>
+  <div>0 in case of timeout with no input event, otherwise returns a value in the range -47 to 386 for keyboard events or the range 1001 to 1007 for mouse events. Mouse events and non-printable keyboard events are represented by the <code>K_&lt;event&gt;</code> values listed in <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/inkey.ch">inkey.ch</a></code>. Keyboard event return codes in the range 32 through 127 are equivalent to the printable ASCII character set. Keyboard event return codes in the range 128 through 255 are assumed to be printable, but results may vary based on hardware and nationality. If <code>HB_INKEY_EXTENDED</code> mode is used, then the return value for keyboard events ranges from 1 through 767 and 1077 through 1491, although not all codes are used.</div>
   <div>Extended key codes consist of the PC keyboard scan code and one or more offset values. If no keyboard modifier was used, then <code>HB_INKEY_NONE</code> is added. The <span class="d-key">Alt</span> key adds <code>HB_INKEY_ALT</code>, the <span class="d-key">Ctrl</span> key adds <code>HB_INKEY_CTRL</code>, the <span class="d-key">Shift</span> key adds <code>HB_INKEY_SHIFT</code>, and enhanced keys (<span class="d-key">KeyPad+/</span> and <span class="d-key">CursorPad</span> keys) add <code>HB_INKEY_ENHANCED</code>. For example, <span class="d-key">F1</span> is scan code 59, so if you just press <span class="d-key">F1</span>, you get key code 315, but <span class="d-key">Alt+F1</span> gives 443, <span class="d-key">Ctrl+F1</span> gives 571, and <span class="d-key">Shift+F1</span> gives 699. And <code>NumPad+/</code> gives 1077, 1205, 1333, and 1461. At this time, the only value that can combine with other values is <code>HB_INKEY_ENHANCED</code> (i.e., there are no <span class="d-key">Alt+Ctrl</span> combinations, etc.)</div>
   <div>Note: The extended key code set is larger than the normal key code set. As a result, if you switch between the normal and extended modes, you need to be aware that some codes get translated into a zero in normal mode (because there is no corresponding code in normal mode) and that these codes get removed from the keyboard input buffer in normal mode and you won't be able to go back and fetch them later in extended mode.</div>
 </div>
@@ -12965,6 +13379,8 @@ KEYBOARD &quot;AB&quot;; ? Inkey(), Inkey()  // -&gt;   65   66
 <div class="d-it">Started</div>
 <div class="d-d">Compliance</div>
 <div class="d-it"><code><a href="#inkey">Inkey()</a></code> is compliant with the CA-Cl*pper 5.3 <code><a href="#inkey">Inkey()</a></code> function with one exception: The Harbour <code><a href="#inkey">Inkey()</a></code> function will raise an argument error if the first parameter is less than or equal to 0 and the second parameter (or the default mask) is not valid, because otherwise <code><a href="#inkey">Inkey()</a></code> would never return, because it was, in effect, asked to wait forever for no events (Note: In CA-Cl*pper, this also blocks <code>SET KEY</code> events).</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13002,6 +13418,8 @@ KEYBOARD &quot;AB&quot;; ? Inkey(), LastKey()  // -&gt;   65   65
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it"><code><a href="#lastkey">LastKey()</a></code> is compliant with CA-Cl*pper 5.3, but has been extended for Harbour.</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13098,6 +13516,8 @@ ENDIF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">API, User interface</div>
 <div class="d-d">See also</div>
@@ -13127,6 +13547,8 @@ ENDIF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it"><code><a href="#mrow">MRow()</a></code> is compliant with CA-Cl*pper 5.3, but has been extended to work on graphical systems as well as character-based systems.</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13171,6 +13593,8 @@ KEYBOARD &quot;AB&quot;; ? NextKey(), NextKey()  // -&gt;   65   65
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it"><code><a href="#nextkey">NextKey()</a></code> is compliant with CA-Cl*pper 5.3, but has been extended for Harbour.</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13191,7 +13615,7 @@ KEYBOARD &quot;AB&quot;; ? NextKey(), NextKey()  // -&gt;   65   65
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#outerr">OutErr()</a></code> write one or more values into the standard error device. Character and Memo values are printed as is, Dates are printed according to the <code>SET DATE <code>FORMAT</code></code>, Numeric values are converted to strings, Logical values are printed as <code>.T.</code> or <code>.F.</code>, <code>NIL</code> are printed as <code>NIL</code>, values of any other kind are printed as empty string. There is one space separating each two values. Note that Numeric value can take varying length when converted into string depending on its source (see <code><a href="#str">Str()</a></code> for detail).</div>
-  <div><p>There is an undocumented CA-Cl*pper command-line switch <code>//STDERR</code> which can set the file handle to write output from <code><a href="#outerr">OutErr()</a></code>. If not specified the default <code>STDERR</code> is used, <code>//STDERR</code> or <code>//STDERR:0</code> set <code><a href="#outerr">OutErr()</a></code> to output to the same file handle as <code><a href="#outstd">OutStd()</a></code>, <code>//STDERR:n</code> set output to file handle n. Like other undocumented features this switch is available only if <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/src/rtl/console.c">src/rtl/console.c</a></code> was compiled with the <code>HB_CLP_UNDOC</code> flag.</div>
+  <div><p>There is an undocumented CA-Cl*pper command-line switch <code>//STDERR</code> which can set the file handle to write output from <code><a href="#outerr">OutErr()</a></code>. If not specified the default <code>STDERR</code> is used, <code>//STDERR</code> or <code>//STDERR:0</code> set <code><a href="#outerr">OutErr()</a></code> to output to the same file handle as <code><a href="#outstd">OutStd()</a></code>, <code>//STDERR:n</code> set output to file handle n. Like other undocumented features this switch is available only if <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/src/rtl/console.c">src/rtl/console.c</a></code> was compiled with the <code>HB_CLP_UNDOC</code> flag.</div>
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
@@ -13202,6 +13626,8 @@ OutErr( hb_DateTime(), &quot;Core meltdown detected&quot; )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13235,6 +13661,8 @@ OutStd( &quot;B&quot; )                // Result:          1 .T. NIL AB
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13277,7 +13705,9 @@ OutStd( &quot;B&quot; )                // Result:          1 .T. NIL AB
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it"><code><a href="#readkey">ReadKey()</a></code> is compliant with CA-Cl*pper 5.3</div>
+<div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13354,12 +13784,14 @@ STATIC PROCEDURE ShowVar()
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
 for a good example, look at the source code for Browse() function
-at <a href="https://github.com/vszakats/harbour-core/blob/2c06e53/src/rtl/browse.prg">src/rtl/browse.prg</a>
+at <a href="https://github.com/vszakats/harbour-core/blob/b1b439a/src/rtl/browse.prg">src/rtl/browse.prg</a>
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Started</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13385,6 +13817,8 @@ at <a href="https://github.com/vszakats/harbour-core/blob/2c06e53/src/rtl/browse
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13422,6 +13856,8 @@ PRIVATE ThePrivate
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13455,6 +13891,8 @@ FUNCTION MemVarBlock( cMemvar )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13484,6 +13922,8 @@ None Avaliable
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13511,6 +13951,8 @@ None Avaliable
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13542,6 +13984,8 @@ FUNCTION MemVarBlock( cMemvar )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13571,6 +14015,8 @@ None Avaliable
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13588,7 +14034,7 @@ None Avaliable
 <div class="d-it"><code>cVarName</code> = a string with a variable name to check</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
-  <div>The symbolic values are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hbmemvar.ch">hbmemvar.ch</a></code></div>
+  <div>The symbolic values are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hbmemvar.ch">hbmemvar.ch</a></code></div>
   <div class="d-t d-t0">
   <div> HB_MV_NOT_FOUND      variable is not declared (not found in symbol table)</div>
   <div> HB_MV_UNKNOWN        if variable doesn't exist (but found in symbol table)</div>
@@ -13632,6 +14078,8 @@ PROCEDURE CallProc()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13683,6 +14131,8 @@ PROCEDURE Main()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13719,6 +14169,8 @@ PROCEDURE Main()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13767,6 +14219,8 @@ STATIC PROCEDURE Test( Arg1, Arg2, Arg3, Arg4 )
 <div class="d-it">Started</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13803,6 +14257,8 @@ ACCEPT &quot;Enter your name: &quot; TO cName
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13837,6 +14293,8 @@ Eval( cbSetGet, &quot;new value&quot; )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13919,6 +14377,8 @@ PRIVATE lCond := 0
   <div>- Harbour supports two new types (Pointer and Symbol) which does</div>
   <div>not exists in CA-Cl*pper.</div>
 </div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -13974,6 +14434,8 @@ PRIVATE lCond := 0
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it"><code><a href="#valtype">ValType()</a></code> is CA-Cl*pper compliant, with the addition of the new Harbour types: Pointer and Symbol.</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -14153,7 +14615,7 @@ hb_mathGetErrMode( void ) → imode
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 <div class="d-d">See also</div>
@@ -14187,7 +14649,7 @@ hb_mathGetHandler( void ) → HB_MATH_HANDLERPROC handlerproc
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 </section>
@@ -14213,7 +14675,7 @@ hb_mathGetLastError( HB_MATH_EXCEPTION * phb_exc )
 <pre>
 typedef struct _HB_MATH_EXCEPTION {
   int type;        // Math error type, is one of the constants
-                   // HB_MATH_ERR_xxx defined in <a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hbmath.ch">hbmath.ch</a>
+                   // HB_MATH_ERR_xxx defined in <a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hbmath.ch">hbmath.ch</a>
   char *funcname;  // Pointer to name of the math C RTL routine
                    // that caused the error.
   char *error;     // Pointer to error description.
@@ -14237,7 +14699,7 @@ typedef struct _HB_MATH_EXCEPTION {
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 </section>
@@ -14264,7 +14726,7 @@ hb_mathIsMathErr( void ) → int iIsMathHandler
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 </section>
@@ -14289,7 +14751,7 @@ hb_mathResetError( void )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 </section>
@@ -14310,7 +14772,7 @@ hb_mathSetErrMode( int imode ) → int ioldmode
 <div class="d-d">Argument(s)</div>
 <div class="d-it">
   <div>imode        math error handling mode, one of the following</div>
-  <div>constants, defined in <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hbmath.ch">hbmath.ch</a></code>:</div>
+  <div>constants, defined in <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hbmath.ch">hbmath.ch</a></code>:</div>
   <div class="d-t d-t0">
   <div>HB_MATH_ERRMODE_DEFAULT</div>
   <div>HB_MATH_ERRMODE_CDEFAULT</div>
@@ -14329,7 +14791,7 @@ hb_mathSetErrMode( int imode ) → int ioldmode
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 <div class="d-d">See also</div>
@@ -14367,7 +14829,7 @@ hb_mathSetHandler( HB_MATH_HANDLERPROC handlerproc )
 <div class="d-d">Platform(s)</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
-<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/2c06e53/include/hbmath.h">hbmath.h</a></code> Library is core</div>
+<div class="d-it">Header file is <code><a href="https://github.com/vszakats/harbour-core/blob/b1b439a/include/hbmath.h">hbmath.h</a></code> Library is core</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">C level API, Math</div>
 </section>
@@ -14972,6 +15434,8 @@ dbCloseArea()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Database</div>
 <div class="d-d">See also</div>
@@ -14999,6 +15463,8 @@ dbCloseArea()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Database</div>
 <div class="d-d">See also</div>
@@ -15037,6 +15503,8 @@ SET ALTERNATE OFF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Environment</div>
 <div class="d-d">See also</div>
@@ -15069,6 +15537,8 @@ SET BELL OFF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Environment</div>
 <div class="d-d">See also</div>
@@ -15096,6 +15566,8 @@ SET CENTURY OFF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Environment</div>
 <div class="d-d">See also</div>
@@ -15127,6 +15599,8 @@ SET CONSOLE OFF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Environment</div>
 <div class="d-d">See also</div>
@@ -15174,6 +15648,8 @@ SET DATE GERMAN
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Environment</div>
 <div class="d-d">See also</div>
@@ -15202,6 +15678,8 @@ SET DECIMALS TO 10
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Environment</div>
 <div class="d-d">See also</div>
@@ -15227,6 +15705,8 @@ SET DEFAULT TO C:\hb\tests
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Environment</div>
 <div class="d-d">See also</div>
@@ -15261,6 +15741,8 @@ SET DEVICE TO SCREEN
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Environment</div>
 <div class="d-d">See also</div>
@@ -15286,6 +15768,8 @@ SET EPOCH TO 2000
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Environment</div>
 <div class="d-d">See also</div>
@@ -15328,6 +15812,8 @@ SET FIXED OFF
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Environment</div>
 <div class="d-d">See also</div>
@@ -15399,6 +15885,8 @@ SET INTENSITY ON
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Environment</div>
 <div class="d-d">See also</div>
@@ -15438,6 +15926,8 @@ IF bBlock != NIL ...
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it"><code>SET KEY</code> is mostly CA-Cl*pper compliant. The only difference is the addition of the condition code-block parameter, allowing set-keys to be conditionally turned off or on.  This condition-block cannot be returned once set - see <code>SetKeyGet()</code></div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Environment</div>
 <div class="d-d">See also</div>
@@ -15461,12 +15951,14 @@ IF bBlock != NIL ...
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-See <a href="https://github.com/vszakats/harbour-core/blob/2c06e53/tests/menuto.prg">tests/menuto.prg</a>
+See <a href="https://github.com/vszakats/harbour-core/blob/b1b439a/tests/menuto.prg">tests/menuto.prg</a>
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Environment</div>
 <div class="d-d">See also</div>
@@ -15492,6 +15984,8 @@ SET PATH TO C:\hb\tests
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Environment</div>
 <div class="d-d">See also</div>
@@ -15533,6 +16027,8 @@ SET PRINTER .F.
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Environment</div>
 <div class="d-d">See also</div>
@@ -15552,12 +16048,14 @@ SET PRINTER .F.
 <div class="d-it">This command toggles the highlighted bars in a <code>@...PROMPT</code> command to wrap around in a bottom-to-top and top-to-bottom manner. If the value of the logical expression <code>lWrap</code> is a logical false (<code>.F.</code>), the wrapping mode is set <code>OFF</code>; otherwise, it is set <code>ON</code>.</div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-See <a href="https://github.com/vszakats/harbour-core/blob/2c06e53/tests/menuto.prg">tests/menuto.prg</a>
+See <a href="https://github.com/vszakats/harbour-core/blob/b1b439a/tests/menuto.prg">tests/menuto.prg</a>
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, Environment</div>
 <div class="d-d">See also</div>
@@ -15584,6 +16082,8 @@ COPY FILE adir.prg TO LPT1
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, FileSys</div>
 <div class="d-d">See also</div>
@@ -15612,6 +16112,8 @@ DELETE FILE test.txt
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, FileSys</div>
 <div class="d-d">See also</div>
@@ -15682,6 +16184,8 @@ ERASE test.txt
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, FileSys</div>
 <div class="d-d">See also</div>
@@ -15713,6 +16217,8 @@ RENAME test.txt TO test.old
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">File(s)</div>
 <div class="d-it">Library is core</div>
 <div class="d-d">Tag(s)</div>
@@ -15764,6 +16270,8 @@ TYPE mytext.dat TO FILE myreport
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, FileSys</div>
 <div class="d-d">See also</div>
@@ -16085,6 +16593,8 @@ ENDCASE
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, User interface</div>
 <div class="d-d">See also</div>
@@ -16159,7 +16669,9 @@ KEYBOARD &quot;Hello&quot;; CLEAR TYPEAHEAD; ? Inkey()  // -&gt; 0
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
-<div class="d-it"><code>KEYBOARD</code> is compliant with CA-Cl*pper 5.3</div>
+<div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Command, User interface</div>
 <div class="d-d">See also</div>
@@ -16269,6 +16781,8 @@ PROCEDURE Main()
 </div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16281,6 +16795,8 @@ PROCEDURE Main()
 <div class="d-it">The used data is not of logical type.</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16293,6 +16809,8 @@ PROCEDURE Main()
 <div class="d-it">The attempt to retrieve data from non-array value.</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16305,6 +16823,8 @@ PROCEDURE Main()
 <div class="d-it">The specified index into an array was greater then the number of elements in the array.</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16317,6 +16837,8 @@ PROCEDURE Main()
 <div class="d-it">The attempt to set data to non-array value.</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16333,6 +16855,8 @@ PROCEDURE Main()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16349,6 +16873,8 @@ PROCEDURE Main()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16365,6 +16891,8 @@ PROCEDURE Main()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16381,6 +16909,8 @@ PROCEDURE Main()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16397,6 +16927,8 @@ PROCEDURE Main()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16413,6 +16945,8 @@ PROCEDURE Main()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16425,6 +16959,8 @@ PROCEDURE Main()
 <div class="d-it">The arguments of '$' operator are not a strings.</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16441,6 +16977,8 @@ PROCEDURE Main()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16457,6 +16995,8 @@ PROCEDURE Main()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16473,6 +17013,8 @@ PROCEDURE Main()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16489,6 +17031,8 @@ PROCEDURE Main()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16505,6 +17049,8 @@ PROCEDURE Main()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16521,6 +17067,8 @@ PROCEDURE Main()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16537,6 +17085,8 @@ Mod()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16553,6 +17103,8 @@ Abs()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16569,6 +17121,8 @@ INT()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16585,6 +17139,8 @@ Min()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16601,6 +17157,8 @@ Max()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16617,6 +17175,8 @@ Round()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16633,6 +17193,8 @@ Log()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16649,6 +17211,8 @@ Exp()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16665,6 +17229,8 @@ Sqrt()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16681,6 +17247,8 @@ Val()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16697,6 +17265,8 @@ Str()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16713,6 +17283,8 @@ RTrim(), Trim()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16729,6 +17301,8 @@ LTrim()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16745,6 +17319,8 @@ Upper()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16761,6 +17337,8 @@ Lower()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16777,6 +17355,8 @@ Chr()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16793,6 +17373,8 @@ Space()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16809,6 +17391,8 @@ Replicate()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16825,6 +17409,8 @@ Asc()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16841,6 +17427,8 @@ At()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16857,6 +17445,8 @@ SubStr()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16873,6 +17463,8 @@ Len()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16889,6 +17481,8 @@ Year()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16905,6 +17499,8 @@ Month()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16921,6 +17517,8 @@ Day()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16937,6 +17535,8 @@ DoW()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16953,6 +17553,8 @@ CMonth()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16969,6 +17571,8 @@ CDoW()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -16985,6 +17589,8 @@ DToS()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17001,6 +17607,8 @@ Transform()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17017,6 +17625,8 @@ Left()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17033,6 +17643,8 @@ StrTran()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17045,6 +17657,8 @@ StrTran()
 <div class="d-it">The specified index into an array was greater then the number of elements in the array.</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17057,6 +17671,8 @@ StrTran()
 <div class="d-it">The specified index into an array was greater then the number of elements in the array.</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17073,6 +17689,8 @@ __CopyFile()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17089,6 +17707,8 @@ __CopyFile()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17105,6 +17725,8 @@ AEval()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17124,6 +17746,8 @@ SET MESSAGE
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17140,6 +17764,8 @@ __objClone()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17156,6 +17782,8 @@ __INSTSUPER()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17172,6 +17800,8 @@ __INSTSUPER()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17188,6 +17818,8 @@ __CLASSMOD()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17204,6 +17836,8 @@ ISMESSAGE(), OSEND()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17220,6 +17854,8 @@ Inkey()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17236,6 +17872,8 @@ __mvPrivate(), __mvPublic()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17252,6 +17890,8 @@ __mvGet()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17268,6 +17908,8 @@ __mvPut()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17284,6 +17926,8 @@ hb_PValue()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17300,6 +17944,8 @@ Do()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17316,6 +17962,8 @@ __obj*()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17332,6 +17980,8 @@ __obj*()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17348,6 +17998,8 @@ __obj*()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17364,6 +18016,8 @@ Set(), SET ALTERNATE TO
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17380,6 +18034,8 @@ IsLeapYear()
 </pre>
 <div class="d-d">Compliance</div>
 <div class="d-it">Harbour specific</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">Runtime errors</div>
 </section>
@@ -17478,7 +18134,7 @@ IsLeapYear()
 </div>
 <div class="d-d">Example(s)</div>
 <pre class="d-ex">
-See <a href="https://github.com/vszakats/harbour-core/blob/2c06e53/tests/tbrowse.prg">tests/tbrowse.prg</a>
+See <a href="https://github.com/vszakats/harbour-core/blob/b1b439a/tests/tbrowse.prg">tests/tbrowse.prg</a>
 </pre>
 <div class="d-d">Status</div>
 <div class="d-it">Started</div>
@@ -17507,6 +18163,8 @@ See <a href="https://github.com/vszakats/harbour-core/blob/2c06e53/tests/tbrowse
 <div class="d-it"><code>Self</code>  The Current object</div>
 <div class="d-d">Description</div>
 <div class="d-it">This method add an new column object specified as <code>oCol</code> to the assigned browsing object.</div>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">TBrowse Method</div>
 </section>
@@ -17542,6 +18200,8 @@ DO WHILE .T.
    ENDIF
 ENDDO
 </pre>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">TBrowse Method</div>
 </section>
@@ -17599,6 +18259,8 @@ oTb:SetKey( K_ESC, NIL )
 <pre class="d-ex">
 oTb:SeyKey( K_F10, {| otb, nkey | ShowListByname( otb ) }
 </pre>
+<div class="d-d">Platform(s)</div>
+<div class="d-it">Available on all platforms</div>
 <div class="d-d">Tag(s)</div>
 <div class="d-it">TBrowse Method</div>
 </section>
@@ -17606,6 +18268,6 @@ oTb:SeyKey( K_F10, {| otb, nkey | ShowListByname( otb ) }
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-03 10:04 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/2c06e53">2c06e53</a></div>
+<div>Generated by hbdoc on 2016-11-03 11:11 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/b1b439a">b1b439a</a></div>
 </footer>
