@@ -597,4 +597,8 @@ p {
   main {
     padding-top: 74px;
   }
+
+  .d-id:target {
+    padding-top: 92px;  /* 74px + 18px */
+  }
 }
