@@ -25,6 +25,7 @@ header {
   border: none;
   height: 44px;
   line-height: 44px;
+  overflow: hidden;
 }
 
 header > div {
