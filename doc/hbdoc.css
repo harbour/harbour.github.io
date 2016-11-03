@@ -475,7 +475,6 @@ p {
 
 /* Dropdown Button */
 .dropbtn {
-  display: block;
   cursor: default;
   margin-left: 15px;
   transition: color .25s;
