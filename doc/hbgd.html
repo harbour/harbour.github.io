@@ -128,11 +128,10 @@ Harbour Reference Guide</a></div>
 
 <section id="gdimagearc" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageArc()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageArc()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Draws a partial ellipse centered at a given point.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageArc( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;s&gt;, &lt;e&gt;, &lt;nColor&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageArc( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;s&gt;, &lt;e&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>cx</code>           - center point horizontal position <code>cy</code>           - center point vertical position <code>w</code>            - width <code>h</code>            - height <code>s</code>            - start degree <code>e</code>            - end degree <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
@@ -172,11 +171,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagecreate" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageCreate()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageCreate()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Create a palette-based image in memory with no more that 256 colors.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageCreate( &lt;nPixelWidth&gt;, &lt;nPixelHeight&gt; ) → &lt;pImage&gt;</code></div>
+<div class="d-sy"><pre><code>gdImageCreate( &lt;nPixelWidth&gt;, &lt;nPixelHeight&gt; ) → &lt;pImage&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nPixelWidth</code>  - image width <code>nPixelHeight</code> - image height</div>
 <div class="d-d">Returns</div>
@@ -205,11 +203,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagecreatefromgd" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageCreateFromGD()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageCreateFromGD()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Load a GD image file.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageCreateFromGD( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → &lt;pImage&gt;</code></div>
+<div class="d-sy"><pre><code>gdImageCreateFromGD( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → &lt;pImage&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>cFile</code>        - Image file name <code>nHandle</code>      - File handle <code>pPointer</code>     - Memory image pointer <code>nSize</code>        - Image size</div>
 <div class="d-d">Returns</div>
@@ -248,11 +245,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagecreatefromgif" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageCreateFromGif()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageCreateFromGif()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Load a Gif image file.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageCreateFromGif( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → &lt;pImage&gt;</code></div>
+<div class="d-sy"><pre><code>gdImageCreateFromGif( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → &lt;pImage&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>cFile</code>        - Image file name <code>nHandle</code>      - File handle <code>pPointer</code>     - Memory image pointer <code>nSize</code>        - Image size</div>
 <div class="d-d">Returns</div>
@@ -291,11 +287,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagecreatefromjpeg" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageCreateFromJpeg()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageCreateFromJpeg()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Load a JPEG image file.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageCreateFromJpeg( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → &lt;pImage&gt;</code></div>
+<div class="d-sy"><pre><code>gdImageCreateFromJpeg( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → &lt;pImage&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>cFile</code>        - Image file name <code>nHandle</code>      - File handle <code>pPointer</code>     - Memory image pointer <code>nSize</code>        - Image size</div>
 <div class="d-d">Returns</div>
@@ -334,11 +329,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagecreatefrompng" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageCreateFromPng()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageCreateFromPng()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Load a PNG image file.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageCreateFromPng( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → &lt;pImage&gt;</code></div>
+<div class="d-sy"><pre><code>gdImageCreateFromPng( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → &lt;pImage&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>cFile</code>        - Image file name <code>nHandle</code>      - File handle <code>pPointer</code>     - Memory image pointer <code>nSize</code>        - Image size</div>
 <div class="d-d">Returns</div>
@@ -377,11 +371,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagecreatefromwbmp" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageCreateFromWBmp()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageCreateFromWBmp()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Load a WBmp image file.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageCreateFromWBmp( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → &lt;pImage&gt;</code></div>
+<div class="d-sy"><pre><code>gdImageCreateFromWBmp( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → &lt;pImage&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>cFile</code>        - Image file name <code>nHandle</code>      - File handle <code>pPointer</code>     - Memory image pointer <code>nSize</code>        - Image size</div>
 <div class="d-d">Returns</div>
@@ -420,11 +413,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagecreatetruecolor" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageCreateTrueColor()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageCreateTrueColor()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Create a true color image in memory.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageCreateTrueColor( &lt;nPixelWidth&gt;, &lt;nPixelHeight&gt; ) → &lt;pImage&gt;</code></div>
+<div class="d-sy"><pre><code>gdImageCreateTrueColor( &lt;nPixelWidth&gt;, &lt;nPixelHeight&gt; ) → &lt;pImage&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nPixelWidth</code>  - image width <code>nPixelHeight</code> - image height</div>
 <div class="d-d">Returns</div>
@@ -453,11 +445,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagedashedline" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageDashedLine()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageDashedLine()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Draws a dashed line between two end points (x1, y1 and x2, y2) with a particular color index.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageDashedLine( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageDashedLine( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>x1</code>           - 1st point horizontal position <code>y1</code>           - 1st point vertical position <code>x2</code>           - 2nd point horizontal position <code>y2</code>           - 2nd point vertical position <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
@@ -497,11 +488,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagefill" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageFill()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageFill()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">floods a portion of the image with the specified color.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageFill( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nColor&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageFill( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>x</code>            - start point horizontal position <code>y</code>            - start point vertical position <code>nColor</code>       - Color index of filling color</div>
 <div class="d-d">Returns</div>
@@ -545,11 +535,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagefilledarc" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageFilledArc()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageFilledArc()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Draws a partial filled ellipse centered at a given point.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageArc( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;s&gt;, &lt;e&gt;, &lt;nColor&gt;, &lt;nStyle&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageArc( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;s&gt;, &lt;e&gt;, &lt;nColor&gt;, &lt;nStyle&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>cx</code>           - center point horizontal position <code>cy</code>           - center point vertical position <code>w</code>            - width <code>h</code>            - height <code>s</code>            - start degree <code>e</code>            - end degree <code>nColor</code>       - Color index <code>nStyle</code>       - fill style</div>
 <div class="d-d">Returns</div>
@@ -567,7 +556,7 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
   <div>gdEdged</div>
 </div>
   <div><p><code>gdArc</code> and <code>gdChord</code> are mutually exclusive; <code>gdChord</code> just connects the starting and ending angles with a straight line, while <code>gdArc</code> produces a rounded edge. <code>gdPie</code> is a synonym for <code>gdArc</code>. <code>gdNoFill</code> indicates that the arc or chord should be outlined, not filled. <code>gdEdged</code>, used together with <code>gdNoFill</code>, indicates that the beginning and ending angles should be connected to the center; this is a good way to outline (rather than fill) a 'pie slice'</div>
-  <div><p>these constants are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gd.ch">gd.ch</a></code></div>
+  <div><p>these constants are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gd.ch">gd.ch</a></code></div>
 </div>
 <div class="d-d">Example</div>
 <pre class="d-ex"><code class="language-c">#include &quot;gd.ch&quot;
@@ -604,11 +593,10 @@ PROCEDURE Main()
 
 <section id="gdimagefilledellipse" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageFilledEllipse()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageFilledEllipse()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Draws a filled ellipse centered at a given point.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageFilledEllipse( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;nColor&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageFilledEllipse( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>cx</code>           - center point horizontal position <code>cy</code>           - center point vertical position <code>w</code>            - width <code>h</code>            - height <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
@@ -648,11 +636,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagefilledpolygon" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageFilledPolygon()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageFilledPolygon()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Draws a filled polygon with verticies (at least 3) with a particular color index.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageFilledPolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageFilledPolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>pImage</code>       - Image pointer <code>aVerticies</code>   - Array of point array { <code>x</code>, <code>y</code> } where</div>
@@ -700,11 +687,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagefilledrectangle" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageFilledRectangle()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageFilledRectangle()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Draws a filled rectangle with a particular color index.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageFilledRectangle( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageFilledRectangle( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>x1</code>           - upper left point horizontal position <code>y1</code>           - upper left point vertical position <code>x2</code>           - lower right point horizontal position <code>y2</code>           - lower right point vertical position <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
@@ -744,11 +730,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagefilltoborder" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageFillToBorder()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageFillToBorder()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">floods a portion of the image with the specified color.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageFillToBorder( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nBorder&gt;, &lt;nColor&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageFillToBorder( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nBorder&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>x</code>            - start point horizontal position <code>y</code>            - start point vertical position <code>nBorder</code>      - Color index where fill stops <code>nColor</code>       - Color index of filling color</div>
 <div class="d-d">Returns</div>
@@ -792,11 +777,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagegd" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageGD()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageGD()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Save a GD image.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageGD( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageGD( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>cFile</code>        - Image file name <code>nHandle</code>      - File handle</div>
 <div class="d-d">Returns</div>
@@ -831,11 +815,10 @@ gdImageGD( pImage, &quot;myimage.gd&quot; )
 
 <section id="gdimagegif" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageGif()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageGif()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Save a GIF image.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageGif( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageGif( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>cFile</code>        - Image file name <code>nHandle</code>      - File handle</div>
 <div class="d-d">Returns</div>
@@ -870,11 +853,10 @@ gdImageGif( pImage, &quot;myimage.gif&quot; )
 
 <section id="gdimagejpeg" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageJpeg()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageJpeg()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Save a JPEG image.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageJpeg( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nCompressionLevel&gt; ] ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageJpeg( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nCompressionLevel&gt; ] ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>pImage</code>       - Image pointer <code>cFile</code>        - Image file name <code>nHandle</code>      - File handle <code>nCompressionLevel</code> - a numeric value between 0=max compression and 95=min compression (best quality)</div>
@@ -912,11 +894,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimageline" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageLine()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageLine()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Draws a line between two end points (x1, y1 and x2, y2) with a particular color index.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageLine( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageLine( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>x1</code>           - 1st point horizontal position <code>y1</code>           - 1st point vertical position <code>x2</code>           - 2nd point horizontal position <code>y2</code>           - 2nd point vertical position <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
@@ -956,11 +937,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimageopenpolygon" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageOpenPolygon()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageOpenPolygon()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Draws an open polygon with verticies (at least 3) with a particular color index.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageOpenPolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageOpenPolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>pImage</code>       - Image pointer <code>aVerticies</code>   - Array of point array { <code>x</code>, <code>y</code> } where</div>
@@ -1008,11 +988,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagepng" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImagePng()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImagePng()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Save a PNG image.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImagePng( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nCompressionLevel&gt; ] ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImagePng( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nCompressionLevel&gt; ] ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>pImage</code>       - Image pointer <code>cFile</code>        - Image file name <code>nHandle</code>      - File handle <code>nCompressionLevel</code> - a numeric value between 0=no compression and 9=max compression</div>
@@ -1050,11 +1029,10 @@ gdImagePng( pImage, &quot;myimage.png&quot; )
 
 <section id="gdimagepolygon" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImagePolygon()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImagePolygon()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Draws a closed polygon with verticies (at least 3) with a particular color index.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImagePolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImagePolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>pImage</code>       - Image pointer <code>aVerticies</code>   - Array of point array { <code>x</code>, <code>y</code> } where</div>
@@ -1102,11 +1080,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagerectangle" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageRectangle()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageRectangle()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Draws a rectangle with a particular color index.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageRectangle( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageRectangle( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>x1</code>           - upper left point horizontal position <code>y1</code>           - upper left point vertical position <code>x2</code>           - lower right point horizontal position <code>y2</code>           - lower right point vertical position <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
@@ -1146,11 +1123,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagesetantialiased" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageSetAntiAliased()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageSetAntiAliased()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">specify the actual foreground color to be used when drawing antialiased lines.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageSetAntiAliased( &lt;pImage&gt;, &lt;nColor&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageSetAntiAliased( &lt;pImage&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>nColor</code>       - Color index of filling color</div>
 <div class="d-d">Returns</div>
@@ -1202,11 +1178,10 @@ PROCEDURE Main()
 
 <section id="gdimagesetantialiaseddontblend" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageSetAntiAliasedDontBlend()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageSetAntiAliasedDontBlend()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">indicate the special color that the foreground should stand out more clearly against.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageSetAntiAliasedDontBlend( &lt;pImage&gt;, &lt;nColor&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageSetAntiAliasedDontBlend( &lt;pImage&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>nColor</code>       - Color index of filling color</div>
 <div class="d-d">Returns</div>
@@ -1259,11 +1234,10 @@ PROCEDURE Main()
 
 <section id="gdimagesetbrush" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageSetBrush()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageSetBrush()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">A &quot;brush&quot; is an image used to draw wide, shaped strokes in another image.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageSetBrush( &lt;pImage&gt;, &lt;pBrush&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageSetBrush( &lt;pImage&gt;, &lt;pBrush&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>pBrush</code>       - Brush Image pointer</div>
 <div class="d-d">Returns</div>
@@ -1311,11 +1285,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagesetpixel" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageSetPixel()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageSetPixel()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Set a pixel to a particular color index.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageSetPixel( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nColor&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageSetPixel( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>x</code>            - Horizontal position <code>y</code>            - Vertical position <code>nColor</code>       - Color index</div>
 <div class="d-d">Returns</div>
@@ -1355,11 +1328,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagesetstyle" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageSetStyle()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageSetStyle()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">set any desired series of colors to be repeated during the drawing of a line.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageSetStyle( &lt;pImage&gt;, &lt;aStyle&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageSetStyle( &lt;pImage&gt;, &lt;aStyle&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>aStyle</code>       - Array of colors and special colors used to &quot;style&quot; a line</div>
 <div class="d-d">Returns</div>
@@ -1426,11 +1398,10 @@ PROCEDURE Main()
 
 <section id="gdimagesetthickness" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageSetThickness()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageSetThickness()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">determines the width of lines drawn in pixels.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageSetThickness( &lt;pImage&gt;, &lt;nThickness&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageSetThickness( &lt;pImage&gt;, &lt;nThickness&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>nThickness</code>   - width of line in pixel</div>
 <div class="d-d">Returns</div>
@@ -1476,11 +1447,10 @@ PROCEDURE Main()
 
 <section id="gdimagesettile" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageSetTile()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageSetTile()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">A &quot;tile&quot; is an image used to fill an area with a repeated pattern.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageSetTile( &lt;pImage&gt;, &lt;pTile&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageSetTile( &lt;pImage&gt;, &lt;pTile&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>pTile</code>        - Tile Image pointer</div>
 <div class="d-d">Returns</div>
@@ -1530,11 +1500,10 @@ gdImageJpeg( pImage, &quot;myimage.jpg&quot; )
 
 <section id="gdimagewbmp" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span>
-<h4><code>gdImageWBmp()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
+<h4><code>gdImageWBmp()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbgd/gdwrp.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Save a WBMP image.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gdImageWBmp( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nFGcolor&gt; ] ) → NIL</code></div>
+<div class="d-sy"><pre><code>gdImageWBmp( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nFGcolor&gt; ] ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>pImage</code>       - Image pointer <code>cFile</code>        - Image file name <code>nHandle</code>      - File handle <code>nFGcolor</code>     - foreground color value to be used as foreground, the others are background</div>
 <div class="d-d">Returns</div>
@@ -1583,8 +1552,8 @@ gdImageWBmp( pImage, &quot;myimage.wbmp&quot;, black )
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-05 13:19 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/f5d66ca">f5d66ca</a></div>
+<div>Generated by hbdoc on 2016-11-05 16:05 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/b5e0b16">b5e0b16</a></div>
 <div>Content processing, layout &amp; design © 2016 <a href="https://github.com/vszakats">vszakats</a></div>
 </footer>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>

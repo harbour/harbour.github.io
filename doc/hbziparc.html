@@ -82,11 +82,10 @@ Harbour Reference Guide</a></div>
 
 <section id="hb_getzipcomment" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbziparc/doc/en/ziparc.txt">Improve this doc</a></span>
-<h4><code>hb_GetZipComment()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
+<h4><code>hb_GetZipComment()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
 <div class="d-ol">Return the comment of an zip file</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>hb_GetZipComment( &lt;szFile&gt; ) → &lt;szComment&gt;</code></div>
+<div class="d-sy"><pre><code>hb_GetZipComment( &lt;szFile&gt; ) → &lt;szComment&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>szFile</code>  File to get the comment from</div>
 <div class="d-d">Returns</div>
@@ -110,10 +109,9 @@ Harbour Reference Guide</a></div>
 
 <section id="hb_setbuffer" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbziparc/doc/en/ziparc.txt">Improve this doc</a></span>
-<h4><code>hb_SetBuffer()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
+<h4><code>hb_SetBuffer()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>hb_SetBuffer( [&lt;nWriteBuffer&gt;], [&lt;nExtractBuffer&gt;], [&lt;nReadBuffer&gt;] ) → NIL</code></div>
+<div class="d-sy"><pre><code>hb_SetBuffer( [&lt;nWriteBuffer&gt;], [&lt;nExtractBuffer&gt;], [&lt;nReadBuffer&gt;] ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>nWriteBuffer</code>   The size of the write buffer.</div>
@@ -145,11 +143,10 @@ Harbour Reference Guide</a></div>
 
 <section id="hb_setdiskzip" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbziparc/doc/en/ziparc.txt">Improve this doc</a></span>
-<h4><code>hb_SetDiskZip()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
+<h4><code>hb_SetDiskZip()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
 <div class="d-ol">Set a codeblock for disk changes</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>hb_SetDiskZip( &lt;bBlock&gt; ) → .T.</code></div>
+<div class="d-sy"><pre><code>hb_SetDiskZip( &lt;bBlock&gt; ) → .T.</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>bBlock</code> a codeblock that contains an function that will be performed when the need of changing disk are need.</div>
 <div class="d-d">Returns</div>
@@ -174,11 +171,10 @@ Harbour Reference Guide</a></div>
 
 <section id="hb_setzipcomment" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbziparc/doc/en/ziparc.txt">Improve this doc</a></span>
-<h4><code>hb_SetZipComment()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
+<h4><code>hb_SetZipComment()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
 <div class="d-ol">Set an Zip archive Comment</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>hb_SetZipComment( &lt;cComment&gt; ) → NIL</code></div>
+<div class="d-sy"><pre><code>hb_SetZipComment( &lt;cComment&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>cComment</code>   Comment to add to the zip archive</div>
 <div class="d-d">Returns</div>
@@ -203,10 +199,10 @@ hb_ZipFile( &quot;test.zip&quot;, { &quot;ios.ini&quot;, &quot;win.ini&quot; } )
 
 <section id="hb_unzipfile" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbziparc/doc/en/ziparc.txt">Improve this doc</a></span>
-<h4><code>hb_UnzipFile()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
+<h4><code>hb_UnzipFile()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
 <div class="d-ol">Unzip a compressed file</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
+<div class="d-sy">
 <pre><code>hb_UnzipFile( &lt;cFile&gt;, &lt;bBlock&gt;, &lt;lWithPath&gt;, &lt;cPassword&gt;, &lt;cPath&gt;,
               &lt;cFile&gt; | &lt;aFile&gt;, &lt;pFileProgress&gt; ) → &lt;lCompress&gt;
 </code></pre>
@@ -258,11 +254,10 @@ ENDIF
 
 <section id="hb_zipdeletefiles" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbziparc/doc/en/ziparc.txt">Improve this doc</a></span>
-<h4><code>hb_ZipDeleteFiles()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
+<h4><code>hb_ZipDeleteFiles()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
 <div class="d-ol">Delete files from an zip archive</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>hb_ZipDeleteFiles( &lt;cFile&gt;, &lt;cFiletoDelete&gt; | &lt;aFiles&gt; | &lt;nFilePos&gt; ) → &lt;lDeleted&gt;</code></div>
+<div class="d-sy"><pre><code>hb_ZipDeleteFiles( &lt;cFile&gt;, &lt;cFiletoDelete&gt; | &lt;aFiles&gt; | &lt;nFilePos&gt; ) → &lt;lDeleted&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cFile</code>  The name of the zip files from where the files will be deleted</div>
@@ -293,10 +288,10 @@ ENDIF
 
 <section id="hb_zipfile" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbziparc/doc/en/ziparc.txt">Improve this doc</a></span>
-<h4><code>hb_ZipFile()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
+<h4><code>hb_ZipFile()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
 <div class="d-ol">Create a zip file</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
+<div class="d-sy">
 <pre><code>hb_ZipFile( &lt;cFile&gt;, &lt;cFileToCompress&gt; | &lt;aFiles&gt;, &lt;nLevel&gt;,
 &lt;bBlock&gt;, &lt;lOverWrite&gt;, &lt;cPassword&gt;, &lt;lWithPath&gt;, &lt;lWithDrive&gt;,
 &lt;pFileProgress&gt; ) → &lt;lCompress&gt;
@@ -362,10 +357,10 @@ hb_ZipFile( &quot;test33.zip&quot;, aFiles, 9, {| cFile, nPos | GaugeUpdate( aGa
 
 <section id="hb_zipfilebypkspan" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbziparc/doc/en/ziparc.txt">Improve this doc</a></span>
-<h4><code>hb_ZipFileByPKSpan()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
+<h4><code>hb_ZipFileByPKSpan()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
 <div class="d-ol">Create a zip file on removable media</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
+<div class="d-sy">
 <pre><code>hb_ZipFileByPKSpan( &lt;cFile&gt;, &lt;cFileToCompress&gt; | &lt;aFiles&gt;, &lt;nLevel&gt;,
 &lt;bBlock&gt;, &lt;lOverWrite&gt;, &lt;cPassword&gt;, &lt;lWithPath&gt;, &lt;lWithDrive&gt;,
 &lt;pFileProgress&gt; ) → &lt;lCompress&gt;
@@ -434,10 +429,10 @@ hb_ZipFileByPKSpan( &quot;test33.zip&quot;, aFiles, 9, {| cFile, nPos | GaugeUpd
 
 <section id="hb_zipfilebytdspan" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbziparc/doc/en/ziparc.txt">Improve this doc</a></span>
-<h4><code>hb_ZipFileByTDSpan()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
+<h4><code>hb_ZipFileByTDSpan()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
 <div class="d-ol">Create a zip file</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
+<div class="d-sy">
 <pre><code>hb_ZipFileByTDSpan( &lt;cFile&gt;, &lt;cFileToCompress&gt; | &lt;aFiles&gt;, &lt;nLevel&gt;,
 &lt;bBlock&gt;, &lt;lOverWrite&gt;, &lt;cPassword&gt;, &lt;iSize&gt;, &lt;lWithPath&gt;, &lt;lWithDrive&gt;,
 &lt;pFileProgress&gt;) → &lt;lCompress&gt;
@@ -503,11 +498,10 @@ hb_ZipFileByTDSpan( &quot;test33.zip&quot;, aFiles, 9, {| cFile, nPos | GaugeUpd
 
 <section id="hb_ziptestpk" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbziparc/doc/en/ziparc.txt">Improve this doc</a></span>
-<h4><code>hb_ZipTestPK()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
+<h4><code>hb_ZipTestPK()</code><a href="https://github.com/vszakats/harbour-core/blob/b5e0b16/contrib/hbziparc/ziparc.prg" class="d-so">Source code</a></h4>
 <div class="d-ol">Test pkSpanned zip files</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>hb_ZipTestPK( &lt;cFile&gt; ) → &lt;nReturnCode&gt;</code></div>
+<div class="d-sy"><pre><code>hb_ZipTestPK( &lt;cFile&gt; ) → &lt;nReturnCode&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>cFile</code>  File to be tested.</div>
 <div class="d-d">Returns</div>
@@ -542,8 +536,8 @@ ENDIF
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-05 13:19 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/f5d66ca">f5d66ca</a></div>
+<div>Generated by hbdoc on 2016-11-05 16:05 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/b5e0b16">b5e0b16</a></div>
 <div>Content processing, layout &amp; design © 2016 <a href="https://github.com/vszakats">vszakats</a></div>
 </footer>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>

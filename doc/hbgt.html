@@ -95,8 +95,7 @@ Harbour Reference Guide</a></div>
 <h4><code>gt_ClrFlag()</code></h4>
 <div class="d-ol">Set a number of flags to FALSE in a bit flag string.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_ClrFlag( &lt;cFlagString&gt;, [&lt;nStart&gt;], [&lt;nEnd&gt;] ) → &lt;cFlagString&gt;</code></div>
+<div class="d-sy"><pre><code>gt_ClrFlag( &lt;cFlagString&gt;, [&lt;nStart&gt;], [&lt;nEnd&gt;] ) → &lt;cFlagString&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cFlagString</code> is a bit flag string created with <code><a href="#gt_newflag">gt_NewFlag()</a></code></div>
@@ -136,8 +135,7 @@ cFlags := gt_ClrFlag( cFlags )
 <h4><code>gt_IsFlag()</code></h4>
 <div class="d-ol">Test the setting of a flag in a bit flag string.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_IsFlag( &lt;cFlagString&gt;, [&lt;nFlag&gt;] ) → &lt;lSetting&gt;</code></div>
+<div class="d-sy"><pre><code>gt_IsFlag( &lt;cFlagString&gt;, [&lt;nFlag&gt;] ) → &lt;lSetting&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cFlagString</code> is a bit flag string created with <code><a href="#gt_newflag">gt_NewFlag()</a></code></div>
@@ -167,8 +165,7 @@ NEXT
 <h4><code>gt_NewFlag()</code></h4>
 <div class="d-ol">Create a new bit flag string.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_NewFlag( &lt;nFlagCount&gt; ) → &lt;cFlagString&gt;</code></div>
+<div class="d-sy"><pre><code>gt_NewFlag( &lt;nFlagCount&gt; ) → &lt;cFlagString&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nFlagCount</code> is the number of flags you wish to store.</div>
 <div class="d-d">Returns</div>
@@ -194,8 +191,7 @@ NEXT
 <h4><code>gt_SetFlag()</code></h4>
 <div class="d-ol">Set a number of flags to TRUE in a bit flag string.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_SetFlag( &lt;cFlagString&gt;, [&lt;nStart&gt;], [&lt;nEnd&gt;] ) → &lt;cFlagString&gt;</code></div>
+<div class="d-sy"><pre><code>gt_SetFlag( &lt;cFlagString&gt;, [&lt;nStart&gt;], [&lt;nEnd&gt;] ) → &lt;cFlagString&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cFlagString</code> is a bit flag string created with <code><a href="#gt_newflag">gt_NewFlag()</a></code></div>
@@ -232,8 +228,7 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_AsciiSum()</code></h4>
 <div class="d-ol">Sum the ASCII values in a string.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_AsciiSum( &lt;cStr&gt; ) → &lt;nSum&gt;</code></div>
+<div class="d-sy"><pre><code>gt_AsciiSum( &lt;cStr&gt; ) → &lt;nSum&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>cStr</code> - The string to sum</div>
 <div class="d-d">Returns</div>
@@ -257,8 +252,7 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_AscPos()</code></h4>
 <div class="d-ol">Return the ASCII value of a specified character in a string</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_AscPos( &lt;cStr&gt;, &lt;nPos&gt; ) → &lt;nAscVal&gt;</code></div>
+<div class="d-sy"><pre><code>gt_AscPos( &lt;cStr&gt;, &lt;nPos&gt; ) → &lt;nAscVal&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cStr</code>    - The string</div>
@@ -295,8 +289,7 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_AtDiff()</code></h4>
 <div class="d-ol">Return the position where two strings begin to differ</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_AtDiff( &lt;cStr1&gt;, &lt;cStr2&gt; ) → &lt;nPos&gt;</code></div>
+<div class="d-sy"><pre><code>gt_AtDiff( &lt;cStr1&gt;, &lt;cStr2&gt; ) → &lt;nPos&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cStr1</code> - A character string to compare</div>
@@ -331,8 +324,7 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_CharEven()</code></h4>
 <div class="d-ol">Return a string of all the characters in even positions</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_CharEven( &lt;cStr&gt; ) → &lt;cRet&gt;</code></div>
+<div class="d-sy"><pre><code>gt_CharEven( &lt;cStr&gt; ) → &lt;cRet&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>cStr</code> - A character string to extract chars from</div>
 <div class="d-d">Returns</div>
@@ -363,8 +355,7 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_CharMix()</code></h4>
 <div class="d-ol">Amalgamate two strings to form the return value</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_CharMix( &lt;cStr1&gt;, &lt;cStr2&gt; ) → &lt;cRet&gt;</code></div>
+<div class="d-sy"><pre><code>gt_CharMix( &lt;cStr1&gt;, &lt;cStr2&gt; ) → &lt;cRet&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cStr1</code> - A character string to mix</div>
@@ -403,8 +394,7 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_CharOdd()</code></h4>
 <div class="d-ol">Return a string of all the characters in odd positions</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_CharOdd( &lt;cStr&gt; ) → &lt;cRet&gt;</code></div>
+<div class="d-sy"><pre><code>gt_CharOdd( &lt;cStr&gt; ) → &lt;cRet&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>cStr</code> - A character string to extract chars from</div>
 <div class="d-d">Returns</div>
@@ -435,8 +425,7 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_ChrCount()</code></h4>
 <div class="d-ol">Count the number of times a character appears in a string</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_ChrCount( &lt;cChr&gt;, &lt;cStr&gt; ) → &lt;nFreq&gt;</code></div>
+<div class="d-sy"><pre><code>gt_ChrCount( &lt;cChr&gt;, &lt;cStr&gt; ) → &lt;nFreq&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cChr</code>  - The character to find the frequence of</div>
@@ -470,8 +459,7 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_ChrFirst()</code></h4>
 <div class="d-ol">Find which character occurs first in a string</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_ChrFirst( &lt;cChars&gt;, &lt;cStr&gt; ) → &lt;nAsc&gt;</code></div>
+<div class="d-sy"><pre><code>gt_ChrFirst( &lt;cChars&gt;, &lt;cStr&gt; ) → &lt;nAsc&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cChars</code> - The set of characters to find</div>
@@ -505,8 +493,7 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_ChrTotal()</code></h4>
 <div class="d-ol">Find number of times a set of characters appears in a string</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_ChrTotal( &lt;cChrs&gt;, &lt;cStr&gt; ) → &lt;nTotOcc&gt;</code></div>
+<div class="d-sy"><pre><code>gt_ChrTotal( &lt;cChrs&gt;, &lt;cStr&gt; ) → &lt;nTotOcc&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cChrs</code>   - The set of characters</div>
@@ -546,8 +533,7 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_StrCount()</code></h4>
 <div class="d-ol">Count the number of times a substring appears in a string</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_StrCount( &lt;cChrs&gt;, &lt;cStr&gt; ) → &lt;nFreq&gt;</code></div>
+<div class="d-sy"><pre><code>gt_StrCount( &lt;cChrs&gt;, &lt;cStr&gt; ) → &lt;nFreq&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cChrs</code> - The substring to find the frequence of</div>
@@ -581,8 +567,7 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_StrCSPN()</code></h4>
 <div class="d-ol">Return length of prefix in string of chars NOT in set.</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_StrCSPN( &lt;cString&gt;, &lt;cSet&gt; ) → &lt;nLength&gt;</code></div>
+<div class="d-sy"><pre><code>gt_StrCSPN( &lt;cString&gt;, &lt;cSet&gt; ) → &lt;nLength&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cString</code> - The string to find the prefix in</div>
@@ -613,8 +598,7 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_StrDiff()</code></h4>
 <div class="d-ol">Return a string where it begins to differ from another</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_StrDiff( &lt;cStr1&gt;, &lt;cStr2&gt; ) → &lt;cRet&gt;</code></div>
+<div class="d-sy"><pre><code>gt_StrDiff( &lt;cStr1&gt;, &lt;cStr2&gt; ) → &lt;cRet&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cStr1</code>  - A character string to compare</div>
@@ -652,8 +636,7 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_StrExpand()</code></h4>
 <div class="d-ol">Insert fillers between characters in a passed string</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_StrExpand( &lt;cStr&gt;, [&lt;nNum&gt;], [&lt;cChar&gt;] ) → &lt;cRet&gt;</code></div>
+<div class="d-sy"><pre><code>gt_StrExpand( &lt;cStr&gt;, [&lt;nNum&gt;], [&lt;cChar&gt;] ) → &lt;cRet&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cStr1</code> - A character string to insert chars into</div>
@@ -693,8 +676,7 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_StrLeft()</code></h4>
 <div class="d-ol">Find length of prefix of a string</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_StrLeft( &lt;cStr&gt;, &lt;cChars&gt; ) → &lt;nLen&gt;</code></div>
+<div class="d-sy"><pre><code>gt_StrLeft( &lt;cStr&gt;, &lt;cChars&gt; ) → &lt;nLen&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cStr</code>   - The input string</div>
@@ -729,8 +711,7 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_StrPBRK()</code></h4>
 <div class="d-ol">Return string after 1st char from a set</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_StrPBRK( &lt;cStr&gt;, &lt;cSet&gt; ) → &lt;cString&gt;</code></div>
+<div class="d-sy"><pre><code>gt_StrPBRK( &lt;cStr&gt;, &lt;cSet&gt; ) → &lt;cString&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cStr</code>    - The input string</div>
@@ -764,8 +745,7 @@ cFlags := gt_SetFlag( cFlags )
 <h4><code>gt_StrRight()</code></h4>
 <div class="d-ol">Find length of a suffix of a string</div>
 <div class="d-d">Syntax</div>
-<div class="d-it d-sy">
-<code>gt_StrRight( &lt;cStr&gt;, &lt;cChars&gt; ) → &lt;nLen&gt;</code></div>
+<div class="d-sy"><pre><code>gt_StrRight( &lt;cStr&gt;, &lt;cChars&gt; ) → &lt;nLen&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cStr</code>   - The input string</div>
@@ -798,8 +778,8 @@ cFlags := gt_SetFlag( cFlags )
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-05 13:19 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/f5d66ca">f5d66ca</a></div>
+<div>Generated by hbdoc on 2016-11-05 16:05 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/b5e0b16">b5e0b16</a></div>
 <div>Content processing, layout &amp; design © 2016 <a href="https://github.com/vszakats">vszakats</a></div>
 </footer>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
