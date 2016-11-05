@@ -10,6 +10,7 @@
 
 <title>Harbour Reference Guide · hbgt contrib</title>
 
+<link rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism-okaidia.min.css">
 <link rel="stylesheet" href="hbdoc.css">
 
 <script>
@@ -96,7 +97,7 @@ Harbour Reference Guide</a></div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_ClrFlag( &lt;cFlagString&gt;, [&lt;nStart&gt;], [&lt;nEnd&gt;] ) → &lt;cFlagString&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cFlagString</code> is a bit flag string created with <code><a href="#gt_newflag">gt_NewFlag()</a></code></div>
   <div><code>nStart</code> is the starting flag. This is an optional numeric value. If not supplied it defaults to 1.</div>
@@ -106,9 +107,8 @@ Harbour Reference Guide</a></div>
 <div class="d-it">The bit map string with the new flag settings.</div>
 <div class="d-d">Description</div>
 <div class="d-it"><code><a href="#gt_clrflag">gt_ClrFlag()</a></code> is used to turn flags within the flag string off.</div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-cFlags := gt_NewFlag( 20 )  // Create a bit flag string for 20
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">cFlags := gt_NewFlag( 20 )  // Create a bit flag string for 20
 // logical values.
 
 // Now, turn them all on.
@@ -122,10 +122,10 @@ cFlags := gt_ClrFlag( cFlags, 18 )
 
 // And set flag 1 to false.
 cFlags := gt_ClrFlag( cFlags )
-</pre>
-<div class="d-d">Platform(s)</div>
+</code></pre>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">General</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gt_newflag">gt_NewFlag()</a></code>, <code><a href="#gt_setflag">gt_SetFlag()</a></code>, <code><a href="#gt_isflag">gt_IsFlag()</a></code></div>
@@ -138,26 +138,25 @@ cFlags := gt_ClrFlag( cFlags )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_IsFlag( &lt;cFlagString&gt;, [&lt;nFlag&gt;] ) → &lt;lSetting&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cFlagString</code> is a bit flag string created with <code><a href="#gt_newflag">gt_NewFlag()</a></code></div>
   <div><code>nFlag</code> is the flag to be tested.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">A boolean value, <code>TRUE</code> if the flag is on, <code>FALSE</code> if it's off.</div>
+<div class="d-it">A boolean value, TRUE if the flag is on, FALSE if it's off.</div>
 <div class="d-d">Description</div>
 <div class="d-it"><code><a href="#gt_isflag">gt_IsFlag()</a></code> is used to test the state of a flag with a bit flag string.</div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-// Print the setting of the flags in a flag string called &lt;cDave&gt;
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">// Print the setting of the flags in a flag string called &lt;cDave&gt;
 
 FOR nFlag := 1 TO hb_BLen( cDave ) * 8
    ? &quot;Flag number&quot;, nFlag, &quot;==&quot;, gt_IsFlag( cDave, nFlag )
 NEXT
-</pre>
-<div class="d-d">Platform(s)</div>
+</code></pre>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">General</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gt_newflag">gt_NewFlag()</a></code>, <code><a href="#gt_setflag">gt_SetFlag()</a></code>, <code><a href="#gt_clrflag">gt_ClrFlag()</a></code></div>
@@ -170,22 +169,21 @@ NEXT
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_NewFlag( &lt;nFlagCount&gt; ) → &lt;cFlagString&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it"><code>nFlagCount</code> is the number of flags you wish to store.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">A string to hold the bit flags. All flags are set to <code>FALSE</code>.</div>
+<div class="d-it">A string to hold the bit flags. All flags are set to FALSE.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#gt_newflag">gt_NewFlag()</a></code> is used to construct a bit flag string. The bit flag functions can be used for storing a large number of logical values in a small space.</div>
   <div><p>To create a bit flag string you need to pass <code><a href="#gt_newflag">gt_NewFlag()</a></code> a value that is equal to or greater than the number of flags required (you may want to allow for future expansion). Each character in the string returned from <code><a href="#gt_newflag">gt_NewFlag()</a></code> will hold 8 logical values.</div>
 </div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-cFlags := gt_NewFlag( 20 )  // Create a bit flag string for 20 logical values.
-</pre>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">cFlags := gt_NewFlag( 20 )  // Create a bit flag string for 20 logical values.
+</code></pre>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">General</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gt_setflag">gt_SetFlag()</a></code>, <code><a href="#gt_clrflag">gt_ClrFlag()</a></code>, <code><a href="#gt_isflag">gt_IsFlag()</a></code></div>
@@ -198,7 +196,7 @@ cFlags := gt_NewFlag( 20 )  // Create a bit flag string for 20 logical values.
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_SetFlag( &lt;cFlagString&gt;, [&lt;nStart&gt;], [&lt;nEnd&gt;] ) → &lt;cFlagString&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cFlagString</code> is a bit flag string created with <code><a href="#gt_newflag">gt_NewFlag()</a></code></div>
   <div><code>nStart</code> is the starting flag. This is an optional numeric value. If not supplied it defaults to 1.</div>
@@ -208,9 +206,8 @@ cFlags := gt_NewFlag( 20 )  // Create a bit flag string for 20 logical values.
 <div class="d-it">The bit map string with the new flag settings.</div>
 <div class="d-d">Description</div>
 <div class="d-it"><code><a href="#gt_setflag">gt_SetFlag()</a></code> is used to turn flags within the flag string on.</div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-cFlags := gt_NewFlag( 20 )  // Create a bit flag string for 20
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">cFlags := gt_NewFlag( 20 )  // Create a bit flag string for 20
 // logical values.
 
 // Now set flags 10 to 15 to true.
@@ -221,10 +218,10 @@ cFlags := gt_SetFlag( cFlags, 18 )
 
 // And set flag 1 to true.
 cFlags := gt_SetFlag( cFlags )
-</pre>
-<div class="d-d">Platform(s)</div>
+</code></pre>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">General</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="#gt_newflag">gt_NewFlag()</a></code>, <code><a href="#gt_clrflag">gt_ClrFlag()</a></code>, <code><a href="#gt_isflag">gt_IsFlag()</a></code></div>
@@ -237,7 +234,7 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_AsciiSum( &lt;cStr&gt; ) → &lt;nSum&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it"><code>cStr</code> - The string to sum</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>nSum</code> - The sum of all ASCII values in <code>cStr</code>.</div>
@@ -247,11 +244,11 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Not applicable</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is hbgt</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">String Tools</div>
 </section>
 
@@ -262,7 +259,7 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_AscPos( &lt;cStr&gt;, &lt;nPos&gt; ) → &lt;nAscVal&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cStr</code>    - The string</div>
   <div><code>nPos</code>    - The position in <code>cStr</code></div>
@@ -272,26 +269,24 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Return the ASCII value of a specified character in a string Equivalent (but much faster) to</div>
-<pre>
-hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
-</pre>
+<pre><code class="language-c">hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
+</code></pre>
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return -1 <code>nPos &gt; hb_BLen( cStr )</code> will return -2</div>
   <div><p>This last behaviour is different to the Funcky function of the same name.  I changed the behaviour because some of the strings I process contain embedded <code>NUL</code>s.</div>
 </div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-? gt_AscPos( &quot;the cat sat on the mat&quot;, 3 ) // prints e
-</pre>
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">? gt_AscPos( &quot;the cat sat on the mat&quot;, 3 ) // prints e
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Not applicable</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is hbgt</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">String Tools</div>
 </section>
 
@@ -302,7 +297,7 @@ hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_AtDiff( &lt;cStr1&gt;, &lt;cStr2&gt; ) → &lt;nPos&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cStr1</code> - A character string to compare</div>
   <div><code>cStr2</code> - The string to compare with</div>
@@ -315,20 +310,19 @@ hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-? gt_AtDiff( &quot;the cat&quot;, &quot;the rat&quot; )  // prints 5
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">? gt_AtDiff( &quot;the cat&quot;, &quot;the rat&quot; )  // prints 5
 ? gt_AtDiff( &quot;the cat&quot;, &quot;the &quot; )     // prints 0
-</pre>
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Not applicable</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is hbgt</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">String Tools</div>
 </section>
 
@@ -339,7 +333,7 @@ hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_CharEven( &lt;cStr&gt; ) → &lt;cRet&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it"><code>cStr</code> - A character string to extract chars from</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>cRet</code> - A string of all the chars in even positions</div>
@@ -349,19 +343,18 @@ hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-? gt_CharEven( &quot;abcdefghijklm&quot; )  // prints &quot;bdfhjl&quot;
-</pre>
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">? gt_CharEven( &quot;abcdefghijklm&quot; )  // prints &quot;bdfhjl&quot;
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Not applicable</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is hbgt</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">String Tools</div>
 </section>
 
@@ -372,7 +365,7 @@ hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_CharMix( &lt;cStr1&gt;, &lt;cStr2&gt; ) → &lt;cRet&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cStr1</code> - A character string to mix</div>
   <div><code>cStr2</code> - A character string to mix with</div>
@@ -388,21 +381,20 @@ hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-? gt_CharMix( &quot;abc&quot;, &quot;123&quot; )    // prints &quot;a1b2c3&quot;
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">? gt_CharMix( &quot;abc&quot;, &quot;123&quot; )    // prints &quot;a1b2c3&quot;
 ? gt_CharMix( &quot;abcde&quot;, &quot;123&quot; )  // prints &quot;a1b2c3de&quot;
 ? gt_CharMix( &quot;abc&quot;, &quot;12345&quot; )  // prints &quot;a1b2c345&quot;
-</pre>
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Not applicable</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is hbgt</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">String Tools</div>
 </section>
 
@@ -413,7 +405,7 @@ hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_CharOdd( &lt;cStr&gt; ) → &lt;cRet&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it"><code>cStr</code> - A character string to extract chars from</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>cRet</code> - A string of all the chars in odd positions</div>
@@ -423,19 +415,18 @@ hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-? gt_CharOdd( &quot;abcdefghijklm&quot; )  // prints &quot;acegikm&quot;
-</pre>
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">? gt_CharOdd( &quot;abcdefghijklm&quot; )  // prints &quot;acegikm&quot;
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Not applicable</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is hbgt</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">String Tools</div>
 </section>
 
@@ -446,7 +437,7 @@ hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_ChrCount( &lt;cChr&gt;, &lt;cStr&gt; ) → &lt;nFreq&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cChr</code>  - The character to find the frequence of</div>
   <div><code>cStr</code>  - The string in which to find the character</div>
@@ -459,19 +450,18 @@ hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-? gt_ChrCount( &quot;t&quot;, &quot;the cat sat on the mat&quot; )  // prints 4
-</pre>
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">? gt_ChrCount( &quot;t&quot;, &quot;the cat sat on the mat&quot; )  // prints 4
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Not applicable</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is hbgt</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">String Tools</div>
 </section>
 
@@ -482,7 +472,7 @@ hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_ChrFirst( &lt;cChars&gt;, &lt;cStr&gt; ) → &lt;nAsc&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cChars</code> - The set of characters to find</div>
   <div><code>cStr</code>   - The input string</div>
@@ -494,20 +484,19 @@ hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">Return the ASCII value of a character in <code>cChars</code> which appears first in <code>cStr</code>.</div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-? hb_BChar( gt_ChrFirst( &quot;sa &quot;, &quot;This is a test&quot; ) )  // prints &quot;s&quot;
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">? hb_BChar( gt_ChrFirst( &quot;sa &quot;, &quot;This is a test&quot; ) )  // prints &quot;s&quot;
 ? hb_BChar( gt_ChrFirst( &quot;et&quot; , &quot;This is a test&quot; ) )  // prints &quot;t&quot;
-</pre>
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Not applicable</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is hbgt</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">String Tools</div>
 </section>
 
@@ -518,7 +507,7 @@ hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_ChrTotal( &lt;cChrs&gt;, &lt;cStr&gt; ) → &lt;nTotOcc&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cChrs</code>   - The set of characters</div>
   <div><code>cStr</code>    - The string to search</div>
@@ -534,22 +523,21 @@ hb_BCode( hb_BSubStr( cStr, nPos, 1 ) )
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-LOCAL cStr1 := &quot;the cat sat on the mat&quot;
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 
 ? gt_ChrTotal( &quot;tae&quot;, cStr1 )  // prints 10
 ? gt_ChrTotal( &quot;zqw&quot;, cStr1 )  // prints  0
-</pre>
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Not applicable</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is hbgt</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">String Tools</div>
 </section>
 
@@ -560,7 +548,7 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_StrCount( &lt;cChrs&gt;, &lt;cStr&gt; ) → &lt;nFreq&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cChrs</code> - The substring to find the frequence of</div>
   <div><code>cStr</code>  - The string in which to find the character</div>
@@ -573,19 +561,18 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-? gt_StrCount( &quot;the&quot;, &quot;the cat sat on the mat&quot; )  // prints 2
-</pre>
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">? gt_StrCount( &quot;the&quot;, &quot;the cat sat on the mat&quot; )  // prints 2
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Not applicable</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is hbgt</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">String Tools</div>
 </section>
 
@@ -596,7 +583,7 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_StrCSPN( &lt;cString&gt;, &lt;cSet&gt; ) → &lt;nLength&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cString</code> - The string to find the prefix in</div>
   <div><code>cSet</code>    - The set of characters</div>
@@ -605,20 +592,19 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <div class="d-it"><code>nLength</code> - The length of a string upto a character in the set</div>
 <div class="d-d">Description</div>
 <div class="d-it">Return the number of characters in the leading segment of a string that consists solely of characters NOT in the set.</div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-? gt_StrCSPN( &quot;this is a test&quot;, &quot;as &quot; )     // prints 3
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">? gt_StrCSPN( &quot;this is a test&quot;, &quot;as &quot; )     // prints 3
 ? gt_StrCSPN( &quot;this is a test&quot;, &quot;elnjpq&quot; )  // prints 11
-</pre>
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Not applicable</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is hbgt</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">String Tools</div>
 </section>
 
@@ -629,7 +615,7 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_StrDiff( &lt;cStr1&gt;, &lt;cStr2&gt; ) → &lt;cRet&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cStr1</code>  - A character string to compare</div>
   <div><code>cStr2</code>  - The string to compare with</div>
@@ -645,20 +631,19 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-? gt_StrDiff( &quot;the cat&quot;, &quot;the rat&quot; )  // prints &quot;rat&quot;
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">? gt_StrDiff( &quot;the cat&quot;, &quot;the rat&quot; )  // prints &quot;rat&quot;
 ? gt_StrDiff( &quot;the cat&quot;, &quot;the &quot; )     // prints &quot;&quot;
-</pre>
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Not applicable</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is hbgt</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">String Tools</div>
 </section>
 
@@ -669,7 +654,7 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_StrExpand( &lt;cStr&gt;, [&lt;nNum&gt;], [&lt;cChar&gt;] ) → &lt;cRet&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cStr1</code> - A character string to insert chars into</div>
   <div><code>nNum</code>  - The number of fill characters to insert (default 1)</div>
@@ -686,21 +671,20 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return &quot;&quot;</div>
 </div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-? gt_StrExpand( &quot;abc&quot; )          // prints &quot;a b c&quot;
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">? gt_StrExpand( &quot;abc&quot; )          // prints &quot;a b c&quot;
 ? gt_StrExpand( &quot;abc&quot;, 2 )       // prints &quot;a  b  c&quot;
 ? gt_StrExpand( &quot;abc&quot;, 2, '|' )  // prints &quot;a||b||c&quot;
-</pre>
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Not applicable</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is hbgt</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">String Tools</div>
 </section>
 
@@ -711,7 +695,7 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_StrLeft( &lt;cStr&gt;, &lt;cChars&gt; ) → &lt;nLen&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cStr</code>   - The input string</div>
   <div><code>cChars</code> - The set of characters to find</div>
@@ -723,21 +707,20 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
   <div><p>Return the length of the leading segment in the passed string <code>cStr</code> that consists solely of the characters in the character set <code>cChars</code>.</div>
   <div><p>If no characters in the the search set are found, the function shall return 0</div>
 </div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-? gt_StrLeft( &quot;this is a test&quot;, &quot;hsit &quot; )  // prints 8
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">? gt_StrLeft( &quot;this is a test&quot;, &quot;hsit &quot; )  // prints 8
 ? gt_StrLeft( &quot;this is a test&quot;, &quot;hit a&quot; )  // prints 3
 ? gt_StrLeft( &quot;this is a test&quot;, &quot;zxy&quot; )    // prints 0
-</pre>
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Not applicable</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is hbgt</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">String Tools</div>
 </section>
 
@@ -748,7 +731,7 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_StrPBRK( &lt;cStr&gt;, &lt;cSet&gt; ) → &lt;cString&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cStr</code>    - The input string</div>
   <div><code>cSet</code>    - The set of characters to find</div>
@@ -760,20 +743,19 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">Return a string after the first occurance of any character from the input set <code>cSet</code>.</div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-? gt_StrPBRK( &quot;This is a test&quot;, &quot;sa &quot; )  // prints &quot;s is a test&quot;
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">? gt_StrPBRK( &quot;This is a test&quot;, &quot;sa &quot; )  // prints &quot;s is a test&quot;
 ? gt_StrPBRK( &quot;This is a test&quot;, &quot;et&quot; )   // prints &quot;test&quot;
-</pre>
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Not applicable</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is hbgt</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">String Tools</div>
 </section>
 
@@ -784,7 +766,7 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>gt_StrRight( &lt;cStr&gt;, &lt;cChars&gt; ) → &lt;nLen&gt;</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cStr</code>   - The input string</div>
   <div><code>cChars</code> - The set of characters to find</div>
@@ -796,28 +778,29 @@ LOCAL cStr1 := &quot;the cat sat on the mat&quot;
   <div><p>Return the length of the trailing segment in the passed string <code>cStr</code> that consists solely of the characters in the character set <code>cChars</code>.</div>
   <div><p>If no characters in the the search set are found, the function shall return 0</div>
 </div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-? gt_StrRight( &quot;this is a test&quot;, &quot;teas &quot; )  // prints 8
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">? gt_StrRight( &quot;this is a test&quot;, &quot;teas &quot; )  // prints 8
 ? gt_StrRight( &quot;this is a test&quot;, &quot;tes h&quot; )  // prints 5
 ? gt_StrRight( &quot;this is a test&quot;, &quot;zxy&quot; )    // prints 0
-</pre>
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">Not applicable</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is hbgt</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tag</div>
 <div class="d-it">String Tools</div>
 </section>
 
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-03 23:45 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/0d069a7">0d069a7</a></div>
+<div>Generated by hbdoc on 2016-11-05 13:19 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/f5d66ca">f5d66ca</a></div>
 <div>Content processing, layout &amp; design © 2016 <a href="https://github.com/vszakats">vszakats</a></div>
 </footer>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-c.min.js"></script>

@@ -10,6 +10,7 @@
 
 <title>Harbour Reference Guide · hbxpp contrib</title>
 
+<link rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism-okaidia.min.css">
 <link rel="stylesheet" href="hbdoc.css">
 
 <script>
@@ -76,12 +77,12 @@ Harbour Reference Guide</a></div>
 
 <section id="bin2u" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbxpp/doc/en/binnumx.txt">Improve this doc</a></span>
-<h4><code>Bin2U()</code><a href="https://github.com/vszakats/harbour-core/blob/0d069a7/contrib/hbxpp/binnumx.c" class="d-so">Source code</a></h4>
+<h4><code>Bin2U()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbxpp/binnumx.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Convert unsigned long encoded bytes into Harbour numeric</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>Bin2U( &lt;cBuffer&gt; ) → nNumber</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it"><code>cBuffer</code> is a character string that contains 32-bit encoded unsigned long integer (least significant byte first). The first four bytes are taken into account, the rest if any are ignored.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code><a href="#bin2u">Bin2U()</a></code> return numeric integer (or 0 if <code>cBuffer</code> is not a string).</div>
@@ -91,9 +92,8 @@ Harbour Reference Guide</a></div>
   <div><p>You might ask what is the need for such functions, well, first of all it allow you to read/write information from/to a binary file (like extracting information from DBF header), it is also a useful way to share information from source other than Harbour (C for instance).</div>
   <div><p><code><a href="#bin2u">Bin2U()</a></code> is the opposite of <code><a href="#u2bin">U2Bin()</a></code></div>
 </div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-// Show number of records in DBF
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">// Show number of records in DBF
 #include &quot;fileio.ch&quot;
 PROCEDURE Main()
    LOCAL hFile, cBuffer := Space( 4 )
@@ -106,16 +106,16 @@ PROCEDURE Main()
       ? &quot;Cannot open file&quot;
    ENDIF
    RETURN
-</pre>
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">XPP</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is core</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, Conversion</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="harbour.html#bin2i">Bin2I()</a></code>, <code><a href="harbour.html#bin2l">Bin2L()</a></code>, <code><a href="#bin2w">Bin2W()</a></code>, <code><a href="harbour.html#i2bin">I2Bin()</a></code>, <code><a href="harbour.html#l2bin">L2Bin()</a></code>, <code><a href="#w2bin">W2Bin()</a></code>, <code><a href="harbour.html#word">Word()</a></code>, <code><a href="#u2bin">U2Bin()</a></code></div>
@@ -123,12 +123,12 @@ PROCEDURE Main()
 
 <section id="bin2w" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbxpp/doc/en/binnumx.txt">Improve this doc</a></span>
-<h4><code>Bin2W()</code><a href="https://github.com/vszakats/harbour-core/blob/0d069a7/contrib/hbxpp/binnumx.c" class="d-so">Source code</a></h4>
+<h4><code>Bin2W()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbxpp/binnumx.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Convert unsigned short encoded bytes into Harbour numeric</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>Bin2W( &lt;cBuffer&gt; ) → nNumber</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it"><code>cBuffer</code> is a character string that contains 16-bit encoded unsigned short integer (least significant byte first). The first two bytes are taken into account, the rest if any are ignored.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code><a href="harbour.html#bin2w">Bin2W()</a></code> return numeric integer (or 0 if <code>cBuffer</code> is not a string).</div>
@@ -138,9 +138,8 @@ PROCEDURE Main()
   <div><p>You might ask what is the need for such functions, well, first of all it allow you to read/write information from/to a binary file (like extracting information from DBF header), it is also a useful way to share information from source other than Harbour (C for instance).</div>
   <div><p><code><a href="harbour.html#bin2w">Bin2W()</a></code> is the opposite of <code><a href="#w2bin">W2Bin()</a></code></div>
 </div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-// Show header length of a DBF
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">// Show header length of a DBF
 #include &quot;fileio.ch&quot;
 PROCEDURE Main()
    LOCAL hFile, cBuffer := Space( 2 )
@@ -153,16 +152,16 @@ PROCEDURE Main()
       ? &quot;Cannot open file&quot;
    ENDIF
    RETURN
-</pre>
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">CA-Cl*pper v5.x compatible</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is core</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, Conversion</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="harbour.html#bin2i">Bin2I()</a></code>, <code><a href="harbour.html#bin2l">Bin2L()</a></code>, <code><a href="#bin2u">Bin2U()</a></code>, <code><a href="harbour.html#i2bin">I2Bin()</a></code>, <code><a href="harbour.html#l2bin">L2Bin()</a></code>, <code><a href="#w2bin">W2Bin()</a></code>, <code><a href="harbour.html#word">Word()</a></code>, <code><a href="#u2bin">U2Bin()</a></code></div>
@@ -170,12 +169,12 @@ PROCEDURE Main()
 
 <section id="u2bin" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbxpp/doc/en/binnumx.txt">Improve this doc</a></span>
-<h4><code>U2Bin()</code><a href="https://github.com/vszakats/harbour-core/blob/0d069a7/contrib/hbxpp/binnumx.c" class="d-so">Source code</a></h4>
+<h4><code>U2Bin()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbxpp/binnumx.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Convert Harbour numeric into unsigned long encoded bytes</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>U2Bin( &lt;nNumber&gt; ) → cBuffer</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it"><code>nNumber</code> is a numeric value to convert (decimal digits are ignored).</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code><a href="#u2bin">U2Bin()</a></code> return four bytes character string that contains 32-bit encoded unsigned long integer (least significant byte first).</div>
@@ -189,11 +188,11 @@ PROCEDURE Main()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">XPP</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is core</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, Conversion</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="harbour.html#bin2i">Bin2I()</a></code>, <code><a href="harbour.html#bin2l">Bin2L()</a></code>, <code><a href="#bin2u">Bin2U()</a></code>, <code><a href="#bin2w">Bin2W()</a></code>, <code><a href="harbour.html#i2bin">I2Bin()</a></code>, <code><a href="harbour.html#l2bin">L2Bin()</a></code>, <code><a href="#w2bin">W2Bin()</a></code>, <code><a href="harbour.html#word">Word()</a></code></div>
@@ -201,12 +200,12 @@ PROCEDURE Main()
 
 <section id="w2bin" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbxpp/doc/en/binnumx.txt">Improve this doc</a></span>
-<h4><code>W2Bin()</code><a href="https://github.com/vszakats/harbour-core/blob/0d069a7/contrib/hbxpp/binnumx.c" class="d-so">Source code</a></h4>
+<h4><code>W2Bin()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbxpp/binnumx.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Convert Harbour numeric into unsigned short encoded bytes</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>W2Bin( &lt;nNumber&gt; ) → cBuffer</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it"><code>nNumber</code> is a numeric value to convert (decimal digits are ignored).</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code><a href="#w2bin">W2Bin()</a></code> return two bytes character string that contains 16-bit encoded unsigned short integer (least significant byte first).</div>
@@ -220,11 +219,11 @@ PROCEDURE Main()
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">XPP</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is core</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, Conversion</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="harbour.html#bin2i">Bin2I()</a></code>, <code><a href="harbour.html#bin2l">Bin2L()</a></code>, <code><a href="#bin2u">Bin2U()</a></code>, <code><a href="#bin2w">Bin2W()</a></code>, <code><a href="harbour.html#i2bin">I2Bin()</a></code>, <code><a href="harbour.html#l2bin">L2Bin()</a></code>, <code><a href="harbour.html#word">Word()</a></code>, <code><a href="#u2bin">U2Bin()</a></code></div>
@@ -232,20 +231,19 @@ PROCEDURE Main()
 
 <section id="dbskipper" class="d-id">
 <span class="entry-button"><a href="#">Top</a> | <a href="index.html">Index</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbxpp/doc/en/dbcmdx.txt">Improve this doc</a></span>
-<h4><code>dbSkipper()</code><a href="https://github.com/vszakats/harbour-core/blob/0d069a7/contrib/hbxpp/dbcmdx.c" class="d-so">Source code</a></h4>
+<h4><code>dbSkipper()</code><a href="https://github.com/vszakats/harbour-core/blob/f5d66ca/contrib/hbxpp/dbcmdx.c" class="d-so">Source code</a></h4>
 <div class="d-ol">Helper function to skip a database</div>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>dbSkipper( &lt;nRecs&gt; ) → nSkipped</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it"><code>nRecs</code> is the number of records to skip relative to current record. Positive number would try to move the record pointer forward, while a negative number would try to move the record pointer back <code>nRecs</code> records.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code><a href="#dbskipper">dbSkipper()</a></code> return the number of actual record skipped.</div>
 <div class="d-d">Description</div>
 <div class="d-it"><code><a href="#dbskipper">dbSkipper()</a></code> is a helper function used in browse mechanism to skip a number of records while giving the caller indication about the actual records skipped.</div>
-<div class="d-d">Example(s)</div>
-<pre class="d-ex">
-// open a file and find if we've got enough records in it
+<div class="d-d">Example</div>
+<pre class="d-ex"><code class="language-c">// open a file and find if we've got enough records in it
 USE month_sales
 IF dbSkipper( 100 ) == 100
    ? &quot;Good work! You can party now&quot;
@@ -253,16 +251,16 @@ ELSE
    ? &quot;Too bad, you should really work harder&quot;
 ENDIF
 dbCloseArea()
-</pre>
+</code></pre>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
 <div class="d-it">XPP</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">File(s)</div>
+<div class="d-d">Files</div>
 <div class="d-it">Library is core</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, User interface</div>
 <div class="d-d">See also</div>
 <div class="d-it"><code><a href="harbour.html#dbskip">dbSkip()</a></code>, <code><a href="#skip">SKIP</a></code></div>
@@ -271,7 +269,9 @@ dbCloseArea()
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-03 23:45 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/0d069a7">0d069a7</a></div>
+<div>Generated by hbdoc on 2016-11-05 13:19 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/f5d66ca">f5d66ca</a></div>
 <div>Content processing, layout &amp; design © 2016 <a href="https://github.com/vszakats">vszakats</a></div>
 </footer>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-c.min.js"></script>

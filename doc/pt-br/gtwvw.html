@@ -10,6 +10,7 @@
 
 <title>Harbour Reference Guide · gtwvw contrib</title>
 
+<link rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism-okaidia.min.css">
 <link rel="stylesheet" href="../hbdoc.css">
 
 <script>
@@ -254,20 +255,19 @@ Harbour Reference Guide</a></div>
 <h4><code>wvw__MakeDlgTemplate()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw__MakeDlgTemplate( Dlg, aItens1, aItens2, aItens3, aItens4, aItens5, aItens6,
+<pre><code>wvw__MakeDlgTemplate( Dlg, aItens1, aItens2, aItens3, aItens4, aItens5, aItens6,
 aItens7, aItens8, aItens9, aItens10 )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">aDlg aItens1 aItens2 aItens3 aItens4 aItens5 aItens6 aItens7 aItens8 aItens9 aItens10</div>
 <div class="d-d">Returns</div>
 <div class="d-it">String com o novo template de diálogo criado e o seu tamanho.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Cria um modelo de janela de diálogo (template).</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -277,15 +277,15 @@ aItens7, aItens8, aItens9, aItens10 )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_AddRows( nWinNum, nRows )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O Default é a janela corrente. nRows Número de linhas para adicionar ou diminuir (se nRows ` 0).</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se a operação foi bem-sucedida.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Adiciona ou diminui nRows linhas da janela nWinNum. As novas linhas adicionadas serao coloridas com a cor da coluna 0 da linha anterior. Nao haverá checagem para determinar se a janela se tornou maior que a área de desktop (exceto se no modo MainCoord, porque precisamos desses limites para a funçao <code><a href="harbour.html#maxrow">MaxRow()</a></code>).</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -295,15 +295,15 @@ aItens7, aItens8, aItens9, aItens10 )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_AppendMenu( hMenu, nFlags, nMenuItemId, cCaption )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">hMenu identifica o menu que será incluido o item. nFlags Especifica os flags para controlar a aparencia e o comportamento do item que está sendo incluido. Esse parâmetro pode ser uma combinaçao de diversos valores (as definiçoes dos flags válidos estao no arquivo <code>winuser.ch</code>) hMenuItemId Especifica cada um dos identificadores do novo item do menu ou, se o parâmetro nFlags estiver setado para <code>MF_POPUP</code>, o handle do submenu. cCaption Especifica ou a string que será apresentada no menu/submenu ou o caminho para o bitmap que será apresentado no menu/submenu.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Se a função for bem-sucedida, retorna um valor diferente de zero, caso contrário retorna zero.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Essa funçao, adiciona um novo item de menu para o menu hMenu. Através dessa funçao podemos também especificar o conteúdo, aparencia e o comportamento de cada item do menu.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -313,15 +313,15 @@ aItens7, aItens8, aItens9, aItens10 )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_cbAddString( nHandleDialog, nIDComboBox, cItem )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nHandleDialog Handle da janela de diálogo. nIDComboBox Identificador do combobox. cItem Item que deve ser incluído no combobox.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Adiciona um item em um combobox.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -330,12 +330,11 @@ aItens7, aItens8, aItens9, aItens10 )
 <h4><code>wvw_cbCreate()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_cbCreate( nWinNum, nTop, nLeft, nWidth, aText, bBlock, nListLines,
+<pre><code>wvw_cbCreate( nWinNum, nTop, nLeft, nWidth, aText, bBlock, nListLines,
 nReserved, nKbdType, aOffset )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div>nWinNum Número da janela. O default é a janela atual. nTop, nLeft Coordenadas para o combobox. nWidth Tamanho do combobox. aText Matriz com os elementos do combobox. O default é { &quot;empty&quot; }. bBlock Bloco de código que será executado para os seguintes eventos: <code>CBN_SELCHANGE</code>: <code>CBN_SETFOCUS</code>: <code>CBN_KILLFOCUS</code>: Usuário mudou a seleção (não é executado quando a mudança é feita pelo programa) Quando o foco vai para o combobox Quando o foco sai do combobox</div>
   <div>Esse bloco de código será avaliado com os seguintes parâmetros: <code>nWinNum</code> <code>nCBId</code> <code>nType</code> <code>nIndex</code> <code>nListLines</code> Número de itens que serão apresentados no combobox (o default é 3). O número será automaticamente ajustado se esse parâmetro for maior que a matriz aText. nReserved Reservado para uso futuro (esse parâmetro atualmente é ignorado). <code>nKbdType</code> Especifica o comportamento do combobox. Pode ser um dos seguintes valores: 0: 1: Similar as convenções dos programas para o windows (isto é, <span class="d-key">ENTER</span>/<span class="d-key">ESC</span> faz com que o combobox perca o foco) Similar ao Cl*pper (<span class="d-key">ENTER</span> mostra os itens do combobox, <span class="d-key">UP</span>/<span class="d-key">DOWN</span>/<span class="d-key">TAB</span>/<span class="d-key">SHIFT+TAB</span>/<span class="d-key">ESC</span> faz o combobox perder o foco) Número da janela atual Identificador do combobox Tipo do evento (apenas os três informados acima são suportados) Índice do item selecionado (comecando em 0)</div>
@@ -345,9 +344,9 @@ nReserved, nKbdType, aOffset )
 <div class="d-it">O handle do combobox, se a operação for bem-sucedida, 0 se falhar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Cria um combobox para a janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -357,15 +356,15 @@ nReserved, nKbdType, aOffset )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_cbDestroy( nWinNum, nCBId )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nCBId Identificador do combobox.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Exclui um combobox da janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -375,15 +374,15 @@ nReserved, nKbdType, aOffset )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_cbEnable( nWinNum, nCBId, lEnable )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nCBId Identificador do combobox. lEnable Habilita (<code>.T.</code>) ou desabilita (<code>.F.</code>) o acesso ao combobox.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Retorna o estado anterior do combobox (<code>.T.</code> habilitado, <code>.F.</code> desabilitado). Se a função falhar, também retorna <code>.F.</code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Habilita/Desabilita o acesso ao combobox nCBId da janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -393,15 +392,15 @@ nReserved, nKbdType, aOffset )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_cbFindString( nWinNum, nCBId, cString )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nCBId Identificador do combobox. cString String para procurar.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Índice do item que contém a string, ou ­1 se falhar (ou não encontrar).</div>
 <div class="d-d">Description</div>
 <div class="d-it">Procura a string cString no combobox nCBId da janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -411,15 +410,15 @@ nReserved, nKbdType, aOffset )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_cbGetCurText( nWinNum, nCBId )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janel atual. nCBId Identificador do combobox.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Retorna a string, se a operação for bem-sucedida, ou &quot;&quot; se falhar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém a string da posiçao atual do combobox.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -429,15 +428,15 @@ nReserved, nKbdType, aOffset )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_cbGetIndex( nWinNum, nCBId )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nCBId Identificador do combobox.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Retorna a posição atual em um combobox ou -1 se falhar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém a seleçao atual em um combobox (comecando em 0).</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -447,15 +446,15 @@ nReserved, nKbdType, aOffset )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_cbIsDropped( nWinNum, nCBId )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nCBId Identificador do combobox.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se os itens estão sendo mostrados, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém o estado atual de um combobox.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -465,15 +464,15 @@ nReserved, nKbdType, aOffset )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_cbIsFocused( nWinNum, nCBId )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nCBId Identificador do combobox.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se o foco está no combobox, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém a informaçao se o foco está atualmente no combobox nCBId da janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -483,15 +482,15 @@ nReserved, nKbdType, aOffset )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_cbSetCodeblock( nWinNum, nCBId, bBlock )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nCBId Identificador do combobox. bBlock Novo bloco de código que será atribuido ao combobox.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se a operação foi bem-sucedida, <code>.F.</code> se falhar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Atribui um novo bloco de código para o combobox nCBId da janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -501,15 +500,15 @@ nReserved, nKbdType, aOffset )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_cbSetCurSel( nHandleDialog, nIDCombobox, nIndex )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nHandleDialog Handle da janela de diálogo. nIDCombobox Identificador do combobox. nIndex Índice do item, iniciando em 0. Se for ­1, remove a seleçao corrente e limpa o controle edit associado ao combobox.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Seleciona um item na lista de um combobox.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -518,20 +517,19 @@ nReserved, nKbdType, aOffset )
 <h4><code>wvw_cbSetFont()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_cbSetFont( nWinNum, cFontFace, nHeight, nWidth, nWeight, nQuality,
+<pre><code>wvw_cbSetFont( nWinNum, cFontFace, nHeight, nWidth, nWeight, nQuality,
 lItalic, lUnderline, lStrikeout )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. cFontName Nome da Fonte. nHeight Largura da fonte. nWidth Altura da fonte. nWeight &quot;Peso&quot; da fonte. nQuality Qualidade da fonte. lItalic Indica se a fonte está em itálico (<code>.T.</code>) ou nao (default). lUnderline Indica se a fonte está sobrescrita (<code>.T.</code>) ou nao (default). lStrikeout Indica se a fonte está strikeout (<code>.T.</code>) ou nao ( default).</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se a operação for bem-sucedida, <code>.F.</code> se falhar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Inicializa a fonte para todos os combobox da janela atual (e para todos os que serao criados posteriormente).</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -541,15 +539,15 @@ lItalic, lUnderline, lStrikeout )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_cbSetIndex( nWinNum, nCBId, nIndex )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nCBId Identificador do combobox. nIndex Índice do item no combobox (comecando em 0).</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se a operação foi bem-sucedida, <code>.F.</code> se falhar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Configura a seleçao atual em um combobox.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -558,12 +556,11 @@ lItalic, lUnderline, lStrikeout )
 <h4><code>wvw_cxCreate()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_cxCreate( nWinNum, nTop, nLeft, nBottom, nRight, cText, cImage/nImage,
+<pre><code>wvw_cxCreate( nWinNum, nTop, nLeft, nBottom, nRight, cText, cImage/nImage,
 bBlock, aOffset, nStretchBitmap, lMap3DColors )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div>nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para criação do checkbox. cText Texto do checkbox. cImage/nImage Se o parâmetro for numérico, indica um ID de um <code>RESOURCE</code> em um arquivo .RC. Se o parâmetro for uma string, indica um arquivo de imagem (deve ser informado o caminho completo). bBlock Bloco de código que será executado sempre que um evento <code>BN_CLICK</code> for executado. Sempre serão passados os parâmetros de nWinNum e o identificador do checkbox para a função. Esse parâmetro tem que ser informado, caso contrário o checkbox não é criado. aOffSet Matriz com quatro elementos com coordenadas dos cantos superior, direito de offset para alinhamento do checkbox com as linhas/colunas. nStretchBitmap Um número entre 0 e 1 (inclusive) como um fator para &quot;esticar&quot; o bitmap. Por exemplo: 1.0 0.5 0 O bitmap vai cobrir por inteiro o botão O bitmap vai cobrir 50% do botão O bitmap não vai ser &quot;esticado&quot; esquerdo, inferior e</div>
   <div>O default é 1. lMap3DColors Se a imagem terá efeito de transparencia (<code>.T.</code>) ou nao (<code>.F.</code>). Atençao para o fato que existe a limitaçao de bitmaps com, no máximo, 256 cores.</div>
@@ -572,9 +569,9 @@ bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-it">Se a operação for bem-sucedida, retorna o handle do checkbox. Se falhar, retorna 0.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Cria um checkbox.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -584,15 +581,15 @@ bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_cxDestroy( nWinNum, nCXId )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nCXId Identificador do checkbox.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Exclui um checbox da janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -602,15 +599,15 @@ bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_cxEnable( nWinNum, nCXId, lToggle )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nCXId Identificador do checkbox. lToggle Habilita/Desabilita um checkbox.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Retorna o estado anterior do checkbox, se o parâmetro lToggle for informado, caso contrário, retorna o estado atual do checkbox (<code>.T.</code> indica habilitado, <code>.F.</code> desabilitado).</div>
 <div class="d-d">Description</div>
 <div class="d-it">Permite habilitar/desabilitar um checkbox nCXId na janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -620,15 +617,15 @@ bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_cxGetCheck( nWinNum, nCXId )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nCXId Identificador do checkbox</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Pode retornar os seguintes valores: 0 1 2 Não selecionado Selecionado Indeterminado</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém o estado atual de um checkbox.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -638,15 +635,15 @@ bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_cxSetCheck( nWinNum, nCXId, nCheckState )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nCXId Identificador do checkbox. nCheckState 0 1 2 Não selecionado Selecionado Indeterminado</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">Muda o estado de um checkbox.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -656,15 +653,15 @@ bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_cxSetCodeblock( nWinNum, nCXId, bBlock )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nCXId Identificador do checkbox. bBlock Bloco de código.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se a operação for bem-sucedida, <code>.F.</code> se falhar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Atribui um novo bloco de código bBlock ao checkbox nCXId na janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -674,15 +671,15 @@ bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_cxSetFocus( nWinNum, nCXId )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nCXId Identificador do checkbox.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se a operação foi bem-sucedida, <code>.F.</code> se falhar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Configura o foco para o checkbox nCXId.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -691,14 +688,13 @@ bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <h4><code>wvw_CenterWindow()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_CenterWindow( nWinNum, lCenter, lPaint ) Verifique a função
+<pre><code>wvw_CenterWindow( nWinNum, lCenter, lPaint ) Verifique a função
 wvw_SetWindowCentre().
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -708,15 +704,15 @@ wvw_SetWindowCentre().
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_ChooseColor( nRGBInit, aRGB16, nFlags )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nRGBInit Cor inicial. aRGB16 Matriz com 16 elementos, contendo os índices das cores. O default é uma matriz com o conjunto de cores de um botao. nFlags Flags que indicam a posiçao inicial no diálogo de seleçao de cores. O default é a combinaçao das opçoes <code>CC_ANYCOLOR</code> | <code>CC_RGBINIT</code> | <code>CC_FULLOPEN</code>.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Um valor RGB indicando a seleção de cor do usuário, ou zero se o usuário cancelar o diálogo.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Abre um diálogo de seleçao de cores.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -726,15 +722,15 @@ wvw_SetWindowCentre().
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_ChooseFont( cFontName, nHeight, nWidth, nWeight, nQuality, lItalic, lUnderline, lStrikeout )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">cFontName Nome da fonte. nHeight Largura da fonte. nWidth Altura da fonte. nWeight &quot;Peso&quot; da fonte. nQuality Qualidade da fonte. lItalic Indica se a fonte está em itálico (<code>.T.</code>) ou nao (default). lUnderline Indica se a fonte está sobrescrita (<code>.T.</code>) ou nao (default). lStrikeout Indica se a fonte está strikeout (<code>.T.</code>) ou nao (default).</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Abre um diálogo de seleçao de fonte.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -744,15 +740,15 @@ wvw_SetWindowCentre().
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_ClientToScreen( nWinNum, nRow, nCol )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a jenala atual. nRow Linha da janela atual. nCol Coluna da janela atual.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Matriz com duas posições contendo as coordenadas x,y.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Converte linha e coluna para as coordenadas x,y relativas ao vídeo.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -761,20 +757,19 @@ wvw_SetWindowCentre().
 <h4><code>wvw_CreateDialogDynamic()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_CreateDialogDynamic( cDlgTemplate|nResource, lHandle,
+<pre><code>wvw_CreateDialogDynamic( cDlgTemplate|nResource, lHandle,
 cDlgProc|bDlgProc|nDlgProc, nFlag )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">cDlgTemplate|nResource lHandle cDlgProc|bDlgProc|nDlgProc nFlag</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Handle da janela de diálogo ou 0.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Cria uma janela de diálogo dinâmicamente.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -783,20 +778,19 @@ cDlgProc|bDlgProc|nDlgProc, nFlag )
 <h4><code>wvw_CreateDialogModal()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_CreateDialogModal( cDialog|nResource|cDlgTemplate, NIL,
+<pre><code>wvw_CreateDialogModal( cDialog|nResource|cDlgTemplate, NIL,
 bDlgProc|cDlgProc, nFlag, nHandle )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">cDialog|nResource|cDlgTemplate bDlgProc|cDlgProc nFlag nHandle</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Handle da janela de diálogo ou 0.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Cria uma janela de diálogo modal.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -805,20 +799,19 @@ bDlgProc|cDlgProc, nFlag, nHandle )
 <h4><code>wvw_CreateFont()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_CreateFont(cFontFace, nHeight, nWidth, nWeight, lItalic, lUnderline,
+<pre><code>wvw_CreateFont(cFontFace, nHeight, nWidth, nWeight, lItalic, lUnderline,
 lStrikeout, nCharset, nQuality, nEscapement )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">cFontFace Uma string que especifica o nome da fonte. nHeight A largura da fonte. nWidth O tamanho da fonte. nWeight &quot;Peso&quot; da fonte. lItalic Identifica que a fonte será itálica. lUnderline Identifica uma fonte sublinhada. lStrikeOut Identifica uma fonte strikeout. nCharSet Especifica o cojnunto de caracteres a ser usado. nQuality Identifica a qualidade de saída da fonte. nEscapement Especifica o ângulo.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Handle da fonte se a operação de criação for bem-sucedidada, 0 (zero) caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Cria uma fonte lógica com as características informadas nos parâmetros. Essa fonte pode ser selecionada como a fonte corrente para todos os dispositivos usados pela aplicaçao.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -828,15 +821,15 @@ lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_CreateMenu()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Retorna o handle do novo menu criado. Se falhar, retorna <code>NULL</code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Cria um menu. Inicialmente o menu está vazio, mas pode ser preenchido por itens através da funçao <code><a href="#wvw_appendmenu">wvw_AppendMenu()</a></code>.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -846,15 +839,15 @@ lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_CreatePopupMenu()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Retorna o handle do novo menu popup criado. Se falhar, retorna <code>NULL</code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Cria um menu drop-down, submenu ou menu de atalho. O menu está inicialmente vazio, mas pode ser preenchido através da funçao <code><a href="#wvw_appendmenu">wvw_AppendMenu()</a></code>.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -864,15 +857,15 @@ lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_DeleteMenu( hMenu, nPosition, nFlag )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">hMenu Identifica o menu que será alterado. nPosition Especifica o item do menu que será deleteado, como determinado pelo parâmetro nFlag. nFlag Especifica como o parâmetro nPosition será interpretado. Esse parâmetro deve ser apenas um desses dois valores: <code>MF_BYCOMMAND</code> <code>MF_BYPOSITION</code> Indica que nPosition dá a identificação do item do menu (default) Indica que nPosition dá a posição numérica (começando por zero) do item do menu.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Se a função for bem-sucedida, retorna um valor diferente de zero, caso contrário retorna zero.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Essa funçao deleta um item do menu especificado. Se o item do menu for a identificaçao de um submenu, todo o submenu será apagado.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -882,15 +875,15 @@ lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_DestroyMenu( hMenu )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">hMenu Identifica o menu que será destruído.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Se a função for bem-sucedida, retorna um valor diferente de zero, caso contrário retorna zero.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Essa funçao destroi o menu especificado por hMenu</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -900,15 +893,15 @@ lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_DlgSetIcon( nHandleDialog, ncIcon )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nHandleDialog Handle da janela de diálogo. ncIcon Se o parâmetro for passado como numérico, identifica o <code>RESOURCE</code> em um arquivo RC. Se o parâmetro for passado como string, identifica o nome do arquivo que contém o ícone.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Se a operação for bem-sucedida, o handle do ícone, caso contrário <code>NIL</code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Define o ícone em uma janela de diálogo.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -922,9 +915,9 @@ lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-it"><code>.T.</code> inferior e</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um quadro para a entrada de dados. Essa funçao desenha linhas brancas na parte externa do lado direito e da parte de baixo (diferentemente da <code>GTWVT</code>)</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -934,15 +927,15 @@ lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_DrawBoxGroup( nWinNum, nTop, nLeft, nBottom, nRight, aOffset )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho do quadro. aOffset Matriz com quatro elementos com coordenadas dos cantos superior, direito de offset para alinhamento do quadro com as linhas/colunas.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> esquerdo, inferior e</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um quadro.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -952,15 +945,15 @@ lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_DrawBoxRaised( nNumWin, nTop, nLeft, nBottom, nRight, lTight/aOffset )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas que serao usadas para desenhar o quadro. lTight/aOffset Se o parametro lTight for usado, o quadro é desenhado dentro da regiao dos caracteres e as linhas da parte superior (topo e esquerdo) serao dois pixels abaixo para ajudar no espaçamento dos caracteres (esse tipo de objeto GUI geralmente é sobrescrito por caracteres). Se o parâmetro aOffset for usado, uma matriz deve ser definida com quatro elementos com coordenadas dos cantos superior, esquerdo, inferior e direito de offset para alinhamento do quadro com as linhas/colunas.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um quadro em relevo nas coordenadas especificadas.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -970,15 +963,15 @@ lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_DrawBoxRaised( nNumWin, nTop, nLeft, nBottom, nRight, lTight/aOffset )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas que serao usadas para desenhar o quadro. lTight/aOffset Se o parametro lTight for usado, o quadro é desenhado dentro da regiao dos caracteres e as linhas da parte superior (topo e esquerdo) serao dois pixels abaixo para ajudar no espaçamento dos caracteres (esse tipo de objeto GUI geralmente é sobrescrito por caracteres). Se o parâmetro aOffset for usado, uma matriz deve ser definida com quatro elementos com coordenadas dos cantos superior, esquerdo, inferior e direito de offset para alinhamento do quadro com as linhas/colunas.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um quadro em relevo nas coordenadas especificadas.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -988,15 +981,15 @@ lStrikeout, nCharset, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_DrawBoxRecessed( nWinNum, nTop, nLeft, nBottom, nRight, lTight/aOffset )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas que serao usadas para desenhar o quadro. lTight/aOffset Se o parametro lTight for usado, o quadro é desenhado dentro da regiao dos caracteres e as linhas da parte superior (topo e esquerdo) serao dois pixels abaixo para ajudar no espaçamento dos caracteres (esse tipo de objeto GUI geralmente é sobrescrito por caracteres). Se o parâmetro aOffset for usado, uma matriz deve ser definida com quatro elementos com coordenadas dos cantos superior, esquerdo, inferior e direito de offset para alinhamento do quadro com as linhas/colunas.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um quadro em baixo relevo nas coordenadas especificadas.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1005,12 +998,11 @@ lStrikeout, nCharset, nQuality, nEscapement )
 <h4><code>wvw_DrawButton()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_DrawButton( nWinNum, nTop, nLEft, nBottom, nRight, cText, cImage/nImage,
+<pre><code>wvw_DrawButton( nWinNum, nTop, nLEft, nBottom, nRight, cText, cImage/nImage,
 nFormat, nTextColor, nBkClor, nImageAt )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div>nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nButtom, nRight Coordenadas para desenho do botão. cText Texto para o botão. cImage/nImage Se o parâmetro for uma string, indica o caminho + nome do arquivo contendo uma imagem para ser lido. Se o parâmetro for um número, indica a posição da imagem no cache de imagens do aplicativo. nFormat Indica o formato do botão. Pode ser: 0 1 2 Raised (default) Recessed Outline</div>
   <div>nTextColor Índice da cor do texto do botao nBkColor Índica dor cor de fundo do botao nImageAt Parâmetro ignorado.</div>
@@ -1019,9 +1011,9 @@ nFormat, nTextColor, nBkClor, nImageAt )
 <div class="d-it"><code>.T.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um botao.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1030,20 +1022,19 @@ nFormat, nTextColor, nBkClor, nImageAt )
 <h4><code>wvw_DrawColorRect()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_DrawColorRect( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels,
+<pre><code>wvw_DrawColorRect( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels,
 nRGBColor )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho do retângulo. aOffPixels Matriz com quatro elementos com coordenadas dos cantos superior, esquerdo, direito de offset para alinhamento do retângulo com as linhas/colunas. nRGBColor Cor para preenchimento do retângulo.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum. inferior e</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um retângulo colorido. Essa funçao é compatível com a <code><a href="#wvw_fillrectangle">wvw_FillRectangle()</a></code>, mantida apenas para compatibilidade com a <code>GTWVT</code>.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1053,15 +1044,15 @@ nRGBColor )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_DrawEllipse( nWinNum, nTop, nLeft, nBottom, nRight, aOffset )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho da elipse. aOffset Matriz com quatro elementos com coordenadas dos cantos superior, direito de offset para alinhamento da elipse com as linhas/colunas.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Se bem-sucedido, retorna um valor não-zero, caso contrário retorna zero. esquerdo, inferior e</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha uma elipse.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1071,15 +1062,15 @@ nRGBColor )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_DrawFocusRect( nWinNum, nTop, nLeft, nBottom, nRight, aOffSet )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho do retângulo. aOffset Matriz com quatro elementos com coordenadas dos cantos superior, esquerdo, direito de offset para alinhamento do retângulo com as linhas/colunas.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Se bem-sucedido, retorna um valor não-zero, caso contrário retorna zero. inferior e</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um retângulo no estilo usado para indicar que ele está com o foco.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1089,15 +1080,15 @@ nRGBColor )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_DrawGridHorz( nWinNum, nTop, nLeft, nBottom, nRight, nRows )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas que será desenhada a grade horizontal. nRows Número de linhas para a grade horizontal que será desenhada.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha uma grade horizontal.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1107,15 +1098,15 @@ nRGBColor )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_DrawGridVert( nWinNum, nTop, nBottom, aCols, nCols, aOffset )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nBottom Linha inicial e final para desenho da grade vertical. aCols Matriz que determina as colunas que serao desenhadas. nCols Número de colunas que serao desenhadas. aOffset Matriz com quatro elementos com coordenadas dos cantos superior, esquerdo, direito de offset para alinhamento da grade vertical com as linhas/colunas.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> inferior e</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha uma grade vertical.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1124,12 +1115,11 @@ nRGBColor )
 <h4><code>wvw_DrawImage()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_DrawImage( nWinNum, nTop, nLeft, nBottom, nRight, cImage/nPictureSlot,
+<pre><code>wvw_DrawImage( nWinNum, nTop, nLeft, nBottom, nRight, cImage/nPictureSlot,
 lTight/aOffset, lTransparent )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div>nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho da imagem. Se a coordenada nBottom é <code>NIL</code>, então a altura da imagem será proporcional a largura da imagem. Se a coordenada nRight é <code>NIL</code>, então a largura da imagem será proporcional a altura da imagem. Se ambas as coordenadas nBottom e nRight são <code>NIL</code>, então o tamanho original da imagem será usado. cImage/nPictureSlot Se o parâmetro for passado como string, uma imagem será lida no caminho especificado por cImage. Se o parâmetro for numérico, será um índice para a lista de imagens já carregada pelo aplicativo. Aqui vale um comentário: toda imagem lida é colocada em um cache. Portanto é interessante não usar essa função para desenhar um grande número de imagens. lTight/aOffset Indica como a imagem será ajustada em pixels para as coordenadas de linha/coluna. lTransparent Se <code>.T.</code>, indica que a image é transparente, <code>.F.</code> caso contrário.</div>
   <div>Se for passado como <code>.T.</code>, a cor para transparencia usada será do pixel do canto superior esquerdo.</div>
@@ -1138,9 +1128,9 @@ lTight/aOffset, lTransparent )
 <div class="d-it"><code>.T.</code> se conseguiu desenhar a imagem corretamente, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha uma imagem.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1149,13 +1139,12 @@ lTight/aOffset, lTransparent )
 <h4><code>wvw_DrawLabel()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_DrawLabel( nWinNum, nRow, nCol, cLabel, nAlign, nEscapement, nTextColor,
+<pre><code>wvw_DrawLabel( nWinNum, nRow, nCol, cLabel, nAlign, nEscapement, nTextColor,
 nBkColor, cFontFace, nHeight, nWidth, nWeight, nQuality, nCharSet, lItalic ,
 lUnderline, lStrikeOut )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div>nWinNum Número da janela. O default é a janela atual. nRow, nCol Linha/Coluna para desenho do label. cLabel String que será desenhada. nAlign Alinhamento <code>wingdi.ch</code>). nEscapement Especifica o ângulo. nTextColor Índice da cor do label. nBkColor Índice da cor de fundo do label. cFontFace Nome da fonte. nHeight Largura da fonte. nWidth Altura da fonte. nWeight &quot;Peso&quot; da fonte. nQuality Identifica a qualidade de saída da fonte. nCharSet Especifica o cojnunto de caracteres a ser usado. lItalic da string. O default é <code>TA_LEFT</code> (as outras definições estão no arquivo</div>
   <div>Identifica que a fonte será itálica. lUnderline Identifica uma fonte sublinhada. lStrikeOut Identifica uma fonte strikeout.</div>
@@ -1164,9 +1153,9 @@ lUnderline, lStrikeOut )
 <div class="d-it"><code>.T.</code> se conseguiu desenhar, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um label.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1175,20 +1164,19 @@ lUnderline, lStrikeOut )
 <h4><code>wvw_DrawLabelEx()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_DrawLabelEx( nWinNum, nRow, nCol, cLabel, nAlign, cTextColor, nBkColor,
+<pre><code>wvw_DrawLabelEx( nWinNum, nRow, nCol, cLabel, nAlign, cTextColor, nBkColor,
 nSlotFont )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nRow, nCol Linha/Coluna para desenho do label. cLabel String que será desenhada. nAlign Alinhamento do texto no label. O default é <code>TA_LEFT</code> (as outras definiçoes estao no arquivo <code>wingdi.ch</code>). cTextColor Índice da cor para o texto. nBkColor Índice da cor de fundo do label. nSlotFont Índice do cache de fontes da aplicaçao. Se nao existir uma fonte associada ao índice passado, a funçao nao será executada.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu desenhar a label, parâmetro nSlotFont for inválido). <code>.F.</code> caso contrário (retornará falso também se o</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um label.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1197,20 +1185,19 @@ nSlotFont )
 <h4><code>wvw_DrawLabelObj()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_DrawLabelObj( nWinNum, nTop, nLeft, nBottom, nRight, cLabel, nAlignHorz,
+<pre><code>wvw_DrawLabelObj( nWinNum, nTop, nLeft, nBottom, nRight, cLabel, nAlignHorz,
 nAlignVert, nTextColor, nBkColor, hFont, aOffset )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenhar o label. cLabel String que será desenhada. nAlignHorz Alinhamento horizontal do label. O default é 0. nAlignVert Alinhamento vertical do label. O default é 0. nTextColor Indice da cor do label. nBkColor Índice da cor do fundo do label. hFont Fonte que será desenhada o label. aOffSet Matriz com quatro elementos de alinhamento do label com as coordenadas nTop, nLeft, nBottom, nRight.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um label.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1219,12 +1206,11 @@ nAlignVert, nTextColor, nBkColor, hFont, aOffset )
 <h4><code>wvw_DrawLine()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_DrawLine( nWinNum, nTop, nLeft, nBottom, nRight, nOrient, nFormat, nAlign,
+<pre><code>wvw_DrawLine( nWinNum, nTop, nLeft, nBottom, nRight, nOrient, nFormat, nAlign,
 nStyle, nThick, nColor, aOffset )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div>nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho da linha. nOrient Orientação da linha: 0 1 para linha horizontal para linha vertical.</div>
   <div>nFormat Formato da linha. Pode ser: 0 1 2 Raised Recessed Plain</div>
@@ -1238,9 +1224,9 @@ nStyle, nThick, nColor, aOffset )
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha uma linha.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1249,12 +1235,11 @@ nStyle, nThick, nColor, aOffset )
 <h4><code>wvw_DrawLineEx()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_DrawLineEx( nWinNum, nTop, nLeft, nBottom, nRight, nOrient, nFormat,
+<pre><code>wvw_DrawLineEx( nWinNum, nTop, nLeft, nBottom, nRight, nOrient, nFormat,
 nAlign, nSlotPen )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div>nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho da linha. nOrient Orientação da linha: 0 1 para linha horizontal para linha vertical.</div>
   <div>nFormat Formato da linha. Pode ser: 0 1 2 Raised Recessed Plain</div>
@@ -1265,9 +1250,9 @@ nAlign, nSlotPen )
 <div class="d-it"><code>.T.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha uma linha.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1277,15 +1262,15 @@ nAlign, nSlotPen )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_DrawMenuBar()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Redesenha o menu da janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1294,20 +1279,19 @@ nAlign, nSlotPen )
 <h4><code>wvw_DrawOutline()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_DrawOutline( nWinNum, nTop, nLeft, nBottom, nRight, nThick, nShape,
+<pre><code>wvw_DrawOutline( nWinNum, nTop, nLeft, nBottom, nRight, nThick, nShape,
 nRGBColor )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho do quadro. nThick Formato do traço. As definiçoes estao no arquivo <code>wingdi.ch</code> (PS_SOLID, <code>PS_DOT</code>, etc.). nShape Parâmetro ignorado. nRGBColor Especifica a referencia de cor para o traço ( valor com 32 bits de uma cor RGB).</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um quadro nas coordenadas nTop, nLeft, nBottom, nRight, com os parâmetros de estilo e cor especificados em nThick e nRGBColor.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1317,15 +1301,15 @@ nRGBColor )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_DrawOutlineEx( nWinNum, nTop, nLeft, nBottom, nRight, nSlotPen )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho do quadro. nSlotPen Índice do cache de traços.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um quadro no formato outline.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1335,15 +1319,15 @@ nRGBColor )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_DrawPicture( nWinNum, nTop, nLeft, nBottom, nRight, nSlot, lTight/aOffset )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho da imagem. nSlot Índice do cache de imagens. lTight/aOffset Matriz com quatro elementos com coordenadas dos cantos superior, direito de offset para alinhamento da imagem com as linhas/colunas.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Nenhum. esquerdo, inferior e</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha uma imagem, gravando-a no cache de imagens.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1352,20 +1336,19 @@ nRGBColor )
 <h4><code>wvw_DrawProgressBar()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_DrawProgressBar( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels,
+<pre><code>wvw_DrawProgressBar( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels,
 nPercent, nBackColor, nBarColor, cImage, lVertical, nDirection )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho da barra de progresso. aOffPixels Matriz com quatro elementos com coordenadas dos cantos superior, esquerdo, direito de offset para alinhamento da barra de progresso com as linhas/colunas. nPercent Valor que identifica o preenchimento total da barra de progresso. nBackColor Cor de fundo. nBarColor Cor da barra de progresso. cImage Imagem que será apresentada quando a barra estiver em progresso. lVertical <code>.T.</code> indica que a barra será vertial, <code>.F.</code> que será horizontal. nDirection Pode ter dois valores: 0 1 Indica uma progressão da esquerda para direita Indica uma progressão da direita para esquerda inferior e</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha uma barra de progresso.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1375,15 +1358,15 @@ nPercent, nBackColor, nBarColor, cImage, lVertical, nDirection )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_DrawRectangle( nWinNum, nTop, nLeft, nBottom, nRight, aOffset )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho do retângulo aOffset Matriz com quatro elementos com coordenadas dos cantos superior, esquerdo, direito de offset para alinhamento do retângulo com as linhas/colunas.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Se bem-sucedido, retorna um valor não-zero, caso contrário retorna zero. inferior e</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um retângulo.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1392,20 +1375,19 @@ nPercent, nBackColor, nBarColor, cImage, lVertical, nDirection )
 <h4><code>wvw_DrawRoundRect()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_DrawRoundRect(nWinNum, nTop, nLeft, nBottom, nRight, aOffset,
+<pre><code>wvw_DrawRoundRect(nWinNum, nTop, nLeft, nBottom, nRight, aOffset,
 nRoundHeight, nRoundWidth)
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho do retângulo. aOffset Matriz com quatro elementos com coordenadas dos cantos superior, esquerdo, direito de offset para alinhamento do retângulo com as linhas/colunas. nRoundHeight Largura da elipse desenhada para arredondar os cantos do retângulo. nRoundWidth Altura da elipse desenhada para arredondar os cantos do retângulo.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Se bem-sucedido, retorna um valor não-zero, caso contrário retorna zero. inferior e</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um retângulo com os cantos arredondados. O retângulo é desenhado com o estilo, cor do traço atual e pintando com o pincel atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1414,12 +1396,11 @@ nRoundHeight, nRoundWidth)
 <h4><code>wvw_DrawScrollButton()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_DrawScrollButton( nWinNum, nTop, nLeft, nBotton, nRight, aOffPixels,
+<pre><code>wvw_DrawScrollButton( nWinNum, nTop, nLeft, nBotton, nRight, aOffPixels,
 nTLBR, lDepressed )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div>nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho do scrollbutton. aOffPixels Matriz com quatro elementos com coordenadas dos cantos superior, esquerdo, direito de offset para alinhamento do scrollbutton com as linhas/colunas. nTLBR Indica o sentido do botão de direção dao scrollbutton. Os seguintes valores são permitidos: inferior e</div>
   <div>1</div>
@@ -1436,9 +1417,9 @@ nTLBR, lDepressed )
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um scrollbutton. Com as funçoes wvw_xb*(), essa funçao nao se tornou mais necessária.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1447,20 +1428,19 @@ nTLBR, lDepressed )
 <h4><code>wvw_DrawScrollThumbHorz()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_DrawScrollThumbHorz( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels,
+<pre><code>wvw_DrawScrollThumbHorz( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels,
 nThumbPos )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho do botao de movimentaçao do scrollbar. aOffPixels Matriz com quatro elementos com coordenadas dos cantos superior, esquerdo, inferior e direito de offset para alinhamento do botao de movimentaçao do scrollbar com as linhas/colunas. nThumbPos Coluna para posicionamento inicial.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha uma barra de rolagem para um scrollbar horizontal. Com as funçoes wvw_xb*(), essa funçao nao se tornou mais necessária.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1469,20 +1449,19 @@ nThumbPos )
 <h4><code>wvw_DrawScrollThumbVert()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_DrawScrollThumbVert( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels,
+<pre><code>wvw_DrawScrollThumbVert( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels,
 nThumbPos )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho do botao de movimentaçao do scrollbar. aOffPixels Matriz com quatro elementos com coordenadas dos cantos superior, esquerdo, inferior e direito de offset para alinhamento do botao de movimentaçao do scrollbar com as linhas/colunas. nThumbPos Linha para posicionamento inicial.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha uma barra de rolagem para um scrollbar vertical. Com as funçoes wvw_xb*(), essa funçao nao se tornou mais necessária.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1492,15 +1471,15 @@ nThumbPos )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_DrawShadedRect( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels, nHorVert, aRGBb, aRGBe )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenhar o retângulo. aOffPixels Matriz com quatro elementos com coordenadas dos cantos superior, esquerdo, direito de offset para alinhamento do retângulo com as linhas/colunas. nHorVert Especifica o modo de desenho e como interpretar a matriz de preenchimento do retângulo ­ aRGBb e aRGBe. O default é <code>GRADIENT_FILL_RECT_H</code> (as outras definçoes possíveis estao em <code>wingdi.ch</code>). aRGBb Matriz com quatro posiçoes de cores ( Red, Green, Blue, Alpha) da coordenada inicial do retângulo. aRGBe Matriz com quatro posiçoes de cores (Red, Green, Blue, Alpha) da coordenada final do retângulo.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu desenhar, <code>.F.</code> caso contrário. inferior e</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um retângulo nas coordenadas indicadas nos parâmetros, com preenchimento de cores de forma gradiente, variando da cor de aRGBb a aRGBe.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1510,15 +1489,15 @@ nThumbPos )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_DrawStatusBar( nWinNum, nPanels, aPos )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nPanels Número de divisoes da barra de status. aPos Matriz contendo as posiçoes de linha/coluna para as divisoes da barra de status.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha uma barra de status. Mantida apenas para compatibilidade com a <code>GTWVT</code>. Recomenda-se usar as funçoes wvw_sb*().</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1527,12 +1506,11 @@ nThumbPos )
 <h4><code>wvw_DrawTextBox()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_DrawTextBox( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels, cText,
+<pre><code>wvw_DrawTextBox( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels, cText,
 nAlignHorz, nAlignVert, nTextColor, nBackColor, nBackMode, hFont )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div>nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho do texto. aOffPixels Matriz com quatro elementos com coordenadas dos cantos superior, direito de offset para alinhamento do texto com as linhas/colunas. cText String com o texto que será desenhado. nAlignHorz Especifica o alinhamento do texto dentro das coordenadas informadas. Pode ser: 0 1 2 Alinhamento a esquerda Alinhamento a direita Alinhamento centralizado esquerdo, inferior e</div>
   <div>O default é alinhamento a esquerda. nAlignVert Parâmetro ignorado nTextColor Cor do texto. nBackColor Cor de fundo. nBackMode O modo como a cor de fundo será usada. O default é <code>OPAQUE</code> (outras definiçoes no arquivo <code>wingdi.ch</code>) hFont Fonte usada para o texto.</div>
@@ -1541,9 +1519,9 @@ nAlignHorz, nAlignVert, nTextColor, nBackColor, nBackMode, hFont )
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um texto formatado no retângulo especificado pelas coordenadas dos parâmetros.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1552,20 +1530,19 @@ nAlignHorz, nAlignVert, nTextColor, nBackColor, nBackMode, hFont )
 <h4><code>wvw_DrawToolButtonState()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_DrawToolButtonState( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels,
+<pre><code>wvw_DrawToolButtonState( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels,
 nState )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para desenho do toolbutton. aOffPixels Matriz com quatro elementos com coordenadas dos cantos superior, esquerdo, direito de offset para alinhamento do toolbutton com as linhas/colunas. nState Estado do botão. Pode ser um desses valores: 0 1 2 Estilo do botão flat. Estilo do botão raised. Estilo do botão recessed. inferior e</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha um toolbutton.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1575,15 +1552,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_EnableMaximize( nWinNum, lEnable )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela corrente. lEnable Se <code>.T.</code>, habilita o botao de maximixar. Se <code>.F.</code> desabilita.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Retorna o estado anterior do botão de maximixar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Le/Setar o botao de maximixar. Para poder habilitar o botao, a aplicaçao tem que ter a funçao callback <code>WVW_SIZE()</code> definida.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1593,15 +1570,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_EnableMenuItem( hMenu, nPosition, nFlag )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">hMenu Identifica o menu. nPosition Especifica o item do menu que será habilitado ou desabilitado, conforme o parâmetro nFlag. nFlag Na prática, para o Harbour, deveremos definir os seguintes valores: <code>MF_DISABLE</code> <code>MF_ENABLE</code></div>
 <div class="d-d">Returns</div>
 <div class="d-it">Retorna a configuração anterior do item do menu. Se o item do menu não existir, retorna 0. Indica que o item do menu está desabilitado, não podendo ser selecionado. Indica que o item do menu está habilitado, portanto, pode ser selecionado.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Habilita ou desabilita itens do menu.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1611,15 +1588,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_EnableShortcuts( nWinNum, lEnable )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. lEnable <code>.T.</code> habilita teclas de atalho. <code>.F.</code> desabilita teclas de atalho.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Configuração anterior.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Determina se as teclas de atalho estao habilitadas/desabilitadas para acesso aos itens do menu e do menu de sistema.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1629,15 +1606,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_FillRectangle( nWinNum, nTop, nLeft, nBottom, nRight, nRGBColor|hBrush, lTight, lUseBrush )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para preenchimento do retângulo. nRGBColor/hBrush Cor para preenchimento do retângulo (valor com 32 bits de uma cor RGB). lTight O preenchimento será ajustado para toda a área das coordenadas informadas. lUseBrush Se <code>.T.</code>, o parâmetro nRGBColor/hBrush é interpretado como handle para um modelo de pincel, caso contrário é usado como cor RGB.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">Preenche um retângulo usando ou uma cor ou um modelo de pincel.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1647,15 +1624,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_GetClipboard()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Texto da área de transferência.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém o texto da área de transferencia.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1665,15 +1642,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_GetCursorPos()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Uma matriz com dois elementos, contendo a coordenada X e a coordenada Y, respectivamente.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém as coordenadas do cursor do mouse.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1683,15 +1660,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_GetFontInfo()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Matriz com sete elementos, na seguinte ordem: 1 2 3 4 5 6 7 ­ ­ ­ ­ ­ ­ ­ cFontFace cFontHeight nFontWidth nFontWieght cFontQuality <code>PTEXTSIZE</code>→x <code>PTEXESIZE</code>→y Nome da fonte (por ex. Arial). Altura da fonte. Largura da fonte. &quot;Peso&quot; da fonte. Qualidade da fonte. Largura da fonte em pixels. Tamanho da fonte em pixels.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém dados da fonte corrente.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1701,15 +1678,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_GetLastMenuEvent()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Último item selecionado, ou 0 caso não tenha sido selecionado nenhuma opção anteriormente.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Le o último item do menu selecionado. Trabalha sempre na janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1719,15 +1696,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_GetMenu()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Handle do menu.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém o handle do menu da janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1737,13 +1714,13 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_GetPaintRect( nWinNum )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. <code>DECRI</code>ÇAO Obtém as coordenadas da tela com pendencia para redesenhar.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Matriz com quatro respectivamente. elementos, contendo a linha/coluna inicial e a linha/coluna final,</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1753,15 +1730,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_GetPalette()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Matriz com 16 elementos, cada elemento representando uma cor.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém a paleta de cores.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1771,15 +1748,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_GetRGBColor( nColor )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nColor Índice da cor (como definido no Cl*pper).</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Retorna o valor RGB da cor.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Le o valor RGB do índice da cor passado no parâmetro nColor.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1789,15 +1766,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_GetRowColFromXY( nWinNum, nX, nY )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">A largura da tela, em pixels.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Le a largura da tela, em pixels.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1807,15 +1784,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_GetScreenWidth()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Tamanho da tela, em pixels.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Le o tamanho da tela, em pixels.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1825,15 +1802,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_GetTitle()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">O título da janela atual.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Le o título da janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1843,15 +1820,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_GetToolTipBkColor()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Índice de cor RGB com a cor de fundo da tooltip.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém a cor de fundo da tooltip.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1861,15 +1838,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_GetToolTipTextColor()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Índice de cor RGB com a cor do texto da tooltip.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém a cor do texto da tooltip.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1879,15 +1856,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_GetToolTipWidth()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Número com o tamanho do toolip.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém o tamanho do tooltip.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1897,15 +1874,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_GetWindowHandle()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Handle da janela.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém o handle da janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1915,15 +1892,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_GetXYFromRowCol( nWinNum, nRow, nCol )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nRow Número da linha. nCol Número da coluna.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Matriz com dois elementos, contendo a coordenada X e a coordenada Y, respectivamente.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Converte linha e coluna em coordenadas X,Y (em pixels).</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1933,15 +1910,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_InvalidateRect()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Invalida a janela atual, forçando o seu redesenho.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1951,15 +1928,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_IsLButtonPressed()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se o botão estiver pressionado. <code>.F.</code> se o botão não estiver pressionado.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Verifica se o botao esquerdo do mouse está pressionado.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1969,15 +1946,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_KillTimer( nWinNum )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu cancelar o evento timer, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Cancela o evento timer para a janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -1987,15 +1964,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_lbAddString( nHandleDialog, nIDListBox, cItem )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nHandleDialog Handle da janela de diálogo. nIDListBox Identificador do Listbox cItem Item para ser incluido no listbox.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Adiciona um item em um listbox.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2005,15 +1982,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_lbSetCurSel( nHandleDialog, nIDListBox, nItem )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nHandleDialog Handle da janela de diálogo. nIDListBox Identificador do listbox. nItem Índice do item, iniciando por 0.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Seleciona um item em um listbox.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2023,15 +2000,15 @@ nState )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_lCloseWindow()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu fechar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Fecha a janela superior (que está no topo, a última que foi criada).</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2040,20 +2017,19 @@ nState )
 <h4><code>wvw_LoadFont()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_LoadFont( nSlotFont, cFontName, nHeight, nWidth, nWeight, lItalic,
+<pre><code>wvw_LoadFont( nSlotFont, cFontName, nHeight, nWidth, nWeight, lItalic,
 lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nSlotFont Índice do cache de fontes. cFontName Nome da Fonte. nHeight Largura da fonte. nWidth Altura da fonte. nWeight &quot;Peso&quot; da fonte. lItalic Indica se a fonte está em itálico (<code>.T.</code>) ou nao (default). lUnderline Indica se a fonte está sobrescrita (<code>.T.</code>) ou nao (default). lStrikeout Indica se a fonte está strikeout (<code>.T.</code>) ou nao (default). nCharSet Especifica o conjunto de caracteres a ser usado nQuality Qualidade da fonte. nEscapement Especifica o ângulo.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Carrega as informaçoes da fonte especificada através dos seus parâmetros, gravando no cache de fontes.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2063,15 +2039,15 @@ lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_LoadPen( nSlot, nStyle, nWidth, nRGBColor )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nSlot Índice do cache de traços definidos pelo usuário. nStyle Estilo do traço. nWidth Altura do traço. Se especificar 0, o traço terá apenas um pixel de extensao. nRGBColor A cor de referencia para o traço.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu ler e gravar as definições do traço, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Carrega as definiçoes do traço (estilo, tamanho e cor) para o cache de traços.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2081,15 +2057,15 @@ lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_LoadPicture( nSlot, cFilePicture )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nSlot Posiçao no cache onde a imagemserá informada, será substituída. cFilePicture Imagem a ser carregada no cache.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu ler a imagem, <code>.F.</code> caso contrário. carregada. Se já existir alguma imagem na posição</div>
 <div class="d-d">Description</div>
 <div class="d-it">Carrega uma imagem no cache de imagens. Leia a observaçao sobre o cache de imagens, na introduçao desse documento.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2099,15 +2075,15 @@ lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_Maximize( nWinNum )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Maximiza a janela atual (parâmetro nWinNum é ignorado). Se a aplicaçao definir a funçao callback <code>WVW_Size()</code> a janela será maximizada, caso contrário ela apenas será restaurada.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2117,15 +2093,15 @@ lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_MaxMaxCol( nWinNum )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela corrente.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Número máximo de colunas.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Retorna o máximo <code><a href="harbour.html#maxcol">MaxCol()</a></code> possível na configuraçao de tela corrente, para a fonte usada na janela nWinNum</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2135,15 +2111,15 @@ lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_MaxMaxRow( nWinNum )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela corrente.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Número máximo de linhas.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Retorna o máximo <code><a href="harbour.html#maxrow">MaxRow()</a></code> possível na configuraçao de tela corrente, para a fonte usada na janela nWinNum.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2153,15 +2129,15 @@ lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_MessageBox( nWinNum, cMessage, cTitle, nOption )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. cMessage Mensagem que será exibida. cTitle Título da janela de mensagem. nOption Indica quais os botoes serao usados na janela. O default é <code>MB_OK</code> (botao OK sem ícones). As outras definiçoes estao no arquivo <code>winuser.ch</code>.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">O número da opção escolhida (IDOK para o botão OK, <code>IDCANCEL</code> para o botão cancelar, etc.). As definições para o retorno estão no arquivo <code>winuser.ch</code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Exibe uma janela de mensagem. A janela de mensagem pode ter um ícone e um ou mais botoes com opçoes para o usuário escolher.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2171,15 +2147,15 @@ lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_Minimize()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Minimiza a janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2189,15 +2165,15 @@ lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_nColOfs( nWinNum )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela corrente.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Numero de colunas de offset.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Determinar o número de colunas de offset da janela nWinNum, relativo a janela principal.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2207,15 +2183,15 @@ lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_nNumWindows()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Numero de janelas abertas.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Retorna o numero total de janelas que estao abertas (incluindo a janela principal).</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2224,20 +2200,19 @@ lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <h4><code>wvw_nOpenWindow()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_nOpenWindow( cWinName, row1, col1, row2, col2, nStyle, nParentWin,
+<pre><code>wvw_nOpenWindow( cWinName, row1, col1, row2, col2, nStyle, nParentWin,
 nExStyle )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">cWinName É o título da janela. Se for omitido, será usado o nome do arquivo executável. row1, col1, row2, col2 Linha inicial, coluna inicial, linha final e coluna final da janela que será aberta. Essas coordenadas sao relativas a janela principal e nao a janela atual. Essas coordenadas sao usadas ainda para: 1) colocar a janela em seu posicionamento inicial. 2) determinar o tamanho da janela (novo <code><a href="harbour.html#maxrow">MaxRow()</a></code> e <code><a href="harbour.html#maxcol">MaxCol()</a></code>). 3) salvar em RowOfs e ColOfs para o modo de MainCoord. nStyle É o estilo da janela (por ex. <code>WS_OVERLAPPEDWINDOW</code>, etc). As definiçoes estao em <code>winuser.ch</code>. O default é <code>WS_CAPTION</code>|<code>WS_SYSMENU</code>|<code>WS_CLIPCHILDREN</code>. Se for usar na janela controles como <code>PUSHBUTTON</code>, voce deve incluir o estilo <code>WS_CLIPCHILDREN</code>. nParentWin É a janela mae da nova janela que está sendo aberta. O default é a janela atual (no modo Standard) e a última janela (no modo MainCoord). Se quiser que a nova janela nao tenha mae, informe ­1. nExStyle Estilo extendido para janela (por exemplo <code>WS_EX_TOOLTIPWINDOW</code>). Default é <code>NIL</code>.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">O numero da janela se for bem sucedido ou 0 se falhar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Abre uma janela nas coordenadas especificadas. Dependendo do parâmetro da funçao <code><a href="#wvw_nostartupsubwindow">wvw_NoStartupSubWindow()</a></code> a janela será apresentada ou permanecerá invisível (até que seja chamada a funçao <code><a href="#wvw_showwindow">wvw_ShowWindow()</a></code>).</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2247,15 +2222,15 @@ nExStyle )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_nRowOfs( nWinNum )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela corrente.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Numero de linhas de offset.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Determinar o número de linhas de offset da janela nWinNum, relativo a janela principal.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2265,15 +2240,15 @@ nExStyle )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_nSetCurWindow( nWinNum )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum A nova janela que receberá o foco (se tornará a janela ativa).</div>
 <div class="d-d">Returns</div>
 <div class="d-it">A antiga janela corrente. janela corrente (em foco, ativa). Tem lógica apenas para o modo</div>
 <div class="d-d">Description</div>
 <div class="d-it">Tornar a nWinNum StandadMode.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2283,15 +2258,15 @@ nExStyle )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_NoClose( nWinNum )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela corrente.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desabilita o botao de `X' da janela nWinNum.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2301,15 +2276,15 @@ nExStyle )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_NoStartupSubWindow( lOn )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">lOn <code>.T.</code> quando a janela for aberta, será apresentada (default). <code>.F.</code> quando a janela for aberta, permanecerá invisível. Se nao for informado parametro, retorna configuraçao atual.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Retorna a nova configuração configuração atual. para abertura de janelas (se lOn for informado) ou a</div>
 <div class="d-d">Description</div>
 <div class="d-it">Informa ao sistema que a janela, quando criada, será aberta (lOn = <code>.T.</code>) ou permanecerá invisível (lOn = <code>.F.</code>) até que se chame a funçao <code><a href="#wvw_showwindow">wvw_ShowWindow()</a></code>.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2319,15 +2294,15 @@ nExStyle )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_NumBMCache()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Configuração atual do número máximo do cache de bitmaps.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém o número máximo do cache de bitmaps.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2336,12 +2311,11 @@ nExStyle )
 <h4><code>wvw_pbCreate()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_pbCreate( nWinNum, nTop, nLeft, nBottom, nRight, cText, cImage/nImage,
+<pre><code>wvw_pbCreate( nWinNum, nTop, nLeft, nBottom, nRight, cText, cImage/nImage,
 bBlock, aOffset, nStretchBitmap, lMap3DColors )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div>nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para criação do botão. cText Texto para o botão. O default é &quot;&quot;. cImage/nImage Se informado como numérico indica o ID do <code>RESOURCE</code> em um arquivo .RC. Se informado como string, deve conter o caminho completo do arquivo de imagem. bBlock Bloco de código que será executado sempre quando for gerado um evento <code>BN_CLICK</code> (ou seja, pressionar e liberar o botão). Sempre será passado os parâmetros: nWinNum e o identificador do botão. aOffset Matriz com quatro elementos com coordenadas dos cantos superior, direito de offset para alinhamento do botão com as linhas/colunas. nStretchBitmap Um número entre 0 e 1 (inclusive) como um fator para &quot;esticar&quot; o bitmap. Por exemplo: 1.0 0.5 0 O bitmap vai cobrir por inteiro o botão O bitmap vai cobrir 50% do botão O bitmap não vai ser &quot;esticado&quot; esquerdo, inferior e</div>
   <div>O default é 1. lMap3DColors Se a imagem terá efeito de transparencia (<code>.T.</code>) ou nao (<code>.F.</code>). Atençao para o fato que existe a limitaçao de bitmaps com, no máximo, 256 cores.</div>
@@ -2350,9 +2324,9 @@ bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-it">Retorna o handle do novo pushbutton, se a operação for bem-sucedida, ou 0 se falhar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Cria um pushbutton na janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2362,15 +2336,15 @@ bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_pbDestroy( nWinNum, nPBId )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nPBId Identificador do pushbutton.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Exclui um pushbutton da janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2380,15 +2354,15 @@ bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_pbEnable( nWinNum, nPBId, lToggle )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nPBId Identificador do pushbutton. lToggle <code>.T.</code> Habilita pushbutton (default) <code>.F.</code> Desabilita pushbutton</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Retorna o estado anterior do pushbutton, se o parâmetro lToggle for informado, caso contrário, retorna o estado atual do pushbutton (<code>.T.</code> indica habilitado, <code>.F.</code> desabilitado).</div>
 <div class="d-d">Description</div>
 <div class="d-it">Habilita/Desabilita pushbutton na janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2398,15 +2372,15 @@ bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_pbSetCodeblock( nWinNum, nPBId, bBlock )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nPBId Identificador do pushbutton. bBlock Bloco de código.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se a operação foi bem-sucedida, <code>.F.</code> se falhar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Atribui um novo bloco de código bBlock para o pushbutton nPBId na janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2416,15 +2390,15 @@ bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_pbSetFocus( nWinNum, nPBId )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nPBId Identificador do pushbutton.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu configurar o foco corretamente, <code>.F.</code> se falhar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Configura o foco para o pushbutton da janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2433,20 +2407,19 @@ bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <h4><code>wvw_pbSetFont()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_pbSetFont( nWinNum, cFontFace, nHeight, nWidth, nWeight, nQuality,
+<pre><code>wvw_pbSetFont( nWinNum, cFontFace, nHeight, nWidth, nWeight, nQuality,
 lItalic, lUnderline, lStrikeout )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. cFontName Nome da Fonte. nHeight Largura da fonte. nWidth Altura da fonte. nWeight &quot;Peso&quot; da fonte. nQuality Qualidade da fonte. lItalic Indica se a fonte está em itálico (<code>.T.</code>) ou nao (default). lUnderline Indica se a fonte está sobrescrita (<code>.T.</code>) ou nao (default). lStrikeout Indica se a fonte está strikeout (<code>.T.</code>) ou nao ( default).</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se a operação for bem-sucedida, <code>.F.</code> se falhou.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Inicializa a fonte para os pushbuttons (existentes e os que ainda serao criados).</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2456,15 +2429,15 @@ lItalic, lUnderline, lStrikeout )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_pbSetStyle( nWinNum, nPBId, nStyle )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nPBId Identificador do pushbutton. nStyle Define o estilo do pushbutton. As possíveis definiçoes estao no arquivo <code>winuser.ch</code> (BS_PUSHBUTTON, <code>BS_DEFPUSHBUTTON</code>, etc.). O uso mais comum é através dos seguintes valores: <code>BS_DEFPUSHBUTTON</code> <code>BS_PUSHBUTTON</code></div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> 1: Indica que o pushbutton é o botão default (aparece selecionado através de uma borda pontilhada). 0: Indica um pushbutton padrão.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Atribui um novo estilo ao pushbutton da janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2473,20 +2446,19 @@ lItalic, lUnderline, lStrikeout )
 <h4><code>wvw_pgCreate()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_pgCreate( nWinNum, nTop, nLeft, nBottom, nRight, aOffset, nBackColor,
+<pre><code>wvw_pgCreate( nWinNum, nTop, nLeft, nBottom, nRight, aOffset, nBackColor,
 nBarColor, lSmooth, lVertical )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para a criaçao da progress bar. aOffset Matriz com quatro elementos com coordenadas dos cantos superior, esquerdo, direito de offset para alinhamento da progress bar com as linhas/colunas. nBackColor Cor de fundo. nBarColor Cor da progress bar. lSmooth <code>.T.</code> Desenha a progress bar como uma barra contínua <code>.F.</code> Desenha a progress bar com pequenos retângulos distintos lVertical <code>.T.</code> Desenha a progress bar vertical <code>.F.</code> Desenha a progress bar horizontal</div>
 <div class="d-d">Returns</div>
 <div class="d-it">O handle da progress bar, se a operação for bem-sucedida, ou 0 se falhar. inferior e</div>
 <div class="d-d">Description</div>
 <div class="d-it">Desenha uma progress bar para a janela atual. A faixa da progress bar é inicialmente de 0 a 100, comecando com 0.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2496,15 +2468,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_pgDestroy( nWinNum, nPGId )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nPGId Identificador da progress bar.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Exclui uma progress bar da janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2514,15 +2486,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_pgGetPos( nWinNum, nPGId )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nPGId Identificador da progress bar.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Posição na progress bar ou 0 se falhar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém a posiçao atual em uma progress bar.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2532,15 +2504,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_pgSetPos( nWinNum, nPGId, nPos )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nPGId Identificador da progress bar. nPos Número da posiçao na progress bar (dentro da faixa do mínimo-máximo).</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se a operação for bem-sucedida, <code>.F.</code> se falhar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Atualiza a progress bar para a posiçao indicada pelo parâmetro nPos.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2550,15 +2522,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_PasteFromClipboard()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Cola o texto que está na área de transferencia.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2568,15 +2540,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_ProcessMessages()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum (na verdade retorna o número 1, mas sem nenhum utilidade).</div>
 <div class="d-d">Description</div>
 <div class="d-it">Processa as mensagens de todas as janelas.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2586,15 +2558,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_Restore( nWinNum )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Restaura a janela atual (o parâmetro nWinNum é ignorado). A restauraçao da janela do modo maximizado pode precisar ser manipulada pela funçao callback <code>WVW_Size()</code>, porque a funçao <code><a href="#wvw_restore">wvw_Restore()</a></code> assume que nao acontecerá mudança em <code><a href="harbour.html#maxrow">MaxRow()</a></code>/<code><a href="harbour.html#maxcol">MaxCol()</a></code>.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2604,15 +2576,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_RestScreen( nWinNum, nTop, nLeft, nBottom, nRight, aScr, lDoNotDestroyBMP )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a jenala atual. nTop, nLeft, nBottom, nRight Coordenadas da tela <code><a href="#wvw_savescreen">wvw_SaveScreen()</a></code>. aScr Matriz com tres elementos contendo a altura, largura e handle do bitmap, respectivamente. lDoNotDestroyBMP <code>.T.</code> se após a restauraçao da tela, apagar o bitmap que contém a imagem da tela salva, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu restaurar a tela com sucesso, <code>.F.</code> caso contrário. onde serão apresentados os dados salvos através da função</div>
 <div class="d-d">Description</div>
 <div class="d-it">Restaura a tela salva previamente através da funçao <code><a href="#wvw_savescreen">wvw_SaveScreen()</a></code>.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2622,15 +2594,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_sbAddPart( nWinNum, cMaxText, nWidth, nStyle, lResetParts, cIcon, cTooltip )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. cMaxText Se definido esse parâmetro, o tamanho da parte da status bar será o tamanho do texto. nWidth Tamanho da parte da status bar, em pixels. Se o parâmetro cMaxText for informado, nWidth será ignorado. nStyle Estilo da status bar. Os valores permitidos sao: 0 0x100 0x200 lResetParts Se <code>.T.</code>, indica que todas as partes anteriores serao removidas, <code>.F.</code> indica que uma nova parte criada será adicionada as anteriores. cIcon/cTooltip Parâmetros ignorados.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Retorna o número de partes atuais na status bar, se a operação for bem-sucedida, ou 0 caso contrário. Recessed (default) Sem bordas Raised</div>
 <div class="d-d">Description</div>
 <div class="d-it">Adiciona uma divisao em uma status bar, com tamanho e estilo especifidados nos parâmetros cMaxText/nWidth e nStyle.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2640,15 +2612,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_sbCreate( nWinNum )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Retorna um handle para a status bar, se a operação for bem-sucedida, ou 0 se falhar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Cria um status bar para a janela corrente, com uma parte.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2658,15 +2630,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_sbDestroy( nWinNum )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Destrói um status bar, forçando a janela a ser redesenhada.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2676,15 +2648,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_sbGetParts()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Número de partes de uma status bar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Le o número de partes de uma status bar.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2694,15 +2666,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_sbGetText( nWinNum, nPart )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nPart Número da parte da status bar.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">String da parte nPart da status bar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Le o texto da status bar contido na parte nPart.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2712,15 +2684,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_sbRefresh()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Número de partes da status bar, se a operação for bem-sucedida, ou 0 caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Reinicializa todas as partes da status bar, redesenhado-as.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2730,15 +2702,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_sbSetText( nWinNum, nPart, cText )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nPart Número da parte que o texto será configurado. cText Texto que será configurado para a parte nPart da status bar.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Configura um texto cText para a parte nPart de uma status bar.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2748,15 +2720,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SaveScreen( nWinNum, nTop, nLeft, nBottom, nRight )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a jenal atual. nTop, nLeft, nBottom, nRight Coordenadas da regiao da tela que sera salva (sempre da janela atual, pois o parâmetro nWinNum é ignorado).</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Matriz com três elementos, contendo o tamanho, largura e o handle do bitmap.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Salva uma regiao da tela, gravando em um bitmap.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2766,15 +2738,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetAltF4Close( lOn )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">lOn <code>.T.</code> aplicação pode ser encerrada através de ALT + F4 <code>.F.</code> aplicação não pode ser encerrada através de ALT + F4</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Configuração anterior.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Identifica se a aplicaçao pode ser encerrada através da combinaçao de tecla ALT + F4.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2784,15 +2756,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetAsNormal()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu alterar a configuração, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Retorna a janela ao estado normal (oposto da funçao <code><a href="#wvw_setontop">wvw_SetOnTop()</a></code>).</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2802,15 +2774,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetBrush( nStyle, nColor, nHatch )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nStyle Identifica o estilo do pincel. As definiçoes podem ser encontradas no arquivo <code>wingdi.ch</code> (BS_SOLID, <code>BS_NULL</code>, etc.). nColor Índice da cor para desenho do pincel. nHatch Define o padrao de preenchimento do pincel. As definiçoes estao no arquivo <code>wingdi.ch</code> (HS_VERTICAL, <code>HS_HORIZONTAL</code>, etc.).</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu definir corretamente, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Define o estilo, cor e padrao de preenchimento do pincel.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2820,15 +2792,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetClipboard( cText )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">cText Texto que será inserido na área de transferencia.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguir configurar, caso contrário retorna <code>.F.</code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Configura texto para a área de transferencia.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2838,15 +2810,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetCodepage( nWinNum, nCodePage )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nCodePage Código de página.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu definir a nova página de código, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Define a página de código da janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2856,15 +2828,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetDefCentreWindow( lCentre )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">lCentre Se informado <code>.T.</code>, configura para que todas as janelas centralizadas horizontalmente e verticalmente. Se nao informado, retorna o valor da configuraçao atual.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Se lCentre informado, retorna o valor anterior da configuração, caso contrário retorna a configuração atual. posteriormente abertas, sejam</div>
 <div class="d-d">Description</div>
 <div class="d-it">Le ou atualiza o parâmetro de centralizaçao horizontal/vertical das janelas.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2874,15 +2846,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetDefHCentreWindow( lCentre )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">lCentre Se informado <code>.T.</code>, configura para que todas as janelas centralizadas horizontalmente. Se nao informado, retorna o valor da configuraçao atual.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Se lCentre informado, retorna o valor anterior da configuração, caso contrário retorna a configuração atual. posteriormente abertas, sejam</div>
 <div class="d-d">Description</div>
 <div class="d-it">Le ou atualiza o parâmetro de centralizaçao horizontal das janelas.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2892,15 +2864,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetDefLineSpacing( nLineSpacing )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nLineSpacing Número do espaçamento entre linhas. Deve ser menor ou igal a 40, caso contrário será ignorado. Se nao informado le a configuraçao atual.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">A configuração anterior.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Seta o espaçamento entre linhas de todas as janelas.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2910,15 +2882,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetDefLSpaceColor( nColorIndex )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nColorIndex O índice da cor para o espaçamento entre linhas. Deverá ser entre 0 e 15 (os índices sao os mesmos do Cl*pper) ou ­1, indicando que nao tem cor.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">A configuação antiga, se nColorIndex for informado, caso contrário a configuração atual.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Altera a cor para o espaçamento entre linhas.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2928,15 +2900,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetDefVCentreWindow( lCentre )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">lCentre Se informado <code>.T.</code>, configura para que todas as janelas centralizadas verticalmente. Se nao informado, retorna o valor da configuraçao atual.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Se lCentre informado, retorna o valor anterior da configuração, caso contrário retorna a configuração atual. posteriormente abertas, sejam</div>
 <div class="d-d">Description</div>
 <div class="d-it">Le ou atualiza o parâmetro de centralizaçao vertical das janelas.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2946,15 +2918,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetFont( cFontFace, nFontHeight, nFontWidth, nFontWeight, nFontQuality )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">cFontName Nome da fonte (por exemplo, MS Sans Serif). nFontHeight Altura da fonte. nFontWidth Largura da fonte. nFontWeight &quot;Peso&quot; da fonte. nFontQuality Qualidade da fonte. Todos os parâmetros sao opicionais. A funçao usa os valores que sao atribuidos na criaçao da janela.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu alterar a fonte ou seus parêmetros, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Modifica a fonte ou os parâmtros ligados a fonte (altura, largura, qualidade, etc.)</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2964,15 +2936,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetIcon( nWinNum, nIcon, cIcon )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nIcon Identifica o ícone no arquivo de recursos. cIcon O nome do arquivo de ícone.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu ler o ícone, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Configurar o ícone da janela atual (o parâmetro nWinNum é ignorado).</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -2982,15 +2954,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetLastMenuEvent( nWinNum, nMenuEvent )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nMenuEvent Item do menu.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Última configuração válida.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Configura o último item selecionado do menu (retorno da funçao <code><a href="#wvw_getlastmenuevent">wvw_GetLastMenuEvent()</a></code>).</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3000,15 +2972,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetLineSpacing( nWinNum, nLineSpacing )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela corrente. nLineSpacing Se infomado, altera o espaçamento entre linhas da janela nWinNum, caso contrário le a configuraçao atual do parâmetro.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">A configuração anterior, se nLineSpacing for informado, ou a configuração atual.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Le/Configura o espaçamento da janela. Se o tamanho da janela ficar muito grande, o valor anterior será restaurado. Essa funçao atualiza apenas a janela corrente. Para configurar globalmente, utilize <code><a href="#wvw_setdeflinespacing">wvw_SetDefLineSpacing()</a></code>.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3018,15 +2990,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetLSpaceColor( nWinNum, nColorIndex )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela atual. O default é a janela corrente. nColorIndex O índice da cor para o espaçamento entre linhas. Deverá ser entre 0 e 15 (os índices sao os mesmos do Cl*pper) ou ­1, indicando que nao tem cor.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">A configuação antiga, se nColorIndex for informado, caso contrário a configuração atual. desejar alterar a</div>
 <div class="d-d">Description</div>
 <div class="d-it">Altera a cor para o espaçamento entre linhasda janela nWinNum. Se configuraçao de todas as janelas, use a funçao <code><a href="#wvw_setdeflspacecolor">wvw_SetDefLSpaceColor()</a></code></div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3036,15 +3008,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetMainCoord( lMainCoord )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">lMainCoord Se informado, muda o modo de exibiçao das janelas. Caso contrário, le o modo que está configurado.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">O modo antigo da configuração, se lMainCoord informado, ou o modo atual.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Retorna ou o modo que está configurado o sistema (Standard ou MainCoord) ou, se o parâmetro lMainCoord for informado, troca a forma de coniguraçao do modo de exibiçao das janelas.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3054,15 +3026,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetMaxBMCache( nMaxCache )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nMaxCache Número máximo de bitmaps no cache. O default é 20 e o mínimo é 1.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Se o parâmetro nMaxChace não for informado, retorna a configuração atual do número máximo de bitmaps do cache, caso contrário, configura esse número.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Para minimizar a operaçao de carregar um bitmap, a funçao <code><a href="#wvw_drawimage">wvw_DrawImage()</a></code> faz um cache de bitmaps quando ele é lido do disco. Dessa forma, quando usamos <code><a href="#wvw_drawimage">wvw_DrawImage()</a></code> outras vezes, o bitmap já estará na memória. Quando o cache de bitmaps chegar ao seu limite, sempre o último bitmap lido e carregado será descartado em favor do novo. Nao há nenhuma forma de descartar um bitmap específico do cache. Se achar conveniente, pode controlar o cache de bitmaps manualmente, através da funçao <code><a href="#wvw_loadpicture">wvw_LoadPicture()</a></code>.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3072,15 +3044,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetMenu( nWinWin, hMenu )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. hMenu Contém as informaçoes do menu.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Adiciona um menu, apontado por hMenu, a janela atual (o parâmetro nWinNum é ignorado e a funçao procura a janela atual). A janela entao é redesenhada para ajustar seu tamanho.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3090,15 +3062,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetMenuKeyEvent( nWinNum, nKeyEvent )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nKeyEvent Número do evento definido pelo usuário para o comando do menu do windows.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Última configuração válida.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Define um evento numérico do menu, para a janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3108,15 +3080,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetMouseMove( nWinNum, lMouseMove )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. lMouseMove <code>.T.</code> reconhece o uso do mouse na aplicaçao. <code>.F.</code> nao reconhece o uso do mouse na aplicaçao. Se o parâmetro for omitido, retorna a configuraçao atual.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Se informado lMouseMove, retorna <code>.T.</code> ou <code>.F.</code>, se conseguiu ou não configurar, caso contrário retorna a última configuração válida.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Habilita/Desabilita o reconhecimento do mouse na aplicaçao.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3126,15 +3098,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetMousePos( nWinNum, nRow, nCol )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nRow, nCol Linha/Coluna para posicionamento do cursor do mouse.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu reposicionar o mouse, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Posiciona o mouse na posiçao indicada por nRow/nCol.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3144,15 +3116,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetOnTop()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu alterar o posicionamento da janela, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Deixa a janela sempre visível, mesmo que o foco esteja em outra janela. Esta funçao altera as propriedades da janela, de modo que ela sempre estará acima de qualquer outra janela aberta.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3162,15 +3134,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetPaintRefresh( nPaintRefresh )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nPaintRefresh Intervalo em milisegundos para chamar <code>WVW_PAINT()</code>. Deve ser maior ou igual a 50 ou igual a 0, causando a execuçao imediata da repintura.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Valor antigo para nPaintRefresh.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Determina o intervalo para a chamada da funçao <code>WVW_PAINT()</code>, responsável pelo redesenho da tela.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3180,15 +3152,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetPalette( aRGBValues )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">aRGBValues Matriz com 16 elementos com valores RGB.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Configura a paleta de cores.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3198,15 +3170,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetPen( nPenStyle, nWidth, nColor )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nPenStyle Define o estilo do traço. As definiçoes estao no arquivo <code>wingdi.ch</code> (PS_SOLID, <code>PS_DOT</code>, etc.). nWidth Especifica a largura do traço. nColor Indice da cor do traço.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu definir corretamente, caso contrário, <code>.F.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">Define o estilo, largura e cor do traço.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3216,15 +3188,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetPointer( nWinNum, nIcon )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nIcon Modelo do cursor a ser lido. Pode ser uma string que identifica um <code>RESOUCE</code> em um arquivo RC ou pode ser um modelo predefinido do windows (o default é <code>IDC_ARROW</code>). Outras definiçoes estao no arquivo <code>winuser.ch</code>)</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Altera o cursor do mouse.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3234,15 +3206,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetPopupMenu( nWinNum, hPopUp )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela corrente. hPopUp Contém as informaçoes do menu popup.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Configura o menu popup da janela atual (o parametro nWinNum é ignorado, e a funçao procura a janela atual).</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3252,15 +3224,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetTimer( nWinNum, nInterval )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nInterval Intervalor em milisegundos.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu configurar o timer, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Configura o evento timer para o intervalo de tempo nInterval (útil para atualizaçao de um relógio em uma status bar, por exemplo). Na prática essa funçao só irá funcionar se a funçao <code>WVW_TIMER()</code> for definida no aplicativo.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3270,15 +3242,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetTitle( nWinNum, cTitle )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. cTitle Título da janela.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Define o título da janela atual (o parâmetro nWinNum é ignorado).</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3288,15 +3260,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetToolTip( nWinNum, nTop, nLeft, nBottom, nRight, cToolText )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para apresentaçao da tooltip. cToolText Texto para tooltip.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Define um tooltip.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3306,15 +3278,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetToolTipActive( nWinNum, lToggle )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. lToggle Se for informado, habilita (<code>.T.</code>) ou desabilita (<code>.F.</code>) a exibiçao de tooltips. Se nao for informado, retorna o estado atual (se exibe ou nao tooltips).</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Configuração antiga (se for informado o parâmetro lToggle) ou configuração atual.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Ativa/Desativa apresentaçao de tooltips.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3324,15 +3296,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetToolTipBkColor( nWinNum, nColor )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nColor Índice da cor para o tooltip.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Se o parâmetro nColor não for informado, retorna a cor de fundo atual da tooltip, caso contrário, seta a nova cor de fundo.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém ou altera a cor de fundo da tooltip.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3342,15 +3314,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetToolTipMargin( nWinNum, nTop, nLeft, nBottom, nRight )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nTop, nLeft, nBottom, nRight Coordenadas para a tooltip.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Define as margens da tooltip. A margem é a distância (em pixels) entre as bordas da janela da tooltip e o texto contido dentro da tooltip.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3360,15 +3332,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetToolTipText( nWinNum, cText )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. cText Texto para da tooltip.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Define um texto para a tooltip.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3378,15 +3350,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetToolTipTextColor( nWinNum, nColor )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nColor Índice da cor para o texto da tooltip.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Se o parâmetro nColor não for informado, retorna a cor atual do texto, caso contrário, seta a nova cor do texto para tooltip.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Define ou obtém a cor do texto da tooltip.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3396,16 +3368,16 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetToolTipTitle( nWinNum, nIcon, cTitle )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div>nWinNum Número da janela. O default é a janela atual. nIcon Identifica se deve ser apresentado um ícone em conjunto com o texto da tooltip. É permitido um dos valores abaixo: 0 1 2 3 nenhum ícone (default) Informação Aviso Erro</div>
   <div>Qualquer valor informado acima de 3, o sistema converterá para 0.</div>
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">Nenhum.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3415,15 +3387,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetToolTipWidth( nWinNum, nWidth )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nWidth Tamanho para a área de tooltip.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Se o parâmetro nWidth não for passado, retorna o tamanho atual da área de tooltip, caso contrário, seta o tamanho da área de tooltip e retorna esse valor.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Modifica ou obtém o tamanho da área de tooltip.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3433,15 +3405,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetVertCaret( lOn )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">lOn Se <code>.T.</code>, muda a posiçao do cursor de texto para vertical. Se <code>.F.</code>, muda a posiçao do cursor de texto para posiçao horizontal. Se nao informado, le a configuraçao atual.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Se o parâmetro lOn for informado, retorna a configuração antiga, antes da mudança. Se não, retorna o valor atual da configuração.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Mudar a posiçao do cursor de texto.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3451,15 +3423,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetWindowCentre( nWinNum, lCentre, lPaintIt )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. lCentre <code>.T.</code> centraliza a janela. <code>.F.</code> nao centraliza a janela. lPaintIt <code>.T.</code> Redesenha de imediato as janelas. <code>.F.</code> Apenas atualiza a configuraçao.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Atualiza o parâmetro para centralizaçao de todas as janelas abertas ou que serao abertas. Se o parâmetro lPaintIt for <code>.T.</code> e lCentre também, todas as janelas sao redesenhadas e centralizadas.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3469,15 +3441,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetWindowPos( nWinNum, nXPosition, nYPosition )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nXPosition Posiçao horizontal em pixels. nYPosition Posiçao vertical em pixels.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Muda a posiçao da janela atual, baseado nas coordenadas de nXPosition e nYPosition.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3487,15 +3459,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_SetWinStyle( nWinNum, nStyle )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela corrente. nStyle Novo estilo da janela. Se a janela tiver controle (PUSHBUTTON, <code>SCROLLBAR</code>, ETC.), deve ser adicionado o estilo <code>WS_CLIPCHILDREN</code>.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Retorna o estilo antigo da janela.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Le ou seta o estilo da janela nWinNum. Se a janela estiver escondida ou minimizada, e se o parâmetro nStyle for informado, ela será apresentada.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3505,15 +3477,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_ShowWindow( nWinNum, nMode )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nMode Indica o modo como a janela será apresentada. definiçoes estao no arquivo <code>winuser.ch</code>).</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum. O default é <code>SW_SHOWNORMAL</code> (as outras</div>
 <div class="d-d">Description</div>
 <div class="d-it">Configura o estado de apresentaçao da janela.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3523,7 +3495,7 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_tbAddButton( nWinNum, nCommand, xBitmap, cLabel, nBitmapType, lMap3DColors )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div>nWinNum Número da janela. O default é a janela atual. nCommand Identificador da ação que será executada quando o usuário pressionar o botão. xBitmap Identificação do <code>RESOURCE</code> do bitmap em um arquivo RC (nesse caso a imagem não pode ter mais que 256 cores) ou caminho completo do arquivo da imagem. cLabel Texto do botão. Se o parâmetro lDisplayText da função <code><a href="#wvw_tbcreate">wvw_tbCreate()</a></code> estiver configurado para <code>.T.</code>, o texto será apresentado logo abaixo da imagem, caso contrário será usado como tooltip. nBitmapType Tipo do bitmap. Pode ter os seguintes valores: 0 1 2 3 Custom Bitmaps standard do windows (COPIAR, <code>COLAR</code>, <code>PROCURAR</code>, <code>ABRIR</code>, etc.) Bitmaps &quot;view&quot; do windows (são aqueles que mudam a visualização, como por exemplo, exibir detalhes, ordenar por nome, etc.) Bitmap do Windows Explorer</div>
   <div>lMap3DColors Se a imagem terá efeito de transparencia (só tem sentido se o parâmetro nBitmapType for 0).</div>
@@ -3532,9 +3504,9 @@ nBarColor, lSmooth, lVertical )
 <div class="d-it"><code>.T.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">Adiciona um botao em uma toolbar a direita dos botoes já existentes.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3544,15 +3516,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_tbButtonCount()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Número de botões em uma toolbar.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém o número de botoes em uma toolbar.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3562,15 +3534,15 @@ nBarColor, lSmooth, lVertical )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_tbCmd2Index( nWinNum, nCmd )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nCmd Identificador do comando a pesquisar.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Número do botão da toolbar que está associado ao comando nCmd, ou ­1 se não conseguiu encontrar nenhuma associação.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém o número do botao que está associado o comando nCmd.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3579,12 +3551,11 @@ nBarColor, lSmooth, lVertical )
 <h4><code>wvw_tbCreate()</code></h4>
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
-<pre>
-wvw_tbCreate( nWinNum, lDisplayText, nStyle, nSystemBitmap, nImageWidth,
+<pre><code>wvw_tbCreate( nWinNum, lDisplayText, nStyle, nSystemBitmap, nImageWidth,
 nImageHeight )
-</pre>
+</code></pre>
 </div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div>nWinNum Número da janela. O default é a janela atual. lDIsplayText Se <code>.T.</code>, o texto do botão da toolbar será mostrado juntamente com a imagem. Se <code>.F.</code>, o texto só aparecerá como tooltip (default). nStyle Estilo da toolbar. O default é <code>TBSTYLE_FLAT</code> | <code>TBSTYLE_TOOLTIPS</code> (outras definições podem ser encontradas no arquivo <code>COMMCTRL</code>.H). nSystemBitmap Indica se serão usados bitmaps do windows, e seus tamanhos. Os valores permitidos são: 0 1 2 Não usar bitmaps do sistema Usar bitmaps do sistema de tamanho pequeno usar bitmaps do sistema de tamanho grande</div>
   <div>nImageWidth, nImageHeight Comprimento e largura da imagem (só tem efeito se o parâmetro nSystemBitmap for 0).</div>
@@ -3593,9 +3564,9 @@ nImageHeight )
 <div class="d-it">Handle da toolbar, se operação for bem-sucedida, ou 0 caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Cria uma toolbar no topo da janela atual (inicialmente sem nenhum botao).</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3605,15 +3576,15 @@ nImageHeight )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_tbDelButton( nWinNum, nButton )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nButton Número do botao para excluir. O botao separador também conta como um botao e pode ser excluido. <code>ATEN</code>ÇAO: A lista de botoes começa em zero, ou seja, nButton = 0 significa o botao mais a esquerda em uma toolbar.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu adicionar botão, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Exclui um botao.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3623,15 +3594,15 @@ nImageHeight )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_tbDestroy()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Exclui uma toolbar da janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3641,15 +3612,15 @@ nImageHeight )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_tbEnableButton( nWinNum. nButton, lToggle )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nButton Número do botão na toolbar (a lista começa em zero). lToggle <code>.T.</code> <code>.F.</code> Habilita um botão Desabilita um botão</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se conseguiu habilitar/desabilitar botão, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Habilita/Desabilita um botao em uma toolbar.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3659,15 +3630,15 @@ nImageHeight )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_tbIndex2Cmd( nWinNum, nButton )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nButton Número do botao da toolbar (começando com zero).</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Número do identificador de comando, se operação for bem-sucedida, ou ­1 caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Retorna o identificador de comando associado ao botao.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3677,15 +3648,15 @@ nImageHeight )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_TrackPopupMenu( nWinNum, nHandle )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nHandle Handle do menu popup.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Identificador da opção selecionada ou 0 caso o usuário cancele ou retorne um erro.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Mostra um menu na posiçao do cursor.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3695,15 +3666,15 @@ nImageHeight )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_UnreachedBr( nWinNum, nBottomPixels, nRightPixels )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela corrente. nBottomPixels Deve ser passado por referencia, para guardar o número de linhas, em pixels. nRightPixels Deve ser passado por referencia, para guardar o número de colunas, em pixels.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">O número de linhas/colunas em pixels.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Ler o número de pixels que ficaram fora do alcance para linhas e colunas quando a janela nWinNum está maximizada.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3713,15 +3684,15 @@ nImageHeight )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_UpdateWindow()</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Atualiza a janela, redesenhando a tela.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3731,7 +3702,7 @@ nImageHeight )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_xbCreate( nWinNum, nStyle, nTop, nLeft, nLength, bBlock, aOffset )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">
   <div>nWinNum Número da janela. O default é a janela atual. nStyle 0 1 Horizontal Vertical</div>
   <div>nTop, nLeft Linha/Coluna do ponto inicial da scrollbar (em caracteres) nLength Comprimento da ScrollBar(em caracteres) bBlock Bloco de código que será executado a cada evento <code>VM_VSCROLL</code>/<code>VM_HSCROLL</code>. Esse bloco de código será executado através dos seguintes parâmetros: nWinNum nXBid nXBmsg Número da janela Identificador da scrollbar Mensagem da scrollbar. Pode ser dividia em duas categorias:</div>
@@ -3743,9 +3714,9 @@ nImageHeight )
 <div class="d-it">O handle da scrollbar, se a operação for bem-sucedida, caso contrário retorna 0.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Cria uma scrollbar para a janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3755,15 +3726,15 @@ nImageHeight )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_xbDestroy( nWinNum, nXBId )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nXBId Identificador da scrollbar.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Nenhum.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Exclui a scrollbar nXBId da janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3773,15 +3744,15 @@ nImageHeight )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_xbEnable( nWinNum, nXBId, nFlags )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nXBId Identificador da scrollbar. nFlags Os seguintes valores são permitidos: 0 1 2 3 Habilita as duas setas Desabilita a seta para cima/esquerda Desabilita a seta para baixo/direita Desabilita as duas setas</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> se a operação foi realizada com sucesso, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Habilita/Desabilita uma scrollbar na janela atual.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3791,7 +3762,7 @@ nImageHeight )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_xbInfo( nWinNum, nXBId )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nXBId Identificador da scrollbar.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
@@ -3800,9 +3771,9 @@ nImageHeight )
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">Obtém informaçoes de uma scrollbar.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3812,15 +3783,15 @@ nImageHeight )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_xbUpdate( nWinNum, nXBId, nPos, nPageSize, nMin, nMax )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">nWinNum Número da janela. O default é a janela atual. nXBId Identificador da scrollbar. nPos Especifica a posiçao do botao de movimentaçao da scrollbar. nPageSize Tamanho da página. Esse valor é usado pela scrollbar para determinar o tamanho proporcional para o salto de página do botao de movimentaçao. nMin Valor mínimo de posiçoes para movimentaçao. nMax Valor máximo de posiçoes para movimentaçao.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">A posição atual do botão de movimentação da scrollbar, se a operação for bem-sucedida, ou ­1 caso contrário.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Atualiza e reapresenta os dados de uma scrollbar. Os parâmetros nPos, nPageSize, nMin, nMax sao opcionais, entretanto, os parâmetros nMin e nMax ou devem ser informados os dois, ou nenhum deverá ser informado.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
@@ -3830,22 +3801,24 @@ nImageHeight )
 <div class="d-d">Syntax</div>
 <div class="d-it d-sy">
 <code>wvw_XReposWindow( lAnchored )</code></div>
-<div class="d-d">Argument(s)</div>
+<div class="d-d">Arguments</div>
 <div class="d-it">lAnchored Se <code>.T.</code> (default), todas as janelas sao posicionadas de acordo com a sua respectiva coordenada (row1, col1). Se <code>.F.</code>, todas as janelas sao posicionadas de acrodo com parâmetro CenterWindow da funçao <code><a href="#wvw_centerwindow">wvw_CenterWindow()</a></code>.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">nenhum. suas posições iniciais. A janela principal será</div>
 <div class="d-d">Description</div>
 <div class="d-it">Reposiciona todas as janelas para as centralizada se nao estiver maximizada.</div>
-<div class="d-d">Platform(s)</div>
+<div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
-<div class="d-d">Tag(s)</div>
+<div class="d-d">Tags</div>
 <div class="d-it">API, <code>GTWVW</code></div>
 </section>
 
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-03 23:45 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/0d069a7">0d069a7</a></div>
+<div>Generated by hbdoc on 2016-11-05 13:19 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/f5d66ca">f5d66ca</a></div>
 <div>Content processing, layout &amp; design © 2016 <a href="https://github.com/vszakats">vszakats</a></div>
 </footer>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-c.min.js"></script>
