@@ -41,6 +41,9 @@ Harbour Reference Guide</a></div>
 <nav class="dropdown-content">
 <a href="harbour.html">Harbour core</a>
 <hr>
+<a href="cl53.html">Clipper 5.3</a>
+<a href="clct3.html">Clipper Tools 3</a>
+<hr>
 <a href="gtwvw.html">gtwvw</a>
 <a href="hbct.html">hbct</a>
 <a href="hbgd.html">hbgd</a>
@@ -136,7 +139,7 @@ SET FILETYPE TO CDX
   <div><p>If filtered data seems slower than expected, check these things: First, optimization is not on by default, so at the top of the app call</div>
 <pre><code class="language-c">Set( _SET_OPTIMIZE, .T. )
 </code></pre>
-  <div><p>or its command equivalent.  rddads will use an AOF whenever <code><a href="harbour.html#dbsetfilter">dbSetFilter()</a></code> is called <strong>if it can</strong>.</div>
+  <div><p>or its command equivalent.  rddads will use an AOF whenever <code><a href="harbour.html#dbsetfilter_001">dbSetFilter()</a></code> is called <strong>if it can</strong>.</div>
   <div><p>Second, make sure the filter is one ADS can understand. UDFs are out, as are references to public or private variables. It's also best to remove field aliases from the string. ADS cannot reference aliases for other related tables, so they're superfluous. You can call</div>
 <pre><code class="language-c">? AdsIsExprValid( cFilter )
 </code></pre>
@@ -150,7 +153,7 @@ SET FILETYPE TO CDX
 <div class="d-d">Compliance</div>
 <div class="d-it">
   <div>Every attempt has been made to make the RDD compliant with the standard <code>DBFCDX</code> RDD at the .prg level. One important difference is the handling of structural indexes. ACE will <strong>always</strong> automatically open an index with the same name as the data file.  There is no way to turn this feature off.</div>
-  <div>You can use the <code><a href="harbour.html#set">Set()</a></code> function call as well as the equivalent commands for <code>SET <code>DEFAULT</code> <code>TO</code></code>, <code>DATEFORMAT</code>, <code>DELETE</code>, and <code>EPOCH</code>. Harbour automatically makes the call to ADS to change its internal setting to match Harbour's.</div>
+  <div>You can use the <code><a href="harbour.html#set_001">Set()</a></code> function call as well as the equivalent commands for <code>SET <code>DEFAULT</code> <code>TO</code></code>, <code>DATEFORMAT</code>, <code>DELETE</code>, and <code>EPOCH</code>. Harbour automatically makes the call to ADS to change its internal setting to match Harbour's.</div>
   <div><code>INDEXING</code> and Progress Displays: Remote server does not support the <code>EVAL</code>/<code>EVERY</code> clauses. Remember, there is an external process doing the indexing that knows nothing of Harbour expressions or codeblocks. Even with Local Server it's the DLLs doing all the indexing. So to do progress meters you need to implement <code>AdsRegCallback( bEval )</code>. It lets you set a codeblock that is evaluated every 2 seconds. A numeric value of the &quot;percent completed&quot; is passed to the codeblock by the ADS server.</div>
 <pre><code class="language-c">#include &quot;inkey.ch&quot;
 PROCEDURE Main()
@@ -458,7 +461,7 @@ ENDIF
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>cTableName</code> Name of the table inside the data dictionary <code>cFileName</code>  Name of the adt or dbf file name <code>cIndexFileName</code> Optional name of the index file</div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>lSuccess</code> → <code>.T.</code> if file was added, otherwise <code>.F.</code></div>
+<div class="d-it"><code>lSuccess</code> - <code>.T.</code> if file was added, otherwise <code>.F.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">See <code>ace.hlp</code> for full details about the Advantage Database Server. <code><a href="#adsddaddtable">AdsDDAddTable()</a></code> adds a new table to an ADS data dictionary. To add the table you must be connected as <code>ADSSYS</code> user using the <code><a href="#adsconnect60">AdsConnect60()</a></code> function</div>
 <div class="d-d">Examples</div>
@@ -1128,7 +1131,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Returns</div>
 <div class="d-it"><code>cPriorSetting</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">This function is NOT recommended! It allows direct access to the ADS internal equivalent to <code>SET <code>DEFAULT</code> <code>TO</code></code>. But this setting is automatically maintained by Harbour's <code><a href="harbour.html#set">Set()</a></code> function and the <code>SET <code>DEFAULT</code> <code>TO</code></code> command, so normal programming will not use this. It exists primarily for testing purposes.</div>
+<div class="d-it">This function is NOT recommended! It allows direct access to the ADS internal equivalent to <code>SET <code>DEFAULT</code> <code>TO</code></code>. But this setting is automatically maintained by Harbour's <code><a href="harbour.html#set_001">Set()</a></code> function and the <code>SET <code>DEFAULT</code> <code>TO</code></code> command, so normal programming will not use this. It exists primarily for testing purposes.</div>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
@@ -1157,7 +1160,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Returns</div>
 <div class="d-it"><code>lPriorSetting</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">This function is NOT recommended! It allows direct access to the ADS internal equivalent to <code>SET <code>DELETED</code></code>. But this setting is automatically maintained by Harbour's <code><a href="harbour.html#set">Set()</a></code> function and the <code>SET <code>DELETED</code> <code>ON</code></code>/<code>OFF</code> command, so normal programming will not use this. It exists primarily for testing purposes.</div>
+<div class="d-it">This function is NOT recommended! It allows direct access to the ADS internal equivalent to <code>SET <code>DELETED</code></code>. But this setting is automatically maintained by Harbour's <code><a href="harbour.html#set_001">Set()</a></code> function and the <code>SET <code>DELETED</code> <code>ON</code></code>/<code>OFF</code> command, so normal programming will not use this. It exists primarily for testing purposes.</div>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
@@ -1186,7 +1189,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Returns</div>
 <div class="d-it"><code>lPriorSetting</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">This function is NOT recommended! It allows direct access to the ADS internal equivalent to <code>SET <code>EXACT</code></code>. But this setting is automatically maintained by Harbour's <code><a href="harbour.html#set">Set()</a></code> function and the <code>SET <code>EXACT</code> <code>ON</code></code>/<code>OFF</code> command, so normal programming will not use this. It exists primarily for testing purposes.</div>
+<div class="d-it">This function is NOT recommended! It allows direct access to the ADS internal equivalent to <code>SET <code>EXACT</code></code>. But this setting is automatically maintained by Harbour's <code><a href="harbour.html#set_001">Set()</a></code> function and the <code>SET <code>EXACT</code> <code>ON</code></code>/<code>OFF</code> command, so normal programming will not use this. It exists primarily for testing purposes.</div>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
@@ -1246,7 +1249,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Returns</div>
 <div class="d-it"><code>cPriorSetting</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">This function is NOT recommended! It allows direct access to the ADS <code><a href="#adssetsearchpath">AdsSetSearchPath()</a></code> setting. But this setting is automatically maintained by Harbour's <code><a href="harbour.html#set">Set()</a></code> function and the <code>SET <code>PATH</code></code> command, so normal programming will not use this. It exists primarily for testing purposes.</div>
+<div class="d-it">This function is NOT recommended! It allows direct access to the ADS <code><a href="#adssetsearchpath">AdsSetSearchPath()</a></code> setting. But this setting is automatically maintained by Harbour's <code><a href="harbour.html#set_001">Set()</a></code> function and the <code>SET <code>PATH</code></code> command, so normal programming will not use this. It exists primarily for testing purposes.</div>
 <div class="d-d">Status</div>
 <div class="d-it">Ready</div>
 <div class="d-d">Compliance</div>
@@ -1301,7 +1304,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-07 18:35 UTC</div>
+<div>Generated by hbdoc on 2016-11-08 00:46 UTC</div>
 <div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/6311117">6311117</a></div>
 <div>Content processing, layout &amp; design © 2016 <a href="https://vszakats.net/harbour">vszakats</a></div>
 </footer>

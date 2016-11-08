@@ -41,6 +41,9 @@ Harbour Reference Guide</a></div>
 <nav class="dropdown-content">
 <a href="harbour.html">Harbour core</a>
 <hr>
+<a href="cl53.html">Clipper 5.3</a>
+<a href="clct3.html">Clipper Tools 3</a>
+<hr>
 <a href="gtwvw.html">gtwvw</a>
 <a href="hbct.html">hbct</a>
 <a href="hbgd.html">hbgd</a>
@@ -471,7 +474,7 @@ ft_ADesSort( aNames, 5, 10 )  // Sort Elements 5-10
 <div class="d-d">Returns</div>
 <div class="d-it">The median average of the array elements</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function sorts the elements of a numeric array and then returns the value in the middle element of the sorted array.  If there is no exact middle value, then it returns the average of the two middle values.  Half of the elements are &gt; median and half are ` median.  A median average may more reflect a more useful average when there are extreme values in the set.</div>
+<div class="d-it">This function sorts the elements of a numeric array and then returns the value in the middle element of the sorted array.  If there is no exact middle value, then it returns the average of the two middle values.  Half of the elements are &gt; median and half are &lt; median.  A median average may more reflect a more useful average when there are extreme values in the set.</div>
 <div class="d-d">Examples</div>
 <pre class="d-ex"><code class="language-c">? ft_AMedian( aArray )        // Return Median for entire array
 ? ft_AMedian( aArray, 2 )     // Return Median for elements from 2 to end
@@ -771,7 +774,7 @@ ENDIF
 <h4><code>ft_D2E()</code><a href="https://github.com/vszakats/harbour-core/blob/6311117/contrib/hbnf/d2e.prg" class="d-so" title="❮/❯">Source code</a><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#ft_d2e" class="d-id" id="ft_d2e" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/d2e.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-ol">Convert decimal to scientific notation</div>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>ft_D2E( &lt;nDec&gt;, &lt;nPrecision&gt; )  → &lt;cNumE&gt;</code></pre></div>
+<div class="d-sy"><pre><code>ft_D2E( &lt;nDec&gt;, &lt;nPrecision&gt; ) → &lt;cNumE&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>nDec</code>         Decimal number to convert</div>
@@ -829,7 +832,7 @@ ENDIF
 <div class="d-d">Returns</div>
 <div class="d-it">The inverse of <code>exp</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">This function is a replacement for CA-Cl*pper's <code><a href="harbour.html#descend">Descend()</a></code> function, which is known to produce memory corruption occassionally.</div>
+<div class="d-it">This function is a replacement for CA-Cl*pper's <code><a href="harbour.html#descend_001">Descend()</a></code> function, which is known to produce memory corruption occassionally.</div>
 <div class="d-d">Examples</div>
 <pre class="d-ex"><code class="language-c">? ft_Descend( 1 )  // Returns -1
 </code></pre>
@@ -845,7 +848,7 @@ ENDIF
 <h4><code>ft_E2D()</code><a href="https://github.com/vszakats/harbour-core/blob/6311117/contrib/hbnf/e2d.prg" class="d-so" title="❮/❯">Source code</a><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#ft_e2d" class="d-id" id="ft_e2d" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/e2d.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-ol">Convert scientific notation string to a decimal</div>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>ft_E2D( &lt;cNumE&gt; )  → &lt;nDec&gt;</code></pre></div>
+<div class="d-sy"><pre><code>ft_E2D( &lt;cNumE&gt; ) → &lt;nDec&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>cNumE</code>   Scientific notation string to convert</div>
 <div class="d-d">Returns</div>
@@ -869,7 +872,7 @@ ENDIF
 <h4><code>ft_EscCode()</code><a href="https://github.com/vszakats/harbour-core/blob/6311117/contrib/hbnf/prtesc.prg" class="d-so" title="❮/❯">Source code</a><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#ft_esccode" class="d-id" id="ft_esccode" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/prtesc.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-ol">Convert Lotus style escape codes</div>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>ft_EscCode( &lt;cASCII&gt; )  → &lt;cPrinterFormat&gt;</code></pre></div>
+<div class="d-sy"><pre><code>ft_EscCode( &lt;cASCII&gt; )  -&gt; &lt;cPrinterFormat&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cASCII</code> is the ASCII representation of the printer control codes in Lotus 123 format (e.g. <code>&quot;\027E&quot;</code> for <code>hb_BChar( 27 ) + &quot;E&quot;</code>)</div>
@@ -1007,7 +1010,7 @@ TRANS-&gt;amount  := ft_Sqzn( mamount, 12, 2 )
 <div class="d-d">Returns</div>
 <div class="d-it">A Clipper date type.</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function allows the programmer to hard code a date into the program without knowing what the current date type is.  This function is the converse of the Clipper <code><a href="harbour.html#dtos">DToS()</a></code> function.</div>
+<div class="d-it">This function allows the programmer to hard code a date into the program without knowing what the current date type is.  This function is the converse of the Clipper <code><a href="harbour.html#dtos_001">DToS()</a></code> function.</div>
 <div class="d-d">Examples</div>
 <pre class="d-ex"><code class="language-c">? ft_SToD( &quot;19901127&quot; )
 </code></pre>
@@ -1065,7 +1068,7 @@ TRANS-&gt;amount  := ft_Sqzn( mamount, 12, 2 )
 <div class="d-d">Returns</div>
 <div class="d-it">The original value converted to the new type.</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function converts a value of character, date, numeric, logical, array or code block type to any of the other type.  While it is guaranteed to return a value of the correct type, that value may not be meaningful (i.e., converting from a code block returns an <code><a href="harbour.html#empty">Empty()</a></code> value of the desired type).</div>
+<div class="d-it">This function converts a value of character, date, numeric, logical, array or code block type to any of the other type.  While it is guaranteed to return a value of the correct type, that value may not be meaningful (i.e., converting from a code block returns an <code><a href="harbour.html#empty_001">Empty()</a></code> value of the desired type).</div>
 <div class="d-d">Examples</div>
 <pre class="d-ex"><code class="language-c">nNumericValue := ft_XToY( cInputValue, &quot;N&quot; )
 lLogicalValue := ft_XToY( nInputValue, &quot;L&quot; )
@@ -1083,7 +1086,7 @@ lLogicalValue := ft_XToY( nInputValue, &quot;L&quot; )
 <div class="d-sy"><pre><code>ft_AcctAdj( [ &lt;dGivenDate&gt; ], [ &lt;lIsEnd&gt; ] ) → dDate</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
-  <div><code>dGivenDate</code> is any valid date in any valid format. Defaults to <code><a href="harbour.html#date">Date()</a></code> if not supplied.</div>
+  <div><code>dGivenDate</code> is any valid date in any valid format. Defaults to <code><a href="harbour.html#date_001">Date()</a></code> if not supplied.</div>
   <div><code>lIsEnd</code> is a logical variable. <code>.F.</code> = adjust for beginning of period mode, <code>.T.</code> = adjust for end of period mode.  Defaults to beginning of period mode.</div>
 </div>
 <div class="d-d">Returns</div>
@@ -1416,7 +1419,7 @@ dPost += ft_AddWkDy( dPost, 5 )   // returns 7 true days
   <div>where 0`hh&lt;12.</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>cMILTIME</code>  character string of form hhmm, where 0`=hh&lt;24.</div>
+<div class="d-it"><code>cMILTIME</code>  character string of form hhmm, where 0&lt;=hh`24.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Converts time from 12-hour civilian format to military.</div>
 <div class="d-d">Examples</div>
@@ -1443,7 +1446,7 @@ dPost += ft_AddWkDy( dPost, 5 )   // returns 7 true days
 <div class="d-sy"><pre><code>ft_DateCnfg( [ &lt;cFYStart&gt; ], [ &lt;nDow&gt; ] ) → aDateInfo</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
-  <div><code>cFYStart</code> is a character date string in the user's system date format, i.e., the same as the user would enter for <code><a href="harbour.html#ctod">CToD()</a></code>.  If this argument is <code>NIL</code>, the current value is unchanged.</div>
+  <div><code>cFYStart</code> is a character date string in the user's system date format, i.e., the same as the user would enter for <code><a href="harbour.html#ctod_001">CToD()</a></code>.  If this argument is <code>NIL</code>, the current value is unchanged.</div>
   <div>Note: The year portion of the date string must be present and be a valid year; however, it has no real meaning.</div>
   <div><code>nDow</code> is a number from 1 to 7 (1 = Sunday) indicating the desired start of a work week.  If this argument is <code>NIL</code>, the current value is unchanged.</div>
 </div>
@@ -1556,7 +1559,7 @@ aDateInfo := ft_DayOfYr( , 90, .T. )
 <div class="d-d">Returns</div>
 <div class="d-it">A positive number of days to beginning of week, range 0 to 6.</div>
 <div class="d-d">Description</div>
-<div class="d-it"><code><a href="#ft_daytobow">ft_DayToBoW()</a></code> returns the number of days to the beginning of the week.  Normally this will be one less than the value that would be returned by the Clipper function <code><a href="harbour.html#dow">DoW()</a></code>, unless the day for the beginning of the week has been changed with <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code>.</div>
+<div class="d-it"><code><a href="#ft_daytobow">ft_DayToBoW()</a></code> returns the number of days to the beginning of the week.  Normally this will be one less than the value that would be returned by the Clipper function <code><a href="harbour.html#dow_001">DoW()</a></code>, unless the day for the beginning of the week has been changed with <code><a href="#ft_datecnfg">ft_DateCnfg()</a></code>.</div>
 <div class="d-d">Examples</div>
 <pre class="d-ex"><code class="language-c">dDate := hb_SToD( &quot;19900915&quot; )
 
@@ -1629,7 +1632,7 @@ nDayNum := ft_DoY( hb_SToD( &quot;19911231&quot; ) ) // result: 365
   <div><p>This function can be useful in calender type programs that indicate when holidays occur.</div>
 </div>
 <div class="d-d">Examples</div>
-<pre class="d-ex"><code class="language-c">? ft_Easter( 1990 )     // returns 1990-04-15
+<pre class="d-ex"><code class="language-c">? ft_Easter( 1990 )  // returns 1990-04-15
 </code></pre>
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
@@ -1645,7 +1648,7 @@ nDayNum := ft_DoY( hb_SToD( &quot;19911231&quot; ) ) // result: 365
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cTIME1, cTIME2</code>  character strings of military form <code>hhmm</code>,</div>
-  <div>where 0 <code>= </code>hh` &lt; 24.</div>
+  <div>where 0 &lt;= <code>hh</code> &lt; 24.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>nMINUTES</code></div>
@@ -1674,8 +1677,8 @@ nDayNum := ft_DoY( hb_SToD( &quot;19911231&quot; ) ) // result: 365
 </div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
-  <div><code>dStart</code> is any valid date in any date format. Defaults to <code><a href="harbour.html#date">Date()</a></code>.</div>
-  <div><code>dEnd</code> is any valid date in any date format. Defaults to <code><a href="harbour.html#date">Date()</a></code>.</div>
+  <div><code>dStart</code> is any valid date in any date format. Defaults to <code><a href="harbour.html#date_001">Date()</a></code>.</div>
+  <div><code>dEnd</code> is any valid date in any date format. Defaults to <code><a href="harbour.html#date_001">Date()</a></code>.</div>
   <div><code>cTimeStart</code> is a valid Time string of the format <code>hh:mm:ss</code> where hh is hours in 24-hour format.</div>
   <div><code>cTimeEnd</code> is a valid Time string of the format <code>hh:mm:ss</code> where hh is hours in 24-hour format.</div>
 </div>
@@ -1770,8 +1773,8 @@ aRetVal[ 4, 1 ]  Integer Seconds   aRetVal[ 4, 2 ] Total Seconds (nn)
 <div class="d-d">Description</div>
 <div class="d-it">This function will return the last day of the month of the date passed, or the last day of the current month if no argument is supplied.</div>
 <div class="d-d">Examples</div>
-<pre class="d-ex"><code class="language-c">? ft_LDay( 0d19900915 )        // 1990-09-30
-? ft_LDay()                    // 1991-03-31  (current month)
+<pre class="d-ex"><code class="language-c">? ft_LDay( 0d19900915 )   // 1990-09-30
+? ft_LDay()               // 1991-03-31  (current month)
 </code></pre>
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
@@ -1831,7 +1834,7 @@ dDate := 0d19910430
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>ft_Mil2Civ( &lt;cCIVTIME&gt; ) → dMILTIME</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>cMILTIME</code>  character string of form hhmm, where 0`=hh&lt;24.</div>
+<div class="d-it"><code>cMILTIME</code>  character string of form hhmm, where 0&lt;=hh`24.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
   <div><code>cCIVTIME</code>  character string of form hh:mm (am,pm,n or m),</div>
@@ -1862,7 +1865,7 @@ Caution:  leading blanks are irrelevant.
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>ft_Mil2Min( &lt;cMILTIME&gt; ) → nMINUTE</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>cMILTIME</code>  character string of form hhmm, where 0`=hh&lt;24.</div>
+<div class="d-it"><code>cMILTIME</code>  character string of form hhmm, where 0&lt;=hh`24.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>nMINOFDAY</code>  numeric value representing minute of day.</div>
 <div class="d-d">Description</div>
@@ -1913,7 +1916,7 @@ Caution:  leading blanks are irrelevant.
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nMINUTE</code>  numeric integer representing minute of day.</div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>cMILTIME</code>  character string of form hhmm, where 0`=hh&lt;24.</div>
+<div class="d-it"><code>cMILTIME</code>  character string of form hhmm, where 0&lt;=hh`24.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Converts minute of the day to military format time.</div>
 <div class="d-d">Examples</div>
@@ -2036,7 +2039,7 @@ aDateInfo := ft_Qtr( , 2 )
 <div class="d-d">Arguments</div>
 <div class="d-it">none</div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>cMILTIME</code>  character string of form hhmm, where 0`=hh&lt;24.</div>
+<div class="d-it"><code>cMILTIME</code>  character string of form hhmm, where 0&lt;=hh`24.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Return current system time as character string in military format.</div>
 <div class="d-d">Examples</div>
@@ -3159,7 +3162,7 @@ ft_DFClose()
   <div><code>lBrowse</code>     - act-like-a-browse-routine flag <code>nColSkip</code>    - col increment for left/right arrows <code>nRMargin</code>    - right margin - anything to right is truncated <code>nBuffSize</code>   - size of the paging buffer</div>
 </div>
 <div class="d-d">Returns</div>
-<div class="d-it">0 if successful, <code><a href="harbour.html#ferror">FError()</a></code> code if not</div>
+<div class="d-it">0 if successful, <code><a href="harbour.html#ferror_001">FError()</a></code> code if not</div>
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Note: make sure you allocate a buffer large enough to hold enough data for the number of lines that you have in the window.  Use the following formula as a guideline:</div>
@@ -3279,7 +3282,7 @@ ft_FAppend()
 <div class="d-it"><code>.T.</code> if an attempt was made to skip past the first record of the currently selected text file, otherwise <code>.F.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function is similar to the Clipper <code><a href="harbour.html#bof">Bof()</a></code> function.</div>
+  <div><p>This function is similar to the Clipper <code><a href="harbour.html#bof_001">Bof()</a></code> function.</div>
   <div><p>A text file &quot;record&quot; is a line of text terminated by a <code>CRLF</code>/LF.</div>
 </div>
 <div class="d-d">Examples</div>
@@ -3340,7 +3343,7 @@ ft_FDelete( 4 )
 <div class="d-it"><code>.T.</code> if an attempt was made to skip past the last record of the currently selected text file, otherwise <code>.F.</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function is similar to the <code>CLIPPER</code> <code><a href="harbour.html#eof">Eof()</a></code> function.</div>
+  <div><p>This function is similar to the <code>CLIPPER</code> <code><a href="harbour.html#eof_001">Eof()</a></code> function.</div>
   <div><p>A text file &quot;record&quot; is a line of text terminated by a <code>CRLF</code>/LF.</div>
 </div>
 <div class="d-d">Examples</div>
@@ -3872,12 +3875,12 @@ ENDIF
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>ft_LastKey( &lt;nKey&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nKey</code> is the <code><a href="harbour.html#inkey">Inkey()</a></code> value of the desired key.</div>
+<div class="d-it"><code>nKey</code> is the <code><a href="harbour.html#inkey_001">Inkey()</a></code> value of the desired key.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>It is occasionally useful to force <code><a href="harbour.html#lastkey">LastKey()</a></code> to return a known value. This is easily accomplishing by using the <code>KEYBOARD</code> command, but this has undesireable side effects (the keyboard buffer is cleared, and the keystroke is processed whether you needed it to be or not).  This function accomplishes the same task but without the side effects.  It does so by directly modifying the memory location where Clipper stores the <code><a href="harbour.html#lastkey">LastKey()</a></code> value.</div>
+  <div><p>It is occasionally useful to force <code><a href="harbour.html#lastkey_001">LastKey()</a></code> to return a known value. This is easily accomplishing by using the <code>KEYBOARD</code> command, but this has undesireable side effects (the keyboard buffer is cleared, and the keystroke is processed whether you needed it to be or not).  This function accomplishes the same task but without the side effects.  It does so by directly modifying the memory location where Clipper stores the <code><a href="harbour.html#lastkey_001">LastKey()</a></code> value.</div>
   <div><p>Some highly unorthodox programming techniques, not to mention rather strange use of Clipper internals, was necessary to make this function work.  If this makes you uncomfortable, then don't use this function, you worthless crybaby.</div>
 </div>
 <div class="d-d">Examples</div>
@@ -3901,12 +3904,12 @@ ft_LastKey( K_F1 )
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>ft_LastKey( &lt;nKey&gt; ) → NIL</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nKey</code> is the <code><a href="harbour.html#inkey">Inkey()</a></code> value of the desired key.</div>
+<div class="d-it"><code>nKey</code> is the <code><a href="harbour.html#inkey_001">Inkey()</a></code> value of the desired key.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>It is occasionally useful to force <code><a href="harbour.html#lastkey">LastKey()</a></code> to return a known value. This is easily accomplishing by using the <code>KEYBOARD</code> command, but this has undesireable side effects (the keyboard buffer is cleared, and the keystroke is processed whether you needed it to be or not).  This function accomplishes the same task but without the side effects.  It does so by directly modifying the memory location where Clipper stores the <code><a href="harbour.html#lastkey">LastKey()</a></code> value.</div>
+  <div><p>It is occasionally useful to force <code><a href="harbour.html#lastkey_001">LastKey()</a></code> to return a known value. This is easily accomplishing by using the <code>KEYBOARD</code> command, but this has undesireable side effects (the keyboard buffer is cleared, and the keystroke is processed whether you needed it to be or not).  This function accomplishes the same task but without the side effects.  It does so by directly modifying the memory location where Clipper stores the <code><a href="harbour.html#lastkey_001">LastKey()</a></code> value.</div>
   <div><p>Some highly unorthodox programming techniques, not to mention rather strange use of Clipper internals, was necessary to make this function work.  If this makes you uncomfortable, then don't use this function, you worthless crybaby.</div>
 </div>
 <div class="d-d">Examples</div>
@@ -4436,7 +4439,7 @@ ENDIF
 <div class="d-it">An integer representing the mouse status (0 == mouse not installed)</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>Resets the mouse driver and returns mouse status. Use <code><a href="#ft_mshowcrs">ft_MShowCrs()</a></code> to display the mouse cursor. The mouse is set to allow it to cover the complete screen (as defined by <code><a href="harbour.html#maxcol">MaxCol()</a></code> and <code><a href="harbour.html#maxrow">MaxRow()</a></code>). This is necessary because at least some versions of the mouse drivers do not operate according to the documentation when confronted with a 43 or 50 line screen.</div>
+  <div><p>Resets the mouse driver and returns mouse status. Use <code><a href="#ft_mshowcrs">ft_MShowCrs()</a></code> to display the mouse cursor. The mouse is set to allow it to cover the complete screen (as defined by <code><a href="harbour.html#maxcol_001">MaxCol()</a></code> and <code><a href="harbour.html#maxrow_001">MaxRow()</a></code>). This is necessary because at least some versions of the mouse drivers do not operate according to the documentation when confronted with a 43 or 50 line screen.</div>
   <div><p>Normally, <code><a href="#ft_minit">ft_MInit()</a></code> should be used to initialize the mouse since it will not reinitialize if already done.</div>
 </div>
 <div class="d-d">Examples</div>
@@ -4738,12 +4741,12 @@ MemVar := ft_PrtScr()  // Get the current status
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>ft_PutKey( &lt;nKeyValue&gt; ) → lResult</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nKeyValue</code> is the <code><a href="harbour.html#inkey">Inkey()</a></code> value of the keystroke to be stuffed.</div>
+<div class="d-it"><code>nKeyValue</code> is the <code><a href="harbour.html#inkey_001">Inkey()</a></code> value of the keystroke to be stuffed.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if the keystroke was put into the keyboard buffer. <code>.F.</code> if <code>nKeyValue</code> was invalid or the buffer was full.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function is similar to the <code>KEYBOARD</code> command, with a few exceptions. First, this function does not clear the keyboard buffer before inserting the keystroke.  In addition, since it uses the <code><a href="harbour.html#inkey">Inkey()</a></code> value, you can stuff any key, including function keys, into the keyboard buffer. However, this also means that unlike the <code>KEYBOARD</code> command, you can only stuff one keystroke at a time.</div>
+  <div><p>This function is similar to the <code>KEYBOARD</code> command, with a few exceptions. First, this function does not clear the keyboard buffer before inserting the keystroke.  In addition, since it uses the <code><a href="harbour.html#inkey_001">Inkey()</a></code> value, you can stuff any key, including function keys, into the keyboard buffer. However, this also means that unlike the <code>KEYBOARD</code> command, you can only stuff one keystroke at a time.</div>
   <div><p>You can easily create a User-Defined Command that makes this function even more like the <code>KEYBOARD</code> command.  For example,</div>
 <pre><code class="language-c">#xcommand KEYSTROKE &lt;key&gt; =&gt; ft_PutKey( &lt;key&gt; )
 </code></pre>
@@ -4773,11 +4776,11 @@ KEYBOARD 28       //  Stuff the F1 key using a User-Defined Command
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p><code><a href="#ft_scancode">ft_ScanCode()</a></code> enables you to distinguish the different scancodes of similar keys (such as Grey minus versus regular minus), thus increasing the number of keys your input routine can recognize.</div>
-  <div><p>It works like <code><a href="harbour.html#inkey">Inkey()</a></code>, in that it waits for a key to be pressed. The scan code consists of two bytes, which are returned as a two-character string.</div>
+  <div><p>It works like <code><a href="harbour.html#inkey_001">Inkey()</a></code>, in that it waits for a key to be pressed. The scan code consists of two bytes, which are returned as a two-character string.</div>
   <div><p>For example, calling <code><a href="#ft_scancode">ft_ScanCode()</a></code> and pressing the Grey-minus key will return a two character string:</div>
 <pre><code class="language-c">hb_BChar( 45 ) + hb_BChar( 74 )
 </code></pre>
-  <div><p> <code><a href="harbour.html#lastkey">LastKey()</a></code> is not updated by <code><a href="#ft_scancode">ft_ScanCode()</a></code>, so don't try to test <code><a href="harbour.html#lastkey">LastKey()</a></code> to see what was pressed during an <code><a href="#ft_scancode">ft_ScanCode()</a></code> call.  Simply assign the return value to a variable and test that (see the test driver below).</div>
+  <div><p> <code><a href="harbour.html#lastkey_001">LastKey()</a></code> is not updated by <code><a href="#ft_scancode">ft_ScanCode()</a></code>, so don't try to test <code><a href="harbour.html#lastkey_001">LastKey()</a></code> to see what was pressed during an <code><a href="#ft_scancode">ft_ScanCode()</a></code> call.  Simply assign the return value to a variable and test that (see the test driver below).</div>
   <div><p>*  This was adapted from a short C routine posted by John Kaster on</div>
   <div><p><code>NANFORUM</code>.  It was written in Clipper to help demonstrate the <code>ft_int86()</code> function of the Nanforum Toolkit.</div>
   <div><p>This program requires <code>ft_int86()</code>.</div>
@@ -4898,11 +4901,11 @@ ENDIF
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWaitTime</code> is the number of seconds to wait.  If zero, <code><a href="#ft_sinkey">ft_SInkey()</a></code> will wait indefinitely for a keypress.  If not passed, <code><a href="#ft_sinkey">ft_SInkey()</a></code> does not wait for a keypress.  If <code>NIL</code>, it is treated the same as 0.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">The <code><a href="harbour.html#inkey">Inkey()</a></code> value of the key pressed.</div>
+<div class="d-it">The <code><a href="harbour.html#inkey_001">Inkey()</a></code> value of the key pressed.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p><code><a href="#ft_sinkey">ft_SInkey()</a></code> is similar to the function provided by Nantucket in <code>keyboard.prg</code>, with one significant difference: you can pass <code>NIL</code> to <code><a href="harbour.html#inkey">Inkey()</a></code>, which will be treated as a zero (i.e., wait indefinitely for keypress).  Therefore, it is necessary to differentiate between an explicit <code>NIL</code> and one that is a result of a formal parameter <em>not</em> being received.</div>
-  <div><p><code><a href="#ft_sinkey">ft_SInkey()</a></code> differs from the standard <code><a href="harbour.html#inkey">Inkey()</a></code> in that it will respond to any keys set with <code>SET KEY <code>TO</code></code> or <code><a href="harbour.html#setkey">SetKey()</a></code>.</div>
+  <div><p><code><a href="#ft_sinkey">ft_SInkey()</a></code> is similar to the function provided by Nantucket in <code>keyboard.prg</code>, with one significant difference: you can pass <code>NIL</code> to <code><a href="harbour.html#inkey_001">Inkey()</a></code>, which will be treated as a zero (i.e., wait indefinitely for keypress).  Therefore, it is necessary to differentiate between an explicit <code>NIL</code> and one that is a result of a formal parameter <em>not</em> being received.</div>
+  <div><p><code><a href="#ft_sinkey">ft_SInkey()</a></code> differs from the standard <code><a href="harbour.html#inkey_001">Inkey()</a></code> in that it will respond to any keys set with <code>SET KEY <code>TO</code></code> or <code><a href="harbour.html#setkey_002">SetKey()</a></code>.</div>
 </div>
 <div class="d-d">Examples</div>
 <pre class="d-ex"><code class="language-c">SetKey( K_F1, {| n, l, r | HELP( n, l, r ) } )
@@ -4929,10 +4932,10 @@ ENDIF
 <div class="d-d">Description</div>
 <div class="d-it">This function calculates the greatest common divisor between 2 numbers, i.e., the largest number that will divide into both numbers evenly.  It will return zero (0) if either number is zero.</div>
 <div class="d-d">Examples</div>
-<pre class="d-ex"><code class="language-c">? ft_GCD( 10, 15 )                  // Result: 5
-? ft_GCD( 108, 54 )                 // Result: 54
-? ft_GCD( 102, 54 )                 // Result: 6
-? ft_GCD( 111, 17 )                 // Result: 1
+<pre class="d-ex"><code class="language-c">? ft_GCD( 10, 15 )    // Result: 5
+? ft_GCD( 108, 54 )   // Result: 54
+? ft_GCD( 102, 54 )   // Result: 6
+? ft_GCD( 111, 17 )   // Result: 1
 </code></pre>
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
@@ -4989,8 +4992,8 @@ NEXT
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>Generates a non-integer random number based on the Linear Congruential Method.</div>
-  <div><p>If you need a random number between 1 and <code>nMax</code> inclusive, <code><a href="harbour.html#int">Int()</a></code> the result and add 1.</div>
-  <div><p>If you need a random number between 0 and <code>nMax</code> inclusive, then you should <code><a href="harbour.html#round">Round()</a></code> the result.</div>
+  <div><p>If you need a random number between 1 and <code>nMax</code> inclusive, <code><a href="harbour.html#int_001">Int()</a></code> the result and add 1.</div>
+  <div><p>If you need a random number between 0 and <code>nMax</code> inclusive, then you should <code><a href="harbour.html#round_001">Round()</a></code> the result.</div>
 </div>
 <div class="d-d">Examples</div>
 <pre class="d-ex"><code class="language-c">? Int( ft_Rand1( 100 ) ) + 1   // 1 &lt;= nResult &lt;= 100
@@ -5010,7 +5013,7 @@ NEXT
 <div class="d-sy">
 <pre><code>ft_Round( &lt;nNumber&gt; [, &lt;nRoundToAmount&gt;           ;
           [, &lt;cRoundType&gt;  [, &lt;cRoundDirection&gt;   ;
-          [, &lt;nAcceptableError&gt; ] ] ] ] )            → nNumber
+          [, &lt;nAcceptableError&gt; ] ] ] ] )            -&gt; nNumber
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
@@ -5020,14 +5023,14 @@ NEXT
   <div><code>cRoundType</code> is the type of rounding desired</div>
   <div>&quot;D&quot; for Decimal       (3 for thousandth, 1/1000)  (default) &quot;F&quot; for Fraction      (3 for thirds, 1/3) &quot;W&quot; for Whole numbers (3 for thousand, 1000)</div>
   <div><code>cRoundDirection</code> is the direction to round the number toward</div>
-  <div>&quot;U&quot; to round Up      1.31 →  1.4</div>
-  <div>-1.31 → -1.4</div>
-  <div>&quot;D&quot; to round Down    1.36 →  1.3</div>
-  <div>-1.36 → -1.3</div>
-  <div>&quot;N&quot; to round Normal  1.5  →  2</div>
-  <div>-1.5  → -2</div>
-  <div>1.49 →  1</div>
-  <div>-1.49 → -1</div>
+  <div>&quot;U&quot; to round Up      1.31 -&gt;  1.4</div>
+  <div>-1.31 -&gt; -1.4</div>
+  <div>&quot;D&quot; to round Down    1.36 -&gt;  1.3</div>
+  <div>-1.36 -&gt; -1.3</div>
+  <div>&quot;N&quot; to round Normal  1.5  -&gt;  2</div>
+  <div>-1.5  -&gt; -2</div>
+  <div>1.49 -&gt;  1</div>
+  <div>-1.49 -&gt; -1</div>
   <div><code>nAcceptableError</code> is the amount that is considered acceptable to be within, i.e., if you're within this amount of the number you don't need to round</div>
 </div>
 <div class="d-d">Returns</div>
@@ -5092,7 +5095,7 @@ NEXT
   <div><p><code>SetKey( <code>K_ALT_A</code>, {|| <code><a href="#ft_adder">ft_Adder()</a></code> } )</code></div>
   <div><p>This will make <span class="d-key">ALT+A</span> a key &quot;Hot&quot; and permit you to Pop - Up the adder from anywhere in the application.</div>
   <div><p>6. If you use <code><a href="#ft_sinkey">ft_SInkey()</a></code>, you can even have active hotkeys</div>
-  <div><p>in an <code><a href="harbour.html#inkey">Inkey()</a></code>.</div>
+  <div><p>in an <code><a href="harbour.html#inkey_001">Inkey()</a></code>.</div>
 </div>
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
@@ -5135,7 +5138,7 @@ ft_Blink( &quot;...&quot; )           // Blink &quot;...&quot; after wait messag
 <pre><code>ft_BrwsWhl( &lt;aFields&gt;, &lt;bWhileCond&gt;, &lt;cKey&gt;,                  ;
             [ &lt;nFreeze&gt; ], [ &lt;lSaveScrn&gt; ], [ &lt;cColorList&gt; ], ;
             [ &lt;cColorShadow&gt; ], [ &lt;nTop&gt; ], [ &lt;nLeft&gt; ],      ;
-            [ &lt;nBottom&gt; ], [ &lt;nRight&gt; ] → nRecno
+            [ &lt;nBottom&gt; ], [ &lt;nRight&gt; ] ) → nRecno
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
@@ -5158,7 +5161,7 @@ cFirst := &quot;A&quot;
   <div><code>cColorList</code> is a list of colors for the <code><a href="harbour.html#tbrowse">TBrowse()</a></code> columns. The 1st color is used as <code>SAY</code>/<code><a href="harbour.html#tbrowse">TBrowse()</a></code> Background and the 3rd and 4th colors are used as part of <code>column:defColor := { 3, 4 }</code></div>
   <div>Thus if you pass a <code>cColorList</code>, you <em>must</em> pass at least 4 colors. Defaults to <code>N/W, N/BG, B/W, B/BG, B/W, B/BG, R/W, B/R</code> if not passed.</div>
   <div><code>cColorShad</code> is the color of the TBrowse box shadow.  Defaults to &quot;N/N&quot; if not passed.</div>
-  <div><code>nTop</code>, <code>nLeft</code>, <code>nBottom</code>, <code>nRight</code> are the coordinates of the area to display the <code><a href="harbour.html#tbrowse">TBrowse()</a></code> in.  Defaults to <code>2, 2, <code><a href="harbour.html#maxrow">MaxRow()</a></code> - 2, <code><a href="harbour.html#maxcol">MaxCol()</a></code> - 2</code> with shadowed box, i.e. full screen.</div>
+  <div><code>nTop</code>, <code>nLeft</code>, <code>nBottom</code>, <code>nRight</code> are the coordinates of the area to display the <code><a href="harbour.html#tbrowse">TBrowse()</a></code> in.  Defaults to <code>2, 2, <code><a href="harbour.html#maxrow_001">MaxRow()</a></code> - 2, <code><a href="harbour.html#maxcol_001">MaxCol()</a></code> - 2</code> with shadowed box, i.e. full screen.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it">nRecno is the number of the record selected by the <span class="d-key">Enter</span> key. 0 is returned if there are either no records matching the <code>WHILE</code> condition or an <span class="d-key">Esc</span> is pressed instead of an <span class="d-key">Enter</span></div>
@@ -5219,7 +5222,7 @@ ENDIF
   <div>foreground [+] / background [*] i.e. &quot;GR+/BG*, N/W*, N+/N, , W/N&quot;</div>
   <div>[ 3 ] cType  is the type of color setting</div>
   <div>Default is &quot;W&quot; (Window)</div>
-  <div>T = Title     Only 1 color element D = Desktop   Background color and character M = Menu      For <code><a href="#ft_menuto">ft_MenuTo()</a></code> style menus W = Window    Windows with radio buttons G = Get       For use with <code>@ <code>SAY</code>...</code> B = Browse    For <code><a href="harbour.html#tbrowse">TBrowse()</a></code> and *<code><a href="harbour.html#dbedit">dbEdit()</a></code> A = aChoice   Pick-lists etc...</div>
+  <div>T = Title     Only 1 color element D = Desktop   Background color and character M = Menu      For <code><a href="#ft_menuto">ft_MenuTo()</a></code> style menus W = Window    Windows with radio buttons G = Get       For use with <code>@ <code>SAY</code>...</code> B = Browse    For <code><a href="harbour.html#tbrowse">TBrowse()</a></code> and *<code><a href="harbour.html#dbedit_001">dbEdit()</a></code> A = aChoice   Pick-lists etc...</div>
   <div>W/G/B/A are functionally the same but will provide a more appropriate test display.</div>
   <div>[ 4 ] cFillChar  is the character (for desktop background only)</div>
   <div>Default is &quot;▒▒▒▒▒▒▒▒▒▒▒▒▒▒&quot;</div>
@@ -5288,7 +5291,7 @@ aClrs := ft_ClrSel( aClrs, lColor )
 <div class="d-it">
   <div>If <code>cKey2Check</code> is not specified, <code><a href="#ft_dispmsg">ft_DispMsg()</a></code> will return false (<code>.F.</code>).</div>
   <div>If <code>cKey2Check</code> is a one-character string, <code><a href="#ft_dispmsg">ft_DispMsg()</a></code> will return true (<code>.T.</code>) if the user presses that key, or false (<code>.F.</code>) if any other key is pressed.</div>
-  <div>If <code>cKey2Check</code> consists of multiple characters, it will lock the user in a loop until one of those keys are pressed and return the <code><a href="harbour.html#inkey">Inkey()</a></code> value of the keypress.</div>
+  <div>If <code>cKey2Check</code> consists of multiple characters, it will lock the user in a loop until one of those keys are pressed and return the <code><a href="harbour.html#inkey_001">Inkey()</a></code> value of the keypress.</div>
 </div>
 <div class="d-d">Description</div>
 <div class="d-it"><code><a href="#ft_dispmsg">ft_DispMsg()</a></code> is a multi-purpose pop-up for user messages. Multiple lines may be displayed, each with a different attribute. The box will be automatically centered on the screen, or the row and/or column can be specified by the programmer.  It also centers each line of the message within the box.</div>
@@ -5705,14 +5708,14 @@ ft_Pending( &quot;Message three&quot; ) // Displays &quot;Message three&quot;, a
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>nSeconds</code> is the number of seconds to pause</div>
-  <div><code>nInitial</code> is an optional clock value (from a call to <code><a href="harbour.html#seconds">Seconds()</a></code>)</div>
+  <div><code>nInitial</code> is an optional clock value (from a call to <code><a href="harbour.html#seconds_001">Seconds()</a></code>)</div>
   <div>from which the <code>nSeconds</code> seconds are to elapse. Useful for setting a minimum time between the start of events which could take a variable amount of time due to the execution of intervening code.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>NIL</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This routine will wait a specified period of time. It provides resolution based upon the execution of the <code><a href="harbour.html#seconds">Seconds()</a></code> function. It does not use an input state such as <code><a href="harbour.html#inkey">Inkey()</a></code>. The specified time is the minimum time sleeping and will usually be slightly longer.</div>
+  <div><p>This routine will wait a specified period of time. It provides resolution based upon the execution of the <code><a href="harbour.html#seconds_001">Seconds()</a></code> function. It does not use an input state such as <code><a href="harbour.html#inkey_001">Inkey()</a></code>. The specified time is the minimum time sleeping and will usually be slightly longer.</div>
   <div><p>The second optional argument allows one to begin timing an event prior to executing some operation. This is useful when, for example, you input a key or mouse click and wish to do something but still want to note if the user double entered (mouse or key) within a certain time which in turn may have meaning within your program's context.</div>
   <div><p>The routine correctly handles passing through midnight but will not work for more than 24 hours.</div>
 </div>
@@ -5814,7 +5817,7 @@ ft_XBox( &quot;L&quot;, &quot;W&quot;, &quot;D&quot;, &quot;GR+/R&quot;, &quot;W
 <h4><code>ft_NWSemClose()</code><a href="https://github.com/vszakats/harbour-core/blob/6311117/contrib/hbnf/nwsem.c" class="d-so" title="❮/❯">Source code</a><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#ft_nwsemclose" class="d-id" id="ft_nwsemclose" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/nwsem.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-ol">Close a NetWare semaphore</div>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>ft_NWSemClose( &lt;nHandle&gt; )  → nRc</code></pre></div>
+<div class="d-sy"><pre><code>ft_NWSemClose( &lt;nHandle&gt; ) → nRc</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nHandle</code> is the semaphore handle, returned from a previous call to <code><a href="#ft_nwsemopen">ft_NWSemOpen()</a></code>.</div>
 <div class="d-d">Returns</div>
@@ -5903,7 +5906,7 @@ ft_NWSemEx( nHandle, @nValue, @nOpenCnt )
   <div><p>An interesting byproduct of NetWare's semaphore functions is the &quot;open count&quot; which tells you how many connections have this semaphore open.  This is different from the semaphore's <em>value</em>, which is set when the semaphore is opened and changed with <code><a href="hbxpp.html#signal">Signal()</a></code> and <code>wait()</code>.</div>
   <div><p>The point of semaphores is that you don't care how many users are using the resource; you merely wait on a semaphore until the resource becomes available or you give up.  When you're done, you signal it and off you go.</div>
   <div><p>Back to the open count.  <code><a href="#ft_nwsemlock">ft_NWSemLock()</a></code> opens the semaphore as named in <code>cSemaphore</code>.  After it is opened, the open count is checked.  If it is anything other than 1, that means someone else has it (or you failed in your open) so the semaphore is closed and the &quot;lock&quot; is refused.  If the value is 1, then your app is that 1 station so the &quot;lock&quot; is granted.</div>
-  <div><p>You can use a semaphore lock to control access to anything that Clipper's <code><a href="harbour.html#rlock">RLock()</a></code> and <code><a href="harbour.html#flock">FLock()</a></code> can't help you with, such as text files written with the low level file I/O functions, etc.</div>
+  <div><p>You can use a semaphore lock to control access to anything that Clipper's <code><a href="harbour.html#rlock_001">RLock()</a></code> and <code><a href="harbour.html#flock_001">FLock()</a></code> can't help you with, such as text files written with the low level file I/O functions, etc.</div>
 </div>
 <div class="d-d">Examples</div>
 <pre class="d-ex"><code class="language-c">LOCAL nHandle := 0
@@ -6594,7 +6597,7 @@ SEEK ft_Metaph( &quot;Fillmore&quot; )
 <h4><code>ft_PChr()</code><a href="https://github.com/vszakats/harbour-core/blob/6311117/contrib/hbnf/pchr.prg" class="d-so" title="❮/❯">Source code</a><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#ft_pchr" class="d-id" id="ft_pchr" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbnf/doc/en/pchr.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-ol">Convert printer control codes</div>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>ft_PChr( &lt;cString&gt; )  →  &lt;cPrinterFormat&gt;</code></pre></div>
+<div class="d-sy"><pre><code>ft_PChr( &lt;cString&gt; ) → &lt;cPrinterFormat&gt;</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>cString</code> is the representation of the printer control codes in text, numeric, hexadecimal, Epson command format, or any combination separated by commas.</div>
 <div class="d-d">Returns</div>
@@ -6602,23 +6605,47 @@ SEEK ft_Metaph( &quot;Fillmore&quot; )
 <div class="d-d">Description</div>
 <div class="d-it">
   <div><p>This function is useful for allowing the user to enter printer control codes in text (enclosed in double quotes), numeric, hexadecimal, or Epson commands preceded by a slash and returns the printer control code equivalent.</div>
-  <div><p><code>NOTES</code>&quot;</div>
+  <div><p><code>NOTES</code>:</div>
   <div><p>- Combinations of text, numbers, hex, and commands must be</div>
   <div><p>separated by commas (&quot;A&quot;,27,&amp;1B,/RESET).</div>
   <div><p>- Text must be enclosed in double quotes (&quot;x&quot;). - Hexadecimal must be preceded by an ampersand (&amp;1B). - Epson commands, listed below, must be preceded by a forward</div>
   <div><p>slash (/RESET).</div>
   <div><p>Epson commands: (slash commands are specific to the Epson)</div>
   <div><p>Job Control:</div>
-  <div><p>/RESET or /INIT   Reset or initialize the printer /BELL  or /BEEP   Cause the printer's speaker to beep (not HS) /CAN              Clear print buffers (not MX) /SLOW             Set low speed mode (not CR, HS, MX) /FAST             Cancel low speed mode (not CR, HS, MX) /ONE              Select Unidirectional mode /TWO              Select Directional mode /ON               Activate printer /OFF              Turn off printer</div>
-  <div><p>/FF or /EJECT     Form Feed</div>
-  <div><p>Page Control:</div>
-  <div><p>/1/6              Set 6 lines per inch /1/8              Set 8 lines per inch /SKIP             Set Skip perforation <code>ON</code> /SKIPOFF          Set Skip perforation <code>OFF</code></div>
-  <div><p>Font Selection and Manipulation:</div>
-  <div><p>/ITALIC           Select italic char. set  (only <code>FX86</code>, EX, LX,</div>
-  <div><p>no LQ-1500, SX)</div>
-  <div><p>/GRAPHIC          Select graphic char. set (only <code>FX86</code>, EX, LX,</div>
-  <div><p>no LQ-1500, SX)</div>
-  <div><p>/ROMAN            Choose Roman font /SANS             Choose Sans Serif font /DRAFT            Choose draft /NLQ              Choose near letter quality /PICA             Choose 10 chars per inch /ELITE            Choose 12 chars per inch /COND or /SI      Choose 15 chars per inch /EMPH             Turn emphasize on /EMPHOFF          Turn emphasize off /SPANISH          Select spanish international char set /USA              Select USA international char set</div>
+  <div class="d-t d-t0">
+  <div> /RESET or /INIT   Reset or initialize the printer</div>
+  <div> /BELL  or /BEEP   Cause the printer's speaker to beep (not HS)</div>
+  <div> /CAN              Clear print buffers (not MX)</div>
+  <div> /SLOW             Set low speed mode (not CR, HS, MX)</div>
+  <div> /FAST             Cancel low speed mode (not CR, HS, MX)</div>
+  <div> /ONE              Select Unidirectional mode</div>
+  <div> /TWO              Select Directional mode</div>
+  <div> /ON               Activate printer</div>
+  <div> /OFF              Turn off printer</div>
+  <div> /FF or /EJECT     Form Feed</div>
+  <div> Page Control:</div>
+  <div> /1/6              Set 6 lines per inch</div>
+  <div> /1/8              Set 8 lines per inch</div>
+  <div> /SKIP             Set Skip perforation ON</div>
+  <div> /SKIPOFF          Set Skip perforation OFF</div>
+  <div> Font Selection and Manipulation:</div>
+  <div> /ITALIC           Select italic char. set  (only FX86, EX, LX,</div>
+  <div>                                                 no LQ-1500, SX)</div>
+  <div> /GRAPHIC          Select graphic char. set (only FX86, EX, LX,</div>
+  <div>                                                 no LQ-1500, SX)</div>
+  <div> /ROMAN            Choose Roman font</div>
+  <div> /SANS             Choose Sans Serif font</div>
+  <div> /DRAFT            Choose draft</div>
+  <div> /NLQ              Choose near letter quality</div>
+  <div> /PICA             Choose 10 chars per inch</div>
+  <div> /ELITE            Choose 12 chars per inch</div>
+  <div> /COND or /SI      Choose 15 chars per inch</div>
+  <div> /EMPH             Turn emphasize on</div>
+  <div> /EMPHOFF          Turn emphasize off</div>
+  <div> /SPANISH          Select spanish international char set</div>
+  <div> /USA              Select USA international char set</div>
+</div>
+  <div><p></div>
 </div>
 <div class="d-d">Examples</div>
 <pre class="d-ex"><code class="language-c">SET PRINTER ON
@@ -7068,7 +7095,7 @@ ft_RstRgn( cScreen, 20, 60 )           // restore to a different location
 <div class="d-it">A character string containing the screen attribute bytes for the specified region.  If the memory to store the return value could not be allocated, the function returns <code>NIL</code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>This function is similar to Clipper's <code><a href="harbour.html#savescreen">SaveScreen()</a></code>, except that it only saves the attribute bytes.  This is useful if you want to change the screen color without affecting the text.</div>
+  <div><p>This function is similar to Clipper's <code><a href="harbour.html#savescreen_001">SaveScreen()</a></code>, except that it only saves the attribute bytes.  This is useful if you want to change the screen color without affecting the text.</div>
   <div><p><strong>Internals Alert:</strong></div>
   <div><p>This function calls the Clipper internal <code>__gtMaxCol()</code> to obtain the maximum column value for the current video mode.  If you're too gutless to use internals, then this function isn't for you.</div>
 </div>
@@ -7098,9 +7125,9 @@ cBuffer := ft_SaveAtt( 10, 20, 14, 59 )
 <div class="d-it"><code><a href="#ft_savrgn">ft_SavRgn()</a></code> returns the saved screen region and its coordinates as a character string.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p><code><a href="#ft_savrgn">ft_SavRgn()</a></code> is similar to Clipper's <code><a href="harbour.html#savescreen">SaveScreen()</a></code>, but it saves the screen coordinates as well as the display information.  The saved area can be restored by passing the returned string to <code><a href="#ft_rstrgn">ft_RstRgn()</a></code>.</div>
-  <div><p>Note that the strings returned from <code><a href="#ft_savrgn">ft_SavRgn()</a></code> and Clipper's <code><a href="harbour.html#savescreen">SaveScreen()</a></code> are not interchangeable.  A screen region saved with with <code><a href="#ft_savrgn">ft_SavRgn()</a></code> must be restored using <code><a href="#ft_rstrgn">ft_RstRgn()</a></code>.</div>
-  <div><p><code><a href="#ft_savrgn">ft_SavRgn()</a></code> calls Clipper's <code><a href="harbour.html#savescreen">SaveScreen()</a></code>.  Refer to the Clipper documentation for more information regarding this function.</div>
+  <div><p><code><a href="#ft_savrgn">ft_SavRgn()</a></code> is similar to Clipper's <code><a href="harbour.html#savescreen_001">SaveScreen()</a></code>, but it saves the screen coordinates as well as the display information.  The saved area can be restored by passing the returned string to <code><a href="#ft_rstrgn">ft_RstRgn()</a></code>.</div>
+  <div><p>Note that the strings returned from <code><a href="#ft_savrgn">ft_SavRgn()</a></code> and Clipper's <code><a href="harbour.html#savescreen_001">SaveScreen()</a></code> are not interchangeable.  A screen region saved with with <code><a href="#ft_savrgn">ft_SavRgn()</a></code> must be restored using <code><a href="#ft_rstrgn">ft_RstRgn()</a></code>.</div>
+  <div><p><code><a href="#ft_savrgn">ft_SavRgn()</a></code> calls Clipper's <code><a href="harbour.html#savescreen_001">SaveScreen()</a></code>.  Refer to the Clipper documentation for more information regarding this function.</div>
 </div>
 <div class="d-d">Examples</div>
 <pre class="d-ex"><code class="language-c">// The following example uses ft_SavRgn() and ft_RstRgn() to save
@@ -7317,7 +7344,7 @@ the status of SetBlink().  It uses direct video writes FOR speed.
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-07 18:35 UTC</div>
+<div>Generated by hbdoc on 2016-11-08 00:46 UTC</div>
 <div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/6311117">6311117</a></div>
 <div>Content processing, layout &amp; design © 2016 <a href="https://vszakats.net/harbour">vszakats</a></div>
 </footer>
