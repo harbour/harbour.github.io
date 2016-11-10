@@ -106,7 +106,7 @@ Harbour Reference Guide</a></div>
 <div class="d-d">Returns</div>
 <div class="d-it">The bit map string with the new flag settings.</div>
 <div class="d-d">Description</div>
-<div class="d-it"><code><a href="#gt_clrflag">gt_ClrFlag()</a></code> is used to turn flags within the flag string off.</div>
+<div class="d-it"><code>gt_ClrFlag()</code> is used to turn flags within the flag string off.</div>
 <div class="d-d">Examples</div>
 <pre class="d-ex"><code class="language-c">cFlags := gt_NewFlag( 20 )  // Create a bit flag string for 20
 // logical values.
@@ -144,7 +144,7 @@ cFlags := gt_ClrFlag( cFlags )
 <div class="d-d">Returns</div>
 <div class="d-it">A boolean value, TRUE if the flag is on, FALSE if it's off.</div>
 <div class="d-d">Description</div>
-<div class="d-it"><code><a href="#gt_isflag">gt_IsFlag()</a></code> is used to test the state of a flag with a bit flag string.</div>
+<div class="d-it"><code>gt_IsFlag()</code> is used to test the state of a flag with a bit flag string.</div>
 <div class="d-d">Examples</div>
 <pre class="d-ex"><code class="language-c">// Print the setting of the flags in a flag string called &lt;cDave&gt;
 
@@ -171,8 +171,8 @@ NEXT
 <div class="d-it">A string to hold the bit flags. All flags are set to FALSE.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p><code><a href="#gt_newflag">gt_NewFlag()</a></code> is used to construct a bit flag string. The bit flag functions can be used for storing a large number of logical values in a small space.</div>
-  <div><p>To create a bit flag string you need to pass <code><a href="#gt_newflag">gt_NewFlag()</a></code> a value that is equal to or greater than the number of flags required (you may want to allow for future expansion). Each character in the string returned from <code><a href="#gt_newflag">gt_NewFlag()</a></code> will hold 8 logical values.</div>
+  <div><p><code>gt_NewFlag()</code> is used to construct a bit flag string. The bit flag functions can be used for storing a large number of logical values in a small space.</div>
+  <div><p>To create a bit flag string you need to pass <code>gt_NewFlag()</code> a value that is equal to or greater than the number of flags required (you may want to allow for future expansion). Each character in the string returned from <code>gt_NewFlag()</code> will hold 8 logical values.</div>
 </div>
 <div class="d-d">Examples</div>
 <pre class="d-ex"><code class="language-c">cFlags := gt_NewFlag( 20 )  // Create a bit flag string for 20 logical values.
@@ -199,7 +199,7 @@ NEXT
 <div class="d-d">Returns</div>
 <div class="d-it">The bit map string with the new flag settings.</div>
 <div class="d-d">Description</div>
-<div class="d-it"><code><a href="#gt_setflag">gt_SetFlag()</a></code> is used to turn flags within the flag string on.</div>
+<div class="d-it"><code>gt_SetFlag()</code> is used to turn flags within the flag string on.</div>
 <div class="d-d">Examples</div>
 <pre class="d-ex"><code class="language-c">cFlags := gt_NewFlag( 20 )  // Create a bit flag string for 20
 // logical values.
@@ -294,7 +294,7 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-it"><code>nPos</code>  - The position in <code>cStr2</code> where <code>cStr1</code> begins to differ</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>Return the position in <code>cStr2</code> where <code>cStr1</code> begins to differ. If the strings differ in the first character <code><a href="#gt_atdiff">gt_AtDiff()</a></code> will return 1.  If the two strings are identical (or identical upto the last character in <code>cStr2</code>) the function will return 0.</div>
+  <div><p>Return the position in <code>cStr2</code> where <code>cStr1</code> begins to differ. If the strings differ in the first character <code>gt_AtDiff()</code> will return 1.  If the two strings are identical (or identical upto the last character in <code>cStr2</code>) the function will return 0.</div>
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
@@ -426,7 +426,7 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-it"><code>nFreq</code> - The number of times <code>cChr</code> occurs in <code>cStr</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p><code><a href="#gt_chrcount">gt_ChrCount()</a></code> counts how many times a specified character appears in a string.</div>
+  <div><p><code>gt_ChrCount()</code> counts how many times a specified character appears in a string.</div>
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
@@ -495,7 +495,7 @@ cFlags := gt_SetFlag( cFlags )
 </div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p>Returns the numnber of occurrences of characters belonging to the set <code>cChrs</code> in the string <code>cStr</code>.  If no characters in <code>cChrs</code> appears in <code>cStr</code> <code><a href="#gt_chrtotal">gt_ChrTotal()</a></code> will return 0.</div>
+  <div><p>Returns the numnber of occurrences of characters belonging to the set <code>cChrs</code> in the string <code>cStr</code>.  If no characters in <code>cChrs</code> appears in <code>cStr</code> <code>gt_ChrTotal()</code> will return 0.</div>
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
@@ -531,7 +531,7 @@ cFlags := gt_SetFlag( cFlags )
 <div class="d-it"><code>nFreq</code> - The number of times <code>cChrs</code> occurs in <code>cStr</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p><code><a href="#gt_strcount">gt_StrCount()</a></code> counts how many times a specified substring appears in a string. If the substring does NOT appear in <code>cStr</code> this function will return 0. If the substring is a single character use <code><a href="#gt_chrcount">gt_ChrCount()</a></code> as it will be faster.</div>
+  <div><p><code>gt_StrCount()</code> counts how many times a specified substring appears in a string. If the substring does NOT appear in <code>cStr</code> this function will return 0. If the substring is a single character use <code><a href="#gt_chrcount">gt_ChrCount()</a></code> as it will be faster.</div>
   <div><p>NOTE:</div>
   <div><p>invalid parameters will return -1</div>
 </div>
@@ -760,8 +760,8 @@ cFlags := gt_SetFlag( cFlags )
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-10 17:06 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/cb07cc5">cb07cc5</a></div>
+<div>Generated by hbdoc on 2016-11-10 17:59 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/205c1cf">205c1cf</a></div>
 <div>Content processing, layout &amp; design © 2016 <a href="https://vszakats.net/harbour">vszakats</a></div>
 </footer>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>

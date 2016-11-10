@@ -292,7 +292,7 @@ Harbour Reference Guide</a></div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful, <code>.F.</code> otherwise.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Adds or reduces lines from window. The new lines will be colored from column zero color, from prior line. There's no checking to determine if the window is bigger than desktop area (except if in maincoord mode, because we need these boundaries to <code><a href="harbour.html#maxrow">MaxRow()</a></code> function).</div>
+<div class="d-it">Adds or reduces lines from window. The new lines will be colored from column zero color, from prior line. There's no checking to determine if the window is bigger than desktop area (except if in maincoord mode, because we need these boundaries to <code><a href="harbour.html#maxrow" title="harbour">MaxRow()</a></code> function).</div>
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tags</div>
@@ -1939,7 +1939,7 @@ nRGBColor/hBrush, &lt;lTight&gt;, &lt;lUseBrush&gt; )
 <div class="d-d">Returns</div>
 <div class="d-it">Maximum number of columns.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Returns maximum <code>nWinNum</code>. possible <code><a href="harbour.html#maxcol">MaxCol()</a></code> in current screen setting for font used by window</div>
+<div class="d-it">Returns maximum <code>nWinNum</code>. possible <code><a href="harbour.html#maxcol" title="harbour">MaxCol()</a></code> in current screen setting for font used by window</div>
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tags</div>
@@ -1955,7 +1955,7 @@ nRGBColor/hBrush, &lt;lTight&gt;, &lt;lUseBrush&gt; )
 <div class="d-d">Returns</div>
 <div class="d-it">Maximum number of rows.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Returns maximum <code>nWinNum</code>. possible <code><a href="harbour.html#maxrow">MaxRow()</a></code> in current screen setting for font used by window</div>
+<div class="d-it">Returns maximum <code>nWinNum</code>. possible <code><a href="harbour.html#maxrow" title="harbour">MaxRow()</a></code> in current screen setting for font used by window</div>
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tags</div>
@@ -2035,7 +2035,7 @@ nRGBColor/hBrush, &lt;lTight&gt;, &lt;lUseBrush&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>cWinName </code> Title of window. If omitted, the name of executable will be used. <code>row1, col1, row2, col2 </code> Specifies initial row/column and final row/column of the window coordinates are relative to main window, not to current window. This coordinates are used to: 1) Put window in initial position. 2) Determine size of the window (new <code><a href="harbour.html#maxrow">MaxRow()</a></code> and <code><a href="harbour.html#maxcol">MaxCol()</a></code>). 3) Save in RowOfs and ColOfs to MainCoord mode. <code>nStyle </code> Style of the window. All definitions are in file <code>winuser.ch</code>. Default is <code>WS_CAPTION</code>|<code>WS_SYSMENU</code>|<code>WS_CLIPCHILDREN</code>. If you will use controls such as <code>PUSHBUTTON</code>, you <code>MUST</code> include <code>WS_CLIPCHILDREN</code>. <code>nParentWin</code> Is the mother of the new window. Default is current window (in Standard mode) and the last window (in MainCoord mode). If you want the new window to not have parent, pass -1 as argument. <code>nExStyle</code> Extended style to window (for example: <code>WS_EX_TOOLTIPWINDOW</code>). Default is <code>NIL</code>. Note: this parameter does not exist in original <code>GTWVW</code> to be opened. This</div>
+<div class="d-it"><code>cWinName </code> Title of window. If omitted, the name of executable will be used. <code>row1, col1, row2, col2 </code> Specifies initial row/column and final row/column of the window coordinates are relative to main window, not to current window. This coordinates are used to: 1) Put window in initial position. 2) Determine size of the window (new <code><a href="harbour.html#maxrow" title="harbour">MaxRow()</a></code> and <code><a href="harbour.html#maxcol" title="harbour">MaxCol()</a></code>). 3) Save in RowOfs and ColOfs to MainCoord mode. <code>nStyle </code> Style of the window. All definitions are in file <code>winuser.ch</code>. Default is <code>WS_CAPTION</code>|<code>WS_SYSMENU</code>|<code>WS_CLIPCHILDREN</code>. If you will use controls such as <code>PUSHBUTTON</code>, you <code>MUST</code> include <code>WS_CLIPCHILDREN</code>. <code>nParentWin</code> Is the mother of the new window. Default is current window (in Standard mode) and the last window (in MainCoord mode). If you want the new window to not have parent, pass -1 as argument. <code>nExStyle</code> Extended style to window (for example: <code>WS_EX_TOOLTIPWINDOW</code>). Default is <code>NIL</code>. Note: this parameter does not exist in original <code>GTWVW</code> to be opened. This</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Number of window, if successful, zero if failed.</div>
 <div class="d-d">Description</div>
@@ -2362,7 +2362,7 @@ cImage/nImage, &lt;bBlock&gt;, &lt;aOffset&gt;, &lt;nStretchBitmap&gt;, &lt;lMap
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
-<div class="d-it">Restores the window (<code>nWinNum</code> is ignored). Restoring window from its maximized state might need handling in callback function <code>WVW_SIZE()</code>, because this function assumes no change in <code><a href="harbour.html#maxrow">MaxRow()</a></code>/<code><a href="harbour.html#maxcol">MaxCol()</a></code>.</div>
+<div class="d-it">Restores the window (<code>nWinNum</code> is ignored). Restoring window from its maximized state might need handling in callback function <code>WVW_SIZE()</code>, because this function assumes no change in <code><a href="harbour.html#maxrow" title="harbour">MaxRow()</a></code>/<code><a href="harbour.html#maxcol" title="harbour">MaxCol()</a></code>.</div>
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tags</div>
@@ -3494,8 +3494,8 @@ cImage/nImage, &lt;bBlock&gt;, &lt;aOffset&gt;, &lt;nStretchBitmap&gt;, &lt;lMap
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-10 17:06 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/cb07cc5">cb07cc5</a></div>
+<div>Generated by hbdoc on 2016-11-10 17:59 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/205c1cf">205c1cf</a></div>
 <div>Content processing, layout &amp; design © 2016 <a href="https://vszakats.net/harbour">vszakats</a></div>
 </footer>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
