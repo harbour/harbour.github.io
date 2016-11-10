@@ -122,7 +122,7 @@ Harbour Reference Guide</a></div>
 rddRegister( &quot;ADS&quot;, 1 )
 rddSetDefault( &quot;ADS&quot; )
 </code></pre>
-  <div><p>By default rddads is tuned for remote server and cdx indexes. To change this you may use these commands defined in <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code>:</div>
+  <div><p>By default rddads is tuned for remote server and cdx indexes. To change this you may use these commands defined in <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code>:</div>
 <pre><code class="language-c">SET SERVER LOCAL
 SET SERVER REMOTE
 
@@ -130,7 +130,7 @@ SET FILETYPE TO NTX
 SET FILETYPE TO ADT
 SET FILETYPE TO CDX
 </code></pre>
-  <div><p>or functions <code>AdsSetServerType()</code>, <code>AdsSetFileType()</code>. See the header file <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code> for details.</div>
+  <div><p>or functions <code>AdsSetServerType()</code>, <code>AdsSetFileType()</code>. See the header file <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code> for details.</div>
   <div><p>Note that the default local server is useable for file sharing on a small network.  The default DLL is limited to 5 users, but an unlimited version is available from Extended Systems.</div>
   <div><p><code>MAX <code>OPEN</code> <code>TABLES</code></code>: The server (even local) has its own setting for Max Tables allowed open.  For the Local Server, it can be set in <code>adslocal.cfg</code>.  The default is only 50! For the Windows Remote Servers, use the Configuration Utility, or increase the setting for the <code>TABLES</code> configuration value in the Advantage Database Server configuration registry key using the Registry Editor. For NetWare, edit the configuration file <code>ads.cfg</code>.</div>
   <div><p>See <code>ace.hlp</code> under <code>adslocal.cfg</code>, or the Advantage Error Guide for error 7005.</div>
@@ -183,7 +183,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 </section>
 
 <section>
-<h4><a href="#adsblob2file" class="d-id" id="adsblob2file" title="∞"><code>AdsBlob2File()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsblob2file" class="d-id" id="adsblob2file" title="∞"><code>AdsBlob2File()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Write a Binary (memo) field's contents to a file</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsBlob2File( &lt;cFileName&gt;, &lt;cFieldName&gt; ) → lSuccess</code></pre></div>
@@ -205,7 +205,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -214,7 +214,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 </section>
 
 <section>
-<h4><a href="#adscacheopencursors" class="d-id" id="adscacheopencursors" title="∞"><code>AdsCacheOpenCursors()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adscacheopencursors" class="d-id" id="adscacheopencursors" title="∞"><code>AdsCacheOpenCursors()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Provides caching of open cursors</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsCacheOpenCursors( &lt;nOpen&gt; ) → nRetVal</code></pre></div>
@@ -239,7 +239,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -248,7 +248,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 </section>
 
 <section>
-<h4><a href="#adscacheopentables" class="d-id" id="adscacheopentables" title="∞"><code>AdsCacheOpenTables()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adscacheopentables" class="d-id" id="adscacheopentables" title="∞"><code>AdsCacheOpenTables()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Provides caching of open tables</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsCacheOpenTables( &lt;nOpen&gt; ) → nRetVal</code></pre></div>
@@ -273,7 +273,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -282,7 +282,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 </section>
 
 <section>
-<h4><a href="#adsclearaof" class="d-id" id="adsclearaof" title="∞"><code>AdsClearAOF()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsclearaof" class="d-id" id="adsclearaof" title="∞"><code>AdsClearAOF()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Clears an Advantage Optimized Filter in the current workarea.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsClearAOF()</code></pre></div>
@@ -301,7 +301,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -310,7 +310,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 </section>
 
 <section>
-<h4><a href="#adsclosecachedtables" class="d-id" id="adsclosecachedtables" title="∞"><code>AdsCloseCachedTables()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsclosecachedtables" class="d-id" id="adsclosecachedtables" title="∞"><code>AdsCloseCachedTables()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Close all cached tables on the given connection</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsCloseCachedTables( [&lt;hConnection&gt;] ) → nRetVal</code></pre></div>
@@ -336,7 +336,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -345,7 +345,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 </section>
 
 <section>
-<h4><a href="#adsclrcallback" class="d-id" id="adsclrcallback" title="∞"><code>AdsClrCallback()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsclrcallback" class="d-id" id="adsclrcallback" title="∞"><code>AdsClrCallback()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Clears the callback set by AdsRegCallback().</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsClrCallback() → NIL</code></pre></div>
@@ -365,7 +365,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -374,7 +374,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 </section>
 
 <section>
-<h4><a href="#adsconnect60" class="d-id" id="adsconnect60" title="∞"><code>AdsConnect60()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsconnect60" class="d-id" id="adsconnect60" title="∞"><code>AdsConnect60()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Connect to a local/remote/internet server</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsConnect60( &lt;cFilePath&gt;, &lt;nServertype&gt;, [&lt;cUserName&gt;], [&lt;cUserPass&gt;], [&lt;nOptions&gt;] ) → lSuccess</code></pre></div>
@@ -402,7 +402,7 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -411,7 +411,7 @@ ENDIF
 </section>
 
 <section>
-<h4><a href="#adscustomizeaof" class="d-id" id="adscustomizeaof" title="∞"><code>AdsCustomizeAOF()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adscustomizeaof" class="d-id" id="adscustomizeaof" title="∞"><code>AdsCustomizeAOF()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Add or remove records from an existing AOF</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsCustomizeAOF( [&lt;nRecno | aRecNos&gt;] [, &lt;nType&gt;] ) → nSuccess</code></pre></div>
@@ -445,7 +445,7 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -454,7 +454,7 @@ ENDIF
 </section>
 
 <section>
-<h4><a href="#adsddaddtable" class="d-id" id="adsddaddtable" title="∞"><code>AdsDDAddTable()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsddaddtable" class="d-id" id="adsddaddtable" title="∞"><code>AdsDDAddTable()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Add a new table to a Data dictionary</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsDDAddTable( &lt;cTableName&gt;, &lt;cFileName&gt;, &lt;cIndexFileName&gt; ) → lSuccess</code></pre></div>
@@ -485,7 +485,7 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -494,14 +494,14 @@ ENDIF
 </section>
 
 <section>
-<h4><a href="#adsevalaof" class="d-id" id="adsevalaof" title="∞"><code>AdsEvalAOF()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsevalaof" class="d-id" id="adsevalaof" title="∞"><code>AdsEvalAOF()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Evaluate a filter expression to determine its optimization level</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsEvalAOF( &lt;cFilter&gt; ) → nOptimizationLevel</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>cFilter</code>       Expression to test.</div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>nOptimizationLevel</code> values are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code>: <code>ADS_OPTIMIZED_FULL</code>, <code>ADS_OPTIMIZED_PART</code>, <code>ADS_OPTIMIZED_NONE</code>. <code>IMPORTANT</code> NOTE: These values are NOT the same as those returned by <code><a href="clc53.html#dborderinfo" title="clc53">dbOrderInfo()</a></code>.</div>
+<div class="d-it"><code>nOptimizationLevel</code> values are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code>: <code>ADS_OPTIMIZED_FULL</code>, <code>ADS_OPTIMIZED_PART</code>, <code>ADS_OPTIMIZED_NONE</code>. <code>IMPORTANT</code> NOTE: These values are NOT the same as those returned by <code><a href="clc53.html#dborderinfo" title="clc53">dbOrderInfo()</a></code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">See <code>ace.hlp</code> for full details about the Advantage Database Server.</div>
 <div class="d-d">Status</div>
@@ -513,7 +513,7 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -522,7 +522,7 @@ ENDIF
 </section>
 
 <section>
-<h4><a href="#adsfile2blob" class="d-id" id="adsfile2blob" title="∞"><code>AdsFile2Blob()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsfile2blob" class="d-id" id="adsfile2blob" title="∞"><code>AdsFile2Blob()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Save a Binary file to a field</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsFile2Blob( &lt;cFileName&gt;, &lt;cFieldName&gt;, &lt;nBinaryType&gt; ) → lSuccess</code></pre></div>
@@ -545,7 +545,7 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -554,7 +554,7 @@ ENDIF
 </section>
 
 <section>
-<h4><a href="#adsgetaof" class="d-id" id="adsgetaof" title="∞"><code>AdsGetAOF()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsgetaof" class="d-id" id="adsgetaof" title="∞"><code>AdsGetAOF()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Retrieve the filter expression used in the call to AdsSetAOF()</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsGetAOF() → cFilter</code></pre></div>
@@ -573,7 +573,7 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -582,7 +582,7 @@ ENDIF
 </section>
 
 <section>
-<h4><a href="#adsgetaofnoopt" class="d-id" id="adsgetaofnoopt" title="∞"><code>AdsGetAOFNoOpt()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsgetaofnoopt" class="d-id" id="adsgetaofnoopt" title="∞"><code>AdsGetAOFNoOpt()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Return the non-optimized portion of the current filter expression</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsGetAOFNoOpt() → cFilterFragment</code></pre></div>
@@ -601,7 +601,7 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -610,14 +610,14 @@ ENDIF
 </section>
 
 <section>
-<h4><a href="#adsgetaofoptlevel" class="d-id" id="adsgetaofoptlevel" title="∞"><code>AdsGetAOFOptLevel()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsgetaofoptlevel" class="d-id" id="adsgetaofoptlevel" title="∞"><code>AdsGetAOFOptLevel()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Returns optimization level of the current AOF filter</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsGetAOFOptLevel() → nOptimizationLevel</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">None</div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>nOptimizationLevel</code> values are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code>: <code>ADS_OPTIMIZED_FULL</code>, <code>ADS_OPTIMIZED_PART</code>, <code>ADS_OPTIMIZED_NONE</code>.</div>
+<div class="d-it"><code>nOptimizationLevel</code> values are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code>: <code>ADS_OPTIMIZED_FULL</code>, <code>ADS_OPTIMIZED_PART</code>, <code>ADS_OPTIMIZED_NONE</code>.</div>
 <div class="d-d">Description</div>
 <div class="d-it">See <code>ace.hlp</code> for full details about the Advantage Database Server.</div>
 <div class="d-d">Status</div>
@@ -629,7 +629,7 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -638,7 +638,7 @@ ENDIF
 </section>
 
 <section>
-<h4><a href="#adsgetconnectiontype" class="d-id" id="adsgetconnectiontype" title="∞"><code>AdsGetConnectionType()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsgetconnectiontype" class="d-id" id="adsgetconnectiontype" title="∞"><code>AdsGetConnectionType()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Returns the type of Server used by the given connection handle.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsGetConnectionType( [&lt;hConnection&gt;] ) → nConnectionType</code></pre></div>
@@ -660,7 +660,7 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -669,7 +669,7 @@ ENDIF
 </section>
 
 <section>
-<h4><a href="#adsgetlasterror" class="d-id" id="adsgetlasterror" title="∞"><code>AdsGetLastError()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsgetlasterror" class="d-id" id="adsgetlasterror" title="∞"><code>AdsGetLastError()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Returns any error code generated by the most recent ADS API call</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsGetLastError() → nErrorCode</code></pre></div>
@@ -691,14 +691,14 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
 </section>
 
 <section>
-<h4><a href="#adsgetrelkeypos" class="d-id" id="adsgetrelkeypos" title="∞"><code>AdsGetRelKeyPos()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsgetrelkeypos" class="d-id" id="adsgetrelkeypos" title="∞"><code>AdsGetRelKeyPos()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Estimated key position of current record within the current index</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsGetRelKeyPos() → nKeyPos</code></pre></div>
@@ -720,7 +720,7 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -729,7 +729,7 @@ ENDIF
 </section>
 
 <section>
-<h4><a href="#adsgettablecontype" class="d-id" id="adsgettablecontype" title="∞"><code>AdsGetTableConType()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsgettablecontype" class="d-id" id="adsgettablecontype" title="∞"><code>AdsGetTableConType()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Returns the type of Server used by current workarea.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsGetTableConType() → nConnectionType</code></pre></div>
@@ -751,7 +751,7 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -760,7 +760,7 @@ ENDIF
 </section>
 
 <section>
-<h4><a href="#adsisexprvalid" class="d-id" id="adsisexprvalid" title="∞"><code>AdsIsExprValid()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsisexprvalid" class="d-id" id="adsisexprvalid" title="∞"><code>AdsIsExprValid()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Determine if the ADS server can parse an expression</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsIsExprValid( &lt;cExp&gt; ) → lSuccess</code></pre></div>
@@ -785,14 +785,14 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
 </section>
 
 <section>
-<h4><a href="#adsisindexed" class="d-id" id="adsisindexed" title="∞"><code>AdsIsIndexed()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsisindexed" class="d-id" id="adsisindexed" title="∞"><code>AdsIsIndexed()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Fast determination for if current workarea has a selected index</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsIsIndexed() → lActiveIndex</code></pre></div>
@@ -816,7 +816,7 @@ ENDIF
 </section>
 
 <section>
-<h4><a href="#adsisrecordinaof" class="d-id" id="adsisrecordinaof" title="∞"><code>AdsIsRecordInAOF()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsisrecordinaof" class="d-id" id="adsisrecordinaof" title="∞"><code>AdsIsRecordInAOF()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Determine if a record is in the current AOF</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsIsRecordInAOF( [&lt;nRecNo&gt;] ) → lSatisfiesFilter</code></pre></div>
@@ -835,7 +835,7 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -844,7 +844,7 @@ ENDIF
 </section>
 
 <section>
-<h4><a href="#adskeycount" class="d-id" id="adskeycount" title="∞"><code>AdsKeyCount()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adskeycount" class="d-id" id="adskeycount" title="∞"><code>AdsKeyCount()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Retrieve the number of keys in a specified index</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsKeyCount( [&lt;xTag&gt;], &lt;cIgnoredIndexFile&gt;, [&lt;nFilterOption&gt;] ) → nKeyCount</code></pre></div>
@@ -853,7 +853,7 @@ ENDIF
   <div><code>xTag</code>     Numeric order number OR index tag name. Default is current index.</div>
   <div><code>cIgnoredIndexFile</code>   This parameter is not processed. In other Harbour RDDs, the second parameter to &quot;ordKeyCount&quot; takes a second argument to identify a particular Index File in cases where two files are open that contain orders with the same name. The ADS driver does not support this and will select the first order with the requested name. To stay consistent with other RDDs, therefore, the second parameter is reserved and the <code>nFilterOption</code> is passed as a third parameter.</div>
   <div><code>nFilterOption</code> Indicates if filters and/or scopes are to be respected if set.</div>
-  <div>Options are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code>:</div>
+  <div>Options are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code>:</div>
   <div class="d-t d-t0">
   <div>   ADS_RESPECTFILTERS   Respect filters and scopes</div>
   <div>   ADS_IGNOREFILTERS    Ignore filters and scopes</div>
@@ -874,7 +874,7 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -883,7 +883,7 @@ ENDIF
 </section>
 
 <section>
-<h4><a href="#adskeyno" class="d-id" id="adskeyno" title="∞"><code>AdsKeyNo()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adskeyno" class="d-id" id="adskeyno" title="∞"><code>AdsKeyNo()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Get the logical key number of the current record in the given index</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsKeyNo( [&lt;xTag&gt;], &lt;cIgnoredIndexFile&gt;, [&lt;nFilterOption&gt;] ) → nKeyNo</code></pre></div>
@@ -892,7 +892,7 @@ ENDIF
   <div><code>xTag</code>          Numeric order number OR index tag name. Default is current index.</div>
   <div><code>cIgnoredIndexFile</code>   This parameter is not processed. In other Harbour RDDs, the second parameter to &quot;ordKeyNo&quot; takes a second argument to identify a particular Index File in cases where two files are open that contain orders with the same name. The ADS driver does not support this and will select the first order with the requested name. To stay consistent with other RDDs, therefore, the second parameter is reserved and the <code>nFilterOption</code> is passed as a third parameter.</div>
   <div><code>nFilterOption</code> Indicates if filters and/or scopes are to be respected if set.</div>
-  <div>Options are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code>:</div>
+  <div>Options are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code>:</div>
   <div class="d-t d-t0">
   <div>   ADS_RESPECTFILTERS   Respect filters and scopes</div>
   <div>   ADS_IGNOREFILTERS    Ignore filters and scopes</div>
@@ -913,7 +913,7 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -922,7 +922,7 @@ ENDIF
 </section>
 
 <section>
-<h4><a href="#adslocking" class="d-id" id="adslocking" title="∞"><code>AdsLocking()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adslocking" class="d-id" id="adslocking" title="∞"><code>AdsLocking()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Turns on/off the Advantage proprietary locking mode</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsLocking( &lt;lMode&gt; ) → lPriorSetting</code></pre></div>
@@ -945,7 +945,7 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -954,7 +954,7 @@ ENDIF
 </section>
 
 <section>
-<h4><a href="#adsrefreshaof" class="d-id" id="adsrefreshaof" title="∞"><code>AdsRefreshAOF()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsrefreshaof" class="d-id" id="adsrefreshaof" title="∞"><code>AdsRefreshAOF()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Update the filter snapshot</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsRefreshAOF()</code></pre></div>
@@ -973,7 +973,7 @@ ENDIF
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -982,7 +982,7 @@ ENDIF
 </section>
 
 <section>
-<h4><a href="#adsregcallback" class="d-id" id="adsregcallback" title="∞"><code>AdsRegCallback()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsregcallback" class="d-id" id="adsregcallback" title="∞"><code>AdsRegCallback()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">For Progress displays: Sets a codeblock to be called during indexing</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsRegCallback( &lt;bEval&gt; )  → NIL</code></pre></div>
@@ -1020,7 +1020,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -1029,7 +1029,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 </section>
 
 <section>
-<h4><a href="#adsrightscheck" class="d-id" id="adsrightscheck" title="∞"><code>AdsRightsCheck()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adsrightscheck" class="d-id" id="adsrightscheck" title="∞"><code>AdsRightsCheck()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Sets the &quot;rights checking&quot; setting for opening files</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsRightsCheck( &lt;lMode&gt; ) → lPriorSetting</code></pre></div>
@@ -1051,7 +1051,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -1060,14 +1060,14 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 </section>
 
 <section>
-<h4><a href="#adssetaof" class="d-id" id="adssetaof" title="∞"><code>AdsSetAOF()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adssetaof" class="d-id" id="adssetaof" title="∞"><code>AdsSetAOF()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Create an Advantage Optimized Filter</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsSetAOF( &lt;cFilter&gt; [, &lt;nResolveOption&gt;] ) → lSuccess</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>cFilter</code>         Filter expression to set.</div>
-  <div><code>nResolveOption</code>  Option to indicate how the filter should be resolved in the event that the expression cannot be fully optimized. Options are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code>: <code>ADS_RESOLVE_IMMEDIATE</code>, <code>ADS_RESOLVE_DYNAMIC</code>.</div>
+  <div><code>nResolveOption</code>  Option to indicate how the filter should be resolved in the event that the expression cannot be fully optimized. Options are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code>: <code>ADS_RESOLVE_IMMEDIATE</code>, <code>ADS_RESOLVE_DYNAMIC</code>.</div>
 </div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>lSuccess</code>   True if AOF is created.</div>
@@ -1082,7 +1082,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -1091,7 +1091,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 </section>
 
 <section>
-<h4><a href="#adssetchartype" class="d-id" id="adssetchartype" title="∞"><code>AdsSetCharType()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adssetchartype" class="d-id" id="adssetchartype" title="∞"><code>AdsSetCharType()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Sets the type of character data expected when opening tables.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsSetCharType( &lt;nCharType&gt;, [lOEM] ) → nPriorSetting</code></pre></div>
@@ -1113,7 +1113,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -1122,7 +1122,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 </section>
 
 <section>
-<h4><a href="#adssetdefault-" class="d-id" id="adssetdefault-" title="∞"><code>AdsSetDefault() *</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adssetdefault-" class="d-id" id="adssetdefault-" title="∞"><code>AdsSetDefault() *</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Get/Set function for ADS's DEFAULT setting.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsSetDefault( [&lt;cPath&gt;] ) → cPriorSetting</code></pre></div>
@@ -1144,14 +1144,14 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
 </section>
 
 <section>
-<h4><a href="#adssetdeleted-" class="d-id" id="adssetdeleted-" title="∞"><code>AdsSetDeleted() *</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adssetdeleted-" class="d-id" id="adssetdeleted-" title="∞"><code>AdsSetDeleted() *</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Get/Set function for ADS's ShowDeleted() setting.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsSetDeleted( [&lt;lOnOff&gt;] ) → lPriorSetting</code></pre></div>
@@ -1173,14 +1173,14 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
 </section>
 
 <section>
-<h4><a href="#adssetexact-" class="d-id" id="adssetexact-" title="∞"><code>AdsSetExact() *</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adssetexact-" class="d-id" id="adssetexact-" title="∞"><code>AdsSetExact() *</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Get/Set function for ADS's AdsSetExact() setting.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsSetExact( [&lt;lOnOff&gt;] ) → lPriorSetting</code></pre></div>
@@ -1202,14 +1202,14 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
 </section>
 
 <section>
-<h4><a href="#adssetrelkeypos" class="d-id" id="adssetrelkeypos" title="∞"><code>AdsSetRelKeyPos()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adssetrelkeypos" class="d-id" id="adssetrelkeypos" title="∞"><code>AdsSetRelKeyPos()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">GoTo the given estimated key position within the current index</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>ADSSetSelKeyPos( &lt;nPercent&gt; ) → nError</code></pre></div>
@@ -1231,7 +1231,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -1240,7 +1240,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 </section>
 
 <section>
-<h4><a href="#adssetsearchpath-" class="d-id" id="adssetsearchpath-" title="∞"><code>AdsSetSearchPath() *</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adssetsearchpath-" class="d-id" id="adssetsearchpath-" title="∞"><code>AdsSetSearchPath() *</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Get/Set function for ADS's AdsSetSearchPath() setting.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsSetSearchPath( [&lt;cPath&gt;] ) → cPriorSetting</code></pre></div>
@@ -1262,14 +1262,14 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
 </section>
 
 <section>
-<h4><a href="#adstestreclocks" class="d-id" id="adstestreclocks" title="∞"><code>AdsTestRecLocks()</code></a><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
+<h4><a href="#adstestreclocks" class="d-id" id="adstestreclocks" title="∞"><code>AdsTestRecLocks()</code></a><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/adsfunc.c" class="d-so">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/rddads/doc/en/adsfunc.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Turn On or Off a &quot;debug mode&quot; for trapping missed record locks.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>AdsTestRecLocks( &lt;lOnOff&gt; ) → lPriorSetting</code></pre></div>
@@ -1295,7 +1295,7 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 <div class="d-d">Files</div>
 <div class="d-it">
   <div>Library is rddads</div>
-  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/7850fe2/contrib/rddads/ads.ch">ads.ch</a></code></div>
+  <div>Header is <code><a href="https://github.com/vszakats/harbour-core/blob/1437ebf/contrib/rddads/ads.ch">ads.ch</a></code></div>
 </div>
 <div class="d-d">Tag</div>
 <div class="d-it">Advantage Database RDD</div>
@@ -1304,8 +1304,8 @@ STATIC FUNCTION outputstuff( nPercent )  /* The &quot;callback&quot; function */
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-10 20:41 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/7850fe2">7850fe2</a></div>
+<div>Generated by hbdoc on 2016-11-10 21:19 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/1437ebf">1437ebf</a></div>
 <div>Content processing, layout &amp; design © 2016 <a href="https://vszakats.net/harbour">vszakats</a></div>
 </footer>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>

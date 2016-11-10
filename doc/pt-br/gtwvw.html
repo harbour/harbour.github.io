@@ -258,7 +258,7 @@ Harbour guia de referência</a></div>
 </code></pre>
 </div>
 <div class="d-d">Argumentos</div>
-<div class="d-it"><code>aDlg</code> <code>aItens1</code> <code>aItens2</code> <code>aItens3</code> <code>aItens4</code> <code>aItens5</code> <code>aItens6</code> <code>aItens7</code> <code>aItens8</code> aItens9 aItens10</div>
+<div class="d-it"><code>aDlg</code> <code>aItens1</code> <code>aItens2</code> <code>aItens3</code> <code>aItens4</code> <code>aItens5</code> <code>aItens6</code> <code>aItens7</code> <code>aItens8</code> <code>aItens9</code> <code>aItens10</code></div>
 <div class="d-d">Retorna</div>
 <div class="d-it">String com o novo template de diálogo criado e o seu tamanho.</div>
 <div class="d-d">Descrição</div>
@@ -659,7 +659,7 @@ wvw_SetWindowCentre().
 <div class="d-d">Sintaxe</div>
 <div class="d-sy"><pre><code>wvw_ChooseColor( &lt;nRGBInit&gt;, &lt;aRGB16&gt;, &lt;nFlags&gt; )</code></pre></div>
 <div class="d-d">Argumentos</div>
-<div class="d-it"><code>nRGBInit</code> Cor inicial. <code>aRGB16</code> Matriz com 16 elementos, contendo os índices das cores. O default é uma matriz com o conjunto de cores de um botao. nFlags Flags que indicam a posiçao inicial no diálogo de seleçao de cores. O default é a combinaçao das opçoes <code>CC_ANYCOLOR</code> | <code>CC_RGBINIT</code> | <code>CC_FULLOPEN</code>.</div>
+<div class="d-it"><code>nRGBInit</code> Cor inicial. <code>aRGB16</code> Matriz com 16 elementos, contendo os índices das cores. O default é uma matriz com o conjunto de cores de um botao. <code>nFlags</code> Flags que indicam a posiçao inicial no diálogo de seleçao de cores. O default é a combinaçao das opçoes <code>CC_ANYCOLOR</code> | <code>CC_RGBINIT</code> | <code>CC_FULLOPEN</code>.</div>
 <div class="d-d">Retorna</div>
 <div class="d-it">Um valor RGB indicando a seleção de cor do usuário, ou zero se o usuário cancelar o diálogo.</div>
 <div class="d-d">Descrição</div>
@@ -711,7 +711,7 @@ wvw_SetWindowCentre().
 </code></pre>
 </div>
 <div class="d-d">Argumentos</div>
-<div class="d-it"><code>cDlgTemplate</code>|nResource lHandle <code>cDlgProc</code>|<code>bDlgProc</code>|nDlgProc nFlag</div>
+<div class="d-it"><code>cDlgTemplate</code>|<code>nResource</code> <code>lHandle</code> <code>cDlgProc</code>|<code>bDlgProc</code>|<code>nDlgProc</code> <code>nFlag</code></div>
 <div class="d-d">Retorna</div>
 <div class="d-it">Handle da janela de diálogo ou 0.</div>
 <div class="d-d">Descrição</div>
@@ -731,7 +731,7 @@ wvw_SetWindowCentre().
 </code></pre>
 </div>
 <div class="d-d">Argumentos</div>
-<div class="d-it"><code>cDialog</code>|<code>nResource</code>|cDlgTemplate <code>bDlgProc</code>|cDlgProc nFlag nHandle</div>
+<div class="d-it"><code>cDialog</code>|<code>nResource</code>|<code>cDlgTemplate</code> <code>bDlgProc</code>|<code>cDlgProc</code> <code>nFlag</code> <code>nHandle</code></div>
 <div class="d-d">Retorna</div>
 <div class="d-it">Handle da janela de diálogo ou 0.</div>
 <div class="d-d">Descrição</div>
@@ -819,7 +819,7 @@ wvw_SetWindowCentre().
 <div class="d-d">Retorna</div>
 <div class="d-it">Se a função for bem-sucedida, retorna um valor diferente de zero, caso contrário retorna zero.</div>
 <div class="d-d">Descrição</div>
-<div class="d-it">Essa funçao destroi o menu especificado por hMenu</div>
+<div class="d-it">Essa funçao destroi o menu especificado por <code>hMenu</code></div>
 <div class="d-d">Plataformas</div>
 <div class="d-it">Disponível em Windows</div>
 <div class="d-d">Etiquetas</div>
@@ -1087,7 +1087,7 @@ lTight/aOffset, &lt;lTransparent&gt; )
 </code></pre>
 </div>
 <div class="d-d">Argumentos</div>
-<div class="d-it"><code>nWinNum</code> Número da janela. O default é a janela atual. <code>nTop</code>, <code>nLeft</code>, <code>nBottom</code>, <code>nRight</code> Coordenadas para desenhar o label. <code>cLabel</code> String que será desenhada. <code>nAlignHorz</code> Alinhamento horizontal do label. O default é 0. nAlignVert Alinhamento vertical do label. O default é 0. <code>nTextColor</code> Indice da cor do label. <code>nBkColor</code> Índice da cor do fundo do label. <code>hFont</code> Fonte que será desenhada o label. <code>aOffSet</code> Matriz com quatro elementos de alinhamento do label com as coordenadas <code>nTop</code>, <code>nLeft</code>, <code>nBottom</code>, <code>nRight</code>.</div>
+<div class="d-it"><code>nWinNum</code> Número da janela. O default é a janela atual. <code>nTop</code>, <code>nLeft</code>, <code>nBottom</code>, <code>nRight</code> Coordenadas para desenhar o label. <code>cLabel</code> String que será desenhada. <code>nAlignHorz</code> Alinhamento horizontal do label. O default é 0. <code>nAlignVert</code> Alinhamento vertical do label. O default é 0. <code>nTextColor</code> Indice da cor do label. <code>nBkColor</code> Índice da cor do fundo do label. <code>hFont</code> Fonte que será desenhada o label. <code>aOffSet</code> Matriz com quatro elementos de alinhamento do label com as coordenadas <code>nTop</code>, <code>nLeft</code>, <code>nBottom</code>, <code>nRight</code>.</div>
 <div class="d-d">Retorna</div>
 <div class="d-it"><code>.T.</code></div>
 <div class="d-d">Descrição</div>
@@ -1176,7 +1176,7 @@ lTight/aOffset, &lt;lTransparent&gt; )
 </code></pre>
 </div>
 <div class="d-d">Argumentos</div>
-<div class="d-it"><code>nWinNum</code> Número da janela. O default é a janela atual. <code>nTop</code>, <code>nLeft</code>, <code>nBottom</code>, <code>nRight</code> Coordenadas para desenho do quadro. <code>nThick</code> Formato do traço. As definiçoes estao no arquivo <code>wingdi.ch</code> (PS_SOLID, <code>PS_DOT</code>, etc.). nShape Parâmetro ignorado. <code>nRGBColor</code> Especifica a referencia de cor para o traço ( valor com 32 bits de uma cor RGB).</div>
+<div class="d-it"><code>nWinNum</code> Número da janela. O default é a janela atual. <code>nTop</code>, <code>nLeft</code>, <code>nBottom</code>, <code>nRight</code> Coordenadas para desenho do quadro. <code>nThick</code> Formato do traço. As definiçoes estao no arquivo <code>wingdi.ch</code> (PS_SOLID, <code>PS_DOT</code>, etc.). <code>nShape</code> Parâmetro ignorado. <code>nRGBColor</code> Especifica a referencia de cor para o traço ( valor com 32 bits de uma cor RGB).</div>
 <div class="d-d">Retorna</div>
 <div class="d-it"><code>.T.</code></div>
 <div class="d-d">Descrição</div>
@@ -1389,7 +1389,7 @@ lTight/aOffset, &lt;lTransparent&gt; )
 <div class="d-d">Argumentos</div>
 <div class="d-it">
   <div><code>nWinNum</code> Número da janela. O default é a janela atual. <code>nTop</code>, <code>nLeft</code>, <code>nBottom</code>, <code>nRight</code> Coordenadas para desenho do texto. <code>aOffPixels</code> Matriz com quatro elementos com coordenadas dos cantos superior, direito de offset para alinhamento do texto com as linhas/colunas. <code>cText</code> String com o texto que será desenhado. <code>nAlignHorz</code> Especifica o alinhamento do texto dentro das coordenadas informadas. Pode ser: 0 1 2 Alinhamento a esquerda Alinhamento a direita Alinhamento centralizado esquerdo, inferior e</div>
-  <div>O default é alinhamento a esquerda. <code>nAlignVert</code> Parâmetro ignorado nTextColor Cor do texto. <code>nBackColor</code> Cor de fundo. <code>nBackMode</code> O modo como a cor de fundo será usada. O default é <code>OPAQUE</code> (outras definiçoes no arquivo <code>wingdi.ch</code>) <code>hFont</code> Fonte usada para o texto.</div>
+  <div>O default é alinhamento a esquerda. <code>nAlignVert</code> Parâmetro ignorado <code>nTextColor</code> Cor do texto. <code>nBackColor</code> Cor de fundo. <code>nBackMode</code> O modo como a cor de fundo será usada. O default é <code>OPAQUE</code> (outras definiçoes no arquivo <code>wingdi.ch</code>) <code>hFont</code> Fonte usada para o texto.</div>
 </div>
 <div class="d-d">Retorna</div>
 <div class="d-it">nenhum.</div>
@@ -2109,7 +2109,7 @@ lTight/aOffset, &lt;lTransparent&gt; )
 </div>
 <div class="d-d">Argumentos</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Número da janela. O default é a janela atual. <code>nTop</code>, <code>nLeft</code>, <code>nBottom</code>, <code>nRight</code> Coordenadas para criação do botão. <code>cText</code> Texto para o botão. O default é &quot;&quot;. cImage/nImage Se informado como numérico indica o ID do <code>RESOURCE</code> em um arquivo .RC. Se informado como string, deve conter o caminho completo do arquivo de imagem. <code>bBlock</code> Bloco de código que será executado sempre quando for gerado um evento <code>BN_CLICK</code> (ou seja, pressionar e liberar o botão). Sempre será passado os parâmetros: <code>nWinNum</code> e o identificador do botão. aOffset Matriz com quatro elementos com coordenadas dos cantos superior, direito de offset para alinhamento do botão com as linhas/colunas. <code>nStretchBitmap</code> Um número entre 0 e 1 (inclusive) como um fator para &quot;esticar&quot; o bitmap. Por exemplo: 1.0 0.5 0 O bitmap vai cobrir por inteiro o botão O bitmap vai cobrir 50% do botão O bitmap não vai ser &quot;esticado&quot; esquerdo, inferior e</div>
+  <div><code>nWinNum</code> Número da janela. O default é a janela atual. <code>nTop</code>, <code>nLeft</code>, <code>nBottom</code>, <code>nRight</code> Coordenadas para criação do botão. <code>cText</code> Texto para o botão. O default é &quot;&quot;. cImage/nImage Se informado como numérico indica o ID do <code>RESOURCE</code> em um arquivo .RC. Se informado como string, deve conter o caminho completo do arquivo de imagem. <code>bBlock</code> Bloco de código que será executado sempre quando for gerado um evento <code>BN_CLICK</code> (ou seja, pressionar e liberar o botão). Sempre será passado os parâmetros: <code>nWinNum</code> e o identificador do botão. <code>aOffset</code> Matriz com quatro elementos com coordenadas dos cantos superior, direito de offset para alinhamento do botão com as linhas/colunas. <code>nStretchBitmap</code> Um número entre 0 e 1 (inclusive) como um fator para &quot;esticar&quot; o bitmap. Por exemplo: 1.0 0.5 0 O bitmap vai cobrir por inteiro o botão O bitmap vai cobrir 50% do botão O bitmap não vai ser &quot;esticado&quot; esquerdo, inferior e</div>
   <div>O default é 1. <code>lMap3DColors</code> Se a imagem terá efeito de transparencia (<code>.T.</code>) ou nao (<code>.F.</code>). Atençao para o fato que existe a limitaçao de bitmaps com, no máximo, 256 cores.</div>
 </div>
 <div class="d-d">Retorna</div>
@@ -2647,7 +2647,7 @@ lTight/aOffset, &lt;lTransparent&gt; )
 <div class="d-d">Sintaxe</div>
 <div class="d-sy"><pre><code>wvw_SetFont( &lt;cFontFace&gt;, &lt;nFontHeight&gt;, &lt;nFontWidth&gt;, &lt;nFontWeight&gt;, &lt;nFontQuality&gt; )</code></pre></div>
 <div class="d-d">Argumentos</div>
-<div class="d-it"><code>cFontName</code> Nome da fonte (por exemplo, MS Sans Serif). <code>nFontHeight</code> Altura da fonte. <code>nFontWidth</code> Largura da fonte. <code>nFontWeight</code> &quot;Peso&quot; da fonte. nFontQuality Qualidade da fonte. Todos os parâmetros sao opicionais. A funçao usa os valores que sao atribuidos na criaçao da janela.</div>
+<div class="d-it"><code>cFontName</code> Nome da fonte (por exemplo, MS Sans Serif). <code>nFontHeight</code> Altura da fonte. <code>nFontWidth</code> Largura da fonte. <code>nFontWeight</code> &quot;Peso&quot; da fonte. <code>nFontQuality</code> Qualidade da fonte. Todos os parâmetros sao opicionais. A funçao usa os valores que sao atribuidos na criaçao da janela.</div>
 <div class="d-d">Retorna</div>
 <div class="d-it"><code>.T.</code> se conseguiu alterar a fonte ou seus parêmetros, <code>.F.</code> caso contrário.</div>
 <div class="d-d">Descrição</div>
@@ -3161,7 +3161,7 @@ lTight/aOffset, &lt;lTransparent&gt; )
 <div class="d-sy"><pre><code>wvw_tbAddButton( &lt;nWinNum&gt;, &lt;nCommand&gt;, &lt;xBitmap&gt;, &lt;cLabel&gt;, &lt;nBitmapType&gt;, &lt;lMap3DColors&gt; )</code></pre></div>
 <div class="d-d">Argumentos</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Número da janela. O default é a janela atual. <code>nCommand</code> Identificador da ação que será executada quando o usuário pressionar o botão. xBitmap Identificação do <code>RESOURCE</code> do bitmap em um arquivo RC (nesse caso a imagem não pode ter mais que 256 cores) ou caminho completo do arquivo da imagem. cLabel Texto do botão. Se o parâmetro <code>lDisplayText</code> da função <code><a href="#wvw_tbcreate">wvw_tbCreate()</a></code> estiver configurado para <code>.T.</code>, o texto será apresentado logo abaixo da imagem, caso contrário será usado como tooltip. <code>nBitmapType</code> Tipo do bitmap. Pode ter os seguintes valores: 0 1 2 3 Custom Bitmaps standard do windows (COPIAR, <code>COLAR</code>, <code>PROCURAR</code>, <code>ABRIR</code>, etc.) Bitmaps &quot;view&quot; do windows (são aqueles que mudam a visualização, como por exemplo, exibir detalhes, ordenar por nome, etc.) Bitmap do Windows Explorer</div>
+  <div><code>nWinNum</code> Número da janela. O default é a janela atual. <code>nCommand</code> Identificador da ação que será executada quando o usuário pressionar o botão. <code>xBitmap</code> Identificação do <code>RESOURCE</code> do bitmap em um arquivo RC (nesse caso a imagem não pode ter mais que 256 cores) ou caminho completo do arquivo da imagem. <code>cLabel</code> Texto do botão. Se o parâmetro <code>lDisplayText</code> da função <code><a href="#wvw_tbcreate">wvw_tbCreate()</a></code> estiver configurado para <code>.T.</code>, o texto será apresentado logo abaixo da imagem, caso contrário será usado como tooltip. <code>nBitmapType</code> Tipo do bitmap. Pode ter os seguintes valores: 0 1 2 3 Custom Bitmaps standard do windows (COPIAR, <code>COLAR</code>, <code>PROCURAR</code>, <code>ABRIR</code>, etc.) Bitmaps &quot;view&quot; do windows (são aqueles que mudam a visualização, como por exemplo, exibir detalhes, ordenar por nome, etc.) Bitmap do Windows Explorer</div>
   <div><code>lMap3DColors</code> Se a imagem terá efeito de transparencia (só tem sentido se o parâmetro <code>nBitmapType</code> for 0).</div>
 </div>
 <div class="d-d">Retorna</div>
@@ -3403,7 +3403,7 @@ lTight/aOffset, &lt;lTransparent&gt; )
 <div class="d-it"><code>nWinNum</code> Número da janela. O default é a janela atual. <code>nXBid</code> Identificador da scrollbar.</div>
 <div class="d-d">Retorna</div>
 <div class="d-it">
-  <div>Matriz com cinco elementos, contendo as seguintes informações: <code>nMin</code> nMax <code>nPageSize</code> <code>nPos</code> <code>nTrackPos</code> Valor mínimo de posições para movimentação Valor máximo de posições para movimentação Tamanho da página Posicionamento do botão de movimentação Posição exata do botão de movimentação quando o usuário comecou uma operação de arrastar-e-soltar.</div>
+  <div>Matriz com cinco elementos, contendo as seguintes informações: <code>nMin</code> <code>nMax</code> <code>nPageSize</code> <code>nPos</code> <code>nTrackPos</code> Valor mínimo de posições para movimentação Valor máximo de posições para movimentação Tamanho da página Posicionamento do botão de movimentação Posição exata do botão de movimentação quando o usuário comecou uma operação de arrastar-e-soltar.</div>
   <div>Essa matriz só retornará com esses valores caso a operação seja bem-sucedida. Se a operação solicitada for inválida, a função retornará uma matriz vazia.</div>
 </div>
 <div class="d-d">Descrição</div>
@@ -3419,7 +3419,7 @@ lTight/aOffset, &lt;lTransparent&gt; )
 <div class="d-d">Sintaxe</div>
 <div class="d-sy"><pre><code>wvw_xbUpdate( &lt;nWinNum&gt;, &lt;nXBid&gt;, &lt;nPos&gt;, &lt;nPageSize&gt;, &lt;nMin&gt;, &lt;nMax&gt; )</code></pre></div>
 <div class="d-d">Argumentos</div>
-<div class="d-it"><code>nWinNum</code> Número da janela. O default é a janela atual. <code>nXBid</code> Identificador da scrollbar. <code>nPos</code> Especifica a posiçao do botao de movimentaçao da scrollbar. <code>nPageSize</code> Tamanho da página. Esse valor é usado pela scrollbar para determinar o tamanho proporcional para o salto de página do botao de movimentaçao. nMin Valor mínimo de posiçoes para movimentaçao. <code>nMax</code> Valor máximo de posiçoes para movimentaçao.</div>
+<div class="d-it"><code>nWinNum</code> Número da janela. O default é a janela atual. <code>nXBid</code> Identificador da scrollbar. <code>nPos</code> Especifica a posiçao do botao de movimentaçao da scrollbar. <code>nPageSize</code> Tamanho da página. Esse valor é usado pela scrollbar para determinar o tamanho proporcional para o salto de página do botao de movimentaçao. <code>nMin</code> Valor mínimo de posiçoes para movimentaçao. <code>nMax</code> Valor máximo de posiçoes para movimentaçao.</div>
 <div class="d-d">Retorna</div>
 <div class="d-it">A posição atual do botão de movimentação da scrollbar, se a operação for bem-sucedida, ou -1 caso contrário.</div>
 <div class="d-d">Descrição</div>
@@ -3448,15 +3448,6 @@ lTight/aOffset, &lt;lTransparent&gt; )
 
 <section>
 <h4><a href="#gtwvw" class="d-id" id="gtwvw" title="∞"><code>GTWVW</code></a><span class="d-eb"><a href="#" title="Topo" class="d-ebi">⌃</a> | <a href="index.html" title="Índice" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/pt_BR/gtwvw.txt">Melhorar este documento</a></span></h4>
-<div class="d-d">Project-Id-Version: hbdoc
-Last-Translator: Sami Laham <sami@laham.com.br>, 2016
-Language-Team: Portuguese (Brazil) (https://www.transifex.com/harbour/teams/12521/pt_BR/)
-MIME-Version: 1.0
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 8bit
-Language: pt_BR
-Plural-Forms: nplurals=2; plural=(n > 1);
-</div>
 <div class="d-ol">Copyright</div>
 <div class="d-d">Descrição</div>
 <div class="d-it">Copyright 2008 Manoel N. Angeiras N. (angeiras gmail@com)</div>
@@ -3469,8 +3460,8 @@ Plural-Forms: nplurals=2; plural=(n > 1);
 </main>
 
 <footer>
-<div>Gerado por hbdoc em 2016-11-10 20:41 UTC</div>
-<div>Baseado na revisão <a href="https://github.com/vszakats/harbour-core/tree/7850fe2">7850fe2</a></div>
+<div>Gerado por hbdoc em 2016-11-10 21:19 UTC</div>
+<div>Baseado na revisão <a href="https://github.com/vszakats/harbour-core/tree/1437ebf">1437ebf</a></div>
 <div>Processamento de conteúdo, layout e design © 2016 <a href="https://vszakats.net/harbour">vszakats</a></div>
 </footer>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
