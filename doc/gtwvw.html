@@ -8,7 +8,7 @@
 <meta name="generator" content="hbdoc">
 <meta name="keywords" content="Harbour, Clipper, xBase, database, Free Software, GPL, compiler, cross-platform, 32-bit, 64-bit">
 
-<title>Harbour Reference Guide · gtwvw contrib</title>
+<title>Harbour Reference Guide · gtwvw lib</title>
 
 <link rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism-okaidia.min.css">
 <link rel="stylesheet" href="hbdoc.css">
@@ -37,11 +37,11 @@ Harbour Reference Guide</a></div>
 <div>
 <nav class="menu">
 <nav class="dropdown">
-<span class="dropbtn" onclick="">gtwvw contrib</span>
+<span class="dropbtn" onclick="">gtwvw lib</span>
 <nav class="dropdown-content">
 <a href="harbour.html">Harbour core</a>
 <hr>
-<a href="cl53.html">Clipper 5.3</a>
+<a href="clc53.html">Clipper 5.3</a>
 <a href="clct3.html">Clipper Tools 3</a>
 <hr>
 <a href="gtwvw.html">gtwvw</a>
@@ -267,8 +267,8 @@ Harbour Reference Guide</a></div>
 <h4><code><code><a href="#wvw__makedlgtemplate">wvw__MakeDlgTemplate()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw__makedlgtemplate" class="d-id" id="wvw__makedlgtemplate" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw__MakeDlgTemplate( Dlg, aItens1, aItens2, aItens3, aItens4, aItens5,
-aItens6, aItens7, aItens8, aItens9, aItens10 )
+<pre><code>wvw__MakeDlgTemplate( &lt;aDlg&gt;, &lt;aItens1&gt;, &lt;aItens2&gt;, &lt;aItens3&gt;, &lt;aItens4&gt;, &lt;aItens5&gt;,
+&lt;aItens6&gt;, &lt;aItens7&gt;, &lt;aItens8&gt;, &lt;aItens9&gt;, &lt;aItens10&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
@@ -286,9 +286,9 @@ aItens6, aItens7, aItens8, aItens9, aItens10 )
 <section>
 <h4><code><code><a href="#wvw_addrows">wvw_AddRows()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_addrows" class="d-id" id="wvw_addrows" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_AddRows( nWinNum, nRows )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_AddRows( &lt;nWinNum&gt;, &lt;nRows&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nRows</code> Number of lines to add or reduce (if nRows &lt; 0).</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nRows</code> Number of lines to add or reduce (if <code>nRows</code> &lt; 0).</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful, <code>.F.</code> otherwise.</div>
 <div class="d-d">Description</div>
@@ -302,9 +302,9 @@ aItens6, aItens7, aItens8, aItens9, aItens10 )
 <section>
 <h4><code><code><a href="#wvw_appendmenu">wvw_AppendMenu()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_appendmenu" class="d-id" id="wvw_appendmenu" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_AppendMenu( hMenu, nFlags, nMenuItemId, cCaption )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_AppendMenu( &lt;hMenu&gt;, &lt;nFlags&gt;, &lt;nMenuItemId&gt;, &lt;cCaption&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>hMenu</code> Identifies the menu to be changed. <code>nFlags</code> Specifies flags to control the appearance and behavior of the new menu item. This parameter can be a combination of values (all flags can be viewed in <code>winuser.ch</code> file). <code>nMenuItemId</code> Specifies either the identifier of the new menu item or, if the uFlags parameter is set to <code>MF_POPUP</code>, the handle to the drop-down menu or submenu. <code>cCaption</code> Specifies the string content of the new menu item or full path to a bitmap to the new menu item.</div>
+<div class="d-it"><code>hMenu</code> Identifies the menu to be changed. <code>nFlags</code> Specifies flags to control the appearance and behavior of the new menu item. This parameter can be a combination of values (all flags can be viewed in <code>winuser.ch</code> file). <code>nMenuItemId</code> Specifies either the identifier of the new menu item or, if the <code>uFlags</code> parameter is set to <code>MF_POPUP</code>, the handle to the drop-down menu or submenu. <code>cCaption</code> Specifies the string content of the new menu item or full path to a bitmap to the new menu item.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">If successful, a value greater than zero. Otherwise zero.</div>
 <div class="d-d">Description</div>
@@ -318,7 +318,7 @@ aItens6, aItens7, aItens8, aItens9, aItens10 )
 <section>
 <h4><code><code><a href="#wvw_cbaddstring">wvw_cbAddString()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cbaddstring" class="d-id" id="wvw_cbaddstring" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_cbAddString( nHandleDialog, nIDComboBox, cItem )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_cbAddString( &lt;nHandleDialog&gt;, &lt;nIDComboBox&gt;, &lt;cItem&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nHandleDialog</code> Dialog handle of window. <code>nIdComboBox</code> ID of Combobox. <code>cItem</code> Item to be included in Combobox.</div>
 <div class="d-d">Returns</div>
@@ -335,8 +335,8 @@ aItens6, aItens7, aItens8, aItens9, aItens10 )
 <h4><code><code><a href="#wvw_cbcreate">wvw_cbCreate()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cbcreate" class="d-id" id="wvw_cbcreate" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_cbCreate( nWinNum, nTop, nLeft, nWidth, aText, bBlock,
-nListLines, nReserved, nKbdType, aOffset )
+<pre><code>wvw_cbCreate( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nWidth&gt;, &lt;aText&gt;, &lt;bBlock&gt;,
+&lt;nListLines&gt;, &lt;nReserved&gt;, &lt;nKbdType&gt;, &lt;aOffset&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
@@ -360,7 +360,7 @@ nListLines, nReserved, nKbdType, aOffset )
 <section>
 <h4><code><code><a href="#wvw_cbdestroy">wvw_cbDestroy()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cbdestroy" class="d-id" id="wvw_cbdestroy" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_cbDestroy( nWinNum, nCBId )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_cbDestroy( &lt;nWinNum&gt;, &lt;nCBId&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nCBId</code> ID of Combobox.</div>
 <div class="d-d">Returns</div>
@@ -376,7 +376,7 @@ nListLines, nReserved, nKbdType, aOffset )
 <section>
 <h4><code><code><a href="#wvw_cbenable">wvw_cbEnable()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cbenable" class="d-id" id="wvw_cbenable" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_cbEnable( nWinNum, nCBId, lEnable )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_cbEnable( &lt;nWinNum&gt;, &lt;nCBId&gt;, &lt;lEnable&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nCBId</code> ID of Combobox. <code>lEnable</code> Enable (<code>.T.</code>) or disable (<code>.F.</code>) combobox button in current window. Default is <code>.T.</code></div>
 <div class="d-d">Returns</div>
@@ -392,11 +392,11 @@ nListLines, nReserved, nKbdType, aOffset )
 <section>
 <h4><code><code><a href="#wvw_cbfindstring">wvw_cbFindString()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cbfindstring" class="d-id" id="wvw_cbfindstring" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_cbFindString( nWinNum, nCBId, cString )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_cbFindString( &lt;nWinNum&gt;, &lt;nCBId&gt;, &lt;cString&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nCBId</code> ID of combobox. <code>cString</code> String to find.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">Index of string, or ­1 if failed (or can't find).</div>
+<div class="d-it">Index of string, or -1 if failed (or can't find).</div>
 <div class="d-d">Description</div>
 <div class="d-it">Find index of string in combobox in current window. This function is case insensitive.</div>
 <div class="d-d">Platforms</div>
@@ -408,7 +408,7 @@ nListLines, nReserved, nKbdType, aOffset )
 <section>
 <h4><code><code><a href="#wvw_cbgetcurtext">wvw_cbGetCurText()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cbgetcurtext" class="d-id" id="wvw_cbgetcurtext" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_cbGetCurText( nWinNum, nCBId )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_cbGetCurText( &lt;nWinNum&gt;, &lt;nCBId&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nCBId</code> ID of combobox.</div>
 <div class="d-d">Returns</div>
@@ -424,11 +424,11 @@ nListLines, nReserved, nKbdType, aOffset )
 <section>
 <h4><code><code><a href="#wvw_cbgetindex">wvw_cbGetIndex()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cbgetindex" class="d-id" id="wvw_cbgetindex" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_cbGetIndex( nWinNum, nCBId )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_cbGetIndex( &lt;nWinNum&gt;, &lt;nCBId&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nCBId</code> ID of combobox.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">Current position in combobox or ­1 if failed.</div>
+<div class="d-it">Current position in combobox or -1 if failed.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Get current selection in combobox (start from zero).</div>
 <div class="d-d">Platforms</div>
@@ -440,7 +440,7 @@ nListLines, nReserved, nKbdType, aOffset )
 <section>
 <h4><code><code><a href="#wvw_cbisdropped">wvw_cbIsDropped()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cbisdropped" class="d-id" id="wvw_cbisdropped" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_cbIsDropped( nWinNum, nCBId )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_cbIsDropped( &lt;nWinNum&gt;, &lt;nCBId&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nCBId</code> ID of combobox.</div>
 <div class="d-d">Returns</div>
@@ -456,7 +456,7 @@ nListLines, nReserved, nKbdType, aOffset )
 <section>
 <h4><code><code><a href="#wvw_cbisfocused">wvw_cbIsFocused()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cbisfocused" class="d-id" id="wvw_cbisfocused" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_cbIsFocused( nWinNum, nCBId )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_cbIsFocused( &lt;nWinNum&gt;, &lt;nCBId&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nCBId</code> ID of combobox.</div>
 <div class="d-d">Returns</div>
@@ -472,7 +472,7 @@ nListLines, nReserved, nKbdType, aOffset )
 <section>
 <h4><code><code><a href="#wvw_cbsetcodeblock">wvw_cbSetCodeblock()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cbsetcodeblock" class="d-id" id="wvw_cbsetcodeblock" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_cbSetCodeblock( nWinNum, nCBId, bBlock )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_cbSetCodeblock( &lt;nWinNum&gt;, &lt;nCBId&gt;, &lt;bBlock&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nCBId</code> ID of combobox. <code>bBlock</code> New code block to assign to combobox.</div>
 <div class="d-d">Returns</div>
@@ -488,9 +488,9 @@ nListLines, nReserved, nKbdType, aOffset )
 <section>
 <h4><code><code><a href="#wvw_cbsetcursel">wvw_cbSetCurSel()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cbsetcursel" class="d-id" id="wvw_cbsetcursel" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_cbSetCurSel( nHandleDialog, nIDCombobox, nIndex )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_cbSetCurSel( &lt;nHandleDialog&gt;, &lt;nIDCombobox&gt;, &lt;nIndex&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nHandleDialog</code> Handle of window dialog. <code>nIDCombobox</code> ID of combobox. <code>nIndex</code> Index of item (start from zero). If ­1, remove current selection and clean edit control of combobox.</div>
+<div class="d-it"><code>nHandleDialog</code> Handle of window dialog. <code>nIDCombobox</code> ID of combobox. <code>nIndex</code> Index of item (start from zero). If 1, remove current selection and clean edit control of combobox.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
@@ -505,8 +505,8 @@ nListLines, nReserved, nKbdType, aOffset )
 <h4><code><code><a href="#wvw_cbsetfont">wvw_cbSetFont()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cbsetfont" class="d-id" id="wvw_cbsetfont" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_cbSetFont( nWinNum, cFontFace, nHeight, nWidth, nWeight,
-nQuality, lItalic, lUnderline, lStrikeout )
+<pre><code>wvw_cbSetFont( &lt;nWinNum&gt;, &lt;cFontFace&gt;, &lt;nHeight&gt;, &lt;nWidth&gt;, &lt;nWeight&gt;,
+&lt;nQuality&gt;, &lt;lItalic&gt;, &lt;lUnderline&gt;, &lt;lStrikeout&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
@@ -524,7 +524,7 @@ nQuality, lItalic, lUnderline, lStrikeout )
 <section>
 <h4><code><code><a href="#wvw_cbsetindex">wvw_cbSetIndex()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cbsetindex" class="d-id" id="wvw_cbsetindex" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_cbSetIndex( nWinNum, nCBId, nIndex )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_cbSetIndex( &lt;nWinNum&gt;, &lt;nCBId&gt;, &lt;nIndex&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nCBId</code> ID of combobox. <code>nIndex</code> Item index on combobox (start from 0).</div>
 <div class="d-d">Returns</div>
@@ -541,8 +541,8 @@ nQuality, lItalic, lUnderline, lStrikeout )
 <h4><code><code><a href="#wvw_cxcreate">wvw_cxCreate()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cxcreate" class="d-id" id="wvw_cxcreate" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_cxCreate( nWinNum, nTop, nLeft, nBottom, nRight, cText,
-cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
+<pre><code>wvw_cxCreate( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;cText&gt;,
+cImage/nImage, &lt;bBlock&gt;, &lt;aOffset&gt;, &lt;nStretchBitmap&gt;, &lt;lMap3DColors&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
@@ -563,7 +563,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <section>
 <h4><code><code><a href="#wvw_cxdestroy">wvw_cxDestroy()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cxdestroy" class="d-id" id="wvw_cxdestroy" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_cxDestroy( nWinNum, nCXId )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_cxDestroy( &lt;nWinNum&gt;, &lt;nCXId&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nCXId</code> ID of checkbox.</div>
 <div class="d-d">Returns</div>
@@ -579,7 +579,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <section>
 <h4><code><code><a href="#wvw_cxenable">wvw_cxEnable()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cxenable" class="d-id" id="wvw_cxenable" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_cxEnable( nWinNum, nCXId, lToggle )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_cxEnable( &lt;nWinNum&gt;, &lt;nCXId&gt;, &lt;lToggle&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nCXId</code> ID of checkbox. <code>lToggle</code> If <code>.T.</code>, Enable, otherwisie disable. Default is <code>.T.</code></div>
 <div class="d-d">Returns</div>
@@ -595,7 +595,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <section>
 <h4><code><code><a href="#wvw_cxgetcheck">wvw_cxGetCheck()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cxgetcheck" class="d-id" id="wvw_cxgetcheck" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_cxGetCheck( nWinNum, nCXId )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_cxGetCheck( &lt;nWinNum&gt;, &lt;nCXId&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nCXId</code> ID of checkbox.</div>
 <div class="d-d">Returns</div>
@@ -611,7 +611,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <section>
 <h4><code><code><a href="#wvw_cxsetcheck">wvw_cxSetCheck()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cxsetcheck" class="d-id" id="wvw_cxsetcheck" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_cxSetCheck( nWinNum, nCXId, nCheckState )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_cxSetCheck( &lt;nWinNum&gt;, &lt;nCXId&gt;, &lt;nCheckState&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nCXId</code> ID of checkbox. <code>nCheckState</code> 0 1 2 Not selected Selected Indeterminate</div>
 <div class="d-d">Returns</div>
@@ -627,7 +627,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <section>
 <h4><code><code><a href="#wvw_cxsetcodeblock">wvw_cxSetCodeblock()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cxsetcodeblock" class="d-id" id="wvw_cxsetcodeblock" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_cxSetCodeblock( nWinNum, nCXId, bBlock )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_cxSetCodeblock( &lt;nWinNum&gt;, &lt;nCXId&gt;, &lt;bBlock&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nCXId</code> ID of checkbox. <code>bBlock</code> Code block</div>
 <div class="d-d">Returns</div>
@@ -643,7 +643,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <section>
 <h4><code><code><a href="#wvw_cxsetfocus">wvw_cxSetFocus()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_cxsetfocus" class="d-id" id="wvw_cxsetfocus" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_cxSetFocus( nWinNum, nCXId )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_cxSetFocus( &lt;nWinNum&gt;, &lt;nCXId&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nCXId</code> ID of checkbox.</div>
 <div class="d-d">Returns</div>
@@ -660,7 +660,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <h4><code><code><a href="#wvw_centerwindow">wvw_CenterWindow()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_centerwindow" class="d-id" id="wvw_centerwindow" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_CenterWindow( nWinNum, lCenter, lPaint )
+<pre><code>wvw_CenterWindow( &lt;nWinNum&gt;, &lt;lCenter&gt;, &lt;lPaint&gt; )
 
 See function wvw_SetWindowCentre().
 </code></pre>
@@ -674,7 +674,7 @@ See function wvw_SetWindowCentre().
 <section>
 <h4><code><code><a href="#wvw_choosecolor">wvw_ChooseColor()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_choosecolor" class="d-id" id="wvw_choosecolor" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_ChooseColor( nRGBInit, aRGB16, nFlags )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_ChooseColor( &lt;nRGBInit&gt;, &lt;aRGB16&gt;, &lt;nFlags&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nRGBInit</code> Initial color. <code>aRGB16</code> Array of 16 elements, with color index. Default is an array with color set of button. <code>nFlags</code> A set of bit flags that you can use to initialize the color common dialog box. When the dialog box returns, it sets these flags to indicate the user's input. Default is a combination of <code>CC_ANYCOLOR</code> | <code>CC_RGBINIT</code> | <code>CC_FULLOPEN</code>.</div>
 <div class="d-d">Returns</div>
@@ -690,7 +690,7 @@ See function wvw_SetWindowCentre().
 <section>
 <h4><code><code><a href="#wvw_choosefont">wvw_ChooseFont()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_choosefont" class="d-id" id="wvw_choosefont" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_ChooseFont( cFontName, nHeight, nWidth, nWeight, nQuality, lItalic, lUnderline, lStrikeout )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_ChooseFont( &lt;cFontName&gt;, &lt;nHeight&gt;, &lt;nWidth&gt;, &lt;nWeight&gt;, &lt;nQuality&gt;, &lt;lItalic&gt;, &lt;lUnderline&gt;, &lt;lStrikeout&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>cFontName</code> Name of the font. <code>nHeight</code> Height of the font's character. <code>nWidth</code> Specifies average width of character in the font. <code>nWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section) <code>nQuality</code> Specifies the output quality. <code>lItalic</code> Specifies an italic font if set to TRUE. <code>lUnderline</code> Specifies an underlined font if set to TRUE. <code>lStrikeout</code> Specifies a strikeout font if set to TRUE.</div>
 <div class="d-d">Returns</div>
@@ -706,7 +706,7 @@ See function wvw_SetWindowCentre().
 <section>
 <h4><code><code><a href="#wvw_clienttoscreen">wvw_ClientToScreen()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_clienttoscreen" class="d-id" id="wvw_clienttoscreen" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_ClientToScreen( nWinNum, nRow, nCol )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_ClientToScreen( &lt;nWinNum&gt;, &lt;nRow&gt;, &lt;nCol&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nRow</code>, <code>nCol</code> Row/Column in current windows to be converted.</div>
 <div class="d-d">Returns</div>
@@ -723,12 +723,12 @@ See function wvw_SetWindowCentre().
 <h4><code><code><a href="#wvw_createdialogdynamic">wvw_CreateDialogDynamic()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_createdialogdynamic" class="d-id" id="wvw_createdialogdynamic" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_CreateDialogDynamic(cDlgTemplate|nResource, lHandle,
-cDlgProc|bDlgProc|nDlgProc, nFlag)
+<pre><code>wvw_CreateDialogDynamic(cDlgTemplate|&lt;nResource&gt;, &lt;lHandle&gt;,
+&lt;cDlgProc&gt;|bDlgProc|&lt;nDlgProc&gt;, nFlag)
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>cDlgTemplate|nResource</code> <code>lHandle</code> <code>cDlgProc|bDlgProc|nDlgProc</code> <code>nFlag</code></div>
+<div class="d-it"><code>cDlgTemplate|nResource</code> <code>lHandle</code> <code>cDlgProc|&lt;bDlgProc</code>|nDlgProc&gt; <code>nFlag</code></div>
 <div class="d-d">Returns</div>
 <div class="d-it">Handle of dialog window or zero.</div>
 <div class="d-d">Description</div>
@@ -743,12 +743,12 @@ cDlgProc|bDlgProc|nDlgProc, nFlag)
 <h4><code><code><a href="#wvw_createdialogmodal">wvw_CreateDialogModal()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_createdialogmodal" class="d-id" id="wvw_createdialogmodal" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_CreateDialogModal( cDialog|nResource|cDlgTemplate, NIL,
-bDlgProc|cDlgProc, nFlag, nHandle )
+<pre><code>wvw_CreateDialogModal( &lt;cDialog&gt;|nResource|&lt;cDlgTemplate&gt;, NIL,
+&lt;bDlgProc&gt;|cDlgProc, &lt;nFlag&gt;, &lt;nHandle&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>cDialog|nResource|cDlgTemplate</code> <code>bDlgProc|cDlgProc</code> <code>nFlag</code> <code>nHandle</code></div>
+<div class="d-it"><code>cDialog|&lt;nResource</code>|cDlgTemplate&gt; <code>bDlgProc|cDlgProc</code> <code>nFlag</code> <code>nHandle</code></div>
 <div class="d-d">Returns</div>
 <div class="d-it">Handle of dialog window or zero.</div>
 <div class="d-d">Description</div>
@@ -763,8 +763,8 @@ bDlgProc|cDlgProc, nFlag, nHandle )
 <h4><code><code><a href="#wvw_createfont">wvw_CreateFont()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_createfont" class="d-id" id="wvw_createfont" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_CreateFont(cFontFace, nHeight, nWidth, nWeight, lItalic,
-lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
+<pre><code>wvw_CreateFont(cFontFace, &lt;nHeight&gt;, &lt;nWidth&gt;, &lt;nWeight&gt;, &lt;lItalic&gt;,
+&lt;lUnderline&gt;, &lt;lStrikeout&gt;, &lt;nCharset&gt;, &lt;nQuality&gt;, &lt;nEscapement&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
@@ -814,7 +814,7 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <section>
 <h4><code><code><a href="#wvw_deletemenu">wvw_DeleteMenu()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_deletemenu" class="d-id" id="wvw_deletemenu" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_DeleteMenu( hMenu, nPosition, nFlag )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_DeleteMenu( &lt;hMenu&gt;, &lt;nPosition&gt;, &lt;nFlag&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>hMenu</code> Identifies the menu to be changed. <code>nPosition</code> Specifies a menu item to be changed. <code>nFlag</code> Specifies how <code>nPosition</code> will be interpreted. This parameter can be one of two values: <code>MF_BYCOMMAND</code> <code>MF_BYPOSITION</code> Indicates that <code>nPosition</code> gives the identifier of the menu item. The <code>MF_BYCOMMAND</code> flag is the default flag if neither the <code>MF_BYCOMMAND</code> nor <code>MF_BYPOSITION</code> flag is specified. Indicates that <code>nPosition</code> gives the zero-based relative position of the menu item.</div>
 <div class="d-d">Returns</div>
@@ -830,7 +830,7 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <section>
 <h4><code><code><a href="#wvw_destroymenu">wvw_DestroyMenu()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_destroymenu" class="d-id" id="wvw_destroymenu" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_DestroyMenu( hMenu )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_DestroyMenu( &lt;hMenu&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>hMenu</code> Identifies the menu to be destroyed.</div>
 <div class="d-d">Returns</div>
@@ -846,7 +846,7 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <section>
 <h4><code><code><a href="#wvw_dlgseticon">wvw_DlgSetIcon()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_dlgseticon" class="d-id" id="wvw_dlgseticon" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_DlgSetIcon( nHandleDialog, ncIcon )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_DlgSetIcon( &lt;nHandleDialog&gt;, ncIcon )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nHandleDialog</code> Handle of dialog window. <code>ncIcon</code> If numeric, identifies a <code>RESOURCE</code> in a RC file. If string, identifies an icon file name.</div>
 <div class="d-d">Returns</div>
@@ -862,7 +862,7 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <section>
 <h4><code><code><a href="#wvw_drawboxget">wvw_DrawBoxGet()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawboxget" class="d-id" id="wvw_drawboxget" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_DrawBoxGet( nWinNum, nRow, nCol, nWidth, aOffset )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_DrawBoxGet( &lt;nWinNum&gt;, &lt;nRow&gt;, &lt;nCol&gt;, &lt;nWidth&gt;, &lt;aOffset&gt; )</code></pre></div>
 <div class="d-d">Returns</div>
 <div class="d-it">Always <code>.T.</code></div>
 <div class="d-d">Description</div>
@@ -876,9 +876,9 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <section>
 <h4><code><code><a href="#wvw_drawboxgroup">wvw_DrawBoxGroup()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawboxgroup" class="d-id" id="wvw_drawboxgroup" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_DrawBoxGroup( nWinNum, nTop, nLeft, nBottom, nRight, aOffset )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_DrawBoxGroup( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;aOffset&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a box. <code>aOffset</code> Array of four elements with top/left and bottom/right corner coordinates to align the box with row/column.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw a box. <code>aOffset</code> Array of four elements with top/left and bottom/right corner coordinates to align the box with row/column.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Always <code>.T.</code></div>
 <div class="d-d">Description</div>
@@ -892,9 +892,9 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <section>
 <h4><code><code><a href="#wvw_drawboxraised">wvw_DrawBoxRaised()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawboxraised" class="d-id" id="wvw_drawboxraised" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_DrawBoxRaised( nNumWin, nTop, nLeft, nBottom, nRight, lTight/aOffset )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_DrawBoxRaised( &lt;nNumWin&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, lTight/aOffset )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a box. <code>lTight/aOffset</code> If <code>lTight</code>, box is draw inside the character region and top and left lines are lower two pixel down to make room for above/left object. If <code>aOffset</code>, an array of four elements is defined with coordinates top, left, bottom right to align box with row/column.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw a box. <code>lTight/aOffset</code> If <code>lTight</code>, box is draw inside the character region and top and left lines are lower two pixel down to make room for above/left object. If <code>aOffset</code>, an array of four elements is defined with coordinates top, left, bottom right to align box with row/column.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Always <code>.T.</code></div>
 <div class="d-d">Description</div>
@@ -908,9 +908,9 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <section>
 <h4><code><code><a href="#wvw_drawboxrecessed">wvw_DrawBoxRecessed()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawboxrecessed" class="d-id" id="wvw_drawboxrecessed" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_DrawBoxRecessed( nWinNum, nTop, nLeft, nBottom, nRight, lTight/aOffset )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_DrawBoxRecessed( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, lTight/aOffset )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a box. <code>lTight/aOffset</code> If <code>lTight</code>, box is drawn inside the character region and top and left lines are lower two pixel down to make room for above/left object. If <code>aOffset</code>, an array of four elements is defined with coordinates top, left, bottom right to align box with row/column.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw a box. <code>lTight/aOffset</code> If <code>lTight</code>, box is drawn inside the character region and top and left lines are lower two pixel down to make room for above/left object. If <code>aOffset</code>, an array of four elements is defined with coordinates top, left, bottom right to align box with row/column.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Always <code>.T.</code></div>
 <div class="d-d">Description</div>
@@ -925,13 +925,13 @@ lUnderline, lStrikeout, nCharset, nQuality, nEscapement )
 <h4><code><code><a href="#wvw_drawbutton">wvw_DrawButton()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawbutton" class="d-id" id="wvw_drawbutton" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_DrawButton( nWinNum, nTop, nLEft, nBottom, nRight, cText,
-cImage/nImage, nFormat, nTextColor, nBkClor, nImageAt )
+<pre><code>wvw_DrawButton( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLEft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;cText&gt;,
+cImage/nImage, &lt;nFormat&gt;, &lt;nTextColor&gt;, &lt;nBkClor&gt;, &lt;nImageAt&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nButtom, nRight</code> Coordinates to draws a button. <code>cText</code> Text of button. <code>cImage/nImage</code> If string, specifies a bitmap filename (full path is required). If numeric, specifies the position of image in application image cache. <code>nFormat</code> Specifies shape of button: 0 1 2 Raised (default) Recessed Outline</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nButtom</code>, nRight&gt; Coordinates to draws a button. <code>cText</code> Text of button. <code>cImage/nImage</code> If string, specifies a bitmap filename (full path is required). If numeric, specifies the position of image in application image cache. <code>nFormat</code> Specifies shape of button: 0 1 2 Raised (default) Recessed Outline</div>
   <div><code>nTextColor</code> Index to button's color. <code>nBkColor</code> Index of button's background color. <code>nImageAt</code> Ignored.</div>
 </div>
 <div class="d-d">Returns</div>
@@ -948,12 +948,12 @@ cImage/nImage, nFormat, nTextColor, nBkClor, nImageAt )
 <h4><code><code><a href="#wvw_drawcolorrect">wvw_DrawColorRect()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawcolorrect" class="d-id" id="wvw_drawcolorrect" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_DrawColorRect( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels,
-nRGBColor )
+<pre><code>wvw_DrawColorRect( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;aOffPixels&gt;,
+&lt;nRGBColor&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a rectangle. <code>aOffPixels</code> Array of four elements with top/left and bottom/right coordinates to align the rectangle with row/column. <code>nRGBColor</code> Color to fill the rectangle.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw a rectangle. <code>aOffPixels</code> Array of four elements with top/left and bottom/right coordinates to align the rectangle with row/column. <code>nRGBColor</code> Color to fill the rectangle.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
@@ -967,9 +967,9 @@ nRGBColor )
 <section>
 <h4><code><code><a href="#wvw_drawellipse">wvw_DrawEllipse()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawellipse" class="d-id" id="wvw_drawellipse" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_DrawEllipse( nWinNum, nTop, nLeft, nBottom, nRight, aOffset )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_DrawEllipse( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;aOffset&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw an ellipse. <code>aOffset</code> Array of four elements with top/left and bottom/right coordinates to align the ellipse with row/column.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw an ellipse. <code>aOffset</code> Array of four elements with top/left and bottom/right coordinates to align the ellipse with row/column.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Returns a nonzero value, if successful, otherwise zero.</div>
 <div class="d-d">Description</div>
@@ -983,9 +983,9 @@ nRGBColor )
 <section>
 <h4><code><code><a href="#wvw_drawfocusrect">wvw_DrawFocusRect()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawfocusrect" class="d-id" id="wvw_drawfocusrect" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_DrawFocusRect( nWinNum, nTop, nLeft, nBottom, nRight, aOffSet )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_DrawFocusRect( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;aOffSet&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a rectangle. <code>aOffset</code> Array of four elements with top/left and bottom/right coordinates to align the rectangle with row/column.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw a rectangle. <code>aOffset</code> Array of four elements with top/left and bottom/right coordinates to align the rectangle with row/column.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Returns a nonzero value, if successful, otherwise zero.</div>
 <div class="d-d">Description</div>
@@ -999,9 +999,9 @@ nRGBColor )
 <section>
 <h4><code><code><a href="#wvw_drawgridhorz">wvw_DrawGridHorz()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawgridhorz" class="d-id" id="wvw_drawgridhorz" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_DrawGridHorz( nWinNum, nTop, nLeft, nBottom, nRight, nRows )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_DrawGridHorz( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;nRows&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw horizontal grid. <code>nRows</code> Number of lines to horizontal grid.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw horizontal grid. <code>nRows</code> Number of lines to horizontal grid.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Always <code>.T.</code></div>
 <div class="d-d">Description</div>
@@ -1015,7 +1015,7 @@ nRGBColor )
 <section>
 <h4><code><code><a href="#wvw_drawgridvert">wvw_DrawGridVert()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawgridvert" class="d-id" id="wvw_drawgridvert" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_DrawGridVert( nWinNum, nTop, nBottom, aCols, nCols, aOffset )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_DrawGridVert( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nBottom&gt;, &lt;aCols&gt;, &lt;nCols&gt;, &lt;aOffset&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nBottom</code> Initial/final line to draw vertical grid. <code>aCols</code> Array with sizes of columns to be draw. <code>nCols</code> Number of columns to be draw. <code>aOffset</code> Array of four row/column. elements with top/left, bottom/right offset to align vertical grid to</div>
 <div class="d-d">Returns</div>
@@ -1032,12 +1032,12 @@ nRGBColor )
 <h4><code><code><a href="#wvw_drawimage">wvw_DrawImage()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawimage" class="d-id" id="wvw_drawimage" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_DrawImage( nWinNum, nTop, nLeft, nBottom, nRight,
-cImage/nPictureSlot, lTight/aOffset, lTransparent )
+<pre><code>wvw_DrawImage( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;,
+cImage/nPictureSlot, lTight/aOffset, &lt;lTransparent&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw an image. If <code>nBottom</code> is <code>NIL</code>, so image's height will be proportional to image's width. If <code>nRight</code> is <code>NIL</code>, so image's width will be proportional to image's height. If both <code>nbottom</code> and <code>nRight</code> are <code>NIL</code>, so original size of image will be used. <code>cImage/nPictureSlot</code> If string, an image will be read from <code>cImage</code> (full path). If numeric, will an index in an image list (previously loaded by application). WARNING: this function will always cache the image. Do not use it to draw large number of images, because image handle is never closed. <code>lTight/aOffset</code> Specifies how image will be adjusted (in pixels) to row/column coordinates. <code>lTransparent</code> If <code>.T.</code>, specifies a transparent image, otherwise <code>.F.</code> If <code>.T.</code>, transparency color will be the top left corner pixel.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw an image. If <code>nBottom</code> is <code>NIL</code>, so image's height will be proportional to image's width. If <code>nRight</code> is <code>NIL</code>, so image's width will be proportional to image's height. If both <code>nbottom</code> and <code>nRight</code> are <code>NIL</code>, so original size of image will be used. <code>cImage/nPictureSlot</code> If string, an image will be read from <code>cImage</code> (full path). If numeric, will an index in an image list (previously loaded by application). WARNING: this function will always cache the image. Do not use it to draw large number of images, because image handle is never closed. <code>lTight/aOffset</code> Specifies how image will be adjusted (in pixels) to row/column coordinates. <code>lTransparent</code> If <code>.T.</code>, specifies a transparent image, otherwise <code>.F.</code> If <code>.T.</code>, transparency color will be the top left corner pixel.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful (draws an image), <code>.F.</code> otherwise.</div>
 <div class="d-d">Description</div>
@@ -1052,9 +1052,9 @@ cImage/nPictureSlot, lTight/aOffset, lTransparent )
 <h4><code><code><a href="#wvw_drawlabel">wvw_DrawLabel()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawlabel" class="d-id" id="wvw_drawlabel" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_DrawLabel( nWinNum, nRow, nCol, cLabel, nAlign, nEscapement,
-nTextColor, nBkColor, cFontFace, nHeight, nWidth, nWeight,
-nQuality, nCharSet, lItalic, lUnderline, lStrikeOut )
+<pre><code>wvw_DrawLabel( &lt;nWinNum&gt;, &lt;nRow&gt;, &lt;nCol&gt;, &lt;cLabel&gt;, &lt;nAlign&gt;, &lt;nEscapement&gt;,
+&lt;nTextColor&gt;, &lt;nBkColor&gt;, &lt;cFontFace&gt;, &lt;nHeight&gt;, &lt;nWidth&gt;, &lt;nWeight&gt;,
+&lt;nQuality&gt;, &lt;nCharSet&gt;, &lt;lItalic&gt;, &lt;lUnderline&gt;, &lt;lStrikeOut&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
@@ -1076,8 +1076,8 @@ nQuality, nCharSet, lItalic, lUnderline, lStrikeOut )
 <h4><code><code><a href="#wvw_drawlabelex">wvw_DrawLabelEx()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawlabelex" class="d-id" id="wvw_drawlabelex" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_DrawLabelEx( nWinNum, nRow, nCol, cLabel, nAlign, cTextColor, nBkColor,
-nSlotFont )
+<pre><code>wvw_DrawLabelEx( &lt;nWinNum&gt;, &lt;nRow&gt;, &lt;nCol&gt;, &lt;cLabel&gt;, &lt;nAlign&gt;, &lt;cTextColor&gt;, &lt;nBkColor&gt;,
+&lt;nSlotFont&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
@@ -1096,12 +1096,12 @@ nSlotFont )
 <h4><code><code><a href="#wvw_drawlabelobj">wvw_DrawLabelObj()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawlabelobj" class="d-id" id="wvw_drawlabelobj" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_DrawLabelObj( nWinNum, nTop, nLeft, nBottom, nRight, cLabel,
-nAlignHorz, nAlignVert, nTextColor, nBkColor, hFont, aOffset )
+<pre><code>wvw_DrawLabelObj( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;cLabel&gt;,
+&lt;nAlignHorz&gt;, &lt;nAlignVert&gt;, &lt;nTextColor&gt;, &lt;nBkColor&gt;, &lt;hFont&gt;, &lt;aOffset&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a label. <code>cLabel</code> String to be draw. <code>nAlignHorz</code> Horizontal align of the label. Default is zero. <code>nAlignVert</code> Vertical align. Default is zero. <code>nTextColor</code> Index color of the label. <code>nBkColor</code> Index backgroud color of the label. <code>hFont</code> Specifies which font will be used to draw a label. <code>aOffSet</code> String of four elements to align label with coordinates <code>nTop, nLeft, nBottom, nRight</code>.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw a label. <code>cLabel</code> String to be draw. <code>nAlignHorz</code> Horizontal align of the label. Default is zero. <code>nAlignVert</code> Vertical align. Default is zero. <code>nTextColor</code> Index color of the label. <code>nBkColor</code> Index backgroud color of the label. <code>hFont</code> Specifies which font will be used to draw a label. <code>aOffSet</code> String of four elements to align label with coordinates <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt;.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Always <code>.T.</code></div>
 <div class="d-d">Description</div>
@@ -1116,13 +1116,13 @@ nAlignHorz, nAlignVert, nTextColor, nBkColor, hFont, aOffset )
 <h4><code><code><a href="#wvw_drawline">wvw_DrawLine()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawline" class="d-id" id="wvw_drawline" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_DrawLine( nWinNum, nTop, nLeft, nBottom, nRight, nOrient,
-nFormat, nAlign, nStyle, nThick, nColor, aOffset )
+<pre><code>wvw_DrawLine( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;nOrient&gt;,
+&lt;nFormat&gt;, &lt;nAlign&gt;, &lt;nStyle&gt;, &lt;nThick&gt;, &lt;nColor&gt;, &lt;aOffset&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a line. <code>nOrient</code> Line orientation: 0 1 Horizontal Vertical</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw a line. <code>nOrient</code> Line orientation: 0 1 Horizontal Vertical</div>
   <div><code>nFormat</code> Line format: 0 1 2 Raised Recessed Plain</div>
   <div><code>nAlign</code> Line alignment: 0 1 2 3 4 Center Top Bottom Left Right</div>
   <div><code>nStyle</code> Specifies pen style. See <code>wingdi.ch</code> (PS_SOLID, <code>PS_DOT</code>, etc.). <code>nThick</code> Specifies the width of the pen, in logical units. If zero, the pen is a single pixel wide, regardless of the current transformation. Default is zero (width of one pixel). <code>nColor</code> Specifies a color reference for the pen color ( a 32-bit value from RGB color). <code>aOffset</code> Array of four row/column. elements with top/left, bottom/right of coordinates to align line with</div>
@@ -1141,13 +1141,13 @@ nFormat, nAlign, nStyle, nThick, nColor, aOffset )
 <h4><code><code><a href="#wvw_drawlineex">wvw_DrawLineEx()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawlineex" class="d-id" id="wvw_drawlineex" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_DrawLineEx( nWinNum, nTop, nLeft, nBottom, nRight, nOrient, nFormat,
-nAlign, nSlotPen )
+<pre><code>wvw_DrawLineEx( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;nOrient&gt;, &lt;nFormat&gt;,
+&lt;nAlign&gt;, &lt;nSlotPen&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a line. <code>nOrient</code> Line orientation: 0 1 Horizontal Vertical</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw a line. <code>nOrient</code> Line orientation: 0 1 Horizontal Vertical</div>
   <div><code>nFormat</code> Line format: 0 1 2 Raised Recessed Plain</div>
   <div><code>nAlign</code> Line alignment: 0 1 2 3 4 Center Top Bottom Left Right</div>
   <div><code>nSlotPen</code> Index on pen's cache.</div>
@@ -1182,16 +1182,16 @@ nAlign, nSlotPen )
 <h4><code><code><a href="#wvw_drawoutline">wvw_DrawOutline()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawoutline" class="d-id" id="wvw_drawoutline" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_DrawOutline( nWinNum, nTop, nLeft, nBottom, nRight, nThick, nShape,
-nRGBColor )
+<pre><code>wvw_DrawOutline( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;nThick&gt;, &lt;nShape&gt;,
+&lt;nRGBColor&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a box. <code>nThick</code> Style of pen. See <code>wingdi.ch</code> file for definitions (PS_SOLID, <code>PS_DOT</code>, etc.). <code>nShape</code> Ignored. <code>nRGBColor</code> Specifies color reference for pen (a 32-bit RGB color value).</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw a box. <code>nThick</code> Style of pen. See <code>wingdi.ch</code> file for definitions (PS_SOLID, <code>PS_DOT</code>, etc.). <code>nShape</code> Ignored. <code>nRGBColor</code> Specifies color reference for pen (a 32-bit RGB color value).</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Always <code>.T.</code></div>
 <div class="d-d">Description</div>
-<div class="d-it">Draws a outline arguments. box in <code>nTop, nLeft, nBottom, nRight</code> coordinates, with style and color</div>
+<div class="d-it">Draws a outline arguments. box in <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; coordinates, with style and color</div>
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on Windows</div>
 <div class="d-d">Tags</div>
@@ -1201,9 +1201,9 @@ nRGBColor )
 <section>
 <h4><code><code><a href="#wvw_drawoutlineex">wvw_DrawOutlineEx()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawoutlineex" class="d-id" id="wvw_drawoutlineex" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_DrawOutlineEx( nWinNum, nTop, nLeft, nBottom, nRight, nSlotPen )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_DrawOutlineEx( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;nSlotPen&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a box. <code>nSlotPen</code> Index on pen's cache.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw a box. <code>nSlotPen</code> Index on pen's cache.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
@@ -1217,9 +1217,9 @@ nRGBColor )
 <section>
 <h4><code><code><a href="#wvw_drawpicture">wvw_DrawPicture()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawpicture" class="d-id" id="wvw_drawpicture" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_DrawPicture( nWinNum, nTop, nLeft, nBottom, nRight, nSlot, lTight/aOffset )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_DrawPicture( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;nSlot&gt;, lTight/aOffset )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw an image. <code>nSlot</code> index on image's cache. <code>lTight/aOffset</code> Array with four row/column. elements with top/left, bottom/right coordinates to align image with</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw an image. <code>nSlot</code> index on image's cache. <code>lTight/aOffset</code> Array with four row/column. elements with top/left, bottom/right coordinates to align image with</div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
@@ -1234,13 +1234,13 @@ nRGBColor )
 <h4><code><code><a href="#wvw_drawprogressbar">wvw_DrawProgressBar()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawprogressbar" class="d-id" id="wvw_drawprogressbar" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_DrawProgressBar( nWinNum, nTop, nLeft, nBottom, nRight,
-aOffPixels, nPercent, nBackColor, nBarColor, cImage, lVertical,
-nDirection )
+<pre><code>wvw_DrawProgressBar( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;,
+&lt;aOffPixels&gt;, &lt;nPercent&gt;, &lt;nBackColor&gt;, &lt;nBarColor&gt;, &lt;cImage&gt;, &lt;lVertical&gt;,
+&lt;nDirection&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a progress bar. <code>aOffPixels</code> Array with four elemets with top/left, bottom/right coordinates to align progress bar with row/column. <code>nPercent</code> Maximum range value. <code>nBackColor</code> Background color. <code>nBarColor</code> Progress bar color. <code>cImage</code> An image to show when progress bar is running. <code>lVertical</code> Specifies if progress bar is vertical (<code>.T.</code>) or horizontal (<code>.F.</code>). <code>nDirection</code> 0 Specifies a left to right progress bar (default) 1 Specifies a right to left progress bar</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw a progress bar. <code>aOffPixels</code> Array with four elemets with top/left, bottom/right coordinates to align progress bar with row/column. <code>nPercent</code> Maximum range value. <code>nBackColor</code> Background color. <code>nBarColor</code> Progress bar color. <code>cImage</code> An image to show when progress bar is running. <code>lVertical</code> Specifies if progress bar is vertical (<code>.T.</code>) or horizontal (<code>.F.</code>). <code>nDirection</code> 0 Specifies a left to right progress bar (default) 1 Specifies a right to left progress bar</div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
@@ -1254,9 +1254,9 @@ nDirection )
 <section>
 <h4><code><code><a href="#wvw_drawrectangle">wvw_DrawRectangle()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawrectangle" class="d-id" id="wvw_drawrectangle" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_DrawRectangle( nWinNum, nTop, nLeft, nBottom, nRight, aOffset )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_DrawRectangle( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;aOffset&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a rectangle. <code>aOffset</code> Array with four elements with top/left, bottom/right coordinates to align rectangle with row/column.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw a rectangle. <code>aOffset</code> Array with four elements with top/left, bottom/right coordinates to align rectangle with row/column.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">If successful returns a non-zero value, otherwise zero.</div>
 <div class="d-d">Description</div>
@@ -1271,12 +1271,12 @@ nDirection )
 <h4><code><code><a href="#wvw_drawroundrect">wvw_DrawRoundRect()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawroundrect" class="d-id" id="wvw_drawroundrect" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_DrawRoundRect(nWinNum, nTop, nLeft, nBottom, nRight, aOffset,
-nRoundHeight, nRoundWidth)
+<pre><code>wvw_DrawRoundRect(nWinNum, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;aOffset&gt;,
+&lt;nRoundHeight&gt;, nRoundWidth)
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a rectangle. <code>aOffset</code> Array with four elements with top/left, bottom/right coordinates to align rectangle with row/column. <code>nRoundHeight</code> Width of ellipse to round rectangle's corner. <code>nRoundWidth</code> Height of ellipse to round rectangle's corner.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw a rectangle. <code>aOffset</code> Array with four elements with top/left, bottom/right coordinates to align rectangle with row/column. <code>nRoundHeight</code> Width of ellipse to round rectangle's corner. <code>nRoundWidth</code> Height of ellipse to round rectangle's corner.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">If successful returns a non-zero value, otherwise zero.</div>
 <div class="d-d">Description</div>
@@ -1291,13 +1291,13 @@ nRoundHeight, nRoundWidth)
 <h4><code><code><a href="#wvw_drawscrollbutton">wvw_DrawScrollButton()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawscrollbutton" class="d-id" id="wvw_drawscrollbutton" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_DrawScrollButton( nWinNum, nTop, nLeft, nBotton, nRight, aOffPixels,
-nTLBR, lDepressed )
+<pre><code>wvw_DrawScrollButton( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBotton&gt;, &lt;nRight&gt;, &lt;aOffPixels&gt;,
+&lt;nTLBR&gt;, &lt;lDepressed&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a scrollbutton. <code>aOffPixels</code> Array with four elements with top/left, bottom/right coordinates to align scrollbutton with row/column. <code>nTLBR</code> Specifies scrollbutton direction: 1 2 3 4 Up arrow button Left arrow button Bottom arrow button Right arrow button</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw a scrollbutton. <code>aOffPixels</code> Array with four elements with top/left, bottom/right coordinates to align scrollbutton with row/column. <code>nTLBR</code> Specifies scrollbutton direction: 1 2 3 4 Up arrow button Left arrow button Bottom arrow button Right arrow button</div>
   <div><code>lDepressed</code> If <code>.F.</code>, specifies raised button, <code>.T.</code> recessed button.</div>
 </div>
 <div class="d-d">Returns</div>
@@ -1314,12 +1314,12 @@ nTLBR, lDepressed )
 <h4><code><code><a href="#wvw_drawscrollthumbhorz">wvw_DrawScrollThumbHorz()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawscrollthumbhorz" class="d-id" id="wvw_drawscrollthumbhorz" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_DrawScrollThumbHorz( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels,
-nThumbPos )
+<pre><code>wvw_DrawScrollThumbHorz( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;aOffPixels&gt;,
+&lt;nThumbPos&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw scrollbar movement button. <code>aOffPixels</code> Array of four elements with top/left, bottom/right coordinates to align scrollbar movement button with row/column. <code>nThumbPos</code> Initial column position.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw scrollbar movement button. <code>aOffPixels</code> Array of four elements with top/left, bottom/right coordinates to align scrollbar movement button with row/column. <code>nThumbPos</code> Initial column position.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
@@ -1334,12 +1334,12 @@ nThumbPos )
 <h4><code><code><a href="#wvw_drawscrollthumbvert">wvw_DrawScrollThumbVert()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawscrollthumbvert" class="d-id" id="wvw_drawscrollthumbvert" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_DrawScrollThumbVert( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels,
-nThumbPos )
+<pre><code>wvw_DrawScrollThumbVert( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;aOffPixels&gt;,
+&lt;nThumbPos&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw scrollbar movement button. <code>aOffPixels</code> Array of four elements with top/left, bottom/right coordinates to align scrollbar movement button with row/column. <code>nThumbPos</code> Initital line position.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw scrollbar movement button. <code>aOffPixels</code> Array of four elements with top/left, bottom/right coordinates to align scrollbar movement button with row/column. <code>nThumbPos</code> Initital line position.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
@@ -1353,9 +1353,9 @@ nThumbPos )
 <section>
 <h4><code><code><a href="#wvw_drawshadedrect">wvw_DrawShadedRect()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawshadedrect" class="d-id" id="wvw_drawshadedrect" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_DrawShadedRect( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels, nHorVert, aRGBb, aRGBe )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_DrawShadedRect( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;aOffPixels&gt;, &lt;nHorVert&gt;, &lt;aRGBb&gt;, &lt;aRGBe&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw a rectangle. <code>aOffPixels</code> Array of four elements with top/left, bottom/right coordinates to align rectangle with row/column. <code>nHorVert</code> Specifies draws method and how to interpret rectangle fill array ( <code>aRGBb</code> and <code>aRGBe</code>). Default is <code>GRADIENT_FILL_RECT_H</code> (see <code>wingdi.ch</code> file for all definitions). <code>aRGBb</code> Array of four color position (Red, Gree, Blue, Alpha), with initial rectangle position. <code>aRGBe</code> Array of four color position (Red, Gree, Blue, Alpha), with final rectangle position.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw a rectangle. <code>aOffPixels</code> Array of four elements with top/left, bottom/right coordinates to align rectangle with row/column. <code>nHorVert</code> Specifies draws method and how to interpret rectangle fill array ( <code>aRGBb</code> and <code>aRGBe</code>). Default is <code>GRADIENT_FILL_RECT_H</code> (see <code>wingdi.ch</code> file for all definitions). <code>aRGBb</code> Array of four color position (Red, Gree, Blue, Alpha), with initial rectangle position. <code>aRGBe</code> Array of four color position (Red, Gree, Blue, Alpha), with final rectangle position.</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful, otherwise <code>.F.</code></div>
 <div class="d-d">Description</div>
@@ -1369,7 +1369,7 @@ nThumbPos )
 <section>
 <h4><code><code><a href="#wvw_drawstatusbar">wvw_DrawStatusBar()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawstatusbar" class="d-id" id="wvw_drawstatusbar" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_DrawStatusBar( nWinNum, nPanels, aPos )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_DrawStatusBar( &lt;nWinNum&gt;, &lt;nPanels&gt;, &lt;aPos&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nPanels</code> Number of parts in a status bar. <code>aPos</code> Array with row/column positions to divide status bar.</div>
 <div class="d-d">Returns</div>
@@ -1386,14 +1386,14 @@ nThumbPos )
 <h4><code><code><a href="#wvw_drawtextbox">wvw_DrawTextBox()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawtextbox" class="d-id" id="wvw_drawtextbox" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_DrawTextBox( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels,
-cText, nAlignHorz, nAlignVert, nTextColor, nBackColor, nBackMode,
-hFont )
+<pre><code>wvw_DrawTextBox( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;aOffPixels&gt;,
+&lt;cText&gt;, &lt;nAlignHorz&gt;, &lt;nAlignVert&gt;, &lt;nTextColor&gt;, &lt;nBackColor&gt;, &lt;nBackMode&gt;,
+&lt;hFont&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw text. <code>aOffPixels</code> Array of four row/column. <code>cText</code> Text to be draw. <code>nAlignHorz</code> Specifies text alignment inside coordinates: 0 1 2 Left (default) Right Centralized elements with top/left, bottom/right coordinates to align text with</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw text. <code>aOffPixels</code> Array of four row/column. <code>cText</code> Text to be draw. <code>nAlignHorz</code> Specifies text alignment inside coordinates: 0 1 2 Left (default) Right Centralized elements with top/left, bottom/right coordinates to align text with</div>
   <div><code>nAlignVert</code> Ignored. <code>nTextColor</code> Color of text. <code>nBackColor</code> Background color. <code>nBackMode</code> Background mode how color is used. Default is <code>OPAQUE</code> (see <code>wingdi.ch</code> for all definitions). <code>hFont</code> Font of the text.</div>
 </div>
 <div class="d-d">Returns</div>
@@ -1410,12 +1410,12 @@ hFont )
 <h4><code><code><a href="#wvw_drawtoolbuttonstate">wvw_DrawToolButtonState()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_drawtoolbuttonstate" class="d-id" id="wvw_drawtoolbuttonstate" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_DrawToolButtonState( nWinNum, nTop, nLeft, nBottom, nRight, aOffPixels,
-nState )
+<pre><code>wvw_DrawToolButtonState( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;aOffPixels&gt;,
+&lt;nState&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Windwow number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw toolbutton. <code>aOffPixels</code> Array of four elements with top/left, bottom/right coordinates to align toolbutton with row/column. <code>nState</code> Button state: 0 1 2 Flat Raised Recessed</div>
+<div class="d-it"><code>nWinNum</code> Windwow number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw toolbutton. <code>aOffPixels</code> Array of four elements with top/left, bottom/right coordinates to align toolbutton with row/column. <code>nState</code> Button state: 0 1 2 Flat Raised Recessed</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Always <code>.T.</code></div>
 <div class="d-d">Description</div>
@@ -1429,7 +1429,7 @@ nState )
 <section>
 <h4><code><code><a href="#wvw_enablemaximize">wvw_EnableMaximize()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_enablemaximize" class="d-id" id="wvw_enablemaximize" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_EnableMaximize( nWinNum, lEnable )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_EnableMaximize( &lt;nWinNum&gt;, &lt;lEnable&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>lEnable</code> If <code>.T.</code>, enable maximize button, <code>.F.</code> disable.</div>
 <div class="d-d">Returns</div>
@@ -1445,7 +1445,7 @@ nState )
 <section>
 <h4><code><code><a href="#wvw_enablemenuitem">wvw_EnableMenuItem()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_enablemenuitem" class="d-id" id="wvw_enablemenuitem" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_EnableMenuItem( hMenu, nPosition, nFlag )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_EnableMenuItem( &lt;hMenu&gt;, &lt;nPosition&gt;, &lt;nFlag&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>hMenu</code> ID of menu. <code>nPosition</code> Specifies position of item to be enabled/disabled (see <code>nFlag</code> argument). <code>nFlag</code> For Harbour, in practice, we should define only two values: <code>MF_DISABLE</code> <code>MF_ENABLE</code> Specifies item to be disabled. Specifies item to be enabled.</div>
 <div class="d-d">Returns</div>
@@ -1461,7 +1461,7 @@ nState )
 <section>
 <h4><code><code><a href="#wvw_enableshortcuts">wvw_EnableShortcuts()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_enableshortcuts" class="d-id" id="wvw_enableshortcuts" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_EnableShortcuts( nWinNum, lEnable )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_EnableShortcuts( &lt;nWinNum&gt;, &lt;lEnable&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>lEnable</code> If <code>.T.</code>, enable shortcut keys. <code>.F.</code> disable shortcut keys.</div>
 <div class="d-d">Returns</div>
@@ -1478,12 +1478,12 @@ nState )
 <h4><code><code><a href="#wvw_fillrectangle">wvw_FillRectangle()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_fillrectangle" class="d-id" id="wvw_fillrectangle" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_FillRectangle( nWinNum, nTop, nLeft, nBottom, nRight,
-nRGBColor/hBrush, lTight, lUseBrush )
+<pre><code>wvw_FillRectangle( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;,
+nRGBColor/hBrush, &lt;lTight&gt;, &lt;lUseBrush&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to fill a rectangle. <code>nRGBColor/hBrush</code> Rectangle filling color (a 32-bit value with RGB color). <code>lTight</code> Filling patern will be adjusted in all coordinates area. <code>lUseBrush</code> If <code>.T.</code>, <code>nRGBColor/hBrush</code> argument is interpreted as a handle to a pen model. Otherwise, is used as a RGB color.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to fill a rectangle. <code>nRGBColor/hBrush</code> Rectangle filling color (a 32-bit value with RGB color). <code>lTight</code> Filling patern will be adjusted in all coordinates area. <code>lUseBrush</code> If <code>.T.</code>, <code>nRGBColor/hBrush</code> argument is interpreted as a handle to a pen model. Otherwise, is used as a RGB color.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Always <code>.T.</code></div>
 <div class="d-d">Description</div>
@@ -1533,7 +1533,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <div class="d-d">Arguments</div>
 <div class="d-it">None.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">Array of seven elements: 1 2 3 4 5 6 7 ­ ­ ­ ­ ­ ­ ­ cFontFace cFontHeight nFontWidth nFontWeight cFontQuality <code>PTEXTSIZE</code>-&gt;x <code>PTEXESIZE</code>-&gt;y Name Height Width Weight Quality Font's width in pixels Font's size in pixels</div>
+<div class="d-it">Array of seven elements: 1 2 3 4 5 6 7 ­ ­ ­ ­ ­ ­ ­ <code>cFontFace</code> cFontHeight <code>nFontWidth</code> nFontWeight <code>cFontQuality</code> <code>PTEXTSIZE</code>-&gt;x <code>PTEXESIZE</code>-&gt;y Name Height Width Weight Quality Font's width in pixels Font's size in pixels</div>
 <div class="d-d">Description</div>
 <div class="d-it">Retrieves current font data.</div>
 <div class="d-d">Platforms</div>
@@ -1577,7 +1577,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <section>
 <h4><code><code><a href="#wvw_getpaintrect">wvw_GetPaintRect()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_getpaintrect" class="d-id" id="wvw_getpaintrect" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_GetPaintRect( nWinNum )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_GetPaintRect( &lt;nWinNum&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window.</div>
 <div class="d-d">Returns</div>
@@ -1609,7 +1609,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <section>
 <h4><code><code><a href="#wvw_getrgbcolor">wvw_GetRGBColor()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_getrgbcolor" class="d-id" id="wvw_getrgbcolor" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_GetRGBColor( nColor )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_GetRGBColor( &lt;nColor&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nColor</code> Color index (as defined in CA-Cl*pper).</div>
 <div class="d-d">Returns</div>
@@ -1625,7 +1625,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <section>
 <h4><code><code><a href="#wvw_getrowcolfromxy">wvw_GetRowColFromXY()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_getrowcolfromxy" class="d-id" id="wvw_getrowcolfromxy" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_GetRowColFromXY( nWinNum, nX, nY )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_GetRowColFromXY( &lt;nWinNum&gt;, nX, nY )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nX</code> X coordinate in pixels. <code>nY</code> Y coordinate in pixels.</div>
 <div class="d-d">Returns</div>
@@ -1753,7 +1753,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <section>
 <h4><code><code><a href="#wvw_getxyfromrowcol">wvw_GetXYFromRowCol()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_getxyfromrowcol" class="d-id" id="wvw_getxyfromrowcol" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_GetXYFromRowCol( nWinNum, nRow, nCol )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_GetXYFromRowCol( &lt;nWinNum&gt;, &lt;nRow&gt;, &lt;nCol&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nRow</code> Line number. <code>nCol</code> Column number.</div>
 <div class="d-d">Returns</div>
@@ -1801,7 +1801,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <section>
 <h4><code><code><a href="#wvw_killtimer">wvw_KillTimer()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_killtimer" class="d-id" id="wvw_killtimer" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_KillTimer( nWinNum )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_KillTimer( &lt;nWinNum&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window.</div>
 <div class="d-d">Returns</div>
@@ -1817,7 +1817,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <section>
 <h4><code><code><a href="#wvw_lbaddstring">wvw_lbAddString()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_lbaddstring" class="d-id" id="wvw_lbaddstring" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_lbAddString( nHandleDialog, nIDListBox, cItem )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_lbAddString( &lt;nHandleDialog&gt;, &lt;nIDListBox&gt;, &lt;cItem&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nHandleDialog</code> Handle of dialog window. <code>nIDListBox</code> ID of listbox. <code>cItem</code> Item to add in listbox.</div>
 <div class="d-d">Returns</div>
@@ -1833,7 +1833,7 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <section>
 <h4><code><code><a href="#wvw_lbsetcursel">wvw_lbSetCurSel()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_lbsetcursel" class="d-id" id="wvw_lbsetcursel" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_lbSetCurSel( nHandleDialog, nIDListBox, nItem )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_lbSetCurSel( &lt;nHandleDialog&gt;, &lt;nIDListBox&gt;, &lt;nItem&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nHandleDialog</code> Handle of dialog window. <code>nIDListBox</code> ID of listbox. <code>nItem</code> Item index (start from zero).</div>
 <div class="d-d">Returns</div>
@@ -1866,8 +1866,8 @@ nRGBColor/hBrush, lTight, lUseBrush )
 <h4><code><code><a href="#wvw_loadfont">wvw_LoadFont()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_loadfont" class="d-id" id="wvw_loadfont" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_LoadFont( nSlotFont, cFontName, nHeight, nWidth, nWeight,
-lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
+<pre><code>wvw_LoadFont( &lt;nSlotFont&gt;, &lt;cFontName&gt;, &lt;nHeight&gt;, &lt;nWidth&gt;, &lt;nWeight&gt;,
+&lt;lItalic&gt;, &lt;lUnderline&gt;, &lt;lStrikeout&gt;, &lt;nCharSet&gt;, &lt;nQuality&gt;, &lt;nEscapement&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
@@ -1885,9 +1885,9 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <section>
 <h4><code><code><a href="#wvw_loadpen">wvw_LoadPen()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_loadpen" class="d-id" id="wvw_loadpen" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_LoadPen( nSlot, nStyle, nWidth, nRGBColor )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_LoadPen( &lt;nSlot&gt;, &lt;nStyle&gt;, &lt;nWidth&gt;, &lt;nRGBColor&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nSlot</code> Index of cache of pen, defined by the user. <code>nStyle</code> Style of the pen. <code>nWidth</code> Specifies the width of the pen, in logical units. If nWidth is zero, the pen is a single pixel wide, regardless of the current transformation. <code>nRGBColor</code> Specifies a color reference for the pen color.</div>
+<div class="d-it"><code>nSlot</code> Index of cache of pen, defined by the user. <code>nStyle</code> Style of the pen. <code>nWidth</code> Specifies the width of the pen, in logical units. If <code>nWidth</code> is zero, the pen is a single pixel wide, regardless of the current transformation. <code>nRGBColor</code> Specifies a color reference for the pen color.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Returns <code>.T.</code> if read and write of definition is OK, <code>.F.</code> otherwise.</div>
 <div class="d-d">Description</div>
@@ -1901,7 +1901,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <section>
 <h4><code><code><a href="#wvw_loadpicture">wvw_LoadPicture()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_loadpicture" class="d-id" id="wvw_loadpicture" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_LoadPicture( nSlot, cFilePicture )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_LoadPicture( &lt;nSlot&gt;, &lt;cFilePicture&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nSlot</code> Position of the cache where the image will be loaded. If there is any image in this position, will be replaced. <code>cFilePicture</code> Image to be loaded in the cache.</div>
 <div class="d-d">Returns</div>
@@ -1917,7 +1917,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <section>
 <h4><code><code><a href="#wvw_maximize">wvw_Maximize()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_maximize" class="d-id" id="wvw_maximize" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_Maximize( nWinNum )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_Maximize( &lt;nWinNum&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window.</div>
 <div class="d-d">Returns</div>
@@ -1933,7 +1933,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <section>
 <h4><code><code><a href="#wvw_maxmaxcol">wvw_MaxMaxCol()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_maxmaxcol" class="d-id" id="wvw_maxmaxcol" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_MaxMaxCol( nWinNum )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_MaxMaxCol( &lt;nWinNum&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window.</div>
 <div class="d-d">Returns</div>
@@ -1949,7 +1949,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <section>
 <h4><code><code><a href="#wvw_maxmaxrow">wvw_MaxMaxRow()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_maxmaxrow" class="d-id" id="wvw_maxmaxrow" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_MaxMaxRow( nWinNum )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_MaxMaxRow( &lt;nWinNum&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window.</div>
 <div class="d-d">Returns</div>
@@ -1965,7 +1965,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <section>
 <h4><code><code><a href="#wvw_messagebox">wvw_MessageBox()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_messagebox" class="d-id" id="wvw_messagebox" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_MessageBox( nWinNum, cMessage, cTitle, nOption )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_MessageBox( &lt;nWinNum&gt;, &lt;cMessage&gt;, &lt;cTitle&gt;, &lt;nOption&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>cMessage</code> Message to be displayed. <code>cTitle</code> Dialog box title. <code>nOption</code> Specifies a set of buttons that determine the contents and behavior of the dialog box. Default is <code>MB_OK</code> ( OK button, without icons). You can see all definitions in file <code>winuser.ch</code>.</div>
 <div class="d-d">Returns</div>
@@ -1997,7 +1997,7 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <section>
 <h4><code><code><a href="#wvw_ncolofs">wvw_nColOfs()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_ncolofs" class="d-id" id="wvw_ncolofs" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_nColOfs( nWinNum )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_nColOfs( &lt;nWinNum&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window.</div>
 <div class="d-d">Returns</div>
@@ -2030,8 +2030,8 @@ lItalic, lUnderline, lStrikeout, nCharSet, nQuality, nEscapement )
 <h4><code><code><a href="#wvw_nopenwindow">wvw_nOpenWindow()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_nopenwindow" class="d-id" id="wvw_nopenwindow" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_nOpenWindow( cWinName, row1, col1, row2, col2, nStyle, nParentWin,
-nExStyle )
+<pre><code>wvw_nOpenWindow( &lt;cWinName&gt;, row1, col1, row2, col2, &lt;nStyle&gt;, &lt;nParentWin&gt;,
+&lt;nExStyle&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
@@ -2049,7 +2049,7 @@ nExStyle )
 <section>
 <h4><code><code><a href="#wvw_nrowofs">wvw_nRowOfs()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_nrowofs" class="d-id" id="wvw_nrowofs" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_nRowOfs( nWinNum )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_nRowOfs( &lt;nWinNum&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window.</div>
 <div class="d-d">Returns</div>
@@ -2065,7 +2065,7 @@ nExStyle )
 <section>
 <h4><code><code><a href="#wvw_nsetcurwindow">wvw_nSetCurWindow()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_nsetcurwindow" class="d-id" id="wvw_nsetcurwindow" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_nSetCurWindow( nWinNum )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_nSetCurWindow( &lt;nWinNum&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window.</div>
 <div class="d-d">Returns</div>
@@ -2081,7 +2081,7 @@ nExStyle )
 <section>
 <h4><code><code><a href="#wvw_noclose">wvw_NoClose()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_noclose" class="d-id" id="wvw_noclose" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_NoClose( nWinNum )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_NoClose( &lt;nWinNum&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window.</div>
 <div class="d-d">Returns</div>
@@ -2097,7 +2097,7 @@ nExStyle )
 <section>
 <h4><code><code><a href="#wvw_nostartupsubwindow">wvw_NoStartupSubWindow()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_nostartupsubwindow" class="d-id" id="wvw_nostartupsubwindow" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_NoStartupSubWindow( lOn )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_NoStartupSubWindow( &lt;lOn&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>lOn</code> <code>.T.</code> when open window, will be displayed (default). <code>.F.</code> when open window, remains invisible.</div>
 <div class="d-d">Returns</div>
@@ -2130,13 +2130,13 @@ nExStyle )
 <h4><code><code><a href="#wvw_pbcreate">wvw_pbCreate()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_pbcreate" class="d-id" id="wvw_pbcreate" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_pbCreate( nWinNum, nTop, nLeft, nBottom, nRight, cText,
-cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
+<pre><code>wvw_pbCreate( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;cText&gt;,
+cImage/nImage, &lt;bBlock&gt;, &lt;aOffset&gt;, &lt;nStretchBitmap&gt;, &lt;lMap3DColors&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to create the button. <code>cText</code> Text of the button. Default is &quot;&quot;. <code>cImage/nImage</code> If specified as numeric, identify ID from Resource in a .RC file. If specified as string, must have a full path to an image file. <code>bBlock</code> Code block to be executed whenever a <code>BN_CLICK</code> event occurred (press and release the button). Always pass as a parameter: <code>nWinNum</code> and ID of button. <code>aOffset</code> Array of four row/column. elements with top/left, bottom/right coordinates to align button with</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to create the button. <code>cText</code> Text of the button. Default is &quot;&quot;. <code>cImage/nImage</code> If specified as numeric, identify ID from Resource in a .RC file. If specified as string, must have a full path to an image file. <code>bBlock</code> Code block to be executed whenever a <code>BN_CLICK</code> event occurred (press and release the button). Always pass as a parameter: <code>nWinNum</code> and ID of button. <code>aOffset</code> Array of four row/column. elements with top/left, bottom/right coordinates to align button with</div>
   <div><code>nStretchBitmap</code> Number between 0 and 1 (inclusive) as a stretch factor: 1.0 0.5 0 The bitmap will cover all button. The bitmap will cover only 50% of the button. The bitmap will not be stretched.</div>
   <div>Default is 1. <code>lMap3DColors</code> Specified if an image will be transparent (<code>.T.</code>) or not (<code>.F.</code>). This will work on 256 colored bitmaps only.</div>
 </div>
@@ -2153,7 +2153,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <section>
 <h4><code><code><a href="#wvw_pbdestroy">wvw_pbDestroy()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_pbdestroy" class="d-id" id="wvw_pbdestroy" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_pbDestroy( nWinNum, nPBId )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_pbDestroy( &lt;nWinNum&gt;, &lt;nPBId&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nPBId</code> ID of the pushbutton.</div>
 <div class="d-d">Returns</div>
@@ -2169,7 +2169,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <section>
 <h4><code><code><a href="#wvw_pbenable">wvw_pbEnable()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_pbenable" class="d-id" id="wvw_pbenable" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_pbEnable( nWinNum, nPBId, lToggle )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_pbEnable( &lt;nWinNum&gt;, &lt;nPBId&gt;, &lt;lToggle&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nPBId</code> ID of the pushbutton. <code>lToggle</code> <code>.T.</code> Enable pushbutton (default). <code>.F.</code> Disable pushbutton.</div>
 <div class="d-d">Returns</div>
@@ -2185,7 +2185,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <section>
 <h4><code><code><a href="#wvw_pbsetcodeblock">wvw_pbSetCodeblock()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_pbsetcodeblock" class="d-id" id="wvw_pbsetcodeblock" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_pbSetCodeblock( nWinNum, nPBId, bBlock )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_pbSetCodeblock( &lt;nWinNum&gt;, &lt;nPBId&gt;, &lt;bBlock&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nPBId</code> ID of the pushbutton. <code>bBlock</code> Code block.</div>
 <div class="d-d">Returns</div>
@@ -2201,7 +2201,7 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <section>
 <h4><code><code><a href="#wvw_pbsetfocus">wvw_pbSetFocus()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_pbsetfocus" class="d-id" id="wvw_pbsetfocus" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_pbSetFocus( nWinNum, nPBId )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_pbSetFocus( &lt;nWinNum&gt;, &lt;nPBId&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nPBId</code> ID of the pushbutton.</div>
 <div class="d-d">Returns</div>
@@ -2218,8 +2218,8 @@ cImage/nImage, bBlock, aOffset, nStretchBitmap, lMap3DColors )
 <h4><code><code><a href="#wvw_pbsetfont">wvw_pbSetFont()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_pbsetfont" class="d-id" id="wvw_pbsetfont" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_pbSetFont( nWinNum, cFontFace, nHeight, nWidth, nWeight,
-nQuality, lItalic, lUnderline, lStrikeout )
+<pre><code>wvw_pbSetFont( &lt;nWinNum&gt;, &lt;cFontFace&gt;, &lt;nHeight&gt;, &lt;nWidth&gt;, &lt;nWeight&gt;,
+&lt;nQuality&gt;, &lt;lItalic&gt;, &lt;lUnderline&gt;, &lt;lStrikeout&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
@@ -2237,7 +2237,7 @@ nQuality, lItalic, lUnderline, lStrikeout )
 <section>
 <h4><code><code><a href="#wvw_pbsetstyle">wvw_pbSetStyle()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_pbsetstyle" class="d-id" id="wvw_pbsetstyle" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_pbSetStyle( nWinNum, nPBId, nStyle )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_pbSetStyle( &lt;nWinNum&gt;, &lt;nPBId&gt;, &lt;nStyle&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>nWinNum</code> Window number. Default is current window. <code>nPBId</code> ID of pushbutton. <code>nStyle</code> Define style of pushbutton. You can see all possibilities <code>BS_PUSHBUTTON</code>, <code>BS_DEFPUSHBUTTON</code>, etc.). Typical usage: <code>BS_DEFPUSHBUTTON</code> <code>BS_PUSHBUTTON</code> in file <code>winuser.ch</code> (</div>
@@ -2257,12 +2257,12 @@ nQuality, lItalic, lUnderline, lStrikeout )
 <h4><code><code><a href="#wvw_pgcreate">wvw_pgCreate()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_pgcreate" class="d-id" id="wvw_pgcreate" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_pgCreate( nWinNum, nTop, nLeft, nBottom, nRight, aOffset,
-nBackColor, nBarColor, lSmooth, lVertical )
+<pre><code>wvw_pgCreate( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;aOffset&gt;,
+&lt;nBackColor&gt;, &lt;nBarColor&gt;, &lt;lSmooth&gt;, &lt;lVertical&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to create a progress bar. <code>aOffset</code> Array of four elements with top/left, bottom/right coordinates to align progress bar with row/column. <code>nBackColor</code> Background color. <code>nBarColor</code> Progress bar color. <code>lSmooth</code> <code>.T.</code> draw progress bar as a continuum bar <code>.F.</code> draw progress bar with tiny distinct rectangles (default) <code>lVertical</code> <code>.T.</code> draw as vertical progress bar <code>.F.</code> draw as horizontal progress bar (default)</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to create a progress bar. <code>aOffset</code> Array of four elements with top/left, bottom/right coordinates to align progress bar with row/column. <code>nBackColor</code> Background color. <code>nBarColor</code> Progress bar color. <code>lSmooth</code> <code>.T.</code> draw progress bar as a continuum bar <code>.F.</code> draw progress bar with tiny distinct rectangles (default) <code>lVertical</code> <code>.T.</code> draw as vertical progress bar <code>.F.</code> draw as horizontal progress bar (default)</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Progress bar handle, if successful. Zero if failed.</div>
 <div class="d-d">Description</div>
@@ -2276,7 +2276,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_pgdestroy">wvw_pgDestroy()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_pgdestroy" class="d-id" id="wvw_pgdestroy" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_pgDestroy( nWinNum, nPGId )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_pgDestroy( &lt;nWinNum&gt;, &lt;nPGId&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nPGId</code> ID of progress bar.</div>
 <div class="d-d">Returns</div>
@@ -2292,7 +2292,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_pggetpos">wvw_pgGetPos()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_pggetpos" class="d-id" id="wvw_pggetpos" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_pgGetPos( nWinNum, nPGId )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_pgGetPos( &lt;nWinNum&gt;, &lt;nPGId&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nPGId</code> ID of progress bar.</div>
 <div class="d-d">Returns</div>
@@ -2308,7 +2308,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_pgsetpos">wvw_pgSetPos()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_pgsetpos" class="d-id" id="wvw_pgsetpos" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_pgSetPos( nWinNum, nPGId, nPos )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_pgSetPos( &lt;nWinNum&gt;, &lt;nPGId&gt;, &lt;nPos&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nPGId</code> ID of progress bar. <code>nPos</code> A number in range of current range.</div>
 <div class="d-d">Returns</div>
@@ -2340,7 +2340,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_processmessages">wvw_ProcessMessages()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_processmessages" class="d-id" id="wvw_processmessages" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_ProcessMessages( nWinNum )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_ProcessMessages( &lt;nWinNum&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. NOTE: Despite the parameter, the following will actually process messages for all windows</div>
 <div class="d-d">Returns</div>
@@ -2356,7 +2356,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_restore">wvw_Restore()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_restore" class="d-id" id="wvw_restore" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_Restore( nWinNum )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_Restore( &lt;nWinNum&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window.</div>
 <div class="d-d">Returns</div>
@@ -2372,9 +2372,9 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_restscreen">wvw_RestScreen()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_restscreen" class="d-id" id="wvw_restscreen" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_RestScreen( nWinNum, nTop, nLeft, nBottom, nRight, aScr, lDoNotDestroyBMP )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_RestScreen( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;aScr&gt;, &lt;lDoNotDestroyBMP&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Screen coordinates to display data saved by function <code><a href="#wvw_savescreen">wvw_SaveScreen()</a></code>. <code>aScr</code> Array with three elements (height, width and handle of bitmap). <code>lDoNotDestroyBMP</code> If <code>.T.</code>, after restore screen, delete the bitmap used to save screen. If <code>.F.</code>, the bitmap will not be erased. (default)</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Screen coordinates to display data saved by function <code><a href="#wvw_savescreen">wvw_SaveScreen()</a></code>. <code>aScr</code> Array with three elements (height, width and handle of bitmap). <code>lDoNotDestroyBMP</code> If <code>.T.</code>, after restore screen, delete the bitmap used to save screen. If <code>.F.</code>, the bitmap will not be erased. (default)</div>
 <div class="d-d">Returns</div>
 <div class="d-it"><code>.T.</code> if successful, <code>.F.</code> otherwise.</div>
 <div class="d-d">Description</div>
@@ -2388,7 +2388,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_sbaddpart">wvw_sbAddPart()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_sbaddpart" class="d-id" id="wvw_sbaddpart" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_sbAddPart( nWinNum, cMaxText, nWidth, nStyle, lResetParts, cIcon, cTooltip )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_sbAddPart( &lt;nWinNum&gt;, &lt;cMaxText&gt;, &lt;nWidth&gt;, &lt;nStyle&gt;, &lt;lResetParts&gt;, &lt;cIcon&gt;, &lt;cTooltip&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>nWinNum</code> Window number. Default is current window. <code>cMaxText</code> If present, the width of status bar will be the width of this text. <code>nWidth</code> Width of status bar part. Ignored, if <code>cMaxText</code> is passed. <code>nStyle</code> Style of status bar: 0 0x100 0x200 Recessed (default) No borders Raised</div>
@@ -2407,7 +2407,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_sbcreate">wvw_sbCreate()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_sbcreate" class="d-id" id="wvw_sbcreate" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_sbCreate( nWinNum )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_sbCreate( &lt;nWinNum&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window.</div>
 <div class="d-d">Returns</div>
@@ -2423,7 +2423,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_sbdestroy">wvw_sbDestroy()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_sbdestroy" class="d-id" id="wvw_sbdestroy" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_sbDestroy( nWinNum )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_sbDestroy( &lt;nWinNum&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window.</div>
 <div class="d-d">Returns</div>
@@ -2455,7 +2455,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_sbgettext">wvw_sbGetText()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_sbgettext" class="d-id" id="wvw_sbgettext" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_sbGetText( nWinNum, nPart )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_sbGetText( &lt;nWinNum&gt;, &lt;nPart&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nPart</code> Number of part in status bar.</div>
 <div class="d-d">Returns</div>
@@ -2487,7 +2487,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_sbsettext">wvw_sbSetText()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_sbsettext" class="d-id" id="wvw_sbsettext" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_sbSetText( nWinNum, nPart, cText )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_sbSetText( &lt;nWinNum&gt;, &lt;nPart&gt;, &lt;cText&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nPart</code> Number of part in status bar. <code>cText</code> Text to be configured.</div>
 <div class="d-d">Returns</div>
@@ -2503,9 +2503,9 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_savescreen">wvw_SaveScreen()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_savescreen" class="d-id" id="wvw_savescreen" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SaveScreen( nWinNum, nTop, nLeft, nBottom, nRight )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SaveScreen( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Screen coordinates to save screen (always from current window, because argument <code>nWinNum</code> is ignored).</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Screen coordinates to save screen (always from current window, because argument <code>nWinNum</code> is ignored).</div>
 <div class="d-d">Returns</div>
 <div class="d-it">Array of three elements, with height, width and handle of the bitmap.</div>
 <div class="d-d">Description</div>
@@ -2519,7 +2519,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setaltf4close">wvw_SetAltF4Close()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setaltf4close" class="d-id" id="wvw_setaltf4close" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetAltF4Close( lOn )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetAltF4Close( &lt;lOn&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>lOn</code> <code>.T.</code> if application can be finished using <span class="d-key">Alt F4</span> key. <code>.F.</code> if application cannot be finished using <span class="d-key">Alt F4</span> key.</div>
 <div class="d-d">Returns</div>
@@ -2551,7 +2551,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setbrush">wvw_SetBrush()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setbrush" class="d-id" id="wvw_setbrush" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetBrush( nStyle, nColor, nHatch )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetBrush( &lt;nStyle&gt;, &lt;nColor&gt;, &lt;nHatch&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nStyle</code> Identify pen style. All definitions can be viewed in file <code>wingdi.ch</code> ( <code>BS_SOLID</code>, <code>BS_NULL</code>, etc.). <code>nColor</code> Index color to pen draw. <code>nHatch</code> Define the filling pattern of pen. All definitions can be viewed in file <code>wingdi.ch</code> ( <code>HS_VERTICAL</code>, <code>HS_HORIZONTAL</code>, etc.).</div>
 <div class="d-d">Returns</div>
@@ -2567,7 +2567,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setclipboard">wvw_SetClipboard()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setclipboard" class="d-id" id="wvw_setclipboard" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetClipboard( cText )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetClipboard( &lt;cText&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>cText</code> Text to be inserted in the clipboard.</div>
 <div class="d-d">Returns</div>
@@ -2583,7 +2583,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setcodepage">wvw_SetCodepage()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setcodepage" class="d-id" id="wvw_setcodepage" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetCodepage( nWinNum, nCodePage )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetCodepage( &lt;nWinNum&gt;, &lt;nCodePage&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nCodePage</code> Sets the code page.</div>
 <div class="d-d">Returns</div>
@@ -2599,7 +2599,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setdefcentrewindow">wvw_SetDefCentreWindow()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setdefcentrewindow" class="d-id" id="wvw_setdefcentrewindow" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetDefCentreWindow( lCentre )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetDefCentreWindow( &lt;lCentre&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>lCentre</code> If <code>.T.</code>, config all newly opened windows, to be centralized horizontally and vertically.</div>
 <div class="d-d">Returns</div>
@@ -2615,7 +2615,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setdefhcentrewindow">wvw_SetDefHCentreWindow()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setdefhcentrewindow" class="d-id" id="wvw_setdefhcentrewindow" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetDefHCentreWindow( lCentre )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetDefHCentreWindow( &lt;lCentre&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>lCentre</code> If <code>.T.</code>, config all newly opened windows, to be centralized horizontally.</div>
 <div class="d-d">Returns</div>
@@ -2631,7 +2631,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setdeflinespacing">wvw_SetDefLineSpacing()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setdeflinespacing" class="d-id" id="wvw_setdeflinespacing" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetDefLineSpacing( nLineSpacing )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetDefLineSpacing( &lt;nLineSpacing&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nLineSpacing</code> Number of line spacing. Must be even, positive number &lt;= 40, otherwise it will be ignored.</div>
 <div class="d-d">Returns</div>
@@ -2647,7 +2647,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setdeflspacecolor">wvw_SetDefLSpaceColor()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setdeflspacecolor" class="d-id" id="wvw_setdeflspacecolor" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetDefLSpaceColor( nColorIndex )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetDefLSpaceColor( &lt;nColorIndex&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nColorIndex</code> Index color to line spacing. Must be between 0 and 15, or ­1 meaning line spacing has no color.</div>
 <div class="d-d">Returns</div>
@@ -2663,7 +2663,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setdefvcentrewindow">wvw_SetDefVCentreWindow()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setdefvcentrewindow" class="d-id" id="wvw_setdefvcentrewindow" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetDefVCentreWindow( lCentre )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetDefVCentreWindow( &lt;lCentre&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>lCentre</code> If <code>.T.</code>, config all newly opened windows, to be centralized vertically.</div>
 <div class="d-d">Returns</div>
@@ -2679,7 +2679,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setfont">wvw_SetFont()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setfont" class="d-id" id="wvw_setfont" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetFont( cFontFace, nFontHeight, nFontWidth, nFontWeight, nFontQuality )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetFont( &lt;cFontFace&gt;, &lt;nFontHeight&gt;, &lt;nFontWidth&gt;, &lt;nFontWeight&gt;, &lt;nFontQuality&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>cFontName</code> Name of the font. (e.g., MS Sans Serif). <code>nFontHeight</code> Height of the font's character. <code>nFontWidth</code> Specifies average width of character in the font. <code>nFontWeight</code> Specifies the weight of the font in the range 0 through 1000 (see About Fonts section). <code>nFontQuality</code> Specifies the output quality. All arguments are optional. This function uses the values assigned in windows creation.</div>
 <div class="d-d">Returns</div>
@@ -2695,7 +2695,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_seticon">wvw_SetIcon()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_seticon" class="d-id" id="wvw_seticon" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetIcon( nWinNum, nIcon, cIcon )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetIcon( &lt;nWinNum&gt;, &lt;nIcon&gt;, &lt;cIcon&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nIcon</code> Identify an icon in a resource file. <code>cIcon</code> Icon's file name.</div>
 <div class="d-d">Returns</div>
@@ -2711,7 +2711,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setlastmenuevent">wvw_SetLastMenuEvent()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setlastmenuevent" class="d-id" id="wvw_setlastmenuevent" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetLastMenuEvent( nWinNum, nMenuEvent )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetLastMenuEvent( &lt;nWinNum&gt;, &lt;nMenuEvent&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nMenuEvent</code> Menu's item.</div>
 <div class="d-d">Returns</div>
@@ -2727,7 +2727,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setlinespacing">wvw_SetLineSpacing()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setlinespacing" class="d-id" id="wvw_setlinespacing" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetLineSpacing( nWinNum, nLineSpacing )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetLineSpacing( &lt;nWinNum&gt;, &lt;nLineSpacing&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nLineSpacing</code> If passed, change line spacing in current window, otherwise read actual configuration.</div>
 <div class="d-d">Returns</div>
@@ -2743,7 +2743,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setlspacecolor">wvw_SetLSpaceColor()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setlspacecolor" class="d-id" id="wvw_setlspacecolor" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetLSpaceColor( nWinNum, nColorIndex )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetLSpaceColor( &lt;nWinNum&gt;, &lt;nColorIndex&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nColorIndex</code> Color index to line spacing. Must be between 0 and 15, or ­1, meaning has no color.</div>
 <div class="d-d">Returns</div>
@@ -2759,7 +2759,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setmaincoord">wvw_SetMainCoord()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setmaincoord" class="d-id" id="wvw_setmaincoord" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetMainCoord( lMainCoord )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetMainCoord( &lt;lMainCoord&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>lMainCoord</code> If passed, change the display mode of windows. Otherwise, read actual configuration.</div>
 <div class="d-d">Returns</div>
@@ -2775,7 +2775,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setmaxbmcache">wvw_SetMaxBMCache()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setmaxbmcache" class="d-id" id="wvw_setmaxbmcache" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetMaxBMCache( nMaxCache )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetMaxBMCache( &lt;nMaxCache&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nMaxCache</code> Limit of cache bitmaps. Default is 20, minimum is 1.</div>
 <div class="d-d">Returns</div>
@@ -2791,7 +2791,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setmenu">wvw_SetMenu()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setmenu" class="d-id" id="wvw_setmenu" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetMenu( nWinWin, hMenu )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetMenu( &lt;nWinWin&gt;, &lt;hMenu&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>hMenu</code> Contains menu information.</div>
 <div class="d-d">Returns</div>
@@ -2807,7 +2807,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setmenukeyevent">wvw_SetMenuKeyEvent()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setmenukeyevent" class="d-id" id="wvw_setmenukeyevent" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetMenuKeyEvent( nWinNum, nKeyEvent )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetMenuKeyEvent( &lt;nWinNum&gt;, &lt;nKeyEvent&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nKeyEvent</code> Number of event defined by the user to command menu of the window.</div>
 <div class="d-d">Returns</div>
@@ -2823,7 +2823,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setmousemove">wvw_SetMouseMove()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setmousemove" class="d-id" id="wvw_setmousemove" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetMouseMove( nWinNum, lMouseMove )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetMouseMove( &lt;nWinNum&gt;, &lt;lMouseMove&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>lMouseMove</code> <code>.T.</code> recognize mouse in application <code>.F.</code> do not recognize mouse in application If not passed, returns actual configuration.</div>
 <div class="d-d">Returns</div>
@@ -2839,7 +2839,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setmousepos">wvw_SetMousePos()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setmousepos" class="d-id" id="wvw_setmousepos" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetMousePos( nWinNum, nRow, nCol )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetMousePos( &lt;nWinNum&gt;, &lt;nRow&gt;, &lt;nCol&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nRow, nCol</code> Row/Column to position mouse cursor.</div>
 <div class="d-d">Returns</div>
@@ -2871,7 +2871,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setpaintrefresh">wvw_SetPaintRefresh()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setpaintrefresh" class="d-id" id="wvw_setpaintrefresh" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetPaintRefresh( nPaintRefresh )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetPaintRefresh( &lt;nPaintRefresh&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nPaintRefresh</code> Interval in milliseconds to call <code>WVW_PAINT()</code>. Must be &gt;= 50, or == 0, causing repaint to execute immediately.</div>
 <div class="d-d">Returns</div>
@@ -2887,7 +2887,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setpalette">wvw_SetPalette()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setpalette" class="d-id" id="wvw_setpalette" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetPalette( aRGBValues )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetPalette( &lt;aRGBValues&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>aRGBValues</code> Array of 16 elements with RGB values.</div>
 <div class="d-d">Returns</div>
@@ -2903,7 +2903,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setpen">wvw_SetPen()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setpen" class="d-id" id="wvw_setpen" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetPen( nPenStyle, nWidth, nColor )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetPen( &lt;nPenStyle&gt;, &lt;nWidth&gt;, &lt;nColor&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nPenStyle</code> Defines pen style. All definition are in file <code>wingdi.ch</code> ( <code>PS_SOLID</code>, <code>PS_DOT</code>, etc.). <code>nWidth</code> Specifies width of the pen. <code>nColor</code> Index color of pen.</div>
 <div class="d-d">Returns</div>
@@ -2919,7 +2919,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setpointer">wvw_SetPointer()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setpointer" class="d-id" id="wvw_setpointer" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetPointer( nWinNum, nIcon )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetPointer( &lt;nWinNum&gt;, &lt;nIcon&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nIcon</code> Model of icon to be read. May be a string which identify a resource in a RC file or may be a predefined window model (default is <code>IDC_ARROW</code>). All definition are in <code>winuser.ch</code> file.</div>
 <div class="d-d">Returns</div>
@@ -2935,7 +2935,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setpopupmenu">wvw_SetPopupMenu()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setpopupmenu" class="d-id" id="wvw_setpopupmenu" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetPopupMenu( nWinNum, hPopUp )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetPopupMenu( &lt;nWinNum&gt;, &lt;hPopUp&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>hPopUp</code> Include all information of a popup menu.</div>
 <div class="d-d">Returns</div>
@@ -2951,7 +2951,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_settimer">wvw_SetTimer()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_settimer" class="d-id" id="wvw_settimer" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetTimer( nWinNum, nInterval )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetTimer( &lt;nWinNum&gt;, &lt;nInterval&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nInterval</code> Interval, in milliseconds.</div>
 <div class="d-d">Returns</div>
@@ -2967,7 +2967,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_settitle">wvw_SetTitle()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_settitle" class="d-id" id="wvw_settitle" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetTitle( nWinNum, cTitle )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetTitle( &lt;nWinNum&gt;, &lt;cTitle&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>cTitle</code> Title of window.</div>
 <div class="d-d">Returns</div>
@@ -2983,9 +2983,9 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_settooltip">wvw_SetToolTip()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_settooltip" class="d-id" id="wvw_settooltip" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetToolTip( nWinNum, nTop, nLeft, nBottom, nRight, cToolText )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetToolTip( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt;, &lt;cToolText&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to show tooltip. <code>cToolText</code> Tooltip text.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to show tooltip. <code>cToolText</code> Tooltip text.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
@@ -2999,7 +2999,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_settooltipactive">wvw_SetToolTipActive()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_settooltipactive" class="d-id" id="wvw_settooltipactive" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetToolTipActive( nWinNum, lToggle )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetToolTipActive( &lt;nWinNum&gt;, &lt;lToggle&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>lToggle</code> <code>.T.</code> enable tooltip. <code>.F.</code> disable tooltip. If not passed, returns actual configuration.</div>
 <div class="d-d">Returns</div>
@@ -3015,7 +3015,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_settooltipbkcolor">wvw_SetToolTipBkColor()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_settooltipbkcolor" class="d-id" id="wvw_settooltipbkcolor" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetToolTipBkColor( nWinNum, nColor )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetToolTipBkColor( &lt;nWinNum&gt;, &lt;nColor&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nColor</code> Color index of tooltip.</div>
 <div class="d-d">Returns</div>
@@ -3031,9 +3031,9 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_settooltipmargin">wvw_SetToolTipMargin()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_settooltipmargin" class="d-id" id="wvw_settooltipmargin" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetToolTipMargin( nWinNum, nTop, nLeft, nBottom, nRight )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetToolTipMargin( &lt;nWinNum&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nBottom&gt;, &lt;nRight&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
-<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, nLeft, nBottom, nRight</code> Coordinates to draw tooltip.</div>
+<div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nTop, &lt;nLeft</code>, <code>nBottom</code>, nRight&gt; Coordinates to draw tooltip.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">None.</div>
 <div class="d-d">Description</div>
@@ -3047,7 +3047,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_settooltiptext">wvw_SetToolTipText()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_settooltiptext" class="d-id" id="wvw_settooltiptext" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetToolTipText( nWinNum, cText )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetToolTipText( &lt;nWinNum&gt;, &lt;cText&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>cText</code> Text of tooltip.</div>
 <div class="d-d">Returns</div>
@@ -3063,7 +3063,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_settooltiptextcolor">wvw_SetToolTipTextColor()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_settooltiptextcolor" class="d-id" id="wvw_settooltiptextcolor" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetToolTipTextColor( nWinNum, nColor )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetToolTipTextColor( &lt;nWinNum&gt;, &lt;nColor&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nColor</code> Color index to text in tooltip.</div>
 <div class="d-d">Returns</div>
@@ -3079,7 +3079,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_settooltiptitle">wvw_SetToolTipTitle()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_settooltiptitle" class="d-id" id="wvw_settooltiptitle" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetToolTipTitle( nWinNum, nIcon, cTitle )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetToolTipTitle( &lt;nWinNum&gt;, &lt;nIcon&gt;, &lt;cTitle&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>nWinNum</code> Window number. Default is current window. <code>nIcon</code> Identify if it will be displayed an icon with text in tooltip. Is allowed one of the following values: 0 1 2 3 no icon (default) information warning Error</div>
@@ -3096,7 +3096,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_settooltipwidth">wvw_SetToolTipWidth()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_settooltipwidth" class="d-id" id="wvw_settooltipwidth" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetToolTipWidth( nWinNum, nWidth )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetToolTipWidth( &lt;nWinNum&gt;, &lt;nWidth&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nWidth</code> Width of tooltip area.</div>
 <div class="d-d">Returns</div>
@@ -3112,7 +3112,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setvertcaret">wvw_SetVertCaret()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setvertcaret" class="d-id" id="wvw_setvertcaret" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetVertCaret( lOn )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetVertCaret( &lt;lOn&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>lOn</code> <code>.T.</code> turn caret into vertical caret <code>.F.</code> turn caret into horizontal caret</div>
 <div class="d-d">Returns</div>
@@ -3128,7 +3128,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setwindowcentre">wvw_SetWindowCentre()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setwindowcentre" class="d-id" id="wvw_setwindowcentre" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetWindowCentre( nWinNum, lCentre, lPaintIt )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetWindowCentre( &lt;nWinNum&gt;, &lt;lCentre&gt;, &lt;lPaintIt&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>lCentre</code> <code>.T.</code> centralize window <code>.F.</code> not centralize window <code>lPaintIt</code> <code>.T.</code> Repaint all windows immediate. <code>.F.</code> Just update configuration.</div>
 <div class="d-d">Returns</div>
@@ -3144,7 +3144,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setwindowpos">wvw_SetWindowPos()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setwindowpos" class="d-id" id="wvw_setwindowpos" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetWindowPos( nWinNum, nXPosition, nYPosition )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetWindowPos( &lt;nWinNum&gt;, &lt;nXPosition&gt;, &lt;nYPosition&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nXPosition</code> Horizontal position in pixels. <code>nYPosition</code> Vertical posititon in pixels.</div>
 <div class="d-d">Returns</div>
@@ -3160,7 +3160,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_setwinstyle">wvw_SetWinStyle()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_setwinstyle" class="d-id" id="wvw_setwinstyle" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_SetWinStyle( nWinNum, nStyle )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_SetWinStyle( &lt;nWinNum&gt;, &lt;nStyle&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nStyle</code> New windows style. If the windows has any control (PUSHBUTTON, <code>SCROLLBAR</code>, etc.), must be added <code>WS_CLIPCHILDREN</code> style.</div>
 <div class="d-d">Returns</div>
@@ -3176,7 +3176,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_showwindow">wvw_ShowWindow()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_showwindow" class="d-id" id="wvw_showwindow" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_ShowWindow( nWinNum, nMode )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_ShowWindow( &lt;nWinNum&gt;, &lt;nMode&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nMode</code> Points out how window will be showed. Default is <code>SW_SHOWNORMAL</code> (another definitions in file <code>winuser.ch</code>).</div>
 <div class="d-d">Returns</div>
@@ -3192,7 +3192,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_tbaddbutton">wvw_tbAddButton()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_tbaddbutton" class="d-id" id="wvw_tbaddbutton" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_tbAddButton( nWinNum, nCommand, xBitmap, cLabel, nBitmapType, lMap3DColors )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_tbAddButton( &lt;nWinNum&gt;, &lt;nCommand&gt;, &lt;xBitmap&gt;, &lt;cLabel&gt;, &lt;nBitmapType&gt;, &lt;lMap3DColors&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
   <div><code>nWinNum</code> Window number. Default is current window. <code>nCommand</code> ID of action to be executed when user press button. <code>xBitmap</code> ID of bitmap resource in .RC file (in this case, the image cannot have more than 256 colors) or full path to a file name. <code>cLabel</code> Text of button. If passed <code>lDisplayText</code> (in function <code><a href="#wvw_tbcreate">wvw_tbCreate()</a></code>) to <code>.T.</code>, the text will be showed below image, otherwise will be used as a tooltip. <code>nBitmapType</code> Bitmap type. Can be: 0 1 2 3 Custom Standard windows bitmaps (COPY, <code>PAST</code>, <code>FIND</code>, <code>OPEN</code>, etc.) System view bitmaps System history bitmaps</div>
@@ -3227,7 +3227,7 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <section>
 <h4><code><code><a href="#wvw_tbcmd2index">wvw_tbCmd2Index()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_tbcmd2index" class="d-id" id="wvw_tbcmd2index" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_tbCmd2Index( nWinNum, nCmd )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_tbCmd2Index( &lt;nWinNum&gt;, &lt;nCmd&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nCmd</code> ID of command to search (zero based).</div>
 <div class="d-d">Returns</div>
@@ -3244,8 +3244,8 @@ nBackColor, nBarColor, lSmooth, lVertical )
 <h4><code><code><a href="#wvw_tbcreate">wvw_tbCreate()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_tbcreate" class="d-id" id="wvw_tbcreate" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
 <div class="d-sy d-sym">
-<pre><code>wvw_tbCreate( nWinNum, lDisplayText, nStyle, nSystemBitmap, nImageWidth,
-nImageHeight )
+<pre><code>wvw_tbCreate( &lt;nWinNum&gt;, &lt;lDisplayText&gt;, &lt;nStyle&gt;, &lt;nSystemBitmap&gt;, &lt;nImageWidth&gt;,
+&lt;nImageHeight&gt; )
 </code></pre>
 </div>
 <div class="d-d">Arguments</div>
@@ -3266,7 +3266,7 @@ nImageHeight )
 <section>
 <h4><code><code><a href="#wvw_tbdelbutton">wvw_tbDelButton()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_tbdelbutton" class="d-id" id="wvw_tbdelbutton" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_tbDelButton( nWinNum, nButton )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_tbDelButton( &lt;nWinNum&gt;, &lt;nButton&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nButton</code> Number of button do delete. The separator button count as a button, and can be deleted. This list is zero based.</div>
 <div class="d-d">Returns</div>
@@ -3298,7 +3298,7 @@ nImageHeight )
 <section>
 <h4><code><code><a href="#wvw_tbenablebutton">wvw_tbEnableButton()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_tbenablebutton" class="d-id" id="wvw_tbenablebutton" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_tbEnableButton( nWinNum. nButton, lToggle )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_tbEnableButton( &lt;nWinNum&gt;. &lt;nButton&gt;, &lt;lToggle&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nButton</code> Number of button in a toolbar (zero based list). <code>lToggle</code> <code>.T.</code> Enable the button <code>.F.</code> Disable the button</div>
 <div class="d-d">Returns</div>
@@ -3314,7 +3314,7 @@ nImageHeight )
 <section>
 <h4><code><code><a href="#wvw_tbindex2cmd">wvw_tbIndex2Cmd()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_tbindex2cmd" class="d-id" id="wvw_tbindex2cmd" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_tbIndex2Cmd( nWinNum, nButton )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_tbIndex2Cmd( &lt;nWinNum&gt;, &lt;nButton&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nButton</code> Number of button in a toolbar (zero based list).</div>
 <div class="d-d">Returns</div>
@@ -3330,7 +3330,7 @@ nImageHeight )
 <section>
 <h4><code><code><a href="#wvw_trackpopupmenu">wvw_TrackPopupMenu()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_trackpopupmenu" class="d-id" id="wvw_trackpopupmenu" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_TrackPopupMenu( nWinNum, nHandle )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_TrackPopupMenu( &lt;nWinNum&gt;, &lt;nHandle&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nHandle</code> Popup menu handle.</div>
 <div class="d-d">Returns</div>
@@ -3346,7 +3346,7 @@ nImageHeight )
 <section>
 <h4><code><code><a href="#wvw_unreachedbr">wvw_UnreachedBr()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_unreachedbr" class="d-id" id="wvw_unreachedbr" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_UnreachedBr( nWinNum, nBottomPixels, nRightPixels )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_UnreachedBr( &lt;nWinNum&gt;, &lt;nBottomPixels&gt;, &lt;nRightPixels&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nBottomPixels</code> Passed by reference, to keep the number of lines (in pixels). <code>nRightPixels</code> Passed by reference, to keep the number of columns (in pixels).</div>
 <div class="d-d">Returns</div>
@@ -3378,12 +3378,12 @@ nImageHeight )
 <section>
 <h4><code><code><a href="#wvw_xbcreate">wvw_xbCreate()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_xbcreate" class="d-id" id="wvw_xbcreate" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_xbCreate( nWinNum, nStyle, nTop, nLeft, nLength, bBlock, aOffset )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_xbCreate( &lt;nWinNum&gt;, &lt;nStyle&gt;, &lt;nTop&gt;, &lt;nLeft&gt;, &lt;nLength&gt;, &lt;bBlock&gt;, &lt;aOffset&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it">
-  <div><code>nWinNum</code> Window number. Default is current window. <code>nStyle</code> 0 Horizontal 1 Vertical <code>nTop, nLeft</code> Intital row/column of scrollbar (in characters). <code>nLength</code> Length of scrollbar (in characters). <code>bBlock</code> Code block to execute on every <code>VM_VSCROLL</code>/<code>VM_HSCROLL</code>. This code block will be evaluated with these parameters: nWinNum nXBid nXBmsg window number scrollbar ID scrollbar message. Can be divided in two categories:</div>
+  <div><code>nWinNum</code> Window number. Default is current window. <code>nStyle</code> 0 Horizontal 1 Vertical <code>nTop, nLeft</code> Intital row/column of scrollbar (in characters). <code>nLength</code> Length of scrollbar (in characters). <code>bBlock</code> Code block to execute on every <code>VM_VSCROLL</code>/<code>VM_HSCROLL</code>. This code block will be evaluated with these parameters: <code>nWinNum</code> <code>nXBid</code> <code>nXBmsg</code> window number scrollbar ID scrollbar message. Can be divided in two categories:</div>
   <div>The &quot;must be handled&quot; messages: <code>SB_LINEUP</code>/<code>SB_LINELEFT</code> <code>SB_LINEDOWN</code>/<code>SB_LINERIGHT</code> <code>SB_PAGEUP</code>/<code>SB_PAGELEFT</code> <code>SB_PAGEDOWN</code>/<code>SB_PAGERIGHT</code> 0: 1: 2: 3: up/left button clicked down/right button clicked upper/left shaft clicked lower/right shaft clicked</div>
-  <div>The &quot;may not be handled&quot; messages: <code>SB_TUMBPOSITION</code> <code>SB_THUMBTRACK</code> <code>SB_ENDSCROLL</code> nXBPos 4: scroll thumb is released at position nXBpos 5: scroll thumb is being dragged at position nXBpos 8: end of scroll</div>
+  <div>The &quot;may not be handled&quot; messages: <code>SB_TUMBPOSITION</code> <code>SB_THUMBTRACK</code> <code>SB_ENDSCROLL</code> <code>nXBPos</code> 4: scroll thumb is released at position <code>nXBpos</code> 5: scroll thumb is being dragged at position <code>nXBpos</code> 8: end of scroll</div>
   <div>scrollthumb position (only if message = <code>SB_THUMBPOSITION</code> or <code>SB_THUMBTRACK</code>)</div>
   <div><code>aOffset</code> Array with four elements with top/left, bottom/right coordinates, in pixels, to adjust the dimensions of scrollbar.</div>
 </div>
@@ -3400,7 +3400,7 @@ nImageHeight )
 <section>
 <h4><code><code><a href="#wvw_xbdestroy">wvw_xbDestroy()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_xbdestroy" class="d-id" id="wvw_xbdestroy" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_xbDestroy( nWinNum, nXBId )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_xbDestroy( &lt;nWinNum&gt;, &lt;nXBid&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nXBId</code> ID of scrollbar.</div>
 <div class="d-d">Returns</div>
@@ -3416,7 +3416,7 @@ nImageHeight )
 <section>
 <h4><code><code><a href="#wvw_xbenable">wvw_xbEnable()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_xbenable" class="d-id" id="wvw_xbenable" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_xbEnable( nWinNum, nXBId, nFlags )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_xbEnable( &lt;nWinNum&gt;, &lt;nXBid&gt;, &lt;nFlags&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nXBId</code> ID of scrollbar. <code>nFlags</code> The following values are allowed: 0 1 2 3 enable both arrows disable left/up arrow disable right/down arrow disable both arrow</div>
 <div class="d-d">Returns</div>
@@ -3432,12 +3432,12 @@ nImageHeight )
 <section>
 <h4><code><code><a href="#wvw_xbinfo">wvw_xbInfo()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_xbinfo" class="d-id" id="wvw_xbinfo" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_xbInfo( nWinNum, nXBId )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_xbInfo( &lt;nWinNum&gt;, &lt;nXBid&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nXBId</code> ID of scrollbar.</div>
 <div class="d-d">Returns</div>
 <div class="d-it">
-  <div>Array with five elements (if successful): nMin nMax nPageSize nPos nTrackPos Minimum positions to scrolling Maximum positions to scrolling Page size Position of scrolling button Exact position of the scrolling button, when the user beginning a drag-and-drop operation.</div>
+  <div>Array with five elements (if successful): <code>nMin</code> <code>nMax</code> <code>nPageSize</code> nPos <code>nTrackPos</code> Minimum positions to scrolling Maximum positions to scrolling Page size Position of scrolling button Exact position of the scrolling button, when the user beginning a drag-and-drop operation.</div>
   <div>If failed, returns an empty array.</div>
 </div>
 <div class="d-d">Description</div>
@@ -3451,11 +3451,11 @@ nImageHeight )
 <section>
 <h4><code><code><a href="#wvw_xbupdate">wvw_xbUpdate()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_xbupdate" class="d-id" id="wvw_xbupdate" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_xbUpdate( nWinNum, nXBId, nPos, nPageSize, nMin, nMax )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_xbUpdate( &lt;nWinNum&gt;, &lt;nXBid&gt;, &lt;nPos&gt;, &lt;nPageSize&gt;, &lt;nMin&gt;, &lt;nMax&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nWinNum</code> Window number. Default is current window. <code>nXBId</code> ID of scrollbar. <code>nPos</code> Specifies the position of scrolling button. <code>nPageSize</code> Page size. This value is used by scrollbar to determine the proporcional size to page jump. <code>nMin</code> Minimum value to scrolling. <code>nMax</code> Maximum value to scrolling.</div>
 <div class="d-d">Returns</div>
-<div class="d-it">Returns current position of scroll thumb, if successful. ­1 if failed.</div>
+<div class="d-it">Returns current position of scroll thumb, if successful. -1 if failed.</div>
 <div class="d-d">Description</div>
 <div class="d-it">Update and redisplay a scollbar data. The parameters <code>nPos</code>, <code>nPageSize</code>, <code>nMin</code> and <code>nMax</code> are optional, however, both <code>nMin</code> and <code>nMax</code> must be supplied, or not at all.</div>
 <div class="d-d">Platforms</div>
@@ -3467,7 +3467,7 @@ nImageHeight )
 <section>
 <h4><code><code><a href="#wvw_xreposwindow">wvw_XReposWindow()</a></code></code><span class="d-eb"><a href="#" title="⌃">Top</a> | <a href="index.html" title="☰">Index</a> | <a href="#wvw_xreposwindow" class="d-id" id="wvw_xreposwindow" title="∞">Permalink</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/gtwvw/doc/en/gtwvw.txt" title="✎">Improve this doc</a></span></h4>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>wvw_XReposWindow( lAnchored )</code></pre></div>
+<div class="d-sy"><pre><code>wvw_XReposWindow( &lt;lAnchored&gt; )</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>lAnchored</code> If <code>.T.</code>, all subwindows are positioned according to their respective coordinate If <code>.F.</code>, all subwindows are positioned according to whatever their &quot;CenterWindow&quot; setting</div>
 <div class="d-d">Returns</div>
@@ -3494,8 +3494,8 @@ nImageHeight )
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-09 20:49 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/b5d3b36">b5d3b36</a></div>
+<div>Generated by hbdoc on 2016-11-10 13:10 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/feaf61b">feaf61b</a></div>
 <div>Content processing, layout &amp; design © 2016 <a href="https://vszakats.net/harbour">vszakats</a></div>
 </footer>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>

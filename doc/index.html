@@ -41,7 +41,7 @@ Harbour Reference Guide</a></div>
 <nav class="dropdown-content">
 <a href="harbour.html">Harbour core</a>
 <hr>
-<a href="cl53.html">Clipper 5.3</a>
+<a href="clc53.html">Clipper 5.3</a>
 <a href="clct3.html">Clipper Tools 3</a>
 <hr>
 <a href="gtwvw.html">gtwvw</a>
@@ -69,7 +69,7 @@ Harbour Reference Guide</a></div>
 
 <aside>
 <a href="#core" title="Harbour core index"><code>Harbour core index</code></a>
-<a href="#cl53" title="Clipper 5.3 index"><code>Clipper 5.3 index</code></a>
+<a href="#clc53" title="Clipper 5.3 index"><code>Clipper 5.3 index</code></a>
 <a href="#clct3" title="Clipper Tools 3 index"><code>Clipper Tools 3 index</code></a>
 <a href="#gtwvw" title="gtwvw index"><code>gtwvw index</code></a>
 <a href="#hbct" title="hbct index"><code>hbct index</code></a>
@@ -127,6 +127,7 @@ Harbour Reference Guide</a></div>
 <h3 class="d-sc d-id" id="coremiapimiclasses">Classes</h3><div><a href="harbour.html#hbclass">HBClass()</a>   HBClass() is used in the creation of all classes</div>
 <h3 class="d-sc d-id" id="coremiapimiconversion">Conversion</h3><div><a href="harbour.html#bin2i">Bin2I()</a>   Convert signed short encoded bytes into Harbour numeric</div>
 <div><a href="harbour.html#bin2l">Bin2L()</a>   Convert signed long encoded bytes into Harbour numeric</div>
+<div><a href="harbour.html#bin2w">Bin2W()</a>   Convert unsigned short encoded bytes into Harbour numeric</div>
 <div><a href="harbour.html#descend">Descend()</a>   Inverts an expression of string, logical, date or numeric type.</div>
 <div><a href="harbour.html#i2bin">I2Bin()</a>   Convert Harbour numeric into signed short encoded bytes</div>
 <div><a href="harbour.html#l2bin">L2Bin()</a>   Convert Harbour numeric into signed long encoded bytes</div>
@@ -636,547 +637,547 @@ Harbour Reference Guide</a></div>
 </div>
 </section>
 
-<section id="cl53" class="d-x d-id">
-<h1><a href="cl53.html#cl53">Clipper 5.3</a></h1>
+<section id="clc53" class="d-x d-id">
+<h1><a href="clc53.html#clc53">Clipper 5.3</a></h1>
 <div class="d-y">
 
-<section id="cl53mi" class="d-x d-id">
+<section id="clc53mi" class="d-x d-id">
 <h2></h2>
 <div class="d-y">
-<div><a href="cl53.html#lt-op">&lt;</a>   Less than—binary                               (Relational)</div>
-<div><a href="cl53.html#lteq-op">&lt;=</a>   Less than or equal—binary                      (Relational)</div>
-<div><a href="cl53.html#ltgt-noeq-ha-op">&lt;&gt; != #</a>   Not equal—binary                               (Relational)</div>
-<div><a href="cl53.html#eq-assign">= (assign)</a>   Simple assign—binary                           (Assignment)</div>
-<div><a href="cl53.html#eq-compound-assign">= (compound assign)</a>   Compound assignment—binary                     (Assignment)</div>
-<div><a href="cl53.html#eq-equality">= (equality)</a>   Equal—binary                                   (Relational)</div>
-<div><a href="cl53.html#eqeq-op">==</a>   Exactly equal—binary                           (Relational)</div>
-<div><a href="cl53.html#gt-op">&gt;</a>   Greater than—binary                            (Relational)</div>
-<div><a href="cl53.html#gteq-op">&gt;=</a>   Greater than or equal—binary                   (Relational)</div>
-<div><a href="cl53.html#mi-op">-</a>   Subtraction, unary negative, concatenation  (Math, Character)</div>
-<div><a href="cl53.html#migt-op">-&gt;</a>   Alias assignment—binary                        (Special)</div>
-<div><a href="cl53.html#mimi-op">--</a>   Decrement—unary                                (Mathematical)</div>
-<div><a href="cl53.html#co-op">:</a>   Send—binary                                    (Object)</div>
-<div><a href="cl53.html#coeq-op">:=</a>   Inline assign—binary                           (Assignment)</div>
-<div><a href="cl53.html#quorququ-op">?|??</a>   Display one or more values to the console</div>
-<div><a href="cl53.html#sl-op">/</a>   Division—binary                                (Mathematical)</div>
-<div><a href="cl53.html#and-op">.AND.</a>   Logical AND—binary                             (Logical)</div>
-<div><a href="cl53.html#not-op">.NOT.</a>   Logical NOT—unary                              (Logical)</div>
-<div><a href="cl53.html#or-op">.OR.</a>   Logical OR—binary                              (Logical)</div>
-<div><a href="cl53.html#bo-bc-op">( )</a>   Function or grouping indicator                  (Special)</div>
-<div><a href="cl53.html#so-sc-op">[ ]</a>   Array element indicator                         (Special)</div>
-<div><a href="cl53.html#co-cc-op">{ }</a>   Literal array and code block delimiters         (Special)</div>
-<div><a href="cl53.html#at-op">@</a>   Pass-by-reference—unary                        (Special)</div>
-<div><a href="cl53.html#at-box-cmd">@...BOX</a>   Draw a box on the screen</div>
-<div><a href="cl53.html#at-clear-cmd">@...CLEAR</a>   Clear a rectangular region of the screen</div>
-<div><a href="cl53.html#at-get-cmd">@...GET</a>   Create a new Get object and display it to the screen</div>
-<div><a href="cl53.html#at-get-checkbox-cmd">@...GET CHECKBOX</a>   Create a new check box Get object and display it to the screen</div>
-<div><a href="cl53.html#at-get-listbox-cmd">@...GET LISTBOX</a>   Create a new list box Get object and display it to the screen</div>
-<div><a href="cl53.html#at-get-pushbutton-cmd">@...GET PUSHBUTTON</a>   Create a new push button Get object and display it to the screen</div>
-<div><a href="cl53.html#at-get-radiogroup-cmd">@...GET RADIOGROUP</a>   Create a new radio button group Get object and display it to the screen</div>
-<div><a href="cl53.html#at-get-tbrowse-cmd">@...GET TBROWSE</a>   Create a new TBrowse Get object and display it to the screen</div>
-<div><a href="cl53.html#at-prompt-cmd">@...PROMPT</a>   Paint a menu item and define a message</div>
-<div><a href="cl53.html#at-say-cmd">@...SAY</a>   Display data at a specified screen or printer row and column</div>
-<div><a href="cl53.html#at-to-cmd">@...TO</a>   Draw a single- or double-line box</div>
-<div><a href="cl53.html#dl-op">$</a>   Substring comparison—binary                    (Relational)</div>
-<div><a href="cl53.html#ml-op">*</a>   Multiplication—binary                          (Mathematical)</div>
-<div><a href="cl53.html#mlml-op">**</a>   Exponentiation—binary                          (Mathematical)</div>
-<div><a href="cl53.html#et-op">&amp;</a>   Macro evaluation—unary                         (Special)</div>
-<div><a href="cl53.html#pp-command-or-pp-translate">#command | #translate</a>   Specify a user-defined command or translation directive</div>
-<div><a href="cl53.html#pp-define">#define</a>   Define a manifest constant or pseudofunction</div>
-<div><a href="cl53.html#pp-error">#error</a>   Generate a compiler error and display a message</div>
-<div><a href="cl53.html#pp-ifdef">#ifdef</a>   Compile a section of code if an identifier is defined</div>
-<div><a href="cl53.html#pp-ifndef">#ifndef</a>   Compile a section of code if an identifier is undefined</div>
-<div><a href="cl53.html#pp-include">#include</a>   Include a file into the current source file</div>
-<div><a href="cl53.html#pp-stdout">#stdout</a>   Send literal text to the standard output device</div>
-<div><a href="cl53.html#pp-undef">#undef</a>   Remove a #define macro definition</div>
-<div><a href="cl53.html#pp-xcommand-or-pp-xtranslate">#xcommand | #xtranslate</a>   Specify a user-defined command or translation directive</div>
-<div><a href="cl53.html#pc-op">%</a>   Modulus—binary                                 (Mathematical)</div>
-<div><a href="cl53.html#pl-op">+</a>   Addition, unary positive, concatenation         (Math, Character)</div>
-<div><a href="cl53.html#plpl-op">++</a>   Increment—unary                                (Mathematical)</div>
-<div><a href="cl53.html#aadd">AAdd()</a>   Add a new element to the end of an array</div>
-<div><a href="cl53.html#abs">Abs()</a>   Return the absolute value of a numeric expression</div>
-<div><a href="cl53.html#accept-cmd">ACCEPT*</a>   Place keyboard input into a memory variable</div>
-<div><a href="cl53.html#achoice">AChoice()</a>   Execute a pop-up menu</div>
-<div><a href="cl53.html#aclone">AClone()</a>   Duplicate a nested or multidimensional array</div>
-<div><a href="cl53.html#acopy">ACopy()</a>   Copy elements from one array to another</div>
-<div><a href="cl53.html#adel">ADel()</a>   Delete an array element</div>
-<div><a href="cl53.html#adir">ADir()*</a>   Fill a series of arrays with directory information</div>
-<div><a href="cl53.html#aeval">AEval()</a>   Execute a code block for each element in an array</div>
-<div><a href="cl53.html#afields">AFields()*</a>   Fill arrays with the structure of the current database file</div>
-<div><a href="cl53.html#afill">AFill()</a>   Fill an array with a specified value</div>
-<div><a href="cl53.html#ains">AIns()</a>   Insert a NIL element into an array</div>
-<div><a href="cl53.html#alert">Alert()</a>   Display a simple modal dialog box</div>
-<div><a href="cl53.html#alias">Alias()</a>   Return a specified work area alias</div>
-<div><a href="cl53.html#alltrim">AllTrim()</a>   Remove leading and trailing spaces from a character string</div>
-<div><a href="cl53.html#altd">AltD()</a>   Invoke the CA-Clipper debugger</div>
-<div><a href="cl53.html#announce-cmd">ANNOUNCE</a>   Declare a module identifier</div>
-<div><a href="cl53.html#append-blank-cmd">APPEND BLANK</a>   Add a new record to the current database file</div>
-<div><a href="cl53.html#append-from-cmd">APPEND FROM</a>   Import records from a database (.dbf) file or ASCII text file</div>
-<div><a href="cl53.html#array">Array()</a>   Create an uninitialized array of specified length</div>
-<div><a href="cl53.html#asc">Asc()</a>   Convert a character to its ASCII value</div>
-<div><a href="cl53.html#ascan">AScan()</a>   Scan an array for a value or until a block returns true (<code>.T.</code>)</div>
-<div><a href="cl53.html#asize">ASize()</a>   Grow or shrink an array</div>
-<div><a href="cl53.html#asort">ASort()</a>   Sort an array</div>
-<div><a href="cl53.html#at">At()</a>   Return the position of a substring within a character string</div>
-<div><a href="cl53.html#atail">ATail()</a>   Return the highest numbered element of an array</div>
-<div><a href="cl53.html#average-cmd">AVERAGE</a>   Average numeric expressions in the current work area</div>
-<div><a href="cl53.html#begin-sequence-cmd">BEGIN SEQUENCE</a>   Define a sequence of statements for a BREAK</div>
-<div><a href="cl53.html#bin2i">Bin2I()</a>   Convert a 16-bit signed integer to a numeric value</div>
-<div><a href="cl53.html#bin2l">Bin2L()</a>   Convert a 32-bit signed integer to a numeric value</div>
-<div><a href="cl53.html#bin2w">Bin2W()</a>   Convert a 16-bit unsigned integer to a numeric value</div>
-<div><a href="cl53.html#blobdirectexport">BLOBDIRECTEXPORT()</a>   Export the contents of a binary large object (BLOB) pointer to a file</div>
-<div><a href="cl53.html#blobdirectget">BLOBDIRECTGET()</a>   Retrieve data stored in a BLOB file without referencing a specific field</div>
-<div><a href="cl53.html#blobdirectimport">BLOBDIRECTIMPORT()</a>   Import a file into a BLOB file and return a pointer to the data</div>
-<div><a href="cl53.html#blobdirectput">BLOBDIRECTPUT()</a>   Put data in a BLOB file without referencing a specific field</div>
-<div><a href="cl53.html#blobexport">BLOBEXPORT()</a>   Copy the contents of a BLOB, identified by its memo field number, to a file</div>
-<div><a href="cl53.html#blobget">BLOBGET()</a>   Get the contents of a BLOB, identified by its memo field number</div>
-<div><a href="cl53.html#blobimport">BLOBIMPORT()</a>   Read the contents of a file as a BLOB, identified by a memo field number</div>
-<div><a href="cl53.html#blobrootget">BLOBROOTGET()</a>   Retrieve the data from the root area of a BLOB file</div>
-<div><a href="cl53.html#blobrootlock">BLOBROOTLOCK()</a>   Obtain a lock on the root area of a BLOB file</div>
-<div><a href="cl53.html#blobrootput">BLOBROOTPUT()</a>   Store data in the root area of a BLOB file</div>
-<div><a href="cl53.html#blobrootunlock">BLOBROOTUNLOCK()</a>   Release the lock on a BLOB file's root area</div>
-<div><a href="cl53.html#bof">Bof()</a>   Determine when beginning of file is encountered</div>
-<div><a href="cl53.html#break">Break()</a>   Branch out of a BEGIN SEQUENCE...END construct</div>
-<div><a href="cl53.html#browse">Browse()*</a>   Browse records within a window</div>
-<div><a href="cl53.html#call-cmd">CALL*</a>   Execute a C or Assembler procedure</div>
-<div><a href="cl53.html#cancel-cmd">CANCEL*</a>   Terminate program processing</div>
-<div><a href="cl53.html#cdow">CDoW()</a>   Convert a date value to a character day of the week</div>
-<div><a href="cl53.html#checkbox">CheckBox</a>   Create check boxes, which are controls that can be toggled on or off by a user</div>
-<div><a href="cl53.html#chr">Chr()</a>   Convert an ASCII code to a character value</div>
-<div><a href="cl53.html#clear-all-cmd">CLEAR ALL*</a>   Close files and release public and private variables</div>
-<div><a href="cl53.html#clear-gets-cmd">CLEAR GETS</a>   Release Get objects from the current GetList array</div>
-<div><a href="cl53.html#clear-memory-cmd">CLEAR MEMORY</a>   Release all public and private variables</div>
-<div><a href="cl53.html#clear-screen-cmd">CLEAR SCREEN</a>   Clear the screen and return the cursor home</div>
-<div><a href="cl53.html#clear-typeahead-cmd">CLEAR TYPEAHEAD</a>   Empty the keyboard buffer</div>
-<div><a href="cl53.html#close-cmd">CLOSE</a>   Close a specific set of files</div>
-<div><a href="cl53.html#cmonth">CMonth()</a>   Convert a date to a character month name</div>
-<div><a href="cl53.html#col">Col()</a>   Return the screen cursor column position</div>
-<div><a href="cl53.html#colorselect">ColorSelect()</a>   Activate attribute in current color settings</div>
-<div><a href="cl53.html#commit-cmd">COMMIT</a>   Perform a solid-disk write for all active work areas</div>
-<div><a href="cl53.html#continue-cmd">CONTINUE</a>   Resume a pending LOCATE</div>
-<div><a href="cl53.html#copy-file-cmd">COPY FILE</a>   Copy a file to a new file or to a device</div>
-<div><a href="cl53.html#copy-structure-cmd">COPY STRUCTURE</a>   Copy the current .dbf structure to a new database (.dbf) file</div>
-<div><a href="cl53.html#copy-structure-extended-cmd">COPY STRUCTURE EXTENDED</a>   Copy field definitions to a .dbf file</div>
-<div><a href="cl53.html#copy-to-cmd">COPY TO</a>   Export records to a new database (.dbf) file or ASCII text file</div>
-<div><a href="cl53.html#count-cmd">COUNT</a>   Tally records to a variable</div>
-<div><a href="cl53.html#create-cmd">CREATE</a>   Create an empty structure extended (.dbf) file</div>
-<div><a href="cl53.html#create-from-cmd">CREATE FROM</a>   Create a new .dbf file from a structure extended file</div>
-<div><a href="cl53.html#ctod">CToD()</a>   Convert a date string to a date value</div>
-<div><a href="cl53.html#curdir">CurDir()</a>   Return the current DOS directory</div>
-<div><a href="cl53.html#dbappend">dbAppend()</a>   Append a new record to the database open in the current work area</div>
-<div><a href="cl53.html#dbclearfilter">dbClearFilter()</a>   Clear a filter condition</div>
-<div><a href="cl53.html#dbclearindex">dbClearIndex()</a>   Close all indexes for the current work area</div>
-<div><a href="cl53.html#dbclearrelation">dbClearRelation()</a>   Clear active relations</div>
-<div><a href="cl53.html#dbcloseall">dbCloseAll()</a>   Close all occupied work areas</div>
-<div><a href="cl53.html#dbclosearea">dbCloseArea()</a>   Close a work area</div>
-<div><a href="cl53.html#dbcommit">dbCommit()</a>   Flush pending updates</div>
-<div><a href="cl53.html#dbcommitall">dbCommitAll()</a>   Flush pending updates in all work areas</div>
-<div><a href="cl53.html#dbcreate">dbCreate()</a>   Create a database file from a database structure array</div>
-<div><a href="cl53.html#dbcreateindex">dbCreateIndex()</a>   Create an index file</div>
-<div><a href="cl53.html#dbdelete">dbDelete()</a>   Mark a record for deletion</div>
-<div><a href="cl53.html#dbedit">dbEdit()</a>   Browse records in a table layout</div>
-<div><a href="cl53.html#dbeval">dbEval()</a>   Evaluate a code block for each record matching a scope and condition</div>
-<div><a href="cl53.html#dbfieldinfo">dbFieldInfo()</a>   Return and optionally change information about a field</div>
-<div><a href="cl53.html#dbfileget">dbFileGet()</a>   Insert the contents of a field into a file</div>
-<div><a href="cl53.html#dbfileput">dbFilePut()</a>   Insert the contents of a file into a field</div>
-<div><a href="cl53.html#dbfilter">dbFilter()</a>   Return the current filter expression as a character string</div>
-<div><a href="cl53.html#dbgobottom">dbGoBottom()</a>   Move to the last logical record</div>
-<div><a href="cl53.html#dbgoto">dbGoto()</a>   Position record pointer to a specific identity</div>
-<div><a href="cl53.html#dbgotop">dbGoTop()</a>   Move to the first logical record</div>
-<div><a href="cl53.html#dbinfo">dbInfo()</a>   Return and optionally change information about a database file opened in a work area</div>
-<div><a href="cl53.html#dborderinfo">dbOrderInfo()</a>   Return and optionally change information about orders and index files</div>
-<div><a href="cl53.html#dbrecall">dbRecall()</a>   Reinstate a record marked for deletion</div>
-<div><a href="cl53.html#dbrecordinfo">dbRecordInfo()</a>   Return and optionally change information about a record</div>
-<div><a href="cl53.html#dbreindex">dbReindex()</a>   Recreate all active indexes for the current work area</div>
-<div><a href="cl53.html#dbrelation">dbRelation()</a>   Return the linking expression of a specified relation</div>
-<div><a href="cl53.html#dbrlock">dbRLock()</a>   Lock the record at the current or specified identity</div>
-<div><a href="cl53.html#dbrlocklist">dbRLockList()</a>   Return an array of the current lock list</div>
-<div><a href="cl53.html#dbrselect">dbRSelect()</a>   Return the target work area number of a relation</div>
-<div><a href="cl53.html#dbrunlock">dbRUnlock()</a>   Release all or specified record locks</div>
-<div><a href="cl53.html#dbseek">dbSeek()</a>   Move to the record having the specified key value</div>
-<div><a href="cl53.html#dbselectarea">dbSelectArea()</a>   Change the current work area</div>
-<div><a href="cl53.html#dbsetdriver">dbSetDriver()</a>   Return the default database driver and optionally set a new driver</div>
-<div><a href="cl53.html#dbsetfilter">dbSetFilter()</a>   Set a filter condition</div>
-<div><a href="cl53.html#dbsetindex">dbSetIndex()</a>   Empty orders from an order bag into the order list</div>
-<div><a href="cl53.html#dbsetorder">dbSetOrder()</a>   Set the controlling order</div>
-<div><a href="cl53.html#dbsetrelation">dbSetRelation()</a>   Relate two work areas</div>
-<div><a href="cl53.html#dbskip">dbSkip()</a>   Move relative to the current record</div>
-<div><a href="cl53.html#dbstruct">dbStruct()</a>   Create an array containing the structure of a database file</div>
-<div><a href="cl53.html#dbunlock">dbUnlock()</a>   Release all locks for the current work area</div>
-<div><a href="cl53.html#dbunlockall">dbUnlockAll()</a>   Release all locks for all work areas</div>
-<div><a href="cl53.html#dbusearea">dbUseArea()</a>   Use a database file in a work area</div>
-<div><a href="cl53.html#date">Date()</a>   Return the system date as a date value</div>
-<div><a href="cl53.html#day">Day()</a>   Return the day of the month as a numeric value</div>
-<div><a href="cl53.html#dbf">Dbf()*</a>   Return current alias name</div>
-<div><a href="cl53.html#deleted">Deleted()</a>   Return the deleted status of the current record</div>
-<div><a href="cl53.html#descend">Descend()</a>   Create a descending index key value</div>
-<div><a href="cl53.html#devout">DevOut()</a>   Write a value to the current device</div>
-<div><a href="cl53.html#devoutpict">DevOutPict()</a>   Write a value to the current device using a picture clause</div>
-<div><a href="cl53.html#devpos">DevPos()</a>   Move the cursor or printhead to a new position depending on the current device</div>
-<div><a href="cl53.html#declare-cmd">DECLARE*</a>   Create and initialize private memory variables and arrays</div>
-<div><a href="cl53.html#delete-cmd">DELETE</a>   Mark records for deletion</div>
-<div><a href="cl53.html#delete-file-cmd">DELETE FILE</a>   Remove a file from disk</div>
-<div><a href="cl53.html#delete-tag-cmd">DELETE TAG</a>   Delete a tag</div>
-<div><a href="cl53.html#dirchange">DirChange()</a>   Change the current DOS directory</div>
-<div><a href="cl53.html#directory">Directory()</a>   Create an array of directory and file information</div>
-<div><a href="cl53.html#dirmake">DirMake()</a>   Create a directory</div>
-<div><a href="cl53.html#dirremove">DirRemove()</a>   Remove a directory</div>
-<div><a href="cl53.html#diskchange">DiskChange()</a>   Change the current DOS disk drive</div>
-<div><a href="cl53.html#diskname">DiskName()</a>   Return the current DOS drive</div>
-<div><a href="cl53.html#diskspace">DiskSpace()</a>   Return the space available on a specified disk</div>
-<div><a href="cl53.html#dispbegin">DispBegin()</a>   Begin buffering screen output</div>
-<div><a href="cl53.html#dispbox">DispBox()</a>   Display a box on the screen</div>
-<div><a href="cl53.html#dispcount">DispCount()</a>   Return the number of pending DispEnd() requests</div>
-<div><a href="cl53.html#dispend">DispEnd()</a>   Display buffered screen updates</div>
-<div><a href="cl53.html#dispout">DispOut()</a>   Write a value to the display</div>
-<div><a href="cl53.html#dir-cmd">DIR*</a>   Display a listing of files from a specified path</div>
-<div><a href="cl53.html#display-cmd">DISPLAY</a>   Display records to the console</div>
-<div><a href="cl53.html#doserror">DosError()</a>   Return the last DOS error number</div>
-<div><a href="cl53.html#dow">DoW()</a>   Convert a date value to a numeric day of the week</div>
-<div><a href="cl53.html#do-case-cmd">DO CASE</a>   Execute one of several alternative blocks of statements</div>
-<div><a href="cl53.html#do-while-cmd">DO WHILE</a>   Execute a loop while a condition is true (<code>.T.</code>)</div>
-<div><a href="cl53.html#do-cmd">DO*</a>   Call a procedure</div>
-<div><a href="cl53.html#dtoc">DToC()</a>   Convert a date value to a character string</div>
-<div><a href="cl53.html#dtos">DToS()</a>   Convert a date value to a character string formatted as yyyymmdd</div>
-<div><a href="cl53.html#eject-cmd">EJECT</a>   Advance the printhead to top of form</div>
-<div><a href="cl53.html#empty">Empty()</a>   Determine if the result of an expression is empty</div>
-<div><a href="cl53.html#eof">Eof()</a>   Determine when end of file is encountered</div>
-<div><a href="cl53.html#error">Error</a>   Provides objects containing information about runtime errors</div>
-<div><a href="cl53.html#errorblock">ErrorBlock()</a>   Post a code block to execute when a runtime error occurs</div>
-<div><a href="cl53.html#errorlevel">ErrorLevel()</a>   Set the CA-Clipper return code</div>
-<div><a href="cl53.html#erase-cmd">ERASE</a>   Remove a file from disk</div>
-<div><a href="cl53.html#eval">Eval()</a>   Evaluate a code block</div>
-<div><a href="cl53.html#exp">Exp()</a>   Calculate e**x</div>
-<div><a href="cl53.html#exit-procedure-cmd">EXIT PROCEDURE</a>   Declare an exit procedure</div>
-<div><a href="cl53.html#external-cmd">EXTERNAL*</a>   Declare a list of procedure or user-defined function names to the linker</div>
-<div><a href="cl53.html#fclose">FClose()</a>   Close an open binary file and write DOS buffers to disk</div>
-<div><a href="cl53.html#fcount">FCount()</a>   Return the number of fields in the current .dbf file</div>
-<div><a href="cl53.html#fcreate">FCreate()</a>   Create and/or truncate a binary file to zero-length</div>
-<div><a href="cl53.html#ferase">FErase()</a>   Delete a file from disk</div>
-<div><a href="cl53.html#ferror">FError()</a>   Test for errors after a binary file operation</div>
-<div><a href="cl53.html#fieldblock">FieldBlock()</a>   Return a set-get code block for a given field</div>
-<div><a href="cl53.html#fieldget">FieldGet()</a>   Retrieve the value of a field using the ordinal position of the field in the database structure</div>
-<div><a href="cl53.html#fieldnameslfield">FieldName()/FIELD()</a>   Return a field name from the current database (.dbf) file</div>
-<div><a href="cl53.html#fieldpos">FieldPos()</a>   Return the position of a field in a work area</div>
-<div><a href="cl53.html#fieldput">FieldPut()</a>   Set the value of a field variable using the ordinal position of the field in the database structure</div>
-<div><a href="cl53.html#fieldwblock">FieldWBlock()</a>   Return a set-get code block for a field in a given work area</div>
-<div><a href="cl53.html#field-cmd">FIELD</a>   Declare database field names</div>
-<div><a href="cl53.html#file">FILE()</a>   Determine if files exist in the CA-Clipper default directory or path</div>
-<div><a href="cl53.html#find-cmd">FIND*</a>   Search an index for a specified key value</div>
-<div><a href="cl53.html#fklabel">FKLabel()*</a>   Return function key name</div>
-<div><a href="cl53.html#fkmax">FKMax()*</a>   Return number of function keys as a constant</div>
-<div><a href="cl53.html#flock">FLock()</a>   Lock an open and shared database file</div>
-<div><a href="cl53.html#found">Found()</a>   Determine if the previous search operation succeeded</div>
-<div><a href="cl53.html#fopen">FOpen()</a>   Open a binary file</div>
-<div><a href="cl53.html#for-cmd">FOR</a>   Execute a block of statements a specified number of times</div>
-<div><a href="cl53.html#fread">FRead()</a>   Read characters from a binary file into a buffer variable</div>
-<div><a href="cl53.html#freadstr">FReadStr()</a>   Read characters from a binary file</div>
-<div><a href="cl53.html#frename">FRename()</a>   Change the name of a file</div>
-<div><a href="cl53.html#fseek">FSeek()</a>   Set a binary file pointer to a new position</div>
-<div><a href="cl53.html#function-cmd">FUNCTION</a>   Declare a user-defined function name and formal parameters</div>
-<div><a href="cl53.html#fwrite">FWrite()</a>   Write to an open binary file</div>
-<div><a href="cl53.html#gbmpdisp">GBMPDISP()</a>   Display a bitmap (.BMP) file on screen</div>
-<div><a href="cl53.html#gbmpload">GBMPLOAD()</a>   Load a bitmap (.bmp) or icon (.ico) file into memory</div>
-<div><a href="cl53.html#get">Get</a>   Provides objects for interactive editing of database fields and variables</div>
-<div><a href="cl53.html#getactive">GetActive()</a>   Return the currently active Get object</div>
-<div><a href="cl53.html#getapplykey">GetApplyKey()</a>   Apply a key to a Get object from within a  reader</div>
-<div><a href="cl53.html#getdosetkey">GetDoSetKey()</a>   Process SET KEY during GET editing</div>
-<div><a href="cl53.html#getenv">GetEnv()</a>   Retrieve the contents of a DOS environment variable</div>
-<div><a href="cl53.html#getpostvalidate">GetPostValidate()</a>   Postvalidate the current Get object</div>
-<div><a href="cl53.html#getprevalidate">GetPreValidate()</a>   Prevalidate a Get object</div>
-<div><a href="cl53.html#getreader">GetReader()</a>   Execute standard READ behavior for a Get object</div>
-<div><a href="cl53.html#gellipse">GELLIPSE()</a>   Draw an ellipse or circle</div>
-<div><a href="cl53.html#gfnterase">GFNTERASE()</a>   Erase a font from memory</div>
-<div><a href="cl53.html#gfntload">GFNTLOAD()</a>   Load a font file into memory</div>
-<div><a href="cl53.html#gfntset">GFNTSET()</a>   Set an already loaded font as active</div>
-<div><a href="cl53.html#gframe">GFRAME()</a>   Draw a frame with a 3-D look</div>
-<div><a href="cl53.html#ggetpixel">GGETPIXEL()</a>   Get color information for a pixel</div>
-<div><a href="cl53.html#gline">GLINE()</a>   Draw a line in graphic mode</div>
-<div><a href="cl53.html#gmode">GMODE()</a>   Switch video mode</div>
-<div><a href="cl53.html#go-cmd">GO</a>   Move the pointer to the specified identity</div>
-<div><a href="cl53.html#gpolygon">GPOLYGON()</a>   Draw a polygon on screen</div>
-<div><a href="cl53.html#gputpixel">GPUTPIXEL()</a>   Draw a pixel on the screen</div>
-<div><a href="cl53.html#grect">GRECT()</a>   Draw a rectangle in graphic mode</div>
-<div><a href="cl53.html#gsetclip">GSETCLIP()</a>   Define the allowed display area</div>
-<div><a href="cl53.html#gsetexcl">GSETEXCL()</a>   Define a screen region to be excluded from display</div>
-<div><a href="cl53.html#gsetpal">GSETPAL()</a>   Change components of a color</div>
-<div><a href="cl53.html#gwriteat">GWRITEAT()</a>   Draw graphic text without background</div>
-<div><a href="cl53.html#hardcr">HardCR()</a>   Replace all soft carriage returns in a character string with hard carriage returns</div>
-<div><a href="cl53.html#header">Header()</a>   Return the current database file header length</div>
-<div><a href="cl53.html#i2bin">I2Bin()</a>   Convert a CA-Clipper numeric to a 16-bit binary integer</div>
-<div><a href="cl53.html#if-cmd">IF</a>   Execute one of several alternative blocks of statements</div>
-<div><a href="cl53.html#if">IF()</a>   Return the result of an expression based on a condition</div>
-<div><a href="cl53.html#iif">IIF()</a>   Return the result of an expression based on a condition</div>
-<div><a href="cl53.html#indexext">IndexExt()</a>   Return the default index extension based on the database driver currently linked</div>
-<div><a href="cl53.html#indexkey">IndexKey()</a>   Return the key expression of a specified index</div>
-<div><a href="cl53.html#indexord">IndexOrd()</a>   Return the order position of the controlling index</div>
-<div><a href="cl53.html#inkey">Inkey()</a>   Extract a character from the keyboard buffer or a mouse event</div>
-<div><a href="cl53.html#index-cmd">INDEX</a>   Create an index file</div>
-<div><a href="cl53.html#init-procedure-cmd">INIT PROCEDURE</a>   Declare an initialization procedure</div>
-<div><a href="cl53.html#input-cmd">INPUT*</a>   Enter the result of an expression into a variable</div>
-<div><a href="cl53.html#int">INT()</a>   Convert a numeric value to an integer</div>
-<div><a href="cl53.html#isalpha">IsAlpha()</a>   Determine if the leftmost character in a string is alphabetic</div>
-<div><a href="cl53.html#iscolor">IsColor()</a>   Determine if the current computer has color capability</div>
-<div><a href="cl53.html#isdigit">IsDigit()</a>   Determine if the leftmost character in a character string is a digit</div>
-<div><a href="cl53.html#islower">IsLower()</a>   Determine if the leftmost character is a lowercase letter</div>
-<div><a href="cl53.html#isprinter">IsPrinter()</a>   Determine whether LPT1 is ready</div>
-<div><a href="cl53.html#isupper">IsUpper()</a>   Determine if the leftmost character in a string is uppercase</div>
-<div><a href="cl53.html#join-cmd">JOIN</a>   Create a new database file by merging records/fields from two work areas</div>
-<div><a href="cl53.html#keyboard-cmd">KEYBOARD</a>   Stuff a string into the keyboard buffer</div>
-<div><a href="cl53.html#l2bin">L2Bin()</a>   Convert a CA-Clipper numeric value to a 32-bit binary integer</div>
-<div><a href="cl53.html#lastkey">LastKey()</a>   Return the Inkey() value of the last key extracted from the keyboard buffer</div>
-<div><a href="cl53.html#lastrec">LastRec()</a>   Determine the number of records in the current .dbf file</div>
-<div><a href="cl53.html#label-form-cmd">LABEL FORM</a>   Display labels to the console</div>
-<div><a href="cl53.html#left">Left()</a>   Extract a substring beginning with the first character in a string</div>
-<div><a href="cl53.html#len">Len()</a>   Return the length of a character string or the number of elements in an array</div>
-<div><a href="cl53.html#listbox">ListBox</a>   Create a list box</div>
-<div><a href="cl53.html#list-cmd">LIST</a>   List records to the console</div>
-<div><a href="cl53.html#log">Log()</a>   Calculate the natural logarithm of a numeric value</div>
-<div><a href="cl53.html#lower">Lower()</a>   Convert uppercase characters to lowercase</div>
-<div><a href="cl53.html#local-cmd">LOCAL</a>   Declare and initialize local variables and arrays</div>
-<div><a href="cl53.html#locate-cmd">LOCATE</a>   Search sequentially for a record matching a condition</div>
-<div><a href="cl53.html#ltrim">LTrim()</a>   Remove leading spaces from a character string</div>
-<div><a href="cl53.html#lupdate">LUpdate()</a>   Return the last modification date of a database (.dbf) file</div>
-<div><a href="cl53.html#max">Max()</a>   Return the larger of two numeric or date values</div>
-<div><a href="cl53.html#maxcol">MaxCol()</a>   Determine the maximum visible screen column</div>
-<div><a href="cl53.html#maxrow">MaxRow()</a>   Determine the maximum visible screen row</div>
-<div><a href="cl53.html#mcol">MCol()</a>   Determine the mouse cursor's screen column position</div>
-<div><a href="cl53.html#mdblclk">MDblClk()</a>   Determine the double-click speed threshold of the mouse</div>
-<div><a href="cl53.html#memoedit">MemoEdit()</a>   Display or edit character strings and memo fields</div>
-<div><a href="cl53.html#memoline">MemoLine()</a>   Extract a line of text from a character string or memo field</div>
-<div><a href="cl53.html#memory">Memory()</a>   Determine the amount of available free pool memory</div>
-<div><a href="cl53.html#memoread">MemoRead()</a>   Return the contents of a disk file as a character string</div>
-<div><a href="cl53.html#memotran">MemoTran()</a>   Replace carriage return/linefeeds in character strings</div>
-<div><a href="cl53.html#memowrit">MemoWrit()</a>   Write a character string or memo field to a disk file</div>
-<div><a href="cl53.html#memvarblock">MemVarBlock()</a>   Return a set-get code block for a given memory variable</div>
-<div><a href="cl53.html#menuitem">MenuItem</a>   Create a menu item</div>
-<div><a href="cl53.html#menumodal">MenuModal()</a>   Activate a top bar menu</div>
-<div><a href="cl53.html#memosetsuper">MEMOSETSUPER()</a>   Set an RDD inheritance chain for the DBFMEMO database driver</div>
-<div><a href="cl53.html#memvar-cmd">MEMVAR</a>   Declare private and public variable names</div>
-<div><a href="cl53.html#menu-to-cmd">MENU TO</a>   Execute a lightbar menu for defined PROMPTs</div>
-<div><a href="cl53.html#mhide">MHide()</a>   Hide the mouse pointer</div>
-<div><a href="cl53.html#min">Min()</a>   Return the smaller of two numeric or date values</div>
-<div><a href="cl53.html#mlcount">MLCount()</a>   Count the number of lines in a character string or memo field</div>
-<div><a href="cl53.html#mlctopos">MLCToPos()</a>   Return the byte position of a formatted string based on line and column position</div>
-<div><a href="cl53.html#mleftdown">MLeftDown()</a>   Determine the press status of the left mouse button</div>
-<div><a href="cl53.html#mlpos">MLPos()</a>   Determine the position of a line in a character string or memo field</div>
-<div><a href="cl53.html#mod">Mod()*</a>   Return the dBASE III PLUS modulus of two numbers</div>
-<div><a href="cl53.html#month">Month()</a>   Convert a date value to the number of the month</div>
-<div><a href="cl53.html#mpostolc">MPosToLC()</a>   Return line and column position of a formatted string based on a specified byte position</div>
-<div><a href="cl53.html#mpresent">MPresent()</a>   Determine if a mouse is present</div>
-<div><a href="cl53.html#mreststate">MRestState()</a>   Re-establish the previous state of a mouse</div>
-<div><a href="cl53.html#mrightdown">MRightDown()</a>   Determine the status of the right mouse button</div>
-<div><a href="cl53.html#mrow">MRow()</a>   Determine a mouse cursor's screen row position</div>
-<div><a href="cl53.html#msavestate">MSaveState()</a>   Save the current state of a mouse</div>
-<div><a href="cl53.html#msetbounds">MSetBounds()</a>   Set screen boundaries for the mouse cursor</div>
-<div><a href="cl53.html#msetcursor">MSetCursor()</a>   Determine a mouse's visibility</div>
-<div><a href="cl53.html#msetpos">MSetPos()</a>   Set a new position for the mouse cursor</div>
-<div><a href="cl53.html#msetclip">MSETCLIP()</a>   Define an inclusion region</div>
-<div><a href="cl53.html#mshow">MShow()</a>   Display the mouse pointer</div>
-<div><a href="cl53.html#mstate">MSTATE()</a>   Return the current mouse state</div>
-<div><a href="cl53.html#neterr">NetErr()</a>   Determine if a network command has failed</div>
-<div><a href="cl53.html#netname">NetName()</a>   Return the current workstation identification</div>
-<div><a href="cl53.html#nextkey">NextKey()</a>   Read the pending key in the keyboard buffer</div>
-<div><a href="cl53.html#nosnow">NoSnow()</a>   Toggle snow suppression</div>
-<div><a href="cl53.html#note-cmd">NOTE*</a>   Place a single-line comment in a program file</div>
-<div><a href="cl53.html#ordbagext">ordBagExt()</a>   Return the default order bag RDD extension</div>
-<div><a href="cl53.html#ordbagname">ordBagName()</a>   Return the order bag name of a specific order</div>
-<div><a href="cl53.html#ordcondset">ordCondSet()</a>   Set the condition and scope for an order</div>
-<div><a href="cl53.html#ordcreate">ordCreate()</a>   Create an order in an order bag</div>
-<div><a href="cl53.html#orddescend">ordDescend()</a>   Return and optionally change the descending flag of an order</div>
-<div><a href="cl53.html#orddestroy">ordDestroy()</a>   Remove a specified order from an order bag</div>
-<div><a href="cl53.html#ordfor">ordFor()</a>   Return the FOR expression of an order</div>
-<div><a href="cl53.html#ordisunique">ordIsUnique()</a>   Return the status of the unique flag for a given order</div>
-<div><a href="cl53.html#ordkey">ordKey()</a>   Return the key expression of an order</div>
-<div><a href="cl53.html#ordkeyadd">ordKeyAdd()</a>   Add a key to a custom built order</div>
-<div><a href="cl53.html#ordkeycount">ordKeyCount()</a>   Return the number of keys in an order</div>
-<div><a href="cl53.html#ordkeydel">ordKeyDel()</a>   Delete a key from a custom built order</div>
-<div><a href="cl53.html#ordkeygoto">ordKeyGoto()</a>   Move to a record specified by its logical record number in the controlling order</div>
-<div><a href="cl53.html#ordkeyno">ordKeyNo()</a>   Get the logical record number of the current record</div>
-<div><a href="cl53.html#ordkeyval">ordKeyVal()</a>   Get the key value of the current record from the controlling order</div>
-<div><a href="cl53.html#ordlistadd">ordListAdd()</a>   Add orders to the order list</div>
-<div><a href="cl53.html#ordlistclear">ordListClear()</a>   Clear the current order list</div>
-<div><a href="cl53.html#ordlistrebuild">ordListRebuild()</a>   Rebuild all orders in the order list of the current work area</div>
-<div><a href="cl53.html#ordname">ordName()</a>   Return the name of an order in the order list</div>
-<div><a href="cl53.html#ordnumber">ordNumber()</a>   Return the position of an order in the current order list</div>
-<div><a href="cl53.html#ordscope">ordScope()</a>   Set or clear the boundaries for scoping key values in the controlling order</div>
-<div><a href="cl53.html#ordsetfocus">ordSetFocus()</a>   Set focus to an order in an order list</div>
-<div><a href="cl53.html#ordsetrelation">ordSetRelation()</a>   Relate a specified work area to the current work area</div>
-<div><a href="cl53.html#ordskipunique">ordSkipUnique()</a>   Move the record pointer to the next or previous unique key in the controlling order</div>
-<div><a href="cl53.html#ordcond">ORDCOND()</a>   Specify conditions for ordering</div>
-<div><a href="cl53.html#os">OS()</a>   Return the operating system name</div>
-<div><a href="cl53.html#outerr">OutErr()</a>   Write a list of values to the standard error device</div>
-<div><a href="cl53.html#outstd">OutStd()</a>   Write a list of values to the standard output device</div>
-<div><a href="cl53.html#pad">Pad()</a>   Pad character, date, and numeric values with a fill character</div>
-<div><a href="cl53.html#pack-cmd">PACK</a>   Remove deleted records from a database file</div>
-<div><a href="cl53.html#parameters-cmd">PARAMETERS</a>   Create private parameter variables</div>
-<div><a href="cl53.html#pcol">PCol()</a>   Return the current column position of the printhead</div>
-<div><a href="cl53.html#pcount">PCount()</a>   Determine the position of the last actual parameter passed</div>
-<div><a href="cl53.html#popupmenu">PopUpMenu</a>   Create a pop-up menu</div>
-<div><a href="cl53.html#procline">ProcLine()</a>   Return the source line number of the current or previous activation</div>
-<div><a href="cl53.html#procname">ProcName()</a>   Return the name of the current or previous procedure or user-defined function</div>
-<div><a href="cl53.html#private-cmd">PRIVATE</a>   Create and initialize private memory variables and arrays</div>
-<div><a href="cl53.html#prow">PRow()</a>   Return the current row position of the printhead</div>
-<div><a href="cl53.html#procedure-cmd">PROCEDURE</a>   Declare a procedure name and formal parameters</div>
-<div><a href="cl53.html#pushbutton">PushButton</a>   Create a push button</div>
-<div><a href="cl53.html#public-cmd">PUBLIC</a>   Create and initialize public memory variables and arrays</div>
-<div><a href="cl53.html#qout">QOut()</a>   Display a list of expressions to the console</div>
-<div><a href="cl53.html#quit-cmd">QUIT</a>   Terminate program processing</div>
-<div><a href="cl53.html#rddlist">rddList()</a>   Return an array of the available Replaceable Database Drivers (RDDs)</div>
-<div><a href="cl53.html#rddname">rddName()</a>   Return the name of the RDD active in the current or specified work area</div>
-<div><a href="cl53.html#rddsetdefault">rddSetDefault()</a>   Set or return the default RDD for the application</div>
-<div><a href="cl53.html#radiobutto">RadioButto</a>   Create a radio button</div>
-<div><a href="cl53.html#radiogroup">RadioGroup</a>   Create a radio button group</div>
-<div><a href="cl53.html#rat">RAt()</a>   Return the position of the last occurrence of a substring</div>
-<div><a href="cl53.html#readexit">ReadExit()</a>   Toggle Up arrow and Down arrow as READ exit keys</div>
-<div><a href="cl53.html#readformat">ReadFormat()</a>   Return and optionally, set the code block that implements a format (.fmt) file</div>
-<div><a href="cl53.html#readinsert">ReadInsert()</a>   Toggle the current insert mode for READ and MemoEdit()</div>
-<div><a href="cl53.html#readkey">ReadKey()*</a>   Determine what key terminated a READ</div>
-<div><a href="cl53.html#readkill">ReadKill()</a>   Return, and optionally set, whether the current READ should be exited</div>
-<div><a href="cl53.html#readmodal">ReadModal()</a>   Activate a full-screen editing mode for a GetList</div>
-<div><a href="cl53.html#readupdated">ReadUpdated()</a>   Determine whether any GET variables changed during a READ and optionally change the ReadUpdated() flag</div>
-<div><a href="cl53.html#readvar">ReadVar()</a>   Return the current GET/MENU variable name</div>
-<div><a href="cl53.html#reccount">RecCount()*</a>   Determine the number of records in the current database (.dbf) file</div>
-<div><a href="cl53.html#recno">RecNo()</a>   Return the identity at the position of the record pointer</div>
-<div><a href="cl53.html#recsize">RecSize()</a>   Determine the record length of a database (.dbf) file</div>
-<div><a href="cl53.html#replicate">Replicate()</a>   Return a string repeated a specified number of times</div>
-<div><a href="cl53.html#restscreen">RestScreen()</a>   Display a saved screen region to a specified location</div>
-<div><a href="cl53.html#read-cmd">READ</a>   Activate full-screen editing mode using Get objects</div>
-<div><a href="cl53.html#recall-cmd">RECALL</a>   Restore records marked for deletion</div>
-<div><a href="cl53.html#reindex-cmd">REINDEX</a>   Rebuild open indexes in the current work area</div>
-<div><a href="cl53.html#release-cmd">RELEASE</a>   Delete public and private memory variables</div>
-<div><a href="cl53.html#rename-cmd">RENAME</a>   Change the name of a file</div>
-<div><a href="cl53.html#replace-cmd">REPLACE</a>   Assign new values to field variables</div>
-<div><a href="cl53.html#report-form-cmd">REPORT FORM</a>   Display a report to the console</div>
-<div><a href="cl53.html#request-cmd">REQUEST</a>   Declare a module request list</div>
-<div><a href="cl53.html#restore-cmd">RESTORE</a>   Retrieve memory variables from a memory (.mem) file</div>
-<div><a href="cl53.html#restore-screen-cmd">RESTORE SCREEN*</a>   Display a saved screen</div>
-<div><a href="cl53.html#return-cmd">RETURN</a>   Terminate a procedure, user-defined function, or program</div>
-<div><a href="cl53.html#right">Right()</a>   Return a substring beginning with the rightmost character</div>
-<div><a href="cl53.html#rlock">RLock()</a>   Lock the current record in the active work area</div>
-<div><a href="cl53.html#round">Round()</a>   Return a numeric value rounded to a specified number of digits</div>
-<div><a href="cl53.html#row">Row()</a>   Return the screen row position of the cursor</div>
-<div><a href="cl53.html#rtrim">RTrim()</a>   Remove trailing spaces from a character string</div>
-<div><a href="cl53.html#run-cmd">RUN</a>   Execute a DOS command or program</div>
-<div><a href="cl53.html#savescreen">SaveScreen()</a>   Save a screen region for later display</div>
-<div><a href="cl53.html#save-cmd">SAVE</a>   Save variables to a memory (.mem) file</div>
-<div><a href="cl53.html#save-screen-cmd">SAVE SCREEN*</a>   Save the current screen to a buffer or variable</div>
-<div><a href="cl53.html#scroll">Scroll()</a>   Scroll a screen region up or down, right or left</div>
-<div><a href="cl53.html#scrollbar">Scrollbar</a>   Creates a scroll bar</div>
-<div><a href="cl53.html#seconds">Seconds()</a>   Return the number of seconds elapsed since midnight</div>
-<div><a href="cl53.html#select">Select()</a>   Determine the work area number of a specified alias</div>
-<div><a href="cl53.html#set">Set()</a>   Inspect or change a system setting</div>
-<div><a href="cl53.html#setblink">SetBlink()</a>   Toggle asterisk (*) interpretation in the SetColor() string between blinking and background intensity</div>
-<div><a href="cl53.html#setcancel">SetCancel()</a>   Toggle Alt+C and Ctrl+Break as program termination keys</div>
-<div><a href="cl53.html#setcolor">SetColor()</a>   Return the current colors and optionally set new colors</div>
-<div><a href="cl53.html#setcursor">SetCursor()</a>   Set the cursor shape</div>
-<div><a href="cl53.html#setkey">SetKey()</a>   Assign an action block to a key</div>
-<div><a href="cl53.html#setmode">SetMode()</a>   Change display mode to a specified number of rows and columns</div>
-<div><a href="cl53.html#setpos">SetPos()</a>   Move the cursor to a new position</div>
-<div><a href="cl53.html#setprc">SetPRC()</a>   Set PRow() and PCol() values</div>
-<div><a href="cl53.html#seek-cmd">SEEK</a>   Search an order for a specified key value</div>
-<div><a href="cl53.html#select-cmd">SELECT</a>   Change the current work area</div>
-<div><a href="cl53.html#set-alternate-cmd">SET ALTERNATE</a>   Echo console output to a text file</div>
-<div><a href="cl53.html#set-bell-cmd">SET BELL</a>   Toggle automatic sounding of the bell during full-screen operations</div>
-<div><a href="cl53.html#set-century-cmd">SET CENTURY</a>   Modify the date format to include or omit century digits</div>
-<div><a href="cl53.html#set-color-cmd">SET COLOR*</a>   Define screen colors</div>
-<div><a href="cl53.html#set-confirm-cmd">SET CONFIRM</a>   Toggle required exit key to terminate GETs</div>
-<div><a href="cl53.html#set-console-cmd">SET CONSOLE</a>   Toggle console display to the screen</div>
-<div><a href="cl53.html#set-cursor-cmd">SET CURSOR</a>   Toggle the screen cursor on or off</div>
-<div><a href="cl53.html#set-date-cmd">SET DATE</a>   Set the date format for input and display</div>
-<div><a href="cl53.html#set-decimals-cmd">SET DECIMALS</a>   Set the number of decimal places to be displayed</div>
-<div><a href="cl53.html#set-default-cmd">SET DEFAULT</a>   Set the CA-Clipper default drive and directory</div>
-<div><a href="cl53.html#set-deleted-cmd">SET DELETED</a>   Toggle filtering of deleted records</div>
-<div><a href="cl53.html#set-delimiters-cmd">SET DELIMITERS</a>   Toggle or define GET delimiters</div>
-<div><a href="cl53.html#set-descending-cmd">SET DESCENDING</a>   Change the descending flag of the controlling order</div>
-<div><a href="cl53.html#set-device-cmd">SET DEVICE</a>   Direct @...SAYs to the screen or printer</div>
-<div><a href="cl53.html#set-epoch-cmd">SET EPOCH</a>   Control the interpretation of dates with no century digits</div>
-<div><a href="cl53.html#set-escape-cmd">SET ESCAPE</a>   Toggle Esc as a READ exit key</div>
-<div><a href="cl53.html#set-eventmask-cmd">SET EVENTMASK</a>   Specify events to be returned by the Inkey() function</div>
-<div><a href="cl53.html#set-exact-cmd">SET EXACT*</a>   Toggle exact matches for character strings</div>
-<div><a href="cl53.html#set-exclusive-cmd">SET EXCLUSIVE*</a>   Establish shared or exclusive USE of database files</div>
-<div><a href="cl53.html#set-filter-cmd">SET FILTER</a>   Hide records not meeting a condition</div>
-<div><a href="cl53.html#set-fixed-cmd">SET FIXED</a>   Toggle fixing of the number of decimal digits displayed</div>
-<div><a href="cl53.html#set-format-cmd">SET FORMAT*</a>   Activate a format when READ is executed</div>
-<div><a href="cl53.html#set-function-cmd">SET FUNCTION</a>   Assign a character string to a function key</div>
-<div><a href="cl53.html#set-index-cmd">SET INDEX</a>   Open one or more order bags in the current work area</div>
-<div><a href="cl53.html#set-intensity-cmd">SET INTENSITY</a>   Toggle enhanced display of GETs and PROMPTs</div>
-<div><a href="cl53.html#set-key-cmd">SET KEY</a>   Assign a procedure invocation to a key</div>
-<div><a href="cl53.html#set-margin-cmd">SET MARGIN</a>   Set the page offset for all printed output</div>
-<div><a href="cl53.html#set-memoblock-cmd">SET MEMOBLOCK</a>   Change the block size for memo files</div>
-<div><a href="cl53.html#set-message-cmd">SET MESSAGE</a>   Set the @...PROMPT message line row</div>
-<div><a href="cl53.html#set-optimize-cmd">SET OPTIMIZE</a>   Change the setting that determines whether to optimize using the open orders when processing a filtered database file</div>
-<div><a href="cl53.html#set-order-cmd">SET ORDER</a>   Select the controlling order</div>
-<div><a href="cl53.html#set-path-cmd">SET PATH</a>   Specify the CA-Clipper search path for opening files</div>
-<div><a href="cl53.html#set-printer-cmd">SET PRINTER</a>   Toggle echo of console output to the printer or set the destination of printed output</div>
-<div><a href="cl53.html#set-procedure-cmd">SET PROCEDURE*</a>   Compile procedures and functions into the current object (.OBJ) file</div>
-<div><a href="cl53.html#set-relation-cmd">SET RELATION</a>   Relate two work areas by a key value or record number</div>
-<div><a href="cl53.html#set-scope-cmd">SET SCOPE</a>   Change the top and/or bottom boundaries for scoping key values in the controlling order</div>
-<div><a href="cl53.html#set-scopebottom-cmd">SET SCOPEBOTTOM</a>   Change the bottom boundary for scoping key values in the controlling order</div>
-<div><a href="cl53.html#set-scopetop-cmd">SET SCOPETOP</a>   Change the top boundary for scoping key values in the controlling order</div>
-<div><a href="cl53.html#set-scoreboard-cmd">SET SCOREBOARD</a>   Toggle the message display from READ or MemoEdit()</div>
-<div><a href="cl53.html#set-softseek-cmd">SET SOFTSEEK</a>   Toggle relative seeking</div>
-<div><a href="cl53.html#set-typeahead-cmd">SET TYPEAHEAD</a>   Set the size of the keyboard buffer</div>
-<div><a href="cl53.html#set-unique-cmd">SET UNIQUE*</a>   Toggle inclusion of non-unique keys into an index</div>
-<div><a href="cl53.html#set-videomode-cmd">SET VIDEOMODE</a>   Change the current video mode of the current application</div>
-<div><a href="cl53.html#set-wrap-cmd">SET WRAP*</a>   Toggle wrapping of the highlight in menus</div>
-<div><a href="cl53.html#skip-cmd">SKIP</a>   Move the record pointer to a new position</div>
-<div><a href="cl53.html#soundex">SoundEx()</a>   Convert a character string to &quot;soundex&quot; form</div>
-<div><a href="cl53.html#sort-cmd">SORT</a>   Copy to a database (.dbf) file in sorted order</div>
-<div><a href="cl53.html#space">Space()</a>   Return a string of spaces</div>
-<div><a href="cl53.html#sqrt">Sqrt()</a>   Return the square root of a positive number</div>
-<div><a href="cl53.html#str">Str()</a>   Convert a numeric expression to a character string</div>
-<div><a href="cl53.html#strtran">StrTran()</a>   Search and replace characters within a character string or memo field</div>
-<div><a href="cl53.html#stuff">Stuff()</a>   Delete and insert characters in a string</div>
-<div><a href="cl53.html#static-cmd">STATIC</a>   Declare and initialize static variables and arrays</div>
-<div><a href="cl53.html#store-cmd">STORE*</a>   Assign a value to one or more variables</div>
-<div><a href="cl53.html#substr">SubStr()</a>   Extract a substring from a character string</div>
-<div><a href="cl53.html#sum-cmd">SUM</a>   Sum numeric expressions and assign results to variables</div>
-<div><a href="cl53.html#tbcolumn">TBColumn</a>   Provide column objects for TBrowse objects</div>
-<div><a href="cl53.html#tbrowse">TBrowse</a>   Provide objects for browsing table-oriented data</div>
-<div><a href="cl53.html#text-cmd">TEXT*</a>   Display a literal block of text</div>
-<div><a href="cl53.html#time">Time()</a>   Return the system time</div>
-<div><a href="cl53.html#tone">Tone()</a>   Sound a speaker tone for a specified frequency and duration</div>
-<div><a href="cl53.html#topbarmenu">TopBarMenu</a>   Create a top bar menu</div>
-<div><a href="cl53.html#total-cmd">TOTAL</a>   Summarize records by key value to a database (.dbf) file</div>
-<div><a href="cl53.html#transform">Transform()</a>   Convert any value into a formatted character string</div>
-<div><a href="cl53.html#trim">Trim()</a>   Remove trailing spaces from a character string</div>
-<div><a href="cl53.html#type">Type()</a>   Determine the type of an expression</div>
-<div><a href="cl53.html#type-cmd">TYPE</a>   Display the contents of a text file</div>
-<div><a href="cl53.html#unlock-cmd">UNLOCK</a>   Release file/record locks set by the current user</div>
-<div><a href="cl53.html#updated">Updated()</a>   Determine whether a GET changed during a READ</div>
-<div><a href="cl53.html#upper">Upper()</a>   Convert lowercase characters to uppercase</div>
-<div><a href="cl53.html#update-cmd">UPDATE</a>   Update current database file from another database file</div>
-<div><a href="cl53.html#used">Used()</a>   Determine whether a database file is in USE</div>
-<div><a href="cl53.html#use-cmd">USE</a>   Open an existing database (.dbf) and its associated files</div>
-<div><a href="cl53.html#val">Val()</a>   Convert a character number to numeric type</div>
-<div><a href="cl53.html#valtype">ValType()</a>   Determine the data type returned by an expression</div>
-<div><a href="cl53.html#version">Version()</a>   Returns CA-Clipper version</div>
-<div><a href="cl53.html#wait-cmd">WAIT*</a>   Suspend program processing until a key is pressed</div>
-<div><a href="cl53.html#word">Word()*</a>   Convert CALL command numeric parameters from double to integer values</div>
-<div><a href="cl53.html#year">Year()</a>   Convert a date value to the year as a numeric value</div>
-<div><a href="cl53.html#zap-cmd">ZAP</a>   Remove all records from the current database file</div>
+<div><a href="clc53.html#lt-op">&lt;</a>   Less than—binary                               (Relational)</div>
+<div><a href="clc53.html#lteq-op">&lt;=</a>   Less than or equal—binary                      (Relational)</div>
+<div><a href="clc53.html#ltgt-noeq-ha-op">&lt;&gt; != #</a>   Not equal—binary                               (Relational)</div>
+<div><a href="clc53.html#eq-assign-op">= (assign)</a>   Simple assign—binary                           (Assignment)</div>
+<div><a href="clc53.html#eq-compound-assign-op">= (compound assign)</a>   Compound assignment—binary                     (Assignment)</div>
+<div><a href="clc53.html#eq-equality-op">= (equality)</a>   Equal—binary                                   (Relational)</div>
+<div><a href="clc53.html#eqeq-op">==</a>   Exactly equal—binary                           (Relational)</div>
+<div><a href="clc53.html#gt-op">&gt;</a>   Greater than—binary                            (Relational)</div>
+<div><a href="clc53.html#gteq-op">&gt;=</a>   Greater than or equal—binary                   (Relational)</div>
+<div><a href="clc53.html#mi-op">-</a>   Subtraction, unary negative, concatenation  (Math, Character)</div>
+<div><a href="clc53.html#migt-op">-&gt;</a>   Alias assignment—binary                        (Special)</div>
+<div><a href="clc53.html#mimi-op">--</a>   Decrement—unary                                (Mathematical)</div>
+<div><a href="clc53.html#co-op">:</a>   Send—binary                                    (Object)</div>
+<div><a href="clc53.html#coeq-op">:=</a>   Inline assign—binary                           (Assignment)</div>
+<div><a href="clc53.html#quorququ-op">?|??</a>   Display one or more values to the console</div>
+<div><a href="clc53.html#sl-op">/</a>   Division—binary                                (Mathematical)</div>
+<div><a href="clc53.html#and-op">.AND.</a>   Logical AND—binary                             (Logical)</div>
+<div><a href="clc53.html#not-op">.NOT.</a>   Logical NOT—unary                              (Logical)</div>
+<div><a href="clc53.html#or-op">.OR.</a>   Logical OR—binary                              (Logical)</div>
+<div><a href="clc53.html#bo-bc-op">( )</a>   Function or grouping indicator                  (Special)</div>
+<div><a href="clc53.html#so-sc-op">[ ]</a>   Array element indicator                         (Special)</div>
+<div><a href="clc53.html#co-cc-op">{ }</a>   Literal array and code block delimiters         (Special)</div>
+<div><a href="clc53.html#at-op">@</a>   Pass-by-reference—unary                        (Special)</div>
+<div><a href="clc53.html#at-box-cmd">@...BOX</a>   Draw a box on the screen</div>
+<div><a href="clc53.html#at-clear-cmd">@...CLEAR</a>   Clear a rectangular region of the screen</div>
+<div><a href="clc53.html#at-get-cmd">@...GET</a>   Create a new Get object and display it to the screen</div>
+<div><a href="clc53.html#at-get-checkbox-cmd">@...GET CHECKBOX</a>   Create a new check box Get object and display it to the screen</div>
+<div><a href="clc53.html#at-get-listbox-cmd">@...GET LISTBOX</a>   Create a new list box Get object and display it to the screen</div>
+<div><a href="clc53.html#at-get-pushbutton-cmd">@...GET PUSHBUTTON</a>   Create a new push button Get object and display it to the screen</div>
+<div><a href="clc53.html#at-get-radiogroup-cmd">@...GET RADIOGROUP</a>   Create a new radio button group Get object and display it to the screen</div>
+<div><a href="clc53.html#at-get-tbrowse-cmd">@...GET TBROWSE</a>   Create a new TBrowse Get object and display it to the screen</div>
+<div><a href="clc53.html#at-prompt-cmd">@...PROMPT</a>   Paint a menu item and define a message</div>
+<div><a href="clc53.html#at-say-cmd">@...SAY</a>   Display data at a specified screen or printer row and column</div>
+<div><a href="clc53.html#at-to-cmd">@...TO</a>   Draw a single- or double-line box</div>
+<div><a href="clc53.html#dl-op">$</a>   Substring comparison—binary                    (Relational)</div>
+<div><a href="clc53.html#ml-op">*</a>   Multiplication—binary                          (Mathematical)</div>
+<div><a href="clc53.html#mlml-op">**</a>   Exponentiation—binary                          (Mathematical)</div>
+<div><a href="clc53.html#et-op">&amp;</a>   Macro evaluation—unary                         (Special)</div>
+<div><a href="clc53.html#pp-command-or-pp-translate">#command | #translate</a>   Specify a user-defined command or translation directive</div>
+<div><a href="clc53.html#pp-define">#define</a>   Define a manifest constant or pseudofunction</div>
+<div><a href="clc53.html#pp-error">#error</a>   Generate a compiler error and display a message</div>
+<div><a href="clc53.html#pp-ifdef">#ifdef</a>   Compile a section of code if an identifier is defined</div>
+<div><a href="clc53.html#pp-ifndef">#ifndef</a>   Compile a section of code if an identifier is undefined</div>
+<div><a href="clc53.html#pp-include">#include</a>   Include a file into the current source file</div>
+<div><a href="clc53.html#pp-stdout">#stdout</a>   Send literal text to the standard output device</div>
+<div><a href="clc53.html#pp-undef">#undef</a>   Remove a #define macro definition</div>
+<div><a href="clc53.html#pp-xcommand-or-pp-xtranslate">#xcommand | #xtranslate</a>   Specify a user-defined command or translation directive</div>
+<div><a href="clc53.html#pc-op">%</a>   Modulus—binary                                 (Mathematical)</div>
+<div><a href="clc53.html#pl-op">+</a>   Addition, unary positive, concatenation         (Math, Character)</div>
+<div><a href="clc53.html#plpl-op">++</a>   Increment—unary                                (Mathematical)</div>
+<div><a href="clc53.html#aadd">AAdd()</a>   Add a new element to the end of an array</div>
+<div><a href="clc53.html#abs">Abs()</a>   Return the absolute value of a numeric expression</div>
+<div><a href="clc53.html#accept-cmd">ACCEPT*</a>   Place keyboard input into a memory variable</div>
+<div><a href="clc53.html#achoice">AChoice()</a>   Execute a pop-up menu</div>
+<div><a href="clc53.html#aclone">AClone()</a>   Duplicate a nested or multidimensional array</div>
+<div><a href="clc53.html#acopy">ACopy()</a>   Copy elements from one array to another</div>
+<div><a href="clc53.html#adel">ADel()</a>   Delete an array element</div>
+<div><a href="clc53.html#adir">ADir()*</a>   Fill a series of arrays with directory information</div>
+<div><a href="clc53.html#aeval">AEval()</a>   Execute a code block for each element in an array</div>
+<div><a href="clc53.html#afields">AFields()*</a>   Fill arrays with the structure of the current database file</div>
+<div><a href="clc53.html#afill">AFill()</a>   Fill an array with a specified value</div>
+<div><a href="clc53.html#ains">AIns()</a>   Insert a NIL element into an array</div>
+<div><a href="clc53.html#alert">Alert()</a>   Display a simple modal dialog box</div>
+<div><a href="clc53.html#alias">Alias()</a>   Return a specified work area alias</div>
+<div><a href="clc53.html#alltrim">AllTrim()</a>   Remove leading and trailing spaces from a character string</div>
+<div><a href="clc53.html#altd">AltD()</a>   Invoke the CA-Clipper debugger</div>
+<div><a href="clc53.html#announce-cmd">ANNOUNCE</a>   Declare a module identifier</div>
+<div><a href="clc53.html#append-blank-cmd">APPEND BLANK</a>   Add a new record to the current database file</div>
+<div><a href="clc53.html#append-from-cmd">APPEND FROM</a>   Import records from a database (.dbf) file or ASCII text file</div>
+<div><a href="clc53.html#array">Array()</a>   Create an uninitialized array of specified length</div>
+<div><a href="clc53.html#asc">Asc()</a>   Convert a character to its ASCII value</div>
+<div><a href="clc53.html#ascan">AScan()</a>   Scan an array for a value or until a block returns true (<code>.T.</code>)</div>
+<div><a href="clc53.html#asize">ASize()</a>   Grow or shrink an array</div>
+<div><a href="clc53.html#asort">ASort()</a>   Sort an array</div>
+<div><a href="clc53.html#at">At()</a>   Return the position of a substring within a character string</div>
+<div><a href="clc53.html#atail">ATail()</a>   Return the highest numbered element of an array</div>
+<div><a href="clc53.html#average-cmd">AVERAGE</a>   Average numeric expressions in the current work area</div>
+<div><a href="clc53.html#begin-sequence-cmd">BEGIN SEQUENCE</a>   Define a sequence of statements for a BREAK</div>
+<div><a href="clc53.html#bin2i">Bin2I()</a>   Convert a 16-bit signed integer to a numeric value</div>
+<div><a href="clc53.html#bin2l">Bin2L()</a>   Convert a 32-bit signed integer to a numeric value</div>
+<div><a href="clc53.html#bin2w">Bin2W()</a>   Convert a 16-bit unsigned integer to a numeric value</div>
+<div><a href="clc53.html#blobdirectexport">BLOBDIRECTEXPORT()</a>   Export the contents of a binary large object (BLOB) pointer to a file</div>
+<div><a href="clc53.html#blobdirectget">BLOBDIRECTGET()</a>   Retrieve data stored in a BLOB file without referencing a specific field</div>
+<div><a href="clc53.html#blobdirectimport">BLOBDIRECTIMPORT()</a>   Import a file into a BLOB file and return a pointer to the data</div>
+<div><a href="clc53.html#blobdirectput">BLOBDIRECTPUT()</a>   Put data in a BLOB file without referencing a specific field</div>
+<div><a href="clc53.html#blobexport">BLOBEXPORT()</a>   Copy the contents of a BLOB, identified by its memo field number, to a file</div>
+<div><a href="clc53.html#blobget">BLOBGET()</a>   Get the contents of a BLOB, identified by its memo field number</div>
+<div><a href="clc53.html#blobimport">BLOBIMPORT()</a>   Read the contents of a file as a BLOB, identified by a memo field number</div>
+<div><a href="clc53.html#blobrootget">BLOBROOTGET()</a>   Retrieve the data from the root area of a BLOB file</div>
+<div><a href="clc53.html#blobrootlock">BLOBROOTLOCK()</a>   Obtain a lock on the root area of a BLOB file</div>
+<div><a href="clc53.html#blobrootput">BLOBROOTPUT()</a>   Store data in the root area of a BLOB file</div>
+<div><a href="clc53.html#blobrootunlock">BLOBROOTUNLOCK()</a>   Release the lock on a BLOB file's root area</div>
+<div><a href="clc53.html#bof">Bof()</a>   Determine when beginning of file is encountered</div>
+<div><a href="clc53.html#break">Break()</a>   Branch out of a BEGIN SEQUENCE...END construct</div>
+<div><a href="clc53.html#browse">Browse()*</a>   Browse records within a window</div>
+<div><a href="clc53.html#call-cmd">CALL*</a>   Execute a C or Assembler procedure</div>
+<div><a href="clc53.html#cancel-cmd">CANCEL*</a>   Terminate program processing</div>
+<div><a href="clc53.html#cdow">CDoW()</a>   Convert a date value to a character day of the week</div>
+<div><a href="clc53.html#checkbox">CheckBox</a>   Create check boxes, which are controls that can be toggled on or off by a user</div>
+<div><a href="clc53.html#chr">Chr()</a>   Convert an ASCII code to a character value</div>
+<div><a href="clc53.html#clear-all-cmd">CLEAR ALL*</a>   Close files and release public and private variables</div>
+<div><a href="clc53.html#clear-gets-cmd">CLEAR GETS</a>   Release Get objects from the current GetList array</div>
+<div><a href="clc53.html#clear-memory-cmd">CLEAR MEMORY</a>   Release all public and private variables</div>
+<div><a href="clc53.html#clear-screen-cmd">CLEAR SCREEN</a>   Clear the screen and return the cursor home</div>
+<div><a href="clc53.html#clear-typeahead-cmd">CLEAR TYPEAHEAD</a>   Empty the keyboard buffer</div>
+<div><a href="clc53.html#close-cmd">CLOSE</a>   Close a specific set of files</div>
+<div><a href="clc53.html#cmonth">CMonth()</a>   Convert a date to a character month name</div>
+<div><a href="clc53.html#col">Col()</a>   Return the screen cursor column position</div>
+<div><a href="clc53.html#colorselect">ColorSelect()</a>   Activate attribute in current color settings</div>
+<div><a href="clc53.html#commit-cmd">COMMIT</a>   Perform a solid-disk write for all active work areas</div>
+<div><a href="clc53.html#continue-cmd">CONTINUE</a>   Resume a pending LOCATE</div>
+<div><a href="clc53.html#copy-file-cmd">COPY FILE</a>   Copy a file to a new file or to a device</div>
+<div><a href="clc53.html#copy-structure-cmd">COPY STRUCTURE</a>   Copy the current .dbf structure to a new database (.dbf) file</div>
+<div><a href="clc53.html#copy-structure-extended-cmd">COPY STRUCTURE EXTENDED</a>   Copy field definitions to a .dbf file</div>
+<div><a href="clc53.html#copy-to-cmd">COPY TO</a>   Export records to a new database (.dbf) file or ASCII text file</div>
+<div><a href="clc53.html#count-cmd">COUNT</a>   Tally records to a variable</div>
+<div><a href="clc53.html#create-cmd">CREATE</a>   Create an empty structure extended (.dbf) file</div>
+<div><a href="clc53.html#create-from-cmd">CREATE FROM</a>   Create a new .dbf file from a structure extended file</div>
+<div><a href="clc53.html#ctod">CToD()</a>   Convert a date string to a date value</div>
+<div><a href="clc53.html#curdir">CurDir()</a>   Return the current DOS directory</div>
+<div><a href="clc53.html#dbappend">dbAppend()</a>   Append a new record to the database open in the current work area</div>
+<div><a href="clc53.html#dbclearfilter">dbClearFilter()</a>   Clear a filter condition</div>
+<div><a href="clc53.html#dbclearindex">dbClearIndex()</a>   Close all indexes for the current work area</div>
+<div><a href="clc53.html#dbclearrelation">dbClearRelation()</a>   Clear active relations</div>
+<div><a href="clc53.html#dbcloseall">dbCloseAll()</a>   Close all occupied work areas</div>
+<div><a href="clc53.html#dbclosearea">dbCloseArea()</a>   Close a work area</div>
+<div><a href="clc53.html#dbcommit">dbCommit()</a>   Flush pending updates</div>
+<div><a href="clc53.html#dbcommitall">dbCommitAll()</a>   Flush pending updates in all work areas</div>
+<div><a href="clc53.html#dbcreate">dbCreate()</a>   Create a database file from a database structure array</div>
+<div><a href="clc53.html#dbcreateindex">dbCreateIndex()</a>   Create an index file</div>
+<div><a href="clc53.html#dbdelete">dbDelete()</a>   Mark a record for deletion</div>
+<div><a href="clc53.html#dbedit">dbEdit()</a>   Browse records in a table layout</div>
+<div><a href="clc53.html#dbeval">dbEval()</a>   Evaluate a code block for each record matching a scope and condition</div>
+<div><a href="clc53.html#dbfieldinfo">dbFieldInfo()</a>   Return and optionally change information about a field</div>
+<div><a href="clc53.html#dbfileget">dbFileGet()</a>   Insert the contents of a field into a file</div>
+<div><a href="clc53.html#dbfileput">dbFilePut()</a>   Insert the contents of a file into a field</div>
+<div><a href="clc53.html#dbfilter">dbFilter()</a>   Return the current filter expression as a character string</div>
+<div><a href="clc53.html#dbgobottom">dbGoBottom()</a>   Move to the last logical record</div>
+<div><a href="clc53.html#dbgoto">dbGoto()</a>   Position record pointer to a specific identity</div>
+<div><a href="clc53.html#dbgotop">dbGoTop()</a>   Move to the first logical record</div>
+<div><a href="clc53.html#dbinfo">dbInfo()</a>   Return and optionally change information about a database file opened in a work area</div>
+<div><a href="clc53.html#dborderinfo">dbOrderInfo()</a>   Return and optionally change information about orders and index files</div>
+<div><a href="clc53.html#dbrecall">dbRecall()</a>   Reinstate a record marked for deletion</div>
+<div><a href="clc53.html#dbrecordinfo">dbRecordInfo()</a>   Return and optionally change information about a record</div>
+<div><a href="clc53.html#dbreindex">dbReindex()</a>   Recreate all active indexes for the current work area</div>
+<div><a href="clc53.html#dbrelation">dbRelation()</a>   Return the linking expression of a specified relation</div>
+<div><a href="clc53.html#dbrlock">dbRLock()</a>   Lock the record at the current or specified identity</div>
+<div><a href="clc53.html#dbrlocklist">dbRLockList()</a>   Return an array of the current lock list</div>
+<div><a href="clc53.html#dbrselect">dbRSelect()</a>   Return the target work area number of a relation</div>
+<div><a href="clc53.html#dbrunlock">dbRUnlock()</a>   Release all or specified record locks</div>
+<div><a href="clc53.html#dbseek">dbSeek()</a>   Move to the record having the specified key value</div>
+<div><a href="clc53.html#dbselectarea">dbSelectArea()</a>   Change the current work area</div>
+<div><a href="clc53.html#dbsetdriver">dbSetDriver()</a>   Return the default database driver and optionally set a new driver</div>
+<div><a href="clc53.html#dbsetfilter">dbSetFilter()</a>   Set a filter condition</div>
+<div><a href="clc53.html#dbsetindex">dbSetIndex()</a>   Empty orders from an order bag into the order list</div>
+<div><a href="clc53.html#dbsetorder">dbSetOrder()</a>   Set the controlling order</div>
+<div><a href="clc53.html#dbsetrelation">dbSetRelation()</a>   Relate two work areas</div>
+<div><a href="clc53.html#dbskip">dbSkip()</a>   Move relative to the current record</div>
+<div><a href="clc53.html#dbstruct">dbStruct()</a>   Create an array containing the structure of a database file</div>
+<div><a href="clc53.html#dbunlock">dbUnlock()</a>   Release all locks for the current work area</div>
+<div><a href="clc53.html#dbunlockall">dbUnlockAll()</a>   Release all locks for all work areas</div>
+<div><a href="clc53.html#dbusearea">dbUseArea()</a>   Use a database file in a work area</div>
+<div><a href="clc53.html#date">Date()</a>   Return the system date as a date value</div>
+<div><a href="clc53.html#day">Day()</a>   Return the day of the month as a numeric value</div>
+<div><a href="clc53.html#dbf">Dbf()*</a>   Return current alias name</div>
+<div><a href="clc53.html#deleted">Deleted()</a>   Return the deleted status of the current record</div>
+<div><a href="clc53.html#descend">Descend()</a>   Create a descending index key value</div>
+<div><a href="clc53.html#devout">DevOut()</a>   Write a value to the current device</div>
+<div><a href="clc53.html#devoutpict">DevOutPict()</a>   Write a value to the current device using a picture clause</div>
+<div><a href="clc53.html#devpos">DevPos()</a>   Move the cursor or printhead to a new position depending on the current device</div>
+<div><a href="clc53.html#declare-cmd">DECLARE*</a>   Create and initialize private memory variables and arrays</div>
+<div><a href="clc53.html#delete-cmd">DELETE</a>   Mark records for deletion</div>
+<div><a href="clc53.html#delete-file-cmd">DELETE FILE</a>   Remove a file from disk</div>
+<div><a href="clc53.html#delete-tag-cmd">DELETE TAG</a>   Delete a tag</div>
+<div><a href="clc53.html#dirchange">DirChange()</a>   Change the current DOS directory</div>
+<div><a href="clc53.html#directory">Directory()</a>   Create an array of directory and file information</div>
+<div><a href="clc53.html#dirmake">DirMake()</a>   Create a directory</div>
+<div><a href="clc53.html#dirremove">DirRemove()</a>   Remove a directory</div>
+<div><a href="clc53.html#diskchange">DiskChange()</a>   Change the current DOS disk drive</div>
+<div><a href="clc53.html#diskname">DiskName()</a>   Return the current DOS drive</div>
+<div><a href="clc53.html#diskspace">DiskSpace()</a>   Return the space available on a specified disk</div>
+<div><a href="clc53.html#dispbegin">DispBegin()</a>   Begin buffering screen output</div>
+<div><a href="clc53.html#dispbox">DispBox()</a>   Display a box on the screen</div>
+<div><a href="clc53.html#dispcount">DispCount()</a>   Return the number of pending DispEnd() requests</div>
+<div><a href="clc53.html#dispend">DispEnd()</a>   Display buffered screen updates</div>
+<div><a href="clc53.html#dispout">DispOut()</a>   Write a value to the display</div>
+<div><a href="clc53.html#dir-cmd">DIR*</a>   Display a listing of files from a specified path</div>
+<div><a href="clc53.html#display-cmd">DISPLAY</a>   Display records to the console</div>
+<div><a href="clc53.html#doserror">DosError()</a>   Return the last DOS error number</div>
+<div><a href="clc53.html#dow">DoW()</a>   Convert a date value to a numeric day of the week</div>
+<div><a href="clc53.html#do-case-cmd">DO CASE</a>   Execute one of several alternative blocks of statements</div>
+<div><a href="clc53.html#do-while-cmd">DO WHILE</a>   Execute a loop while a condition is true (<code>.T.</code>)</div>
+<div><a href="clc53.html#do-cmd">DO*</a>   Call a procedure</div>
+<div><a href="clc53.html#dtoc">DToC()</a>   Convert a date value to a character string</div>
+<div><a href="clc53.html#dtos">DToS()</a>   Convert a date value to a character string formatted as yyyymmdd</div>
+<div><a href="clc53.html#eject-cmd">EJECT</a>   Advance the printhead to top of form</div>
+<div><a href="clc53.html#empty">Empty()</a>   Determine if the result of an expression is empty</div>
+<div><a href="clc53.html#eof">Eof()</a>   Determine when end of file is encountered</div>
+<div><a href="clc53.html#error">Error</a>   Provides objects containing information about runtime errors</div>
+<div><a href="clc53.html#errorblock">ErrorBlock()</a>   Post a code block to execute when a runtime error occurs</div>
+<div><a href="clc53.html#errorlevel">ErrorLevel()</a>   Set the CA-Clipper return code</div>
+<div><a href="clc53.html#erase-cmd">ERASE</a>   Remove a file from disk</div>
+<div><a href="clc53.html#eval">Eval()</a>   Evaluate a code block</div>
+<div><a href="clc53.html#exp">Exp()</a>   Calculate e**x</div>
+<div><a href="clc53.html#exit-procedure-cmd">EXIT PROCEDURE</a>   Declare an exit procedure</div>
+<div><a href="clc53.html#external-cmd">EXTERNAL*</a>   Declare a list of procedure or user-defined function names to the linker</div>
+<div><a href="clc53.html#fclose">FClose()</a>   Close an open binary file and write DOS buffers to disk</div>
+<div><a href="clc53.html#fcount">FCount()</a>   Return the number of fields in the current .dbf file</div>
+<div><a href="clc53.html#fcreate">FCreate()</a>   Create and/or truncate a binary file to zero-length</div>
+<div><a href="clc53.html#ferase">FErase()</a>   Delete a file from disk</div>
+<div><a href="clc53.html#ferror">FError()</a>   Test for errors after a binary file operation</div>
+<div><a href="clc53.html#fieldblock">FieldBlock()</a>   Return a set-get code block for a given field</div>
+<div><a href="clc53.html#fieldget">FieldGet()</a>   Retrieve the value of a field using the ordinal position of the field in the database structure</div>
+<div><a href="clc53.html#fieldnameslfield">FieldName()/FIELD()</a>   Return a field name from the current database (.dbf) file</div>
+<div><a href="clc53.html#fieldpos">FieldPos()</a>   Return the position of a field in a work area</div>
+<div><a href="clc53.html#fieldput">FieldPut()</a>   Set the value of a field variable using the ordinal position of the field in the database structure</div>
+<div><a href="clc53.html#fieldwblock">FieldWBlock()</a>   Return a set-get code block for a field in a given work area</div>
+<div><a href="clc53.html#field-cmd">FIELD</a>   Declare database field names</div>
+<div><a href="clc53.html#file">FILE()</a>   Determine if files exist in the CA-Clipper default directory or path</div>
+<div><a href="clc53.html#find-cmd">FIND*</a>   Search an index for a specified key value</div>
+<div><a href="clc53.html#fklabel">FKLabel()*</a>   Return function key name</div>
+<div><a href="clc53.html#fkmax">FKMax()*</a>   Return number of function keys as a constant</div>
+<div><a href="clc53.html#flock">FLock()</a>   Lock an open and shared database file</div>
+<div><a href="clc53.html#found">Found()</a>   Determine if the previous search operation succeeded</div>
+<div><a href="clc53.html#fopen">FOpen()</a>   Open a binary file</div>
+<div><a href="clc53.html#for-cmd">FOR</a>   Execute a block of statements a specified number of times</div>
+<div><a href="clc53.html#fread">FRead()</a>   Read characters from a binary file into a buffer variable</div>
+<div><a href="clc53.html#freadstr">FReadStr()</a>   Read characters from a binary file</div>
+<div><a href="clc53.html#frename">FRename()</a>   Change the name of a file</div>
+<div><a href="clc53.html#fseek">FSeek()</a>   Set a binary file pointer to a new position</div>
+<div><a href="clc53.html#function-cmd">FUNCTION</a>   Declare a user-defined function name and formal parameters</div>
+<div><a href="clc53.html#fwrite">FWrite()</a>   Write to an open binary file</div>
+<div><a href="clc53.html#gbmpdisp">GBMPDISP()</a>   Display a bitmap (.BMP) file on screen</div>
+<div><a href="clc53.html#gbmpload">GBMPLOAD()</a>   Load a bitmap (.bmp) or icon (.ico) file into memory</div>
+<div><a href="clc53.html#get">Get</a>   Provides objects for interactive editing of database fields and variables</div>
+<div><a href="clc53.html#getactive">GetActive()</a>   Return the currently active Get object</div>
+<div><a href="clc53.html#getapplykey">GetApplyKey()</a>   Apply a key to a Get object from within a  reader</div>
+<div><a href="clc53.html#getdosetkey">GetDoSetKey()</a>   Process SET KEY during GET editing</div>
+<div><a href="clc53.html#getenv">GetEnv()</a>   Retrieve the contents of a DOS environment variable</div>
+<div><a href="clc53.html#getpostvalidate">GetPostValidate()</a>   Postvalidate the current Get object</div>
+<div><a href="clc53.html#getprevalidate">GetPreValidate()</a>   Prevalidate a Get object</div>
+<div><a href="clc53.html#getreader">GetReader()</a>   Execute standard READ behavior for a Get object</div>
+<div><a href="clc53.html#gellipse">GELLIPSE()</a>   Draw an ellipse or circle</div>
+<div><a href="clc53.html#gfnterase">GFNTERASE()</a>   Erase a font from memory</div>
+<div><a href="clc53.html#gfntload">GFNTLOAD()</a>   Load a font file into memory</div>
+<div><a href="clc53.html#gfntset">GFNTSET()</a>   Set an already loaded font as active</div>
+<div><a href="clc53.html#gframe">GFRAME()</a>   Draw a frame with a 3-D look</div>
+<div><a href="clc53.html#ggetpixel">GGETPIXEL()</a>   Get color information for a pixel</div>
+<div><a href="clc53.html#gline">GLINE()</a>   Draw a line in graphic mode</div>
+<div><a href="clc53.html#gmode">GMODE()</a>   Switch video mode</div>
+<div><a href="clc53.html#go-cmd">GO</a>   Move the pointer to the specified identity</div>
+<div><a href="clc53.html#gpolygon">GPOLYGON()</a>   Draw a polygon on screen</div>
+<div><a href="clc53.html#gputpixel">GPUTPIXEL()</a>   Draw a pixel on the screen</div>
+<div><a href="clc53.html#grect">GRECT()</a>   Draw a rectangle in graphic mode</div>
+<div><a href="clc53.html#gsetclip">GSETCLIP()</a>   Define the allowed display area</div>
+<div><a href="clc53.html#gsetexcl">GSETEXCL()</a>   Define a screen region to be excluded from display</div>
+<div><a href="clc53.html#gsetpal">GSETPAL()</a>   Change components of a color</div>
+<div><a href="clc53.html#gwriteat">GWRITEAT()</a>   Draw graphic text without background</div>
+<div><a href="clc53.html#hardcr">HardCR()</a>   Replace all soft carriage returns in a character string with hard carriage returns</div>
+<div><a href="clc53.html#header">Header()</a>   Return the current database file header length</div>
+<div><a href="clc53.html#i2bin">I2Bin()</a>   Convert a CA-Clipper numeric to a 16-bit binary integer</div>
+<div><a href="clc53.html#if-cmd">IF</a>   Execute one of several alternative blocks of statements</div>
+<div><a href="clc53.html#if">IF()</a>   Return the result of an expression based on a condition</div>
+<div><a href="clc53.html#iif">IIF()</a>   Return the result of an expression based on a condition</div>
+<div><a href="clc53.html#indexext">IndexExt()</a>   Return the default index extension based on the database driver currently linked</div>
+<div><a href="clc53.html#indexkey">IndexKey()</a>   Return the key expression of a specified index</div>
+<div><a href="clc53.html#indexord">IndexOrd()</a>   Return the order position of the controlling index</div>
+<div><a href="clc53.html#inkey">Inkey()</a>   Extract a character from the keyboard buffer or a mouse event</div>
+<div><a href="clc53.html#index-cmd">INDEX</a>   Create an index file</div>
+<div><a href="clc53.html#init-procedure-cmd">INIT PROCEDURE</a>   Declare an initialization procedure</div>
+<div><a href="clc53.html#input-cmd">INPUT*</a>   Enter the result of an expression into a variable</div>
+<div><a href="clc53.html#int">INT()</a>   Convert a numeric value to an integer</div>
+<div><a href="clc53.html#isalpha">IsAlpha()</a>   Determine if the leftmost character in a string is alphabetic</div>
+<div><a href="clc53.html#iscolor">IsColor()</a>   Determine if the current computer has color capability</div>
+<div><a href="clc53.html#isdigit">IsDigit()</a>   Determine if the leftmost character in a character string is a digit</div>
+<div><a href="clc53.html#islower">IsLower()</a>   Determine if the leftmost character is a lowercase letter</div>
+<div><a href="clc53.html#isprinter">IsPrinter()</a>   Determine whether LPT1 is ready</div>
+<div><a href="clc53.html#isupper">IsUpper()</a>   Determine if the leftmost character in a string is uppercase</div>
+<div><a href="clc53.html#join-cmd">JOIN</a>   Create a new database file by merging records/fields from two work areas</div>
+<div><a href="clc53.html#keyboard-cmd">KEYBOARD</a>   Stuff a string into the keyboard buffer</div>
+<div><a href="clc53.html#l2bin">L2Bin()</a>   Convert a CA-Clipper numeric value to a 32-bit binary integer</div>
+<div><a href="clc53.html#lastkey">LastKey()</a>   Return the Inkey() value of the last key extracted from the keyboard buffer</div>
+<div><a href="clc53.html#lastrec">LastRec()</a>   Determine the number of records in the current .dbf file</div>
+<div><a href="clc53.html#label-form-cmd">LABEL FORM</a>   Display labels to the console</div>
+<div><a href="clc53.html#left">Left()</a>   Extract a substring beginning with the first character in a string</div>
+<div><a href="clc53.html#len">Len()</a>   Return the length of a character string or the number of elements in an array</div>
+<div><a href="clc53.html#listbox">ListBox</a>   Create a list box</div>
+<div><a href="clc53.html#list-cmd">LIST</a>   List records to the console</div>
+<div><a href="clc53.html#log">Log()</a>   Calculate the natural logarithm of a numeric value</div>
+<div><a href="clc53.html#lower">Lower()</a>   Convert uppercase characters to lowercase</div>
+<div><a href="clc53.html#local-cmd">LOCAL</a>   Declare and initialize local variables and arrays</div>
+<div><a href="clc53.html#locate-cmd">LOCATE</a>   Search sequentially for a record matching a condition</div>
+<div><a href="clc53.html#ltrim">LTrim()</a>   Remove leading spaces from a character string</div>
+<div><a href="clc53.html#lupdate">LUpdate()</a>   Return the last modification date of a database (.dbf) file</div>
+<div><a href="clc53.html#max">Max()</a>   Return the larger of two numeric or date values</div>
+<div><a href="clc53.html#maxcol">MaxCol()</a>   Determine the maximum visible screen column</div>
+<div><a href="clc53.html#maxrow">MaxRow()</a>   Determine the maximum visible screen row</div>
+<div><a href="clc53.html#mcol">MCol()</a>   Determine the mouse cursor's screen column position</div>
+<div><a href="clc53.html#mdblclk">MDblClk()</a>   Determine the double-click speed threshold of the mouse</div>
+<div><a href="clc53.html#memoedit">MemoEdit()</a>   Display or edit character strings and memo fields</div>
+<div><a href="clc53.html#memoline">MemoLine()</a>   Extract a line of text from a character string or memo field</div>
+<div><a href="clc53.html#memory">Memory()</a>   Determine the amount of available free pool memory</div>
+<div><a href="clc53.html#memoread">MemoRead()</a>   Return the contents of a disk file as a character string</div>
+<div><a href="clc53.html#memotran">MemoTran()</a>   Replace carriage return/linefeeds in character strings</div>
+<div><a href="clc53.html#memowrit">MemoWrit()</a>   Write a character string or memo field to a disk file</div>
+<div><a href="clc53.html#memvarblock">MemVarBlock()</a>   Return a set-get code block for a given memory variable</div>
+<div><a href="clc53.html#menuitem">MenuItem</a>   Create a menu item</div>
+<div><a href="clc53.html#menumodal">MenuModal()</a>   Activate a top bar menu</div>
+<div><a href="clc53.html#memosetsuper">MEMOSETSUPER()</a>   Set an RDD inheritance chain for the DBFMEMO database driver</div>
+<div><a href="clc53.html#memvar-cmd">MEMVAR</a>   Declare private and public variable names</div>
+<div><a href="clc53.html#menu-to-cmd">MENU TO</a>   Execute a lightbar menu for defined PROMPTs</div>
+<div><a href="clc53.html#mhide">MHide()</a>   Hide the mouse pointer</div>
+<div><a href="clc53.html#min">Min()</a>   Return the smaller of two numeric or date values</div>
+<div><a href="clc53.html#mlcount">MLCount()</a>   Count the number of lines in a character string or memo field</div>
+<div><a href="clc53.html#mlctopos">MLCToPos()</a>   Return the byte position of a formatted string based on line and column position</div>
+<div><a href="clc53.html#mleftdown">MLeftDown()</a>   Determine the press status of the left mouse button</div>
+<div><a href="clc53.html#mlpos">MLPos()</a>   Determine the position of a line in a character string or memo field</div>
+<div><a href="clc53.html#mod">Mod()*</a>   Return the dBASE III PLUS modulus of two numbers</div>
+<div><a href="clc53.html#month">Month()</a>   Convert a date value to the number of the month</div>
+<div><a href="clc53.html#mpostolc">MPosToLC()</a>   Return line and column position of a formatted string based on a specified byte position</div>
+<div><a href="clc53.html#mpresent">MPresent()</a>   Determine if a mouse is present</div>
+<div><a href="clc53.html#mreststate">MRestState()</a>   Re-establish the previous state of a mouse</div>
+<div><a href="clc53.html#mrightdown">MRightDown()</a>   Determine the status of the right mouse button</div>
+<div><a href="clc53.html#mrow">MRow()</a>   Determine a mouse cursor's screen row position</div>
+<div><a href="clc53.html#msavestate">MSaveState()</a>   Save the current state of a mouse</div>
+<div><a href="clc53.html#msetbounds">MSetBounds()</a>   Set screen boundaries for the mouse cursor</div>
+<div><a href="clc53.html#msetcursor">MSetCursor()</a>   Determine a mouse's visibility</div>
+<div><a href="clc53.html#msetpos">MSetPos()</a>   Set a new position for the mouse cursor</div>
+<div><a href="clc53.html#msetclip">MSETCLIP()</a>   Define an inclusion region</div>
+<div><a href="clc53.html#mshow">MShow()</a>   Display the mouse pointer</div>
+<div><a href="clc53.html#mstate">MSTATE()</a>   Return the current mouse state</div>
+<div><a href="clc53.html#neterr">NetErr()</a>   Determine if a network command has failed</div>
+<div><a href="clc53.html#netname">NetName()</a>   Return the current workstation identification</div>
+<div><a href="clc53.html#nextkey">NextKey()</a>   Read the pending key in the keyboard buffer</div>
+<div><a href="clc53.html#nosnow">NoSnow()</a>   Toggle snow suppression</div>
+<div><a href="clc53.html#note-cmd">NOTE*</a>   Place a single-line comment in a program file</div>
+<div><a href="clc53.html#ordbagext">ordBagExt()</a>   Return the default order bag RDD extension</div>
+<div><a href="clc53.html#ordbagname">ordBagName()</a>   Return the order bag name of a specific order</div>
+<div><a href="clc53.html#ordcondset">ordCondSet()</a>   Set the condition and scope for an order</div>
+<div><a href="clc53.html#ordcreate">ordCreate()</a>   Create an order in an order bag</div>
+<div><a href="clc53.html#orddescend">ordDescend()</a>   Return and optionally change the descending flag of an order</div>
+<div><a href="clc53.html#orddestroy">ordDestroy()</a>   Remove a specified order from an order bag</div>
+<div><a href="clc53.html#ordfor">ordFor()</a>   Return the FOR expression of an order</div>
+<div><a href="clc53.html#ordisunique">ordIsUnique()</a>   Return the status of the unique flag for a given order</div>
+<div><a href="clc53.html#ordkey">ordKey()</a>   Return the key expression of an order</div>
+<div><a href="clc53.html#ordkeyadd">ordKeyAdd()</a>   Add a key to a custom built order</div>
+<div><a href="clc53.html#ordkeycount">ordKeyCount()</a>   Return the number of keys in an order</div>
+<div><a href="clc53.html#ordkeydel">ordKeyDel()</a>   Delete a key from a custom built order</div>
+<div><a href="clc53.html#ordkeygoto">ordKeyGoto()</a>   Move to a record specified by its logical record number in the controlling order</div>
+<div><a href="clc53.html#ordkeyno">ordKeyNo()</a>   Get the logical record number of the current record</div>
+<div><a href="clc53.html#ordkeyval">ordKeyVal()</a>   Get the key value of the current record from the controlling order</div>
+<div><a href="clc53.html#ordlistadd">ordListAdd()</a>   Add orders to the order list</div>
+<div><a href="clc53.html#ordlistclear">ordListClear()</a>   Clear the current order list</div>
+<div><a href="clc53.html#ordlistrebuild">ordListRebuild()</a>   Rebuild all orders in the order list of the current work area</div>
+<div><a href="clc53.html#ordname">ordName()</a>   Return the name of an order in the order list</div>
+<div><a href="clc53.html#ordnumber">ordNumber()</a>   Return the position of an order in the current order list</div>
+<div><a href="clc53.html#ordscope">ordScope()</a>   Set or clear the boundaries for scoping key values in the controlling order</div>
+<div><a href="clc53.html#ordsetfocus">ordSetFocus()</a>   Set focus to an order in an order list</div>
+<div><a href="clc53.html#ordsetrelation">ordSetRelation()</a>   Relate a specified work area to the current work area</div>
+<div><a href="clc53.html#ordskipunique">ordSkipUnique()</a>   Move the record pointer to the next or previous unique key in the controlling order</div>
+<div><a href="clc53.html#ordcond">ORDCOND()</a>   Specify conditions for ordering</div>
+<div><a href="clc53.html#os">OS()</a>   Return the operating system name</div>
+<div><a href="clc53.html#outerr">OutErr()</a>   Write a list of values to the standard error device</div>
+<div><a href="clc53.html#outstd">OutStd()</a>   Write a list of values to the standard output device</div>
+<div><a href="clc53.html#pad">Pad()</a>   Pad character, date, and numeric values with a fill character</div>
+<div><a href="clc53.html#pack-cmd">PACK</a>   Remove deleted records from a database file</div>
+<div><a href="clc53.html#parameters-cmd">PARAMETERS</a>   Create private parameter variables</div>
+<div><a href="clc53.html#pcol">PCol()</a>   Return the current column position of the printhead</div>
+<div><a href="clc53.html#pcount">PCount()</a>   Determine the position of the last actual parameter passed</div>
+<div><a href="clc53.html#popupmenu">PopUpMenu</a>   Create a pop-up menu</div>
+<div><a href="clc53.html#procline">ProcLine()</a>   Return the source line number of the current or previous activation</div>
+<div><a href="clc53.html#procname">ProcName()</a>   Return the name of the current or previous procedure or user-defined function</div>
+<div><a href="clc53.html#private-cmd">PRIVATE</a>   Create and initialize private memory variables and arrays</div>
+<div><a href="clc53.html#prow">PRow()</a>   Return the current row position of the printhead</div>
+<div><a href="clc53.html#procedure-cmd">PROCEDURE</a>   Declare a procedure name and formal parameters</div>
+<div><a href="clc53.html#pushbutton">PushButton</a>   Create a push button</div>
+<div><a href="clc53.html#public-cmd">PUBLIC</a>   Create and initialize public memory variables and arrays</div>
+<div><a href="clc53.html#qout">QOut()</a>   Display a list of expressions to the console</div>
+<div><a href="clc53.html#quit-cmd">QUIT</a>   Terminate program processing</div>
+<div><a href="clc53.html#rddlist">rddList()</a>   Return an array of the available Replaceable Database Drivers (RDDs)</div>
+<div><a href="clc53.html#rddname">rddName()</a>   Return the name of the RDD active in the current or specified work area</div>
+<div><a href="clc53.html#rddsetdefault">rddSetDefault()</a>   Set or return the default RDD for the application</div>
+<div><a href="clc53.html#radiobutto">RadioButto</a>   Create a radio button</div>
+<div><a href="clc53.html#radiogroup">RadioGroup</a>   Create a radio button group</div>
+<div><a href="clc53.html#rat">RAt()</a>   Return the position of the last occurrence of a substring</div>
+<div><a href="clc53.html#readexit">ReadExit()</a>   Toggle Up arrow and Down arrow as READ exit keys</div>
+<div><a href="clc53.html#readformat">ReadFormat()</a>   Return and optionally, set the code block that implements a format (.fmt) file</div>
+<div><a href="clc53.html#readinsert">ReadInsert()</a>   Toggle the current insert mode for READ and MemoEdit()</div>
+<div><a href="clc53.html#readkey">ReadKey()*</a>   Determine what key terminated a READ</div>
+<div><a href="clc53.html#readkill">ReadKill()</a>   Return, and optionally set, whether the current READ should be exited</div>
+<div><a href="clc53.html#readmodal">ReadModal()</a>   Activate a full-screen editing mode for a GetList</div>
+<div><a href="clc53.html#readupdated">ReadUpdated()</a>   Determine whether any GET variables changed during a READ and optionally change the ReadUpdated() flag</div>
+<div><a href="clc53.html#readvar">ReadVar()</a>   Return the current GET/MENU variable name</div>
+<div><a href="clc53.html#reccount">RecCount()*</a>   Determine the number of records in the current database (.dbf) file</div>
+<div><a href="clc53.html#recno">RecNo()</a>   Return the identity at the position of the record pointer</div>
+<div><a href="clc53.html#recsize">RecSize()</a>   Determine the record length of a database (.dbf) file</div>
+<div><a href="clc53.html#replicate">Replicate()</a>   Return a string repeated a specified number of times</div>
+<div><a href="clc53.html#restscreen">RestScreen()</a>   Display a saved screen region to a specified location</div>
+<div><a href="clc53.html#read-cmd">READ</a>   Activate full-screen editing mode using Get objects</div>
+<div><a href="clc53.html#recall-cmd">RECALL</a>   Restore records marked for deletion</div>
+<div><a href="clc53.html#reindex-cmd">REINDEX</a>   Rebuild open indexes in the current work area</div>
+<div><a href="clc53.html#release-cmd">RELEASE</a>   Delete public and private memory variables</div>
+<div><a href="clc53.html#rename-cmd">RENAME</a>   Change the name of a file</div>
+<div><a href="clc53.html#replace-cmd">REPLACE</a>   Assign new values to field variables</div>
+<div><a href="clc53.html#report-form-cmd">REPORT FORM</a>   Display a report to the console</div>
+<div><a href="clc53.html#request-cmd">REQUEST</a>   Declare a module request list</div>
+<div><a href="clc53.html#restore-cmd">RESTORE</a>   Retrieve memory variables from a memory (.mem) file</div>
+<div><a href="clc53.html#restore-screen-cmd">RESTORE SCREEN*</a>   Display a saved screen</div>
+<div><a href="clc53.html#return-cmd">RETURN</a>   Terminate a procedure, user-defined function, or program</div>
+<div><a href="clc53.html#right">Right()</a>   Return a substring beginning with the rightmost character</div>
+<div><a href="clc53.html#rlock">RLock()</a>   Lock the current record in the active work area</div>
+<div><a href="clc53.html#round">Round()</a>   Return a numeric value rounded to a specified number of digits</div>
+<div><a href="clc53.html#row">Row()</a>   Return the screen row position of the cursor</div>
+<div><a href="clc53.html#rtrim">RTrim()</a>   Remove trailing spaces from a character string</div>
+<div><a href="clc53.html#run-cmd">RUN</a>   Execute a DOS command or program</div>
+<div><a href="clc53.html#savescreen">SaveScreen()</a>   Save a screen region for later display</div>
+<div><a href="clc53.html#save-cmd">SAVE</a>   Save variables to a memory (.mem) file</div>
+<div><a href="clc53.html#save-screen-cmd">SAVE SCREEN*</a>   Save the current screen to a buffer or variable</div>
+<div><a href="clc53.html#scroll">Scroll()</a>   Scroll a screen region up or down, right or left</div>
+<div><a href="clc53.html#scrollbar">Scrollbar</a>   Creates a scroll bar</div>
+<div><a href="clc53.html#seconds">Seconds()</a>   Return the number of seconds elapsed since midnight</div>
+<div><a href="clc53.html#select">Select()</a>   Determine the work area number of a specified alias</div>
+<div><a href="clc53.html#set">Set()</a>   Inspect or change a system setting</div>
+<div><a href="clc53.html#setblink">SetBlink()</a>   Toggle asterisk (*) interpretation in the SetColor() string between blinking and background intensity</div>
+<div><a href="clc53.html#setcancel">SetCancel()</a>   Toggle Alt+C and Ctrl+Break as program termination keys</div>
+<div><a href="clc53.html#setcolor">SetColor()</a>   Return the current colors and optionally set new colors</div>
+<div><a href="clc53.html#setcursor">SetCursor()</a>   Set the cursor shape</div>
+<div><a href="clc53.html#setkey">SetKey()</a>   Assign an action block to a key</div>
+<div><a href="clc53.html#setmode">SetMode()</a>   Change display mode to a specified number of rows and columns</div>
+<div><a href="clc53.html#setpos">SetPos()</a>   Move the cursor to a new position</div>
+<div><a href="clc53.html#setprc">SetPRC()</a>   Set PRow() and PCol() values</div>
+<div><a href="clc53.html#seek-cmd">SEEK</a>   Search an order for a specified key value</div>
+<div><a href="clc53.html#select-cmd">SELECT</a>   Change the current work area</div>
+<div><a href="clc53.html#set-alternate-cmd">SET ALTERNATE</a>   Echo console output to a text file</div>
+<div><a href="clc53.html#set-bell-cmd">SET BELL</a>   Toggle automatic sounding of the bell during full-screen operations</div>
+<div><a href="clc53.html#set-century-cmd">SET CENTURY</a>   Modify the date format to include or omit century digits</div>
+<div><a href="clc53.html#set-color-cmd">SET COLOR*</a>   Define screen colors</div>
+<div><a href="clc53.html#set-confirm-cmd">SET CONFIRM</a>   Toggle required exit key to terminate GETs</div>
+<div><a href="clc53.html#set-console-cmd">SET CONSOLE</a>   Toggle console display to the screen</div>
+<div><a href="clc53.html#set-cursor-cmd">SET CURSOR</a>   Toggle the screen cursor on or off</div>
+<div><a href="clc53.html#set-date-cmd">SET DATE</a>   Set the date format for input and display</div>
+<div><a href="clc53.html#set-decimals-cmd">SET DECIMALS</a>   Set the number of decimal places to be displayed</div>
+<div><a href="clc53.html#set-default-cmd">SET DEFAULT</a>   Set the CA-Clipper default drive and directory</div>
+<div><a href="clc53.html#set-deleted-cmd">SET DELETED</a>   Toggle filtering of deleted records</div>
+<div><a href="clc53.html#set-delimiters-cmd">SET DELIMITERS</a>   Toggle or define GET delimiters</div>
+<div><a href="clc53.html#set-descending-cmd">SET DESCENDING</a>   Change the descending flag of the controlling order</div>
+<div><a href="clc53.html#set-device-cmd">SET DEVICE</a>   Direct @...SAYs to the screen or printer</div>
+<div><a href="clc53.html#set-epoch-cmd">SET EPOCH</a>   Control the interpretation of dates with no century digits</div>
+<div><a href="clc53.html#set-escape-cmd">SET ESCAPE</a>   Toggle Esc as a READ exit key</div>
+<div><a href="clc53.html#set-eventmask-cmd">SET EVENTMASK</a>   Specify events to be returned by the Inkey() function</div>
+<div><a href="clc53.html#set-exact-cmd">SET EXACT*</a>   Toggle exact matches for character strings</div>
+<div><a href="clc53.html#set-exclusive-cmd">SET EXCLUSIVE*</a>   Establish shared or exclusive USE of database files</div>
+<div><a href="clc53.html#set-filter-cmd">SET FILTER</a>   Hide records not meeting a condition</div>
+<div><a href="clc53.html#set-fixed-cmd">SET FIXED</a>   Toggle fixing of the number of decimal digits displayed</div>
+<div><a href="clc53.html#set-format-cmd">SET FORMAT*</a>   Activate a format when READ is executed</div>
+<div><a href="clc53.html#set-function-cmd">SET FUNCTION</a>   Assign a character string to a function key</div>
+<div><a href="clc53.html#set-index-cmd">SET INDEX</a>   Open one or more order bags in the current work area</div>
+<div><a href="clc53.html#set-intensity-cmd">SET INTENSITY</a>   Toggle enhanced display of GETs and PROMPTs</div>
+<div><a href="clc53.html#set-key-cmd">SET KEY</a>   Assign a procedure invocation to a key</div>
+<div><a href="clc53.html#set-margin-cmd">SET MARGIN</a>   Set the page offset for all printed output</div>
+<div><a href="clc53.html#set-memoblock-cmd">SET MEMOBLOCK</a>   Change the block size for memo files</div>
+<div><a href="clc53.html#set-message-cmd">SET MESSAGE</a>   Set the @...PROMPT message line row</div>
+<div><a href="clc53.html#set-optimize-cmd">SET OPTIMIZE</a>   Change the setting that determines whether to optimize using the open orders when processing a filtered database file</div>
+<div><a href="clc53.html#set-order-cmd">SET ORDER</a>   Select the controlling order</div>
+<div><a href="clc53.html#set-path-cmd">SET PATH</a>   Specify the CA-Clipper search path for opening files</div>
+<div><a href="clc53.html#set-printer-cmd">SET PRINTER</a>   Toggle echo of console output to the printer or set the destination of printed output</div>
+<div><a href="clc53.html#set-procedure-cmd">SET PROCEDURE*</a>   Compile procedures and functions into the current object (.OBJ) file</div>
+<div><a href="clc53.html#set-relation-cmd">SET RELATION</a>   Relate two work areas by a key value or record number</div>
+<div><a href="clc53.html#set-scope-cmd">SET SCOPE</a>   Change the top and/or bottom boundaries for scoping key values in the controlling order</div>
+<div><a href="clc53.html#set-scopebottom-cmd">SET SCOPEBOTTOM</a>   Change the bottom boundary for scoping key values in the controlling order</div>
+<div><a href="clc53.html#set-scopetop-cmd">SET SCOPETOP</a>   Change the top boundary for scoping key values in the controlling order</div>
+<div><a href="clc53.html#set-scoreboard-cmd">SET SCOREBOARD</a>   Toggle the message display from READ or MemoEdit()</div>
+<div><a href="clc53.html#set-softseek-cmd">SET SOFTSEEK</a>   Toggle relative seeking</div>
+<div><a href="clc53.html#set-typeahead-cmd">SET TYPEAHEAD</a>   Set the size of the keyboard buffer</div>
+<div><a href="clc53.html#set-unique-cmd">SET UNIQUE*</a>   Toggle inclusion of non-unique keys into an index</div>
+<div><a href="clc53.html#set-videomode-cmd">SET VIDEOMODE</a>   Change the current video mode of the current application</div>
+<div><a href="clc53.html#set-wrap-cmd">SET WRAP*</a>   Toggle wrapping of the highlight in menus</div>
+<div><a href="clc53.html#skip-cmd">SKIP</a>   Move the record pointer to a new position</div>
+<div><a href="clc53.html#soundex">SoundEx()</a>   Convert a character string to &quot;soundex&quot; form</div>
+<div><a href="clc53.html#sort-cmd">SORT</a>   Copy to a database (.dbf) file in sorted order</div>
+<div><a href="clc53.html#space">Space()</a>   Return a string of spaces</div>
+<div><a href="clc53.html#sqrt">Sqrt()</a>   Return the square root of a positive number</div>
+<div><a href="clc53.html#str">Str()</a>   Convert a numeric expression to a character string</div>
+<div><a href="clc53.html#strtran">StrTran()</a>   Search and replace characters within a character string or memo field</div>
+<div><a href="clc53.html#stuff">Stuff()</a>   Delete and insert characters in a string</div>
+<div><a href="clc53.html#static-cmd">STATIC</a>   Declare and initialize static variables and arrays</div>
+<div><a href="clc53.html#store-cmd">STORE*</a>   Assign a value to one or more variables</div>
+<div><a href="clc53.html#substr">SubStr()</a>   Extract a substring from a character string</div>
+<div><a href="clc53.html#sum-cmd">SUM</a>   Sum numeric expressions and assign results to variables</div>
+<div><a href="clc53.html#tbcolumn">TBColumn</a>   Provide column objects for TBrowse objects</div>
+<div><a href="clc53.html#tbrowse">TBrowse</a>   Provide objects for browsing table-oriented data</div>
+<div><a href="clc53.html#text-cmd">TEXT*</a>   Display a literal block of text</div>
+<div><a href="clc53.html#time">Time()</a>   Return the system time</div>
+<div><a href="clc53.html#tone">Tone()</a>   Sound a speaker tone for a specified frequency and duration</div>
+<div><a href="clc53.html#topbarmenu">TopBarMenu</a>   Create a top bar menu</div>
+<div><a href="clc53.html#total-cmd">TOTAL</a>   Summarize records by key value to a database (.dbf) file</div>
+<div><a href="clc53.html#transform">Transform()</a>   Convert any value into a formatted character string</div>
+<div><a href="clc53.html#trim">Trim()</a>   Remove trailing spaces from a character string</div>
+<div><a href="clc53.html#type">Type()</a>   Determine the type of an expression</div>
+<div><a href="clc53.html#type-cmd">TYPE</a>   Display the contents of a text file</div>
+<div><a href="clc53.html#unlock-cmd">UNLOCK</a>   Release file/record locks set by the current user</div>
+<div><a href="clc53.html#updated">Updated()</a>   Determine whether a GET changed during a READ</div>
+<div><a href="clc53.html#upper">Upper()</a>   Convert lowercase characters to uppercase</div>
+<div><a href="clc53.html#update-cmd">UPDATE</a>   Update current database file from another database file</div>
+<div><a href="clc53.html#used">Used()</a>   Determine whether a database file is in USE</div>
+<div><a href="clc53.html#use-cmd">USE</a>   Open an existing database (.dbf) and its associated files</div>
+<div><a href="clc53.html#val">Val()</a>   Convert a character number to numeric type</div>
+<div><a href="clc53.html#valtype">ValType()</a>   Determine the data type returned by an expression</div>
+<div><a href="clc53.html#version">Version()</a>   Returns CA-Clipper version</div>
+<div><a href="clc53.html#wait-cmd">WAIT*</a>   Suspend program processing until a key is pressed</div>
+<div><a href="clc53.html#word">Word()*</a>   Convert CALL command numeric parameters from double to integer values</div>
+<div><a href="clc53.html#year">Year()</a>   Convert a date value to the year as a numeric value</div>
+<div><a href="clc53.html#zap-cmd">ZAP</a>   Remove all records from the current database file</div>
 </div>
 </section>
 
-<section id="cl53micopyright" class="d-x d-id">
+<section id="clc53micopyright" class="d-x d-id">
 <h2>Copyright</h2>
 <div class="d-y">
-<div><a href="cl53.html#camiclipper-53">CA-Clipper 5.3</a>   Copyright</div>
+<div><a href="clc53.html#camiclipper-53">CA-Clipper 5.3</a>   Copyright</div>
 </div>
 </section>
 
-<section id="cl53mitable" class="d-x d-id">
+<section id="clc53mitable" class="d-x d-id">
 <h2>Table</h2>
 <div class="d-y">
-<div><a href="cl53.html#ascii-chart">ASCII Chart</a>   ASCII Chart</div>
-<div><a href="cl53.html#box-characters">Box Characters</a>   Box Characters</div>
-<div><a href="cl53.html#colors">Colors</a>   Colors</div>
-<div><a href="cl53.html#inkey-codes">Inkey Codes</a>   Inkey Codes</div>
-<div><a href="cl53.html#picture-codes">Picture Codes</a>   Picture Codes</div>
-<div><a href="cl53.html#reserved-words">Reserved Words</a>   Reserved Words</div>
-<div><a href="cl53.html#special-characters">Special Characters</a>   Special Characters</div>
-<div><a href="cl53.html#unsupported-dbase-items">Unsupported dBASE Items</a>   Unsupported dBASE Items</div>
+<div><a href="clc53.html#ascii-chart">ASCII Chart</a>   ASCII Chart</div>
+<div><a href="clc53.html#box-characters">Box Characters</a>   Box Characters</div>
+<div><a href="clc53.html#colors">Colors</a>   Colors</div>
+<div><a href="clc53.html#inkey-codes">Inkey Codes</a>   Inkey Codes</div>
+<div><a href="clc53.html#picture-codes">Picture Codes</a>   Picture Codes</div>
+<div><a href="clc53.html#reserved-words">Reserved Words</a>   Reserved Words</div>
+<div><a href="clc53.html#special-characters">Special Characters</a>   Special Characters</div>
+<div><a href="clc53.html#unsupported-dbase-items">Unsupported dBASE Items</a>   Unsupported dBASE Items</div>
 </div>
 </section>
 </div>
@@ -1861,7 +1862,7 @@ Harbour Reference Guide</a></div>
 </section>
 
 <section id="gtwvw" class="d-x d-id">
-<h1><a href="gtwvw.html#gtwvw">gtwvw contrib</a></h1>
+<h1><a href="gtwvw.html#gtwvw">gtwvw lib</a></h1>
 <div class="d-y">
 
 <section id="gtwvwmiapi" class="d-x d-id">
@@ -2070,7 +2071,7 @@ Harbour Reference Guide</a></div>
 </section>
 
 <section id="hbct" class="d-x d-id">
-<h1><a href="hbct.html#hbct">hbct contrib</a></h1>
+<h1><a href="hbct.html#hbct">hbct lib</a></h1>
 <div class="d-y">
 
 <section id="hbctmict3-date-and-time-functions" class="d-x d-id">
@@ -2315,7 +2316,7 @@ Harbour Reference Guide</a></div>
 </section>
 
 <section id="hbgd" class="d-x d-id">
-<h1><a href="hbgd.html#hbgd">hbgd contrib</a></h1>
+<h1><a href="hbgd.html#hbgd">hbgd lib</a></h1>
 <div class="d-y">
 
 <section id="hbgdmidocument" class="d-x d-id">
@@ -2365,7 +2366,7 @@ Harbour Reference Guide</a></div>
 </section>
 
 <section id="hbgt" class="d-x d-id">
-<h1><a href="hbgt.html#hbgt">hbgt contrib</a></h1>
+<h1><a href="hbgt.html#hbgt">hbgt lib</a></h1>
 <div class="d-y">
 
 <section id="hbgtmigeneral" class="d-x d-id">
@@ -2403,7 +2404,7 @@ Harbour Reference Guide</a></div>
 </section>
 
 <section id="hbmisc" class="d-x d-id">
-<h1><a href="hbmisc.html#hbmisc">hbmisc contrib</a></h1>
+<h1><a href="hbmisc.html#hbmisc">hbmisc lib</a></h1>
 <div class="d-y">
 
 <section id="hbmiscmiconversion-tools" class="d-x d-id">
@@ -2450,7 +2451,7 @@ Harbour Reference Guide</a></div>
 </section>
 
 <section id="hbnf" class="d-x d-id">
-<h1><a href="hbnf.html#hbnf">hbnf contrib</a></h1>
+<h1><a href="hbnf.html#hbnf">hbnf lib</a></h1>
 <div class="d-y">
 
 <section id="hbnfmiarray" class="d-x d-id">
@@ -2746,14 +2747,13 @@ Harbour Reference Guide</a></div>
 </section>
 
 <section id="hbxpp" class="d-x d-id">
-<h1><a href="hbxpp.html#hbxpp">hbxpp contrib</a></h1>
+<h1><a href="hbxpp.html#hbxpp">hbxpp lib</a></h1>
 <div class="d-y">
 
 <section id="hbxppmiapi" class="d-x d-id">
 <h2>API</h2>
 <div class="d-y">
 <div><a href="hbxpp.html#bin2u">Bin2U()</a>   Convert unsigned long encoded bytes into Harbour numeric</div>
-<div><a href="hbxpp.html#bin2w">Bin2W()</a>   Convert unsigned short encoded bytes into Harbour numeric</div>
 <div><a href="hbxpp.html#u2bin">U2Bin()</a>   Convert Harbour numeric into unsigned long encoded bytes</div>
 <div><a href="hbxpp.html#w2bin">W2Bin()</a>   Convert Harbour numeric into unsigned short encoded bytes</div>
 <h3 class="d-sc d-id" id="hbxppmiapimiuser-interface">User interface</h3><div><a href="hbxpp.html#dbskipper">dbSkipper()</a>   Helper function to skip a database</div>
@@ -2763,7 +2763,7 @@ Harbour Reference Guide</a></div>
 </section>
 
 <section id="hbziparc" class="d-x d-id">
-<h1><a href="hbziparc.html#hbziparc">hbziparc contrib</a></h1>
+<h1><a href="hbziparc.html#hbziparc">hbziparc lib</a></h1>
 <div class="d-y">
 
 <section id="hbziparcmizip-functions" class="d-x d-id">
@@ -2785,7 +2785,7 @@ Harbour Reference Guide</a></div>
 </section>
 
 <section id="rddads" class="d-x d-id">
-<h1><a href="rddads.html#rddads">rddads contrib</a></h1>
+<h1><a href="rddads.html#rddads">rddads lib</a></h1>
 <div class="d-y">
 
 <section id="rddadsmidocument" class="d-x d-id">
@@ -2841,8 +2841,8 @@ Harbour Reference Guide</a></div>
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-09 20:49 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/b5d3b36">b5d3b36</a></div>
+<div>Generated by hbdoc on 2016-11-10 13:10 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/feaf61b">feaf61b</a></div>
 <div>Content processing, layout &amp; design © 2016 <a href="https://vszakats.net/harbour">vszakats</a></div>
 </footer>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
