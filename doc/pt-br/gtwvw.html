@@ -278,7 +278,7 @@ Harbour guia de referência</a></div>
 <div class="d-d">Retorna</div>
 <div class="d-it"><code>.T.</code> se a operação foi bem-sucedida.</div>
 <div class="d-d">Descrição</div>
-<div class="d-it">Adiciona ou diminui <code>nRows</code> linhas da janela <code>nWinNum</code>. As novas linhas adicionadas serao coloridas com a cor da coluna 0 da linha anterior. Nao haverá checagem para determinar se a janela se tornou maior que a área de desktop (exceto se no modo MainCoord, porque precisamos desses limites para a funçao <code><a href="../harbour.html#maxrow" title="harbour">MaxRow()</a></code>).</div>
+<div class="d-it">Adiciona ou diminui <code>nRows</code> linhas da janela <code>nWinNum</code>. As novas linhas adicionadas serao coloridas com a cor da coluna 0 da linha anterior. Nao haverá checagem para determinar se a janela se tornou maior que a área de desktop (exceto se no modo MainCoord, porque precisamos desses limites para a funçao <code><a href="../harbour.html#maxrow" title="harbour (en)">MaxRow()</a></code>).</div>
 <div class="d-d">Plataformas</div>
 <div class="d-it">Disponível em Windows</div>
 <div class="d-d">Etiquetas</div>
@@ -1912,7 +1912,7 @@ lTight/aOffset, &lt;lTransparent&gt; )
 <div class="d-d">Retorna</div>
 <div class="d-it">Número máximo de colunas.</div>
 <div class="d-d">Descrição</div>
-<div class="d-it">Retorna o máximo <code><a href="../harbour.html#maxcol" title="harbour">MaxCol()</a></code> possível na configuraçao de tela corrente, para a fonte usada na janela <code>nWinNum</code></div>
+<div class="d-it">Retorna o máximo <code><a href="../harbour.html#maxcol" title="harbour (en)">MaxCol()</a></code> possível na configuraçao de tela corrente, para a fonte usada na janela <code>nWinNum</code></div>
 <div class="d-d">Plataformas</div>
 <div class="d-it">Disponível em Windows</div>
 <div class="d-d">Etiquetas</div>
@@ -1928,7 +1928,7 @@ lTight/aOffset, &lt;lTransparent&gt; )
 <div class="d-d">Retorna</div>
 <div class="d-it">Número máximo de linhas.</div>
 <div class="d-d">Descrição</div>
-<div class="d-it">Retorna o máximo <code><a href="../harbour.html#maxrow" title="harbour">MaxRow()</a></code> possível na configuraçao de tela corrente, para a fonte usada na janela <code>nWinNum</code>.</div>
+<div class="d-it">Retorna o máximo <code><a href="../harbour.html#maxrow" title="harbour (en)">MaxRow()</a></code> possível na configuraçao de tela corrente, para a fonte usada na janela <code>nWinNum</code>.</div>
 <div class="d-d">Plataformas</div>
 <div class="d-it">Disponível em Windows</div>
 <div class="d-d">Etiquetas</div>
@@ -2008,7 +2008,7 @@ lTight/aOffset, &lt;lTransparent&gt; )
 </code></pre>
 </div>
 <div class="d-d">Argumentos</div>
-<div class="d-it"><code>cWinName</code> É o título da janela. Se for omitido, será usado o nome do arquivo executável. row1, col1, row2, col2 Linha inicial, coluna inicial, linha final e coluna final da janela que será aberta. Essas coordenadas sao relativas a janela principal e nao a janela atual. Essas coordenadas sao usadas ainda para: 1) colocar a janela em seu posicionamento inicial. 2) determinar o tamanho da janela (novo <code><a href="../harbour.html#maxrow" title="harbour">MaxRow()</a></code> e <code><a href="../harbour.html#maxcol" title="harbour">MaxCol()</a></code>). 3) salvar em RowOfs e ColOfs para o modo de MainCoord. <code>nStyle</code> É o estilo da janela (por ex. <code>WS_OVERLAPPEDWINDOW</code>, etc). As definiçoes estao em <code>winuser.ch</code>. O default é <code>WS_CAPTION</code>|<code>WS_SYSMENU</code>|<code>WS_CLIPCHILDREN</code>. Se for usar na janela controles como <code>PUSHBUTTON</code>, voce deve incluir o estilo <code>WS_CLIPCHILDREN</code>. <code>nParentWin</code> É a janela mae da nova janela que está sendo aberta. O default é a janela atual (no modo Standard) e a última janela (no modo MainCoord). Se quiser que a nova janela nao tenha mae, informe ­1. <code>nExStyle</code> Estilo extendido para janela (por exemplo <code>WS_EX_TOOLTIPWINDOW</code>). Default é <code>NIL</code>.</div>
+<div class="d-it"><code>cWinName</code> É o título da janela. Se for omitido, será usado o nome do arquivo executável. row1, col1, row2, col2 Linha inicial, coluna inicial, linha final e coluna final da janela que será aberta. Essas coordenadas sao relativas a janela principal e nao a janela atual. Essas coordenadas sao usadas ainda para: 1) colocar a janela em seu posicionamento inicial. 2) determinar o tamanho da janela (novo <code><a href="../harbour.html#maxrow" title="harbour (en)">MaxRow()</a></code> e <code><a href="../harbour.html#maxcol" title="harbour (en)">MaxCol()</a></code>). 3) salvar em RowOfs e ColOfs para o modo de MainCoord. <code>nStyle</code> É o estilo da janela (por ex. <code>WS_OVERLAPPEDWINDOW</code>, etc). As definiçoes estao em <code>winuser.ch</code>. O default é <code>WS_CAPTION</code>|<code>WS_SYSMENU</code>|<code>WS_CLIPCHILDREN</code>. Se for usar na janela controles como <code>PUSHBUTTON</code>, voce deve incluir o estilo <code>WS_CLIPCHILDREN</code>. <code>nParentWin</code> É a janela mae da nova janela que está sendo aberta. O default é a janela atual (no modo Standard) e a última janela (no modo MainCoord). Se quiser que a nova janela nao tenha mae, informe ­1. <code>nExStyle</code> Estilo extendido para janela (por exemplo <code>WS_EX_TOOLTIPWINDOW</code>). Default é <code>NIL</code>.</div>
 <div class="d-d">Retorna</div>
 <div class="d-it">O numero da janela se for bem sucedido ou 0 se falhar.</div>
 <div class="d-d">Descrição</div>
@@ -2331,7 +2331,7 @@ lTight/aOffset, &lt;lTransparent&gt; )
 <div class="d-d">Retorna</div>
 <div class="d-it">nenhum.</div>
 <div class="d-d">Descrição</div>
-<div class="d-it">Restaura a janela atual (o parâmetro <code>nWinNum</code> é ignorado). A restauraçao da janela do modo maximizado pode precisar ser manipulada pela funçao callback <code>WVW_Size()</code>, porque a funçao <code>wvw_Restore()</code> assume que nao acontecerá mudança em <code><a href="../harbour.html#maxrow" title="harbour">MaxRow()</a></code>/<code><a href="../harbour.html#maxcol" title="harbour">MaxCol()</a></code>.</div>
+<div class="d-it">Restaura a janela atual (o parâmetro <code>nWinNum</code> é ignorado). A restauraçao da janela do modo maximizado pode precisar ser manipulada pela funçao callback <code>WVW_Size()</code>, porque a funçao <code>wvw_Restore()</code> assume que nao acontecerá mudança em <code><a href="../harbour.html#maxrow" title="harbour (en)">MaxRow()</a></code>/<code><a href="../harbour.html#maxcol" title="harbour (en)">MaxCol()</a></code>.</div>
 <div class="d-d">Plataformas</div>
 <div class="d-it">Disponível em Windows</div>
 <div class="d-d">Etiquetas</div>
@@ -3460,8 +3460,8 @@ lTight/aOffset, &lt;lTransparent&gt; )
 </main>
 
 <footer>
-<div>Gerado por hbdoc em 2016-11-10 21:19 UTC</div>
-<div>Baseado na revisão <a href="https://github.com/vszakats/harbour-core/tree/1437ebf">1437ebf</a></div>
+<div>Gerado por hbdoc em 2016-11-10 22:05 UTC</div>
+<div>Baseado na revisão <a href="https://github.com/vszakats/harbour-core/tree/99dc71f">99dc71f</a></div>
 <div>Processamento de conteúdo, layout e design © 2016 <a href="https://vszakats.net/harbour">vszakats</a></div>
 </footer>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
