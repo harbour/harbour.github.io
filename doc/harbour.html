@@ -5062,103 +5062,103 @@ RUN command                    // Gives a OS shell
   <div><code>xNewSetting</code> Any expression to assign a value to the setting</div>
   <div><code>xOption</code> Logical expression</div>
   <div><code>nSet</code>            <code>xNewSetting</code>          <code>xOption</code></div>
-  <div>_>SET_ALTERNATE   <code>lFlag</code> | <code>cOnOff</code></div>
-  <div>If enabled, <code><a href="clc53.html#qout" title="clc53">QOut()</a></code> and <code>QQOut()</code> write to the screen and to a file, provided that a file has been opened or created with _>SET_ALTFILE. If disabled, which is the default, <code><a href="clc53.html#qout" title="clc53">QOut()</a></code> and <code>QQOut()</code> only write to the screen (and/or to the <code>PRINTFILE</code>). Defaults to disabled.</div>
-  <div>_>SET_ALTFILE     <code>cFileName</code>             <code>lAdditive</code></div>
+  <div><code>_SET_ALTERNATE</code>   <code>lFlag</code> | <code>cOnOff</code></div>
+  <div>If enabled, <code><a href="clc53.html#qout" title="clc53">QOut()</a></code> and <code>QQOut()</code> write to the screen and to a file, provided that a file has been opened or created with <code>_SET_ALTFILE</code>. If disabled, which is the default, <code><a href="clc53.html#qout" title="clc53">QOut()</a></code> and <code>QQOut()</code> only write to the screen (and/or to the <code>PRINTFILE</code>). Defaults to disabled.</div>
+  <div><code>_SET_ALTFILE</code>     <code>cFileName</code>             <code>lAdditive</code></div>
   <div>When set, creates or opens file to write <code><a href="clc53.html#qout" title="clc53">QOut()</a></code> and <code>QQOut()</code> output to. If <code>lAdditive</code> is TRUE and the file already exists, the file is opened and positioned at end of file. Otherwise, the file is created. If a file is already opened, it is closed before the new file is opened or created (even if it is the same file). The default file extension is <code>.txt</code>. There is no default file name. Call with an empty string to close the file.</div>
-  <div>_>SET_AUTOPEN     <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_AUTOPEN</code>     <code>lFlag</code> | <code>cOnOff</code></div>
   <div>TODO: Document</div>
-  <div>_>SET_AUTORDER    <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_AUTORDER</code>    <code>lFlag</code> | <code>cOnOff</code></div>
   <div>TODO: Document</div>
-  <div>_>SET_AUTOSHARE   <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_AUTOSHARE</code>   <code>lFlag</code> | <code>cOnOff</code></div>
   <div>TODO: Document</div>
-  <div>_>SET_BELL        <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_BELL</code>        <code>lFlag</code> | <code>cOnOff</code></div>
   <div>When enabled, the bell sounds when the last position of a <code>GET</code> is reached and/or when a <code>GET</code> validation fails. Disabled by default.</div>
-  <div>_>SET_CANCEL      <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_CANCEL</code>      <code>lFlag</code> | <code>cOnOff</code></div>
   <div>When enabled, which is the default, pressing <span class="d-key">Alt+C</span> or <span class="d-key">Ctrl+Break</span> terminates the program. When disabled, both keystrokes can be read by <code><a href="#inkey">Inkey()</a></code>. Note: <code>SET KEY</code> has precedence over <code>SET <code>CANCEL</code></code>.</div>
-  <div>_>SET_COLOR       <code>cColorSet</code></div>
+  <div><code>_SET_COLOR</code>       <code>cColorSet</code></div>
   <div>Sets the current color scheme, using color pairs in the sequence <code>&quot;&lt;standard&gt;, &lt;enhanced&gt;, &lt;border&gt;, &lt;background&gt;, &lt;unselected&gt;&quot;</code>. Each color pair uses the format <code>&quot;&lt;foreground&gt;/&lt;background&gt;&quot;</code>. The color codes are space or <code>&quot;N&quot;</code> for black, <code>&quot;B&quot;</code> for blue, <code>&quot;G&quot;</code> for green, <code>&quot;BG&quot;</code> for Cyan, <code>&quot;R&quot;</code> for red, <code>&quot;RB&quot;</code> for magenta, <code>&quot;GR&quot;</code> for brown, <code>&quot;W&quot;</code> for white, <code>&quot;N+&quot;</code> for gray, <code>&quot;B+&quot;</code> for bright blue, <code>&quot;G+&quot;</code> for bright green, <code>&quot;BG+&quot;</code> for bright cyan, <code>&quot;R+&quot;</code> for bright red, <code>&quot;RB+&quot;</code> for bright magenta, <code>&quot;GR+&quot;</code> for yellow, and <code>&quot;W+&quot;</code> for bright white. Special codes are <code>&quot;I&quot;</code> for inverse video, <code>&quot;U&quot;</code> for underline on a monochrome monitor (blue on a color monitor), and <code>&quot;X&quot;</code> for blank. The default color is <code>&quot;W/N,N/W,N,N,N/W&quot;</code>.</div>
-  <div>_>SET_CONFIRM     <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_CONFIRM</code>     <code>lFlag</code> | <code>cOnOff</code></div>
   <div>If enabled, an exit key must be pressed to leave a <code>GET</code>. If disabled, which is the default, typing past the end will leave a <code>GET</code>.</div>
-  <div>_>SET_CONSOLE     <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_CONSOLE</code>     <code>lFlag</code> | <code>cOnOff</code></div>
   <div>If enabled, which is the default, all screen output goes to the screen. When disabled, screen output is suppressed (Note: This setting does not affect <code><a href="#outstd">OutStd()</a></code> or <code><a href="#outerr">OutErr()</a></code>).</div>
-  <div>_>SET_CURSOR      <code>nCursorType</code></div>
+  <div><code>_SET_CURSOR</code>      <code>nCursorType</code></div>
   <div>If enabled, which is the default, the cursor is displayed on screen. If disabled, the screen cursor is hidden.</div>
-  <div>_>SET_DATEFORMAT  <code>cDateFormat</code></div>
+  <div><code>_SET_DATEFORMAT</code>  <code>cDateFormat</code></div>
   <div>Sets the default date format for display, date input, and date conversion. Defaults to American <code>mm/dd/yy</code>. Other formats include ANSI <code>yy.mm.dd</code>, British <code>dd/mm/yy</code>, French <code>dd/mm/yy</code>, German <code>dd.mm.yy</code>, Italian <code>dd-mm-yy</code>, Japan <code>yy/mm/dd</code>, and USA <code>mm-dd-yy</code>. <code>SET <code>CENTURY</code></code> modifies the date format. <code>SET <code>CENTURY</code> <code>ON</code></code> replaces the <code>y</code>s with <code>YYYY</code>. <code>SET <code>CENTURY</code> <code>OFF</code></code> replaces the <code>y</code>s with <code>YY</code>.</div>
-  <div>_>SET_DEBUG       <code>lStatus</code></div>
+  <div><code>_SET_DEBUG</code>       <code>lStatus</code></div>
   <div>When set to <code>.T.</code>, pressing <span class="d-key">Alt+D</span> activates the debugger. When set to <code>.F.</code>, which is the default, <span class="d-key">Alt+D</span> can be read by <code><a href="#inkey">Inkey()</a></code>. (Also affected by <code>AltD( 1 )</code> and <code>AltD( 0 )</code>)</div>
-  <div>_>SET_DECIMALS    <code>nNumberOfDecimals</code></div>
+  <div><code>_SET_DECIMALS</code>    <code>nNumberOfDecimals</code></div>
   <div>Sets the number of decimal digits to use when displaying printing numeric values when <code>SET <code>FIXED</code></code> is <code>ON</code>. Defaults to 2. If <code>SET <code>FIXED</code></code> is <code>OFF</code>, then <code>SET <code>DECIMALS</code></code> is only used to determine the number of decimal digits to use after using <code><a href="#exp">Exp()</a></code>, <code><a href="#log">Log()</a></code>, <code><a href="#sqrt">Sqrt()</a></code>, or division. Other math operations may adjust the number of decimal digits that the result will display. Note: This never affects the precision of a number. Only the display format is affected.</div>
-  <div>_>SET_DEFAULT     <code>cDefaultDirectory</code></div>
+  <div><code>_SET_DEFAULT</code>     <code>cDefaultDirectory</code></div>
   <div>Sets the default directory in which to open, create and check for files. Defaults to current directory (blank).</div>
-  <div>_>SET_DELETED     <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_DELETED</code>     <code>lFlag</code> | <code>cOnOff</code></div>
   <div>If enabled, deleted records will be processed. If disabled, which is the default, deleted records will be ignored.</div>
-  <div>_>SET_DELIMCHARS  <code>cDelimiters</code></div>
+  <div><code>_SET_DELIMCHARS</code>  <code>cDelimiters</code></div>
   <div>Sets the <code>GET</code> delimiter characters. Defaults to <code>&quot;::&quot;</code>.</div>
-  <div>_>SET_DELIMITERS  <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_DELIMITERS</code>  <code>lFlag</code> | <code>cOnOff</code></div>
   <div>If enabled, <code>GET</code>s are delimited on screen. If disabled, which is the default, no <code>GET</code> delimiters are used.</div>
-  <div>_>SET_DEVICE      <code>cDeviceName</code></div>
-  <div>Selects the output device for <code><a href="clc53.html#devout" title="clc53">DevOut()</a></code>. When set to <code>&quot;PRINTER&quot;</code>, all output is sent to the printer device or file set by _>SET_PRINTFILE. When set to anything else, all output is sent to the screen. Defaults to <code>&quot;SCREEN&quot;</code>.</div>
-  <div>_>SET_EOF         <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_DEVICE</code>      <code>cDeviceName</code></div>
+  <div>Selects the output device for <code><a href="clc53.html#devout" title="clc53">DevOut()</a></code>. When set to <code>&quot;PRINTER&quot;</code>, all output is sent to the printer device or file set by <code>_SET_PRINTFILE</code>. When set to anything else, all output is sent to the screen. Defaults to <code>&quot;SCREEN&quot;</code>.</div>
+  <div><code>_SET_EOF</code>         <code>lFlag</code> | <code>cOnOff</code></div>
   <div>Defaults to FALSE on *nix, but defaults to TRUE on everything else. If set to FALSE, then <code>Chr( 26 )</code> does not get written when using <code>COPY <code>TO</code> <code>DELIMITED</code></code>, <code>COPY <code>TO</code> SDF</code>, or when closing any of the various text files that are created using various <code>SET</code> values. [This is a Harbour extension]</div>
-  <div>_>SET_EPOCH       <code>nYear</code></div>
+  <div><code>_SET_EPOCH</code>       <code>nYear</code></div>
   <div>Determines how to handle the conversion of 2-digit years to 4 digit years. When a 2-digit year is greater than or equal to the year part of the epoch, the century part of the epoch is added to the year. When a 2-digit year is less than the year part of the epoch, the century part of the epoch is incremented and added to the year. The default epoch is 1900, which converts all 2-digit years to 19xx. Example: If the epoch is set to 1950, 2-digit years in the range from 50 to 99 get converted to 19xx and 2-digit years in the range 00 to 49 get converted to 20xx.</div>
-  <div>_>SET_ESCAPE      <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_ESCAPE</code>      <code>lFlag</code> | <code>cOnOff</code></div>
   <div>When enabled, which is the default, pressing <span class="d-key">Esc</span> will exit a <code>READ</code>. When disabled, pressing <span class="d-key">Esc</span> during a <code>READ</code> is ignored, unless the <span class="d-key">Esc</span> key has been assigned to a function using <code>SET KEY</code>.</div>
-  <div>_>SET_EVENTMASK   <code>nEventCodes</code></div>
+  <div><code>_SET_EVENTMASK</code>   <code>nEventCodes</code></div>
   <div>Determines which events <code><a href="#inkey">Inkey()</a></code> will respond to. <code>INKEY_MOVE</code> allows mouse movement events. <code>INKEY_LDOWN</code> allows the left mouse button down click. <code>INKEY_LUP</code> allows the left mouse button up click. <code>INKEY_RDOWN</code> allows the right mouse button down click. <code>INKEY_RUP</code> allows the right mouse button up clock. <code>INKEY_KEYBOARD</code> allows keyboard keystrokes. <code>INKEY_ALL</code> allows all of the preceding events. Events may be combined (e.g., using <code>INKEY_LDOWN + <code>INKEY_RUP</code></code> will allow left mouse button down clicks and right mouse button up clicks). The default is <code>INKEY_KEYBOARD</code>.</div>
-  <div>_>SET_EXACT       <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_EXACT</code>       <code>lFlag</code> | <code>cOnOff</code></div>
   <div>When enabled, all string comparisons other than <code>==</code> exclude trailing spaces when checking for equality. When disabled, which is the default, all string comparisons other than <code>==</code> treat two strings as equal if the right hand string is &quot;&quot; or if the right hand string is shorter than or the same length as the left hand string and all of the characters in the right hand string match the corresponding characters in the left hand string.</div>
-  <div>_>SET_EXCLUSIVE   <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_EXCLUSIVE</code>   <code>lFlag</code> | <code>cOnOff</code></div>
   <div>When enabled, which is the default, all database files are opened in exclusive mode. When disabled, all database files are opened in shared mode. Note: The <code>EXCLUSIVE</code> and <code>SHARED</code> clauses of the <code>USE</code> command can be used to override this setting.</div>
-  <div>_>SET_EXIT        <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_EXIT</code>        <code>lFlag</code> | <code>cOnOff</code></div>
   <div>Toggles the use of Uparrow and Dnarrow as <code>READ</code> exit keys. Specifying true (<code>.T.</code>) enables them as exit keys, and false (<code>.F.</code>) disables them. Used internally by the <code><a href="clc53.html#readexit" title="clc53">ReadExit()</a></code> function.</div>
-  <div>_>SET_EXTRA       <code>lFlag</code> | <code>cOnOff</code></div>
-  <div><code>QUESTION</code>: What is this for? It does not affect _>SET_EXTRAFILE in CA-Cl*pper!</div>
-  <div>_>SET_EXTRAFILE   <code>cFileName</code>             <code>lAdditive</code></div>
+  <div><code>_SET_EXTRA</code>       <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>QUESTION</code>: What is this for? It does not affect <code>_SET_EXTRAFILE</code> in CA-Cl*pper!</div>
+  <div><code>_SET_EXTRAFILE</code>   <code>cFileName</code>             <code>lAdditive</code></div>
   <div>When set, creates or opens file to write <code><a href="clc53.html#qout" title="clc53">QOut()</a></code> and <code>QQOut()</code> output to. If <code>lAdditive</code> is TRUE and the file already exists, the file is opened and positioned at end of file. Otherwise, the file is created. If a file is already opened, it is closed before the new file is opened or created (even if it is the same file). The default file extension is <code>.prn</code>. There is no default file name. Call with an empty string to close the file.</div>
-  <div>_>SET_FIXED       <code>lFlag</code> | <code>cOnOff</code></div>
-  <div>When enabled, all numeric values will be displayed and printed with the number of decimal digits set by <code>SET <code>DECIMALS</code></code>, unless a <code>PICTURE</code> clause is used. When disabled, which is the default, the number of decimal digits that are displayed depends upon a variety of factors. See _>SET_DECIMALS for more.</div>
-  <div>_>SET_INSERT      <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_FIXED</code>       <code>lFlag</code> | <code>cOnOff</code></div>
+  <div>When enabled, all numeric values will be displayed and printed with the number of decimal digits set by <code>SET <code>DECIMALS</code></code>, unless a <code>PICTURE</code> clause is used. When disabled, which is the default, the number of decimal digits that are displayed depends upon a variety of factors. See <code>_SET_DECIMALS</code> for more.</div>
+  <div><code>_SET_INSERT</code>      <code>lFlag</code> | <code>cOnOff</code></div>
   <div>When enabled, characters typed in a <code>GET</code> or <code><a href="clc53.html#memoedit" title="clc53">MemoEdit()</a></code> are inserted. When disabled, which is the default, characters typed in a <code>GET</code> or <code><a href="clc53.html#memoedit" title="clc53">MemoEdit()</a></code> overwrite. Note: This setting can also be toggled between on and off by pressing the Insert key during a <code>GET</code> or <code><a href="clc53.html#memoedit" title="clc53">MemoEdit()</a></code>.</div>
-  <div>_>SET_INTENSITY   <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_INTENSITY</code>   <code>lFlag</code> | <code>cOnOff</code></div>
   <div>When enabled, which is the default, <code>GET</code>s and <code>PROMPT</code>s are displayed using the enhanced color setting. When disabled, <code>GET</code>s and <code>PROMPT</code>s are displayed using the standard color setting.</div>
-  <div>_>SET_LANGUAGE    <code>cLanguageID</code></div>
+  <div><code>_SET_LANGUAGE</code>    <code>cLanguageID</code></div>
   <div>Specifies the language to be used for Harbour messages. [This is a Harbour extension]</div>
-  <div>_>SET_MARGIN      <code>nColumns</code></div>
+  <div><code>_SET_MARGIN</code>      <code>nColumns</code></div>
   <div>Sets the left margin for all printed output. The default value is 0. Note: <code><a href="clc53.html#pcol" title="clc53">PCol()</a></code> reflects the printer's column position including the margin (e.g., <code>SET <code>MARGIN</code> <code>TO</code> 5</code> followed by <code>DevPos( 5, 10 )</code> makes <code><a href="clc53.html#pcol" title="clc53">PCol()</a></code> return 15).</div>
-  <div>_>SET_MBLOCKSIZE <code>nMemoBlockSize</code></div>
+  <div><code>_SET_MBLOCKSIZE</code> <code>nMemoBlockSize</code></div>
   <div>TODO: Document</div>
-  <div>_>SET_MCENTER     <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_MCENTER</code>     <code>lFlag</code> | <code>cOnOff</code></div>
   <div>If enabled, display <code>PROMPT</code>s centered on the <code>MESSAGE</code> row. If disabled, which is the default, display <code>PROMPTS</code> at column position 0 on the <code>MESSAGE</code> row.</div>
-  <div>_>SET_MESSAGE     <code>nRow</code></div>
+  <div><code>_SET_MESSAGE</code>     <code>nRow</code></div>
   <div>If set to 0, which is the default, <code>PROMPT</code>s are always suppressed. Otherwise, <code>PROMPT</code>s are displayed on the set row. Note: It is not possible to display prompts on the top-most screen row, because row 0 is reserved for the <code>SCOREBOARD</code>, if enabled.</div>
-  <div>_>SET_MFILEEXT    <code>cMemoFileExt</code></div>
+  <div><code>_SET_MFILEEXT</code>    <code>cMemoFileExt</code></div>
   <div>TODO: Document</div>
-  <div>_>SET_OPTIMIZE    <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_OPTIMIZE</code>    <code>lFlag</code> | <code>cOnOff</code></div>
   <div>TODO: Document</div>
-  <div>_>SET_PATH        <code>cDirectories</code></div>
+  <div><code>_SET_PATH</code>        <code>cDirectories</code></div>
   <div>Specifies a path of directories to search through to locate a file that can't be located in the <code>DEFAULT</code> directory. Defaults to no path <code>&quot;&quot;</code>. Directories must be separated by a semicolon (e.g., <code>C:\hb\bin;C:\hb\tests</code>).</div>
-  <div>_>SET_PRINTER     <code>lFlag</code> | <code>cOnOff</code></div>
-  <div>If enabled, <code><a href="clc53.html#qout" title="clc53">QOut()</a></code> and <code>QQOut()</code> write to the screen and to a file, provided that a file has been opened or created with _>SET_ALTFILE. If disabled, which is the default, <code><a href="clc53.html#qout" title="clc53">QOut()</a></code> and <code>QQOut()</code> only write to the screen (and/or to the <code>ALTFILE</code>).</div>
-  <div>_>SET_PRINTFILE   <code>cFileName</code>             <code>lAdditive</code></div>
+  <div><code>_SET_PRINTER</code>     <code>lFlag</code> | <code>cOnOff</code></div>
+  <div>If enabled, <code><a href="clc53.html#qout" title="clc53">QOut()</a></code> and <code>QQOut()</code> write to the screen and to a file, provided that a file has been opened or created with <code>_SET_ALTFILE</code>. If disabled, which is the default, <code><a href="clc53.html#qout" title="clc53">QOut()</a></code> and <code>QQOut()</code> only write to the screen (and/or to the <code>ALTFILE</code>).</div>
+  <div><code>_SET_PRINTFILE</code>   <code>cFileName</code>             <code>lAdditive</code></div>
   <div>When set, creates or opens file to write <code><a href="clc53.html#qout" title="clc53">QOut()</a></code>, <code>QQOut()</code> and <code><a href="clc53.html#devout" title="clc53">DevOut()</a></code> output to. If <code>lAdditive</code> is TRUE and the file already exists, the file is opened and positioned at end of file. Otherwise, the file is created. If a file is already opened, it is closed before the new file is opened or created (even if it is the same file). The default file extension is <code>.prn</code>. The default file name is <code>PRN</code>, which maps to the default printer device. Call with an empty string to close the file.</div>
-  <div>_>SET_SCOREBOARD  <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_SCOREBOARD</code>  <code>lFlag</code> | <code>cOnOff</code></div>
   <div>When enabled, which is the default, <code>READ</code> and <code><a href="clc53.html#memoedit" title="clc53">MemoEdit()</a></code> display status messages on screen row 0. When disabled, <code>READ</code> and <code><a href="clc53.html#memoedit" title="clc53">MemoEdit()</a></code> status messages are suppressed.</div>
-  <div>_>SET_SCROLLBREAK <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_SCROLLBREAK</code> <code>lFlag</code> | <code>cOnOff</code></div>
   <div><code>QUESTION</code>: What is this flag for?</div>
-  <div>_>SET_SOFTSEEK    <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_SOFTSEEK</code>    <code>lFlag</code> | <code>cOnOff</code></div>
   <div>When enabled, a <code>SEEK</code> that fails will position the record pointer to the first key that is higher than the sought after key or to <code><code><a href="#lastrec">LastRec()</a></code> + 1</code> if there is no higher key. When disabled, which is the default, a <code>SEEK</code> that fails will position the record pointer to <code><code><a href="#lastrec">LastRec()</a></code> + 1</code>.</div>
-  <div>_>SET_STRICTREAD  <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_STRICTREAD</code>  <code>lFlag</code> | <code>cOnOff</code></div>
   <div>TODO: Document</div>
-  <div>_>SET_TYPEAHEAD   <code>nKeyStrokes</code></div>
+  <div><code>_SET_TYPEAHEAD</code>   <code>nKeyStrokes</code></div>
   <div>Sets the size of the keyboard typeahead buffer. Defaults to 50. The minimum is 16 and the maximum is 4096.</div>
-  <div>_>SET_UNIQUE      <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_UNIQUE</code>      <code>lFlag</code> | <code>cOnOff</code></div>
   <div>When enabled, indexes are not allowed to have duplicate keys. When disabled, indexes are allowed duplicate keys.</div>
-  <div>_>SET_VIDEOMODE   <code>nValue</code></div>
+  <div><code>_SET_VIDEOMODE</code>   <code>nValue</code></div>
   <div>TODO: Document</div>
-  <div>_>SET_WRAP        <code>lFlag</code> | <code>cOnOff</code></div>
+  <div><code>_SET_WRAP</code>        <code>lFlag</code> | <code>cOnOff</code></div>
   <div>When enabled, lightbar menus can be navigated from the last position to the first and from the first position to the last. When disabled, which is the default, there is a hard stop at the first and last positions.</div>
 </div>
 <div class="d-d">Returns</div>
@@ -5238,7 +5238,7 @@ ENDIF
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nSize</code> is a valid typeahead size.</div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code>nPreviousSize</code> The previous state of _>SET_TYPEAHEAD</div>
+<div class="d-it"><code>nPreviousSize</code> The previous state of <code>_SET_TYPEAHEAD</code></div>
 <div class="d-d">Description</div>
 <div class="d-it">This function sets the typeahead buffer to a valid given size as is <code>Set( <code>_SET_TYPEAHEAD</code> )</code> where used.</div>
 <div class="d-d">Examples</div>
@@ -9503,7 +9503,7 @@ CLS
 <div class="d-d">Returns</div>
 <div class="d-it"><code>nSqrt</code>   The square root of <code>number</code>.</div>
 <div class="d-d">Description</div>
-<div class="d-it">This function returns the square root of <code>nNumber</code>. The precision of this evaluation is based solely on the setting of _>SET_DECIMALS. Any negative number passed as <code>nNumber</code> will always return a 0.</div>
+<div class="d-it">This function returns the square root of <code>nNumber</code>. The precision of this evaluation is based solely on the setting of <code>_SET_DECIMALS</code>. Any negative number passed as <code>nNumber</code> will always return a 0.</div>
 <div class="d-d">Examples</div>
 <pre class="d-ex"><code class="language-c">Set( _SET_DECIMALS, 5 )
 ? Sqrt( 632512.62541 )
@@ -17243,7 +17243,7 @@ ENDDO
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-11 13:48 UTC</div>
+<div>Generated by hbdoc on 2016-11-11 13:54 UTC</div>
 <div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/faf9b8c">faf9b8c</a></div>
 <div>Content processing, layout &amp; design © 2016 <a href="https://vszakats.net/harbour">vszakats</a></div>
 </footer>
