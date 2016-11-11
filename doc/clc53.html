@@ -282,7 +282,7 @@ Clipper Reference Guide</a></div>
 <a href="#ferror" title="FError()"><code>FError()</code></a>
 <a href="#fieldblock" title="FieldBlock()"><code>FieldBlock()</code></a>
 <a href="#fieldget" title="FieldGet()"><code>FieldGet()</code></a>
-<a href="#fieldnameslfield" title="FieldName()/FIELD()"><code>FieldName()/FIELD()</code></a>
+<a href="#fieldnameslfield" title="FieldName()/Field()"><code>FieldName()/Field()</code></a>
 <a href="#fieldpos" title="FieldPos()"><code>FieldPos()</code></a>
 <a href="#fieldput" title="FieldPut()"><code>FieldPut()</code></a>
 <a href="#fieldwblock" title="FieldWBlock()"><code>FieldWBlock()</code></a>
@@ -769,7 +769,7 @@ Clipper Reference Guide</a></div>
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>= (compound)</code>, <code><a href="#mimi-op">--</a></code>, <code><a href="#coeq-op">:=</a></code>, <code><a href="#plpl-op">++</a></code>, <code><a href="#store-cmd">STORE*</a></code></div>
+<div class="d-it"><code><a href="#eq-compound-assign-op">= (compound assign)</a></code>, <code><a href="#mimi-op">--</a></code>, <code><a href="#coeq-op">:=</a></code>, <code><a href="#plpl-op">++</a></code>, <code><a href="#store-cmd">STORE*</a></code></div>
 </section>
 
 <section>
@@ -1113,7 +1113,7 @@ LOCAL nValue := 10
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>= (compound)</code>, <code><a href="#sl-op">/</a></code>, <code><a href="#ml-op">*</a></code>, <code><a href="#mlml-op">**</a></code>, <code><a href="#pc-op">%</a></code>, <code><a href="#pl-op">+</a></code></div>
+<div class="d-it"><code><a href="#eq-compound-assign-op">= (compound assign)</a></code>, <code><a href="#sl-op">/</a></code>, <code><a href="#ml-op">*</a></code>, <code><a href="#mlml-op">**</a></code>, <code><a href="#pc-op">%</a></code>, <code><a href="#pl-op">+</a></code></div>
 </section>
 
 <section>
@@ -1208,7 +1208,7 @@ MEMVAR-&gt;&lt;idVar&gt;
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><nav class="dropdown"><code><a href="#fieldget">FieldGet()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#fieldget">Clipper 5.3</a><a href="harbour.html#fieldget">Harbour core</a></nav></nav>, <code><a href="harbour.html#fieldname" title="harbour">FieldName()</a></code>, <nav class="dropdown"><code><a href="#fieldpos">FieldPos()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#fieldpos">Clipper 5.3</a><a href="harbour.html#fieldpos">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#field-cmd">FIELD</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#field-cmd">Clipper 5.3</a><a href="harbour.html#field-cmd">Harbour core</a></nav></nav>, <code><a href="#select-cmd">SELECT</a></code></div>
+<div class="d-it"><nav class="dropdown"><code><a href="#fieldget">FieldGet()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#fieldget">Clipper 5.3</a><a href="harbour.html#fieldget">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#fieldnameslfield">FieldName()/Field()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#fieldnameslfield">Clipper 5.3</a><a href="harbour.html#fieldname">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#fieldpos">FieldPos()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#fieldpos">Clipper 5.3</a><a href="harbour.html#fieldpos">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#field-cmd">FIELD</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#field-cmd">Clipper 5.3</a><a href="harbour.html#field-cmd">Harbour core</a></nav></nav>, <code><a href="#select-cmd">SELECT</a></code></div>
 </section>
 
 <section>
@@ -1250,7 +1250,7 @@ MEMVAR-&gt;&lt;idVar&gt;
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>= (compound)</code>, <code><a href="#mi-op">-</a></code>, <code><a href="#coeq-op">:=</a></code>, <code><a href="#plpl-op">++</a></code></div>
+<div class="d-it"><code><a href="#eq-compound-assign-op">= (compound assign)</a></code>, <code><a href="#mi-op">-</a></code>, <code><a href="#coeq-op">:=</a></code>, <code><a href="#plpl-op">++</a></code></div>
 </section>
 
 <section>
@@ -1316,7 +1316,7 @@ MEMVAR-&gt;&lt;idVar&gt;
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="#eq-assign-op">= (assign)</a></code>, <code>= (compound)</code>, <code><a href="#mimi-op">--</a></code>, <code><a href="#plpl-op">++</a></code>, <code><a href="#store-cmd">STORE*</a></code></div>
+<div class="d-it"><code><a href="#eq-assign-op">= (assign)</a></code>, <code><a href="#eq-compound-assign-op">= (compound assign)</a></code>, <code><a href="#mimi-op">--</a></code>, <code><a href="#plpl-op">++</a></code>, <code><a href="#store-cmd">STORE*</a></code></div>
 </section>
 
 <section>
@@ -1403,7 +1403,7 @@ MEMVAR-&gt;&lt;idVar&gt;
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>= (compound)</code>, <code><a href="#mi-op">-</a></code>, <code><a href="#ml-op">*</a></code>, <code><a href="#mlml-op">**</a></code>, <code><a href="#pc-op">%</a></code>, <code><a href="#pl-op">+</a></code>, <nav class="dropdown"><code><a href="#set-decimals-cmd">SET DECIMALS</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#set-decimals-cmd">Clipper 5.3</a><a href="harbour.html#set-decimals-cmd">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#set-fixed-cmd">SET FIXED</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#set-fixed-cmd">Clipper 5.3</a><a href="harbour.html#set-fixed-cmd">Harbour core</a></nav></nav></div>
+<div class="d-it"><code><a href="#eq-compound-assign-op">= (compound assign)</a></code>, <code><a href="#mi-op">-</a></code>, <code><a href="#ml-op">*</a></code>, <code><a href="#mlml-op">**</a></code>, <code><a href="#pc-op">%</a></code>, <code><a href="#pl-op">+</a></code>, <nav class="dropdown"><code><a href="#set-decimals-cmd">SET DECIMALS</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#set-decimals-cmd">Clipper 5.3</a><a href="harbour.html#set-decimals-cmd">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#set-fixed-cmd">SET FIXED</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#set-fixed-cmd">Clipper 5.3</a><a href="harbour.html#set-fixed-cmd">Harbour core</a></nav></nav></div>
 </section>
 
 <section>
@@ -2608,7 +2608,7 @@ MEMVAR-&gt;&lt;idVar&gt;
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>= (compound)</code>, <code><a href="#mi-op">-</a></code>, <code><a href="#sl-op">/</a></code>, <code><a href="#mlml-op">**</a></code>, <code><a href="#pc-op">%</a></code>, <code><a href="#pl-op">+</a></code>, <nav class="dropdown"><code><a href="#set-decimals-cmd">SET DECIMALS</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#set-decimals-cmd">Clipper 5.3</a><a href="harbour.html#set-decimals-cmd">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#set-fixed-cmd">SET FIXED</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#set-fixed-cmd">Clipper 5.3</a><a href="harbour.html#set-fixed-cmd">Harbour core</a></nav></nav></div>
+<div class="d-it"><code><a href="#eq-compound-assign-op">= (compound assign)</a></code>, <code><a href="#mi-op">-</a></code>, <code><a href="#sl-op">/</a></code>, <code><a href="#mlml-op">**</a></code>, <code><a href="#pc-op">%</a></code>, <code><a href="#pl-op">+</a></code>, <nav class="dropdown"><code><a href="#set-decimals-cmd">SET DECIMALS</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#set-decimals-cmd">Clipper 5.3</a><a href="harbour.html#set-decimals-cmd">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#set-fixed-cmd">SET FIXED</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#set-fixed-cmd">Clipper 5.3</a><a href="harbour.html#set-fixed-cmd">Harbour core</a></nav></nav></div>
 </section>
 
 <section>
@@ -2640,7 +2640,7 @@ MEMVAR-&gt;&lt;idVar&gt;
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>= (compound)</code>, <code><a href="#mi-op">-</a></code>, <code><a href="#sl-op">/</a></code>, <code><a href="#ml-op">*</a></code>, <code><a href="#pc-op">%</a></code>, <code><a href="#pl-op">+</a></code>, <nav class="dropdown"><code><a href="#set-decimals-cmd">SET DECIMALS</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#set-decimals-cmd">Clipper 5.3</a><a href="harbour.html#set-decimals-cmd">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#set-fixed-cmd">SET FIXED</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#set-fixed-cmd">Clipper 5.3</a><a href="harbour.html#set-fixed-cmd">Harbour core</a></nav></nav></div>
+<div class="d-it"><code><a href="#eq-compound-assign-op">= (compound assign)</a></code>, <code><a href="#mi-op">-</a></code>, <code><a href="#sl-op">/</a></code>, <code><a href="#ml-op">*</a></code>, <code><a href="#pc-op">%</a></code>, <code><a href="#pl-op">+</a></code>, <nav class="dropdown"><code><a href="#set-decimals-cmd">SET DECIMALS</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#set-decimals-cmd">Clipper 5.3</a><a href="harbour.html#set-decimals-cmd">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#set-fixed-cmd">SET FIXED</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#set-fixed-cmd">Clipper 5.3</a><a href="harbour.html#set-fixed-cmd">Harbour core</a></nav></nav></div>
 </section>
 
 <section>
@@ -3059,7 +3059,7 @@ functions specified for illustration only.
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>#command</code>, <code><a href="#pp-ifdef">#ifdef</a></code>, <code><a href="#pp-ifndef">#ifndef</a></code>, <code><a href="#pp-undef">#undef</a></code>, <code>#xcommand</code></div>
+<div class="d-it"><code><a href="#pp-command-or-pp-translate">#command | #translate</a></code>, <code><a href="#pp-ifdef">#ifdef</a></code>, <code><a href="#pp-ifndef">#ifndef</a></code>, <code><a href="#pp-undef">#undef</a></code>, <code>#xcommand</code></div>
 </section>
 
 <section>
@@ -3082,7 +3082,7 @@ functions specified for illustration only.
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>#command</code>, <code><a href="#pp-ifdef">#ifdef</a></code>, <code><a href="#pp-ifndef">#ifndef</a></code></div>
+<div class="d-it"><code><a href="#pp-command-or-pp-translate">#command | #translate</a></code>, <code><a href="#pp-ifdef">#ifdef</a></code>, <code><a href="#pp-ifndef">#ifndef</a></code></div>
 </section>
 
 <section>
@@ -3271,7 +3271,7 @@ functions specified for illustration only.
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>#command</code>, <code><a href="#pp-define">#define</a></code></div>
+<div class="d-it"><code><a href="#pp-command-or-pp-translate">#command | #translate</a></code>, <code><a href="#pp-define">#define</a></code></div>
 </section>
 
 <section>
@@ -3370,7 +3370,7 @@ RETURN
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>#command</code></div>
+<div class="d-it"><code><a href="#pp-command-or-pp-translate">#command | #translate</a></code></div>
 </section>
 
 <section>
@@ -3400,7 +3400,7 @@ RETURN
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>= (compound)</code>, <code><a href="#mi-op">-</a></code>, <code><a href="#sl-op">/</a></code>, <code><a href="#ml-op">*</a></code>, <code><a href="#mlml-op">**</a></code>, <code><a href="#pl-op">+</a></code>, <nav class="dropdown"><code><a href="#mod">Mod()*</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#mod">Clipper 5.3</a><a href="harbour.html#mod">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#set-fixed-cmd">SET FIXED</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#set-fixed-cmd">Clipper 5.3</a><a href="harbour.html#set-fixed-cmd">Harbour core</a></nav></nav></div>
+<div class="d-it"><code><a href="#eq-compound-assign-op">= (compound assign)</a></code>, <code><a href="#mi-op">-</a></code>, <code><a href="#sl-op">/</a></code>, <code><a href="#ml-op">*</a></code>, <code><a href="#mlml-op">**</a></code>, <code><a href="#pl-op">+</a></code>, <nav class="dropdown"><code><a href="#mod">Mod()*</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#mod">Clipper 5.3</a><a href="harbour.html#mod">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#set-fixed-cmd">SET FIXED</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#set-fixed-cmd">Clipper 5.3</a><a href="harbour.html#set-fixed-cmd">Harbour core</a></nav></nav></div>
 </section>
 
 <section>
@@ -3441,7 +3441,7 @@ RETURN
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>= (compound)</code>, <code><a href="#mi-op">-</a></code>, <code><a href="#sl-op">/</a></code>, <code><a href="#ml-op">*</a></code>, <code><a href="#mlml-op">**</a></code>, <code><a href="#pc-op">%</a></code></div>
+<div class="d-it"><code><a href="#eq-compound-assign-op">= (compound assign)</a></code>, <code><a href="#mi-op">-</a></code>, <code><a href="#sl-op">/</a></code>, <code><a href="#ml-op">*</a></code>, <code><a href="#mlml-op">**</a></code>, <code><a href="#pc-op">%</a></code></div>
 </section>
 
 <section>
@@ -3485,7 +3485,7 @@ RETURN
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>= (compound)</code>, <code><a href="#mimi-op">--</a></code>, <code><a href="#coeq-op">:=</a></code>, <code><a href="#pl-op">+</a></code></div>
+<div class="d-it"><code><a href="#eq-compound-assign-op">= (compound assign)</a></code>, <code><a href="#mimi-op">--</a></code>, <code><a href="#coeq-op">:=</a></code>, <code><a href="#pl-op">+</a></code></div>
 </section>
 
 <section>
@@ -5163,7 +5163,7 @@ END [SEQUENCE]
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>BLOBDIRECTIMP()</code>, <code><a href="#blobexport">BLOBEXPORT()</a></code></div>
+<div class="d-it"><code><a href="#blobdirectimport">BLOBDIRECTIMPORT()</a></code>, <code><a href="#blobexport">BLOBEXPORT()</a></code></div>
 </section>
 
 <section>
@@ -5299,7 +5299,7 @@ END [SEQUENCE]
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>BLOBDIRECTEXP()</code>, <code><a href="#blobimport">BLOBIMPORT()</a></code></div>
+<div class="d-it"><code><a href="#blobdirectexport">BLOBDIRECTEXPORT()</a></code>, <code><a href="#blobimport">BLOBIMPORT()</a></code></div>
 </section>
 
 <section>
@@ -5418,7 +5418,7 @@ END [SEQUENCE]
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>BLOBDIRECTEXP()</code>, <code><a href="#blobimport">BLOBIMPORT()</a></code></div>
+<div class="d-it"><code><a href="#blobdirectexport">BLOBDIRECTEXPORT()</a></code>, <code><a href="#blobimport">BLOBIMPORT()</a></code></div>
 </section>
 
 <section>
@@ -5619,7 +5619,7 @@ END [SEQUENCE]
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="#blobrootget">BLOBROOTGET()</a></code>, <code><a href="#blobrootput">BLOBROOTPUT()</a></code>, <code>BLOBROOTUNLOC()</code></div>
+<div class="d-it"><code><a href="#blobrootget">BLOBROOTGET()</a></code>, <code><a href="#blobrootput">BLOBROOTPUT()</a></code>, <code><a href="#blobrootunlock">BLOBROOTUNLOCK()</a></code></div>
 </section>
 
 <section>
@@ -6558,7 +6558,7 @@ USE Sales NEW
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>COPY STRU EXTE</code>, <nav class="dropdown"><code><a href="#create-cmd">CREATE</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#create-cmd">Clipper 5.3</a><a href="harbour.html#create-cmd">Harbour core</a></nav></nav></div>
+<div class="d-it"><code><a href="#copy-structure-extended-cmd">COPY STRUCTURE EXTENDED</a></code>, <nav class="dropdown"><code><a href="#create-cmd">CREATE</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#create-cmd">Clipper 5.3</a><a href="harbour.html#create-cmd">Harbour core</a></nav></nav></div>
 </section>
 
 <section>
@@ -6617,7 +6617,7 @@ USE Sales NEW
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><nav class="dropdown"><code><a href="#copy-structure-cmd">COPY STRUCTURE</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#copy-structure-cmd">Clipper 5.3</a><a href="harbour.html#copy-structure-cmd">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#create-cmd">CREATE</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#create-cmd">Clipper 5.3</a><a href="harbour.html#create-cmd">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#create-from-cmd">CREATE FROM</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#create-from-cmd">Clipper 5.3</a><a href="harbour.html#create-from-cmd">Harbour core</a></nav></nav>, <code><a href="harbour.html#fieldname" title="harbour">FieldName()</a></code>, <nav class="dropdown"><code><a href="#type">Type()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#type">Clipper 5.3</a><a href="harbour.html#type">Harbour core</a></nav></nav></div>
+<div class="d-it"><nav class="dropdown"><code><a href="#copy-structure-cmd">COPY STRUCTURE</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#copy-structure-cmd">Clipper 5.3</a><a href="harbour.html#copy-structure-cmd">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#create-cmd">CREATE</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#create-cmd">Clipper 5.3</a><a href="harbour.html#create-cmd">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#create-from-cmd">CREATE FROM</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#create-from-cmd">Clipper 5.3</a><a href="harbour.html#create-from-cmd">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#fieldnameslfield">FieldName()/Field()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#fieldnameslfield">Clipper 5.3</a><a href="harbour.html#fieldname">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#type">Type()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#type">Clipper 5.3</a><a href="harbour.html#type">Harbour core</a></nav></nav></div>
 </section>
 
 <section>
@@ -6821,7 +6821,7 @@ USE Sales NEW
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>COPY STRU EXTE</code>, <nav class="dropdown"><code><a href="#create-from-cmd">CREATE FROM</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#create-from-cmd">Clipper 5.3</a><a href="harbour.html#create-from-cmd">Harbour core</a></nav></nav></div>
+<div class="d-it"><code><a href="#copy-structure-extended-cmd">COPY STRUCTURE EXTENDED</a></code>, <nav class="dropdown"><code><a href="#create-from-cmd">CREATE FROM</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#create-from-cmd">Clipper 5.3</a><a href="harbour.html#create-from-cmd">Harbour core</a></nav></nav></div>
 </section>
 
 <section>
@@ -6911,7 +6911,7 @@ USE Sales NEW
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>COPY STRU EXTE</code>, <nav class="dropdown"><code><a href="#copy-structure-cmd">COPY STRUCTURE</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#copy-structure-cmd">Clipper 5.3</a><a href="harbour.html#copy-structure-cmd">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#create-cmd">CREATE</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#create-cmd">Clipper 5.3</a><a href="harbour.html#create-cmd">Harbour core</a></nav></nav></div>
+<div class="d-it"><code><a href="#copy-structure-extended-cmd">COPY STRUCTURE EXTENDED</a></code>, <nav class="dropdown"><code><a href="#copy-structure-cmd">COPY STRUCTURE</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#copy-structure-cmd">Clipper 5.3</a><a href="harbour.html#copy-structure-cmd">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#create-cmd">CREATE</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#create-cmd">Clipper 5.3</a><a href="harbour.html#create-cmd">Harbour core</a></nav></nav></div>
 </section>
 
 <section>
@@ -7099,7 +7099,7 @@ USE Sales NEW
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="#dbreindex">dbReindex()</a></code>, <code><a href="#dbsetindex">dbSetIndex()</a></code>, <code><a href="#dbsetorder">dbSetOrder()</a></code>, <code>DBCREATEIND()</code></div>
+<div class="d-it"><code><a href="#dbreindex">dbReindex()</a></code>, <code><a href="#dbsetindex">dbSetIndex()</a></code>, <code><a href="#dbsetorder">dbSetOrder()</a></code>, <code><a href="#dbcreateindex">dbCreateIndex()</a></code></div>
 </section>
 
 <section>
@@ -7132,7 +7132,7 @@ USE Sales NEW
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>DBSETRELAT()</code>, <code><a href="#set-relation-cmd">SET RELATION</a></code></div>
+<div class="d-it"><code><a href="#dbsetrelation">dbSetRelation()</a></code>, <code><a href="#set-relation-cmd">SET RELATION</a></code></div>
 </section>
 
 <section>
@@ -7402,7 +7402,7 @@ USE Sales NEW
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>, header file is <code><a href="https://github.com/vszakats/harbour-core/blob/342fa74/include/dbstruct.ch">Dbstruct.ch</a></code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><nav class="dropdown"><code><a href="#afields">AFields()*</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#afields">Clipper 5.3</a><a href="harbour.html#afields">Harbour core</a></nav></nav>, <code>COPY STRU EXTE</code>, <nav class="dropdown"><code><a href="#create-from-cmd">CREATE FROM</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#create-from-cmd">Clipper 5.3</a><a href="harbour.html#create-from-cmd">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#dbstruct">dbStruct()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#dbstruct">Clipper 5.3</a><a href="harbour.html#dbstruct">Harbour core</a></nav></nav></div>
+<div class="d-it"><nav class="dropdown"><code><a href="#afields">AFields()*</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#afields">Clipper 5.3</a><a href="harbour.html#afields">Harbour core</a></nav></nav>, <code><a href="#copy-structure-extended-cmd">COPY STRUCTURE EXTENDED</a></code>, <nav class="dropdown"><code><a href="#create-from-cmd">CREATE FROM</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#create-from-cmd">Clipper 5.3</a><a href="harbour.html#create-from-cmd">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#dbstruct">dbStruct()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#dbstruct">Clipper 5.3</a><a href="harbour.html#dbstruct">Harbour core</a></nav></nav></div>
 </section>
 
 <section>
@@ -7451,7 +7451,7 @@ USE Sales NEW
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="#dbreindex">dbReindex()</a></code>, <code><a href="#dbsetindex">dbSetIndex()</a></code>, <code><a href="#dbsetorder">dbSetOrder()</a></code>, <code>DBCLEARIND()</code></div>
+<div class="d-it"><code><a href="#dbreindex">dbReindex()</a></code>, <code><a href="#dbsetindex">dbSetIndex()</a></code>, <code><a href="#dbsetorder">dbSetOrder()</a></code>, <code><a href="#dbclearindex">dbClearIndex()</a></code></div>
 </section>
 
 <section>
@@ -8677,7 +8677,7 @@ USE Sales NEW
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="#dbsetindex">dbSetIndex()</a></code>, <code><a href="#dbsetorder">dbSetOrder()</a></code>, <code>DBCLEARIND()</code>, <code>DBCREATEIND()</code></div>
+<div class="d-it"><code><a href="#dbsetindex">dbSetIndex()</a></code>, <code><a href="#dbsetorder">dbSetOrder()</a></code>, <code><a href="#dbclearindex">dbClearIndex()</a></code>, <code><a href="#dbcreateindex">dbCreateIndex()</a></code></div>
 </section>
 
 <section>
@@ -9061,7 +9061,7 @@ OR nCount := 1 TO nSize
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><nav class="dropdown"><code><a href="#dbfilter">dbFilter()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#dbfilter">Clipper 5.3</a><a href="harbour.html#dbfilter">Harbour core</a></nav></nav>, <code>DBCLEARFIL()</code>, <code><a href="#set-deleted-cmd">SET DELETED</a></code>, <code><a href="#set-filter-cmd">SET FILTER</a></code></div>
+<div class="d-it"><nav class="dropdown"><code><a href="#dbfilter">dbFilter()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#dbfilter">Clipper 5.3</a><a href="harbour.html#dbfilter">Harbour core</a></nav></nav>, <code><a href="#dbclearfilter">dbClearFilter()</a></code>, <code><a href="#set-deleted-cmd">SET DELETED</a></code>, <code><a href="#set-filter-cmd">SET FILTER</a></code></div>
 </section>
 
 <section>
@@ -9125,7 +9125,7 @@ dbSetIndex( &quot;Cust02&quot; )         // Open the index Cust02
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="#dbreindex">dbReindex()</a></code>, <code><a href="#dbsetindex">dbSetIndex()</a></code>, <code>DBCLEARIND()</code>, <code>DBCREATEIND()</code></div>
+<div class="d-it"><code><a href="#dbreindex">dbReindex()</a></code>, <code><a href="#dbsetindex">dbSetIndex()</a></code>, <code><a href="#dbclearindex">dbClearIndex()</a></code>, <code><a href="#dbcreateindex">dbCreateIndex()</a></code></div>
 </section>
 
 <section>
@@ -9178,7 +9178,7 @@ dbSetIndex( &quot;Cust02&quot; )         // Open the index Cust02
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="#dbrelation">dbRelation()</a></code>, <code><a href="#dbrselect">dbRSelect()</a></code>, <code>DBCLEARREL()</code>, <nav class="dropdown"><code><a href="#found">Found()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#found">Clipper 5.3</a><a href="harbour.html#found">Harbour core</a></nav></nav></div>
+<div class="d-it"><code><a href="#dbrelation">dbRelation()</a></code>, <code><a href="#dbrselect">dbRSelect()</a></code>, <code><a href="#dbclearrelation">dbClearRelation()</a></code>, <nav class="dropdown"><code><a href="#found">Found()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#found">Clipper 5.3</a><a href="harbour.html#found">Harbour core</a></nav></nav></div>
 </section>
 
 <section>
@@ -9266,7 +9266,7 @@ dbSetIndex( &quot;Cust02&quot; )         // Open the index Cust02
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>, header file is <code><a href="https://github.com/vszakats/harbour-core/blob/342fa74/include/dbstruct.ch">Dbstruct.ch</a></code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><nav class="dropdown"><code><a href="#afields">AFields()*</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#afields">Clipper 5.3</a><a href="harbour.html#afields">Harbour core</a></nav></nav>, <code>COPY STRU EXTE</code></div>
+<div class="d-it"><nav class="dropdown"><code><a href="#afields">AFields()*</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#afields">Clipper 5.3</a><a href="harbour.html#afields">Harbour core</a></nav></nav>, <code><a href="#copy-structure-extended-cmd">COPY STRUCTURE EXTENDED</a></code></div>
 </section>
 
 <section>
@@ -11424,7 +11424,7 @@ END[DO]
    LOCAL nField
    USE Sales NEW
    FOR nField := 1 TO FCount()
-      ? FIELD(nField)
+      ? Field(nField)
    NEXT
 </code></pre>
 <div class="d-d">Platforms</div>
@@ -11432,7 +11432,7 @@ END[DO]
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><nav class="dropdown"><code><a href="#afields">AFields()*</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#afields">Clipper 5.3</a><a href="harbour.html#afields">Harbour core</a></nav></nav>, <code><a href="harbour.html#fieldname" title="harbour">FieldName()</a></code>, <nav class="dropdown"><code><a href="#type">Type()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#type">Clipper 5.3</a><a href="harbour.html#type">Harbour core</a></nav></nav></div>
+<div class="d-it"><nav class="dropdown"><code><a href="#afields">AFields()*</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#afields">Clipper 5.3</a><a href="harbour.html#afields">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#fieldnameslfield">FieldName()/Field()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#fieldnameslfield">Clipper 5.3</a><a href="harbour.html#fieldname">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#type">Type()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#type">Clipper 5.3</a><a href="harbour.html#type">Harbour core</a></nav></nav></div>
 </section>
 
 <section>
@@ -11642,7 +11642,7 @@ END[DO]
    USE Customer NEW
    //
    // Using macro operator
-   FName := FIELD( nField )           // Get field name
+   FName := Field( nField )           // Get field name
    FVal := &amp;FName                     // Get field value
    // Using FieldGet()
    FVal := FieldGet( nField )         // Get field value
@@ -11656,21 +11656,21 @@ END[DO]
 </section>
 
 <section>
-<h4><a href="#fieldnameslfield" class="d-id" id="fieldnameslfield" title="∞"><code>FieldName()/FIELD()</code></a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a></span></h4>
+<h4><a href="#fieldnameslfield" class="d-id" id="fieldnameslfield" title="∞"><code>FieldName()/Field()</code></a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a></span></h4>
 <div class="d-ol">Return a field name from the current database (.dbf) file</div>
 <div class="d-d">Syntax</div>
-<div class="d-sy"><pre><code>FIELDNAME/FIELD(&lt;nPosition&gt;) → cFieldName</code></pre></div>
+<div class="d-sy"><pre><code>FIELDNAME/Field(&lt;nPosition&gt;) → cFieldName</code></pre></div>
 <div class="d-d">Arguments</div>
 <div class="d-it"><code>nPosition</code> is the position of a field in the database file structure.</div>
 <div class="d-d">Returns</div>
-<div class="d-it"><code><a href="harbour.html#fieldname" title="harbour">FieldName()</a></code> returns the name of the specified field as a character string.  If <code>nPosition</code> does not correspond to an existing field in the current database file or if no database file is open in the current work area, <code><a href="harbour.html#fieldname" title="harbour">FieldName()</a></code> returns a null string (&quot;&quot;).</div>
+<div class="d-it"><code>FieldName()</code> returns the name of the specified field as a character string.  If <code>nPosition</code> does not correspond to an existing field in the current database file or if no database file is open in the current work area, <code>FieldName()</code> returns a null string (&quot;&quot;).</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p><code><a href="harbour.html#fieldname" title="harbour">FieldName()</a></code> is a database function that returns a field name using an index to the position of the field name in the database structure.  Use it in data-independent applications where the field name is unknown.  If information for more than one field is required, use <code><a href="#afields">AFields()</a></code> to create an array of field information or <code>COPY</code> <code>STRUCTURE</code> <code>EXTENDED</code> to create a database of field information.</div>
+  <div><p><code>FieldName()</code> is a database function that returns a field name using an index to the position of the field name in the database structure.  Use it in data-independent applications where the field name is unknown.  If information for more than one field is required, use <code><a href="#afields">AFields()</a></code> to create an array of field information or <code>COPY</code> <code>STRUCTURE</code> <code>EXTENDED</code> to create a database of field information.</div>
   <div><p>If you need additional database file structure information, use <code><a href="#type">Type()</a></code> and <code><a href="#len">Len()</a></code>.  To obtain the number of decimal places for a numeric field, use the following expression:</div>
   <div><p>Len(SubStr(Str(<code>idField</code>), RAt(&quot;.&quot;, ;</div>
   <div><p>Str(<code>idField</code>)) + 1))</div>
-  <div><p>By default, <code><a href="harbour.html#fieldname" title="harbour">FieldName()</a></code> operates on the currently selected work area as shown in the example below.</div>
+  <div><p>By default, <code>FieldName()</code> operates on the currently selected work area as shown in the example below.</div>
 </div>
 <div class="d-d">Examples</div>
 <pre class="d-ex"><code class="language-c">■  These examples illustrate FieldName() used with several other
@@ -11706,7 +11706,7 @@ END[DO]
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><nav class="dropdown"><code><a href="#afields">AFields()*</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#afields">Clipper 5.3</a><a href="harbour.html#afields">Harbour core</a></nav></nav>, <code>COPY STRU EXTE</code>, <nav class="dropdown"><code><a href="#dbstruct">dbStruct()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#dbstruct">Clipper 5.3</a><a href="harbour.html#dbstruct">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#fcount">FCount()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#fcount">Clipper 5.3</a><a href="harbour.html#fcount">Harbour core</a></nav></nav></div>
+<div class="d-it"><nav class="dropdown"><code><a href="#afields">AFields()*</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#afields">Clipper 5.3</a><a href="harbour.html#afields">Harbour core</a></nav></nav>, <code><a href="#copy-structure-extended-cmd">COPY STRUCTURE EXTENDED</a></code>, <nav class="dropdown"><code><a href="#dbstruct">dbStruct()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#dbstruct">Clipper 5.3</a><a href="harbour.html#dbstruct">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#fcount">FCount()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#fcount">Clipper 5.3</a><a href="harbour.html#fcount">Harbour core</a></nav></nav></div>
 </section>
 
 <section>
@@ -11720,7 +11720,7 @@ END[DO]
 <div class="d-it"><code>FieldPos()</code> returns the position of the specified field within the list of fields associated with the current or specified work area.  If the current work area has no field with the specified name, <code>FieldPos()</code> returns zero.</div>
 <div class="d-d">Description</div>
 <div class="d-it">
-  <div><p><code>FieldPos()</code> is a database function that is the inverse of the <code><a href="harbour.html#fieldname" title="harbour">FieldName()</a></code> function.  <code>FieldPos()</code> is most often used with the <code><a href="#fieldput">FieldPut()</a></code> and <code><a href="#fieldget">FieldGet()</a></code> functions.</div>
+  <div><p><code>FieldPos()</code> is a database function that is the inverse of the <code><a href="#fieldnameslfield">FieldName()</a></code> function.  <code>FieldPos()</code> is most often used with the <code><a href="#fieldput">FieldPut()</a></code> and <code><a href="#fieldget">FieldGet()</a></code> functions.</div>
   <div><p><code>FieldPos()</code> return the names of fields in any unselected work area by referring to the function using an aliased expression.  See the example below.</div>
 </div>
 <div class="d-d">Examples</div>
@@ -11767,7 +11767,7 @@ END[DO]
    code that uses the macro operator to set the value of a field:
 
    // Using macro operator
-   FName := FIELD(nField)           // Get field name
+   FName := Field(nField)           // Get field name
    FIELD-&gt;&amp;FName := FVal            // Set field value
    // Using FieldPut()
    FieldPut(nField, FVal)           // Set field value
@@ -13039,7 +13039,7 @@ NEXT
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>, source file is <code>Getsys.prg</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="#getdosetkey">GetDoSetKey()</a></code>, <code>GETPOSTVALID()</code>, <code>GETPREVALID()</code></div>
+<div class="d-it"><code><a href="#getdosetkey">GetDoSetKey()</a></code>, <code><a href="#getpostvalidate">GetPostValidate()</a></code>, <code><a href="#getprevalidate">GetPreValidate()</a></code></div>
 </section>
 
 <section>
@@ -13078,7 +13078,7 @@ NEXT
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>, source file is <code>Getsys.prg</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="#getapplykey">GetApplyKey()</a></code>, <code>GETPOSTVALID()</code>, <code>GETPREVALID()</code></div>
+<div class="d-it"><code><a href="#getapplykey">GetApplyKey()</a></code>, <code><a href="#getpostvalidate">GetPostValidate()</a></code>, <code><a href="#getprevalidate">GetPreValidate()</a></code></div>
 </section>
 
 <section>
@@ -13164,7 +13164,7 @@ NEXT
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>, source file is <code>Getsys.prg</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="#getapplykey">GetApplyKey()</a></code>, <code><a href="#getdosetkey">GetDoSetKey()</a></code>, <code>GETPREVALID()</code></div>
+<div class="d-it"><code><a href="#getapplykey">GetApplyKey()</a></code>, <code><a href="#getdosetkey">GetDoSetKey()</a></code>, <code><a href="#getprevalidate">GetPreValidate()</a></code></div>
 </section>
 
 <section>
@@ -13204,7 +13204,7 @@ NEXT
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>, source file is <code>Getsys.prg</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="#getapplykey">GetApplyKey()</a></code>, <code><a href="#getdosetkey">GetDoSetKey()</a></code>, <code>GETPOSTVALID()</code></div>
+<div class="d-it"><code><a href="#getapplykey">GetApplyKey()</a></code>, <code><a href="#getdosetkey">GetDoSetKey()</a></code>, <code><a href="#getpostvalidate">GetPostValidate()</a></code></div>
 </section>
 
 <section>
@@ -13251,7 +13251,7 @@ NEXT
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>, source file is <code>Getsys.prg</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="#getapplykey">GetApplyKey()</a></code>, <code><a href="#getdosetkey">GetDoSetKey()</a></code>, <code>GETPOSTVALID()</code></div>
+<div class="d-it"><code><a href="#getapplykey">GetApplyKey()</a></code>, <code><a href="#getdosetkey">GetDoSetKey()</a></code>, <code><a href="#getpostvalidate">GetPostValidate()</a></code></div>
 </section>
 
 <section>
@@ -14812,7 +14812,7 @@ must specify at least one of them.
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="#close-cmd">CLOSE</a></code>, <code><a href="#dborderinfo">dbOrderInfo()</a></code>, <code><a href="#dbreindex">dbReindex()</a></code>, <code>DBCREATEIND()</code></div>
+<div class="d-it"><code><a href="#close-cmd">CLOSE</a></code>, <code><a href="#dborderinfo">dbOrderInfo()</a></code>, <code><a href="#dbreindex">dbReindex()</a></code>, <code><a href="#dbcreateindex">dbCreateIndex()</a></code></div>
 </section>
 
 <section>
@@ -16120,7 +16120,7 @@ LOCAL aArray := { {1, 2}, {1, 2}, {1, 2} }
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>EXTEND.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="harbour.html#fieldname" title="harbour">FieldName()</a></code>, <nav class="dropdown"><code><a href="#lastrec">LastRec()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#lastrec">Clipper 5.3</a><a href="harbour.html#lastrec">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#recsize">RecSize()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#recsize">Clipper 5.3</a><a href="harbour.html#recsize">Harbour core</a></nav></nav></div>
+<div class="d-it"><nav class="dropdown"><code><a href="#fieldnameslfield">FieldName()/Field()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#fieldnameslfield">Clipper 5.3</a><a href="harbour.html#fieldname">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#lastrec">LastRec()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#lastrec">Clipper 5.3</a><a href="harbour.html#lastrec">Harbour core</a></nav></nav>, <nav class="dropdown"><code><a href="#recsize">RecSize()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#recsize">Clipper 5.3</a><a href="harbour.html#recsize">Harbour core</a></nav></nav></div>
 </section>
 
 <section>
@@ -18988,7 +18988,7 @@ SET INDEX TO CuAcct, CuName, CuZip
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="#index-cmd">INDEX</a></code>, <nav class="dropdown"><code><a href="#ordcreate">ordCreate()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#ordcreate">Clipper 5.3</a><a href="harbour.html#ordcreate">Harbour core</a></nav></nav>, <code>ORDLISTREBUI()</code></div>
+<div class="d-it"><code><a href="#index-cmd">INDEX</a></code>, <nav class="dropdown"><code><a href="#ordcreate">ordCreate()</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#ordcreate">Clipper 5.3</a><a href="harbour.html#ordcreate">Harbour core</a></nav></nav>, <code><a href="#ordlistrebuild">ordListRebuild()</a></code></div>
 </section>
 
 <section>
@@ -23824,7 +23824,7 @@ occur within 5 seconds, Inkey() will terminate.
 <div class="d-d">Platforms</div>
 <div class="d-it">Available on all platforms</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code><a href="#close-cmd">CLOSE</a></code>, <code><a href="#dbsetindex">dbSetIndex()</a></code>, <code>DBCLEARIND()</code>, <code><a href="#index-cmd">INDEX</a></code>, <code><a href="#reindex-cmd">REINDEX</a></code></div>
+<div class="d-it"><code><a href="#close-cmd">CLOSE</a></code>, <code><a href="#dbsetindex">dbSetIndex()</a></code>, <code><a href="#dbclearindex">dbClearIndex()</a></code>, <code><a href="#index-cmd">INDEX</a></code>, <code><a href="#reindex-cmd">REINDEX</a></code></div>
 </section>
 
 <section>
@@ -24497,7 +24497,7 @@ SET PRINTER TO [&lt;xcDevice&gt; | &lt;xcFile&gt; [ADDITIVE]]
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>DBCREATEIND()</code>, <code><a href="#index-cmd">INDEX</a></code>, <nav class="dropdown"><code><a href="#pack-cmd">PACK</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#pack-cmd">Clipper 5.3</a><a href="harbour.html#pack-cmd">Harbour core</a></nav></nav>, <code><a href="#reindex-cmd">REINDEX</a></code>, <code><a href="#seek-cmd">SEEK</a></code></div>
+<div class="d-it"><code><a href="#dbcreateindex">dbCreateIndex()</a></code>, <code><a href="#index-cmd">INDEX</a></code>, <nav class="dropdown"><code><a href="#pack-cmd">PACK</a></code><nav class="dropdown-content d-dd"><a href="clc53.html#pack-cmd">Clipper 5.3</a><a href="harbour.html#pack-cmd">Harbour core</a></nav></nav>, <code><a href="#reindex-cmd">REINDEX</a></code>, <code><a href="#seek-cmd">SEEK</a></code></div>
 </section>
 
 <section>
@@ -26300,7 +26300,7 @@ for more information about using this class.
 <div class="d-d">File</div>
 <div class="d-it">Library is <code>CLIPPER.lib</code>.</div>
 <div class="d-d">See also</div>
-<div class="d-it"><code>DBCREATEIND()</code>, <code><a href="#index-cmd">INDEX</a></code>, <code><a href="#join-cmd">JOIN</a></code>, <code><a href="#replace-cmd">REPLACE</a></code>, <code><a href="#set-unique-cmd">SET UNIQUE*</a></code>, <code><a href="#sort-cmd">SORT</a></code></div>
+<div class="d-it"><code><a href="#dbcreateindex">dbCreateIndex()</a></code>, <code><a href="#index-cmd">INDEX</a></code>, <code><a href="#join-cmd">JOIN</a></code>, <code><a href="#replace-cmd">REPLACE</a></code>, <code><a href="#set-unique-cmd">SET UNIQUE*</a></code>, <code><a href="#sort-cmd">SORT</a></code></div>
 </section>
 
 <section>
@@ -27088,7 +27088,7 @@ for more information about using this class.
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-11 17:38 UTC</div>
+<div>Generated by hbdoc on 2016-11-11 20:44 UTC</div>
 <div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/342fa74">342fa74</a></div>
 <div>Content processing, layout &amp; design © 2016 <a href="https://vszakats.net/harbour">vszakats</a></div>
 </footer>
