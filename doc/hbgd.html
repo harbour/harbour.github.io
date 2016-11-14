@@ -24,8 +24,7 @@
 <body>
 
 <header>
-<div>
-<div><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2260 2260">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2260 2260">
  <path d="M900 1908c137.17-53.265 443.401-77.006 600-52.437-27.114-474.75-34.113-758.178-7.68-1116.318 2.056-27.195 4.283-54.9 6.68-83.245-34.633 68.628-579.454 1206.43-599 1252z"/>
  <path d="M1503 297c-123.836 327.12-161.3 844.46-213.465 1389.52-169.502-13.113-449.007 19.795-659.305 108.824C643.758 1771.594 1401.461 465.26 1503 297z"/>
  <path d="M1172 1270c-224.304-65.046-473.09 64.996-694 204C631.353 1238.571 1091.25 537.106 1489 0c-301.506 419.861-317.184 1087.933-317 1270z"/>
@@ -33,7 +32,8 @@
  <path d="M2259.24 2007.878c-351.827 85.376-1111.265 54.312-2014.169-105.238 59.534 32.024 105.241 68.44 160.567 113.871 884.551 158.714 1465.735 153.54 1808.655 60.37 31.307-22.43 35.385-37.956 44.934-69.006"/>
  <path d="M2250.776 1985.617c-316.53 76.867-975.996 46.6-1793.466-72.332-79.588-11.605-308.233-46.57-445.63-69.063-7.464-15.506-11.282-40.462-11.282-70.79 509.451 68.675 1799.558 275.424 2243.969 168.26 2.015 12.02 7.115 18.487 6.527 43.929"/>
 </svg>
-Harbour Reference Guide</a></div>
+<div>
+<div><a href="index.html">Harbour Reference Guide</a></div>
 <div>
 <nav class="menu">
 <nav class="dropdown">
@@ -111,7 +111,7 @@ Harbour Reference Guide</a></div>
 <div class="d-it">
   <div><p><code>HBGD</code> is basically a wrapper of Thomas Boutell's GD Library version 2.x. GD Library is a powerfull graphic library very usefull expecially under CGI environment.</div>
   <div><p><code>HBGD</code> actually contains almost all GD functions, more a set of functions that extends original library and a set of classes that make easier to work with this library.</div>
-  <div><p>Thomas Boutell's GD library actually supports these graphic formats: PNG, JPEG, GIF, Animated GIF, GD, GD2, WBMP, XBM, XPM WBMP is Wireless Bitmap, not Windows Bitmap, and it is used for WAP. It is a B&amp;W bitmap.</div>
+  <div><p>Thomas Boutell's GD library actually supports these graphic formats: PNG, JPEG, GIF, Animated GIF, GD, GD2, WBMP, XBM, <code>XPM WBMP</code> is Wireless Bitmap, not Windows Bitmap, and it is used for WAP. It is a B&amp;W bitmap.</div>
   <div><p><code>HBGD</code> actually supports PNG, JPEG, GIF, GD, WBMP The other Animated GIF, GD2, XBM and XPM are not wrapped actually.</div>
   <div><p>Using this library you can, as a little example: - create an image in memory, true color or with a 256 colors palette; - load and save an image of above formats and convert it to another supported format; - draw dots, lines, dashed lines, polygons, rectangles, arcs, circles and ellipses; - fill with colors; - draw with brushes; - check a point or part or full image with a lot of query functions; - draw characters and words with internal fonts or using truetype fonts; - write strings on a base line or on a circle line and with any angle degree; - copy, resize and rotate part or full image;</div>
   <div><p>and, over this, some functions to clone, crop, zoom, rotate outside and inside.</div>
@@ -128,7 +128,7 @@ Harbour Reference Guide</a></div>
 </section>
 
 <section>
-<h4><a href="#gdimagearc" class="d-id" id="gdimagearc" title="∞"><code>gdImageArc()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L852" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagearc" class="d-id" id="gdimagearc" title="∞"><code>gdImageArc()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L852" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Draws a partial ellipse centered at a given point.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageArc( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;s&gt;, &lt;e&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
@@ -172,7 +172,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagecreate" class="d-id" id="gdimagecreate" title="∞"><code>gdImageCreate()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L499" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagecreate" class="d-id" id="gdimagecreate" title="∞"><code>gdImageCreate()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L499" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Create a palette-based image in memory with no more that 256 colors.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageCreate( &lt;nPixelWidth&gt;, &lt;nPixelHeight&gt; ) → pImage</code></pre></div>
@@ -205,7 +205,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagecreatefromgd" class="d-id" id="gdimagecreatefromgd" title="∞"><code>gdImageCreateFromGD()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L552" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagecreatefromgd" class="d-id" id="gdimagecreatefromgd" title="∞"><code>gdImageCreateFromGD()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L552" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Load a GD image file.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageCreateFromGD( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → pImage</code></pre></div>
@@ -248,7 +248,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagecreatefromgif" class="d-id" id="gdimagecreatefromgif" title="∞"><code>gdImageCreateFromGif()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L531" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagecreatefromgif" class="d-id" id="gdimagecreatefromgif" title="∞"><code>gdImageCreateFromGif()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L531" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Load a Gif image file.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageCreateFromGif( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → pImage</code></pre></div>
@@ -291,7 +291,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagecreatefromjpeg" class="d-id" id="gdimagecreatefromjpeg" title="∞"><code>gdImageCreateFromJpeg()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L524" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagecreatefromjpeg" class="d-id" id="gdimagecreatefromjpeg" title="∞"><code>gdImageCreateFromJpeg()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L524" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Load a JPEG image file.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageCreateFromJpeg( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → pImage</code></pre></div>
@@ -334,7 +334,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagecreatefrompng" class="d-id" id="gdimagecreatefrompng" title="∞"><code>gdImageCreateFromPng()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L538" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagecreatefrompng" class="d-id" id="gdimagecreatefrompng" title="∞"><code>gdImageCreateFromPng()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L538" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Load a PNG image file.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageCreateFromPng( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → pImage</code></pre></div>
@@ -377,7 +377,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagecreatefromwbmp" class="d-id" id="gdimagecreatefromwbmp" title="∞"><code>gdImageCreateFromWBmp()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L545" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagecreatefromwbmp" class="d-id" id="gdimagecreatefromwbmp" title="∞"><code>gdImageCreateFromWBmp()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L545" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Load a WBmp image file.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageCreateFromWBmp( &lt;cFile&gt; | &lt;nHandle&gt; | &lt;pPointer&gt; [, &lt;nSize&gt; ] ) → pImage</code></pre></div>
@@ -420,7 +420,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagecreatetruecolor" class="d-id" id="gdimagecreatetruecolor" title="∞"><code>gdImageCreateTrueColor()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L512" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagecreatetruecolor" class="d-id" id="gdimagecreatetruecolor" title="∞"><code>gdImageCreateTrueColor()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L512" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Create a true color image in memory.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageCreateTrueColor( &lt;nPixelWidth&gt;, &lt;nPixelHeight&gt; ) → pImage</code></pre></div>
@@ -453,7 +453,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagedashedline" class="d-id" id="gdimagedashedline" title="∞"><code>gdImageDashedLine()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L646" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagedashedline" class="d-id" id="gdimagedashedline" title="∞"><code>gdImageDashedLine()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L646" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Draws a dashed line between two end points (x1, y1 and x2, y2) with a particular color index.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageDashedLine( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
@@ -497,7 +497,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagefill" class="d-id" id="gdimagefill" title="∞"><code>gdImageFill()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L980" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagefill" class="d-id" id="gdimagefill" title="∞"><code>gdImageFill()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L980" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">floods a portion of the image with the specified color.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageFill( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
@@ -545,7 +545,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagefilledarc" class="d-id" id="gdimagefilledarc" title="∞"><code>gdImageFilledArc()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L879" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagefilledarc" class="d-id" id="gdimagefilledarc" title="∞"><code>gdImageFilledArc()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L879" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Draws a partial filled ellipse centered at a given point.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageArc( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;s&gt;, &lt;e&gt;, &lt;nColor&gt;, &lt;nStyle&gt; ) → NIL</code></pre></div>
@@ -566,7 +566,7 @@ RETURN
   <div>gdEdged</div>
 </div>
   <div><p><code>gdArc</code> and <code>gdChord</code> are mutually exclusive; <code>gdChord</code> just connects the starting and ending angles with a straight line, while <code>gdArc</code> produces a rounded edge. <code>gdPie</code> is a synonym for <code>gdArc</code>. <code>gdNoFill</code> indicates that the arc or chord should be outlined, not filled. <code>gdEdged</code>, used together with <code>gdNoFill</code>, indicates that the beginning and ending angles should be connected to the center; this is a good way to outline (rather than fill) a 'pie slice'</div>
-  <div><p>these constants are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gd.ch">gd.ch</a></code></div>
+  <div><p>these constants are defined in <code><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gd.ch">gd.ch</a></code></div>
 </div>
 <div class="d-d">Examples</div>
 <pre class="d-ex"><code class="language-c">#include &quot;gd.ch&quot;
@@ -602,7 +602,7 @@ PROCEDURE Main()
 </section>
 
 <section>
-<h4><a href="#gdimagefilledellipse" class="d-id" id="gdimagefilledellipse" title="∞"><code>gdImageFilledEllipse()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L907" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagefilledellipse" class="d-id" id="gdimagefilledellipse" title="∞"><code>gdImageFilledEllipse()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L907" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Draws a filled ellipse centered at a given point.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageFilledEllipse( &lt;pImage&gt;, &lt;cx&gt;, &lt;cy&gt;, &lt;w&gt;, &lt;h&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
@@ -646,7 +646,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagefilledpolygon" class="d-id" id="gdimagefilledpolygon" title="∞"><code>gdImageFilledPolygon()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L786" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagefilledpolygon" class="d-id" id="gdimagefilledpolygon" title="∞"><code>gdImageFilledPolygon()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L786" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Draws a filled polygon with verticies (at least 3) with a particular color index.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageFilledPolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
@@ -698,7 +698,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagefilledrectangle" class="d-id" id="gdimagefilledrectangle" title="∞"><code>gdImageFilledRectangle()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L829" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagefilledrectangle" class="d-id" id="gdimagefilledrectangle" title="∞"><code>gdImageFilledRectangle()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L829" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Draws a filled rectangle with a particular color index.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageFilledRectangle( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
@@ -742,7 +742,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagefilltoborder" class="d-id" id="gdimagefilltoborder" title="∞"><code>gdImageFillToBorder()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L930" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagefilltoborder" class="d-id" id="gdimagefilltoborder" title="∞"><code>gdImageFillToBorder()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L930" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">floods a portion of the image with the specified color.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageFillToBorder( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nBorder&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
@@ -790,7 +790,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagegd" class="d-id" id="gdimagegd" title="∞"><code>gdImageGD()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L587" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagegd" class="d-id" id="gdimagegd" title="∞"><code>gdImageGD()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L587" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Save a GD image.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageGD( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; ) → NIL</code></pre></div>
@@ -829,7 +829,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagegif" class="d-id" id="gdimagegif" title="∞"><code>gdImageGif()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L566" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagegif" class="d-id" id="gdimagegif" title="∞"><code>gdImageGif()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L566" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Save a GIF image.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageGif( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; ) → NIL</code></pre></div>
@@ -868,7 +868,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagejpeg" class="d-id" id="gdimagejpeg" title="∞"><code>gdImageJpeg()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L559" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagejpeg" class="d-id" id="gdimagejpeg" title="∞"><code>gdImageJpeg()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L559" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Save a JPEG image.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageJpeg( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nCompressionLevel&gt; ] ) → NIL</code></pre></div>
@@ -910,7 +910,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimageline" class="d-id" id="gdimageline" title="∞"><code>gdImageLine()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L623" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimageline" class="d-id" id="gdimageline" title="∞"><code>gdImageLine()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L623" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Draws a line between two end points (x1, y1 and x2, y2) with a particular color index.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageLine( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
@@ -954,7 +954,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimageopenpolygon" class="d-id" id="gdimageopenpolygon" title="∞"><code>gdImageOpenPolygon()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L716" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimageopenpolygon" class="d-id" id="gdimageopenpolygon" title="∞"><code>gdImageOpenPolygon()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L716" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Draws an open polygon with verticies (at least 3) with a particular color index.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageOpenPolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
@@ -1006,7 +1006,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagepng" class="d-id" id="gdimagepng" title="∞"><code>gdImagePng()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L573" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagepng" class="d-id" id="gdimagepng" title="∞"><code>gdImagePng()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L573" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Save a PNG image.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImagePng( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nCompressionLevel&gt; ] ) → NIL</code></pre></div>
@@ -1048,7 +1048,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagepolygon" class="d-id" id="gdimagepolygon" title="∞"><code>gdImagePolygon()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L671" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagepolygon" class="d-id" id="gdimagepolygon" title="∞"><code>gdImagePolygon()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L671" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Draws a closed polygon with verticies (at least 3) with a particular color index.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImagePolygon( &lt;pImage&gt;, &lt;aVerticies&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
@@ -1100,7 +1100,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagerectangle" class="d-id" id="gdimagerectangle" title="∞"><code>gdImageRectangle()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L761" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagerectangle" class="d-id" id="gdimagerectangle" title="∞"><code>gdImageRectangle()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L761" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Draws a rectangle with a particular color index.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageRectangle( &lt;pImage&gt;, &lt;x1&gt;, &lt;y1&gt;, &lt;x2&gt;, &lt;y2&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
@@ -1144,7 +1144,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagesetantialiased" class="d-id" id="gdimagesetantialiased" title="∞"><code>gdImageSetAntiAliased()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L999" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagesetantialiased" class="d-id" id="gdimagesetantialiased" title="∞"><code>gdImageSetAntiAliased()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L999" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">specify the actual foreground color to be used when drawing antialiased lines.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageSetAntiAliased( &lt;pImage&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
@@ -1198,7 +1198,7 @@ PROCEDURE Main()
 </section>
 
 <section>
-<h4><a href="#gdimagesetantialiaseddontblend" class="d-id" id="gdimagesetantialiaseddontblend" title="∞"><code>gdImageSetAntiAliasedDontBlend()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L1013" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagesetantialiaseddontblend" class="d-id" id="gdimagesetantialiaseddontblend" title="∞"><code>gdImageSetAntiAliasedDontBlend()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L1013" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">indicate the special color that the foreground should stand out more clearly against.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageSetAntiAliasedDontBlend( &lt;pImage&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
@@ -1253,7 +1253,7 @@ PROCEDURE Main()
 </section>
 
 <section>
-<h4><a href="#gdimagesetbrush" class="d-id" id="gdimagesetbrush" title="∞"><code>gdImageSetBrush()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L1030" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagesetbrush" class="d-id" id="gdimagesetbrush" title="∞"><code>gdImageSetBrush()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L1030" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">A &quot;brush&quot; is an image used to draw wide, shaped strokes in another image.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageSetBrush( &lt;pImage&gt;, &lt;pBrush&gt; ) → NIL</code></pre></div>
@@ -1305,7 +1305,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagesetpixel" class="d-id" id="gdimagesetpixel" title="∞"><code>gdImageSetPixel()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L604" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagesetpixel" class="d-id" id="gdimagesetpixel" title="∞"><code>gdImageSetPixel()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L604" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Set a pixel to a particular color index.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageSetPixel( &lt;pImage&gt;, &lt;x&gt;, &lt;y&gt;, &lt;nColor&gt; ) → NIL</code></pre></div>
@@ -1349,7 +1349,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagesetstyle" class="d-id" id="gdimagesetstyle" title="∞"><code>gdImageSetStyle()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L1062" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagesetstyle" class="d-id" id="gdimagesetstyle" title="∞"><code>gdImageSetStyle()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L1062" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">set any desired series of colors to be repeated during the drawing of a line.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageSetStyle( &lt;pImage&gt;, &lt;aStyle&gt; ) → NIL</code></pre></div>
@@ -1418,7 +1418,7 @@ PROCEDURE Main()
 </section>
 
 <section>
-<h4><a href="#gdimagesetthickness" class="d-id" id="gdimagesetthickness" title="∞"><code>gdImageSetThickness()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L1091" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagesetthickness" class="d-id" id="gdimagesetthickness" title="∞"><code>gdImageSetThickness()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L1091" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">determines the width of lines drawn in pixels.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageSetThickness( &lt;pImage&gt;, &lt;nThickness&gt; ) → NIL</code></pre></div>
@@ -1466,7 +1466,7 @@ PROCEDURE Main()
 </section>
 
 <section>
-<h4><a href="#gdimagesettile" class="d-id" id="gdimagesettile" title="∞"><code>gdImageSetTile()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L1045" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagesettile" class="d-id" id="gdimagesettile" title="∞"><code>gdImageSetTile()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L1045" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">A &quot;tile&quot; is an image used to fill an area with a repeated pattern.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageSetTile( &lt;pImage&gt;, &lt;pTile&gt; ) → NIL</code></pre></div>
@@ -1520,7 +1520,7 @@ RETURN
 </section>
 
 <section>
-<h4><a href="#gdimagewbmp" class="d-id" id="gdimagewbmp" title="∞"><code>gdImageWBmp()</code></a><a href="https://github.com/vszakats/harbour-core/blob/fd5ae1d/contrib/hbgd/gdwrp.c#L580" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
+<h4><a href="#gdimagewbmp" class="d-id" id="gdimagewbmp" title="∞"><code>gdImageWBmp()</code></a><a href="https://github.com/vszakats/harbour-core/blob/20e8bf5/contrib/hbgd/gdwrp.c#L580" class="d-so" title="contrib/hbgd/gdwrp.c">Source code</a><span class="d-eb"><a href="#" title="Top" class="d-ebi">⌃</a> | <a href="index.html" title="Index" class="d-ebi">☰</a> | <a href="https://github.com/vszakats/harbour-core/edit/master/contrib/hbgd/doc/en/gdwrp.txt">Improve this doc</a></span></h4>
 <div class="d-ol">Save a WBMP image.</div>
 <div class="d-d">Syntax</div>
 <div class="d-sy"><pre><code>gdImageWBmp( &lt;pImage&gt;, &lt;cFile&gt; | &lt;nHandle&gt; [, &lt;nFGcolor&gt; ] ) → NIL</code></pre></div>
@@ -1574,8 +1574,8 @@ RETURN
 </main>
 
 <footer>
-<div>Generated by hbdoc on 2016-11-12 18:55 UTC</div>
-<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/fd5ae1d">fd5ae1d</a></div>
+<div>Generated by hbdoc on 2016-11-14 01:09 UTC</div>
+<div>Based on revision <a href="https://github.com/vszakats/harbour-core/tree/20e8bf5">20e8bf5</a></div>
 <div>Content processing, layout &amp; design © 2016 <a href="https://vszakats.net/harbour">vszakats</a></div>
 </footer>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
