@@ -1,5 +1,4 @@
 fork: false
-real_host: https://harbour.github.io
 repo_slug: harbour/core
 site_slug: harbour/harbour.github.io
 site_branch_and_root: master/
