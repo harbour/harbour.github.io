@@ -10,7 +10,7 @@ Contribs are libraries or tools, which are independent from the language core,
 but bundled with the main Harbour distribution. These components are part of
 the Harbour source package.
 
-Common to all contribs is that you can download them freely, but please note
+Common to all contribs is that they are open/free software, but please note
 that [licensing terms]({{ site.baseurl }}/terms) may vary for each contrib.
 
 See respective authors inside the [source code](https://github.com/{{ site.repo_slug }}/tree/master/contrib).
@@ -29,10 +29,12 @@ sacrificing the Clipper syntax. Additionally `GTWVG` has a nice set of
 You can create high performance dialogs with multiple TBrowser, Reads,
 Bitmaps, Buttons, i.e. all GUI elements you can think of.
 
-## gtwvw (Windows-only)
+{% if site.fork %}
+## [gtwvw](https://harbour.github.io/doc/gtwvw.html) (Windows-only)
 
 A `GTWVG` alternative with multi-window support.
 
+{% endif %}
 ## hbamf
 
 AMF file format handling
@@ -63,7 +65,7 @@ hash functions, [SHA-3](https://en.wikipedia.org/wiki/SHA-3) secure hash
 functions, [ed25519](https://en.wikipedia.org/wiki/EdDSA) digital signature functions.
 
 {% endif %}
-## hbct
+## [hbct](https://harbour.github.io/doc/hbct.html)
 
 This library provides functions compatible with the famous Clipper Tools for
 CA-Clipper (`CT.LIB`).
@@ -74,12 +76,12 @@ CUPS bindings (printing)
 
 ## hbcurl
 
-libcurl bindings. libcurl is a free and easy-to-use client-side URL transfer
-library, supporting SSL, HTTP GET/PUT/POST/forms, HTTP2, SCP, FTPS, SFTP, FTP,
-LDAP, LDAPS, SMTP, SMTPS, IMAP, IMAPS, POP3, POP3S, TFTP, TELNET, FILE/SMB,
-proxies, cookies, authentication (Basic, Digest, NTLM, Negotiate, Kerberos),
-file transfer resume, http proxy tunneling and more.
-<span class="readmore-md">[Read more](https://curl.haxx.se/libcurl/)</span>
+libcurl bindings. libcurl is a open/free software, an easy-to-use client-side
+URL transfer library, supporting SSL, HTTP GET/PUT/POST/forms, HTTP2, SCP, FTPS,
+SFTP, FTP, LDAP, LDAPS, SMTP, SMTPS, IMAP, IMAPS, POP3, POP3S, TFTP, TELNET,
+FILE/SMB, proxies, cookies, authentication (Basic, Digest, NTLM, Negotiate,
+Kerberos), file transfer resume, http proxy tunneling and more.
+<span class="readmore-md">[Learn more](https://curl.haxx.se/libcurl/)</span>
 
 ## hbexpat
 
@@ -111,31 +113,27 @@ FoxPro compatibility
 
 FlagShip compatibility
 
-## hbgd
+## [hbgd](https://harbour.github.io/doc/hbgd.html)
 
 Thomas Boutell's GD 2.x library bindings. GD Library is a powerful graphic
 library, useful expecially under CGI environment. `hbgd` supports almost all
 GD functions, plus a set of extra functions and classes that extend and make
 it easier to work with this library.
-<span class="readmore-md">[Read more](https://libgd.github.io/)</span>
-
-## hbgt
-
-Miscellaneous functions for manipulating strings.
+<span class="readmore-md">[Learn more](https://libgd.github.io/)</span>
 
 ## hbgs
 
 Ghostscript bindings (imaging)
 
-## hbgt
+## [hbgt](https://harbour.github.io/doc/hbgt.html)
 
-GT library (string functions)
+Miscellaneous functions for manipulating strings.
 
 ## hbhpdf
 
 Libharu bindings. Haru is a free, cross platform, open-source library for
 generating PDF, written in ANSI C.
-<span class="readmore-md">[Read more](https://github.com/libharu/libharu)</span>
+<span class="readmore-md">[Learn more](https://github.com/libharu/libharu)</span>
 
 ## hbhttpd
 
@@ -157,7 +155,7 @@ Apple Mac specific functions
 
 libmagic bindings (file identification)
 
-## hbmisc
+## [hbmisc](https://harbour.github.io/doc/hbmisc.html)
 
 Miscellaneous functions for manipulating strings, numbers, type conversions,
 etc.
@@ -179,7 +177,7 @@ utility to convert `.dbf` files into MariaDB/MySQL tables.
 
 Minizip API bindings, allowing to read and write `.zip` files.
 
-## hbnf
+## [hbnf](https://harbour.github.io/doc/hbnf.html)
 
 A port of the Nanforum Library for Clipper.
 
@@ -214,7 +212,7 @@ more) modules.
 
 Regression test framework
 
-## hbtip
+## hbtip ([deprecated](https://github.com/vszakats/harbour-core/blob/master/contrib/hbtip/WARNING.txt), use `hbcurl` instead)
 
 Object-oriented internet protocol library, written in Harbour. Supports HTTP,
 HTTPS, SMTP, SMTPS, POP3, FTP and more.
@@ -245,7 +243,7 @@ these features are:
 
 libxdiff bindings (diffing)
 
-## hbxpp
+## [hbxpp](https://harbour.github.io/doc/hbxpp.html)
 
 Xbase++ compatibility
 
@@ -253,7 +251,7 @@ Xbase++ compatibility
 
 Barcode creating functions
 
-## hbziparc
+## [hbziparc](https://harbour.github.io/doc/hbziparc.html)
 
 `HBZIPARC` compatibility (zip compression)
 
@@ -261,14 +259,13 @@ Barcode creating functions
 
 Provides a compatibility layer with the xHarbour fork.
 
-## rddads
+## [rddads](https://harbour.github.io/doc/rddads.html)
 
 `rddads` is an RDD for the Advantage Database Server, an xBase data server by
 Extended Systems. With this library your Harbour application can access
 a remote database server for a true client/server architecture, or it can use
 the "local server" `adsloc32.dll` for stand-alone or even small network
 installations.
-<span class="readmore-md">[Read more](https://www.sap.com/pc/tech/database/software/advantage-database-server/index.html)</span>
 
 ## rddbm
 
