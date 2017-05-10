@@ -4,21 +4,26 @@ title: "Logo"
 ---
 # Harbour Logo
 
-<a href="https://harbour.github.io/art/harbour-logo-2011.zip"><img src="{{ site.baseurl }}/images/harbour-noborder.svg" alt="icon" height="256"></a>
+<a href="{{ site.baseurl }}/art/harbour-logo-2016.zip"><img src="{{ site.baseurl }}/images/harbour.svg" alt="icon" height="256"></a>
 
 App icons for
-[Windows](https://raw.githubusercontent.com/harbour/core/master/package/harb_win.ico) and
-[Apple](https://raw.githubusercontent.com/harbour/core/master/package/harb_osx.icns).<br>
+[Windows](https://raw.githubusercontent.com/vszakats/harbour-core/master/package/harbour.ico) and
+[Apple](https://raw.githubusercontent.com/vszakats/harbour-core/master/package/harbour.icns).<br>
 
 # Former versions
 
-* Original, created by Patrick Mast<br>
-  <a href="https://harbour.github.io/art/harbour-logo-2001.zip"><img src="{{ site.baseurl }}/images/harbour-full.svg" alt="logo" height="256"></a>
+## 2011 update
+
+<a href="https://harbour.github.io/art/harbour-logo-2011.zip"><img src="{{ site.baseurl }}/images/harbour-2011.svg" alt="logo" height="256"></a>
+
+## Original<br><span class="smaller">by Patrick Mast</span>
+
+<a href="https://harbour.github.io/art/harbour-logo-2001.zip"><img src="{{ site.baseurl }}/images/harbour-2001.svg" alt="logo" height="256"></a>
 
 {% unless site.fork %}
 # Historical
 
-* Hompages<br>
+* Homepages<br>
   [2000](https://web.archive.org/web/20000309023122/www.hagbard.demon.co.uk/harbour/harbour.html)
   [2001](https://web.archive.org/web/20010206043812/www.harbour-project.org/)
   [2008](https://web.archive.org/web/20081011053452/www.harbour-project.org/)

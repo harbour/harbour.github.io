@@ -1,12 +1,13 @@
 </main>
 
 <footer>
-    <div><a href="https://raw.githubusercontent.com/{{ site.repo_slug }}/master/{{ site.license_file }}">© {{ site.time | date: '%Y' }}</a> <a href="{{ site.baseurl }}/">Harbour&nbsp;Project</a><br>
-      <a style="vertical-align: text-top;" href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by-sa.svg" alt="cc-by-sa" title="Creative Commons Attribution-ShareAlike 4.0"></a></div>
-    <div><a href="{{ site.baseurl }}/terms">Terms of Service</a> | <a href="{{ site.baseurl }}/contact">Contact</a></div>
-    <div>Website by <a href="https://twitter.com/vailtom">vailtom</a>&nbsp;&amp;&nbsp;<a href="https://github.com/vszakats">vszakats</a><br>
+  <div class="footer-content">
+    <div><a href="https://raw.githubusercontent.com/{{ site.repo_slug }}/master/{{ site.license_file }}">© {{ site.time | date: '%Y' }}</a> <a href="{{ site.baseurl }}/">Harbour&nbsp;Project</a></div>
+    <div><a href="{{ site.baseurl }}/terms">Terms of Service</a> | <a href="{{ site.baseurl }}/contact">Contact</a><!--<br>
       <a href="https://jigsaw.w3.org/css-validator/validator?profile=css3&usermedium=all&warning=1&uri={{ '/css/styles.css' | absolute_url | url_encode }}"><i class="fa fa-css3" aria-hidden="true"></i></a>
-      <a href="https://validator.w3.org/nu/?doc={{ page.url | append: page_name | absolute_url | url_encode }}"><i class="fa fa-html5" aria-hidden="true"></i></a>
+      <a href="https://validator.w3.org/nu/?doc={{ page.url | append: page_name | absolute_url | url_encode }}"><i class="fa fa-html5" aria-hidden="true"></i></a>--></div>
+    <div><a href="https://twitter.com/vailtom">vailtom</a>,&nbsp;<a href="https://github.com/vszakats">vszakats</a>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/"><i class="fa fa-creative-commons" aria-hidden="true"></i><span class="cc"> BY-SA</span></a>
     </div>
+  </div>
 </footer>
-</div>
