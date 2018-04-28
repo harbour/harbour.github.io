@@ -2,8 +2,8 @@
 layout: default
 ---
 <h1>Overview</h1>
-<div>
-  <p>Harbour is the open/free software implementation of a cross-platform,
+<div class="text-j"><p>
+  Harbour is the open/free software implementation of a cross-platform,
   multi-threading, object-oriented, scriptable programming language, backwards
   compatible with xBase languages. Harbour consists of a compiler and runtime
   libraries with multiple UI, database and I/O backends, its own build system
@@ -16,7 +16,7 @@ layout: default
 {%- if site.fork %}
 {% assign ppurl = 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BPSZQYKXMQJYG' %}
 <h1 id="this-fork">This Fork</h1>
-<div><p>
+<div class="text-j"><p>
   This fork contains all <a href="https://harbour.github.io/">mainline</a>
   updates as well as local fixes, additions, extra contribs, better tooling
   and maintenance. <strong><a href="{{ ppurl }}">Donations</a> are welcome
@@ -41,7 +41,7 @@ layout: default
     <p>
       <a href="https://travis-ci.org/{{ site.repo_slug }}"><img src="https://api.travis-ci.org/{{ site.repo_slug }}.svg?branch=master" height="20" alt="Build status"></a>&thinsp;
 {%- if site.fork %}
-      <a href="https://ci.appveyor.com/project/vsz/harbour-core/branch/master"><img src="https://ci.appveyor.com/api/projects/status/1kx6w3y6qasymah3/branch/master?svg=true" height="20" alt="Build Status"></a>
+      <a href="https://ci.appveyor.com/project/vszakats/harbour-core/branch/master"><img src="https://ci.appveyor.com/api/projects/status/1kx6w3y6qasymah3/branch/master?svg=true" height="20" alt="Build Status"></a>
 {%- endif %}
       <br>
       Latest stable:&nbsp;
@@ -70,28 +70,28 @@ layout: default
   <h1>Features</h1>
   <div>
     <div>
-      <i class="fa fa-database feature-icon" aria-hidden="true"></i>
+      <svg><use xlink:href="{{ site.baseurl }}/images/fa-light.svg#database"></use></svg>
       Native RDDs, SQL, ODBC
     </div>
     <div>
-      <i class="fa fa-cogs feature-icon" aria-hidden="true"></i>
-      Support for modern standards: JSON, SSL, TCP/IP, XML, …
+      <svg><use xlink:href="{{ site.baseurl }}/images/fa-light.svg#cogs"></use></svg>
+      <br>Support for modern standards: JSON, SSL, TCP/IP, XML, …
     </div>
     <div>
-      <i class="fa fa-mobile feature-icon" aria-hidden="true"></i>
-      Cross-platform: 64-bit, mobile, Mac, Linux, BSD, ARM, …
+      <svg><use xlink:href="{{ site.baseurl }}/images/fa-light.svg#mobile"></use></svg>
+      <br>Cross-platform: 64-bit, mobile, Mac, Linux, BSD, ARM, …
     </div>
     <div>
-      <i class="fa fa-laptop feature-icon" aria-hidden="true"></i>
-      Console, TUI, GUI, service/daemon, web apps
+      <svg><use xlink:href="{{ site.baseurl }}/images/fa-light.svg#laptop"></use></svg>
+      <br>Console, TUI, GUI, service/daemon, web apps
     </div>
     <div>
-      <i class="fa fa-cubes feature-icon" aria-hidden="true"></i>
-      Third-party libs with additional features
+      <svg><use xlink:href="{{ site.baseurl }}/images/fa-light.svg#cubes"></use></svg>
+      <br>Third-party libs with additional features
     </div>
     <div>
-      <i class="fa fa-lightbulb-o feature-icon" aria-hidden="true"></i>
-      Team of experienced and capable developers
+      <svg><use xlink:href="{{ site.baseurl }}/images/fa-light.svg#lightbulb"></use></svg>
+      <br>Team of experienced and capable developers
     </div>
   </div>
 </div>
@@ -106,7 +106,7 @@ layout: default
 <div class="lower-box">
   <div class="news-box">
     <h1>Development News
-      &nbsp;<a href="https://github.com/{{ site.site_slug }}/edit/{{ site.site_branch_and_root }}_data/news.yml"><i class="fa fa-pencil" aria-hidden="true"></i></a></h1>
+      &nbsp;<a href="https://github.com/{{ site.site_slug }}/edit/{{ site.site_branch_and_root }}_data/news.yml"><svg><use xlink:href="{{ site.baseurl }}/images/fa-light.svg#pencil"></use></svg></a></h1>
     <hr>
 
     <dl class="news">
