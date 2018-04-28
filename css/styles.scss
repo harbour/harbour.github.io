@@ -4,7 +4,7 @@
 
 $font-code: Hack, Consolas, Menlo, 'Droid Sans Mono', 'Source Code Pro', 'Liberation Mono', 'Oxygen Mono', 'Andale Mono', monospace;
 $font-copy: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-main: 'Open Sans', sans-serif;
+$font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 $fork-color: #f8981d;
 $fork-color: orangered;
@@ -75,7 +75,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: $color-bk-border;
-  font: 16px $font-main;
+  font-family: $font-main;
+  font-size: 16px;
   line-height: 150%;
   -webkit-font-smoothing: antialiased;
 {% if old_design %}
@@ -886,7 +887,9 @@ pre, code {
 /* drop-down menu magic --------------------------------------------------- */
 
 .menu-text {
-  font: 14px $font-main;
+  font-family: $font-main;
+  font-size: 14px;
+  font-weight: 400;
   margin-top: -10px;
   text-align: center;
 }
@@ -905,7 +908,9 @@ pre, code {
 
 .menu {
   background-color: $color-menu-bk;
-  font: 16px $font-main;
+  font-family: $font-main;
+  font-size: 16px;
+  font-weight: 400;
   margin: auto;
   padding-top: ($header-border + $header-height + 1px);
   padding-bottom: 1px;
