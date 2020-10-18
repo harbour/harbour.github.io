@@ -7,8 +7,8 @@ title: "Logo"
 <a href="{{ site.baseurl }}/art/harbour-logo-2016.zip"><img src="{{ site.baseurl }}/images/harbour.svg" alt="icon" height="256"></a>
 
 App icons for
-[Windows](https://raw.githubusercontent.com/vszakats/harbour-core/master/package/harbour.ico) and
-[Apple](https://raw.githubusercontent.com/vszakats/harbour-core/master/package/harbour.icns).<br>
+[Windows](https://raw.githubusercontent.com/vszakats/hb/master/package/harbour.ico) and
+[Apple](https://raw.githubusercontent.com/vszakats/hb/master/package/harbour.icns).<br>
 
 # Former versions
 
@@ -29,7 +29,7 @@ App icons for
   [2008](https://web.archive.org/web/20081011053452/www.harbour-project.org/)
   [2009](https://web.archive.org/web/20090321144714/www.harbour-project.org/)
   [2011](https://web.archive.org/web/20110723030605/www.harbour-project.org/)
-* [T-Shirt]({{ site.baseurl }}/tshirt)
+* [T-Shirt]({{ site.baseurl }}/tshirt{{ site.ilink_suffix }})
 * Badge<br>
   [![button](https://harbour.github.io/art/harbour-button.png)](https://harbour.github.io/art/harbour-button.png)
 * [Badge – animated](https://harbour.github.io/art/harbour-animgif.zip)

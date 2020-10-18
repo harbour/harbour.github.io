@@ -44,7 +44,7 @@ Linux version is based on GTK, it supports the same set of classes, commands
 and functions as the Windows version, though not all yet. Thus, using some
 base subset of HwGUI, you can create cross-platform GUI applications.
 
-## [ooHG](https://sourceforge.net/projects/oohg/)
+## [ooHG](https://oohg.github.io/)
 
 Object-Oriented Harbour Graphical interface. This is an object-oriented style
 conversion of the MiniGUI's library. Supporting existing code, and adding new
@@ -69,7 +69,8 @@ of GTK+ in a cross-platform fashion.
 
 ## [WebSocket](https://github.com/foldiii/websocket)
 
-WebSocket implementation built on top of [`hbhttpd`]({{ site.baseurl }}/contribs#hbhttpd) contrib.
+WebSocket implementation built on top of [`hbhttpd`]({{ site.baseurl }}/contribs{{ site.ilink_suffix }}#hbhttpd)
+contrib.
 
 ## [wxHarbour](https://sourceforge.net/projects/wxharbour/)
 

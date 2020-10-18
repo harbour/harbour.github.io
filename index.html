@@ -10,7 +10,7 @@ layout: default
   and a collection of libraries and bindings for popular APIs.
   With Harbour, you can build apps running on GNU/Linux, Windows (32/64-bit),
   macOS, iOS, Android, *BSD, *nix, and more.
-  <a href="{{ site.baseurl }}/about" class="readmore">Learn more</a>
+  <a href="{{ site.baseurl }}/about{{ site.ilink_suffix }}" class="readmore">Learn more</a>
 </div>
 
 {%- if site.fork %}
@@ -21,7 +21,7 @@ layout: default
   updates as well as local fixes, additions, extra contribs, better tooling
   and maintenance. <strong><a href="{{ ppurl }}">Donations</a> are welcome
   and appreciated</strong> to support this effort.
-  <a href="{{ site.baseurl }}/forks" class="readmore">Learn more</a>
+  <a href="{{ site.baseurl }}/forks{{ site.ilink_suffix }}" class="readmore">Learn more</a>
 </div>
 {%- endif %}
 
@@ -33,7 +33,7 @@ layout: default
       <li>Harbour is proven to be <strong>stable</strong>, <strong>robust</strong> and <strong>efficient</strong>.
       <li>Harbour is <strong>portable</strong> across multiple operating systems with the same code base.
       <li>You can use it to develop either free/open source or nonfree applications.
-        <a href="{{ site.baseurl }}/about#why-use-it" class="readmore readmore-dark">Learn more</a>
+        <a href="{{ site.baseurl }}/about{{ site.ilink_suffix }}#why-use-it" class="readmore readmore-dark">Learn more</a>
     </ul>
   </div>
   <div class="status-box">
@@ -41,7 +41,7 @@ layout: default
     <p>
       <a href="https://travis-ci.org/{{ site.repo_slug }}"><img src="https://api.travis-ci.org/{{ site.repo_slug }}.svg?branch=master" height="20" alt="Build status"></a>&thinsp;
 {%- if site.fork %}
-      <a href="https://ci.appveyor.com/project/vszakats/harbour-core/branch/master"><img src="https://ci.appveyor.com/api/projects/status/1kx6w3y6qasymah3/branch/master?svg=true" height="20" alt="Build Status"></a>
+      <a href="https://ci.appveyor.com/project/vsz/hb/branch/master"><img src="https://ci.appveyor.com/api/projects/status/4rd806hk73q83qo4/branch/master?svg=true" height="20" alt="Build Status"></a>
 {%- endif %}
       <br>
       Latest stable:&nbsp;
@@ -51,15 +51,14 @@ layout: default
       <strong>{{ site.full_version }}</strong><br>
 {%- endif %}
       Source snapshot:&nbsp;
-      <a href="https://github.com/{{ site.repo_slug }}/archive/master.zip"><strong>ZIP</strong></a>&nbsp;
-      <a href="https://github.com/{{ site.repo_slug }}/archive/master.tar.gz"><strong>TAR.GZ</strong></a><br>
+      <a href="https://github.com/{{ site.repo_slug }}/archive/master.zip"><strong>.zip</strong></a>&nbsp;
+      <a href="https://github.com/{{ site.repo_slug }}/archive/master.tar.gz"><strong>.tar.gz</strong></a><br>
 {%- if site.fork %}
       Binary snapshot (Windows):&nbsp;
-      <a href="{{ site.dl_url }}/download/v{{ site.full_version }}/harbour-snapshot-win.7z" tooltip-text="clang / mingw-w64, 64-bit hosted, 32/64-bit targets, bundled with latest curl and OpenSSL libraries." class="tooltip"><strong>7Z</strong></a>
+      <a href="{{ site.dl_url }}/download/v{{ site.full_version }}/harbour-snapshot-win.zip" tooltip-text="clang / mingw-w64, 64-bit hosted, 32/64-bit targets, bundled with latest curl and OpenSSL libraries." class="tooltip"><strong>.zip</strong></a>
 {%- else %}
       Nightly binary (Win):&nbsp;
-      <a href="{{ site.dl_url }}binaries-windows/nightly/harbour-nightly-win.7z/download"><strong>7Z</strong></a>&nbsp;
-      <a href="{{ site.dl_url }}binaries-windows/nightly/harbour-nightly-win.exe/download"><strong>EXE</strong></a><br>
+      <a href="{{ site.dl_url }}binaries-windows/nightly/harbour-nightly-win.exe/download"><strong>.exe</strong></a><br>
 {%- endif %}
     </p>
     <span class="dl-button"><a href="{{ site.dl_url }}" class="readmore-norm">More downloads</a></span>
@@ -70,27 +69,27 @@ layout: default
   <h1>Features</h1>
   <div>
     <div>
-      <svg><use xlink:href="{{ site.baseurl }}/images/fa-light.svg#database"></use></svg>
+      <svg><use xlink:href="{{ site.baseurl }}/images/fa-solid.svg#database"></use></svg>
       Native RDDs, SQL, ODBC
     </div>
     <div>
-      <svg><use xlink:href="{{ site.baseurl }}/images/fa-light.svg#cogs"></use></svg>
+      <svg><use xlink:href="{{ site.baseurl }}/images/fa-solid.svg#cogs"></use></svg>
       <br>Support for modern standards: JSON, SSL, TCP/IP, XML, …
     </div>
     <div>
-      <svg><use xlink:href="{{ site.baseurl }}/images/fa-light.svg#mobile"></use></svg>
+      <svg><use xlink:href="{{ site.baseurl }}/images/fa-solid.svg#mobile"></use></svg>
       <br>Cross-platform: 64-bit, mobile, Mac, Linux, BSD, ARM, …
     </div>
     <div>
-      <svg><use xlink:href="{{ site.baseurl }}/images/fa-light.svg#laptop"></use></svg>
+      <svg><use xlink:href="{{ site.baseurl }}/images/fa-solid.svg#laptop"></use></svg>
       <br>Console, TUI, GUI, service/daemon, web apps
     </div>
     <div>
-      <svg><use xlink:href="{{ site.baseurl }}/images/fa-light.svg#cubes"></use></svg>
+      <svg><use xlink:href="{{ site.baseurl }}/images/fa-solid.svg#cubes"></use></svg>
       <br>Third-party libs with additional features
     </div>
     <div>
-      <svg><use xlink:href="{{ site.baseurl }}/images/fa-light.svg#lightbulb"></use></svg>
+      <svg><use xlink:href="{{ site.baseurl }}/images/fa-solid.svg#lightbulb"></use></svg>
       <br>Team of experienced and capable developers
     </div>
   </div>
@@ -106,7 +105,7 @@ layout: default
 <div class="lower-box">
   <div class="news-box">
     <h1>Development News
-      &nbsp;<a href="https://github.com/{{ site.site_slug }}/edit/{{ site.site_branch_and_root }}_data/news.yml"><svg><use xlink:href="{{ site.baseurl }}/images/fa-light.svg#pencil"></use></svg></a></h1>
+      &nbsp;<a href="https://github.com/{{ site.site_slug }}/edit/{{ site.site_branch_and_root }}_data/news.yml"><svg><use xlink:href="{{ site.baseurl }}/images/fa-solid.svg#pencil-alt"></use></svg></a></h1>
     <hr>
 
     <dl class="news">
@@ -122,7 +121,7 @@ layout: default
 {% endif %}
 {%- endif %}
 {%- endfor %}
-      <dd>See the <a href="{{ site.baseurl }}/news">news archive</a> for past articles.
+      <dd>See the <a href="{{ site.baseurl }}/news{{ site.ilink_suffix }}">news archive</a> for past articles.
     </dl>
   </div>
 
