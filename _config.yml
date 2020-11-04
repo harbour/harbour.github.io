@@ -7,7 +7,7 @@ dl_url: https://sourceforge.net/projects/harbour-project/files/
 short_version: "3.0"
 license_file: COPYING.txt
 
-exclude: ['*.sh']
+exclude: ['*.pem', '*.sh']
 
 example_categories:
   - basic
