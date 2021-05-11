@@ -2,6 +2,8 @@
 fork: false
 repo_slug: harbour/core
 site_slug: harbour/harbour.github.io
+repo_branch: master
+site_branch: master
 site_branch_and_root: master/
 dl_url: https://sourceforge.net/projects/harbour-project/files/
 short_version: "3.0"
