@@ -38,7 +38,7 @@ layout: default
     <h1 id="project-status">Project Status</h1>
     <p>
 {%- if site.fork %}
-      <a href="https://ci.appveyor.com/project/vsz/hb/branch/master"><img src="https://ci.appveyor.com/api/projects/status/4rd806hk73q83qo4/branch/master?svg=true" height="20" alt="Build Status"></a>
+      <a href="https://ci.appveyor.com/project/vsz/hb/branch/main"><img src="https://ci.appveyor.com/api/projects/status/4rd806hk73q83qo4/branch/main?svg=true" height="20" alt="Build Status"></a>
 {%- endif %}
       <br>
       Latest stable:&nbsp;
@@ -102,7 +102,7 @@ layout: default
 <div class="lower-box">
   <div class="news-box">
     <h1>Development News
-      &nbsp;<a href="https://github.com/{{ site.site_slug }}/edit/{{ site.site_branch_and_root }}_data/news.yml">{% include svg/fa-solid-pencil-alt.svg %}</a></h1>
+      &nbsp;<a href="https://github.com/{{ site.site_slug }}/edit/{{ site.site_branch }}/{{ site.site_root }}_data/news.yml">{% include svg/fa-solid-pencil-alt.svg %}</a></h1>
     <hr>
 
     <dl class="news">
