@@ -1,6 +1,6 @@
 {% include head.html %}
 {% include header.html %}
-<a href="{{ site.baseurl }}/examples{{ site.ilink_suffix }}" class="example-list"><svg class="img-right"><use xlink:href="{{ site.baseurl }}/images/fa-solid.svg#list"></use></svg></a>
+<a href="{{ site.baseurl }}/examples{{ site.ilink_suffix }}" class="example-list"><span class="img-right">{% include svg/fa-solid-list.svg %}</span></a>
 
 <h1>{{ page.title_long }}</h1>
 <p>{{ page.description }}
@@ -8,7 +8,7 @@
 <h2>Source:</h2>
 <div>
   <ul>
-    <li><a href="https://github.com/{{ site.repo_slug }}/blob/master/tests/{{ page.slug }}.prg">tests/{{ page.slug }}.prg</a>
+    <li><a href="https://github.com/{{ site.repo_slug }}/blob/{{ site.repo_branch }}/tests/{{ page.slug }}.prg">tests/{{ page.slug }}.prg</a>
   </ul>
 </div>
 

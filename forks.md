@@ -50,7 +50,7 @@ focus on the Windows platform along with commercial offerings.
 * [Community](https://groups.google.com/forum/#!forum/comp.lang.xharbour)
 
 Technical details on how this fork differs from the other variations,
-[here](https://raw.githubusercontent.com/{{ site.repo_slug }}/master/doc/xhb-diff.txt).
+[here](https://raw.githubusercontent.com/{{ site.repo_slug }}/{{ site.repo_branch }}/doc/xhb-diff.txt).
 
 ## MiniGUI forks
 
@@ -71,7 +71,7 @@ binary form only, making it difficult/impossible to find out what was the exact
 source code / patches they were built from. In practice it means that general
 Harbour support forums can't help with issues.
 
-* [OOHG] (https://oohg.github.io/)
+* [OOHG](https://oohg.github.io/)
 
 Another MiniGUI fork that implements a full OOP model without altered Harbour
 sources nor overlapping libraries.
