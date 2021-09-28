@@ -160,7 +160,7 @@ LZF bindings (compression)
 {%- endunless %}
 ## hbmac (Mac-only)
 
-Apple Mac specific functions
+OS-specific helper functions
 
 ## hbmagic (\*nix-only)
 
@@ -197,10 +197,12 @@ A port of the Nanforum Library for Clipper.
 ODBC library. Includes bindings and helper classes to work with various RDBMS
 via ODBC.
 
+{%- unless site.fork %}
 ## hboslib
 
 OSLib (Dave Pearson's) compatibility
 
+{%- endunless %}
 ## hbpgsql
 
 Low-level API bindings for PostgreSQL RDBMS. Includes a `dbf2pg.prg` utility to
