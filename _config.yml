@@ -4,7 +4,7 @@ repo_slug: harbour/core
 site_slug: harbour/harbour.github.io
 repo_branch: master
 site_branch: main
-site_root: /
+site_root: ""
 dl_url: https://sourceforge.net/projects/harbour-project/files/
 short_version: "3.0"
 license_file: COPYING.txt
