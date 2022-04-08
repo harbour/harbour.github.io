@@ -89,6 +89,11 @@ xHGtk is an multi-platform GUI library for Harbour. Uses GTK+ to create programs
 that can run on Windows and Linux. It provides a library of commands, functions
 and classes for multi-platform development using Harbour and GTK+ 2.10 or higher.
 
+## [HarbourJWT](https://github.com/matteobaccan/HarbourJwt)
+
+HarbourJWT is a JWT Implementation for Harbour
+A simple library to work with JSON Web Token and JSON Web Signature for Harbour language.
+
 ---
 
 # Nonfree
