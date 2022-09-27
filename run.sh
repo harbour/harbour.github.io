@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/sh -eu
 
-cd "$(dirname "$0")" || exit 1
+cd "$(dirname "$0")"
 
 jekyll serve --incremental \
   --ssl-cert localhost-cert.pem \
