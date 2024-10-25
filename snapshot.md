@@ -24,6 +24,8 @@ the time solid to use in production. It is worth to keep an eye on the latest
 commits and/or [ChangeLog]({{ site.baseurl }}/changelog{{ site.ilink_suffix }})
 to see if there is any work in progress and what changes to expect.
 {% else %}
+(NOTE) Seems like the nightly builds are not being updated anymore... please check.
+
 You can find the latest development sources for Harbour directly on our website.
 Source code is checked out of version repository and packaged every night and
 made available along with the binaries built for Windows.
